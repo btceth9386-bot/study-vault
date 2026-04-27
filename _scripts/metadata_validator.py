@@ -54,14 +54,20 @@ def _load_yaml_file(path: str | Path) -> dict:
 
 def _load_frontmatter(path: str | Path) -> dict:
     content = Path(path).read_text(encoding="utf-8")
-    if not content.startswith("---"):
+    if not content.startswith("---\n"):
         return {}
 
-    parts = content.split("---", 2)
-    if len(parts) < 3:
+    lines = content.splitlines()
+    if not lines or lines[0] != "---":
         return {}
 
-    data = yaml.safe_load(parts[1]) or {}
+    try:
+        closing_index = lines[1:].index("---") + 1
+    except ValueError:
+        return {}
+
+    frontmatter_text = "\n".join(lines[1:closing_index])
+    data = yaml.safe_load(frontmatter_text) or {}
     if not isinstance(data, dict):
         raise ValueError("Expected frontmatter to be a mapping")
     return data
