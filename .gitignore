@@ -1,6 +1,15 @@
+# Injected by dispatcher — must not be committed
 ISSUE.md
-.kiro
-.claude
-.codex 
-.copilot 
-.gemini
+
+# Agent session directories
+.kiro/
+.claude/
+.codex/
+.copilot/
+.gemini/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
