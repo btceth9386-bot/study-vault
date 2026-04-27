@@ -78,14 +78,14 @@
 
 ### 需求 5：GitHub Repo 匯入
 
-**使用者故事：** 身為使用者，我希望能將 GitHub repo 的知識轉換為 Markdown 筆記，以便學習 repo 的架構與核心概念。
+**使用者故事：** 身為使用者，我希望能提供 GitHub repo URL 就能透過 DeepWiki 自動匯入該 repo 的知識，以便學習 repo 的架構與核心概念。
 
 #### 驗收標準
 
-1. WHEN 使用者提供 GitHub repo URL，THE Ingest_Pipeline SHALL 支援兩種匯入方式：直接讀取 repo 的 README/docs，或透過 DeepWiki 取得現成 wiki
-2. WHEN 使用 DeepWiki 匯入，THE Ingest_Pipeline SHALL 使用 `deepwiki-to-md` CLI 或 MCP server 取得 wiki 內容並轉為 Markdown
-3. WHEN 匯入完成，THE Ingest_Pipeline SHALL 在 `sources/repos/<slug>/` 建立 `meta.yaml`、`notes.md`，以及（若使用 DeepWiki）`deepwiki-snapshot/` 目錄
-4. THE Ingest_Pipeline SHALL 不將 cloned repo 原始碼納入 Git 追蹤
+1. WHEN 使用者提供 GitHub repo URL，THE Ingest_Pipeline SHALL 自動轉換為對應的 DeepWiki URL 並使用 `deepwiki-to-md` CLI 下載 wiki 內容
+2. IF DeepWiki 尚未建立該 repo 的 wiki，THEN THE Ingest_Pipeline SHALL 提示使用者前往 deepwiki.com 貼上 repo URL 觸發建立，並於建立完成後重新執行腳本
+3. IF repo 為 private，THEN THE Ingest_Pipeline SHALL 報錯提示 DeepWiki 僅支援 public repo
+4. WHEN 匯入完成，THE Ingest_Pipeline SHALL 在 `sources/repos/<slug>/` 建立 `meta.yaml`、`notes.md`、`deepwiki-snapshot/` 目錄
 
 ### 需求 6：網頁文章匯入
 
@@ -267,3 +267,17 @@
 2. THE Knowledge_Base SHALL 透過 concept frontmatter 的 `sources` 欄位建立概念到來源的正向連結
 3. THE Knowledge_Base SHALL 透過 source 的 `meta.yaml` 中 `related_concepts` 欄位建立來源到概念的反向連結
 4. THE Prompt_Engine SHALL 確保正向連結與反向連結雙向一致
+
+### 需求 22：互動式答題（Quiz Session + CLI）
+
+**使用者故事：** 身為使用者，我希望能在終端機中進行互動式答題，出題前先看相關概念的摘要複習，系統根據我的作答結果即時更新 SM-2 排程。同時希望答題邏輯與介面分離，以便未來透過 AI Agent 在 Discord/Telegram 等平台進行問答。
+
+#### 驗收標準
+
+1. THE Knowledge_Base SHALL 在 `_scripts/` 目錄中提供 `quiz_session.py`（純邏輯層，無 I/O）與 `quiz_cli.py`（CLI 介面層）
+2. WHEN 使用者啟動答題 session，THE Quiz_Session SHALL 從 `quiz/bank.json` 中選取到期題目，並從對應的 concept 檔中擷取摘要段落作為複習材料（`review_materials`），一次只給本次考試涵蓋的概念摘要
+3. THE Quiz_Session SHALL 所有函式的輸入輸出皆為 dict/JSON 格式，不包含任何 I/O 操作（不呼叫 `input()`/`print()`），以便 AI Agent 或外部 bot 直接呼叫
+4. THE Quiz_Session SHALL 根據題型呈現不同的互動方式：選擇題自動比對答案、簡答題與應用題由使用者自評對錯
+5. WHEN 使用者完成一題作答，THE Quiz_Session SHALL 立即呼叫 SM2_Scheduler 更新該題的 `interval_days`、`ease_factor`、`next_review` 與 `history`
+6. WHEN 所有題目作答完成，THE Quiz_Session SHALL 回傳本次答題統計（總題數、答對數、答錯數、答對率、涵蓋的概念清單）
+7. THE Quiz_CLI SHALL 支援以下 CLI 參數：`--count`（題數，預設 10）、`--concept`（指定概念 ID）、`--bank`（指定 bank.json 路徑）

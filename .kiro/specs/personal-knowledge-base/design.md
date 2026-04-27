@@ -29,112 +29,80 @@
 
 ### 系統架構圖
 
-```mermaid
-graph TB
-    subgraph 輸入來源
-        YT[YouTube 影片]
-        PDF[PDF 文件]
-        GH[GitHub Repo]
-        WEB[網頁文章]
-        POD[Podcast]
-        EPUB[epub 書籍]
-    end
-
-    subgraph Ingest Pipeline Layer
-        IY[ingest-youtube.sh<br/>Bash + Python]
-        IP[ingest-pdf.sh<br/>Bash + Python]
-        ID[ingest-deepwiki.sh<br/>Bash]
-        IA[ingest-article.js<br/>Node.js]
-        IPO[ingest-podcast.sh<br/>Bash + Python]
-        IB[ingest-book.py<br/>Python]
-    end
-
-    subgraph 外部服務
-        YTDLP[yt-dlp]
-        WHISPER[OpenAI Whisper API]
-        DW[DeepWiki CLI/MCP]
-        PDFTOOL[pdftotext / Marker]
-        RD[Readability + Turndown]
-    end
-
-    subgraph Knowledge Base 檔案系統
-        INBOX[_inbox/]
-        DRAFTS[_drafts/]
-        SOURCES[sources/]
-        CONCEPTS[concepts/]
-        QUIZ[quiz/bank.json]
-        INDEX[_index/]
-        TOPICS[topics/]
-    end
-
-    subgraph Prompt Engine
-        NS[new-source.md]
-        PC[promote-concept.md]
-        WR[weekly-refine.md]
-    end
-
-    subgraph 核心邏輯 Python
-        SM2[SM-2 Scheduler]
-        MV[Metadata Validator]
-        QM[Quiz Manager]
-        FS[File Splitter]
-    end
-
-    YT --> IY
-    PDF --> IP
-    GH --> ID
-    WEB --> IA
-    POD --> IPO
-    EPUB --> IB
-
-    IY --> YTDLP
-    IY --> WHISPER
-    IP --> PDFTOOL
-    ID --> DW
-    IA --> RD
-    IPO --> WHISPER
-    IB --> PDFTOOL
-
-    IY --> SOURCES
-    IP --> SOURCES
-    ID --> SOURCES
-    IA --> SOURCES
-    IPO --> SOURCES
-    IB --> SOURCES
-
-    SOURCES --> NS
-    NS --> DRAFTS
-    NS --> INDEX
-    DRAFTS --> PC
-    PC --> CONCEPTS
-    PC --> QUIZ
-    PC --> INDEX
-
-    WR --> INBOX
-    WR --> QUIZ
-    WR --> INDEX
-    SM2 --> QUIZ
-    MV --> SOURCES
-    MV --> CONCEPTS
-    QM --> QUIZ
-    FS --> SOURCES
-end
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                          輸入來源                                    │
+│  YouTube  |  PDF  |  GitHub Repo  |  網頁文章  |  Podcast  |  epub  │
+└────┬────────┬──────────┬─────────────┬──────────┬──────────┬────────┘
+     │        │          │             │          │          │
+     v        v          v             v          v          v
+┌─────────────────────────────────────────────────────────────────────┐
+│                     Ingest Pipeline Layer                            │
+│  ingest-       ingest-    ingest-      ingest-    ingest-   ingest- │
+│  youtube.sh    pdf.sh     deepwiki.sh  article.js podcast.sh book.py│
+│  (Bash+Py)     (Bash+Py)  (Bash)       (Node.js)  (Bash+Py) (Py)   │
+└────┬────────────┬──────────┬─────────────┬──────────┬────────┬──────┘
+     │            │          │             │          │        │
+     v            v          v             v          v        v
+┌─────────────────────────────────────────────────────────────────────┐
+│                         外部服務                                     │
+│  yt-dlp  |  OpenAI Whisper API  |  DeepWiki CLI/MCP                 │
+│  pdftotext / Marker  |  Readability + Turndown                      │
+└─────────────────────────────┬───────────────────────────────────────┘
+                              │
+                              v
+┌─────────────────────────────────────────────────────────────────────┐
+│                  Knowledge Base 檔案系統                              │
+│                                                                      │
+│  _inbox/  -->  sources/  -->  _drafts/  -->  concepts/               │
+│                                                                      │
+│  quiz/bank.json    _index/    topics/                                │
+└──────────┬──────────────────────────────────────────────────────────┘
+           │
+           v
+┌─────────────────────────────────────────────────────────────────────┐
+│                       Prompt Engine                                  │
+│  new-source.md  |  promote-concept.md  |  weekly-refine.md          │
+└──────────┬──────────────────────────────────────────────────────────┘
+           │
+           v
+┌─────────────────────────────────────────────────────────────────────┐
+│                    核心邏輯（Python）                                  │
+│  SM-2 Scheduler  |  Quiz Runner  |  Metadata Validator               │
+│  Quiz Manager    |  File Splitter  |  Index Generator                │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
 ### 資料流程
 
-```mermaid
-flowchart LR
-    A[外部來源] -->|Ingest Pipeline| B[sources/]
-    B -->|new-source prompt| C[_drafts/]
-    C -->|使用者 review| D{approve?}
-    D -->|Yes| E[promote-concept prompt]
-    D -->|No| F[刪除 draft]
-    E --> G[concepts/]
-    E --> H[quiz/bank.json]
-    G -->|weekly-refine| I[refine-report]
-    H -->|SM-2 排程| J[next_review 更新]
-    I -->|使用者答題| J
+```
+外部來源
+   │
+   │  Ingest Pipeline
+   v
+sources/
+   │
+   │  new-source prompt
+   v
+_drafts/
+   │
+   │  使用者 review
+   v
+approve? ──No──> 刪除 draft
+   │
+   Yes
+   │
+   │  promote-concept prompt
+   v
+concepts/ ──────────────> quiz/bank.json
+   │                          │
+   │  weekly-refine           │  quiz-runner（互動答題）
+   v                          v
+refine-report             使用者作答
+                              │
+                              │  SM-2 排程
+                              v
+                         next_review 更新
 ```
 
 ### 層級分離原則
@@ -213,9 +181,43 @@ flowchart LR
 #### 2.3 ingest-deepwiki.sh
 
 ```
-輸入：GitHub repo URL 或 DeepWiki URL
+輸入：GitHub repo URL（如 https://github.com/user/repo）
 輸出：sources/repos/<slug>/（meta.yaml, notes.md, deepwiki-snapshot/）
 依賴：deepwiki-to-md CLI
+```
+
+**流程**：
+```
+GitHub repo URL
+   │
+   v
+自動轉換為 DeepWiki URL
+   │
+   v
+嘗試 deepwiki-to-md CLI 下載
+   │
+   ├─ 成功 → 下載 wiki 到 deepwiki-snapshot/
+   │         從 wiki 內容產生 notes.md（整體摘要）
+   │         建立 meta.yaml
+   │         完成 → 提示使用者執行 new-source prompt
+   │
+   └─ 失敗
+       │
+       ├─ DeepWiki 尚未建立此 repo 的 wiki
+       │   → 提示使用者前往 deepwiki.com 貼上 repo URL 觸發建立
+       │   → 等待幾分鐘後重新執行本腳本
+       │
+       └─ repo 為 private
+           → 報錯：DeepWiki 僅支援 public repo，無法匯入
+```
+
+**使用方式**：
+```bash
+# 給 GitHub URL，腳本自動轉換為 DeepWiki URL
+./ingest-deepwiki.sh https://github.com/donnemartin/system-design-primer
+
+# 也可以直接給 DeepWiki URL
+./ingest-deepwiki.sh https://deepwiki.com/donnemartin/system-design-primer
 ```
 
 #### 2.4 ingest-article.js
@@ -304,7 +306,165 @@ def get_review_pack(bank_path: str, count: int = 10, today: str = None) -> list:
     """取得本週複習題包，優先 next_review <= today"""
 ```
 
-#### 3.5 file_splitter.py
+#### 3.5 quiz_session.py（純邏輯層，無 I/O）
+
+答題的核心邏輯，不做任何 I/O（不呼叫 `input()`/`print()`）。所有輸入輸出都是 dict/JSON，方便 CLI、AI Agent、Discord/Telegram bot 等任何介面層呼叫。
+
+```python
+# 介面
+def start_session(
+    bank_path: str,
+    kb_root: str,
+    count: int = 10,
+    concept_id: str = None,
+    today: str = None
+) -> dict:
+    """
+    建立一次答題 session。
+    回傳：
+    {
+      "session_id": str,
+      "review_materials": [          # 出題前的複習材料
+        {
+          "concept_id": str,
+          "title": str,
+          "summary": str,            # concept 檔的「摘要」段落（3-5 句）
+          "related_concepts": [str],
+          "source_refs": [str]       # 來源路徑，供進一步查閱
+        }
+      ],
+      "total_questions": int,
+      "questions_preview": [         # 題目概覽（不含答案）
+        {"id": str, "concept_id": str, "type": str, "difficulty": int}
+      ]
+    }
+    """
+
+def get_next_question(session_id: str) -> dict | None:
+    """
+    取得下一題（不含答案）。
+    回傳：
+    {
+      "question_number": int,        # 第幾題（1-based）
+      "total": int,
+      "id": str,
+      "concept_id": str,
+      "type": "multiple_choice" | "short_answer" | "application",
+      "difficulty": int,
+      "question": str,
+      "options": [str] | None        # 僅 multiple_choice 有值
+    }
+    若已無下一題，回傳 None。
+    """
+
+def submit_answer(session_id: str, question_id: str, answer: str, self_eval: bool = None) -> dict:
+    """
+    提交答案。
+    - multiple_choice: answer 為選項字母，系統自動判斷對錯
+    - short_answer / application: answer 為使用者回答文字，self_eval 為使用者自評（True=對, False=錯）
+    回傳：
+    {
+      "correct": bool,
+      "correct_answer": str,
+      "explanation": str,
+      "new_interval_days": int,
+      "new_ease_factor": float,
+      "next_review": str             # YYYY-MM-DD
+    }
+    """
+
+def get_session_summary(session_id: str) -> dict:
+    """
+    取得本次 session 統計。
+    回傳：
+    {
+      "total": int,
+      "correct": int,
+      "incorrect": int,
+      "accuracy": float,             # 0.0 ~ 1.0
+      "concepts_reviewed": [str],    # 本次涵蓋的概念 ID
+      "next_reviews": [              # 每題的下次複習日期
+        {"question_id": str, "next_review": str}
+      ]
+    }
+    """
+```
+
+**設計重點**：
+- 所有函式都是 stateless-friendly：session 狀態存在記憶體 dict 中，也可以序列化為 JSON 傳遞
+- AI Agent 透過 Discord/Telegram 出題時，直接呼叫這些函式，不需要 parse 終端機輸出
+- `review_materials` 只給 concept 摘要（3-5 句），不會一次丟整份來源文件
+
+#### 3.6 quiz_cli.py（CLI 介面層）
+
+終端機互動介面，呼叫 `quiz_session.py` 的 API。
+
+```python
+# 介面
+def main():
+    """CLI 進入點，解析參數後驅動 quiz_session"""
+```
+
+**互動流程**：
+```
+使用者執行 quiz_cli.py
+   │
+   v
+呼叫 start_session() → 取得 review_materials
+   │
+   v
+┌──────────────────────────────────┐
+│  顯示複習材料                      │
+│  「本次考試涵蓋以下概念：」          │
+│  1. CAP Theorem - 摘要...         │
+│  2. Consistency Patterns - ...    │
+│  （按 Enter 開始答題）              │
+└──────────────┬───────────────────┘
+               │
+               v
+┌──────────────────────────────────┐
+│  呼叫 get_next_question()         │
+│  顯示題目（含題型標記）              │
+│  MC: 顯示選項 A/B/C/D             │
+│  SA/App: 開放作答                  │
+└──────────────┬───────────────────┘
+               │
+               v
+         使用者輸入答案
+               │
+               v
+┌──────────────────────────────────┐
+│  呼叫 submit_answer()             │
+│  顯示對錯 + 解釋                   │
+│  SA/App: 顯示參考答案              │
+│    使用者自評 (y=對 / n=錯)         │
+└──────────────┬───────────────────┘
+               │
+               v
+         下一題（或結束）
+               │
+               v
+         呼叫 get_session_summary()
+         顯示本次統計
+         (答對率、下次複習日期)
+```
+
+**CLI 介面**：
+```bash
+# 預設：出 10 題到期題目
+python _scripts/quiz_cli.py
+
+# 指定概念
+python _scripts/quiz_cli.py --concept cap-theorem
+
+# 指定題數
+python _scripts/quiz_cli.py --count 5
+
+# 指定 bank 路徑
+python _scripts/quiz_cli.py --bank quiz/bank.json
+```
+
+#### 3.7 file_splitter.py
 
 ```python
 # 介面
@@ -315,7 +475,7 @@ def split_markdown(content: str, max_bytes: int = 1_000_000) -> list[str]:
 - 以段落或標題為邊界拆分，避免切斷句子
 - 每個拆分檔案加上 part 編號
 
-#### 3.6 index_generator.py
+#### 3.8 index_generator.py
 
 ```python
 # 介面
@@ -592,6 +752,8 @@ my-kb/
     ├── sm2_scheduler.py
     ├── metadata_validator.py
     ├── quiz_manager.py
+    ├── quiz_session.py
+    ├── quiz_cli.py
     ├── file_splitter.py
     ├── index_generator.py
     └── prompts/
@@ -682,6 +844,12 @@ my-kb/
 
 **Validates: Requirements 12.5**
 
+### Property 13：Quiz Runner 答題後排程更新一致性
+
+*For any* 答題序列（含多題，每題答對或答錯），Quiz Runner 完成後 `quiz/bank.json` 中每題的 `history` 陣列長度應增加 1，且最後一筆記錄的 `result` 應與使用者的作答結果一致。答題統計的 `correct + incorrect` 應等於 `total`。
+
+**Validates: Requirements 22.4, 22.5**
+
 ---
 
 ## 錯誤處理
@@ -698,6 +866,7 @@ my-kb/
 | pdftotext/Marker 未安裝 | 腳本啟動時檢查依賴，未安裝則提示安裝指令 |
 | DeepWiki CLI 未安裝 | 提示 `pip install deepwiki-to-md` |
 | DeepWiki 無法存取（repo 為 private） | 記錄錯誤，提示 DeepWiki 僅支援 public repo |
+| DeepWiki 尚未建立此 repo 的 wiki | 提示使用者前往 deepwiki.com 貼上 repo URL 觸發建立，等待後重新執行 |
 | epub 解析失敗 | 記錄錯誤，提示檢查 epub 檔案格式 |
 | 網頁擷取失敗（403/404） | 記錄 HTTP 狀態碼，提示使用者檢查 URL |
 | 檔案拆分後仍有片段 > 1 MB | 以更小的邊界重新拆分（段落 → 句子） |
@@ -768,6 +937,8 @@ my-kb/
 | sm2_scheduler | 預設值、邊界值（ease_factor 下限）、history 記錄 |
 | metadata_validator | 各種缺欄位組合、無效值 |
 | quiz_manager | 新增題目、取得複習題包 |
+| quiz_session | session 邏輯、review_materials 產出、題型呈現、自動比對 vs 自評、統計計算、SM-2 呼叫 |
+| quiz_cli | CLI 參數解析、互動流程 |
 | file_splitter | 空內容、剛好 1 MB、遠超 1 MB |
 | index_generator | 空知識庫、有 draft + active 混合 |
 
@@ -786,6 +957,7 @@ my-kb/
 | Property 10（Git 安全） | 整合測試 | 掃描實際知識庫檔案 |
 | Property 11（主題檔結構） | metadata_validator | 產生隨機主題檔內容 |
 | Property 12（疑問擷取） | weekly-refine 邏輯 | 產生隨機概念檔（含/不含「我的疑問」段落） |
+| Property 13（答題排程更新） | quiz_session | 產生隨機答題序列（多題、隨機對錯） |
 
 ### 整合測試
 
