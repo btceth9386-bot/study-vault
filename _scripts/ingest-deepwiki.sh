@@ -39,9 +39,12 @@ TODAY="$(date +%Y-%m-%d)"
 mkdir -p "${SNAPSHOT_DIR}"
 
 # Attempt download
+DEEPWIKI_ERR="$(mktemp)"
+trap 'rm -f "${DEEPWIKI_ERR}"' EXIT
+
 echo "Downloading DeepWiki for ${REPO_PATH}..."
-if ! deepwiki-to-md "${DEEPWIKI_URL}" --output "${SNAPSHOT_DIR}" 2>/tmp/deepwiki-err; then
-  ERR="$(cat /tmp/deepwiki-err)"
+if ! deepwiki-to-md "${DEEPWIKI_URL}" --output "${SNAPSHOT_DIR}" 2>"${DEEPWIKI_ERR}"; then
+  ERR="$(cat "${DEEPWIKI_ERR}")"
   if echo "$ERR" | grep -qi "private"; then
     echo "Error: DeepWiki only supports public repositories. '${REPO_PATH}' appears to be private." >&2
     rm -rf "${OUT_DIR}"
