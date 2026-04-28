@@ -37,6 +37,8 @@ write_if_missing "$target_root/README.md" <<'EOF'
 
 This directory is an initialized Exobrain knowledge base.
 
+Do not commit raw audio, video, large PDFs, cloned repositories, or other generated binaries.
+
 ## Usage
 
 1. Drop new raw materials into `_inbox/`.
@@ -82,11 +84,54 @@ write_if_missing "$target_root/sources/articles/example-article/notes.md" <<'EOF
 
 Active recall improves retention by forcing you to retrieve ideas from memory instead of re-reading them passively.
 
+## Knowledge Map
+
+- Active recall pairs well with spaced repetition.
+- Question-driven notes make retrieval practice easier to repeat.
+
 ## Key Takeaways
 
 - Turn reading highlights into questions.
 - Keep prompts concrete and easy to review later.
 - Review at increasing intervals to reinforce recall.
+EOF
+
+write_if_missing "$target_root/concepts/examples/deliberate-practice.md" <<'EOF'
+---
+id: deliberate-practice
+title: Deliberate Practice
+depth: 2
+review_due: 2026-05-01
+sources:
+  - sources/articles/example-article
+related:
+  - active-recall
+tags:
+  - learning
+  - fundamentals
+---
+
+# 一句話定義
+
+- 刻意練習是把複雜能力拆成可回饋的小單位，持續修正並反覆練。
+- **為什麼存在 / 解決什麼問題**：避免只做熟悉的重複，讓練習真的提升能力。
+- **關鍵字**：feedback loop, stretch zone, active recall
+- **相關概念**：[[active-recall]]
+- **深度等級**：2
+- **最後更新**：2026-04-28
+- **來源**：sources/articles/example-article
+
+## 摘要
+
+Deliberate practice emphasizes short feedback cycles, clear goals, and repeated correction. It is useful for turning passive study time into measurable skill growth.
+
+## 範例
+
+After reading a chapter, write two retrieval questions, answer them from memory, and compare the answer against the source to identify the weakest point to practice next.
+
+## 我的疑問
+
+- Which feedback format best balances speed and depth during weekly reviews?
 EOF
 
 write_if_missing "$target_root/concepts/examples/active-recall.md" <<'EOF'
@@ -98,7 +143,7 @@ review_due: 2026-05-01
 sources:
   - sources/articles/example-article
 related:
-  - spaced-repetition
+  - deliberate-practice
 tags:
   - learning
   - fundamentals
@@ -109,7 +154,7 @@ tags:
 - **一句話定義**：主動從記憶中提取資訊，而不是被動重讀。
 - **為什麼存在 / 解決什麼問題**：降低熟悉感錯覺，讓學習更接近真實提取場景。
 - **關鍵字**：retrieval practice, memory, testing effect
-- **相關概念**：[[spaced-repetition]]
+- **相關概念**：[[deliberate-practice]]
 - **深度等級**：2
 - **最後更新**：2026-04-28
 - **來源**：sources/articles/example-article
@@ -131,13 +176,13 @@ write_if_missing "$target_root/quiz/bank.json" <<'EOF'
 {
   "questions": [
     {
-      "id": "q-active-recall-001",
-      "concept_id": "active-recall",
+      "id": "q-deliberate-practice-001",
+      "concept_id": "deliberate-practice",
       "type": "short_answer",
       "difficulty": 1,
-      "question": "What is the main goal of active recall?",
-      "answer": "To retrieve knowledge from memory instead of passively re-reading it.",
-      "explanation": "The retrieval step strengthens memory and exposes gaps in understanding.",
+      "question": "What makes deliberate practice different from passive repetition?",
+      "answer": "It uses specific goals, feedback, and correction instead of mindless repetition.",
+      "explanation": "The feedback loop is what turns repetition into actual skill improvement.",
       "created_at": "2026-04-28",
       "next_review": "2026-04-29",
       "interval_days": 1,
@@ -173,14 +218,14 @@ write_if_missing "$target_root/.gitignore" <<'EOF'
 *.wav
 *.mp4
 *.mkv
-*.mov
 *.webm
 
 # Large document artifacts
 *.pdf
 *.epub
 
-# Cloned repositories or nested VCS data
+# Cloned repositories and binary artifacts
+sources/repos/*/clone/
 sources/repos/**/repo/
-sources/repos/**/.git/
+*.bin
 EOF
