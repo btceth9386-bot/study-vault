@@ -1,58 +1,195 @@
-"""Stateless-friendly quiz session helpers built around in-memory session state."""
+"""Pure quiz-session logic without terminal or network I/O."""
 
 from __future__ import annotations
 
+import json
+import uuid
 from copy import deepcopy
 from datetime import date, timedelta
-import json
 from pathlib import Path
-import uuid
+from typing import Any
+
+import yaml
 
 from _scripts import sm2_scheduler
+from _scripts.quiz_manager import get_review_pack
 
 
-_SESSIONS: dict[str, dict] = {}
+SESSION_STORE: dict[str, dict[str, Any]] = {}
+_SESSIONS = SESSION_STORE
 
 
-def _parse_today(today: str | None) -> date:
-    return date.fromisoformat(today) if today is not None else date.today()
+def _today_value(today: str | None) -> str:
+    return today or date.today().isoformat()
 
 
-def _load_questions(bank_path: str, concept_id: str | None, today: date, count: int) -> list[dict]:
-    payload = json.loads(Path(bank_path).read_text(encoding="utf-8"))
-    questions = payload.get("questions", [])
+def _normalize_bank_payload(data: Any) -> tuple[str, list[dict[str, Any]]]:
+    if isinstance(data, list):
+        entries = data
+        payload_kind = "list"
+    elif isinstance(data, dict):
+        entries = data.get("questions")
+        payload_kind = "dict"
+    else:
+        raise ValueError("Quiz bank must be a JSON array or an object with a questions list")
 
-    filtered_questions = []
-    for question in questions:
-        if concept_id is not None and question.get("concept_id") != concept_id:
-            continue
-        next_review = question.get("next_review")
-        if next_review is None or next_review <= today.isoformat():
-            filtered_questions.append(deepcopy(question))
+    if not isinstance(entries, list):
+        raise ValueError("Quiz bank questions must be a list")
 
-    return filtered_questions[:count]
+    normalized: list[dict[str, Any]] = []
+    for entry in entries:
+        if not isinstance(entry, dict):
+            raise ValueError("Quiz bank entries must be objects")
+        normalized.append(deepcopy(entry))
+
+    return payload_kind, normalized
 
 
-def _build_review_materials(questions: list[dict]) -> list[dict]:
-    concept_ids = []
-    for question in questions:
-        concept_id = question.get("concept_id")
-        if concept_id not in concept_ids:
-            concept_ids.append(concept_id)
+def _load_bank_entries(bank_path: str | Path) -> tuple[str, list[dict[str, Any]]]:
+    path = Path(bank_path)
+    if not path.exists():
+        raise FileNotFoundError(f"Quiz bank not found: {bank_path}")
 
-    return [
-        {
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return _normalize_bank_payload(data)
+
+
+def _write_bank_entries(bank_path: str | Path, payload_kind: str, entries: list[dict[str, Any]]) -> None:
+    payload: list[dict[str, Any]] | dict[str, list[dict[str, Any]]]
+    if payload_kind == "dict":
+        payload = {"questions": entries}
+    else:
+        payload = entries
+
+    Path(bank_path).write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def _select_questions(
+    bank_path: str | Path,
+    count: int,
+    today: str,
+    concept_id: str | None,
+) -> tuple[str, list[dict[str, Any]]]:
+    payload_kind, all_entries = _load_bank_entries(bank_path)
+    if concept_id is None:
+        try:
+            return payload_kind, get_review_pack(bank_path, count=count, today=today)
+        except ValueError:
+            pass
+
+    filtered_entries = all_entries
+    if concept_id is not None:
+        filtered_entries = [
+            entry for entry in all_entries if entry.get("concept_id") == concept_id
+        ]
+
+    due_entries = [entry for entry in filtered_entries if entry.get("next_review", "") <= today]
+    future_entries = [entry for entry in filtered_entries if entry.get("next_review", "") > today]
+
+    due_entries.sort(key=lambda entry: (entry.get("next_review", ""), entry.get("id", "")))
+    future_entries.sort(key=lambda entry: (entry.get("next_review", ""), entry.get("id", "")))
+
+    return payload_kind, due_entries[:count] + future_entries[: max(0, count - len(due_entries))]
+
+
+def _parse_frontmatter(content: str) -> tuple[dict[str, Any], str]:
+    if not content.startswith("---\n"):
+        return {}, content
+
+    parts = content.split("---\n", 2)
+    if len(parts) < 3:
+        return {}, content
+
+    frontmatter = yaml.safe_load(parts[1]) or {}
+    if not isinstance(frontmatter, dict):
+        frontmatter = {}
+
+    return frontmatter, parts[2]
+
+
+def _extract_summary(body: str) -> str:
+    lines = body.splitlines()
+    capture = False
+    collected: list[str] = []
+
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("#"):
+            heading_text = stripped.lstrip("#").strip().lower()
+            if heading_text in {"摘要", "summary"}:
+                capture = True
+                continue
+            if capture:
+                break
+
+        if capture:
+            if stripped:
+                collected.append(stripped)
+            elif collected:
+                break
+
+    if collected:
+        return " ".join(collected)
+
+    paragraphs = [paragraph.strip() for paragraph in body.split("\n\n") if paragraph.strip()]
+    for paragraph in paragraphs:
+        if not paragraph.startswith("#"):
+            return " ".join(paragraph.splitlines()).strip()
+
+    return ""
+
+
+def _find_concept_file(kb_root: str | Path, concept_id: str) -> Path:
+    concepts_root = Path(kb_root) / "concepts"
+    if not concepts_root.exists():
+        return concepts_root / f"{concept_id}.md"
+
+    direct_match = concepts_root / f"{concept_id}.md"
+    if direct_match.exists():
+        return direct_match
+
+    for candidate in concepts_root.rglob("*.md"):
+        frontmatter, _ = _parse_frontmatter(candidate.read_text(encoding="utf-8"))
+        if frontmatter.get("id") == concept_id:
+            return candidate
+
+    return direct_match
+
+
+def _load_review_material(kb_root: str | Path, concept_id: str) -> dict[str, Any]:
+    concept_path = _find_concept_file(kb_root, concept_id)
+    if not concept_path.exists():
+        return {
             "concept_id": concept_id,
             "title": concept_id,
             "summary": "",
             "related_concepts": [],
             "source_refs": [],
         }
-        for concept_id in concept_ids
-    ]
+
+    frontmatter, body = _parse_frontmatter(concept_path.read_text(encoding="utf-8"))
+
+    related_concepts = frontmatter.get("related_concepts", [])
+    if not isinstance(related_concepts, list):
+        related_concepts = []
+
+    source_refs = frontmatter.get("sources", [])
+    if not isinstance(source_refs, list):
+        source_refs = []
+
+    return {
+        "concept_id": concept_id,
+        "title": frontmatter.get("title", concept_id),
+        "summary": _extract_summary(body),
+        "related_concepts": related_concepts,
+        "source_refs": source_refs,
+    }
 
 
-def _question_preview(question: dict) -> dict:
+def _question_preview(question: dict[str, Any]) -> dict[str, Any]:
     return {
         "id": question["id"],
         "concept_id": question["concept_id"],
@@ -61,7 +198,7 @@ def _question_preview(question: dict) -> dict:
     }
 
 
-def _public_question(question: dict, question_number: int, total: int) -> dict:
+def _public_question(question: dict[str, Any], question_number: int, total: int) -> dict[str, Any]:
     return {
         "question_number": question_number,
         "total": total,
@@ -74,17 +211,30 @@ def _public_question(question: dict, question_number: int, total: int) -> dict:
     }
 
 
-def _normalize_interval_days(value: float | int) -> int:
-    return max(1, int(round(value)))
+def _get_session(session_id: str) -> dict[str, Any]:
+    try:
+        return SESSION_STORE[session_id]
+    except KeyError as exc:
+        raise KeyError(f"Unknown session_id: {session_id}") from exc
 
 
-def _grade_answer(question: dict, answer: str, self_eval: bool | None) -> bool:
-    question_type = question["type"]
-    if question_type == "multiple_choice":
-        return answer.strip() == question["answer"]
+def _question_is_correct(question: dict[str, Any], answer: str, self_eval: bool | None) -> bool:
+    if question["type"] == "multiple_choice":
+        return answer.strip().lower() == str(question["answer"]).strip().lower()
+
     if self_eval is None:
-        raise ValueError("self_eval is required for non-multiple-choice questions")
+        raise ValueError("self_eval is required for short-answer and application questions")
+
     return self_eval
+
+
+def _apply_review_update(question: dict[str, Any], correct: bool, today_value: str) -> dict[str, Any]:
+    review_date = date.fromisoformat(today_value)
+    updated = sm2_scheduler._apply_result(question, correct=correct, review_date=review_date)
+    interval_days = max(1, int(round(float(updated["interval_days"]))))
+    updated["interval_days"] = interval_days
+    updated["next_review"] = (review_date + timedelta(days=interval_days)).isoformat()
+    return updated
 
 
 def start_session(
@@ -93,38 +243,52 @@ def start_session(
     count: int = 10,
     concept_id: str | None = None,
     today: str | None = None,
-) -> dict:
-    """Create a quiz session from due questions in the quiz bank."""
+) -> dict[str, Any]:
+    """Create a session and return review materials plus question preview."""
 
-    review_date = _parse_today(today)
-    questions = _load_questions(bank_path, concept_id, review_date, count)
-    session_id = str(uuid.uuid4())
+    today_value = _today_value(today)
+    payload_kind, questions = _select_questions(
+        bank_path,
+        count=count,
+        today=today_value,
+        concept_id=concept_id,
+    )
 
-    _SESSIONS[session_id] = {
+    session_id = uuid.uuid4().hex
+    concept_ids = list(dict.fromkeys(question["concept_id"] for question in questions))
+    review_materials = [_load_review_material(kb_root, current_concept_id) for current_concept_id in concept_ids]
+
+    SESSION_STORE[session_id] = {
         "bank_path": bank_path,
+        "bank_payload_kind": payload_kind,
         "kb_root": kb_root,
-        "today": review_date,
-        "questions": questions,
-        "answers": {},
+        "today": today_value,
+        "questions": [deepcopy(question) for question in questions],
+        "cursor": 0,
+        "results": {},
+        "review_materials": review_materials,
     }
 
     return {
         "session_id": session_id,
-        "review_materials": _build_review_materials(questions),
+        "review_materials": review_materials,
         "total_questions": len(questions),
         "questions_preview": [_question_preview(question) for question in questions],
     }
 
 
-def get_next_question(session_id: str) -> dict | None:
-    """Return the next unanswered question without revealing its answer."""
+def get_next_question(session_id: str) -> dict[str, Any] | None:
+    """Return the next unanswered question without its answer."""
 
-    session = _SESSIONS[session_id]
-    total = len(session["questions"])
-    for index, question in enumerate(session["questions"], start=1):
-        if question["id"] not in session["answers"]:
-            return _public_question(question, question_number=index, total=total)
-    return None
+    session = _get_session(session_id)
+    cursor = session["cursor"]
+    questions = session["questions"]
+
+    if cursor >= len(questions):
+        return None
+
+    question = questions[cursor]
+    return _public_question(question, question_number=cursor + 1, total=len(questions))
 
 
 def submit_answer(
@@ -132,38 +296,44 @@ def submit_answer(
     question_id: str,
     answer: str,
     self_eval: bool | None = None,
-) -> dict:
-    """Submit an answer, update SM-2 scheduling fields, and record the result."""
+) -> dict[str, Any]:
+    """Score one answer, update scheduling fields, and persist bank changes."""
 
-    session = _SESSIONS[session_id]
-    review_date = session["today"]
-    question = next(
-        (item for item in session["questions"] if item["id"] == question_id),
-        None,
-    )
-    if question is None:
-        raise KeyError(f"Unknown question_id: {question_id}")
-    if question_id in session["answers"]:
-        raise ValueError(f"Question already answered: {question_id}")
+    session = _get_session(session_id)
+    cursor = session["cursor"]
+    questions = session["questions"]
 
-    is_correct = _grade_answer(question, answer, self_eval)
-    updated_question = sm2_scheduler._apply_result(
-        question,
-        correct=is_correct,
-        review_date=review_date,
-    )
+    if cursor >= len(questions):
+        raise ValueError("Session is already complete")
 
-    normalized_interval = _normalize_interval_days(updated_question["interval_days"])
-    updated_question["interval_days"] = normalized_interval
-    updated_question["next_review"] = (review_date + timedelta(days=normalized_interval)).isoformat()
+    question = questions[cursor]
+    if question["id"] != question_id:
+        raise ValueError("question_id does not match the next pending question")
 
-    question_index = session["questions"].index(question)
-    session["questions"][question_index] = updated_question
-    session["answers"][question_id] = is_correct
+    correct = _question_is_correct(question, answer, self_eval)
+    updated_question = _apply_review_update(question, correct, session["today"])
+
+    session["questions"][cursor] = updated_question
+    session["results"][question_id] = {
+        "correct": correct,
+        "concept_id": updated_question["concept_id"],
+        "next_review": updated_question["next_review"],
+    }
+    session["cursor"] += 1
+
+    payload_kind, bank_entries = _load_bank_entries(session["bank_path"])
+    for index, entry in enumerate(bank_entries):
+        if entry.get("id") == question_id:
+            bank_entries[index] = deepcopy(updated_question)
+            break
+    else:
+        raise ValueError(f"Question not found in bank: {question_id}")
+
+    _write_bank_entries(session["bank_path"], payload_kind, bank_entries)
 
     return {
-        "correct": is_correct,
-        "correct_answer": question["answer"],
+        "correct": correct,
+        "correct_answer": str(question["answer"]),
         "explanation": question["explanation"],
         "new_interval_days": updated_question["interval_days"],
         "new_ease_factor": updated_question["ease_factor"],
@@ -171,13 +341,14 @@ def submit_answer(
     }
 
 
-def get_session_summary(session_id: str) -> dict:
-    """Return aggregate statistics for a completed or in-progress session."""
+def get_session_summary(session_id: str) -> dict[str, Any]:
+    """Return aggregate session stats."""
 
-    session = _SESSIONS[session_id]
+    session = _get_session(session_id)
+    results = list(session["results"].items())
     total = len(session["questions"])
-    correct = sum(1 for result in session["answers"].values() if result)
-    incorrect = sum(1 for result in session["answers"].values() if not result)
+    correct = sum(1 for _, result in results if result["correct"])
+    incorrect = len(results) - correct
     concepts_reviewed = list(dict.fromkeys(question["concept_id"] for question in session["questions"]))
 
     return {
@@ -187,11 +358,7 @@ def get_session_summary(session_id: str) -> dict:
         "accuracy": (correct / total) if total else 0.0,
         "concepts_reviewed": concepts_reviewed,
         "next_reviews": [
-            {
-                "question_id": question["id"],
-                "next_review": question.get("next_review"),
-            }
-            for question in session["questions"]
-            if question["id"] in session["answers"]
+            {"question_id": question_id, "next_review": result["next_review"]}
+            for question_id, result in results
         ],
     }
