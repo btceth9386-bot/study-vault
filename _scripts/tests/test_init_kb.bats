@@ -51,6 +51,7 @@ teardown() {
   [ -f "${TEST_TMPDIR}/kb/_index/concepts.md" ]
   [ -f "${TEST_TMPDIR}/kb/_index/topics.md" ]
   [ -f "${TEST_TMPDIR}/kb/_index/tags.md" ]
+  [ -f "${TEST_TMPDIR}/kb/_scripts/prompts/new-source.md" ]
 
   run grep -F "Do not commit raw audio, video, large PDFs, cloned repositories" "${TEST_TMPDIR}/kb/README.md"
   [ "${status}" -eq 0 ]
@@ -71,6 +72,12 @@ teardown() {
   [ "${status}" -eq 0 ]
 
   run grep -F "\"concept_id\": \"deliberate-practice\"" "${TEST_TMPDIR}/kb/quiz/bank.json"
+  [ "${status}" -eq 0 ]
+
+  run grep -F "絕對不能建立、修改、刪除 \`concepts/\`" "${TEST_TMPDIR}/kb/_scripts/prompts/new-source.md"
+  [ "${status}" -eq 0 ]
+
+  run grep -F "merge_candidate" "${TEST_TMPDIR}/kb/_scripts/prompts/new-source.md"
   [ "${status}" -eq 0 ]
 }
 

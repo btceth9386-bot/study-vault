@@ -68,10 +68,14 @@ def test_init_kb_bootstraps_structure_and_example_content(tmp_path: Path) -> Non
     concepts_index = (tmp_path / "_index" / "concepts.md").read_text(encoding="utf-8")
     topics_index = (tmp_path / "_index" / "topics.md").read_text(encoding="utf-8")
     tags_index = (tmp_path / "_index" / "tags.md").read_text(encoding="utf-8")
+    new_source_prompt = (tmp_path / "_scripts" / "prompts" / "new-source.md").read_text(encoding="utf-8")
 
     assert "Knowledge base initialized." in concepts_index
     assert "Knowledge base initialized." in topics_index
     assert "Knowledge base initialized." in tags_index
+    assert "sources/<type>/<slug>/" in new_source_prompt
+    assert "絕對不能建立、修改、刪除 `concepts/`" in new_source_prompt
+    assert "merge_candidate" in new_source_prompt
 
     gitignore = (tmp_path / ".gitignore").read_text(encoding="utf-8")
     for pattern in ("*.mp3", "*.mp4", "*.pdf", "*.epub", "sources/repos/**/repo/"):
