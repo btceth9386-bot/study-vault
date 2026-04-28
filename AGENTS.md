@@ -108,3 +108,28 @@ See `.agents/summary/index.md` for the full documentation index with cross-refer
 <!-- This section is for human and agent-maintained operational knowledge.
      Add repo-specific conventions, gotchas, and workflow rules here.
      This section is preserved exactly as-is when re-running codebase-summary. -->
+
+### Runtime Conventions
+
+**Python**: All Python scripts live in `_scripts/` and must be invoked via the project venv:
+```bash
+.venv/bin/python3 _scripts/<script>.py
+```
+Bash scripts that call Python must use `.venv/bin/python3`, never bare `python3`.
+
+**Setup** (one-time):
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r _scripts/requirements.txt
+```
+
+**Node.js**: Node scripts in `_scripts/` use dependencies from `_scripts/package.json`:
+```bash
+cd _scripts && npm install && cd ..
+node _scripts/<script>.js
+```
+
+**Tests**:
+```bash
+.venv/bin/python3 -m pytest _scripts/tests/ -v
+```
