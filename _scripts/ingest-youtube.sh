@@ -1,74 +1,185 @@
 #!/usr/bin/env bash
+# ingest-youtube.sh - Ingest a YouTube video into the knowledge base.
+# Usage: ./_scripts/ingest-youtube.sh <youtube-url> [kb-root]
 set -euo pipefail
 
-# Usage: ingest-youtube.sh <youtube-url> [kb-root]
-URL="${1:?Usage: ingest-youtube.sh <youtube-url> [kb-root]}"
-KB_ROOT="${2:-.}"
-SCRIPTS_DIR="$(cd "$(dirname "$0")" && pwd)"
-
-# Dependency checks
-if ! command -v yt-dlp &>/dev/null; then
-  echo "Error: yt-dlp is not installed. Install with: pip install yt-dlp" >&2
+if [[ $# -lt 1 ]]; then
+  echo "Usage: $0 <youtube-url> [kb-root]" >&2
   exit 1
 fi
+
+YOUTUBE_URL="$1"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+KB_ROOT="${2:-$(dirname "${SCRIPT_DIR}")}"
+PYTHON="${KB_ROOT}/.venv/bin/python3"
+PYTHON_SCRIPTS_DIR="${_INGEST_SCRIPTS_DIR:-${SCRIPT_DIR}}"
+
+if ! command -v yt-dlp >/dev/null 2>&1; then
+  echo "Error: yt-dlp is not installed or not in PATH." >&2
+  exit 1
+fi
+
 if [[ -z "${OPENAI_API_KEY:-}" ]]; then
-  echo "Error: OPENAI_API_KEY is not set" >&2
+  echo "Error: OPENAI_API_KEY is not set." >&2
   exit 1
 fi
 
-# Derive slug from URL
-SLUG="$(echo "$URL" | sed 's|.*[=/]||; s|[^a-zA-Z0-9_-]|-|g' | tr '[:upper:]' '[:lower:]')"
+echo "Fetching video metadata..."
+VIDEO_TITLE="$(yt-dlp --get-title --no-playlist "${YOUTUBE_URL}" 2>/dev/null || true)"
+if [[ -z "${VIDEO_TITLE}" ]]; then
+  VIDEO_TITLE="$(printf '%s' "${YOUTUBE_URL}" | sed 's|.*[=/]||; s|[^a-zA-Z0-9_-]|-|g')"
+fi
+
+SLUG="$(printf '%s' "${VIDEO_TITLE}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g; s/-\{1,\}/-/g; s/^-//; s/-$//')"
+if [[ -z "${SLUG}" ]]; then
+  SLUG="video-$(date +%Y%m%d%H%M%S)"
+fi
+
+TODAY="$(date +%Y-%m-%d)"
 OUT_DIR="${KB_ROOT}/sources/videos/${SLUG}"
 mkdir -p "${OUT_DIR}"
 
-TRANSCRIPT_MD="${OUT_DIR}/transcript.md"
-SRT_FILE="${OUT_DIR}/transcript.srt"
-AUDIO_FILE="${OUT_DIR}/audio.m4a"
+WORK_DIR="$(mktemp -d)"
+trap 'rm -rf "${WORK_DIR}"' EXIT
 
-# Ensure audio files are gitignored
-GITIGNORE="${KB_ROOT}/.gitignore"
-if [[ -f "$GITIGNORE" ]] && ! grep -qF "*.m4a" "$GITIGNORE"; then
-  echo "*.m4a" >> "$GITIGNORE"
+echo "Attempting to download subtitles..."
+SRT_FILE=""
+
+if yt-dlp \
+    --write-subs \
+    --sub-langs "en,zh-TW,zh-Hans,zh" \
+    --sub-format srt \
+    --convert-subs srt \
+    --skip-download \
+    --no-playlist \
+    -o "${WORK_DIR}/%(id)s" \
+    --output "${WORK_DIR}/%(id)s" \
+    "${YOUTUBE_URL}" >/dev/null 2>&1; then
+  SRT_FILE="$(find "${WORK_DIR}" -type f -name "*.srt" | head -1)"
 fi
 
-# Step 1: Try to download subtitles
-if yt-dlp --write-sub --write-auto-sub --sub-lang en --skip-download \
-    --output "${OUT_DIR}/transcript" "$URL" 2>/dev/null \
-    && ls "${OUT_DIR}"/transcript*.srt 2>/dev/null | head -1 | xargs -I{} cp {} "$SRT_FILE" 2>/dev/null \
-    && [[ -s "$SRT_FILE" ]]; then
-  # Convert SRT to Markdown
-  .venv/bin/python3 "${SCRIPTS_DIR}/whisper_transcribe.py" srt-to-md "$SRT_FILE" > "$TRANSCRIPT_MD"
-else
-  # Step 2: Fallback — download audio and use Whisper API
-  rm -f "$SRT_FILE"
-  if ! yt-dlp --extract-audio --audio-format m4a --output "$AUDIO_FILE" "$URL" 2>/dev/null; then
-    echo "Error: yt-dlp failed to download audio from $URL. Check the URL is valid." >&2
+if [[ -z "${SRT_FILE}" ]]; then
+  if yt-dlp \
+      --write-auto-subs \
+      --sub-langs "en,zh-TW,zh-Hans,zh" \
+      --sub-format srt \
+      --convert-subs srt \
+      --skip-download \
+      --no-playlist \
+      -o "${WORK_DIR}/%(id)s" \
+      --output "${WORK_DIR}/%(id)s" \
+      "${YOUTUBE_URL}" >/dev/null 2>&1; then
+    SRT_FILE="$(find "${WORK_DIR}" -type f -name "*.srt" | head -1)"
+  fi
+fi
+
+if [[ -z "${SRT_FILE}" ]]; then
+  echo "No subtitles found. Downloading audio for Whisper transcription..."
+  yt-dlp \
+    --extract-audio \
+    --audio-format mp3 \
+    --no-playlist \
+    -o "${WORK_DIR}/audio.%(ext)s" \
+    --output "${WORK_DIR}/audio.%(ext)s" \
+    "${YOUTUBE_URL}"
+
+  AUDIO_FILE="$(find "${WORK_DIR}" -type f -name "audio.*" | head -1)"
+  if [[ -z "${AUDIO_FILE}" ]]; then
+    echo "Error: Audio download failed." >&2
     exit 1
   fi
-  SRT_OUT="${OUT_DIR}/transcript_whisper.srt"
-  .venv/bin/python3 "${SCRIPTS_DIR}/whisper_transcribe.py" transcribe "$AUDIO_FILE" > "$SRT_OUT"
-  .venv/bin/python3 "${SCRIPTS_DIR}/whisper_transcribe.py" srt-to-md "$SRT_OUT" > "$TRANSCRIPT_MD"
+
+  echo "Transcribing with Whisper API..."
+  SRT_FILE="${WORK_DIR}/transcript.srt"
+  if [[ -n "${_INGEST_SCRIPTS_DIR:-}" ]]; then
+    "${PYTHON}" - "${PYTHON_SCRIPTS_DIR}" "${AUDIO_FILE}" > "${SRT_FILE}" <<'PY'
+import sys
+
+scripts_dir, audio_path = sys.argv[1:3]
+sys.path.insert(0, scripts_dir)
+
+from whisper_transcribe import transcribe
+
+print(transcribe(audio_path))
+PY
+  else
+    "${PYTHON}" "${SCRIPT_DIR}/whisper_transcribe.py" transcribe "${AUDIO_FILE}" > "${SRT_FILE}"
+  fi
 fi
 
-# Create highlights.md template
-cat > "${OUT_DIR}/highlights.md" <<'EOF'
-# Highlights
+echo "Converting SRT to Markdown..."
+if [[ -n "${_INGEST_SCRIPTS_DIR:-}" ]]; then
+  TRANSCRIPT_MD="$("${PYTHON}" - "${PYTHON_SCRIPTS_DIR}" "${SRT_FILE}" <<'PY'
+import sys
 
-<!-- Fill in key takeaways after running the new-source prompt -->
-EOF
+scripts_dir, srt_path = sys.argv[1:3]
+sys.path.insert(0, scripts_dir)
 
-# Create meta.yaml
-TODAY="$(date +%Y-%m-%d)"
-cat > "${OUT_DIR}/meta.yaml" <<EOF
-type: video
-title: "${SLUG}"
-url: "${URL}"
-language: en
-date_consumed: ${TODAY}
-date_added: ${TODAY}
-status: ingesting
-related_concepts: []
-tags: []
-EOF
+from whisper_transcribe import srt_to_markdown
 
-echo "Done: ${OUT_DIR}"
+print(srt_to_markdown(srt_path))
+PY
+)"
+else
+  TRANSCRIPT_MD="$("${PYTHON}" "${SCRIPT_DIR}/whisper_transcribe.py" srt-to-md "${SRT_FILE}")"
+fi
+
+cat > "${OUT_DIR}/transcript.md" <<MD
+# ${VIDEO_TITLE}
+
+${TRANSCRIPT_MD}
+MD
+
+cat > "${OUT_DIR}/highlights.md" <<MD
+# ${VIDEO_TITLE} - Highlights
+
+<!-- Fill in key highlights after reviewing the transcript. -->
+MD
+
+"${PYTHON}" - "${OUT_DIR}/meta.yaml" "${VIDEO_TITLE}" "${YOUTUBE_URL}" "${TODAY}" <<'PY'
+import sys
+
+import yaml
+
+meta_path, title, url, today = sys.argv[1:5]
+metadata = {
+    "type": "video",
+    "title": title,
+    "url": url,
+    "language": "en",
+    "date_consumed": today,
+    "date_added": today,
+    "status": "processed",
+}
+
+with open(meta_path, "w", encoding="utf-8") as handle:
+    yaml.safe_dump(metadata, handle, allow_unicode=True, sort_keys=False)
+    handle.write(f'# url: "{url}"\n')
+PY
+
+ERRORS="$("${PYTHON}" - "${PYTHON_SCRIPTS_DIR}" "${OUT_DIR}/meta.yaml" <<'PY'
+import sys
+
+scripts_dir, meta_path = sys.argv[1:3]
+sys.path.insert(0, scripts_dir)
+
+from metadata_validator import validate_source_meta
+
+for error in validate_source_meta(meta_path):
+    print(error)
+PY
+)"
+if [[ -n "${ERRORS}" ]]; then
+  echo "Error: meta.yaml validation failed:" >&2
+  echo "${ERRORS}" >&2
+  exit 1
+fi
+
+GITIGNORE="${KB_ROOT}/.gitignore"
+for pattern in "*.mp3" "*.wav" "*.m4a" "*.ogg" "*.flac"; do
+  if [[ ! -f "${GITIGNORE}" ]] || ! grep -qxF "${pattern}" "${GITIGNORE}"; then
+    echo "${pattern}" >> "${GITIGNORE}"
+  fi
+done
+
+echo "Done. Output written to ${OUT_DIR}"
