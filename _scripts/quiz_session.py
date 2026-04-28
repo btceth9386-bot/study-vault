@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 import uuid
 
-from _scripts.sm2_scheduler import update_on_correct, update_on_incorrect
+from _scripts import sm2_scheduler
 
 
 _SESSIONS: dict[str, dict] = {}
@@ -147,17 +147,15 @@ def submit_answer(
         raise ValueError(f"Question already answered: {question_id}")
 
     is_correct = _grade_answer(question, answer, self_eval)
-    updated_question = (
-        update_on_correct(question, review_date=review_date)
-        if is_correct
-        else update_on_incorrect(question, review_date=review_date)
+    updated_question = sm2_scheduler._apply_result(
+        question,
+        correct=is_correct,
+        review_date=review_date,
     )
 
     normalized_interval = _normalize_interval_days(updated_question["interval_days"])
     updated_question["interval_days"] = normalized_interval
-    updated_question["next_review"] = (
-        review_date + timedelta(days=normalized_interval)
-    ).isoformat()
+    updated_question["next_review"] = (review_date + timedelta(days=normalized_interval)).isoformat()
 
     question_index = session["questions"].index(question)
     session["questions"][question_index] = updated_question
