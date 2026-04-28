@@ -5,11 +5,27 @@ from __future__ import annotations
 import re
 
 
+HEADING_PATTERN = re.compile(r"^(#{1,6})[ \t]+\S", re.MULTILINE)
+
+
+class MarkdownChunk(str):
+    """String chunk annotated with ordering metadata."""
+
+    part_number: int
+    total_parts: int
+
+    def __new__(cls, value: str, part_number: int, total_parts: int) -> "MarkdownChunk":
+        instance = super().__new__(cls, value)
+        instance.part_number = part_number
+        instance.total_parts = total_parts
+        return instance
+
+
 def _byte_length(text: str) -> int:
     return len(text.encode("utf-8"))
 
 
-def _split_markdown_blocks(content: str) -> list[str]:
+def _split_paragraph_blocks(content: str) -> list[str]:
     if not content:
         return []
 
@@ -22,6 +38,27 @@ def _split_markdown_blocks(content: str) -> list[str]:
         combined = block + separator
         if combined:
             blocks.append(combined)
+
+    return blocks
+
+
+def _split_markdown_blocks(content: str) -> list[str]:
+    if not content:
+        return []
+
+    matches = list(HEADING_PATTERN.finditer(content))
+    if not matches:
+        return _split_paragraph_blocks(content)
+
+    blocks: list[str] = []
+    first_heading_start = matches[0].start()
+    if first_heading_start > 0:
+        blocks.extend(_split_paragraph_blocks(content[:first_heading_start]))
+
+    for index, match in enumerate(matches):
+        start = match.start()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(content)
+        blocks.append(content[start:end])
 
     return blocks
 
@@ -100,4 +137,8 @@ def split_markdown(content: str, max_bytes: int = 1_000_000) -> list[str]:
     if current:
         chunks.append(current)
 
-    return chunks
+    total_parts = len(chunks)
+    return [
+        MarkdownChunk(chunk, part_number=index, total_parts=total_parts)
+        for index, chunk in enumerate(chunks, start=1)
+    ]
