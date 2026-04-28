@@ -1,177 +1,186 @@
 #!/usr/bin/env bash
+
 set -euo pipefail
 
-target_dir="${1:-.}"
+target_root="${1:-.}"
+
+mkdir -p "$target_root"
+target_root="$(cd "$target_root" && pwd)"
+
+write_if_missing() {
+  local path="$1"
+  if [[ -e "$path" ]]; then
+    return
+  fi
+
+  mkdir -p "$(dirname "$path")"
+  cat >"$path"
+}
 
 mkdir -p \
-  "${target_dir}/_inbox" \
-  "${target_dir}/_drafts" \
-  "${target_dir}/concepts/examples" \
-  "${target_dir}/sources/repos" \
-  "${target_dir}/sources/videos" \
-  "${target_dir}/sources/books" \
-  "${target_dir}/sources/articles/example-article" \
-  "${target_dir}/sources/podcasts" \
-  "${target_dir}/sources/papers" \
-  "${target_dir}/quiz" \
-  "${target_dir}/_index" \
-  "${target_dir}/topics" \
-  "${target_dir}/_scripts/prompts"
+  "$target_root/_inbox" \
+  "$target_root/_drafts" \
+  "$target_root/concepts/examples" \
+  "$target_root/sources/repos" \
+  "$target_root/sources/videos" \
+  "$target_root/sources/books" \
+  "$target_root/sources/articles/example-article" \
+  "$target_root/sources/podcasts" \
+  "$target_root/sources/papers" \
+  "$target_root/quiz" \
+  "$target_root/_index" \
+  "$target_root/topics" \
+  "$target_root/_scripts/prompts"
 
-cat > "${target_dir}/README.md" <<'EOF'
+write_if_missing "$target_root/README.md" <<'EOF'
 # Study Vault
 
-This knowledge base stores refined text assets in Git and keeps large raw media files out of version control.
+This directory is an initialized Exobrain knowledge base.
+
+## Usage
+
+1. Drop new raw materials into `_inbox/`.
+2. Run the appropriate ingest script from `_scripts/` to normalize the source into `sources/`.
+3. Generate draft concepts into `_drafts/` and review them before promotion.
+4. Promote approved concepts into `concepts/`, then update `quiz/bank.json` and `_index/`.
+5. Regenerate indexes whenever concepts or topics change.
 
 ## Structure
 
-- `_inbox/`: staging area for newly captured materials
-- `_drafts/`: AI-generated concept drafts pending review
-- `concepts/`: promoted concepts with frontmatter and examples
-- `sources/`: processed source materials by type
-- `quiz/bank.json`: spaced-repetition question bank
-- `_index/`: generated concept, topic, and tag indexes
-
-## Git Tracking
-
-Commit Markdown, YAML, JSON, and scripts. Do not commit raw audio, video, large PDFs, cloned repositories, or other large binaries.
-
-## First Steps
-
-1. Add a new source under `_inbox/` or `sources/`.
-2. Generate drafts in `_drafts/`.
-3. Review and promote approved concepts into `concepts/`.
-4. Study from `quiz/bank.json`.
+- `_inbox/` stores new materials waiting for ingestion.
+- `_drafts/` stores AI-generated drafts that still require review.
+- `concepts/` stores approved concept notes.
+- `sources/` stores normalized source material grouped by type.
+- `quiz/bank.json` stores spaced-repetition questions.
+- `_index/` stores generated concept, topic, and tag indexes.
+- `topics/` stores curated learning paths.
+- `_scripts/prompts/` stores agent prompt templates.
 EOF
 
-cat > "${target_dir}/sources/articles/example-article/meta.yaml" <<'EOF'
+write_if_missing "$target_root/sources/articles/example-article/meta.yaml" <<'EOF'
 type: article
-title: Example Article
+title: "Example Article: Active Recall Basics"
+url: https://example.com/active-recall-basics
+authors:
+  - Example Author
 language: en
 date_consumed: 2026-04-28
 date_added: 2026-04-28
+estimated_time: 15min
 status: processed
-url: https://example.com/article
+related_concepts:
+  - active-recall
+tags:
+  - learning
+  - fundamentals
 EOF
 
-cat > "${target_dir}/sources/articles/example-article/notes.md" <<'EOF'
+write_if_missing "$target_root/sources/articles/example-article/notes.md" <<'EOF'
 # Example Article Notes
-
-## Knowledge Map
-
-- Core concept: deliberate practice
-- Supporting concept: feedback loops
 
 ## Summary
 
-This sample source shows the expected structure for processed article notes.
+Active recall improves retention by forcing you to retrieve ideas from memory instead of re-reading them passively.
+
+## Key Takeaways
+
+- Turn reading highlights into questions.
+- Keep prompts concrete and easy to review later.
+- Review at increasing intervals to reinforce recall.
 EOF
 
-cat > "${target_dir}/concepts/examples/deliberate-practice.md" <<'EOF'
+write_if_missing "$target_root/concepts/examples/active-recall.md" <<'EOF'
 ---
-id: deliberate-practice
-title: Deliberate Practice
+id: active-recall
+title: Active Recall
 depth: 2
 review_due: 2026-05-01
-last_updated: 2026-04-28
 sources:
   - sources/articles/example-article
+related:
+  - spaced-repetition
 tags:
   - learning
-  - skill-building
+  - fundamentals
 ---
 
-# 一句話定義
+# Active Recall
 
-刻意練習是針對明確弱點進行高回饋、可調整的訓練方式。
+- **一句話定義**：主動從記憶中提取資訊，而不是被動重讀。
+- **為什麼存在 / 解決什麼問題**：降低熟悉感錯覺，讓學習更接近真實提取場景。
+- **關鍵字**：retrieval practice, memory, testing effect
+- **相關概念**：[[spaced-repetition]]
+- **深度等級**：2
+- **最後更新**：2026-04-28
+- **來源**：sources/articles/example-article
 
-# 為什麼存在
+## 摘要
 
-它幫助學習者避免只靠重複次數，改以有目標的修正提升能力。
+Active recall asks you to answer from memory before checking notes. This reveals gaps quickly and creates stronger retrieval cues for later reviews.
 
-# 關鍵字
+## 範例
 
-- feedback loop
-- repetition
-- coaching
+After reading a chapter, close the book and write down the three main claims from memory, then compare your answer with the notes.
 
-# 相關概念
+## 我的疑問
 
-- [[active-recall]]
-
-# 摘要
-
-刻意練習要求拆解技能、針對瓶頸練習，並盡快取得回饋。這比單純累積時間更有效率。
-
-# 範例
-
-工程師在每次 code review 後整理錯誤模式，下一輪只針對該模式設計練習題。
-
-# 我的疑問
-
-- 如何替抽象技能定義可量測回饋？
+- Which prompt formats make recall easiest to maintain for long-term study?
 EOF
 
-cat > "${target_dir}/quiz/bank.json" <<'EOF'
-[
-  {
-    "id": "q-deliberate-practice-1",
-    "concept_id": "deliberate-practice",
-    "type": "short_answer",
-    "difficulty": 2,
-    "question": "What makes deliberate practice different from passive repetition?",
-    "answer": "It targets specific weaknesses and relies on fast feedback plus adjustment.",
-    "explanation": "The key distinction is focused correction rather than mindless repetition.",
-    "created_at": "2026-04-28",
-    "last_attempted": null,
-    "next_review": "2026-04-28",
-    "interval_days": 1,
-    "ease_factor": 2.5,
-    "history": []
-  }
-]
+write_if_missing "$target_root/quiz/bank.json" <<'EOF'
+{
+  "questions": [
+    {
+      "id": "q-active-recall-001",
+      "concept_id": "active-recall",
+      "type": "short_answer",
+      "difficulty": 1,
+      "question": "What is the main goal of active recall?",
+      "answer": "To retrieve knowledge from memory instead of passively re-reading it.",
+      "explanation": "The retrieval step strengthens memory and exposes gaps in understanding.",
+      "created_at": "2026-04-28",
+      "next_review": "2026-04-29",
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "history": []
+    }
+  ]
+}
 EOF
 
-cat > "${target_dir}/_index/concepts.md" <<'EOF'
+write_if_missing "$target_root/_index/concepts.md" <<'EOF'
 # Concepts Index
 
-- deliberate-practice (active)
+Knowledge base initialized. Run `_scripts/index_generator.py` after adding or promoting concepts.
 EOF
 
-cat > "${target_dir}/_index/topics.md" <<'EOF'
+write_if_missing "$target_root/_index/topics.md" <<'EOF'
 # Topics Index
 
-- learning-systems
+Knowledge base initialized. Add topic files under `topics/` and regenerate indexes when ready.
 EOF
 
-cat > "${target_dir}/_index/tags.md" <<'EOF'
+write_if_missing "$target_root/_index/tags.md" <<'EOF'
 # Tags Index
 
-- learning
-- skill-building
+Knowledge base initialized. Tags will appear here after concepts are added and indexes are regenerated.
 EOF
 
-cat > "${target_dir}/.gitignore" <<'EOF'
-# Audio files
+write_if_missing "$target_root/.gitignore" <<'EOF'
+# Audio and video artifacts
 *.mp3
-*.wav
 *.m4a
-*.ogg
-*.flac
-
-# Video files
+*.wav
 *.mp4
 *.mkv
+*.mov
 *.webm
-*.avi
 
-# Large raw files
+# Large document artifacts
 *.pdf
 *.epub
 
-# Cloned repositories
-sources/repos/*/clone/
-
-# Large binaries
-*.bin
+# Cloned repositories or nested VCS data
+sources/repos/**/repo/
+sources/repos/**/.git/
 EOF
