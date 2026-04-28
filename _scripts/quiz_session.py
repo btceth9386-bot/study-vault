@@ -172,7 +172,9 @@ def _load_review_material(kb_root: str | Path, concept_id: str) -> dict[str, Any
 
     frontmatter, body = _parse_frontmatter(concept_path.read_text(encoding="utf-8"))
 
-    related_concepts = frontmatter.get("related_concepts", [])
+    related_concepts = frontmatter.get("related_concepts")
+    if related_concepts is None:
+        related_concepts = frontmatter.get("related", [])
     if not isinstance(related_concepts, list):
         related_concepts = []
 

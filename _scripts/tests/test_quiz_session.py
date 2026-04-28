@@ -84,8 +84,9 @@ def quiz_question_sets(draw):
     return questions, outcomes
 
 
-def _write_concept(path: Path, concept_id: str, title: str, summary: str) -> None:
+def _write_concept(path: Path, concept_id: str, title: str, summary: str, related_key: str = "related_concepts") -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
+    related_block = f"{related_key}:\n  - sibling-concept\n"
     path.write_text(
         "---\n"
         f"id: {concept_id}\n"
@@ -94,8 +95,7 @@ def _write_concept(path: Path, concept_id: str, title: str, summary: str) -> Non
         "review_due: 2026-04-28\n"
         "sources:\n"
         "  - sources/articles/example.md\n"
-        "related_concepts:\n"
-        "  - sibling-concept\n"
+        f"{related_block}"
         "---\n\n"
         "## 摘要\n"
         f"{summary}\n\n"
@@ -141,7 +141,7 @@ def test_quiz_session_property_updates_history_and_counts(question_set: tuple[li
 
         original_history_lengths = {question["id"]: len(question["history"]) for question in questions}
 
-        for question, should_be_correct in zip(questions, outcomes):
+        for question, should_be_correct in zip(questions, outcomes, strict=True):
             answer = question["answer"] if should_be_correct else "__wrong__"
             self_eval = None
             if question["type"] != "multiple_choice":
@@ -363,3 +363,42 @@ def test_start_session_filters_before_count_limit(tmp_path: Path) -> None:
 
     assert session["total_questions"] == 1
     assert session["questions_preview"][0]["id"] == "q-cap"
+
+
+def test_start_session_supports_related_frontmatter_field(tmp_path: Path) -> None:
+    SESSION_STORE.clear()
+    _write_concept(
+        tmp_path / "concepts" / "cap-theorem.md",
+        "cap-theorem",
+        "CAP Theorem",
+        "CAP summary.",
+        related_key="related",
+    )
+    _write_bank_list(
+        tmp_path / "quiz" / "bank.json",
+        [
+            {
+                "id": "q1",
+                "concept_id": "cap-theorem",
+                "type": "short_answer",
+                "difficulty": 2,
+                "question": "Explain CAP.",
+                "answer": "Trade-off during partitions.",
+                "explanation": "Short answer explanation.",
+                "created_at": "2026-04-01",
+                "next_review": "2026-04-20",
+                "interval_days": 3,
+                "ease_factor": 2.5,
+                "history": [],
+            }
+        ],
+    )
+
+    session = start_session(
+        str(tmp_path / "quiz" / "bank.json"),
+        str(tmp_path),
+        count=1,
+        today="2026-04-28",
+    )
+
+    assert session["review_materials"][0]["related_concepts"] == ["sibling-concept"]
