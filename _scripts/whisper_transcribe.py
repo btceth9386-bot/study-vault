@@ -85,3 +85,23 @@ def srt_to_markdown(srt_path: str) -> str:
         paragraphs.append(" ".join(current))
 
     return "\n\n".join(paragraphs)
+
+
+if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    t = subparsers.add_parser("transcribe")
+    t.add_argument("audio_path")
+    t.add_argument("--language", default="auto")
+
+    s = subparsers.add_parser("srt-to-md")
+    s.add_argument("srt_path")
+
+    args = parser.parse_args()
+    if args.command == "transcribe":
+        print(transcribe(args.audio_path, args.language))
+    else:
+        print(srt_to_markdown(args.srt_path))
