@@ -16,3 +16,10 @@ __pycache__/
 
 # epub books
 *.epub
+
+# Audio files (podcast/video ingestion)
+*.mp3
+*.wav
+*.m4a
+*.ogg
+*.flac
