@@ -100,6 +100,7 @@ PYSHIM
 
   SLUG="abc123"
   OUT="${TEST_TMPDIR}/sources/videos/${SLUG}"
+  [ -f "${OUT}/transcript.md" ]
   [ -f "${OUT}/meta.yaml" ]
   [ -f "${OUT}/highlights.md" ]
 
@@ -151,6 +152,7 @@ PYSHIM
 
   SLUG="whisper1"
   OUT="${TEST_TMPDIR}/sources/videos/${SLUG}"
+  [ -f "${OUT}/transcript.md" ]
   [ -f "${OUT}/meta.yaml" ]
   [ -f "${OUT}/highlights.md" ]
 }
@@ -179,71 +181,75 @@ PYSHIM
 # ---------------------------------------------------------------------------
 
 @test "ingest-pdf: small PDF creates notes.md and meta.yaml" {
-  # Create a stub PDF file
   STUB_PDF="${TEST_TMPDIR}/test-paper.pdf"
   echo "%PDF-1.4 stub" > "$STUB_PDF"
 
-  # Mock pdftotext to output small content
+  # pdftotext is called as: pdftotext <input> <output-file>
   cat > "${MOCK_BIN}/pdftotext" <<'MOCK'
 #!/usr/bin/env bash
-# pdftotext <file> - → stdout
-echo "# Test Paper\n\nThis is the extracted text."
+echo "# Test Paper
+
+This is the extracted text." > "$2"
 exit 0
 MOCK
   chmod +x "${MOCK_BIN}/pdftotext"
 
-  run bash -c "cd '${TEST_TMPDIR}' && bash '${PDF_SCRIPT}' '${STUB_PDF}' papers '${TEST_TMPDIR}'"
+  run bash -c "cd '${REPO_ROOT}' && bash '${PDF_SCRIPT}' '${STUB_PDF}' papers"
   [ "${status}" -eq 0 ]
 
-  OUT="${TEST_TMPDIR}/sources/papers/test-paper"
+  SLUG="test-paper"
+  OUT="${REPO_ROOT}/sources/papers/${SLUG}"
   [ -f "${OUT}/notes.md" ]
   [ -f "${OUT}/meta.yaml" ]
 
   run grep "type: paper" "${OUT}/meta.yaml"
   [ "${status}" -eq 0 ]
+
+  # Cleanup
+  rm -rf "${OUT}"
 }
 
 @test "ingest-pdf: large PDF is split into multiple part files" {
   STUB_PDF="${TEST_TMPDIR}/big-paper.pdf"
   echo "%PDF-1.4 stub" > "$STUB_PDF"
 
-  # Mock pdftotext to output content > 1 MB
+  # pdftotext writes ~1.1 MB of text to the output file
   cat > "${MOCK_BIN}/pdftotext" <<'MOCK'
 #!/usr/bin/env bash
-# Generate ~1.1 MB of text
-python3 -c "print('# Section\n\n' + ('word ' * 200 + '\n\n') * 1100)"
+python3 -c "print('# Section\n\n' + ('word ' * 200 + '\n\n') * 1100)" > "$2"
 exit 0
 MOCK
   chmod +x "${MOCK_BIN}/pdftotext"
 
-  run bash -c "cd '${TEST_TMPDIR}' && bash '${PDF_SCRIPT}' '${STUB_PDF}' papers '${TEST_TMPDIR}'"
+  run bash -c "cd '${REPO_ROOT}' && bash '${PDF_SCRIPT}' '${STUB_PDF}' papers"
   [ "${status}" -eq 0 ]
 
-  OUT="${TEST_TMPDIR}/sources/papers/big-paper"
-  # notes.md should NOT exist (replaced by split parts)
+  SLUG="big-paper"
+  OUT="${REPO_ROOT}/sources/papers/${SLUG}"
   [ ! -f "${OUT}/notes.md" ]
-  # At least one part file should exist
   run ls "${OUT}"/notes-part*.md
   [ "${status}" -eq 0 ]
+
+  # Cleanup
+  rm -rf "${OUT}"
 }
 
 @test "ingest-pdf: fails when neither pdftotext nor marker is installed" {
   STUB_PDF="${TEST_TMPDIR}/test.pdf"
   echo "%PDF stub" > "$STUB_PDF"
 
-  # Skip if either tool is actually installed
   if command -v pdftotext &>/dev/null || command -v marker &>/dev/null; then
     skip "pdftotext or marker is installed; cannot test missing-tool path"
   fi
 
-  run bash -c "cd '${TEST_TMPDIR}' && bash '${PDF_SCRIPT}' '${STUB_PDF}' papers '${TEST_TMPDIR}'"
+  run bash -c "bash '${PDF_SCRIPT}' '${STUB_PDF}' papers"
   [ "${status}" -ne 0 ]
   [[ "${output}" == *"pdftotext"* ]] || [[ "${output}" == *"marker"* ]]
 }
 
 @test "ingest-pdf: fails when PDF file does not exist" {
   make_mock pdftotext 0 "text"
-  run bash -c "cd '${TEST_TMPDIR}' && bash '${PDF_SCRIPT}' '/nonexistent/file.pdf' papers '${TEST_TMPDIR}'"
+  run bash -c "bash '${PDF_SCRIPT}' '/nonexistent/file.pdf' papers"
   [ "${status}" -ne 0 ]
   [[ "${output}" == *"not found"* ]]
 }
@@ -280,7 +286,7 @@ MOCK
   run grep "type: repo" "${OUT}/meta.yaml"
   [ "${status}" -eq 0 ]
 
-  run grep "url: \"https://github.com/user/myrepo\"" "${OUT}/meta.yaml"
+  run grep "url: https://github.com/user/myrepo" "${OUT}/meta.yaml"
   [ "${status}" -eq 0 ]
 }
 
