@@ -108,20 +108,23 @@ tags: []
 related_concepts: []
 YAML
 
-# Strip trailing 's' for type field (papers→paper, books→book, articles→article)
-YAML_TYPE="${SOURCE_TYPE%s}"
-sed -i.bak "s/^type: .*/type: ${YAML_TYPE}/" "${META_FILE}" && rm -f "${META_FILE}.bak"
-
 # ── add original PDF to .gitignore ─────────────────────────────────────────────
 GITIGNORE="${KB_ROOT}/.gitignore"
 ABS_PDF="$(cd "$(dirname "${PDF_PATH}")" && pwd)/$(basename "${PDF_PATH}")"
-REL_PDF="${ABS_PDF#${KB_ROOT}/}"
 
-if [[ -f "${GITIGNORE}" ]]; then
+# Only add a gitignore entry when the PDF lives inside KB_ROOT (so a valid
+# relative path can be produced). If it's outside, warn and skip — the user
+# should not commit files from outside the repo anyway.
+if [[ "${ABS_PDF}" == "${KB_ROOT}/"* ]]; then
+  REL_PDF="${ABS_PDF#${KB_ROOT}/}"
+  # Create .gitignore if it doesn't exist yet
+  touch "${GITIGNORE}"
   if ! grep -qxF "${REL_PDF}" "${GITIGNORE}" && ! grep -qxF "*.pdf" "${GITIGNORE}"; then
     echo "${REL_PDF}" >> "${GITIGNORE}"
     echo "Added ${REL_PDF} to .gitignore"
   fi
+else
+  echo "Warning: PDF is outside KB_ROOT — skipping .gitignore update. Ensure ${ABS_PDF} is not committed."
 fi
 
 # ── done ───────────────────────────────────────────────────────────────────────
