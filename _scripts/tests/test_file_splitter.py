@@ -38,6 +38,8 @@ def test_split_markdown_respects_max_bytes(content: str, max_bytes: int) -> None
 
     assert chunks
     assert all(len(chunk.encode("utf-8")) <= max_bytes for chunk in chunks)
+    assert [chunk.part_number for chunk in chunks] == list(range(1, len(chunks) + 1))
+    assert all(chunk.total_parts == len(chunks) for chunk in chunks)
 
 
 @given(markdown_documents(), st.integers(min_value=1, max_value=120))
@@ -49,3 +51,14 @@ def test_split_markdown_preserves_content(content: str, max_bytes: int) -> None:
 
 def test_split_markdown_returns_empty_list_for_empty_content() -> None:
     assert split_markdown("") == []
+
+
+def test_split_markdown_prefers_heading_boundaries() -> None:
+    content = "# One\n\nalpha.\n\n# Two\n\nbeta.\n"
+    max_bytes = len("# One\n\nalpha.\n\n".encode("utf-8"))
+
+    chunks = split_markdown(content, max_bytes=max_bytes)
+
+    assert len(chunks) == 2
+    assert chunks[0] == "# One\n\nalpha.\n\n"
+    assert chunks[1] == "# Two\n\nbeta.\n"
