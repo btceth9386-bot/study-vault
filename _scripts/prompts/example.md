@@ -12,7 +12,7 @@ For GitHub repos, use the DeepWiki MCP server to read the full wiki content dire
 
 ```
 Read _scripts/prompts/new-source.md, then use the DeepWiki MCP server to read
-https://deepwiki.com/donnemartin/system-design-primer and process it as a new source.
+https://deepwiki.com/donnemartin/system-design-primer and process it as a new source in English.
 ```
 
 The agent will:
