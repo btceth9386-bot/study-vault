@@ -44,7 +44,7 @@ DEEPWIKI_ERR="$(mktemp)"
 trap 'rm -f "${DEEPWIKI_ERR}"' EXIT
 
 echo "Downloading DeepWiki for ${REPO_PATH}..."
-if ! "${VENV_BIN}/deepwiki-to-md" "${DEEPWIKI_URL}" --output "${SNAPSHOT_DIR}" 2>"${DEEPWIKI_ERR}"; then
+if ! "${VENV_BIN}/deepwiki-to-md" "${DEEPWIKI_URL}" --path "${SNAPSHOT_DIR}" 2>"${DEEPWIKI_ERR}"; then
   ERR="$(cat "${DEEPWIKI_ERR}")"
   if echo "$ERR" | grep -qi "private"; then
     echo "Error: DeepWiki only supports public repositories. '${REPO_PATH}' appears to be private." >&2
