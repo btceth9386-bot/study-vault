@@ -24,4 +24,12 @@ __pycache__/
 *.ogg
 *.flac
 
+# Video files
+*.mp4
+*.mkv
+*.webm
+
+# PDF originals (only processed Markdown is tracked)
+*.pdf
+
 **/node_modules
