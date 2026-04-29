@@ -8,6 +8,13 @@ After ingesting a source into `_inbox/`, ask the AI agent to process it:
 Read _scripts/prompts/new-source.md then process the new source in _inbox/
 ```
 
+For GitHub repos, use the DeepWiki MCP server to read the full wiki content directly:
+
+```
+Read _scripts/prompts/new-source.md, then use the DeepWiki MCP server to read
+https://deepwiki.com/donnemartin/system-design-primer and process it as a new source.
+```
+
 The agent will:
 - Organize the source into `sources/<type>/<slug>/`
 - Generate candidate concept drafts in `_drafts/`
