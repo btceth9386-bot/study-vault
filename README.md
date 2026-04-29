@@ -14,7 +14,7 @@ Multiple sources → Ingest Pipeline → Unified Markdown → AI Agent refine �
 
 ## Status
 
-🚧 **Design phase** — specification documents are complete, implementation has not started.
+✅ **Implementation complete** — all core modules, ingest scripts, quiz system, and AI prompts are implemented with tests.
 
 ## How It Works
 
@@ -57,61 +57,137 @@ AI never writes directly to your knowledge base. All AI output goes to `_drafts/
 
 ```
 study-vault/
+├── README.md
+├── AGENTS.md                              # AI agent context file
+├── .mcp.json                              # DeepWiki MCP server config
+├── .gitignore
 ├── personal-knowledge-base-design-v2.md   # Design spec (Traditional Chinese)
 ├── .kiro/specs/personal-knowledge-base/
 │   ├── requirements.md                    # 22 requirements with acceptance criteria
 │   ├── design.md                          # Architecture & interfaces
 │   └── tasks.md                           # Implementation plan (11 task groups)
-├── AGENTS.md                              # AI agent context file
-└── .agents/summary/                       # Generated documentation
-    ├── index.md                           # Documentation entry point
-    ├── architecture.md                    # System design
-    ├── components.md                      # Component details
-    ├── interfaces.md                      # API contracts
-    ├── data_models.md                     # Data schemas
-    ├── workflows.md                       # Process flow diagrams
-    └── dependencies.md                    # External dependencies
+└── _scripts/
+    ├── requirements.txt                   # Python dependencies
+    ├── package.json                       # Node.js dependencies
+    ├── __init__.py
+    ├── metadata_validator.py              # YAML/JSON schema validation
+    ├── sm2_scheduler.py                   # SM-2 spaced repetition algorithm
+    ├── file_splitter.py                   # Markdown splitting (≤1MB chunks)
+    ├── quiz_manager.py                    # Quiz bank CRUD
+    ├── quiz_session.py                    # Stateless quiz session logic
+    ├── quiz_cli.py                        # Terminal quiz interface
+    ├── whisper_transcribe.py              # Whisper API + SRT→Markdown
+    ├── index_generator.py                 # Auto-generate indexes
+    ├── init-kb.sh                         # Knowledge base bootstrapper
+    ├── ingest-youtube.sh                  # YouTube video ingestion
+    ├── ingest-pdf.sh                      # PDF document ingestion
+    ├── ingest-deepwiki.sh                 # GitHub repo ingestion via DeepWiki
+    ├── ingest-article.js                  # Web article ingestion (Node.js)
+    ├── ingest-podcast.sh                  # Podcast audio ingestion
+    ├── ingest-book.py                     # epub book ingestion
+    ├── prompts/
+    │   ├── new-source.md                  # AI prompt: process new source
+    │   ├── promote-concept.md             # AI prompt: promote draft to concept
+    │   └── weekly-refine.md               # AI prompt: weekly KB maintenance
+    └── tests/                             # Unit, property, integration, and e2e tests
 ```
 
-### Planned Knowledge Base Structure (after implementation)
+### Knowledge Base Structure (created by init-kb.sh)
 
 ```
-_inbox/       → Staging area for new sources
-_drafts/      → AI-generated drafts awaiting review
-concepts/     → Promoted knowledge assets
-sources/      → Processed source materials (by type)
-quiz/         → SM-2 scheduled quiz bank (bank.json)
-_index/       → Auto-generated indexes
-topics/       → Cross-concept learning paths
-_scripts/     → Automation scripts + AI prompts
+<kb-root>/
+├── _inbox/                → Staging area for new sources
+├── _drafts/               → AI-generated drafts awaiting human review
+├── concepts/              → Promoted knowledge assets (by category)
+├── sources/
+│   ├── repos/             → GitHub repos (via DeepWiki)
+│   ├── videos/            → YouTube videos
+│   ├── books/             → epub books
+│   ├── articles/          → Web articles
+│   ├── podcasts/          → Podcast episodes
+│   └── papers/            → Academic papers
+├── quiz/
+│   └── bank.json          → SM-2 scheduled quiz questions
+├── _index/
+│   ├── concepts.md        → Auto-generated concept index
+│   ├── topics.md          → Auto-generated topic index
+│   └── tags.md            → Auto-generated tag index
+├── topics/                → Cross-concept learning paths
+└── _scripts/prompts/      → AI prompt files
 ```
 
 ## Prerequisites
 
-- Python 3.x
-- Node.js
+- Python 3.10+
+- Node.js 18+
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp) — YouTube subtitle/audio download
 - [pdftotext](https://poppler.freedesktop.org/) or [Marker](https://github.com/VikParuchuri/marker) — PDF extraction
 - [deepwiki-to-md](https://github.com/nicobailon/deepwiki-to-md) — DeepWiki content download
-- OpenAI API key (for Whisper transcription) — set `OPENAI_API_KEY` env var
+- OpenAI API key — required for Whisper transcription (YouTube, podcast ingestion)
 
 ## Getting Started
 
-> Implementation has not started yet. The following describes the planned workflow.
+### 1. Set up Python environment
 
 ```bash
-# 1. Initialize the knowledge base
-./_scripts/init-kb.sh
+cd study-vault
+python3 -m venv .venv
+.venv/bin/pip install -r _scripts/requirements.txt
+```
 
-# 2. Ingest a source
+### 2. Set up Node.js dependencies
+
+```bash
+cd _scripts && npm install && cd ..
+```
+
+### 3. Configure Whisper API (required for YouTube/podcast ingestion)
+
+```bash
+export OPENAI_API_KEY="sk-..."
+```
+
+Add to your shell profile (`~/.zshrc` or `~/.bashrc`) for persistence. The ingest scripts will exit with an error if this is not set when Whisper transcription is needed.
+
+### 4. Initialize the knowledge base
+
+```bash
+./_scripts/init-kb.sh
+```
+
+### 5. Ingest a source
+
+```bash
+# YouTube video
 ./_scripts/ingest-youtube.sh https://youtube.com/watch?v=...
 
-# 3. Run the new-source prompt (via AI agent) to generate drafts
+# PDF document
+./_scripts/ingest-pdf.sh /path/to/document.pdf
 
-# 4. Review drafts in _drafts/, then promote to concepts/
+# GitHub repo (via DeepWiki)
+./_scripts/ingest-deepwiki.sh https://github.com/owner/repo
 
-# 5. Take a quiz
-python _scripts/quiz_cli.py --count 10
+# Web article
+node _scripts/ingest-article.js https://example.com/article
+
+# Podcast
+./_scripts/ingest-podcast.sh /path/to/episode.mp3
+
+# epub book
+.venv/bin/python3 _scripts/ingest-book.py /path/to/book.epub
+```
+
+### 6. Run AI prompts to refine content
+
+Use your AI agent with the prompts in `_scripts/prompts/`:
+- `new-source.md` — process a new source into drafts
+- `promote-concept.md` — promote a draft to a formal concept
+- `weekly-refine.md` — weekly knowledge base maintenance
+
+### 7. Take a quiz
+
+```bash
+.venv/bin/python3 _scripts/quiz_cli.py --count 10
 ```
 
 ## Documentation
