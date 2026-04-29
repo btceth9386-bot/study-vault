@@ -1,0 +1,18 @@
+{
+  "questions": [
+    {
+      "id": "q-deliberate-practice-001",
+      "concept_id": "deliberate-practice",
+      "type": "short_answer",
+      "difficulty": 1,
+      "question": "What makes deliberate practice different from passive repetition?",
+      "answer": "It uses specific goals, feedback, and correction instead of mindless repetition.",
+      "explanation": "The feedback loop is what turns repetition into actual skill improvement.",
+      "created_at": "2026-04-28",
+      "next_review": "2026-04-29",
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "history": []
+    }
+  ]
+}

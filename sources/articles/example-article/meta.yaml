@@ -1,0 +1,15 @@
+type: article
+title: "Example Article: Active Recall Basics"
+url: https://example.com/active-recall-basics
+authors:
+  - Example Author
+language: en
+date_consumed: 2026-04-28
+date_added: 2026-04-28
+estimated_time: 15min
+status: processed
+related_concepts:
+  - active-recall
+tags:
+  - learning
+  - fundamentals
