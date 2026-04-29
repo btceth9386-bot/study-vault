@@ -3,3 +3,4 @@ pyyaml
 ebooklib
 hypothesis
 pytest
+deepwiki-to-md
