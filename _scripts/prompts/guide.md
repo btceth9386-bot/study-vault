@@ -129,6 +129,7 @@ Instead of running steps 2-5 manually, use the pipeline script:
 ```bash
 # Full pipeline (steps 2-5) for an ingested source:
 .venv/bin/python3 _scripts/pipeline.py sources/videos/my-video
+.venv/bin/python3 _scripts/pipeline.py sources/repos/donnemartin-system-design-primer
 
 # Single step:
 .venv/bin/python3 _scripts/pipeline.py sources/repos/my-repo --step ingest
