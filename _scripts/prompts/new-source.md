@@ -174,7 +174,7 @@ draft body 必須包含：
 6. source `meta.yaml` 的 `related_concepts` 應列出本次產生的 draft concept id，以及明確相關的既有 concept id。
 7. 所有檔案連結使用相對路徑，讓 vault 可在不同機器移動。
 
-## 完成前自我檢查
+## Pre-completion self-check
 
 - `sources/<type>/<slug>/meta.yaml`、`notes.md`、`highlights.md` 都已建立。
 - `notes.md` 摘要約 200-500 字。
@@ -183,3 +183,20 @@ draft body 必須包含：
 - 重複或高度相近的候選概念已用 `merge_candidate: <existing-id>` 標記。
 - `_index/concepts.md` 已加入 `[draft]` 條目。
 - 沒有建立、修改或刪除任何 `concepts/` 檔案。
+
+## Recommended follow-up ingestions
+
+After processing the source, scan the content for embedded links to external learning materials (YouTube videos, podcast episodes, referenced papers, etc.). List them as recommended follow-up ingestions so the user can run the appropriate ingest script manually.
+
+Output format:
+
+```markdown
+## Recommended follow-up ingestions
+
+| Type | URL | Description |
+|------|-----|-------------|
+| YouTube | https://www.youtube.com/watch?v=... | Scalability Lecture at Harvard |
+| PDF | https://example.com/paper.pdf | Original CAP theorem paper |
+```
+
+Only include materials that would meaningfully enrich the concepts identified in this source. Do not list every link — focus on primary learning resources.
