@@ -102,7 +102,7 @@ Each topic file should include prerequisites, a recommended learning order, and 
 Test your understanding with spaced-repetition quizzing:
 
 ```bash
-.venv/bin/python3 _scripts/quiz_cli.py --count 10
+.venv/bin/python3 -m _scripts.quiz_cli --count 10
 ```
 
 ## Step 7 — Weekly maintenance (`weekly-refine.md`)

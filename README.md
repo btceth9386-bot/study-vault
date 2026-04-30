@@ -187,7 +187,7 @@ Use your AI agent with the prompts in `_scripts/prompts/`:
 ### 7. Take a quiz
 
 ```bash
-.venv/bin/python3 _scripts/quiz_cli.py --count 10
+.venv/bin/python3 -m _scripts.quiz_cli --count 10
 ```
 
 ## Documentation
