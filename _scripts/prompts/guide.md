@@ -65,10 +65,19 @@ After the review, fix any REVISE items manually or ask the agent to fix them.
 
 ## Step 4 — Promote approved drafts to concepts (`promote-concept.md`)
 
-For each approved draft, ask the AI agent to promote it:
+Promote all approved drafts at once:
 
 ```
-Read _scripts/prompts/promote-concept.md then promote _drafts/load-balancing.md
+Read _scripts/prompts/promote-concept.md then promote all approved drafts in _drafts/ to concepts. Write all output in English.
+```
+
+Or promote a specific batch if the agent runs out of context:
+
+```
+Read _scripts/prompts/promote-concept.md then promote these drafts to concepts in English:
+_drafts/load-balancing.md
+_drafts/cap-theorem.md
+_drafts/horizontal-scaling.md
 ```
 
 The agent will:
