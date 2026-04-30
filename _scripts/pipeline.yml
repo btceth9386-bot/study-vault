@@ -1,0 +1,61 @@
+# Exobrain Pipeline Configuration
+#
+# Defines which AI agent CLI handles each step of the knowledge base workflow.
+# Each role maps to a step in _scripts/prompts/guide.md.
+#
+# Roles:
+#   ingest    — Step 2: Process ingested source into drafts (new-source prompt)
+#   review    — Step 3: Review drafts against source material
+#   promote   — Step 4: Promote approved drafts to concepts
+#   topics    — Step 5: Generate learning paths from concepts
+#
+# Step 1 (ingest scripts) and Step 6 (quiz) are run manually.
+# Step 7 (weekly-refine) should be run via crontab separately.
+
+kb_root: "."
+
+agents:
+  - name: kiro-cli
+    role: ingest
+    command: "kiro-cli chat --resume --agent senior --no-interactive --trust-all-tools"
+    max_concurrent: 1
+    env: {}
+
+  - name: claude-review
+    role: review
+    command: "claude --dangerously-skip-permissions --continue --model claude-sonnet-4-6 -p"
+    max_concurrent: 1
+    env: {}
+
+  - name: kiro-cli-promote
+    role: promote
+    command: "kiro-cli chat --resume --agent senior --no-interactive --trust-all-tools"
+    max_concurrent: 1
+    env: {}
+
+  - name: kiro-cli-topics
+    role: topics
+    command: "kiro-cli chat --resume --agent senior --no-interactive --trust-all-tools"
+    max_concurrent: 1
+    env: {}
+
+# Prompts sent to each role's agent.
+# {source_dir} is replaced with the actual source path.
+# {kb_root} is replaced with the knowledge base root.
+prompts:
+  ingest: >
+    Read _scripts/prompts/new-source.md then process the new source in
+    {source_dir} in English.
+  review: >
+    Review all files in _drafts/ against the source material. For each draft:
+    1. Check the one-sentence definition, why it matters, and relationships.
+    2. Flag factual errors, missing key points, or misleading simplifications.
+    3. Rate each: APPROVE, REVISE (list what), or REJECT.
+    Output a summary table. Write in English.
+  promote: >
+    Read _scripts/prompts/promote-concept.md then promote all approved drafts
+    in _drafts/ to concepts. Write all output in English.
+  topics: >
+    Look at all concepts in concepts/ and suggest 2-3 learning paths that group
+    related concepts into a logical study order. Create the topic files in
+    topics/ and update _index/topics.md. Write in English.

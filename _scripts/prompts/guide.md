@@ -121,3 +121,23 @@ The agent will:
 ## Key constraint
 
 AI never writes directly to `concepts/`. All AI output goes to `_drafts/` first. You review, then promote.
+
+## Automated pipeline
+
+Instead of running steps 2-5 manually, use the pipeline script:
+
+```bash
+# Full pipeline (steps 2-5) for an ingested source:
+.venv/bin/python3 _scripts/pipeline.py sources/videos/my-video
+
+# Single step:
+.venv/bin/python3 _scripts/pipeline.py sources/repos/my-repo --step ingest
+.venv/bin/python3 _scripts/pipeline.py --step review
+.venv/bin/python3 _scripts/pipeline.py --step promote
+.venv/bin/python3 _scripts/pipeline.py --step topics
+
+# Preview commands without executing:
+.venv/bin/python3 _scripts/pipeline.py sources/repos/my-repo --dry-run
+```
+
+Configure which AI agent handles each step in `_scripts/pipeline.yml`.
