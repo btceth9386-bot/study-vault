@@ -87,7 +87,17 @@ The agent will:
 
 Repeat for each approved draft.
 
-## Step 5 — Take a quiz
+## Step 5 — Generate learning paths (topics)
+
+After promoting concepts, ask the AI agent to create cross-concept learning paths:
+
+```
+Look at all concepts in concepts/ and suggest 2-3 learning paths that group related concepts into a logical study order. Create the topic files in topics/ and update _index/topics.md. Write in English.
+```
+
+Each topic file should include prerequisites, a recommended learning order, and links to the relevant concept files.
+
+## Step 6 — Take a quiz
 
 Test your understanding with spaced-repetition quizzing:
 
@@ -95,7 +105,7 @@ Test your understanding with spaced-repetition quizzing:
 .venv/bin/python3 _scripts/quiz_cli.py --count 10
 ```
 
-## Step 6 — Weekly maintenance (`weekly-refine.md`)
+## Step 7 — Weekly maintenance (`weekly-refine.md`)
 
 Run periodically (e.g. weekly) to maintain the knowledge base:
 
