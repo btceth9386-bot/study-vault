@@ -1,0 +1,29 @@
+# Highlights
+
+- `[00:00:00]` Introduction to scalability — hosting options (shared hosts, VPS, Amazon EC2) and why "unlimited bandwidth" claims are misleading
+- `[00:05:30]` SFTP vs FTP — credentials sent in the clear over FTP; always prefer encrypted transfer
+- `[00:08:00]` VPS explained — hypervisor slices a physical server into isolated virtual machines; more privacy than shared hosting but VPS provider still has physical access
+- `[00:12:00]` **Vertical scaling** — throw money at the problem (more RAM, faster CPU, SSD over HDD). Simple but has a hard ceiling.
+- `[00:14:00]` CPU cores and parallelism — quad-core means four truly simultaneous requests; OS time-slicing creates the illusion of parallelism on single-core
+- `[00:16:00]` Disk technologies: PATA → SATA (7200 RPM) → SAS (15000 RPM) → SSD (no moving parts). Put databases on fastest storage.
+- `[00:19:00]` **Horizontal scaling** — use many cheap machines instead of one expensive one; the architecture from here on
+- `[00:21:00]` Load balancer as the "black box" — DNS returns LB's IP, backend servers get private IPs (security + IPv4 conservation)
+- `[00:25:00]` Load-aware balancing — LB queries backend servers for CPU load, routes to least busy
+- `[00:27:00]` DNS round-robin — multiple A records in BIND; simple but naive. Caching (TTL) and uneven workloads break fairness.
+- `[00:33:00]` **Sticky sessions problem** — PHP sessions stored in `/tmp` are per-server; round-robin breaks shopping carts and logins
+- `[00:37:00]` Solutions: shared file server (NFS, MySQL), or factoring out session storage to a dedicated server — but introduces a new single point of failure
+- `[00:42:00]` **RAID** deep dive — RAID 0 (striping, 2× write speed, no redundancy), RAID 1 (mirroring, one drive can die), RAID 5 (N-1 usable drives, one can die), RAID 6 (two can die), RAID 10 (stripe + mirror)
+- `[00:50:00]` Shared storage technologies: Fibre Channel, iSCSI, NFS, MySQL as session store
+- `[00:52:00]` Sticky sessions via cookies — LB inserts a random session ID cookie; avoids revealing backend IP addresses
+- `[00:55:00]` PHP acceleration — opcode caching (APC, eAccelerator, XCache) avoids re-parsing PHP on every request; Python's `.pyc` is the same idea
+- `[00:58:00]` **Caching strategies** — Craigslist's static HTML approach (fast reads, hard to redesign), MySQL query cache (`query_cache_type = 1`), Memcached (in-memory key-value store, LRU eviction)
+- `[01:03:00]` Memcached code walkthrough — cache-aside pattern: check cache → miss → query DB → store result in cache → next hit served from RAM
+- `[01:06:00]` MySQL storage engines — InnoDB (transactions), MyISAM (table locks), Memory/Heap (RAM-only), Archive (compressed, write-optimized for logs)
+- `[01:09:00]` **Database replication** — master-slave: writes go to master, reads load-balanced across slaves. Facebook's read-heavy workload made this ideal.
+- `[01:13:00]` Master-master replication — both servers accept writes, replicate bidirectionally; eliminates write SPOF
+- `[01:16:00]` Multi-tier architecture diagram — LB → web servers → DB LB → master + slaves. Identifying every single point of failure.
+- `[01:19:00]` **High availability** — active-active and active-passive LB pairs; heartbeat monitoring; automatic failover
+- `[01:22:00]` **Partitioning** — Facebook's early model: separate server per school (harvard.thefacebook.com, mit.thefacebook.com); also A-M / N-Z user splits
+- `[01:25:00]` Amazon EC2 availability zones and regions — geographic redundancy against building-level failures (power, storms, network)
+- `[01:28:00]` **SSL termination** at the load balancer — decrypt HTTPS at the edge, forward HTTP internally; simplifies cert management and reduces backend cost
+- `[01:30:00]` Firewall rules — TCP 80/443 from internet, TCP 3306 (MySQL) internal only, SSH/VPN for admin access

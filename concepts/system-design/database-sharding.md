@@ -9,6 +9,7 @@ sources:
 related:
   - horizontal-scaling
   - cap-theorem
+  - database-replication
 tags:
   - system-design
   - databases

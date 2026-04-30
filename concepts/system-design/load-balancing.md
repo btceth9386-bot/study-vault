@@ -9,6 +9,10 @@ sources:
 related:
   - horizontal-scaling
   - microservices
+  - sticky-sessions
+  - single-point-of-failure
+  - high-availability
+  - ssl-termination
 tags:
   - system-design
   - scalability

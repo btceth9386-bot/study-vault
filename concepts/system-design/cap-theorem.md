@@ -10,6 +10,7 @@ related:
   - eventual-consistency
   - database-sharding
   - caching-strategies
+  - database-replication
 tags:
   - system-design
   - distributed-systems

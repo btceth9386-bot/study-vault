@@ -1,0 +1,30 @@
+type: video
+title: "CS75 (Summer 2012) Lecture 9: Scalability - Harvard Web Development - David Malan"
+url: https://www.youtube.com/watch?v=-W9F__D3oY4
+authors:
+  - David J. Malan
+language: en
+date_consumed: "2026-04-30"
+date_added: "2026-04-30"
+estimated_time: "1h 10m"
+status: processed
+related_concepts:
+  - vertical-scaling
+  - sticky-sessions
+  - database-replication
+  - raid-storage
+  - single-point-of-failure
+  - high-availability
+  - ssl-termination
+  - horizontal-scaling
+  - load-balancing
+  - caching-strategies
+  - database-sharding
+tags:
+  - scalability
+  - web-architecture
+  - load-balancing
+  - database
+  - caching
+  - high-availability
+  - security

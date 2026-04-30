@@ -10,6 +10,8 @@ related:
   - load-balancing
   - database-sharding
   - microservices
+  - vertical-scaling
+  - sticky-sessions
 tags:
   - system-design
   - scalability

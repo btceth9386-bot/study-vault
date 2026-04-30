@@ -10,6 +10,7 @@ related:
   - cap-theorem
   - caching-strategies
   - async-processing
+  - database-replication
 tags:
   - system-design
   - distributed-systems

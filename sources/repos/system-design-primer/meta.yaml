@@ -1,0 +1,25 @@
+type: repo
+title: "System Design Primer"
+url: https://github.com/donnemartin/system-design-primer
+authors:
+  - Donne Martin
+language: en
+date_consumed: 2026-04-29
+date_added: 2026-04-29
+estimated_time: "40h+"
+status: processed
+related_concepts:
+  - cap-theorem
+  - horizontal-scaling
+  - caching-strategies
+  - load-balancing
+  - database-sharding
+  - eventual-consistency
+  - microservices
+  - async-processing
+tags:
+  - system-design
+  - distributed-systems
+  - scalability
+  - interview-prep
+  - architecture

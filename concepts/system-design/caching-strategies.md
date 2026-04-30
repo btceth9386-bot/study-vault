@@ -10,6 +10,7 @@ related:
   - cap-theorem
   - async-processing
   - horizontal-scaling
+  - sticky-sessions
 tags:
   - system-design
   - performance
