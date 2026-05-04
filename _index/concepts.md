@@ -34,6 +34,10 @@
 - [adapter-based-llm-optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md) - Adapter-Based LLM Optimization [llm-engineering]
 - [sparse-validation-evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md) - Sparse Validation Evaluation [llm-engineering]
 - [optimize-anything-pattern](../concepts/llm-engineering/optimize-anything-pattern.md) - Optimize Anything Pattern [llm-engineering]
+- [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes [llm-engineering]
+- [standardized-message-content-blocks](../concepts/llm-engineering/standardized-message-content-blocks.md) - Standardized Message Content Blocks [llm-engineering]
+- [langchain-tool-schema-contract](../concepts/llm-engineering/langchain-tool-schema-contract.md) - LangChain Tool Schema Contract [llm-engineering]
+- [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG [llm-engineering]
 
 ## Draft
 
@@ -41,3 +45,4 @@
 - [hierarchical-rbac](../_drafts/hierarchical-rbac.md) - Hierarchical RBAC [draft]
 - [chain-of-thought-reasoning](../_drafts/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning [draft]
 - [llm-program-distillation](../_drafts/llm-program-distillation.md) - LLM Program Distillation [draft]
+- [langchain-core-message-model-for-langgraph-state](../_drafts/langchain-core-message-model-for-langgraph-state.md) - LangChain Message Model for LangGraph State [draft]

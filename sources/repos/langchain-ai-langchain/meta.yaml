@@ -1,9 +1,21 @@
 type: repo
 title: langchain-ai/langchain
 url: https://github.com/langchain-ai/langchain
+authors:
+  - langchain-ai
 language: en
 date_consumed: 2026-05-05
 date_added: 2026-05-05
+estimated_time: null
 status: processed
-tags: []
-related_concepts: []
+tags:
+  - langchain
+  - langgraph
+  - llm-engineering
+  - rag
+related_concepts:
+  - langchain-core-message-model-for-langgraph-state
+  - standardized-message-content-blocks
+  - provider-chat-model-wrappers-in-langgraph-nodes
+  - langchain-tool-schema-contract
+  - retrievers-vector-stores-for-langgraph-rag

@@ -12,6 +12,7 @@ related:
   - llm-observability
   - metric-driven-llm-optimization
   - adapter-based-llm-optimization
+  - langchain-tool-schema-contract
 tags:
   - llm-engineering
   - dspy
@@ -24,7 +25,7 @@ tags:
 - **One-sentence definition**: The ReAct loop lets an LLM alternate between reasoning, calling tools, and reading tool results until it has enough information to answer.
 - **Why it exists / what problem it solves**: A single LLM call cannot fetch fresh data, run code, or query external systems by itself. ReAct gives the model a structured way to decide which tool to use, observe the result, and continue.
 - **Keywords**: ReAct, agent, tool use, thought, action, observation, trajectory
-- **Related concepts**: [[dspy-module-composition]], [[few-shot-bootstrapping]], [[llm-observability]], [[metric-driven-llm-optimization]], [[adapter-based-llm-optimization]]
+- **Related concepts**: [[dspy-module-composition]], [[few-shot-bootstrapping]], [[llm-observability]], [[metric-driven-llm-optimization]], [[adapter-based-llm-optimization]], [[langchain-tool-schema-contract]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/stanfordnlp-dspy
@@ -55,6 +56,7 @@ The agent can ask the search tool for missing information before answering, inst
 - [[llm-observability]]: The thought, action, and observation steps are exactly the kind of trace data an LLM system should record.
 - [[metric-driven-llm-optimization]]: A metric can score the final answer or the full tool-use trajectory.
 - [[adapter-based-llm-optimization]]: Agent adapters can expose tool descriptions and system prompts as optimizable components.
+- [[langchain-tool-schema-contract]]: LangChain's tool-call schema is one concrete way to carry the Action and Observation parts of a tool loop through model and tool messages.
 
 ## Open questions
 

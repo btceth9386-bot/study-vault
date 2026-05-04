@@ -82,6 +82,47 @@
 - [adapter-based-llm-optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md) - Adapter-Based LLM Optimization
 - [sparse-validation-evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md) - Sparse Validation Evaluation
 - [optimize-anything-pattern](../concepts/llm-engineering/optimize-anything-pattern.md) - Optimize Anything Pattern
+- [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
+- [standardized-message-content-blocks](../concepts/llm-engineering/standardized-message-content-blocks.md) - Standardized Message Content Blocks
+- [langchain-tool-schema-contract](../concepts/llm-engineering/langchain-tool-schema-contract.md) - LangChain Tool Schema Contract
+- [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
+
+## langchain
+
+- [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
+- [standardized-message-content-blocks](../concepts/llm-engineering/standardized-message-content-blocks.md) - Standardized Message Content Blocks
+- [langchain-tool-schema-contract](../concepts/llm-engineering/langchain-tool-schema-contract.md) - LangChain Tool Schema Contract
+- [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
+
+## langgraph
+
+- [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
+- [langchain-tool-schema-contract](../concepts/llm-engineering/langchain-tool-schema-contract.md) - LangChain Tool Schema Contract
+- [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
+
+## provider-integrations
+
+- [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
+
+## messages
+
+- [standardized-message-content-blocks](../concepts/llm-engineering/standardized-message-content-blocks.md) - Standardized Message Content Blocks
+
+## multimodal
+
+- [standardized-message-content-blocks](../concepts/llm-engineering/standardized-message-content-blocks.md) - Standardized Message Content Blocks
+
+## tools
+
+- [langchain-tool-schema-contract](../concepts/llm-engineering/langchain-tool-schema-contract.md) - LangChain Tool Schema Contract
+
+## rag
+
+- [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
+
+## retrieval
+
+- [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
 
 ## dspy
 
@@ -149,6 +190,7 @@
 ## tool-use
 
 - [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
+- [langchain-tool-schema-contract](../concepts/llm-engineering/langchain-tool-schema-contract.md) - LangChain Tool Schema Contract
 
 ## durability
 
