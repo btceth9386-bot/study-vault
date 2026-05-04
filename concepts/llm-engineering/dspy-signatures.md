@@ -11,6 +11,7 @@ related:
   - metric-driven-llm-optimization
   - prompt-version-management
   - llm-observability
+  - adapter-based-llm-optimization
 tags:
   - llm-engineering
   - dspy
@@ -23,7 +24,7 @@ tags:
 - **One-sentence definition**: A DSPy Signature describes an LLM task as named input and output fields, plus instructions, so the program says what it needs instead of hand-writing the full prompt.
 - **Why it exists / what problem it solves**: Raw prompts mix the task, formatting rules, examples, and model-specific details into one fragile string. Signatures separate the stable task definition from the adapter and optimizer that decide how to format and improve it.
 - **Keywords**: signature, input field, output field, adapter, typed output, task contract
-- **Related concepts**: [[dspy-module-composition]], [[metric-driven-llm-optimization]], [[prompt-version-management]], [[llm-observability]]
+- **Related concepts**: [[dspy-module-composition]], [[metric-driven-llm-optimization]], [[prompt-version-management]], [[llm-observability]], [[adapter-based-llm-optimization]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/stanfordnlp-dspy
@@ -57,6 +58,7 @@ The Signature defines the contract: the module receives `context` and `question`
 - [[metric-driven-llm-optimization]]: Optimizers use Signature fields to know what can be improved and where examples belong.
 - [[prompt-version-management]]: Both treat prompt behavior as something worth managing explicitly, but Signatures keep the task contract in code.
 - [[llm-observability]]: Clear input and output fields make traces easier to inspect and compare.
+- [[adapter-based-llm-optimization]]: A DSPy adapter can expose Signature instructions as candidate components for a generic optimizer.
 
 ## Open questions
 

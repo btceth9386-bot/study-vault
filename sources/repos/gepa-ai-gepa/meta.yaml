@@ -1,9 +1,31 @@
 type: repo
 title: gepa-ai/gepa
 url: https://github.com/gepa-ai/gepa
+authors:
+  - GEPA AI
 language: en
 date_consumed: 2026-05-04
 date_added: 2026-05-04
+estimated_time: null
 status: processed
-tags: []
-related_concepts: []
+tags:
+  - llm-engineering
+  - optimization
+  - prompts
+  - agents
+  - evaluation
+related_concepts:
+  - actionable-side-information
+  - reflective-mutation-proposer
+  - pareto-efficient-candidate-selection
+  - system-aware-candidate-merge
+  - adapter-based-llm-optimization
+  - sparse-validation-evaluation
+  - evaluation-caching-for-llm-optimization
+  - optimize-anything-pattern
+  - metric-driven-llm-optimization
+  - prompt-version-management
+  - llm-observability
+  - llm-as-judge-evaluation
+  - dspy-signatures
+  - dspy-module-composition

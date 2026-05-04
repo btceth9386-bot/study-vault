@@ -12,6 +12,8 @@ related:
   - async-processing
   - few-shot-bootstrapping
   - metric-driven-llm-optimization
+  - actionable-side-information
+  - sparse-validation-evaluation
 tags:
   - llm-engineering
   - evaluation
@@ -23,7 +25,7 @@ tags:
 - **One-sentence definition**: LLM-as-judge evaluation uses one LLM to score another LLM application's output against a rubric.
 - **Why it exists / what problem it solves**: Human review is slow and expensive, but LLM products need continuous quality checks. A judge model can apply a reusable rubric to many traces, observations, or dataset items so teams can catch regressions and compare changes at scale.
 - **Keywords**: evaluator, rubric, scores, job configuration, eval template, trace quality
-- **Related concepts**: [[llm-observability]], [[prompt-version-management]], [[async-processing]], [[few-shot-bootstrapping]], [[metric-driven-llm-optimization]]
+- **Related concepts**: [[llm-observability]], [[prompt-version-management]], [[async-processing]], [[few-shot-bootstrapping]], [[metric-driven-llm-optimization]], [[actionable-side-information]], [[sparse-validation-evaluation]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/langfuse-langfuse
@@ -51,6 +53,8 @@ Every new support trace enters an evaluation queue. The judge model reads the us
 - [[async-processing]]: Evaluation runs in background queues so user-facing requests do not wait for judge model calls.
 - [[few-shot-bootstrapping]]: Judge metrics can filter which generated traces become demonstrations.
 - [[metric-driven-llm-optimization]]: A judge can serve as the metric that guides compile-time optimization.
+- [[actionable-side-information]]: Judge explanations can become feedback for reflective optimization, not just stored scores.
+- [[sparse-validation-evaluation]]: Judge calls can be expensive, so sparse validation helps decide which examples to score.
 
 ## Open questions
 

@@ -13,6 +13,7 @@ related:
   - dspy-signatures
   - dspy-module-composition
   - metric-driven-llm-optimization
+  - optimize-anything-pattern
 tags:
   - llm-engineering
   - prompts
@@ -24,7 +25,7 @@ tags:
 - **One-sentence definition**: Prompt version management treats prompts as tracked, deployable artifacts instead of anonymous strings inside application code.
 - **Why it exists / what problem it solves**: Prompt edits can change product behavior as much as code changes. Without versions, labels, history, and rollback, teams cannot safely test, deploy, or explain why an LLM response changed.
 - **Keywords**: prompt version, label, production, latest, cache epoch, prompt dependency
-- **Related concepts**: [[llm-observability]], [[llm-as-judge-evaluation]], [[caching-strategies]], [[dspy-signatures]], [[dspy-module-composition]], [[metric-driven-llm-optimization]]
+- **Related concepts**: [[llm-observability]], [[llm-as-judge-evaluation]], [[caching-strategies]], [[dspy-signatures]], [[dspy-module-composition]], [[metric-driven-llm-optimization]], [[optimize-anything-pattern]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/langfuse-langfuse
@@ -54,6 +55,7 @@ Each generation can record the prompt version it used, so later debugging can co
 - [[dspy-signatures]]: Signatures make task definitions explicit in code rather than storing behavior only as prompt text.
 - [[dspy-module-composition]]: A compiled DSPy module can be treated as a reproducible behavior artifact.
 - [[metric-driven-llm-optimization]]: Optimization creates better prompt/program variants that still need safe deployment discipline.
+- [[optimize-anything-pattern]]: Optimized text artifacts still need versioning, review, and rollback before production use.
 
 ## Open questions
 

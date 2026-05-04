@@ -12,6 +12,7 @@ related:
   - few-shot-bootstrapping
   - react-agentic-loop
   - prompt-version-management
+  - adapter-based-llm-optimization
 tags:
   - llm-engineering
   - dspy
@@ -24,7 +25,7 @@ tags:
 - **One-sentence definition**: DSPy module composition builds LLM programs from reusable modules that can contain other modules, so an optimizer can tune the whole program instead of isolated prompt strings.
 - **Why it exists / what problem it solves**: Real LLM applications often need several steps, such as retrieve, reason, verify, and answer. Module composition gives those steps a program structure that can be inspected, serialized, and optimized together.
 - **Keywords**: module, predictor, composition, program tree, serialization, optimizer
-- **Related concepts**: [[dspy-signatures]], [[metric-driven-llm-optimization]], [[few-shot-bootstrapping]], [[react-agentic-loop]], [[prompt-version-management]]
+- **Related concepts**: [[dspy-signatures]], [[metric-driven-llm-optimization]], [[few-shot-bootstrapping]], [[react-agentic-loop]], [[prompt-version-management]], [[adapter-based-llm-optimization]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/stanfordnlp-dspy
@@ -60,6 +61,7 @@ An optimizer can inspect this module, find both predictors, and compile a better
 - [[few-shot-bootstrapping]]: Bootstrapped traces can be attached to the matching predictors inside a composed program.
 - [[react-agentic-loop]]: ReAct is implemented as a module that runs a repeated reasoning-and-tool-use loop.
 - [[prompt-version-management]]: A saved compiled module is a versioned behavior artifact, similar in spirit to a managed prompt version.
+- [[adapter-based-llm-optimization]]: An adapter can discover components inside a module tree and map them into generic candidate text.
 
 ## Open questions
 

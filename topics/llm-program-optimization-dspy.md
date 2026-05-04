@@ -10,7 +10,7 @@ Most LLM developers write prompts by hand and improve them by feel. DSPy replace
 
 This path is a focused companion to the broader [Production LLM Engineering](../topics/production-llm-engineering.md) path. Where that path covers the full LLM application stack (monitoring, databases, pipelines), this one stays tightly inside the DSPy workflow.
 
-**Estimated study time:** 3–5 hours  
+**Estimated study time:** 6–9 hours  
 **Prerequisites:** Comfortable calling LLM APIs (OpenAI / Anthropic). No prior DSPy experience needed. Familiarity with [LLM Observability](../concepts/llm-engineering/llm-observability.md) is helpful for the final step.
 
 ---
@@ -32,11 +32,32 @@ The concrete mechanism behind most DSPy optimization: run a teacher program on t
 ### 5. [Metric-Driven LLM Optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md)
 The top-level DSPy paradigm: define success as code, then compile. Covers the full optimizer landscape — `BootstrapFewShot` for demonstrations, `MIPROv2` for joint Bayesian instruction + demo search, `SIMBA` for stochastic rule generation. Study here (after bootstrapping) because it shows how bootstrapping fits inside a larger optimization loop that also searches the instruction space. MIPROv2's auto-run modes ("light", "medium", "heavy") give a practical starting point before tuning optimizer hyperparameters.
 
-### 6. [ReAct Agentic Loop](../concepts/llm-engineering/react-agentic-loop.md)
+### 6. [Actionable Side Information](../concepts/llm-engineering/actionable-side-information.md)
+Metric scores tell the optimizer which outputs were better, but side information tells it what happened. GEPA-style optimization leans on traces, logs, errors, and feedback so the next candidate is informed by evidence.
+
+### 7. [Reflective Mutation Proposer](../concepts/llm-engineering/reflective-mutation-proposer.md)
+The GEPA proposal loop uses a reflection model to rewrite text components after reading failure traces. Study this after side information because reflection is only useful when the feedback points to a concrete weakness.
+
+### 8. [Pareto-Efficient Candidate Selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md)
+LLM programs often have specialists: one candidate handles tool use well, another handles structured output. Pareto selection keeps those variants alive so optimization does not collapse too early to one average-best program.
+
+### 9. [System-Aware Candidate Merge](../concepts/llm-engineering/system-aware-candidate-merge.md)
+Merge is GEPA's way to recombine improvements from related candidates. Study this after Pareto selection because the frontier supplies the candidates whose different strengths may be worth combining.
+
+### 10. [Adapter-Based LLM Optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md)
+Adapters explain how an external system maps to candidates, scores, and traces. This is what lets a generic optimizer work on DSPy, RAG, MCP tools, or a custom LLM workflow.
+
+### 11. [Sparse Validation Evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md)
+Running every candidate on every validation example is often too expensive. Sparse validation teaches how to get useful signal from partial coverage while tracking what has actually been evaluated.
+
+### 12. [Optimize Anything Pattern](../concepts/llm-engineering/optimize-anything-pattern.md)
+When a target is just a text artifact plus a scoring function, `optimize_anything()` can be enough. It is the practical bridge from formal DSPy-style optimization to arbitrary rubrics, policies, prompts, and configs.
+
+### 13. [ReAct Agentic Loop](../concepts/llm-engineering/react-agentic-loop.md)
 The pattern for building tool-using agents: Thought (reason about what to do) → Action (call a tool) → Observation (receive the result) → repeat. Study after optimization because `dspy.ReAct` is itself a module with a signature — it benefits from few-shot bootstrapping (the optimizer can learn good tool-calling sequences from traces) and from a metric that evaluates end-to-end task completion, not just individual steps. Understanding the agentic loop also makes module composition concrete: ReAct is a module whose forward pass runs other sub-modules in a loop.
 
-### 7. [LLM Observability](../concepts/llm-engineering/llm-observability.md)
-The final step: how to inspect a compiled program running in production. The trace/observation/score model gives you a structured record of every step — which module ran, what prompt it used, how many tokens it consumed, what score it received. Study last because at this point you have a compiled DSPy program (from steps 1–6) and want to verify it is behaving well, compare it to a previous version, and catch regressions. The compiled program's prompt versions appear in traces, closing the loop between optimization and monitoring.
+### 14. [LLM Observability](../concepts/llm-engineering/llm-observability.md)
+The final step: how to inspect a compiled program running in production. The trace/observation/score model gives you a structured record of every step — which module ran, what prompt it used, how many tokens it consumed, what score it received. Study last because at this point you have a compiled or optimized program and want to verify it is behaving well, compare it to a previous version, and catch regressions. The compiled program's prompt versions appear in traces, closing the loop between optimization and monitoring.
 
 ---
 
@@ -45,6 +66,8 @@ The final step: how to inspect a compiled program running in production. The tra
 - Write a DSPy Signature for any LLM task and understand how it differs from a raw prompt string
 - Compose a multi-step program from `Predict`, `ChainOfThought`, and `ReAct` modules
 - Write a metric function and use it to run `BootstrapFewShot` or `MIPROv2` on a training set
+- Explain how GEPA-style reflection uses side information, Pareto frontiers, and merge to improve candidates
+- Choose between a custom adapter and the `optimize_anything()` pattern for a new optimization target
 - Save a compiled program as a JSON artifact and load it into a different model configuration
 - Build a tool-using ReAct agent and optimize its tool-calling behavior via bootstrapped traces
 - Connect a compiled DSPy program to an observability platform to monitor its production behavior

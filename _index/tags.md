@@ -51,6 +51,8 @@
 - [microservices](../concepts/system-design/microservices.md) - Microservices Architecture
 - [oltp-olap-split](../concepts/llm-engineering/oltp-olap-split.md) - OLTP/OLAP Database Split
 - [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
+- [system-aware-candidate-merge](../concepts/llm-engineering/system-aware-candidate-merge.md) - System-Aware Candidate Merge
+- [adapter-based-llm-optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md) - Adapter-Based LLM Optimization
 
 ## reliability
 
@@ -67,11 +69,19 @@
 - [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability
 - [llm-as-judge-evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md) - LLM-as-Judge Evaluation
 - [prompt-version-management](../concepts/llm-engineering/prompt-version-management.md) - Prompt Version Management
+- [caching-strategies](../concepts/system-design/caching-strategies.md) - Caching Strategies
 - [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures
 - [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
 - [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping
 - [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
 - [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
+- [actionable-side-information](../concepts/llm-engineering/actionable-side-information.md) - Actionable Side Information
+- [reflective-mutation-proposer](../concepts/llm-engineering/reflective-mutation-proposer.md) - Reflective Mutation Proposer
+- [pareto-efficient-candidate-selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md) - Pareto-Efficient Candidate Selection
+- [system-aware-candidate-merge](../concepts/llm-engineering/system-aware-candidate-merge.md) - System-Aware Candidate Merge
+- [adapter-based-llm-optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md) - Adapter-Based LLM Optimization
+- [sparse-validation-evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md) - Sparse Validation Evaluation
+- [optimize-anything-pattern](../concepts/llm-engineering/optimize-anything-pattern.md) - Optimize Anything Pattern
 
 ## dspy
 
@@ -79,6 +89,9 @@
 - [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
 - [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping
 - [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
+- [actionable-side-information](../concepts/llm-engineering/actionable-side-information.md) - Actionable Side Information
+- [pareto-efficient-candidate-selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md) - Pareto-Efficient Candidate Selection
+- [sparse-validation-evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md) - Sparse Validation Evaluation
 - [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
 
 ## observability
@@ -104,6 +117,8 @@
 
 - [prompt-version-management](../concepts/llm-engineering/prompt-version-management.md) - Prompt Version Management
 - [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures
+- [reflective-mutation-proposer](../concepts/llm-engineering/reflective-mutation-proposer.md) - Reflective Mutation Proposer
+- [optimize-anything-pattern](../concepts/llm-engineering/optimize-anything-pattern.md) - Optimize Anything Pattern
 
 ## structured-output
 
@@ -118,6 +133,14 @@
 - [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
 - [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping
 - [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
+- [caching-strategies](../concepts/system-design/caching-strategies.md) - Caching Strategies
+- [actionable-side-information](../concepts/llm-engineering/actionable-side-information.md) - Actionable Side Information
+- [reflective-mutation-proposer](../concepts/llm-engineering/reflective-mutation-proposer.md) - Reflective Mutation Proposer
+- [pareto-efficient-candidate-selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md) - Pareto-Efficient Candidate Selection
+- [system-aware-candidate-merge](../concepts/llm-engineering/system-aware-candidate-merge.md) - System-Aware Candidate Merge
+- [adapter-based-llm-optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md) - Adapter-Based LLM Optimization
+- [sparse-validation-evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md) - Sparse Validation Evaluation
+- [optimize-anything-pattern](../concepts/llm-engineering/optimize-anything-pattern.md) - Optimize Anything Pattern
 
 ## agents
 

@@ -27,6 +27,13 @@
 - [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping [llm-engineering]
 - [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization [llm-engineering]
 - [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop [llm-engineering]
+- [actionable-side-information](../concepts/llm-engineering/actionable-side-information.md) - Actionable Side Information [llm-engineering]
+- [reflective-mutation-proposer](../concepts/llm-engineering/reflective-mutation-proposer.md) - Reflective Mutation Proposer [llm-engineering]
+- [pareto-efficient-candidate-selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md) - Pareto-Efficient Candidate Selection [llm-engineering]
+- [system-aware-candidate-merge](../concepts/llm-engineering/system-aware-candidate-merge.md) - System-Aware Candidate Merge [llm-engineering]
+- [adapter-based-llm-optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md) - Adapter-Based LLM Optimization [llm-engineering]
+- [sparse-validation-evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md) - Sparse Validation Evaluation [llm-engineering]
+- [optimize-anything-pattern](../concepts/llm-engineering/optimize-anything-pattern.md) - Optimize Anything Pattern [llm-engineering]
 
 ## Draft
 

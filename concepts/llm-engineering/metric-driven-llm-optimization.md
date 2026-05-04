@@ -13,6 +13,13 @@ related:
   - react-agentic-loop
   - llm-as-judge-evaluation
   - prompt-version-management
+  - actionable-side-information
+  - reflective-mutation-proposer
+  - pareto-efficient-candidate-selection
+  - system-aware-candidate-merge
+  - adapter-based-llm-optimization
+  - sparse-validation-evaluation
+  - optimize-anything-pattern
 tags:
   - llm-engineering
   - dspy
@@ -25,7 +32,7 @@ tags:
 - **One-sentence definition**: Metric-driven LLM optimization improves an LLM program by defining what success means, then letting an optimizer search for better instructions and examples.
 - **Why it exists / what problem it solves**: Manual prompt editing is guesswork. A metric turns "better" into something testable, so the system can compare candidates and compile a stronger program.
 - **Keywords**: metric, optimizer, compile, MIPROv2, SIMBA, demonstrations, instructions
-- **Related concepts**: [[dspy-signatures]], [[dspy-module-composition]], [[few-shot-bootstrapping]], [[react-agentic-loop]], [[llm-as-judge-evaluation]], [[prompt-version-management]]
+- **Related concepts**: [[dspy-signatures]], [[dspy-module-composition]], [[few-shot-bootstrapping]], [[react-agentic-loop]], [[llm-as-judge-evaluation]], [[prompt-version-management]], [[actionable-side-information]], [[reflective-mutation-proposer]], [[pareto-efficient-candidate-selection]], [[system-aware-candidate-merge]], [[adapter-based-llm-optimization]], [[sparse-validation-evaluation]], [[optimize-anything-pattern]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/stanfordnlp-dspy
@@ -57,6 +64,13 @@ The metric defines the target. The optimizer searches for a better compiled prog
 - [[react-agentic-loop]]: Tool-use trajectories can be scored and optimized, not only final text responses.
 - [[llm-as-judge-evaluation]]: A judge can be used as the scoring function when exact answers are not enough.
 - [[prompt-version-management]]: Both help control LLM behavior changes, but optimization happens during development while prompt versioning controls deployment.
+- [[actionable-side-information]]: Side information explains why a score was low and helps guide the next proposal.
+- [[reflective-mutation-proposer]]: Reflective mutation is one way to turn metric feedback into a better candidate.
+- [[pareto-efficient-candidate-selection]]: Pareto selection decides which measured candidates remain useful for future search.
+- [[system-aware-candidate-merge]]: Merge recombines improvements discovered through metric-guided search.
+- [[adapter-based-llm-optimization]]: Adapters make the same metric-driven loop work across different LLM systems.
+- [[sparse-validation-evaluation]]: Sparse validation keeps metric costs manageable when full evaluation is expensive.
+- [[optimize-anything-pattern]]: `optimize_anything()` applies metric-driven optimization to arbitrary scored text artifacts.
 
 ## Open questions
 
