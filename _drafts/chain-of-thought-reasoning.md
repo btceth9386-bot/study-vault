@@ -1,0 +1,11 @@
+---
+id: chain-of-thought-reasoning
+title: Chain-of-Thought Reasoning
+source: sources/repos/stanfordnlp-dspy
+status: draft
+created_at: 2026-05-04
+---
+
+- **One-sentence definition**: Chain-of-thought (CoT) prompting adds an intermediate natural-language reasoning step before the final answer, letting the model externalize its thinking and dramatically improving accuracy on multi-step or complex tasks.
+- **Why it matters**: LLMs produce more accurate answers when forced to reason step-by-step before committing to an output. A model asked directly "What is 17 × 24?" may err; the same model asked to "think step by step" first produces a verifiable intermediate chain that catches errors before the final answer. This works because the reasoning text becomes additional context in the model's own forward pass — each reasoning token informs the next token, effectively giving the model more computation per question. In DSPy, `dspy.ChainOfThought(signature)` automatically prepends a `reasoning: str` field to the Signature's output fields, and this field is tunable — optimizers can include demonstrations where the reasoning was especially good, teaching the model to produce structured, effective reasoning chains. The pattern generalizes: `dspy.ProgramOfThought` extends CoT by generating executable Python code as the reasoning step, then running it to get a deterministic answer. The core trade-off is cost: CoT produces more output tokens (typically 2–5× longer responses), which increases latency and API cost but often reduces the number of retries needed for correct outputs.
+- **Relationship to other concepts**: Chain-of-thought is a module-level pattern within dspy-module-composition — `ChainOfThought` is a thin wrapper around `Predict` that modifies the Signature. The `reasoning` field it injects becomes a candidate for few-shot-bootstrapping: optimizers can select traces where the reasoning chain was particularly coherent or led to correct outputs. CoT is the reasoning backbone inside react-agentic-loop: the "Thought" step in Thought → Action → Observation is CoT applied to the decision of which tool to call next. For llm-as-judge-evaluation, reasoning traces are valuable evaluation inputs — a judge can assess whether the reasoning is logically sound, not just whether the final answer is correct.

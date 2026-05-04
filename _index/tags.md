@@ -50,6 +50,7 @@
 
 - [microservices](../concepts/system-design/microservices.md) - Microservices Architecture
 - [oltp-olap-split](../concepts/llm-engineering/oltp-olap-split.md) - OLTP/OLAP Database Split
+- [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
 
 ## reliability
 
@@ -66,6 +67,19 @@
 - [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability
 - [llm-as-judge-evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md) - LLM-as-Judge Evaluation
 - [prompt-version-management](../concepts/llm-engineering/prompt-version-management.md) - Prompt Version Management
+- [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures
+- [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
+- [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping
+- [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
+- [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
+
+## dspy
+
+- [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures
+- [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
+- [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping
+- [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
+- [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
 
 ## observability
 
@@ -79,6 +93,8 @@
 ## evaluation
 
 - [llm-as-judge-evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md) - LLM-as-Judge Evaluation
+- [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping
+- [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
 
 ## quality
 
@@ -87,10 +103,29 @@
 ## prompts
 
 - [prompt-version-management](../concepts/llm-engineering/prompt-version-management.md) - Prompt Version Management
+- [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures
+
+## structured-output
+
+- [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures
 
 ## deployment
 
 - [prompt-version-management](../concepts/llm-engineering/prompt-version-management.md) - Prompt Version Management
+
+## optimization
+
+- [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
+- [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping
+- [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
+
+## agents
+
+- [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
+
+## tool-use
+
+- [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
 
 ## durability
 

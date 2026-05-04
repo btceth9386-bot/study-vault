@@ -1,9 +1,32 @@
 type: repo
 title: stanfordnlp/dspy
 url: https://github.com/stanfordnlp/dspy
+authors:
+  - Omar Khattab
+  - Stanford NLP Group
 language: en
-date_consumed: 2026-05-04
-date_added: 2026-05-04
+date_consumed: "2026-05-04"
+date_added: "2026-05-04"
+estimated_time: "4h"
 status: processed
-tags: []
-related_concepts: []
+related_concepts:
+  - dspy-signatures
+  - chain-of-thought-reasoning
+  - few-shot-bootstrapping
+  - metric-driven-llm-optimization
+  - react-agentic-loop
+  - llm-program-distillation
+  - dspy-module-composition
+  - llm-as-judge-evaluation
+  - prompt-version-management
+  - async-processing
+tags:
+  - llm
+  - prompt-optimization
+  - agents
+  - few-shot-learning
+  - chain-of-thought
+  - python
+  - open-source
+  - fine-tuning
+  - rag

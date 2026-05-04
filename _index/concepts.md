@@ -22,8 +22,15 @@
 - [oltp-olap-split](../concepts/llm-engineering/oltp-olap-split.md) - OLTP/OLAP Database Split [llm-engineering]
 - [prompt-version-management](../concepts/llm-engineering/prompt-version-management.md) - Prompt Version Management [llm-engineering]
 - [s3-first-durability](../concepts/llm-engineering/s3-first-durability.md) - S3-First Durability Pattern [llm-engineering]
+- [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures [llm-engineering]
+- [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition [llm-engineering]
+- [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping [llm-engineering]
+- [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization [llm-engineering]
+- [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop [llm-engineering]
 
 ## Draft
 
 - [event-sourcing-staging-propagation](../_drafts/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation [draft]
 - [hierarchical-rbac](../_drafts/hierarchical-rbac.md) - Hierarchical RBAC [draft]
+- [chain-of-thought-reasoning](../_drafts/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning [draft]
+- [llm-program-distillation](../_drafts/llm-program-distillation.md) - LLM Program Distillation [draft]

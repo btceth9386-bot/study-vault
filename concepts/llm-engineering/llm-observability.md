@@ -10,6 +10,8 @@ related:
   - llm-as-judge-evaluation
   - prompt-version-management
   - oltp-olap-split
+  - dspy-signatures
+  - react-agentic-loop
 tags:
   - llm-engineering
   - observability
@@ -21,7 +23,7 @@ tags:
 - **One-sentence definition**: LLM observability is structured monitoring for AI applications: it records each request as a trace, each step as an observation, and each quality signal as a score.
 - **Why it exists / what problem it solves**: LLM apps are not a single database query or API call. They often involve prompts, tools, retrieval, model calls, retries, and non-deterministic output. Without structured traces, teams cannot explain why a response was slow, expensive, wrong, or different from yesterday.
 - **Keywords**: traces, observations, scores, generations, sessions, token usage, latency
-- **Related concepts**: [[llm-as-judge-evaluation]], [[prompt-version-management]], [[oltp-olap-split]]
+- **Related concepts**: [[llm-as-judge-evaluation]], [[prompt-version-management]], [[oltp-olap-split]], [[dspy-signatures]], [[react-agentic-loop]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/langfuse-langfuse
@@ -49,6 +51,8 @@ The fix is no longer guesswork: update retrieval data, compare prompt version 12
 - [[llm-as-judge-evaluation]]: Automated evaluators need traces and observations as the raw material to score.
 - [[prompt-version-management]]: Prompt versions become much more useful when each generation records which version produced it.
 - [[oltp-olap-split]]: High-volume observability data needs analytical storage so teams can query millions of traces quickly.
+- [[dspy-signatures]]: Structured task fields make LLM calls easier to log, inspect, and compare.
+- [[react-agentic-loop]]: ReAct produces step-by-step tool-use trajectories that benefit from observability.
 
 ## Open questions
 
