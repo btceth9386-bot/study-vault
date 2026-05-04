@@ -23,15 +23,16 @@ If multiple matches are plausible, pick the most likely one and state the assump
 
 ## Goal
 
-Use a diagram-first review flow when possible:
+Use a visual-first review flow:
 
 1. Identify the selected topic or concept.
 2. Read the topic/concept file and list the concepts to review in order.
 3. For each concept, find related diagrams in source snapshots.
-4. Explain the diagram or source flow in simple terms.
-5. Explain the concept in Feynman style.
-6. Ask quiz questions from `quiz/bank.json`.
-7. Track weak spots and finish with a short review plan.
+4. Convert the source diagram or source flow into an ASCII flow chart, table, or both.
+5. Explain the visual aid in simple terms.
+6. Explain the concept in Feynman style.
+7. Ask quiz questions from `quiz/bank.json`.
+8. Track weak spots and finish with a short review plan.
 
 ## Diagram Search
 
@@ -66,7 +67,42 @@ Examples:
 - DSPy concepts usually map to `sources/repos/stanfordnlp-dspy/deepwiki-snapshot/`.
 - System design concepts may map to `sources/repos/system-design-primer/`, `sources/repos/donnemartin-system-design-primer/`, or video highlights.
 
-If no diagram exists for a concept, say so and use the best source section or topic explanation instead.
+If no diagram exists for a concept, say so and create your own ASCII flow chart or table from the best source section or topic explanation.
+
+## Visual Aid Rules
+
+Always provide at least one compact visual aid before the Feynman explanation.
+
+Choose the best format:
+
+- Use an ASCII flow chart for process, pipeline, lifecycle, architecture, or decision flow concepts.
+- Use a Markdown table for trade-offs, roles, components, fields, responsibilities, or comparisons.
+- Use both when a concept has a process plus important component differences.
+
+ASCII flow chart style:
+
+```text
+Input
+  |
+  v
+Step 1 --> Step 2 --> Step 3
+  |                     |
+  v                     v
+Feedback <---------- Result
+```
+
+Table style:
+
+| Part | Role | Why It Matters |
+|---|---|---|
+| <component> | <what it does> | <learning point> |
+
+Keep visual aids small enough to review quickly:
+
+- Prefer 4-8 nodes for ASCII flow charts.
+- Prefer 3-6 rows for tables.
+- Do not paste a large Mermaid diagram directly unless the user asks for the raw source.
+- If the source already has Mermaid, summarize it as ASCII or a table first, then reference the source file and line.
 
 ## Review Format
 
@@ -76,7 +112,9 @@ For each concept, use this structure:
 Concept: <concept title>
 Why this matters: <1-2 sentences>
 Best diagram/source: <path:line or "No diagram found">
-Diagram walkthrough: <plain-English explanation>
+Visual aid:
+<ASCII flow chart or Markdown table>
+Diagram/table walkthrough: <plain-English explanation>
 Feynman explanation: <simple explanation with one concrete example>
 Common confusion: <one likely mistake>
 Quiz: <ask one question first>

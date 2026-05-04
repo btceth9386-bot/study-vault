@@ -17,13 +17,13 @@ kb_root: "."
 agents:
   - name: claude-ingest
     role: ingest
-    command: "codex exec --skip-git-repo-check --model gpt-5.5 --sandbox workspace-write"
+    command: "codex exec --yolo --skip-git-repo-check --model gpt-5.5 resume --last"
     max_concurrent: 1
     env: {}
 
   - name: codex-review
     role: review
-    command: "codex exec --yolo --skip-git-repo-check --model gpt-5.5 resume --last"
+    command: "claude --dangerously-skip-permissions --continue --model claude-sonnet-4-6 -p"
     max_concurrent: 1
     env: {}
 
@@ -35,7 +35,7 @@ agents:
 
   - name: claude-topics
     role: topics
-    command: "codex exec --skip-git-repo-check --model gpt-5.5 --sandbox workspace-write"
+    command: "claude --dangerously-skip-permissions --continue --model claude-sonnet-4-6 -p"
     max_concurrent: 1
     env: {}
 
