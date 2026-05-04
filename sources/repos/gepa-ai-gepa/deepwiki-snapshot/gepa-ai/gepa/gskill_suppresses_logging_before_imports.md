@@ -1,0 +1,1 @@
+"src/gepa/gskill/**/*.py" = ["E402"]
