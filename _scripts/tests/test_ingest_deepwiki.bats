@@ -11,11 +11,14 @@ setup() {
   mkdir -p "${MOCK_BIN}"
   cat > "${MOCK_BIN}/deepwiki-to-md" <<'MOCK'
 #!/usr/bin/env bash
-# Mock: write a sample markdown file to --output dir
+# Mock: write a sample markdown file to --path dir
+if [[ "$*" == *"--help"* ]]; then
+  exit 0
+fi
 OUTPUT_DIR=""
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --output) OUTPUT_DIR="$2"; shift 2 ;;
+    --path) OUTPUT_DIR="$2"; shift 2 ;;
     *) shift ;;
   esac
 done
@@ -24,6 +27,7 @@ echo "# Overview" > "${OUTPUT_DIR}/overview.md"
 echo "Sample wiki content." >> "${OUTPUT_DIR}/overview.md"
 MOCK
   chmod +x "${MOCK_BIN}/deepwiki-to-md"
+  export DEEPWIKI_TO_MD="${MOCK_BIN}/deepwiki-to-md"
   export PATH="${MOCK_BIN}:${PATH}"
 }
 
@@ -41,6 +45,12 @@ teardown() {
 
 @test "accepts DeepWiki URL directly" {
   run "${SCRIPT_PATH}" "https://deepwiki.com/donnemartin/system-design-primer" "${TEST_TMPDIR}/kb"
+  [ "${status}" -eq 0 ]
+  [ -d "${TEST_TMPDIR}/kb/sources/repos/donnemartin-system-design-primer" ]
+}
+
+@test "accepts owner/repo path directly" {
+  run "${SCRIPT_PATH}" "donnemartin/system-design-primer" "${TEST_TMPDIR}/kb"
   [ "${status}" -eq 0 ]
   [ -d "${TEST_TMPDIR}/kb/sources/repos/donnemartin-system-design-primer" ]
 }
@@ -101,6 +111,9 @@ teardown() {
   # Override mock to fail without 'private' in stderr
   cat > "${MOCK_BIN}/deepwiki-to-md" <<'MOCK'
 #!/usr/bin/env bash
+if [[ "$*" == *"--help"* ]]; then
+  exit 0
+fi
 echo "wiki not found" >&2
 exit 1
 MOCK
@@ -114,6 +127,9 @@ MOCK
 @test "failure when wiki not built cleans up output directory" {
   cat > "${MOCK_BIN}/deepwiki-to-md" <<'MOCK'
 #!/usr/bin/env bash
+if [[ "$*" == *"--help"* ]]; then
+  exit 0
+fi
 echo "not found" >&2
 exit 1
 MOCK
@@ -129,6 +145,9 @@ MOCK
 @test "failure for private repo shows clear error message" {
   cat > "${MOCK_BIN}/deepwiki-to-md" <<'MOCK'
 #!/usr/bin/env bash
+if [[ "$*" == *"--help"* ]]; then
+  exit 0
+fi
 echo "Error: private repository not supported" >&2
 exit 1
 MOCK

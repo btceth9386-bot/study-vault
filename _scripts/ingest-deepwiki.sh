@@ -11,9 +11,10 @@ usage() {
 INPUT_URL="$1"
 KB_ROOT="${2:-.}"
 VENV_BIN="${KB_ROOT}/.venv/bin"
+DEEPWIKI_BIN="${DEEPWIKI_TO_MD:-${VENV_BIN}/deepwiki-to-md}"
 
 # Check dependency
-if ! "${VENV_BIN}/deepwiki-to-md" --help &>/dev/null; then
+if ! "${DEEPWIKI_BIN}" --help &>/dev/null; then
   echo "Error: deepwiki-to-md is not installed. Run: .venv/bin/pip install deepwiki-to-md" >&2
   exit 1
 fi
@@ -27,8 +28,12 @@ elif [[ "$INPUT_URL" =~ ^https://deepwiki\.com/([^/]+/[^/]+) ]]; then
   REPO_PATH="${BASH_REMATCH[1]}"
   DEEPWIKI_URL="$INPUT_URL"
   GITHUB_URL="https://github.com/${REPO_PATH}"
+elif [[ "$INPUT_URL" =~ ^([^/[:space:]]+/[^/[:space:]]+)$ ]]; then
+  REPO_PATH="${BASH_REMATCH[1]}"
+  DEEPWIKI_URL="https://deepwiki.com/${REPO_PATH}"
+  GITHUB_URL="https://github.com/${REPO_PATH}"
 else
-  echo "Error: URL must be a GitHub (https://github.com/user/repo) or DeepWiki (https://deepwiki.com/user/repo) URL." >&2
+  echo "Error: URL must be a GitHub URL, DeepWiki URL, or owner/repo path." >&2
   exit 1
 fi
 
@@ -44,7 +49,7 @@ DEEPWIKI_ERR="$(mktemp)"
 trap 'rm -f "${DEEPWIKI_ERR}"' EXIT
 
 echo "Downloading DeepWiki for ${REPO_PATH}..."
-if ! "${VENV_BIN}/deepwiki-to-md" "${DEEPWIKI_URL}" --path "${SNAPSHOT_DIR}" 2>"${DEEPWIKI_ERR}"; then
+if ! "${DEEPWIKI_BIN}" "${REPO_PATH}" --path "${SNAPSHOT_DIR}" 2>"${DEEPWIKI_ERR}"; then
   ERR="$(cat "${DEEPWIKI_ERR}")"
   if echo "$ERR" | grep -qi "private"; then
     echo "Error: DeepWiki only supports public repositories. '${REPO_PATH}' appears to be private." >&2

@@ -17,6 +17,7 @@ setup() {
   export MOCK_BIN="${TEST_TMPDIR}/bin"
   mkdir -p "${MOCK_BIN}"
   export PATH="${MOCK_BIN}:${PATH}"
+  export DEEPWIKI_TO_MD="${MOCK_BIN}/deepwiki-to-md"
 
   # Fake venv python that delegates to real python3 for file_splitter
   mkdir -p "${TEST_TMPDIR}/.venv/bin"
@@ -262,10 +263,13 @@ MOCK
   # Mock deepwiki-to-md to create a stub snapshot file
   cat > "${MOCK_BIN}/deepwiki-to-md" <<'MOCK'
 #!/usr/bin/env bash
-# Find --output argument and create a stub markdown file there
+# Find --path argument and create a stub markdown file there
+if [[ "$*" == *"--help"* ]]; then
+  exit 0
+fi
 prev=""
 for arg in "$@"; do
-  if [[ "$prev" == "--output" ]]; then
+  if [[ "$prev" == "--path" ]]; then
     mkdir -p "$arg"
     echo "# Repo Wiki\n\nThis is the wiki content." > "${arg}/index.md"
   fi
@@ -293,9 +297,12 @@ MOCK
 @test "ingest-deepwiki: accepts deepwiki.com URL directly" {
   cat > "${MOCK_BIN}/deepwiki-to-md" <<'MOCK'
 #!/usr/bin/env bash
+if [[ "$*" == *"--help"* ]]; then
+  exit 0
+fi
 prev=""
 for arg in "$@"; do
-  if [[ "$prev" == "--output" ]]; then
+  if [[ "$prev" == "--path" ]]; then
     mkdir -p "$arg"
     echo "# Wiki" > "${arg}/index.md"
   fi
@@ -316,6 +323,9 @@ MOCK
   # deepwiki-to-md fails with a generic error (wiki not yet built)
   cat > "${MOCK_BIN}/deepwiki-to-md" <<'MOCK'
 #!/usr/bin/env bash
+if [[ "$*" == *"--help"* ]]; then
+  exit 0
+fi
 echo "wiki not found" >&2
 exit 1
 MOCK
@@ -329,6 +339,9 @@ MOCK
 @test "ingest-deepwiki: failure path reports private repo error" {
   cat > "${MOCK_BIN}/deepwiki-to-md" <<'MOCK'
 #!/usr/bin/env bash
+if [[ "$*" == *"--help"* ]]; then
+  exit 0
+fi
 echo "private repository not supported" >&2
 exit 1
 MOCK

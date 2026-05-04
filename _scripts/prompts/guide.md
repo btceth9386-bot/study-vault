@@ -16,6 +16,10 @@ Run an ingest script to bring a source into the knowledge base:
 # GitHub repo (via DeepWiki)
 ./_scripts/ingest-deepwiki.sh https://github.com/owner/repo
 
+# Or use DeepWiki / owner-repo form directly
+./_scripts/ingest-deepwiki.sh https://deepwiki.com/owner/repo
+./_scripts/ingest-deepwiki.sh owner/repo
+
 # Web article
 node _scripts/ingest-article.js https://example.com/article
 
@@ -38,7 +42,7 @@ For GitHub repos, use the DeepWiki MCP server to read the full wiki content dire
 
 ```
 Read _scripts/prompts/new-source.md, then use the DeepWiki MCP server to read
-https://deepwiki.com/donnemartin/system-design-primer and process it as a new source in English.
+https://deepwiki.com/<owner>/<repo> and process it as a new source in English.
 ```
 
 The agent will:
@@ -53,7 +57,7 @@ Ask an AI agent to review the drafts against the original source:
 ```
 Review all files in _drafts/ against the source material. For each draft:
 
-1. Use the DeepWiki MCP server to read https://deepwiki.com/donnemartin/system-design-primer and verify the draft's accuracy
+1. Use the DeepWiki MCP server to read https://deepwiki.com/<owner>/<repo> and verify the draft's accuracy
 2. Check: Is the one-sentence definition correct? Is "why it matters" accurate? Are relationships to other concepts valid?
 3. Flag any factual errors, missing key points, or misleading simplifications
 4. Rate each draft: APPROVE (ready to promote), REVISE (needs changes — list what), or REJECT (too inaccurate)
@@ -129,16 +133,16 @@ Instead of running steps 2-5 manually, use the pipeline script:
 ```bash
 # Full pipeline (steps 2-5) for an ingested source:
 .venv/bin/python3 _scripts/pipeline.py sources/videos/my-video
-.venv/bin/python3 _scripts/pipeline.py sources/repos/donnemartin-system-design-primer
+.venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo>
 
 # Single step:
-.venv/bin/python3 _scripts/pipeline.py sources/repos/my-repo --step ingest
+.venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo> --step ingest
 .venv/bin/python3 _scripts/pipeline.py --step review
 .venv/bin/python3 _scripts/pipeline.py --step promote
 .venv/bin/python3 _scripts/pipeline.py --step topics
 
 # Preview commands without executing:
-.venv/bin/python3 _scripts/pipeline.py sources/repos/my-repo --dry-run
+.venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo> --dry-run
 ```
 
 Configure which AI agent handles each step in `_scripts/pipeline.yml`.

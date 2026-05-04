@@ -15,27 +15,27 @@
 kb_root: "."
 
 agents:
-  - name: kiro-cli
+  - name: claude-ingest
     role: ingest
-    command: "kiro-cli chat --resume --agent senior --no-interactive --trust-all-tools"
-    max_concurrent: 1
-    env: {}
-
-  - name: claude-review
-    role: review
     command: "claude --dangerously-skip-permissions --continue --model claude-sonnet-4-6 -p"
     max_concurrent: 1
     env: {}
 
-  - name: kiro-cli-promote
-    role: promote
-    command: "kiro-cli chat --resume --agent senior --no-interactive --trust-all-tools"
+  - name: codex-review
+    role: review
+    command: "codex exec --yolo --skip-git-repo-check --model gpt-5.5 resume --last"
     max_concurrent: 1
     env: {}
 
-  - name: kiro-cli-topics
+  - name: codex-promote
+    role: promote
+    command: "codex exec --yolo --skip-git-repo-check --model gpt-5.5 resume --last"
+    max_concurrent: 1
+    env: {}
+
+  - name: claude-topics
     role: topics
-    command: "kiro-cli chat --resume --agent senior --no-interactive --trust-all-tools"
+    command: "claude --dangerously-skip-permissions --continue --model claude-sonnet-4-6 -p"
     max_concurrent: 1
     env: {}
 
