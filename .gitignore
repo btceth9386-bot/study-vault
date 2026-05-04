@@ -32,4 +32,4 @@ __pycache__/
 # PDF originals (only processed Markdown is tracked)
 *.pdf
 
-**/node_modules
+**/node_modules/
