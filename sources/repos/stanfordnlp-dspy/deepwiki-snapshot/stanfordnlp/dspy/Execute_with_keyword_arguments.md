@@ -1,0 +1,1 @@
+result = predict(question="What is 2+2?")

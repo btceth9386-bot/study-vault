@@ -1,0 +1,1 @@
+qa = dspy.ChainOfThought("question -> answer")
