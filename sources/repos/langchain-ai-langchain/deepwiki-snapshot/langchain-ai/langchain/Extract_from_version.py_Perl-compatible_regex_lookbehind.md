@@ -1,0 +1,1 @@
+CORE_VERSION_PY_VERSION=$(grep -Po '(?<=^VERSION = ")[^"]*' libs/core/langchain_core/version.py)

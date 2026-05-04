@@ -1,0 +1,1 @@
+CORE_PYPROJECT_VERSION=$(grep -Po '(?<=^version = ")[^"]*' libs/core/pyproject.toml)

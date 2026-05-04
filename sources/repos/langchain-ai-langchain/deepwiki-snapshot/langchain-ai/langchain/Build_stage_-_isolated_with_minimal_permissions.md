@@ -1,0 +1,3 @@
+build:
+  permissions:
+    contents: read
