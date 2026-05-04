@@ -11,6 +11,7 @@ related:
   - caching-strategies
   - async-processing
   - database-replication
+  - s3-first-durability
 tags:
   - system-design
   - distributed-systems
@@ -21,7 +22,7 @@ tags:
 - **One-sentence definition**: After a write, all replicas will converge to the same value given enough time, but reads during the propagation window may return stale data.
 - **Why it exists / what problem it solves**: Strong consistency requires every replica to confirm a write before responding, which is slow and reduces availability. Eventual consistency trades immediate accuracy for speed and uptime — the right choice when brief staleness is acceptable.
 - **Keywords**: eventual consistency, strong consistency, weak consistency, AP, BASE, replication lag, propagation window
-- **Related concepts**: [[cap-theorem]], [[caching-strategies]], [[async-processing]]
+- **Related concepts**: [[cap-theorem]], [[caching-strategies]], [[async-processing]], [[s3-first-durability]]
 - **Depth**: 2/4
 - **Last updated**: 2026-04-30
 - **Source**: sources/repos/system-design-primer
@@ -54,6 +55,7 @@ During the propagation window, some users reach the old server and some reach th
 - [[cap-theorem]]: Eventual consistency is what you get when you choose AP (availability + partition tolerance) over CP.
 - [[caching-strategies]]: Cache-aside naturally produces eventual consistency — the cache may hold stale data until TTL expires or it's explicitly invalidated.
 - [[async-processing]]: Async workers introduce propagation delay by design — the result isn't available until the worker finishes.
+- [[s3-first-durability]]: A system can durably accept events before workers have materialized them in downstream analytical tables.
 
 ## Open questions
 

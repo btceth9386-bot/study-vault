@@ -11,6 +11,7 @@ related:
   - async-processing
   - horizontal-scaling
   - sticky-sessions
+  - prompt-version-management
 tags:
   - system-design
   - performance
@@ -21,7 +22,7 @@ tags:
 - **One-sentence definition**: Storing frequently accessed data in fast memory layers so you don't have to hit the slow database every time, with different update patterns depending on whether you prioritize speed or freshness.
 - **Why it exists / what problem it solves**: Databases are slow under hot-spot traffic. A memory read (~100 ns) is orders of magnitude faster than a disk seek (~10 ms). Caching absorbs uneven loads and traffic spikes, but the hard part is keeping cached data in sync with the source of truth.
 - **Keywords**: cache-aside, write-through, write-behind, refresh-ahead, Redis, Memcached, TTL, cache invalidation
-- **Related concepts**: [[cap-theorem]], [[async-processing]], [[horizontal-scaling]]
+- **Related concepts**: [[cap-theorem]], [[async-processing]], [[horizontal-scaling]], [[prompt-version-management]]
 - **Depth**: 2/4
 - **Last updated**: 2026-04-30
 - **Source**: sources/repos/system-design-primer
@@ -49,6 +50,7 @@ A social media app's user profile page:
 - [[cap-theorem]]: Cache-aside accepts eventual consistency (stale reads); write-through provides stronger consistency at the cost of write latency.
 - [[async-processing]]: Write-behind is essentially async processing applied to database writes — same trade-off of speed vs data-loss risk.
 - [[horizontal-scaling]]: Caching absorbs uneven traffic that would otherwise overwhelm horizontally scaled servers.
+- [[prompt-version-management]]: Prompt lookup can be cached, but prompt edits require careful invalidation so clients do not keep using stale versions.
 
 ## Open questions
 

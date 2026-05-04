@@ -11,6 +11,7 @@ related:
   - load-balancing
   - database-replication
   - raid-storage
+  - s3-first-durability
 tags:
   - system-design
   - reliability
@@ -21,7 +22,7 @@ tags:
 - **One-sentence definition**: Designing every layer of a system with redundant pairs and automatic failover so the service stays up even when individual components die.
 - **Why it exists / what problem it solves**: Redundant servers are useless if the single load balancer in front of them dies. HA ensures that no single component failure takes down the system, at every layer from disks to data centers.
 - **Keywords**: high availability, active-active, active-passive, heartbeat, failover, redundancy, availability zones
-- **Related concepts**: [[single-point-of-failure]], [[load-balancing]], [[database-replication]], [[raid-storage]]
+- **Related concepts**: [[single-point-of-failure]], [[load-balancing]], [[database-replication]], [[raid-storage]], [[s3-first-durability]]
 - **Depth**: 2/4
 - **Last updated**: 2026-04-30
 - **Source**: sources/videos/cs75-summer-2012-lecture-9-scalability-harvard-web-development-david-malan
@@ -53,6 +54,7 @@ Users experience at most a few seconds of disruption instead of a full outage.
 - [[load-balancing]]: Production load balancers are deployed in HA pairs (active-passive or active-active).
 - [[database-replication]]: Master-master replication is active-active HA for databases.
 - [[raid-storage]]: RAID provides HA at the disk level within a single machine.
+- [[s3-first-durability]]: Durable object storage helps preserve accepted data even if queue workers or analytical databases fail.
 
 ## Open questions
 

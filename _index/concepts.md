@@ -17,3 +17,13 @@
 - [single-point-of-failure](../concepts/system-design/single-point-of-failure.md) - Single Point of Failure [system-design]
 - [high-availability](../concepts/system-design/high-availability.md) - High Availability [system-design]
 - [ssl-termination](../concepts/system-design/ssl-termination.md) - SSL Termination [system-design]
+- [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability [llm-engineering]
+- [llm-as-judge-evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md) - LLM-as-Judge Evaluation [llm-engineering]
+- [oltp-olap-split](../concepts/llm-engineering/oltp-olap-split.md) - OLTP/OLAP Database Split [llm-engineering]
+- [prompt-version-management](../concepts/llm-engineering/prompt-version-management.md) - Prompt Version Management [llm-engineering]
+- [s3-first-durability](../concepts/llm-engineering/s3-first-durability.md) - S3-First Durability Pattern [llm-engineering]
+
+## Draft
+
+- [event-sourcing-staging-propagation](../_drafts/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation [draft]
+- [hierarchical-rbac](../_drafts/hierarchical-rbac.md) - Hierarchical RBAC [draft]

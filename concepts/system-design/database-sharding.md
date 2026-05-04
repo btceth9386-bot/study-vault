@@ -10,6 +10,7 @@ related:
   - horizontal-scaling
   - cap-theorem
   - database-replication
+  - oltp-olap-split
 tags:
   - system-design
   - databases
@@ -20,7 +21,7 @@ tags:
 - **One-sentence definition**: Splitting a database's rows across multiple independent database instances (shards) so each one handles only a slice of the data.
 - **Why it exists / what problem it solves**: When a single database can't keep up with read/write volume or data size — even after adding read replicas and caching — sharding distributes the load across multiple machines, each with smaller indexes and better cache hit rates.
 - **Keywords**: horizontal partitioning, shard key, hash-based sharding, geographic sharding, consistent hashing, denormalization, federation
-- **Related concepts**: [[horizontal-scaling]], [[cap-theorem]]
+- **Related concepts**: [[horizontal-scaling]], [[cap-theorem]], [[oltp-olap-split]]
 - **Depth**: 2/4
 - **Last updated**: 2026-04-30
 - **Source**: sources/repos/system-design-primer
@@ -53,6 +54,7 @@ Fetching one user's messages hits exactly one shard. But "find all messages cont
 
 - [[horizontal-scaling]]: Sharding is horizontal scaling applied to the data layer.
 - [[cap-theorem]]: Sharding inherently introduces partitions across nodes, forcing the consistency vs availability trade-off.
+- [[oltp-olap-split]]: Sharding divides one database workload across nodes; an OLTP/OLAP split separates transactional and analytical workloads into different systems.
 
 ## Open questions
 

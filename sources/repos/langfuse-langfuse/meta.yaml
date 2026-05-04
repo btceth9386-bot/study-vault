@@ -1,9 +1,31 @@
 type: repo
-title: langfuse/langfuse
+title: "langfuse/langfuse"
 url: https://github.com/langfuse/langfuse
+authors:
+  - Langfuse Team
 language: en
-date_consumed: 2026-05-04
-date_added: 2026-05-04
+date_consumed: "2026-05-04"
+date_added: "2026-05-04"
+estimated_time: "3h"
 status: processed
-tags: []
-related_concepts: []
+related_concepts:
+  - llm-observability
+  - llm-as-judge-evaluation
+  - oltp-olap-split
+  - s3-first-durability
+  - event-sourcing-staging-propagation
+  - prompt-version-management
+  - hierarchical-rbac
+  - async-processing
+  - database-sharding
+tags:
+  - llm
+  - observability
+  - tracing
+  - evaluation
+  - prompt-management
+  - open-source
+  - typescript
+  - clickhouse
+  - postgresql
+  - event-driven
