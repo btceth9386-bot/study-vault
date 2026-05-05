@@ -1,0 +1,1 @@
+fork_config = graph.update_state(before_node_b_config, {"value": ["modified"]})
