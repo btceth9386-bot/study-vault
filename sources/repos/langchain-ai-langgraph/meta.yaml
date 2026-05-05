@@ -5,5 +5,24 @@ language: en
 date_consumed: 2026-05-05
 date_added: 2026-05-05
 status: processed
-tags: []
-related_concepts: []
+tags:
+  - langgraph
+  - langchain
+  - llm-engineering
+  - agents
+  - orchestration
+  - stateful-workflows
+  - human-in-the-loop
+related_concepts:
+  - langgraph-stategraph-state-schema
+  - langgraph-pregel-bsp-execution
+  - langgraph-channels-and-reducers
+  - langgraph-send-command-control-flow
+  - langgraph-human-in-the-loop-interrupts
+  - langgraph-checkpoint-time-travel-forking
+  - langgraph-runtime-dependency-injection
+  - langgraph-store-long-term-memory
+  - langgraph-remotegraph-server-execution
+  - langgraph-toolnode-prebuilt-components
+  - provider-chat-model-wrappers-in-langgraph-nodes
+  - langchain-tool-schema-contract

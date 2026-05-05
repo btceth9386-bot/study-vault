@@ -9,6 +9,7 @@ sources:
 related:
   - provider-chat-model-wrappers-in-langgraph-nodes
   - langchain-tool-schema-contract
+  - langgraph-store-long-term-memory
 tags:
   - llm-engineering
   - langchain
@@ -22,7 +23,7 @@ tags:
 - **One-sentence definition**: Retrievers and vector stores are the LangChain pieces that let a LangGraph RAG workflow find relevant documents before sending grounded context to a chat model.
 - **Why it exists / what problem it solves**: A model only knows what is in its prompt and parameters. Retrieval-augmented generation, or RAG, adds a search step so the model can answer with evidence from external documents.
 - **Keywords**: RAG, retriever, vector store, embeddings, similarity search, documents
-- **Related concepts**: [[provider-chat-model-wrappers-in-langgraph-nodes]], [[langchain-tool-schema-contract]]
+- **Related concepts**: [[provider-chat-model-wrappers-in-langgraph-nodes]], [[langchain-tool-schema-contract]], [[langgraph-store-long-term-memory]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-05
 - **Source**: sources/repos/langchain-ai-langchain
@@ -54,6 +55,7 @@ The graph can decide that retrieval always happens before answering. For a more 
 
 - [[provider-chat-model-wrappers-in-langgraph-nodes]]: Retrieved documents are usually fed into a provider chat model wrapper as context for generation.
 - [[langchain-tool-schema-contract]]: Retrieval can be wrapped as a tool when the model should decide whether external context is needed.
+- [[langgraph-store-long-term-memory]]: LangGraph store can provide persistent, namespaced memory that complements retrievers and vector stores.
 
 ## Open questions
 

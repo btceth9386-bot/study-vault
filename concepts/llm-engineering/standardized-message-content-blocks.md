@@ -9,6 +9,7 @@ sources:
 related:
   - provider-chat-model-wrappers-in-langgraph-nodes
   - langchain-tool-schema-contract
+  - langgraph-stategraph-state-schema
 tags:
   - llm-engineering
   - langchain
@@ -21,7 +22,7 @@ tags:
 - **One-sentence definition**: Standardized message content blocks are typed pieces inside LangChain messages that give text, images, audio, reasoning, and tool-use data a common shape across model providers.
 - **Why it exists / what problem it solves**: Modern model messages are no longer just strings. A graph may need to carry text, images, files, reasoning metadata, tool requests, or server tool results, and each provider represents those pieces differently.
 - **Keywords**: content_blocks, typed blocks, multimodal, reasoning, tool call, provider format
-- **Related concepts**: [[provider-chat-model-wrappers-in-langgraph-nodes]], [[langchain-tool-schema-contract]]
+- **Related concepts**: [[provider-chat-model-wrappers-in-langgraph-nodes]], [[langchain-tool-schema-contract]], [[langgraph-stategraph-state-schema]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-05
 - **Source**: sources/repos/langchain-ai-langchain
@@ -52,6 +53,7 @@ The graph code can branch on block type instead of guessing whether a provider e
 
 - [[provider-chat-model-wrappers-in-langgraph-nodes]]: Provider wrappers do the translation work between provider wire formats and LangChain's common message blocks.
 - [[langchain-tool-schema-contract]]: Tool calls and tool results can be represented as structured blocks, which keeps tool use machine-readable instead of plain prose.
+- [[langgraph-stategraph-state-schema]]: Message content blocks are often carried in a `messages` state field that graph nodes read and update.
 
 ## Open questions
 

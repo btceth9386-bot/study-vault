@@ -11,6 +11,7 @@ related:
   - load-balancing
   - async-processing
   - eventual-consistency
+  - langgraph-remotegraph-server-execution
 tags:
   - system-design
   - architecture
@@ -21,7 +22,7 @@ tags:
 - **One-sentence definition**: Breaking a big application into small, independent services that each do one thing, deploy separately, and talk to each other over the network.
 - **Why it exists / what problem it solves**: In a monolith, one team's change can break everything, scaling means scaling the whole app, and a single bug can take down the entire system. Microservices let teams own, deploy, and scale their piece independently.
 - **Keywords**: microservices, monolith, service discovery, independent deployment, fault isolation, distributed complexity
-- **Related concepts**: [[horizontal-scaling]], [[load-balancing]], [[async-processing]], [[eventual-consistency]]
+- **Related concepts**: [[horizontal-scaling]], [[load-balancing]], [[async-processing]], [[eventual-consistency]], [[langgraph-remotegraph-server-execution]]
 - **Depth**: 2/4
 - **Last updated**: 2026-04-30
 - **Source**: sources/repos/system-design-primer
@@ -51,6 +52,7 @@ Each service scales independently: the Feed Service might need 50 instances duri
 - [[load-balancing]]: Each service sits behind its own load balancer to distribute traffic across instances.
 - [[async-processing]]: Services communicate asynchronously via message queues to avoid tight coupling and blocking calls.
 - [[eventual-consistency]]: Without cross-service transactions, data consistency between services is eventual by nature.
+- [[langgraph-remotegraph-server-execution]]: A deployed LangGraph can act as a service boundary while still exposing graph-native operations.
 
 ## Open questions
 

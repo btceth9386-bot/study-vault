@@ -6,11 +6,11 @@ description: The infrastructure and engineering patterns specific to LLM applica
 
 ## Overview
 
-LLM applications fail in ways that don't show up in standard monitoring: a model returns a plausible but wrong answer, a prompt change silently degrades quality, or token costs quietly spiral. This path covers the engineering disciplines that address those failure modes — starting with structured observability, then prompt lifecycle management, automated evaluation, the LangChain primitives needed for LangGraph foundations, DSPy-style program optimization, agentic tool use, and finally the infrastructure patterns that keep high-volume event pipelines reliable. Two concepts borrowed from the system design paths (caching strategies, async processing) appear here in their LLM-specific context.
+LLM applications fail in ways that don't show up in standard monitoring: a model returns a plausible but wrong answer, a prompt change silently degrades quality, or token costs quietly spiral. This path covers the engineering disciplines that address those failure modes - starting with structured observability, then prompt lifecycle management, automated evaluation, the LangChain primitives needed for LangGraph foundations, LangGraph's durable stateful runtime, DSPy-style program optimization, agentic tool use, and finally the infrastructure patterns that keep high-volume event pipelines reliable. Two concepts borrowed from the system design paths (caching strategies, async processing) appear here in their LLM-specific context.
 
 The LangChain section is intentionally narrow: it covers chat model wrappers, message content blocks, tool schemas, and retrieval/vector-store pieces only as building blocks for LangGraph nodes and RAG graphs.
 
-**Estimated study time:** 12–16 hours
+**Estimated study time:** 16-20 hours
 
 **Prerequisites:** Basic familiarity with LLM APIs (OpenAI/Anthropic). Optionally, review [Asynchronous Processing](../concepts/system-design/async-processing.md) and [Caching Strategies](../concepts/system-design/caching-strategies.md) from the distributed systems or scalability paths first.
 
@@ -42,49 +42,70 @@ Tool schemas are the contract between a model's requested action and executable 
 ### 8. [Retrievers and Vector Stores for LangGraph RAG](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md)
 Retrievers and vector stores supply external evidence for RAG applications. Study this after the model and tool layers because retrieval can be either a fixed graph node or a model-selected tool, depending on how much control you want the graph versus the model to have.
 
-### 9. [DSPy Signatures](../concepts/llm-engineering/dspy-signatures.md)
+### 9. [LangGraph StateGraph State Schema](../concepts/llm-engineering/langgraph-stategraph-state-schema.md)
+StateGraph schemas define the shared state fields that nodes read and update. Study this before LangGraph execution because the schema is the contract that turns node return values into channel writes.
+
+### 10. [LangGraph Pregel BSP Execution](../concepts/llm-engineering/langgraph-pregel-bsp-execution.md)
+Pregel is LangGraph's superstep runtime: plan runnable nodes, execute them concurrently, then apply writes together. Study this after state schemas because it explains when updates become visible, why reducers matter, and where checkpoints fit.
+
+### 11. [LangGraph Send and Command Control Flow](../concepts/llm-engineering/langgraph-send-command-control-flow.md)
+Edges, conditional routing, `Send`, and `Command` decide what Pregel runs next. Study this after the runtime model so dynamic fan-out and node-local routing decisions feel like explicit graph mechanics rather than hidden agent behavior.
+
+### 12. [LangGraph Checkpoint Time Travel and Forking](../concepts/llm-engineering/langgraph-checkpoint-time-travel-forking.md)
+Checkpoints persist graph state for resume, history inspection, replay, and branching. Study this before interrupts because human pauses and production debugging depend on durable execution state.
+
+### 13. [LangGraph Human-in-the-Loop Interrupts](../concepts/llm-engineering/langgraph-human-in-the-loop-interrupts.md)
+Interrupts pause graph execution for approval, correction, or user input. Study this after checkpoints because interrupts are only useful when the graph can safely resume from saved state.
+
+### 14. [LangGraph Store Long-Term Memory](../concepts/llm-engineering/langgraph-store-long-term-memory.md)
+The LangGraph store is persistent namespaced memory that survives across threads and graph runs. Study this after checkpoints so the difference between per-thread execution state and cross-thread memory is clear.
+
+### 15. [LangGraph RemoteGraph and Server Execution](../concepts/llm-engineering/langgraph-remotegraph-server-execution.md)
+LangGraph Server exposes assistants, threads, runs, cron jobs, and store APIs; `RemoteGraph` lets remote deployments behave like local graph objects. Study this after checkpoints and store memory because those are the stateful resources that become operational APIs.
+
+### 16. [DSPy Signatures](../concepts/llm-engineering/dspy-signatures.md)
 Signatures are the task contract for DSPy programs: named input fields, named output fields, and instructions. Study this before DSPy modules because every module wraps a Signature. It also connects back to prompt version management: both make LLM behavior more explicit than anonymous prompt strings.
 
-### 10. [DSPy Module Composition](../concepts/llm-engineering/dspy-module-composition.md)
+### 17. [DSPy Module Composition](../concepts/llm-engineering/dspy-module-composition.md)
 Modules turn multi-step LLM workflows into inspectable Python program trees. Study this after Signatures because modules are the structure that holds Signatures and predictors together. This prepares you for optimization, where DSPy walks the module tree and tunes the predictors inside it.
 
-### 11. [Metric-Driven LLM Optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md)
+### 18. [Metric-Driven LLM Optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md)
 Manual prompt editing does not scale well. Metric-driven optimization asks you to define success as a metric, then lets optimizers search for better instructions and examples. Study this after Signatures and Modules because it depends on both: the Signature defines the task, and the Module defines the program shape.
 
-### 12. [Actionable Side Information](../concepts/llm-engineering/actionable-side-information.md)
+### 19. [Actionable Side Information](../concepts/llm-engineering/actionable-side-information.md)
 A metric says whether a candidate worked; side information explains why it did or did not. Study this before GEPA's proposal mechanics because reflection needs concrete evidence such as traces, errors, logs, and judge feedback.
 
-### 13. [Reflective Mutation Proposer](../concepts/llm-engineering/reflective-mutation-proposer.md)
+### 20. [Reflective Mutation Proposer](../concepts/llm-engineering/reflective-mutation-proposer.md)
 The core GEPA proposal mechanism: evaluate a candidate on a minibatch, capture traces, turn those traces into feedback, and ask a reflection model for a better text component. This makes optimization feel more like debugging than random prompt search.
 
-### 14. [Pareto-Efficient Candidate Selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md)
+### 21. [Pareto-Efficient Candidate Selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md)
 Optimization should preserve specialists, not only the best average candidate. Pareto selection keeps variants that are best on different examples or objectives, which is useful when one candidate solves formatting and another solves reasoning.
 
-### 15. [System-Aware Candidate Merge](../concepts/llm-engineering/system-aware-candidate-merge.md)
+### 22. [System-Aware Candidate Merge](../concepts/llm-engineering/system-aware-candidate-merge.md)
 Once several useful candidates exist, merge can recombine complementary component changes. Study this after Pareto selection because the candidates worth merging are often specialists kept alive by the frontier.
 
-### 16. [Adapter-Based LLM Optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md)
+### 23. [Adapter-Based LLM Optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md)
 Adapters let the same optimization engine work across prompts, DSPy programs, RAG pipelines, and tool-using agents. This is the integration layer that makes GEPA-style optimization reusable beyond one framework.
 
-### 17. [Sparse Validation Evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md)
+### 24. [Sparse Validation Evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md)
 Full validation can be too expensive when each example requires LLM calls or judge calls. Sparse validation explains how to evaluate selected examples while tracking coverage and preserving enough signal for candidate selection.
 
-### 18. [Optimize Anything Pattern](../concepts/llm-engineering/optimize-anything-pattern.md)
+### 25. [Optimize Anything Pattern](../concepts/llm-engineering/optimize-anything-pattern.md)
 Some useful optimization targets are not formal prompt modules: rubrics, policies, tool descriptions, or config strings. `optimize_anything()` shows how to wrap arbitrary scored text artifacts in an evaluator and still use reflection.
 
-### 19. [Few-Shot Bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md)
+### 26. [Few-Shot Bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md)
 Bootstrapping is one concrete optimization mechanism: a teacher program generates traces, a metric filters them, and the passing traces become demonstrations for the student program. Study this after metric-driven optimization because it shows how the abstract compile step creates practical few-shot examples.
 
-### 20. [ReAct Agentic Loop](../concepts/llm-engineering/react-agentic-loop.md)
+### 27. [ReAct Agentic Loop](../concepts/llm-engineering/react-agentic-loop.md)
 ReAct adds tool use to an LLM program by repeating thought, action, and observation steps. Study this after module composition and bootstrapping because ReAct is both a module structure and a trace-rich workflow that can be optimized and observed.
 
-### 21. [Asynchronous Processing](../concepts/system-design/async-processing.md)
+### 28. [Asynchronous Processing](../concepts/system-design/async-processing.md)
 LLM evaluation jobs, batch experiments, and embedding generation are all too slow to run synchronously in the request path. Background queues (BullMQ, Celery, SQS) accept the work, process it when resources are available, and write results back to the observability store. This is the same concept from the distributed systems path, applied here to: evaluation execution queues, ingestion pipelines, and automated scoring workers.
 
-### 22. [S3-First Durability Pattern](../concepts/llm-engineering/s3-first-durability.md)
+### 29. [S3-First Durability Pattern](../concepts/llm-engineering/s3-first-durability.md)
 High-volume LLM event ingestion (thousands of traces per second) must survive worker crashes, queue overflows, and downstream outages. Saving raw payloads to object storage before enqueuing them means the original data is never lost — workers can replay from S3. Study after async-processing because the S3-first pattern directly solves the durability gap in pure queue-based architectures: messages can disappear if a queue crashes before a worker processes them; S3 objects cannot.
 
-### 23. [OLTP/OLAP Database Split](../concepts/llm-engineering/oltp-olap-split.md)
+### 30. [OLTP/OLAP Database Split](../concepts/llm-engineering/oltp-olap-split.md)
 The data architecture capstone for LLM infrastructure. Application metadata (users, projects, API keys, prompt configs, evaluator settings) lives in PostgreSQL — OLTP workload. The millions of trace events, generation records, and scores that observability generates live in ClickHouse or a similar OLAP engine — analytical workload. A single database cannot efficiently serve both. Study last because it requires understanding the full data flow: events arrive via the durable async pipeline, need to be queried analytically, and reference config data that must stay transactionally consistent.
 
 ---
@@ -96,6 +117,7 @@ The data architecture capstone for LLM infrastructure. Application metadata (use
 - Set up an LLM-as-judge evaluation pipeline that runs automatically on production traces
 - Apply caching at the prompt resolution and response layers to reduce LLM costs
 - Build LangGraph nodes around provider chat wrappers, messages, tools, and optional retrieval infrastructure
+- Design LangGraph state schemas, explicit control flow, checkpoints, interrupts, memory, and remote graph boundaries
 - Define DSPy Signatures and compose them into optimizable LLM programs
 - Use metrics, bootstrapping, and compiled artifacts to improve LLM behavior systematically
 - Use trace feedback, reflective mutation, Pareto selection, and merge to reason about GEPA-style text optimization

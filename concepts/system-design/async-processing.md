@@ -13,6 +13,7 @@ related:
   - llm-as-judge-evaluation
   - oltp-olap-split
   - s3-first-durability
+  - langgraph-pregel-bsp-execution
 tags:
   - system-design
   - performance
@@ -23,7 +24,7 @@ tags:
 - **One-sentence definition**: Instead of making the user wait while the server does something slow, accept the request immediately, put the work on a queue, and let a background worker handle it.
 - **Why it exists / what problem it solves**: Slow operations (image resizing, sending emails, crunching analytics) block request threads and kill throughput. Async processing decouples the "accept the request" step from the "do the work" step, so the system stays responsive under load.
 - **Keywords**: message queue, task queue, Redis, RabbitMQ, SQS, Celery, back pressure, exponential backoff
-- **Related concepts**: [[microservices]], [[caching-strategies]], [[eventual-consistency]], [[llm-as-judge-evaluation]], [[oltp-olap-split]], [[s3-first-durability]]
+- **Related concepts**: [[microservices]], [[caching-strategies]], [[eventual-consistency]], [[llm-as-judge-evaluation]], [[oltp-olap-split]], [[s3-first-durability]], [[langgraph-pregel-bsp-execution]]
 - **Depth**: 2/4
 - **Last updated**: 2026-04-30
 - **Source**: sources/repos/system-design-primer
@@ -55,6 +56,7 @@ Twitter's fanout service when a user posts a tweet:
 - [[llm-as-judge-evaluation]]: LLM judge runs should execute in background queues so user-facing requests do not wait for model grading.
 - [[oltp-olap-split]]: Async workers often move validated events from transactional ingestion paths into analytical storage.
 - [[s3-first-durability]]: Saving raw payloads before queue processing makes async pipelines recoverable after worker or downstream failures.
+- [[langgraph-pregel-bsp-execution]]: Pregel also separates execution from visibility, but inside a graph runtime rather than through an external queue.
 
 ## Open questions
 

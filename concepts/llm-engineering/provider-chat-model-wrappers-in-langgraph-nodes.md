@@ -10,6 +10,7 @@ related:
   - langchain-tool-schema-contract
   - standardized-message-content-blocks
   - retrievers-vector-stores-for-langgraph-rag
+  - langgraph-stategraph-state-schema
 tags:
   - llm-engineering
   - langchain
@@ -22,7 +23,7 @@ tags:
 - **One-sentence definition**: Provider chat model wrappers adapt APIs such as OpenAI and Anthropic to LangChain's common chat model interface, so a LangGraph node can send messages and receive an `AIMessage` without owning provider-specific wiring.
 - **Why it exists / what problem it solves**: Each model provider has a different wire format, client setup, streaming behavior, and tool-calling shape. Wrappers such as `ChatOpenAI` and `ChatAnthropic` hide those differences behind the same `BaseChatModel` and `Runnable` surface.
 - **Keywords**: ChatOpenAI, ChatAnthropic, BaseChatModel, Runnable, AIMessage, bind_tools
-- **Related concepts**: [[langchain-tool-schema-contract]], [[standardized-message-content-blocks]], [[retrievers-vector-stores-for-langgraph-rag]]
+- **Related concepts**: [[langchain-tool-schema-contract]], [[standardized-message-content-blocks]], [[retrievers-vector-stores-for-langgraph-rag]], [[langgraph-stategraph-state-schema]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-05
 - **Source**: sources/repos/langchain-ai-langchain
@@ -53,6 +54,7 @@ The node does not manually convert messages into OpenAI request dictionaries. Th
 - [[langchain-tool-schema-contract]]: Wrappers expose tool binding and return parsed tool calls when the model asks to use a tool.
 - [[standardized-message-content-blocks]]: Wrappers translate provider-specific content formats into LangChain's common message content structure.
 - [[retrievers-vector-stores-for-langgraph-rag]]: Retrieval results become useful only when a graph node feeds them into a model wrapper as context or messages.
+- [[langgraph-stategraph-state-schema]]: A model wrapper is usually called by a node that reads messages from graph state and writes an `AIMessage` update back.
 
 ## Open questions
 

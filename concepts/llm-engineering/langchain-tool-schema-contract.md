@@ -11,6 +11,7 @@ related:
   - standardized-message-content-blocks
   - retrievers-vector-stores-for-langgraph-rag
   - react-agentic-loop
+  - langgraph-stategraph-state-schema
 tags:
   - llm-engineering
   - langchain
@@ -24,7 +25,7 @@ tags:
 - **One-sentence definition**: The LangChain tool schema contract is the shared format that turns Python tools into model-readable choices and turns model tool requests into executable `ToolCall` records.
 - **Why it exists / what problem it solves**: A model cannot safely call a Python function by sending informal text like "search for this." The tool schema contract gives the model a named tool, validated inputs, and a call ID that downstream code can execute and answer with a matching `ToolMessage`.
 - **Keywords**: BaseTool, StructuredTool, ToolCall, ToolMessage, args_schema, bind_tools
-- **Related concepts**: [[provider-chat-model-wrappers-in-langgraph-nodes]], [[standardized-message-content-blocks]], [[retrievers-vector-stores-for-langgraph-rag]], [[react-agentic-loop]]
+- **Related concepts**: [[provider-chat-model-wrappers-in-langgraph-nodes]], [[standardized-message-content-blocks]], [[retrievers-vector-stores-for-langgraph-rag]], [[react-agentic-loop]], [[langgraph-stategraph-state-schema]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-05
 - **Source**: sources/repos/langchain-ai-langchain
@@ -61,6 +62,7 @@ The important part is not the decorator alone. It is the full loop: describe the
 - [[standardized-message-content-blocks]]: Tool use can also appear inside structured content blocks instead of plain text.
 - [[retrievers-vector-stores-for-langgraph-rag]]: A retriever can be exposed as a tool when the model should decide when to fetch external context.
 - [[react-agentic-loop]]: ReAct describes the higher-level thought/action/observation loop; the LangChain tool contract is the lower-level message and schema layer that can carry actions and observations.
+- [[langgraph-stategraph-state-schema]]: Tool calls and tool results commonly travel through LangGraph state as message updates.
 
 ## Open questions
 
