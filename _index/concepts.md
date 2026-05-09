@@ -21,6 +21,7 @@
 - [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb [english]
 - [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work [english]
 - [supermarket-checkout-vocabulary](../concepts/english/supermarket-checkout-vocabulary.md) - Supermarket Checkout Vocabulary [english]
+- [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb [english]
 - [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack [english]
 - [its-not-my-day-idiom](../concepts/english/its-not-my-day-idiom.md) - Idiom: It's Not My Day [english]
 - [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability [llm-engineering]

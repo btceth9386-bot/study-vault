@@ -10,5 +10,13 @@
 - `[00:01:41]` "Do you have a club card or will it be cash?" — Payment options vocabulary.
 - `[00:01:45]` "Will this be debit or credit?" — Standard payment question.
 - `[00:01:47]` "Could I get cash back? $50 would be great." — Explaining the cash back concept.
+- `[00:02:34]` "The checkout lane is the place where you get in line to pay for all the goods you bought." — Clear definition of checkout lane.
+- `[00:03:18]` "In a supermarket, the belt is the moving table that you put your groceries on." — Distinguishes supermarket "belt" from clothing belt.
+- `[00:04:27]` "This credit card expired 5 years ago. You can't use it anymore." — Transferable example of "expire" beyond coupons.
+- `[00:05:52]` "The cashier can give you $50 back so you can have cash in your pocket." — Practical explanation of cash back.
 - `[00:08:00]` "Cut me some slack — this phrase comes from mountain climbing. Slack is loose rope. So he's saying give me a little bit more freedom." — Etymology explanation.
 - `[00:09:17]` "Paper or plastic? This is the common cliché phrase that any grocery store cashier will use." — Cultural note about US supermarkets.
+- `[00:19:00]` "Cash means paper money and coins. We can also pay by card." — Basic payment-method contrast.
+- `[00:19:47]` "Please tap your card... Please insert your card." — Common card-terminal instructions.
+- `[00:20:53]` "A receipt is a small paper. It shows what you bought. It also shows the price." — Definition and purpose of receipt.
+- `[00:21:06]` "Would you like a receipt? Or do you need the receipt?" — Standard cashier receipt questions.

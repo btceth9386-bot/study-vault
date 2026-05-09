@@ -69,11 +69,16 @@
 - [construction-tools-vocabulary](../concepts/english/construction-tools-vocabulary.md) - Construction Tools Vocabulary
 - [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb
 - [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
+- [supermarket-checkout-vocabulary](../concepts/english/supermarket-checkout-vocabulary.md) - Supermarket Checkout Vocabulary
+- [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
+- [its-not-my-day-idiom](../concepts/english/its-not-my-day-idiom.md) - Idiom: It's Not My Day
+- [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb
 
 ## vocabulary
 
 - [construction-tools-vocabulary](../concepts/english/construction-tools-vocabulary.md) - Construction Tools Vocabulary
 - [supermarket-checkout-vocabulary](../concepts/english/supermarket-checkout-vocabulary.md) - Supermarket Checkout Vocabulary
+- [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb
 
 ## idioms
 
@@ -81,6 +86,18 @@
 - [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
 - [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
 - [its-not-my-day-idiom](../concepts/english/its-not-my-day-idiom.md) - Idiom: It's Not My Day
+
+## supermarket
+
+- [supermarket-checkout-vocabulary](../concepts/english/supermarket-checkout-vocabulary.md) - Supermarket Checkout Vocabulary
+
+## payments
+
+- [supermarket-checkout-vocabulary](../concepts/english/supermarket-checkout-vocabulary.md) - Supermarket Checkout Vocabulary
+
+## everyday-english
+
+- [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb
 
 ## llm-engineering
 
