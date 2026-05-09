@@ -8,9 +8,12 @@ A learning path for English vocabulary and idioms commonly used in professional 
 
 ## Learning Order
 
-1. [[construction-tools-vocabulary]] — Start with concrete nouns. Learn the compound-noun naming pattern (nail + gun, circular + saw) that applies across all English vocabulary.
-2. [[rule-of-thumb-idiom]] — Learn this high-frequency idiom and the sentence frames for giving practical advice in English.
-3. [[take-pride-in-your-work]] — Understand the dual meaning (self-motivation vs. criticism) and the "take + noun" pattern for actions.
+1. [[construction-tools-vocabulary]] — Concrete nouns in a construction context. Learn the compound-noun naming pattern.
+2. [[supermarket-checkout-vocabulary]] — Concrete nouns in a shopping context. Learn the checkout flow and the verb "expire."
+3. [[rule-of-thumb-idiom]] — High-frequency idiom for giving practical advice.
+4. [[cut-me-some-slack-idiom]] — High-frequency idiom for requesting leniency.
+5. [[take-pride-in-your-work]] — Dual-meaning idiom (self-motivation vs. criticism) + "take + noun" pattern.
+6. [[its-not-my-day-idiom]] — Lighthearted idiom for acknowledging bad luck.
 
 ## Why This Order
 
