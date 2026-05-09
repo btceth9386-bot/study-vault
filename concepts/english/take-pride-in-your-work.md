@@ -9,6 +9,8 @@ sources:
 related:
   - rule-of-thumb-idiom
   - construction-tools-vocabulary
+  - give-110-percent-idiom
+  - up-to-code-phrase
 tags:
   - english
   - idioms
@@ -19,7 +21,7 @@ tags:
 - **One-sentence definition**: To work carefully and thoroughly so you feel genuinely satisfied with the result — also used as polite criticism when someone is being careless.
 - **Why it exists / what problem it solves**: This phrase has two faces: (1) a positive value ("I take pride in my work" = I care about quality), and (2) a gentle rebuke ("You've got to take pride in your work" = you're being sloppy, do better). Missing this dual meaning can cause you to misread workplace conversations.
 - **Keywords**: take pride, work ethic, quality, idiom, criticism, motivation
-- **Related concepts**: [[rule-of-thumb-idiom]], [[construction-tools-vocabulary]]
+- **Related concepts**: [[rule-of-thumb-idiom]], [[construction-tools-vocabulary]], [[give-110-percent-idiom]], [[up-to-code-phrase]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-09
 - **Source**: sources/videos/tools-english-conversation-practice-episode-113
@@ -53,6 +55,8 @@ Contrast with self-use:
 
 - [[rule-of-thumb-idiom]]: Both are workplace wisdom phrases. "Rule of thumb" gives the guideline; "take pride" gives the motivation to follow it.
 - [[construction-tools-vocabulary]]: The idiom appears in the construction context — not sanding wood properly triggers the criticism.
+- [[give-110-percent-idiom]]: Both describe work attitude; "give 110 percent" stresses effort, while "take pride" stresses quality.
+- [[up-to-code-phrase]]: Pride is a personal quality standard, while code is an external safety or legal standard.
 
 ## Open questions
 

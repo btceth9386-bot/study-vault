@@ -73,12 +73,19 @@
 - [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
 - [its-not-my-day-idiom](../concepts/english/its-not-my-day-idiom.md) - Idiom: It's Not My Day
 - [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb
+- [deck-backyard-platform-vocabulary](../concepts/english/deck-backyard-platform-vocabulary.md) - Deck as Backyard Platform Vocabulary
+- [construction-plans-vocabulary](../concepts/english/construction-plans-vocabulary.md) - Construction Plans Vocabulary
+- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
+- [up-to-code-phrase](../concepts/english/up-to-code-phrase.md) - Up to Code Phrase
 
 ## vocabulary
 
 - [construction-tools-vocabulary](../concepts/english/construction-tools-vocabulary.md) - Construction Tools Vocabulary
 - [supermarket-checkout-vocabulary](../concepts/english/supermarket-checkout-vocabulary.md) - Supermarket Checkout Vocabulary
 - [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb
+- [deck-backyard-platform-vocabulary](../concepts/english/deck-backyard-platform-vocabulary.md) - Deck as Backyard Platform Vocabulary
+- [construction-plans-vocabulary](../concepts/english/construction-plans-vocabulary.md) - Construction Plans Vocabulary
+- [up-to-code-phrase](../concepts/english/up-to-code-phrase.md) - Up to Code Phrase
 
 ## idioms
 
@@ -86,6 +93,22 @@
 - [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
 - [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
 - [its-not-my-day-idiom](../concepts/english/its-not-my-day-idiom.md) - Idiom: It's Not My Day
+- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
+
+## construction
+
+- [deck-backyard-platform-vocabulary](../concepts/english/deck-backyard-platform-vocabulary.md) - Deck as Backyard Platform Vocabulary
+- [construction-plans-vocabulary](../concepts/english/construction-plans-vocabulary.md) - Construction Plans Vocabulary
+- [up-to-code-phrase](../concepts/english/up-to-code-phrase.md) - Up to Code Phrase
+
+## workplace
+
+- [construction-plans-vocabulary](../concepts/english/construction-plans-vocabulary.md) - Construction Plans Vocabulary
+- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
+
+## compliance
+
+- [up-to-code-phrase](../concepts/english/up-to-code-phrase.md) - Up to Code Phrase
 
 ## supermarket
 

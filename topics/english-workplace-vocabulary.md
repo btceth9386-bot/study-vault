@@ -9,20 +9,24 @@ A learning path for English vocabulary and idioms commonly used in professional 
 ## Learning Order
 
 1. [[construction-tools-vocabulary]] — Concrete nouns in a construction context. Learn the compound-noun naming pattern.
-2. [[supermarket-checkout-vocabulary]] — Concrete nouns in a shopping context. Learn the checkout flow.
-3. [[expire-everyday-validity-verb]] — A transferable validity verb used for coupons, cards, licenses, food, and documents.
-4. [[rule-of-thumb-idiom]] — High-frequency idiom for giving practical advice.
-5. [[cut-me-some-slack-idiom]] — High-frequency idiom for requesting leniency.
-6. [[take-pride-in-your-work]] — Dual-meaning idiom (self-motivation vs. criticism) + "take + noun" pattern.
-7. [[its-not-my-day-idiom]] — Lighthearted idiom for acknowledging bad luck.
+2. [[deck-backyard-platform-vocabulary]] — Learn the project object in the construction dialogue.
+3. [[construction-plans-vocabulary]] — Learn how "plans" changes meaning in a building context.
+4. [[up-to-code-phrase]] — Learn the safety and compliance phrase used in inspections.
+5. [[supermarket-checkout-vocabulary]] — Concrete nouns in a shopping context. Learn the checkout flow.
+6. [[expire-everyday-validity-verb]] — A transferable validity verb used for coupons, cards, licenses, food, and documents.
+7. [[rule-of-thumb-idiom]] — High-frequency idiom for giving practical advice.
+8. [[give-110-percent-idiom]] — High-frequency idiom for maximum effort under pressure.
+9. [[cut-me-some-slack-idiom]] — High-frequency idiom for requesting leniency.
+10. [[take-pride-in-your-work]] — Dual-meaning idiom (self-motivation vs. criticism) + "take + noun" pattern.
+11. [[its-not-my-day-idiom]] — Lighthearted idiom for acknowledging bad luck.
 
 ## Why This Order
 
-Concrete vocabulary (tools you can picture) is easier to remember than abstract idioms. Once you have the nouns, the idioms that reference them ("carpenter's rule of thumb") make more sense. The "take pride" idiom builds on understanding workplace context from the first two.
+Concrete vocabulary anchors the path before abstract idioms are introduced. Steps 1–4 cluster all four construction-episode items: the instruments (tools), the project object (deck), the design document (plans), and the external standard the work must meet (up to code). Studied together they tell the complete story of a construction job — what you use, what you build, how it is designed, and how you know it passed inspection. Steps 5–6 shift to a different real-world context (supermarket checkout and the transferable verb "expire") so the same concrete-noun vocabulary strategy applies across environments. Steps 7–11 introduce workplace idioms and phrases ordered loosely from principle (rule of thumb) to urgency (give 110%) to social negotiation (cut me some slack) to quality care (take pride) to lighthearted acceptance of bad luck (not my day).
 
 ## Next Steps
 
-- More workplace idioms: "give 110%", "up to code", "tackle a project"
+- More workplace idioms: "tackle a project", "one catch", "get at it"
 - English compound noun patterns beyond tools
 - Phrasal verbs for work: "get at it", "pass me", "take care of"
 

@@ -9,6 +9,7 @@ sources:
 related:
   - take-pride-in-your-work
   - construction-tools-vocabulary
+  - construction-plans-vocabulary
 tags:
   - english
   - idioms
@@ -19,7 +20,7 @@ tags:
 - **One-sentence definition**: A general guideline based on experience — not an exact rule, but a practical principle that usually works.
 - **Why it exists / what problem it solves**: English speakers constantly use this phrase to share practical wisdom without sounding dogmatic. It signals "this is a useful guideline, not an absolute law." If you don't know it, you'll miss the nuance in professional conversations.
 - **Keywords**: rule of thumb, idiom, guideline, principle, general rule
-- **Related concepts**: [[take-pride-in-your-work]], [[construction-tools-vocabulary]]
+- **Related concepts**: [[take-pride-in-your-work]], [[construction-tools-vocabulary]], [[construction-plans-vocabulary]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-09
 - **Source**: sources/videos/tools-english-conversation-practice-episode-113
@@ -49,6 +50,7 @@ More examples from the lesson's practice section:
 
 - [[take-pride-in-your-work]]: Both are "work wisdom" idioms — rule of thumb tells you *how* to approach work; take pride tells you *why* to care.
 - [[construction-tools-vocabulary]]: The phrase originates from carpentry/trades, where thumbs were used as rough measuring units.
+- [[construction-plans-vocabulary]]: A rule of thumb is a practical shortcut, while construction plans are the formal instructions.
 
 ## Open questions
 

@@ -9,6 +9,9 @@ sources:
 related:
   - rule-of-thumb-idiom
   - take-pride-in-your-work
+  - deck-backyard-platform-vocabulary
+  - construction-plans-vocabulary
+  - up-to-code-phrase
 tags:
   - english
   - vocabulary
@@ -19,7 +22,7 @@ tags:
 - **One-sentence definition**: Common English words for construction tools — where the tool's name usually tells you what it does.
 - **Why it exists / what problem it solves**: These words appear everywhere in English — hardware stores, home improvement shows, and metaphors ("nailed it", "drilling down into the data"). Knowing them unlocks both literal and figurative conversations.
 - **Keywords**: hammer, nail gun, circular saw, drill, sander, level, measuring tape, 2x4, splinters
-- **Related concepts**: [[rule-of-thumb-idiom]], [[take-pride-in-your-work]]
+- **Related concepts**: [[rule-of-thumb-idiom]], [[take-pride-in-your-work]], [[deck-backyard-platform-vocabulary]], [[construction-plans-vocabulary]], [[up-to-code-phrase]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-09
 - **Source**: sources/videos/tools-english-conversation-practice-episode-113
@@ -52,6 +55,9 @@ Notice the pattern: "Pass me the [tool]" is the standard way to ask for a tool i
 
 - [[rule-of-thumb-idiom]]: "Measure twice, cut once" is the carpenter's rule of thumb — connects tool vocabulary to workplace wisdom.
 - [[take-pride-in-your-work]]: Said when someone doesn't sand properly — connects quality work to tool usage.
+- [[deck-backyard-platform-vocabulary]]: The tools in this lesson are used to build a backyard deck.
+- [[construction-plans-vocabulary]]: Tools are selected and used according to the construction plans.
+- [[up-to-code-phrase]]: Tool work must still meet building and safety standards.
 
 ## Open questions
 

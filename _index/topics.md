@@ -19,4 +19,4 @@
 
 ## English
 
-- [Workplace Vocabulary & Idioms](../topics/english-workplace-vocabulary.md) — 7 concepts · 2–3h · Concrete vocabulary and high-frequency idioms for professional and everyday contexts.
+- [Workplace Vocabulary & Idioms](../topics/english-workplace-vocabulary.md) — 11 concepts · 3–4h · Concrete vocabulary and high-frequency idioms for professional and everyday contexts.

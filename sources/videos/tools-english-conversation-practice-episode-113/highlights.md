@@ -1,5 +1,7 @@
 # Highlights
 
+- `[00:00:57]` "A deck... an elevated wooden platform that houses will have in their backyards." — Clear definition of `deck` in the home-construction sense.
+- `[00:01:29]` "The plans... are construction plans... kind of like the map for the deck." — Practical definition of `plans` and `floor plans`.
 - `[00:02:05]` "We've been hired to build a deck on this here house and turn this boring and drab lawn into a backyard oasis." — Natural way to describe a project goal.
 - `[00:02:16]` "There is one catch, though. We've only got one day to finish this." — "one catch" = one problem/limitation.
 - `[00:02:19]` "I'm going to need everyone to give 110% today." — Idiom meaning try your absolute hardest.
