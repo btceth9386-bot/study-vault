@@ -56,6 +56,7 @@ prompts:
     Read _scripts/prompts/promote-concept.md then promote all approved drafts
     in _drafts/ to concepts. Write all output in English.
   topics: >
-    Look at all concepts in concepts/ and suggest 2-3 learning paths that group
-    related concepts into a logical study order. Create the topic files in
-    topics/ and update _index/topics.md. Write in English.
+    Look at concepts recently promoted from {source_dir} and update or create
+    learning paths in topics/ that include them. Reuse existing topic files
+    where the new concepts fit. Only create new topic files if no existing
+    path covers the domain. Update _index/topics.md. Write in English.
