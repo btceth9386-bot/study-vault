@@ -64,6 +64,21 @@
 
 - [ssl-termination](../concepts/system-design/ssl-termination.md) - SSL Termination
 
+## english
+
+- [construction-tools-vocabulary](../concepts/english/construction-tools-vocabulary.md) - Construction Tools Vocabulary
+- [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb
+- [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
+
+## vocabulary
+
+- [construction-tools-vocabulary](../concepts/english/construction-tools-vocabulary.md) - Construction Tools Vocabulary
+
+## idioms
+
+- [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb
+- [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
+
 ## llm-engineering
 
 - [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability

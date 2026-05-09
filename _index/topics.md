@@ -1,66 +1,9 @@
 # Topics Index
 
-Curated learning paths that group related concepts into recommended study orders.
+## System Design
 
-## Recommended Learning Paths
+- [System Design Fundamentals](../topics/system-design-fundamentals.md) — Core concepts for designing scalable distributed systems
 
-These three paths are the main suggested routes through the current concept library. Together they cover every concept currently in `concepts/`.
+## English
 
-- [Web Scalability: From Single Server to Production](../topics/web-scalability.md) — 11 concepts · ~6–8h · Learn the chronological growth path from one server to a redundant web architecture.
-- [Distributed Systems Foundations](../topics/distributed-systems-foundations.md) — 7 concepts · ~5–6h · Build the reasoning model for CAP, consistency, async messaging, microservices, and distributed data design.
-- [Production LLM Engineering](../topics/production-llm-engineering.md) — 30 concepts · ~16–20h · Study observability, prompt lifecycle control, evaluation, LangGraph runtime foundations, optimization, and durable LLM systems.
-
-## Concept Coverage
-
-| Concept | Web Scalability | Distributed Systems | Production LLM |
-|---|:---:|:---:|:---:|
-| vertical-scaling | ✓ | | |
-| horizontal-scaling | ✓ | | |
-| load-balancing | ✓ | | |
-| sticky-sessions | ✓ | | |
-| caching-strategies | ✓ | | ✓ |
-| database-replication | ✓ | ✓ | |
-| database-sharding | ✓ | ✓ | |
-| raid-storage | ✓ | | |
-| single-point-of-failure | ✓ | | |
-| high-availability | ✓ | | |
-| ssl-termination | ✓ | | |
-| cap-theorem | | ✓ | |
-| eventual-consistency | | ✓ | |
-| async-processing | | ✓ | ✓ |
-| microservices | | ✓ | |
-| oltp-olap-split | | ✓ | ✓ |
-| llm-observability | | | ✓ |
-| prompt-version-management | | | ✓ |
-| llm-as-judge-evaluation | | | ✓ |
-| provider-chat-model-wrappers-in-langgraph-nodes | | | ✓ |
-| standardized-message-content-blocks | | | ✓ |
-| langchain-tool-schema-contract | | | ✓ |
-| retrievers-vector-stores-for-langgraph-rag | | | ✓ |
-| langgraph-stategraph-state-schema | | | ✓ |
-| langgraph-pregel-bsp-execution | | | ✓ |
-| langgraph-send-command-control-flow | | | ✓ |
-| langgraph-human-in-the-loop-interrupts | | | ✓ |
-| langgraph-checkpoint-time-travel-forking | | | ✓ |
-| langgraph-store-long-term-memory | | | ✓ |
-| langgraph-remotegraph-server-execution | | | ✓ |
-| s3-first-durability | | | ✓ |
-| dspy-signatures | | | ✓ |
-| dspy-module-composition | | | ✓ |
-| few-shot-bootstrapping | | | ✓ |
-| metric-driven-llm-optimization | | | ✓ |
-| actionable-side-information | | | ✓ |
-| reflective-mutation-proposer | | | ✓ |
-| pareto-efficient-candidate-selection | | | ✓ |
-| system-aware-candidate-merge | | | ✓ |
-| adapter-based-llm-optimization | | | ✓ |
-| sparse-validation-evaluation | | | ✓ |
-| optimize-anything-pattern | | | ✓ |
-| react-agentic-loop | | | ✓ |
-
-## Additional Focused Views
-
-These existing topic files reuse concepts from the recommended paths for narrower study goals:
-
-- [LLM Program Optimization with DSPy](../topics/llm-program-optimization-dspy.md) — focus on DSPy signatures, modules, metrics, bootstrapping, GEPA-style reflection, ReAct, and production observability.
-- [Reliability Engineering for AI Backends](../topics/reliability-engineering-for-ai-backends.md) — apply scalability and reliability patterns to AI event pipelines, queues, storage, and data stores.
+- [Workplace Vocabulary & Idioms](../topics/english-workplace-vocabulary.md) — Common English vocabulary and idioms for professional contexts
