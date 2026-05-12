@@ -31,6 +31,21 @@ Priorities:
 3. Make the user predict, run, inspect, and explain.
 4. Prefer a lab that reveals system behavior, not just mechanical setup.
 5. Include one intentional failure, regression, or comparison when possible.
+6. Do not hide major infra/setup requirements.
+
+## Setup Levels
+
+Every lab must declare one setup mode:
+
+- `paper`: no real software required; the user reasons through traces, configs, outputs, or scenarios.
+- `local-mock`: minimal local code or mock data; no full platform deployment required.
+- `real-tool`: actual product, SDK, API, or platform usage.
+
+Default behavior:
+
+- Prefer `paper` or `local-mock` for tiny labs.
+- Use `real-tool` only when the concept genuinely benefits from real product behavior or when the user explicitly wants it.
+- Do not default to Helm, Kubernetes, or full cloud setup for a tiny lab.
 
 ## Lab Design Rules
 
@@ -81,6 +96,41 @@ Search locations:
 
 If the concept has a `sources:` field, prefer those sources first.
 
+## Tooling Guidance
+
+Every lab should include tool options when relevant.
+
+Prefer this order:
+
+1. `mock mode`: no real LLM required; use fixed sample inputs/outputs.
+2. `API mode`: use a simple script or client against an LLM API.
+3. `platform mode`: use the real platform, SDK, or deployed service.
+
+Examples:
+
+- For observability: a mock trace JSON or a tiny local script is often enough.
+- For prompt versioning: start with two saved prompt strings and a fake `production` label before requiring Langfuse itself.
+- For LLM-as-judge: use a tiny rubric with 3-5 saved outputs before scaling to real provider calls.
+- For Langfuse product labs: only require real Langfuse setup when the learning goal is specifically the UI, prompt registry, tracing pipeline, or deployment behavior.
+
+Do not require an AI agent tool unless the lab is specifically about agents.
+
+## Infra and Install Guidance
+
+Every lab must clearly separate:
+
+- `Infra required`: what must already exist
+- `Optional tools`: what improves the lab but is not required
+- `Quick setup`: the shortest practical commands or setup hints
+- `Fallback path`: how to continue if the real setup is unavailable
+
+Rules:
+
+- Keep setup instructions short.
+- If setup would dominate the lab, switch to `paper` or `local-mock`.
+- If commands are long or environment-specific, summarize the prerequisites and keep the lab focused on the concept.
+- If a real deployment is required, say so explicitly.
+
 ## Output Format
 
 Use this structure:
@@ -89,8 +139,27 @@ Use this structure:
 Concept: <concept title>
 Lab title: <short practical lab name>
 Why this lab: <1-2 sentences>
+Setup mode: <paper | local-mock | real-tool>
 Time box: <rough estimate>
-Prerequisites: <minimal prerequisites>
+
+Infra required:
+- <required infra>
+
+Optional tools:
+- <optional tool 1>
+- <optional tool 2>
+
+Tool options:
+- <mock mode option>
+- <API mode option>
+- <platform mode option, if relevant>
+
+Quick setup:
+- <minimal install/setup tip>
+- <minimal command or assumption>
+
+Fallback path:
+- <how to do the lab without full setup>
 
 Goal:
 - <what the user should learn>
@@ -134,13 +203,15 @@ Use one of these sizes:
 
 Default to `tiny` or `small`.
 
+If the setup alone would take longer than the lab, redesign the lab to a lower setup mode.
+
 ## Topic-Specific Guidance
 
 For LLM engineering concepts, prefer labs that inspect real signals.
 
 Examples:
 
-- `llm-observability`: create a trace, attach prompt/model/tokens/latency, inspect one request end-to-end
+- `llm-observability`: create or inspect a trace, attach prompt/model/tokens/latency, inspect one request end-to-end
 - `prompt-version-management`: create two prompt versions, switch a label, compare outcomes
 - `llm-as-judge-evaluation`: define a rubric, score a small batch, compare versions
 - `caching-strategies`: add a cache, measure latency, inspect invalidation behavior
@@ -160,6 +231,7 @@ Optimize for learning by doing:
 - force a prediction before the result
 - ask the user what changed and why
 - use one good reflection loop instead of many shallow tasks
+- make infra assumptions explicit
 
 If the concept is too abstract for a good lab, say so and propose:
 
@@ -175,5 +247,6 @@ End with:
 - what skill this lab builds
 - what concept to lab next
 - whether the user should do a second variant with one changed variable
+- whether the next step should stay in mock mode or move to real-tool mode
 
 Keep the lab practical, small, and observable.
