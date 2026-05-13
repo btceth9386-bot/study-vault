@@ -35,7 +35,7 @@ agents:
 
   - name: claude-topics
     role: topics
-    command: "claude --dangerously-skip-permissions --continue --model claude-sonnet-4-6 -p"
+    command: "codex exec --yolo --skip-git-repo-check --model gpt-5.5 resume --last"
     max_concurrent: 1
     env: {}
 

@@ -8,6 +8,7 @@
 ## LLM Engineering
 
 - [Production LLM Engineering](../topics/production-llm-engineering.md) — 43 concepts · 16–20h · The complete stack: observability, evaluation, LangChain + LangGraph, DSPy optimization, and durable pipelines.
+- [Production Agent Runtime](../topics/production-agent-runtime.md) — 8 concepts · 5–7h · Turn a working agent prototype into a runtime with toolsets, client protocols, session persistence, context compression, scheduled automation, memory, and evaluation-ready tool variation.
 - [LangGraph Application Development](../topics/langgraph-application-development.md) — 11 concepts · 6–8h · Build stateful LangGraph agents from model primitives through checkpoints, interrupts, memory, and server deployment.
 - [LLM Quality and Evaluation Pipeline](../topics/llm-quality-evaluation-pipeline.md) — 7 concepts · 4–5h · Replace ad-hoc iteration with systematic traces, automated judge scoring, version correlation, and optimization targets.
 - [LLM Program Optimization with DSPy](../topics/llm-program-optimization-dspy.md) — 14 concepts · 6–9h · Declare task structure with Signatures, compose programs with Modules, and compile better prompts automatically.
