@@ -5,20 +5,20 @@ depth: 2
 last_reviewed: 2026-04-30
 review_due: 2026-05-03
 sources:
-  - sources/repos/system-design-primer
+- sources/repos/system-design-primer
 related:
-  - microservices
-  - caching-strategies
-  - eventual-consistency
-  - llm-as-judge-evaluation
-  - oltp-olap-split
-  - s3-first-durability
-  - langgraph-pregel-bsp-execution
+- microservices
+- caching-strategies
+- eventual-consistency
+- llm-as-judge-evaluation
+- oltp-olap-split
+- s3-first-durability
+- langgraph-pregel-bsp-execution
+- natural-language-cron-agent-automation
 tags:
-  - system-design
-  - performance
+- system-design
+- performance
 ---
-
 # Asynchronous Processing
 
 - **One-sentence definition**: Instead of making the user wait while the server does something slow, accept the request immediately, put the work on a queue, and let a background worker handle it.
@@ -62,3 +62,7 @@ Twitter's fanout service when a user posts a tweet:
 
 - When should you use a simple message queue (SQS) vs a full task framework (Celery)?
 - How do you guarantee exactly-once processing when queues offer at-least-once delivery?
+
+## Relationship to newly promoted concepts
+
+- [[natural-language-cron-agent-automation]]: Added as a promoted concept related to this existing concept.

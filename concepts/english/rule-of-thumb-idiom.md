@@ -1,20 +1,20 @@
 ---
 id: rule-of-thumb-idiom
-title: "Idiom: Rule of Thumb"
+title: 'Idiom: Rule of Thumb'
 depth: 2
 last_reviewed: 2026-05-09
 review_due: 2026-05-12
 sources:
-  - sources/videos/tools-english-conversation-practice-episode-113
+- sources/videos/tools-english-conversation-practice-episode-113
 related:
-  - take-pride-in-your-work
-  - construction-tools-vocabulary
-  - construction-plans-vocabulary
+- take-pride-in-your-work
+- construction-tools-vocabulary
+- construction-plans-vocabulary
+- cold-turkey-idiom
 tags:
-  - english
-  - idioms
+- english
+- idioms
 ---
-
 # Idiom: Rule of Thumb
 
 - **One-sentence definition**: A general guideline based on experience — not an exact rule, but a practical principle that usually works.
@@ -56,3 +56,7 @@ More examples from the lesson's practice section:
 
 - What's the difference between "rule of thumb" and "best practice" in professional English?
 - Other common English idioms that come from trades/construction? ("hit the nail on the head", "back to the drawing board")
+
+## Relationship to newly promoted concepts
+
+- [[cold-turkey-idiom]]: Added as a promoted concept related to this existing concept.

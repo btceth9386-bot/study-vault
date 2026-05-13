@@ -5,21 +5,21 @@ depth: 2
 last_reviewed: 2026-05-04
 review_due: 2026-05-07
 sources:
-  - sources/repos/langfuse-langfuse
+- sources/repos/langfuse-langfuse
 related:
-  - llm-observability
-  - llm-as-judge-evaluation
-  - caching-strategies
-  - dspy-signatures
-  - dspy-module-composition
-  - metric-driven-llm-optimization
-  - optimize-anything-pattern
+- llm-observability
+- llm-as-judge-evaluation
+- caching-strategies
+- dspy-signatures
+- dspy-module-composition
+- metric-driven-llm-optimization
+- optimize-anything-pattern
+- surgical-context-compression
 tags:
-  - llm-engineering
-  - prompts
-  - deployment
+- llm-engineering
+- prompts
+- deployment
 ---
-
 # Prompt Version Management
 
 - **One-sentence definition**: Prompt version management treats prompts as tracked, deployable artifacts instead of anonymous strings inside application code.
@@ -61,3 +61,7 @@ Each generation can record the prompt version it used, so later debugging can co
 
 - Should prompt labels be mutable by anyone with edit access, or protected like production deploys?
 - How should recursive prompt dependencies be tested before promotion?
+
+## Relationship to newly promoted concepts
+
+- [[surgical-context-compression]]: Added as a promoted concept related to this existing concept.

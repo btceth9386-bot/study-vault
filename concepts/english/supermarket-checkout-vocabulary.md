@@ -5,19 +5,20 @@ depth: 2
 last_reviewed: 2026-05-09
 review_due: 2026-05-12
 sources:
-  - sources/videos/supermarket-cashier-english-conversation-practice-episode-112
+- sources/videos/supermarket-cashier-english-conversation-practice-episode-112
 related:
-  - cut-me-some-slack-idiom
-  - its-not-my-day-idiom
-  - construction-tools-vocabulary
-  - expire-everyday-validity-verb
+- cut-me-some-slack-idiom
+- its-not-my-day-idiom
+- construction-tools-vocabulary
+- expire-everyday-validity-verb
+- gym-workout-vocabulary
+- smoking-cessation-vocabulary
 tags:
-  - english
-  - vocabulary
-  - supermarket
-  - payments
+- english
+- vocabulary
+- supermarket
+- payments
 ---
-
 # Supermarket Checkout Vocabulary
 
 - **One-sentence definition**: The English words and phrases you need to navigate paying for groceries at a US supermarket — from getting in line to getting your receipt.
@@ -80,3 +81,8 @@ Card-payment practice:
 
 - What's the difference between "checkout" and "check out" (noun vs phrasal verb)?
 - Are there regional differences in US supermarket vocabulary (e.g., "grocery cart" vs "shopping cart" vs "buggy")?
+
+## Relationship to newly promoted concepts
+
+- [[gym-workout-vocabulary]]: Added as a promoted concept related to this existing concept.
+- [[smoking-cessation-vocabulary]]: Added as a promoted concept related to this existing concept.

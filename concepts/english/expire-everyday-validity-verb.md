@@ -5,15 +5,15 @@ depth: 2
 last_reviewed: 2026-05-09
 review_due: 2026-05-12
 sources:
-  - sources/videos/supermarket-cashier-english-conversation-practice-episode-112
+- sources/videos/supermarket-cashier-english-conversation-practice-episode-112
 related:
-  - supermarket-checkout-vocabulary
+- supermarket-checkout-vocabulary
+- cut-down-vs-quit
 tags:
-  - english
-  - vocabulary
-  - everyday-english
+- english
+- vocabulary
+- everyday-english
 ---
-
 # Expire as an Everyday Validity Verb
 
 - **One-sentence definition**: To **expire** means to stop being valid, usable, safe, or accepted after a certain date or time.
@@ -51,3 +51,7 @@ Other everyday examples:
 
 - When should English learners use "expired" versus "out of date"?
 - What is the difference between "expires on May 12" and "valid through May 12"?
+
+## Relationship to newly promoted concepts
+
+- [[cut-down-vs-quit]]: Added as a promoted concept related to this existing concept.

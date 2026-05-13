@@ -5,21 +5,21 @@ depth: 2
 last_reviewed: 2026-05-05
 review_due: 2026-05-08
 sources:
-  - sources/repos/langchain-ai-langchain
+- sources/repos/langchain-ai-langchain
 related:
-  - provider-chat-model-wrappers-in-langgraph-nodes
-  - standardized-message-content-blocks
-  - retrievers-vector-stores-for-langgraph-rag
-  - react-agentic-loop
-  - langgraph-stategraph-state-schema
+- provider-chat-model-wrappers-in-langgraph-nodes
+- standardized-message-content-blocks
+- retrievers-vector-stores-for-langgraph-rag
+- react-agentic-loop
+- langgraph-stategraph-state-schema
+- toolsets-and-mcp-unified-tool-surface
 tags:
-  - llm-engineering
-  - langchain
-  - langgraph
-  - tools
-  - tool-use
+- llm-engineering
+- langchain
+- langgraph
+- tools
+- tool-use
 ---
-
 # LangChain Tool Schema Contract
 
 - **One-sentence definition**: The LangChain tool schema contract is the shared format that turns Python tools into model-readable choices and turns model tool requests into executable `ToolCall` records.
@@ -68,3 +68,7 @@ The important part is not the decorator alone. It is the full loop: describe the
 
 - When should a retrieval function be a graph node chosen by code, and when should it be a tool chosen by the model?
 - How strict should tool schemas be when provider support for structured tool calling differs?
+
+## Relationship to newly promoted concepts
+
+- [[toolsets-and-mcp-unified-tool-surface]]: Added as a promoted concept related to this existing concept.

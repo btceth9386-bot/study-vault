@@ -1,0 +1,26 @@
+type: repo
+title: nousresearch/hermes-agent
+url: https://github.com/nousresearch/hermes-agent
+authors:
+  - Nous Research
+language: en
+date_consumed: 2026-05-13
+date_added: 2026-05-13
+estimated_time: null
+status: processed
+tags:
+  - ai-agent
+  - ide-integration
+  - tools
+  - memory
+  - automation
+  - mcp
+related_concepts:
+  - acp-agent-backend-for-ides
+  - persistent-agent-session-restoration
+  - surgical-context-compression
+  - toolsets-and-mcp-unified-tool-surface
+  - natural-language-cron-agent-automation
+  - multi-platform-agent-gateway
+  - self-improving-agent-skill-memory-loop
+  - probabilistic-toolset-distributions

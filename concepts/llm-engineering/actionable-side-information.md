@@ -5,19 +5,19 @@ depth: 2
 last_reviewed: 2026-05-04
 review_due: 2026-05-07
 sources:
-  - sources/repos/gepa-ai-gepa
+- sources/repos/gepa-ai-gepa
 related:
-  - metric-driven-llm-optimization
-  - llm-observability
-  - llm-as-judge-evaluation
-  - reflective-mutation-proposer
-  - optimize-anything-pattern
+- metric-driven-llm-optimization
+- llm-observability
+- llm-as-judge-evaluation
+- reflective-mutation-proposer
+- optimize-anything-pattern
+- self-improving-agent-skill-memory-loop
 tags:
-  - llm-engineering
-  - optimization
-  - evaluation
+- llm-engineering
+- optimization
+- evaluation
 ---
-
 # Actionable Side Information
 
 - **One-sentence definition**: Actionable Side Information is the extra diagnostic context from an evaluation run that helps an optimizer understand why an LLM system failed, not just that it failed.
@@ -58,3 +58,7 @@ A reflection model can use that side information to rewrite the tool instruction
 
 - What is the smallest amount of side information that still helps reflection?
 - How should sensitive trace data be redacted before being sent to a reflection model?
+
+## Relationship to newly promoted concepts
+
+- [[self-improving-agent-skill-memory-loop]]: Added as a promoted concept related to this existing concept.

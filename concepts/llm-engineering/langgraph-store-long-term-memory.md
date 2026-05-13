@@ -5,17 +5,18 @@ depth: 2
 last_reviewed: 2026-05-05
 review_due: 2026-05-08
 sources:
-  - sources/repos/langchain-ai-langgraph
+- sources/repos/langchain-ai-langgraph
 related:
-  - retrievers-vector-stores-for-langgraph-rag
-  - langgraph-remotegraph-server-execution
+- retrievers-vector-stores-for-langgraph-rag
+- langgraph-remotegraph-server-execution
+- persistent-agent-session-restoration
+- self-improving-agent-skill-memory-loop
 tags:
-  - llm-engineering
-  - langgraph
-  - memory
-  - rag
+- llm-engineering
+- langgraph
+- memory
+- rag
 ---
-
 # LangGraph Store Long-Term Memory
 
 - **One-sentence definition**: LangGraph's store is a persistent, namespaced key-value memory layer for information that should survive across graph runs, threads, or conversations.
@@ -58,3 +59,8 @@ Another thread for the same user can read the preference later without depending
 
 - What belongs in long-term memory versus thread-local checkpoint state?
 - Which memories should expire automatically, and which should require explicit deletion?
+
+## Relationship to newly promoted concepts
+
+- [[persistent-agent-session-restoration]]: Added as a promoted concept related to this existing concept.
+- [[self-improving-agent-skill-memory-loop]]: Added as a promoted concept related to this existing concept.

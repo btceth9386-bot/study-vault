@@ -5,18 +5,18 @@ depth: 2
 last_reviewed: 2026-05-04
 review_due: 2026-05-07
 sources:
-  - sources/repos/gepa-ai-gepa
+- sources/repos/gepa-ai-gepa
 related:
-  - metric-driven-llm-optimization
-  - pareto-efficient-candidate-selection
-  - caching-strategies
-  - llm-as-judge-evaluation
+- metric-driven-llm-optimization
+- pareto-efficient-candidate-selection
+- caching-strategies
+- llm-as-judge-evaluation
+- probabilistic-toolset-distributions
 tags:
-  - llm-engineering
-  - evaluation
-  - optimization
+- llm-engineering
+- evaluation
+- optimization
 ---
-
 # Sparse Validation Evaluation
 
 - **One-sentence definition**: Sparse validation evaluation scores each candidate on selected validation examples while tracking which examples were actually evaluated.
@@ -57,3 +57,7 @@ Later policies can choose examples that have less coverage and avoid repeatedly 
 
 - How much sparse coverage is enough before choosing a best candidate?
 - When should the optimizer force a full validation pass despite the cost?
+
+## Relationship to newly promoted concepts
+
+- [[probabilistic-toolset-distributions]]: Added as a promoted concept related to this existing concept.

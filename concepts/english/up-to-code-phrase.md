@@ -5,19 +5,19 @@ depth: 2
 last_reviewed: 2026-05-09
 review_due: 2026-05-12
 sources:
-  - sources/videos/tools-english-conversation-practice-episode-113
+- sources/videos/tools-english-conversation-practice-episode-113
 related:
-  - construction-plans-vocabulary
-  - take-pride-in-your-work
-  - construction-tools-vocabulary
-  - give-110-percent-idiom
+- construction-plans-vocabulary
+- take-pride-in-your-work
+- construction-tools-vocabulary
+- give-110-percent-idiom
+- crack-down-phrasal-verb
 tags:
-  - english
-  - vocabulary
-  - construction
-  - compliance
+- english
+- vocabulary
+- construction
+- compliance
 ---
-
 # Up to Code Phrase
 
 - **One-sentence definition**: **Up to code** means meeting the official rules, safety standards, or legal requirements for a building or system.
@@ -54,3 +54,7 @@ Other examples:
 
 - Which fields outside construction use "up to code" literally or metaphorically?
 - What is the difference between "up to code," "compliant," and "up to standard"?
+
+## Relationship to newly promoted concepts
+
+- [[crack-down-phrasal-verb]]: Added as a promoted concept related to this existing concept.

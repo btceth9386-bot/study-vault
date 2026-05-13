@@ -5,28 +5,28 @@ depth: 2
 last_reviewed: 2026-05-04
 review_due: 2026-05-07
 sources:
-  - sources/repos/stanfordnlp-dspy
+- sources/repos/stanfordnlp-dspy
 related:
-  - dspy-signatures
-  - dspy-module-composition
-  - few-shot-bootstrapping
-  - react-agentic-loop
-  - llm-as-judge-evaluation
-  - prompt-version-management
-  - actionable-side-information
-  - reflective-mutation-proposer
-  - pareto-efficient-candidate-selection
-  - system-aware-candidate-merge
-  - adapter-based-llm-optimization
-  - sparse-validation-evaluation
-  - optimize-anything-pattern
+- dspy-signatures
+- dspy-module-composition
+- few-shot-bootstrapping
+- react-agentic-loop
+- llm-as-judge-evaluation
+- prompt-version-management
+- actionable-side-information
+- reflective-mutation-proposer
+- pareto-efficient-candidate-selection
+- system-aware-candidate-merge
+- adapter-based-llm-optimization
+- sparse-validation-evaluation
+- optimize-anything-pattern
+- probabilistic-toolset-distributions
 tags:
-  - llm-engineering
-  - dspy
-  - optimization
-  - evaluation
+- llm-engineering
+- dspy
+- optimization
+- evaluation
 ---
-
 # Metric-Driven LLM Optimization
 
 - **One-sentence definition**: Metric-driven LLM optimization improves an LLM program by defining what success means, then letting an optimizer search for better instructions and examples.
@@ -76,3 +76,7 @@ The metric defines the target. The optimizer searches for a better compiled prog
 
 - How should a metric balance correctness, latency, cost, and safety?
 - How much validation data is enough before trusting a compiled program?
+
+## Relationship to newly promoted concepts
+
+- [[probabilistic-toolset-distributions]]: Added as a promoted concept related to this existing concept.

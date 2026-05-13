@@ -5,22 +5,22 @@ depth: 2
 last_reviewed: 2026-05-04
 review_due: 2026-05-07
 sources:
-  - sources/repos/stanfordnlp-dspy
+- sources/repos/stanfordnlp-dspy
 related:
-  - dspy-module-composition
-  - few-shot-bootstrapping
-  - llm-observability
-  - metric-driven-llm-optimization
-  - adapter-based-llm-optimization
-  - langchain-tool-schema-contract
-  - langgraph-send-command-control-flow
+- dspy-module-composition
+- few-shot-bootstrapping
+- llm-observability
+- metric-driven-llm-optimization
+- adapter-based-llm-optimization
+- langchain-tool-schema-contract
+- langgraph-send-command-control-flow
+- langchain-core-message-model-for-langgraph-state
 tags:
-  - llm-engineering
-  - dspy
-  - agents
-  - tool-use
+- llm-engineering
+- dspy
+- agents
+- tool-use
 ---
-
 # ReAct Agentic Loop
 
 - **One-sentence definition**: The ReAct loop lets an LLM alternate between reasoning, calling tools, and reading tool results until it has enough information to answer.
@@ -64,3 +64,7 @@ The agent can ask the search tool for missing information before answering, inst
 
 - Which tool errors should be retried, and which should stop the loop immediately?
 - How should a metric judge a correct final answer reached through inefficient tool use?
+
+## Relationship to newly promoted concepts
+
+- [[langchain-core-message-model-for-langgraph-state]]: Added as a promoted concept related to this existing concept.

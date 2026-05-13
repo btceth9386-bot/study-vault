@@ -1,20 +1,21 @@
 ---
 id: cut-me-some-slack-idiom
-title: "Idiom: Cut Me Some Slack"
+title: 'Idiom: Cut Me Some Slack'
 depth: 2
 last_reviewed: 2026-05-09
 review_due: 2026-05-12
 sources:
-  - sources/videos/supermarket-cashier-english-conversation-practice-episode-112
+- sources/videos/supermarket-cashier-english-conversation-practice-episode-112
 related:
-  - its-not-my-day-idiom
-  - rule-of-thumb-idiom
-  - supermarket-checkout-vocabulary
+- its-not-my-day-idiom
+- rule-of-thumb-idiom
+- supermarket-checkout-vocabulary
+- cold-turkey-idiom
+- know-how-it-is-empathy-phrase
 tags:
-  - english
-  - idioms
+- english
+- idioms
 ---
-
 # Idiom: Cut Me Some Slack
 
 - **One-sentence definition**: Asking someone to be less strict or more forgiving — "don't be so hard on me, relax the rules a little."
@@ -60,3 +61,8 @@ More examples:
 
 - What's the difference between "cut me some slack" and "give me a break"? (Similar meaning, slightly different tone?)
 - Is "cut some slack" appropriate in formal workplace emails, or only spoken/informal contexts?
+
+## Relationship to newly promoted concepts
+
+- [[cold-turkey-idiom]]: Added as a promoted concept related to this existing concept.
+- [[know-how-it-is-empathy-phrase]]: Added as a promoted concept related to this existing concept.

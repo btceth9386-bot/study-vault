@@ -5,18 +5,20 @@ depth: 2
 last_reviewed: 2026-05-09
 review_due: 2026-05-12
 sources:
-  - sources/videos/tools-english-conversation-practice-episode-113
+- sources/videos/tools-english-conversation-practice-episode-113
 related:
-  - rule-of-thumb-idiom
-  - take-pride-in-your-work
-  - deck-backyard-platform-vocabulary
-  - construction-plans-vocabulary
-  - up-to-code-phrase
+- rule-of-thumb-idiom
+- take-pride-in-your-work
+- deck-backyard-platform-vocabulary
+- construction-plans-vocabulary
+- up-to-code-phrase
+- car-repair-vocabulary
+- gym-workout-vocabulary
+- smoking-cessation-vocabulary
 tags:
-  - english
-  - vocabulary
+- english
+- vocabulary
 ---
-
 # Construction Tools Vocabulary
 
 - **One-sentence definition**: Common English words for construction tools — where the tool's name usually tells you what it does.
@@ -63,3 +65,9 @@ Notice the pattern: "Pass me the [tool]" is the standard way to ask for a tool i
 
 - What other English compound nouns follow the [function] + [object type] pattern? (e.g., dishwasher, screwdriver, bookshelf)
 - Which construction tool names are also used as verbs in everyday English? (hammer, drill, nail, saw, level)
+
+## Relationship to newly promoted concepts
+
+- [[car-repair-vocabulary]]: Added as a promoted concept related to this existing concept.
+- [[gym-workout-vocabulary]]: Added as a promoted concept related to this existing concept.
+- [[smoking-cessation-vocabulary]]: Added as a promoted concept related to this existing concept.

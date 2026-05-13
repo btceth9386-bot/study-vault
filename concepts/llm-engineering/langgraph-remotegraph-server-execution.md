@@ -5,18 +5,18 @@ depth: 2
 last_reviewed: 2026-05-05
 review_due: 2026-05-08
 sources:
-  - sources/repos/langchain-ai-langgraph
+- sources/repos/langchain-ai-langgraph
 related:
-  - langgraph-checkpoint-time-travel-forking
-  - langgraph-store-long-term-memory
-  - microservices
+- langgraph-checkpoint-time-travel-forking
+- langgraph-store-long-term-memory
+- microservices
+- acp-agent-backend-for-ides
 tags:
-  - llm-engineering
-  - langgraph
-  - deployment
-  - orchestration
+- llm-engineering
+- langgraph
+- deployment
+- orchestration
 ---
-
 # LangGraph RemoteGraph and Server Execution
 
 - **One-sentence definition**: LangGraph Server exposes deployed graphs through APIs for assistants, threads, runs, scheduled jobs, and store memory, while `RemoteGraph` lets a remote graph behave like a local graph object.
@@ -59,3 +59,7 @@ The caller uses a graph-like interface, while execution, thread state, and store
 
 - When should a graph stay in-process, and when is a remote graph boundary worth the network and operations cost?
 - How should tracing and authentication propagate across local and remote graph calls?
+
+## Relationship to newly promoted concepts
+
+- [[acp-agent-backend-for-ides]]: Added as a promoted concept related to this existing concept.
