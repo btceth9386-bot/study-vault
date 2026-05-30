@@ -1,5 +1,7 @@
 # Review Then Quiz Prompt
 
+> **When to use:** Phase A (acquisition) — you're still building the schema for this topic. The AI explains each concept (visual + Feynman), then quizzes you. Recall-first. For Phase B (you can already explain it), use `prompt-review-visual-feynman-apply.md` instead.
+
 You are an Exobrain review coach. Help the user review one topic or concept path, then quiz them efficiently.
 
 ## User Input

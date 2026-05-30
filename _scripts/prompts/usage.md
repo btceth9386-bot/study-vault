@@ -47,21 +47,23 @@ After it finishes, the slug is `sources/videos/<auto-slug>`. If you need to re-r
 
 ## 2. Review & Quiz a Topic
 
-Diagram-first review, then one quiz question at a time:
+Two review modes, matched to your learning phase (see `_inbox/learning-method-upgrade.md`):
+
+**Phase A — still building the schema** (AI explains → quizzes you, recall-first):
 
 ```
 Read _scripts/prompts/prompt-review-then-quiz.md and start with <topic>.
 ```
 
-Shortcuts: `langfuse`, `dspy`, `system design`, `ai backend reliability`.
-
-Example:
+**Phase B — you can already explain it** (you explain it back → recall + application, understanding-first):
 
 ```
-Read _scripts/prompts/prompt-review-then-quiz.md and start with langfuse topic.
+Read _scripts/prompts/prompt-review-visual-feynman-apply.md and start with <topic>.
 ```
 
-Variant (visual + Feynman + applied): `_scripts/prompts/prompt-review-visual-feynman-apply.md`.
+Both: diagram-first, one question at a time. Shortcuts: `langfuse`, `dspy`, `system design`, `ai backend reliability`.
+
+Self-check for which to use: "Without notes, can I explain this topic?" No → Phase A. Yes → Phase B.
 
 ---
 
@@ -124,7 +126,8 @@ Read _scripts/prompts/weekly-refine.md then execute.
 |---|---|
 | Ingest a GitHub repo | `ingest-deepwiki.sh` + `pipeline.py …/repos/<slug>` |
 | Ingest a YouTube video | `nohup codex … guide.md` (background) |
-| Review + quiz a topic | `prompt-review-then-quiz.md` |
+| Review + quiz a topic (still learning it) | `prompt-review-then-quiz.md` (Phase A) |
+| Review + quiz a topic (already know it) | `prompt-review-visual-feynman-apply.md` (Phase B) |
 | Practice a concept hands-on | `pipeline.py <concept> --step lab` → `lab-review.md` |
 | Quick hands-on, no grading | `labs-tiny-from-concept.md` |
 | Daily spaced repetition | `quiz_cli` |
