@@ -25,6 +25,14 @@ Example:
 
 > Note: repo sources live under `sources/repos/<owner>-<repo>` (not `sources/videos/`).
 
+Or delegate the whole thing to an AI agent (it reads the guide, runs the commands, picks the slug, handles re-runs):
+
+```
+plz read _scripts/prompts/guide.md and use the Automated pipeline to handle
+https://deepwiki.com/<owner>/<repo>
+(step 1 ingest is done if I already ran ingest-deepwiki.sh; otherwise do it first)
+```
+
 ### YouTube (English learning) — unattended background run
 
 Codex runs ingest + pipeline for one or more episodes in the background:
