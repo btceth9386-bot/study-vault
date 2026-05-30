@@ -2,6 +2,8 @@
 
 A step-by-step guide for using AI agents to build your personal knowledge base.
 
+> For ready-to-paste prompts and commands, see `_scripts/prompts/usage.md` (cheatsheet).
+
 ## Step 1 — Ingest a source
 
 Run an ingest script to bring a source into the knowledge base:
