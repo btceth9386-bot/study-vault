@@ -8,6 +8,14 @@
 - 這個 prompt 只有在使用者已決定 promote 草稿時使用；不要自行掃描並批次晉升其他草稿。
 - 正式概念必須採用 Feynman Technique：用日常語言讓不熟此領域的人也能理解。避免術語堆疊；如果必須使用術語，第一次出現時用一句話解釋。
 - 首次晉升的 `depth` 預設為 `2`，代表「能解釋」。只有使用者明確要求時才設定其他深度。
+- Set `lab_status: not-started` on first promotion. This field tracks hands-on practice and drives the learning phase (see Learning Phase Mapping below). Allowed values: `not-started`, `scaffolded`, `completed`, `explained`.
+
+  **Learning Phase Mapping** — `depth` and `lab_status` together signal which study method applies to a concept:
+  - `depth 1` → **Phase A (Acquisition)**: read the concept fully, then take encoding quizzes (multiple-choice / recall). Goal: build the initial schema. No labs yet.
+  - `depth 2` + `lab_status: not-started|scaffolded` → **Phase B (Consolidation)**: prediction-first + fading-scaffold lab + application quizzes. Hands-on.
+  - `depth 3-4` or `lab_status: completed|explained` → **Phase C (Retention)**: interleaved SM-2 review, reverse labs, teach-back.
+
+  Self-check for the learner: "Without notes, can I explain this concept in my own words?" No → Phase A. Yes → Phase B.
 - 首次晉升的 `review_due` 必須設定為「今天 + 3 天」，格式為 `YYYY-MM-DD`。
 - 每個正式概念至少要有 1 個具體範例，可以是程式碼、現實場景、操作流程或類比。
 - 必須建立雙向連結：新概念連到 related concepts，也要在被連結的既有概念中補上回指。
@@ -76,6 +84,7 @@ concepts/<category>/<concept-id>.md
 id: <concept-id>
 title: <title>
 depth: 2
+lab_status: not-started
 last_reviewed: <today YYYY-MM-DD>
 review_due: <today + 3 days YYYY-MM-DD>
 sources:
@@ -224,6 +233,7 @@ _drafts/<concept>.md
 - [ ] 正式概念檔位於 `concepts/<category>/<concept-id>.md`。
 - [ ] frontmatter 包含 `id`、`title`、`depth`、`review_due`、`sources`。
 - [ ] `depth` 預設為 `2`，除非使用者明確要求其他值。
+- [ ] `lab_status` 預設為 `not-started`（值須為 `not-started`/`scaffolded`/`completed`/`explained`）。
 - [ ] `review_due` 是今天 + 3 天。
 - [ ] 摘要符合 Feynman 風格：日常語言、少術語、必要術語有解釋。
 - [ ] 內容包含至少 1 個具體範例。

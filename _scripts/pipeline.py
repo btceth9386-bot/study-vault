@@ -32,6 +32,9 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 log = logging.getLogger(__name__)
 
 STEPS = ["ingest", "review", "promote", "topics"]
+# `lab` is a manual-only step (per-concept, interactive setup) — not part of the
+# default per-source pipeline run, but available via --step.
+STEP_CHOICES = STEPS + ["lab"]
 DEFAULT_CONFIG = Path(__file__).parent / "pipeline.yml"
 
 
@@ -129,7 +132,7 @@ def main():
     )
     parser.add_argument(
         "--step",
-        choices=STEPS,
+        choices=STEP_CHOICES,
         help="Run a single step instead of the full pipeline",
     )
     parser.add_argument(

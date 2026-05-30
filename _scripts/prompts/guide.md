@@ -109,6 +109,28 @@ Test your understanding with spaced-repetition quizzing:
 .venv/bin/python3 -m _scripts.quiz_cli --count 10
 ```
 
+## Step 6.5 — Hands-on labs (Phase B: prediction-first + fading scaffold)
+
+Once a concept reaches `depth >= 2` (you can explain it), reinforce it with a lab. The AI sets up a scaffold and stubs the conceptual core; you fill it. See `_inbox/learning-method-upgrade.md` for the full method.
+
+```bash
+# Generate a fading-scaffold lab for one concept (autonomous setup):
+.venv/bin/python3 _scripts/pipeline.py concepts/<category>/<concept-id>.md --step lab
+```
+
+Then (manually, in order):
+1. Fill `labs/<concept-id>/predictions.md` BEFORE running.
+2. Implement the stubbed core (`TODO: YOUR CORE`).
+3. Diff your result against `labs/<concept-id>/expected.md`.
+4. Ask an AI agent to grade your attempt — it corrects mistakes and feeds them into the quiz bank:
+
+```
+Read _scripts/prompts/lab-review.md then review my labs/<concept-id>/ attempt.
+```
+
+Lighter fallback (single-shot, no grading loop): `Read _scripts/prompts/labs-tiny-from-concept.md then make a tiny lab for <concept>`.
+
+
 ## Step 7 — Weekly maintenance (`weekly-refine.md`)
 
 Run periodically (e.g. weekly) to maintain the knowledge base:
