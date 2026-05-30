@@ -14,7 +14,9 @@
 
 ```
 Ingest the repo https://deepwiki.com/<owner>/<repo> following _scripts/prompts/guide.md.
-Run step 1 (ingest) then the full pipeline. Write all output in English.
+Run step 1 (ingest-deepwiki.sh), then run the Automated pipeline
+(_scripts/pipeline.py) for steps 2-5 only — do NOT run quiz / labs / weekly-refine.
+Write all output in English.
 ```
 
 *(agent runs: `./_scripts/ingest-deepwiki.sh <owner>/<repo>` then `.venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo>`)*
@@ -26,8 +28,10 @@ Run step 1 (ingest) then the full pipeline. Write all output in English.
 **Say in Discord:**
 
 ```
-Ingest these YouTube episodes for English learning, following _scripts/prompts/guide.md
-(step 1 ingest + full pipeline, output in English):
+Ingest these YouTube episodes for English learning, following _scripts/prompts/guide.md.
+Run step 1 (ingest-youtube.sh) per video, then the Automated pipeline
+(_scripts/pipeline.py) for steps 2-5 only — do NOT run quiz / labs / weekly-refine.
+Output in English:
 https://www.youtube.com/watch?v=<id1>
 https://www.youtube.com/watch?v=<id2>
 ```

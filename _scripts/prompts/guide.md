@@ -152,7 +152,7 @@ AI never writes directly to `concepts/`. All AI output goes to `_drafts/` first.
 
 ## Automated pipeline
 
-Instead of running steps 2-5 manually, use the pipeline script:
+Instead of running steps 2-5 manually, use the pipeline script. **The "full pipeline" means steps 2-5 only (ingest → review → promote → topics). It does NOT include Step 6 (quiz), Step 6.5 (labs), or Step 7 (weekly-refine)** — those are separate, per-concept or periodic, and run manually.
 
 ```bash
 # Full pipeline (steps 2-5) for an ingested source:
