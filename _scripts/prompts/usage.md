@@ -1,6 +1,8 @@
 # Exobrain Usage Cheatsheet
 
-Ready-to-paste prompts and commands for everyday use. For the conceptual workflow, see `guide.md`.
+> **How you use this:** You talk to an AI agent through **Discord (openAB)**. You don't run scripts yourself — you paste a request, the agent executes the scripts in the repo and reports back. Each section below gives **what to say in Discord** as the primary form; the shell commands shown in `(agent runs: …)` are just reference for what the agent will execute on your behalf.
+>
+> For the conceptual workflow, see `guide.md`.
 
 ---
 
@@ -8,135 +10,125 @@ Ready-to-paste prompts and commands for everyday use. For the conceptual workflo
 
 ### Repository (via DeepWiki)
 
-```bash
-# Step 1 — ingest the repo (creates sources/repos/<owner>-<repo>/)
-./_scripts/ingest-deepwiki.sh <owner>/<repo>
-
-# Steps 2-5 — pipeline spawns codex/claude to process, review, promote, topics
-.venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo>
-```
-
-Example:
-
-```bash
-./_scripts/ingest-deepwiki.sh nousresearch/hermes-agent
-.venv/bin/python3 _scripts/pipeline.py sources/repos/nousresearch-hermes-agent
-```
-
-> Note: repo sources live under `sources/repos/<owner>-<repo>` (not `sources/videos/`).
-
-Or delegate the whole thing to an AI agent (it reads the guide, runs the commands, picks the slug, handles re-runs):
+**Say in Discord:**
 
 ```
-plz read _scripts/prompts/guide.md and use the Automated pipeline to handle
-https://deepwiki.com/<owner>/<repo>
-(step 1 ingest is done if I already ran ingest-deepwiki.sh; otherwise do it first)
+Ingest the repo https://deepwiki.com/<owner>/<repo> following _scripts/prompts/guide.md.
+Run step 1 (ingest) then the full pipeline. Write all output in English.
 ```
 
-### YouTube (English learning) — unattended background run
+*(agent runs: `./_scripts/ingest-deepwiki.sh <owner>/<repo>` then `.venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo>`)*
 
-Codex runs ingest + pipeline for one or more episodes in the background:
+> Repo sources land in `sources/repos/<owner>-<repo>/`.
 
-```bash
-nohup codex exec --yolo --skip-git-repo-check --model gpt-5.5 resume --last \
-  'Handle these YouTube episodes end-to-end (ingest + full pipeline).
-   https://www.youtube.com/watch?v=<id1>
-   https://www.youtube.com/watch?v=<id2>
-   Follow _scripts/prompts/guide.md. Write all output in English.' &
+### YouTube (English learning)
+
+**Say in Discord:**
+
+```
+Ingest these YouTube episodes for English learning, following _scripts/prompts/guide.md
+(step 1 ingest + full pipeline, output in English):
+https://www.youtube.com/watch?v=<id1>
+https://www.youtube.com/watch?v=<id2>
 ```
 
-After it finishes, the slug is `sources/videos/<auto-slug>`. If you need to re-run a single step:
+*(agent runs: `./_scripts/ingest-youtube.sh <url>` for each, then `.venv/bin/python3 _scripts/pipeline.py sources/videos/<slug>`. For many episodes the agent may background it with `nohup codex exec … &`.)*
 
-```bash
-.venv/bin/python3 _scripts/pipeline.py sources/videos/<slug> --step topics
-```
+> Video sources land in `sources/videos/<auto-slug>/`. To re-run one step:
+> "re-run the topics step for sources/videos/<slug>" → *(agent runs: `pipeline.py sources/videos/<slug> --step topics`)*
 
 ---
 
 ## 2. Review & Quiz a Topic
 
-Two review modes, matched to your learning phase (see `_inbox/learning-method-upgrade.md`):
+Two modes, matched to your learning phase (see `_inbox/learning-method-upgrade.md`).
+Self-check: "Without notes, can I explain this topic?" No → Phase A. Yes → Phase B.
 
-**Phase A — still building the schema** (AI explains → quizzes you, recall-first):
+**Phase A — still building the schema** (agent explains → quizzes you, recall-first). Say in Discord:
 
 ```
 Read _scripts/prompts/prompt-review-then-quiz.md and start with <topic>.
 ```
 
-**Phase B — you can already explain it** (you explain it back → recall + application, understanding-first):
+**Phase B — you can already explain it** (you explain it back → recall + application). Say in Discord:
 
 ```
 Read _scripts/prompts/prompt-review-visual-feynman-apply.md and start with <topic>.
 ```
 
-Both: diagram-first, one question at a time. Shortcuts: `langfuse`, `dspy`, `system design`, `ai backend reliability`.
-
-Self-check for which to use: "Without notes, can I explain this topic?" No → Phase A. Yes → Phase B.
+Both are diagram-first, one question at a time, conducted in the Discord chat. Shortcuts: `langfuse`, `dspy`, `system design`, `ai backend reliability`.
 
 ---
 
 ## 3. Hands-on Labs (Phase B: depth >= 2 concepts)
 
-### Generate a fading-scaffold lab (autonomous setup)
+### Generate a fading-scaffold lab
 
-```bash
-.venv/bin/python3 _scripts/pipeline.py concepts/<category>/<concept-id>.md --step lab
-```
-
-Or in chat:
+**Say in Discord:**
 
 ```
 Read _scripts/prompts/lab-design.md then design a fading-scaffold lab for <concept>.
 ```
 
-Then, manually:
+*(agent runs: `.venv/bin/python3 _scripts/pipeline.py concepts/<category>/<concept-id>.md --step lab`)*
+
+Then **you** do the hands-on part:
 1. Fill `labs/<concept-id>/predictions.md` **before** running.
 2. Implement the stubbed core (`TODO: YOUR CORE`).
 3. Diff your result against `labs/<concept-id>/expected.md`.
 
-### Grade your attempt (interactive — run AFTER filling predictions + core)
+### Grade your attempt (run AFTER filling predictions + core)
+
+**Say in Discord:**
 
 ```
 Read _scripts/prompts/lab-review.md then review my labs/<concept-id>/ attempt.
 ```
 
-The AI corrects mistakes, emits `application` quiz cards (due tomorrow), and updates `lab_status`.
+The agent corrects mistakes, adds `application` quiz cards (due tomorrow), and updates `lab_status`.
 
 ### Lighter fallback (single-shot tiny lab, no grading loop)
+
+**Say in Discord:**
 
 ```
 Read _scripts/prompts/labs-tiny-from-concept.md then make a tiny lab for <concept>.
 ```
 
-Use this when the full prediction → fill-core → review loop feels too heavy for a concept.
+Use when the full predict → fill-core → review loop feels too heavy for a concept.
 
 ---
 
-## 4. Spaced-Repetition Quiz (CLI)
+## 4. Spaced-Repetition Quiz
 
-```bash
-.venv/bin/python3 -m _scripts.quiz_cli --count 10
-```
+**Say in Discord:** "Quiz me on due cards" — the agent pulls due questions from `quiz/bank.json` and runs the quiz conversationally in Discord, one at a time.
+
+*(At a terminal you can instead run the interactive CLI: `.venv/bin/python3 -m _scripts.quiz_cli --count 10`)*
 
 ---
 
 ## 5. Weekly Maintenance
 
+**Say in Discord:**
+
 ```
 Read _scripts/prompts/weekly-refine.md then execute.
 ```
 
+The agent generates a refine report in `_inbox/`, flags stale concepts/expired drafts, and updates `quiz/bank.json` + `_index/`.
+
 ---
 
-## Quick map: which prompt for what
+## Quick map: what to say in Discord
 
-| I want to… | Use |
+| I want to… | Say in Discord |
 |---|---|
-| Ingest a GitHub repo | `ingest-deepwiki.sh` + `pipeline.py …/repos/<slug>` |
-| Ingest a YouTube video | `nohup codex … guide.md` (background) |
-| Review + quiz a topic (still learning it) | `prompt-review-then-quiz.md` (Phase A) |
-| Review + quiz a topic (already know it) | `prompt-review-visual-feynman-apply.md` (Phase B) |
-| Practice a concept hands-on | `pipeline.py <concept> --step lab` → `lab-review.md` |
-| Quick hands-on, no grading | `labs-tiny-from-concept.md` |
-| Daily spaced repetition | `quiz_cli` |
-| Weekly cleanup | `weekly-refine.md` |
+| Ingest a GitHub repo | "ingest the repo `<deepwiki-url>` following guide.md" |
+| Ingest YouTube videos | "ingest these episodes for English learning following guide.md: `<urls>`" |
+| Review + quiz (still learning it) | "review-then-quiz `<topic>`" (Phase A) |
+| Review + quiz (already know it) | "visual-feynman-apply review `<topic>`" (Phase B) |
+| Practice a concept hands-on | "design a lab for `<concept>`" → later "review my lab attempt" |
+| Quick hands-on, no grading | "make a tiny lab for `<concept>`" |
+| Daily spaced repetition | "quiz me on due cards" |
+| Weekly cleanup | "run weekly-refine" |
+| Commit & push results | "commit and push with message `<msg>`" |
