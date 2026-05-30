@@ -2,6 +2,7 @@
 id: langgraph-stategraph-state-schema
 title: LangGraph StateGraph State Schema
 depth: 2
+lab_status: not-started
 last_reviewed: 2026-05-05
 review_due: 2026-05-08
 sources:

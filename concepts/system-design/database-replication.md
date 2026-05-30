@@ -2,6 +2,7 @@
 id: database-replication
 title: Database Replication
 depth: 2
+lab_status: not-started
 last_reviewed: 2026-04-30
 review_due: 2026-05-03
 sources:

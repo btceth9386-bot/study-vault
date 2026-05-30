@@ -2,6 +2,7 @@
 id: acp-agent-backend-for-ides
 title: ACP Agent Backend for IDEs
 depth: 2
+lab_status: not-started
 last_reviewed: '2026-05-13'
 review_due: '2026-05-16'
 sources:

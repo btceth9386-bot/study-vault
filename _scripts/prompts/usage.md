@@ -66,6 +66,8 @@ Both are diagram-first, one question at a time, conducted in the Discord chat. S
 
 ## 3. Hands-on Labs (Phase B: depth >= 2 concepts)
 
+> **When is a concept lab-ready?** `depth: 2` alone isn't enough (it's just the default set at promotion). Practice a concept only when EITHER you can explain it from memory without notes, OR its quiz cards hit **>= 80% over >= 3 questions, no hints**. Otherwise do a Phase A review first. Generate labs **on demand, one concept at a time** — never pre-generate for all concepts. Track which you've practiced via each concept's `lab_status` frontmatter field (`not-started` → `scaffolded` → `completed` → `explained`).
+
 ### Generate a fading-scaffold lab
 
 **Say in Discord:**

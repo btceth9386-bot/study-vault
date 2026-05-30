@@ -2,6 +2,7 @@
 id: deck-backyard-platform-vocabulary
 title: Deck as Backyard Platform Vocabulary
 depth: 2
+lab_status: not-started
 last_reviewed: 2026-05-09
 review_due: 2026-05-12
 sources:

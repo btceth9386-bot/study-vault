@@ -2,6 +2,7 @@
 id: s3-first-durability
 title: S3-First Durability Pattern
 depth: 2
+lab_status: not-started
 last_reviewed: 2026-05-04
 review_due: 2026-05-07
 sources:

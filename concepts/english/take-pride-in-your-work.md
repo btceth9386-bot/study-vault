@@ -2,6 +2,7 @@
 id: take-pride-in-your-work
 title: "Idiom: Take Pride in Your Work"
 depth: 2
+lab_status: not-started
 last_reviewed: 2026-05-09
 review_due: 2026-05-12
 sources:

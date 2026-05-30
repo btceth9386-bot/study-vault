@@ -2,6 +2,7 @@
 id: provider-chat-model-wrappers-in-langgraph-nodes
 title: Provider Chat Model Wrappers in LangGraph Nodes
 depth: 2
+lab_status: not-started
 last_reviewed: 2026-05-05
 review_due: 2026-05-08
 sources:

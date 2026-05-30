@@ -2,6 +2,7 @@
 id: muscle-tone-definition-physique
 title: Muscle Tone, Definition, and Physique
 depth: 2
+lab_status: not-started
 last_reviewed: '2026-05-13'
 review_due: '2026-05-16'
 sources:

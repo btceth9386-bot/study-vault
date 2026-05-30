@@ -2,6 +2,7 @@
 id: pull-a-muscle-safety-phrase
 title: Pull a Muscle Safety Phrase
 depth: 2
+lab_status: not-started
 last_reviewed: '2026-05-13'
 review_due: '2026-05-16'
 sources:

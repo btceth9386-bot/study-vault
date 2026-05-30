@@ -2,6 +2,7 @@
 id: construction-plans-vocabulary
 title: Construction Plans Vocabulary
 depth: 2
+lab_status: not-started
 last_reviewed: 2026-05-09
 review_due: 2026-05-12
 sources:

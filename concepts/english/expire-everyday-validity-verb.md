@@ -2,6 +2,7 @@
 id: expire-everyday-validity-verb
 title: Expire as an Everyday Validity Verb
 depth: 2
+lab_status: not-started
 last_reviewed: 2026-05-09
 review_due: 2026-05-12
 sources:

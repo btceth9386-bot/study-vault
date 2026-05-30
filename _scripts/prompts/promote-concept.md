@@ -15,7 +15,7 @@
   - `depth 2` + `lab_status: not-started|scaffolded` → **Phase B (Consolidation)**: prediction-first + fading-scaffold lab + application quizzes. Hands-on.
   - `depth 3-4` or `lab_status: completed|explained` → **Phase C (Retention)**: interleaved SM-2 review, reverse labs, teach-back.
 
-  Self-check for the learner: "Without notes, can I explain this concept in my own words?" No → Phase A. Yes → Phase B.
+  Self-check for the learner: "Without notes, can I explain this concept in my own words?" No → Phase A. Yes → Phase B. Objective version of the gate: the concept's quiz cards show >= 80% correct over >= 3 questions answered without hints (see `history` in `quiz/bank.json`). Note: `depth: 2` is the nominal default at promotion, not proof of readiness — use the self-check or quiz accuracy, not depth alone.
 - 首次晉升的 `review_due` 必須設定為「今天 + 3 天」，格式為 `YYYY-MM-DD`。
 - 每個正式概念至少要有 1 個具體範例，可以是程式碼、現實場景、操作流程或類比。
 - 必須建立雙向連結：新概念連到 related concepts，也要在被連結的既有概念中補上回指。

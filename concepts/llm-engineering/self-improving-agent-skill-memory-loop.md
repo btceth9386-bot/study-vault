@@ -2,6 +2,7 @@
 id: self-improving-agent-skill-memory-loop
 title: Self-Improving Agent Skill Memory Loop
 depth: 2
+lab_status: not-started
 last_reviewed: '2026-05-13'
 review_due: '2026-05-16'
 sources:

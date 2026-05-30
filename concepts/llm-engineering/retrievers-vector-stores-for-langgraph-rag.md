@@ -2,6 +2,7 @@
 id: retrievers-vector-stores-for-langgraph-rag
 title: Retrievers and Vector Stores for LangGraph RAG
 depth: 2
+lab_status: not-started
 last_reviewed: 2026-05-05
 review_due: 2026-05-08
 sources:

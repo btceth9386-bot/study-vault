@@ -2,6 +2,7 @@
 id: willpower-and-urge-vocabulary
 title: Willpower and Urge Vocabulary
 depth: 2
+lab_status: not-started
 last_reviewed: '2026-05-13'
 review_due: '2026-05-16'
 sources:

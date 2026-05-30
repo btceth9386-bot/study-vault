@@ -2,6 +2,7 @@
 id: chain-of-thought-reasoning
 title: Chain-of-Thought Reasoning
 depth: 2
+lab_status: not-started
 last_reviewed: '2026-05-13'
 review_due: '2026-05-16'
 sources:

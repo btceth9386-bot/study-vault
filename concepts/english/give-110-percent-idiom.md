@@ -2,6 +2,7 @@
 id: give-110-percent-idiom
 title: "Idiom: Give 110 Percent"
 depth: 2
+lab_status: not-started
 last_reviewed: 2026-05-09
 review_due: 2026-05-12
 sources:

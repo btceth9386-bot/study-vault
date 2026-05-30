@@ -17,6 +17,10 @@ Resolve the concept file under `concepts/<category>/<id>.md`. Read it plus its `
 Only design a lab for concepts in **Phase B** (see `promote-concept.md` Learning Phase Mapping):
 
 - `depth >= 2` and `lab_status` is `not-started` or `scaffolded`.
+- **Lab-ready standard** — `depth: 2` is only the nominal default set at promotion; it is not proof the learner is ready. A concept is genuinely lab-ready when EITHER:
+  - the learner can explain it from memory without notes (the explain-back self-check), OR
+  - its quiz cards show **>= 80% correct over >= 3 questions, answered without hints** (check the `history` field in `quiz/bank.json`).
+  - If neither holds, suggest a Phase A review (`prompt-review-then-quiz.md`) first instead of designing a lab.
 - If the concept is `depth 1`, do not design a lab. Report that the learner should finish Phase A (read + encoding quiz) first.
 - If `lab_status` is already `completed`/`explained`, ask whether the user wants a harder variant (more faded scaffold) before proceeding.
 
