@@ -1,0 +1,1 @@
+roots = await session.list_roots()

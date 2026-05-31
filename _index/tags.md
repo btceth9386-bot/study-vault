@@ -196,10 +196,18 @@
 
 - [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb
 
+## extensions
+
+- [mcp-extension-negotiation-framework](../concepts/llm-engineering/mcp-extension-negotiation-framework.md) - MCP Extension Negotiation Framework
+
 ## few-shot-learning
 
 - [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
 - [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
+
+## filesystem
+
+- [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
 
 ## fitness
 
@@ -230,6 +238,7 @@
 
 ## human-in-the-loop
 
+- [mcp-elicitation-for-structured-user-input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md) - MCP Elicitation for Structured User Input
 - [langgraph-channels-and-reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md) - LangGraph Channels and Reducers
 - [langgraph-human-in-the-loop-interrupts](../concepts/llm-engineering/langgraph-human-in-the-loop-interrupts.md) - LangGraph Human-in-the-Loop Interrupts
 - [langgraph-runtime-dependency-injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md) - LangGraph Runtime Dependency Injection
@@ -281,6 +290,15 @@
 
 - [load-balancing](../concepts/system-design/load-balancing.md) - Load Balancing
 - [raid-storage](../concepts/system-design/raid-storage.md) - RAID Storage
+
+## interoperability
+
+- [mcp-capability-negotiation-handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md) - MCP Capability Negotiation Handshake
+- [mcp-extension-negotiation-framework](../concepts/llm-engineering/mcp-extension-negotiation-framework.md) - MCP Extension Negotiation Framework
+
+## json-rpc
+
+- [mcp-bidirectional-json-rpc-substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md) - MCP Bidirectional JSON-RPC Substrate
 
 ## langchain
 
@@ -343,6 +361,14 @@
 - [llm-as-judge-evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md) - LLM-as-Judge Evaluation
 - [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability
 - [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
+- [mcp-bidirectional-json-rpc-substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md) - MCP Bidirectional JSON-RPC Substrate
+- [mcp-capability-negotiation-handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md) - MCP Capability Negotiation Handshake
+- [mcp-elicitation-for-structured-user-input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md) - MCP Elicitation for Structured User Input
+- [mcp-extension-negotiation-framework](../concepts/llm-engineering/mcp-extension-negotiation-framework.md) - MCP Extension Negotiation Framework
+- [mcp-oauth-protected-resource-discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md) - MCP OAuth Protected Resource Discovery
+- [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
+- [mcp-schema-generation-pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md) - MCP Schema Generation Pipeline
+- [mcp-transport-separation](../concepts/llm-engineering/mcp-transport-separation.md) - MCP Transport Separation
 - [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
 - [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
 - [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
@@ -365,6 +391,14 @@
 ## mcp
 
 - [acp-agent-backend-for-ides](../concepts/llm-engineering/acp-agent-backend-for-ides.md) - ACP Agent Backend for IDEs
+- [mcp-bidirectional-json-rpc-substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md) - MCP Bidirectional JSON-RPC Substrate
+- [mcp-capability-negotiation-handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md) - MCP Capability Negotiation Handshake
+- [mcp-elicitation-for-structured-user-input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md) - MCP Elicitation for Structured User Input
+- [mcp-extension-negotiation-framework](../concepts/llm-engineering/mcp-extension-negotiation-framework.md) - MCP Extension Negotiation Framework
+- [mcp-oauth-protected-resource-discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md) - MCP OAuth Protected Resource Discovery
+- [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
+- [mcp-schema-generation-pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md) - MCP Schema Generation Pipeline
+- [mcp-transport-separation](../concepts/llm-engineering/mcp-transport-separation.md) - MCP Transport Separation
 - [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
 - [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
 - [persistent-agent-session-restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md) - Persistent Agent Session Restoration
@@ -401,6 +435,10 @@
 ## multimodal
 
 - [standardized-message-content-blocks](../concepts/llm-engineering/standardized-message-content-blocks.md) - Standardized Message Content Blocks
+
+## oauth
+
+- [mcp-oauth-protected-resource-discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md) - MCP OAuth Protected Resource Discovery
 
 ## observability
 
@@ -463,6 +501,13 @@
 - [prompt-version-management](../concepts/llm-engineering/prompt-version-management.md) - Prompt Version Management
 - [reflective-mutation-proposer](../concepts/llm-engineering/reflective-mutation-proposer.md) - Reflective Mutation Proposer
 
+## protocol
+
+- [mcp-bidirectional-json-rpc-substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md) - MCP Bidirectional JSON-RPC Substrate
+- [mcp-capability-negotiation-handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md) - MCP Capability Negotiation Handshake
+- [mcp-schema-generation-pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md) - MCP Schema Generation Pipeline
+- [mcp-transport-separation](../concepts/llm-engineering/mcp-transport-separation.md) - MCP Transport Separation
+
 ## provider-integrations
 
 - [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
@@ -499,8 +544,14 @@
 - [sticky-sessions](../concepts/system-design/sticky-sessions.md) - Sticky Sessions
 - [vertical-scaling](../concepts/system-design/vertical-scaling.md) - Vertical Scaling
 
+## schema
+
+- [mcp-schema-generation-pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md) - MCP Schema Generation Pipeline
+
 ## security
 
+- [mcp-oauth-protected-resource-discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md) - MCP OAuth Protected Resource Discovery
+- [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
 - [ssl-termination](../concepts/system-design/ssl-termination.md) - SSL Termination
 
 ## smoking
@@ -524,6 +575,7 @@
 ## structured-output
 
 - [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures
+- [mcp-elicitation-for-structured-user-input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md) - MCP Elicitation for Structured User Input
 
 ## supermarket
 
@@ -568,6 +620,10 @@
 ## tracing
 
 - [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
+
+## transport
+
+- [mcp-transport-separation](../concepts/llm-engineering/mcp-transport-separation.md) - MCP Transport Separation
 - [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
 
 ## vocabulary

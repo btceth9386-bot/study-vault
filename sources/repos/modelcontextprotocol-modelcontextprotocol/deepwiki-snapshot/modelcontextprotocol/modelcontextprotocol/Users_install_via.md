@@ -1,0 +1,1 @@
+uvx mcp-server-name

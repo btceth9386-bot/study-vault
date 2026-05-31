@@ -1,0 +1,1 @@
+tail -n 20 -f ~/Library/Logs/Claude/mcp*.log

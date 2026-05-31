@@ -1,0 +1,27 @@
+type: repo
+title: modelcontextprotocol/modelcontextprotocol
+url: https://github.com/modelcontextprotocol/modelcontextprotocol
+authors:
+  - Model Context Protocol maintainers
+language: en
+date_consumed: 2026-05-31
+date_added: 2026-05-31
+estimated_time: 3-4 hours
+status: processed
+related_concepts:
+  - mcp-bidirectional-json-rpc-substrate
+  - mcp-capability-negotiation-handshake
+  - mcp-transport-separation
+  - mcp-roots-advisory-boundaries
+  - mcp-elicitation-for-structured-user-input
+  - mcp-oauth-protected-resource-discovery
+  - mcp-schema-generation-pipeline
+  - mcp-extension-negotiation-framework
+  - toolsets-and-mcp-unified-tool-surface
+tags:
+  - mcp
+  - protocol
+  - interoperability
+  - llm-engineering
+  - json-rpc
+  - oauth

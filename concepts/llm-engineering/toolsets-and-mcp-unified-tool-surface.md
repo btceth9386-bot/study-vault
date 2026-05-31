@@ -13,6 +13,8 @@ related:
 - multi-platform-agent-gateway
 - natural-language-cron-agent-automation
 - persistent-agent-session-restoration
+- mcp-bidirectional-json-rpc-substrate
+- mcp-roots-advisory-boundaries
 tags:
 - llm-engineering
 - ai-agent
@@ -29,6 +31,7 @@ tags:
 - **為什麼存在 / 解決什麼問題**：Hermes does not treat MCP tools as a separate execution world. Instead, it dynamically registers them into the same registry used for native tools and then composes those tools into higher-level toolsets. This matters because it keeps tool selection, configuration, and availability logic coherent as the agent’s capabilities expand.
 - **關鍵字**：llm-engineering, ai-agent, ide-integration, tools, memory, automation, mcp
 - **相關概念**：[[langchain-tool-schema-contract]], [[acp-agent-backend-for-ides]], [[multi-platform-agent-gateway]], [[natural-language-cron-agent-automation]], [[persistent-agent-session-restoration]]
+- **MCP protocol foundations**: [[mcp-bidirectional-json-rpc-substrate]], [[mcp-roots-advisory-boundaries]]
 - **深度等級**：2/4
 - **最後更新**：2026-05-13
 - **來源**：nousresearch/hermes-agent
@@ -48,6 +51,8 @@ Suppose an engineering team is turning an agent prototype into a service used ev
 - [[multi-platform-agent-gateway]]: toolsets-and-mcp-unified-tool-surface connects to multi-platform-agent-gateway because both describe a nearby part of the same learning path or system design problem.
 - [[natural-language-cron-agent-automation]]: toolsets-and-mcp-unified-tool-surface connects to natural-language-cron-agent-automation because both describe a nearby part of the same learning path or system design problem.
 - [[persistent-agent-session-restoration]]: toolsets-and-mcp-unified-tool-surface connects to persistent-agent-session-restoration because both describe a nearby part of the same learning path or system design problem.
+- [[mcp-bidirectional-json-rpc-substrate]]: The unified tool surface is carried through MCP's lower-level request, response, and notification model.
+- [[mcp-roots-advisory-boundaries]]: Filesystem-oriented tools should respect client-provided roots when determining their operational scope.
 
 ## 我的疑問
 

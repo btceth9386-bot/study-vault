@@ -10,7 +10,7 @@ A working agent in a notebook is not a production agent. Production requires ans
 
 This path covers the eight patterns that answer those questions, drawn from the Hermes agent reference implementation. The patterns are independent of any specific agent framework; they apply whether you are building on LangGraph, a custom loop, or another runtime.
 
-For the internal mechanics of LangGraph state machines, checkpoints, and interrupts, see [LangGraph Application Development](../topics/langgraph-application-development.md). For evaluation pipelines and quality measurement, see [LLM Quality and Evaluation Pipeline](../topics/llm-quality-evaluation-pipeline.md).
+For the protocol mechanics behind MCP-based integrations, study [MCP Protocol Foundations](../topics/mcp-protocol-foundations.md) first or use it as a companion path. For the internal mechanics of LangGraph state machines, checkpoints, and interrupts, see [LangGraph Application Development](../topics/langgraph-application-development.md). For evaluation pipelines and quality measurement, see [LLM Quality and Evaluation Pipeline](../topics/llm-quality-evaluation-pipeline.md).
 
 **Estimated study time:** 5–7 hours  
 **Prerequisites:** Built at least one working LLM agent with tool calling. No specific framework required.

@@ -1,0 +1,1 @@
+npx -y @modelcontextprotocol/server-filesystem /path/one /path/two

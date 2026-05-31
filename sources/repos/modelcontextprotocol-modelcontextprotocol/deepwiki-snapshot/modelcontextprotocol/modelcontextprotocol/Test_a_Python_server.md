@@ -1,0 +1,1 @@
+npx @modelcontextprotocol/inspector uvx mcp-server-git
