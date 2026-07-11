@@ -15,6 +15,8 @@ related:
 - persistent-agent-session-restoration
 - mcp-bidirectional-json-rpc-substrate
 - mcp-roots-advisory-boundaries
+- agent-space-access-boundary
+- protocol-based-agent-access-surface
 tags:
 - llm-engineering
 - ai-agent
@@ -32,6 +34,7 @@ tags:
 - **關鍵字**：llm-engineering, ai-agent, ide-integration, tools, memory, automation, mcp
 - **相關概念**：[[langchain-tool-schema-contract]], [[acp-agent-backend-for-ides]], [[multi-platform-agent-gateway]], [[natural-language-cron-agent-automation]], [[persistent-agent-session-restoration]]
 - **MCP protocol foundations**: [[mcp-bidirectional-json-rpc-substrate]], [[mcp-roots-advisory-boundaries]]
+- **Operational agent boundaries**: [[agent-space-access-boundary]], [[protocol-based-agent-access-surface]]
 - **深度等級**：2/4
 - **最後更新**：2026-05-13
 - **來源**：nousresearch/hermes-agent
@@ -53,6 +56,8 @@ Suppose an engineering team is turning an agent prototype into a service used ev
 - [[persistent-agent-session-restoration]]: toolsets-and-mcp-unified-tool-surface connects to persistent-agent-session-restoration because both describe a nearby part of the same learning path or system design problem.
 - [[mcp-bidirectional-json-rpc-substrate]]: The unified tool surface is carried through MCP's lower-level request, response, and notification model.
 - [[mcp-roots-advisory-boundaries]]: Filesystem-oriented tools should respect client-provided roots when determining their operational scope.
+- [[agent-space-access-boundary]]: A unified tool surface needs an operational boundary that decides which tools are visible in a given scope.
+- [[protocol-based-agent-access-surface]]: Protocol clients can only be useful if the agent exposes a coherent, scoped tool surface behind them.
 
 ## 我的疑問
 

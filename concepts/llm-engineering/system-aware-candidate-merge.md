@@ -11,6 +11,7 @@ related:
   - pareto-efficient-candidate-selection
   - reflective-mutation-proposer
   - metric-driven-llm-optimization
+  - release-readiness-blast-radius-review
 tags:
   - llm-engineering
   - optimization
@@ -22,7 +23,7 @@ tags:
 - **One-sentence definition**: System-aware candidate merge combines useful text components from related candidate variants so improvements discovered separately can be tested together.
 - **Why it exists / what problem it solves**: One mutation may improve retrieval instructions while another improves answer formatting. If those changes came from related candidates, merging can produce a stronger candidate than either parent alone.
 - **Keywords**: merge, candidate, lineage, common ancestor, crossover, Pareto frontier
-- **Related concepts**: [[pareto-efficient-candidate-selection]], [[reflective-mutation-proposer]], [[metric-driven-llm-optimization]]
+- **Related concepts**: [[pareto-efficient-candidate-selection]], [[reflective-mutation-proposer]], [[metric-driven-llm-optimization]], [[release-readiness-blast-radius-review]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/gepa-ai-gepa
@@ -49,6 +50,7 @@ Candidate A improves `query_rewriter` and retrieves better documents. Candidate 
 - [[pareto-efficient-candidate-selection]]: Pareto frontiers reveal candidates that are strong in different places.
 - [[reflective-mutation-proposer]]: Reflective mutation creates the improved descendants that merge can later recombine.
 - [[metric-driven-llm-optimization]]: The merged candidate is still accepted or rejected by measured performance.
+- [[release-readiness-blast-radius-review]]: Both concepts evaluate a local change by asking how it behaves in the larger system.
 
 ## Open questions
 

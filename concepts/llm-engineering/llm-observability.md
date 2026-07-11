@@ -15,6 +15,9 @@ related:
   - react-agentic-loop
   - actionable-side-information
   - langgraph-human-in-the-loop-interrupts
+  - devops-agent-topology-context
+  - autonomous-incident-investigation
+  - proactive-incident-prevention-loop
 tags:
   - llm-engineering
   - observability
@@ -26,7 +29,7 @@ tags:
 - **One-sentence definition**: LLM observability is structured monitoring for AI applications: it records each request as a trace, each step as an observation, and each quality signal as a score.
 - **Why it exists / what problem it solves**: LLM apps are not a single database query or API call. They often involve prompts, tools, retrieval, model calls, retries, and non-deterministic output. Without structured traces, teams cannot explain why a response was slow, expensive, wrong, or different from yesterday.
 - **Keywords**: traces, observations, scores, generations, sessions, token usage, latency
-- **Related concepts**: [[llm-as-judge-evaluation]], [[prompt-version-management]], [[oltp-olap-split]], [[dspy-signatures]], [[react-agentic-loop]], [[actionable-side-information]], [[langgraph-human-in-the-loop-interrupts]]
+- **Related concepts**: [[llm-as-judge-evaluation]], [[prompt-version-management]], [[oltp-olap-split]], [[dspy-signatures]], [[react-agentic-loop]], [[actionable-side-information]], [[langgraph-human-in-the-loop-interrupts]], [[devops-agent-topology-context]], [[autonomous-incident-investigation]], [[proactive-incident-prevention-loop]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/langfuse-langfuse
@@ -58,6 +61,9 @@ The fix is no longer guesswork: update retrieval data, compare prompt version 12
 - [[react-agentic-loop]]: ReAct produces step-by-step tool-use trajectories that benefit from observability.
 - [[actionable-side-information]]: Trace data becomes more useful for optimization when it is distilled into feedback the reflection model can act on.
 - [[langgraph-human-in-the-loop-interrupts]]: Paused graph runs expose human decisions and state snapshots that should be traceable.
+- [[devops-agent-topology-context]]: Operational telemetry is easier to interpret when it is attached to services, dependencies, and request paths.
+- [[autonomous-incident-investigation]]: Incident agents depend on observability data as their evidence base.
+- [[proactive-incident-prevention-loop]]: Prevention recommendations need historical operational signals to find recurring failure modes.
 
 ## Open questions
 

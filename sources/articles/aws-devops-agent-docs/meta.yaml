@@ -1,0 +1,38 @@
+type: article
+title: AWS DevOps Agent product page and user guide
+url: https://aws.amazon.com/devops-agent/
+authors:
+  - Amazon Web Services
+language: en
+date_consumed: 2026-07-11
+date_added: 2026-07-11
+estimated_time: 4-6 hours
+status: processed
+related_concepts:
+  - agent-space-access-boundary
+  - devops-agent-topology-context
+  - learned-operational-knowledge-files
+  - release-readiness-blast-radius-review
+  - change-specific-release-testing
+  - autonomous-incident-investigation
+  - proactive-incident-prevention-loop
+  - protocol-based-agent-access-surface
+  - toolsets-and-mcp-unified-tool-surface
+  - mcp-transport-separation
+  - mcp-oauth-protected-resource-discovery
+  - acp-agent-backend-for-ides
+  - multi-platform-agent-gateway
+  - self-improving-agent-skill-memory-loop
+  - llm-observability
+  - hierarchical-rbac
+tags:
+  - aws
+  - devops-agent
+  - ai-agent
+  - sre
+  - incident-response
+  - release-management
+  - observability
+  - mcp
+  - a2a
+  - acp

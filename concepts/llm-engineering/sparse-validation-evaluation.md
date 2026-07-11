@@ -13,6 +13,7 @@ related:
 - caching-strategies
 - llm-as-judge-evaluation
 - probabilistic-toolset-distributions
+- change-specific-release-testing
 tags:
 - llm-engineering
 - evaluation
@@ -23,7 +24,7 @@ tags:
 - **One-sentence definition**: Sparse validation evaluation scores each candidate on selected validation examples while tracking which examples were actually evaluated.
 - **Why it exists / what problem it solves**: Full validation can be too expensive when every example requires LLM calls or tool execution. Sparse validation gives the optimizer useful comparison data without paying for a full validation pass on every candidate.
 - **Keywords**: sparse scores, validation, batch, evaluation policy, coverage, budget
-- **Related concepts**: [[metric-driven-llm-optimization]], [[pareto-efficient-candidate-selection]], [[caching-strategies]], [[llm-as-judge-evaluation]]
+- **Related concepts**: [[metric-driven-llm-optimization]], [[pareto-efficient-candidate-selection]], [[caching-strategies]], [[llm-as-judge-evaluation]], [[change-specific-release-testing]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/gepa-ai-gepa
@@ -53,6 +54,7 @@ Later policies can choose examples that have less coverage and avoid repeatedly 
 - [[pareto-efficient-candidate-selection]]: Frontier tracking can use per-example sparse scores.
 - [[caching-strategies]]: Evaluation caching prevents repeated candidate-example checks from consuming budget again.
 - [[llm-as-judge-evaluation]]: Judge-based metrics can be expensive, making sparse validation especially useful.
+- [[change-specific-release-testing]]: Both concepts spend limited validation effort on the cases most likely to reveal useful signal.
 
 ## Open questions
 

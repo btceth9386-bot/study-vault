@@ -9,6 +9,7 @@
 
 - [Production LLM Engineering](../topics/production-llm-engineering.md) — 43 concepts · 16–20h · The complete stack: observability, evaluation, LangChain + LangGraph, DSPy optimization, and durable pipelines.
 - [Production Agent Runtime](../topics/production-agent-runtime.md) — 8 concepts · 5–7h · Turn a working agent prototype into a runtime with toolsets, client protocols, session persistence, context compression, scheduled automation, memory, and evaluation-ready tool variation.
+- [AWS DevOps Agent Operations](../topics/aws-devops-agent-operations.md) — 8 concepts · 5–7h · Understand AWS DevOps Agent as a governed release-management and production-operations agent, from Agent Spaces and topology through release testing, incident investigation, prevention, and protocol access.
 - [MCP Protocol Foundations](../topics/mcp-protocol-foundations.md) — 8 concepts · 4–6h · Learn MCP from its bidirectional JSON-RPC substrate through capability negotiation, transports, filesystem roots, elicitation, OAuth discovery, schema maintenance, and extensions.
 - [LangGraph Application Development](../topics/langgraph-application-development.md) — 11 concepts · 6–8h · Build stateful LangGraph agents from model primitives through checkpoints, interrupts, memory, and server deployment.
 - [LLM Quality and Evaluation Pipeline](../topics/llm-quality-evaluation-pipeline.md) — 7 concepts · 4–5h · Replace ad-hoc iteration with systematic traces, automated judge scoring, version correlation, and optimization targets.

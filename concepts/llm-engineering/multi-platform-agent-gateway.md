@@ -13,6 +13,7 @@ related:
 - persistent-agent-session-restoration
 - probabilistic-toolset-distributions
 - self-improving-agent-skill-memory-loop
+- protocol-based-agent-access-surface
 tags:
 - llm-engineering
 - ai-agent
@@ -28,7 +29,7 @@ tags:
 - **一句話定義**：A multi-platform agent gateway is a runtime layer that lets one core agent serve multiple communication channels such as CLI, Telegram, Discord, Slack, and other messaging interfaces.
 - **為什麼存在 / 解決什麼問題**：Hermes presents the same agent across several platforms instead of building separate bots with separate state. This matters because it centralizes memory, tool access, and automation while letting users enter through the interface that best fits the moment.
 - **關鍵字**：llm-engineering, ai-agent, ide-integration, tools, memory, automation, mcp
-- **相關概念**：[[acp-agent-backend-for-ides]], [[natural-language-cron-agent-automation]], [[persistent-agent-session-restoration]], [[probabilistic-toolset-distributions]], [[self-improving-agent-skill-memory-loop]]
+- **相關概念**：[[acp-agent-backend-for-ides]], [[natural-language-cron-agent-automation]], [[persistent-agent-session-restoration]], [[probabilistic-toolset-distributions]], [[self-improving-agent-skill-memory-loop]], [[protocol-based-agent-access-surface]]
 - **深度等級**：2/4
 - **最後更新**：2026-05-13
 - **來源**：nousresearch/hermes-agent
@@ -48,6 +49,7 @@ Suppose an engineering team is turning an agent prototype into a service used ev
 - [[persistent-agent-session-restoration]]: multi-platform-agent-gateway connects to persistent-agent-session-restoration because both describe a nearby part of the same learning path or system design problem.
 - [[probabilistic-toolset-distributions]]: multi-platform-agent-gateway connects to probabilistic-toolset-distributions because both describe a nearby part of the same learning path or system design problem.
 - [[self-improving-agent-skill-memory-loop]]: multi-platform-agent-gateway connects to self-improving-agent-skill-memory-loop because both describe a nearby part of the same learning path or system design problem.
+- [[protocol-based-agent-access-surface]]: Protocol endpoints are one way a multi-platform gateway exposes the same agent to different clients and triggers.
 
 ## 我的疑問
 

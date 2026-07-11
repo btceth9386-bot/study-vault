@@ -1,5 +1,9 @@
 # Tags Index
 
+## access-control
+
+- [agent-space-access-boundary](../concepts/llm-engineering/agent-space-access-boundary.md) - Agent Space Access Boundary
+
 ## agents
 
 - [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
@@ -13,10 +17,12 @@
 ## ai-agent
 
 - [acp-agent-backend-for-ides](../concepts/llm-engineering/acp-agent-backend-for-ides.md) - ACP Agent Backend for IDEs
+- [agent-space-access-boundary](../concepts/llm-engineering/agent-space-access-boundary.md) - Agent Space Access Boundary
 - [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
 - [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
 - [persistent-agent-session-restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md) - Persistent Agent Session Restoration
 - [probabilistic-toolset-distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md) - Probabilistic Toolset Distributions
+- [protocol-based-agent-access-surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md) - Protocol-Based Agent Access Surface
 - [self-improving-agent-skill-memory-loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md) - Self-Improving Agent Skill Memory Loop
 - [surgical-context-compression](../concepts/llm-engineering/surgical-context-compression.md) - Surgical Context Compression
 - [toolsets-and-mcp-unified-tool-surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) - Toolsets and MCP Unified Tool Surface
@@ -48,6 +54,17 @@
 - [self-improving-agent-skill-memory-loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md) - Self-Improving Agent Skill Memory Loop
 - [surgical-context-compression](../concepts/llm-engineering/surgical-context-compression.md) - Surgical Context Compression
 - [toolsets-and-mcp-unified-tool-surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) - Toolsets and MCP Unified Tool Surface
+
+## aws
+
+- [agent-space-access-boundary](../concepts/llm-engineering/agent-space-access-boundary.md) - Agent Space Access Boundary
+- [autonomous-incident-investigation](../concepts/llm-engineering/autonomous-incident-investigation.md) - Autonomous Incident Investigation
+- [change-specific-release-testing](../concepts/llm-engineering/change-specific-release-testing.md) - Change-Specific Release Testing
+- [devops-agent-topology-context](../concepts/llm-engineering/devops-agent-topology-context.md) - DevOps Agent Topology Context
+- [learned-operational-knowledge-files](../concepts/llm-engineering/learned-operational-knowledge-files.md) - Learned Operational Knowledge Files
+- [proactive-incident-prevention-loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md) - Proactive Incident Prevention Loop
+- [protocol-based-agent-access-surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md) - Protocol-Based Agent Access Surface
+- [release-readiness-blast-radius-review](../concepts/llm-engineering/release-readiness-blast-radius-review.md) - Release Readiness Blast-Radius Review
 
 ## car-repair
 
@@ -94,17 +111,17 @@
 - [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
 - [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
 - [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
 - [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
 - [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
 - [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
 - [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
+- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
 - [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
 - [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
 - [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
+- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
+- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
 - [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
 - [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
@@ -124,6 +141,17 @@
 
 - [langgraph-remotegraph-server-execution](../concepts/llm-engineering/langgraph-remotegraph-server-execution.md) - LangGraph RemoteGraph and Server Execution
 - [prompt-version-management](../concepts/llm-engineering/prompt-version-management.md) - Prompt Version Management
+
+## devops-agent
+
+- [agent-space-access-boundary](../concepts/llm-engineering/agent-space-access-boundary.md) - Agent Space Access Boundary
+- [autonomous-incident-investigation](../concepts/llm-engineering/autonomous-incident-investigation.md) - Autonomous Incident Investigation
+- [change-specific-release-testing](../concepts/llm-engineering/change-specific-release-testing.md) - Change-Specific Release Testing
+- [devops-agent-topology-context](../concepts/llm-engineering/devops-agent-topology-context.md) - DevOps Agent Topology Context
+- [learned-operational-knowledge-files](../concepts/llm-engineering/learned-operational-knowledge-files.md) - Learned Operational Knowledge Files
+- [proactive-incident-prevention-loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md) - Proactive Incident Prevention Loop
+- [protocol-based-agent-access-surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md) - Protocol-Based Agent Access Surface
+- [release-readiness-blast-radius-review](../concepts/llm-engineering/release-readiness-blast-radius-review.md) - Release Readiness Blast-Radius Review
 
 ## distributed-systems
 
@@ -150,34 +178,34 @@
 - [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
 - [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
 - [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
 - [construction-plans-vocabulary](../concepts/english/construction-plans-vocabulary.md) - Construction Plans Vocabulary
 - [construction-tools-vocabulary](../concepts/english/construction-tools-vocabulary.md) - Construction Tools Vocabulary
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
 - [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
-- [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
 - [deck-backyard-platform-vocabulary](../concepts/english/deck-backyard-platform-vocabulary.md) - Deck as Backyard Platform Vocabulary
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
 - [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb
-- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
 - [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
 - [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
-- [its-not-my-day-idiom](../concepts/english/its-not-my-day-idiom.md) - Idiom: It's Not My Day
 - [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
+- [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
+- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
+- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
+- [its-not-my-day-idiom](../concepts/english/its-not-my-day-idiom.md) - Idiom: It's Not My Day
+- [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb
+- [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
 - [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
 - [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
 - [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
+- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
+- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
 - [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
 - [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
 - [ripped-informal-body-description](../concepts/english/ripped-informal-body-description.md) - Ripped as Informal Body Description
-- [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb
 - [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
 - [stand-up-comedy-vocabulary](../concepts/english/stand-up-comedy-vocabulary.md) - Stand-up Comedy Vocabulary
 - [supermarket-checkout-vocabulary](../concepts/english/supermarket-checkout-vocabulary.md) - Supermarket Checkout Vocabulary
 - [take-apart-put-back-together](../concepts/english/take-apart-put-back-together.md) - Take Apart and Put Back Together
-- [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
 - [up-to-code-phrase](../concepts/english/up-to-code-phrase.md) - Up to Code Phrase
 - [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
 
@@ -229,20 +257,20 @@
 
 ## habits
 
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
 - [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
+- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
 - [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
+- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
 - [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
 - [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
 
 ## human-in-the-loop
 
-- [mcp-elicitation-for-structured-user-input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md) - MCP Elicitation for Structured User Input
 - [langgraph-channels-and-reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md) - LangGraph Channels and Reducers
 - [langgraph-human-in-the-loop-interrupts](../concepts/llm-engineering/langgraph-human-in-the-loop-interrupts.md) - LangGraph Human-in-the-Loop Interrupts
 - [langgraph-runtime-dependency-injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md) - LangGraph Runtime Dependency Injection
 - [langgraph-toolnode-prebuilt-components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) - LangGraph ToolNode and Prebuilt Components
+- [mcp-elicitation-for-structured-user-input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md) - MCP Elicitation for Structured User Input
 
 ## ide-integration
 
@@ -261,30 +289,35 @@
 - [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
 - [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
 - [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
 - [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
-- [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
-- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
 - [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
 - [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
-- [its-not-my-day-idiom](../concepts/english/its-not-my-day-idiom.md) - Idiom: It's Not My Day
 - [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
+- [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
+- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
+- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
+- [its-not-my-day-idiom](../concepts/english/its-not-my-day-idiom.md) - Idiom: It's Not My Day
+- [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb
+- [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
 - [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
 - [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
 - [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
+- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
+- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
 - [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
 - [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
 - [ripped-informal-body-description](../concepts/english/ripped-informal-body-description.md) - Ripped as Informal Body Description
-- [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb
 - [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
 - [stand-up-comedy-vocabulary](../concepts/english/stand-up-comedy-vocabulary.md) - Stand-up Comedy Vocabulary
 - [take-apart-put-back-together](../concepts/english/take-apart-put-back-together.md) - Take Apart and Put Back Together
-- [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
 - [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
+
+## incident-response
+
+- [autonomous-incident-investigation](../concepts/llm-engineering/autonomous-incident-investigation.md) - Autonomous Incident Investigation
+- [proactive-incident-prevention-loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md) - Proactive Incident Prevention Loop
 
 ## infrastructure
 
@@ -340,8 +373,12 @@
 - [acp-agent-backend-for-ides](../concepts/llm-engineering/acp-agent-backend-for-ides.md) - ACP Agent Backend for IDEs
 - [actionable-side-information](../concepts/llm-engineering/actionable-side-information.md) - Actionable Side Information
 - [adapter-based-llm-optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md) - Adapter-Based LLM Optimization
+- [agent-space-access-boundary](../concepts/llm-engineering/agent-space-access-boundary.md) - Agent Space Access Boundary
+- [autonomous-incident-investigation](../concepts/llm-engineering/autonomous-incident-investigation.md) - Autonomous Incident Investigation
 - [caching-strategies](../concepts/system-design/caching-strategies.md) - Caching Strategies
 - [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
+- [change-specific-release-testing](../concepts/llm-engineering/change-specific-release-testing.md) - Change-Specific Release Testing
+- [devops-agent-topology-context](../concepts/llm-engineering/devops-agent-topology-context.md) - DevOps Agent Topology Context
 - [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
 - [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures
 - [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
@@ -358,9 +395,10 @@
 - [langgraph-stategraph-state-schema](../concepts/llm-engineering/langgraph-stategraph-state-schema.md) - LangGraph StateGraph State Schema
 - [langgraph-store-long-term-memory](../concepts/llm-engineering/langgraph-store-long-term-memory.md) - LangGraph Store Long-Term Memory
 - [langgraph-toolnode-prebuilt-components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) - LangGraph ToolNode and Prebuilt Components
-- [llm-as-judge-evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md) - LLM-as-Judge Evaluation
+- [learned-operational-knowledge-files](../concepts/llm-engineering/learned-operational-knowledge-files.md) - Learned Operational Knowledge Files
 - [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability
 - [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
+- [llm-as-judge-evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md) - LLM-as-Judge Evaluation
 - [mcp-bidirectional-json-rpc-substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md) - MCP Bidirectional JSON-RPC Substrate
 - [mcp-capability-negotiation-handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md) - MCP Capability Negotiation Handshake
 - [mcp-elicitation-for-structured-user-input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md) - MCP Elicitation for Structured User Input
@@ -375,11 +413,14 @@
 - [optimize-anything-pattern](../concepts/llm-engineering/optimize-anything-pattern.md) - Optimize Anything Pattern
 - [pareto-efficient-candidate-selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md) - Pareto-Efficient Candidate Selection
 - [persistent-agent-session-restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md) - Persistent Agent Session Restoration
+- [proactive-incident-prevention-loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md) - Proactive Incident Prevention Loop
 - [probabilistic-toolset-distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md) - Probabilistic Toolset Distributions
 - [prompt-version-management](../concepts/llm-engineering/prompt-version-management.md) - Prompt Version Management
+- [protocol-based-agent-access-surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md) - Protocol-Based Agent Access Surface
 - [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
 - [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
 - [reflective-mutation-proposer](../concepts/llm-engineering/reflective-mutation-proposer.md) - Reflective Mutation Proposer
+- [release-readiness-blast-radius-review](../concepts/llm-engineering/release-readiness-blast-radius-review.md) - Release Readiness Blast-Radius Review
 - [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
 - [self-improving-agent-skill-memory-loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md) - Self-Improving Agent Skill Memory Loop
 - [sparse-validation-evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md) - Sparse Validation Evaluation
@@ -403,6 +444,7 @@
 - [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
 - [persistent-agent-session-restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md) - Persistent Agent Session Restoration
 - [probabilistic-toolset-distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md) - Probabilistic Toolset Distributions
+- [protocol-based-agent-access-surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md) - Protocol-Based Agent Access Surface
 - [self-improving-agent-skill-memory-loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md) - Self-Improving Agent Skill Memory Loop
 - [surgical-context-compression](../concepts/llm-engineering/surgical-context-compression.md) - Surgical Context Compression
 - [toolsets-and-mcp-unified-tool-surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) - Toolsets and MCP Unified Tool Surface
@@ -420,6 +462,7 @@
 
 - [acp-agent-backend-for-ides](../concepts/llm-engineering/acp-agent-backend-for-ides.md) - ACP Agent Backend for IDEs
 - [langgraph-store-long-term-memory](../concepts/llm-engineering/langgraph-store-long-term-memory.md) - LangGraph Store Long-Term Memory
+- [learned-operational-knowledge-files](../concepts/llm-engineering/learned-operational-knowledge-files.md) - Learned Operational Knowledge Files
 - [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
 - [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
 - [persistent-agent-session-restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md) - Persistent Agent Session Restoration
@@ -442,6 +485,7 @@
 
 ## observability
 
+- [devops-agent-topology-context](../concepts/llm-engineering/devops-agent-topology-context.md) - DevOps Agent Topology Context
 - [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
 - [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
 - [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability
@@ -527,6 +571,11 @@
 - [langgraph-store-long-term-memory](../concepts/llm-engineering/langgraph-store-long-term-memory.md) - LangGraph Store Long-Term Memory
 - [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
 
+## release-management
+
+- [change-specific-release-testing](../concepts/llm-engineering/change-specific-release-testing.md) - Change-Specific Release Testing
+- [release-readiness-blast-radius-review](../concepts/llm-engineering/release-readiness-blast-radius-review.md) - Release Readiness Blast-Radius Review
+
 ## reliability
 
 - [high-availability](../concepts/system-design/high-availability.md) - High Availability
@@ -536,6 +585,10 @@
 ## retrieval
 
 - [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
+
+## risk-review
+
+- [release-readiness-blast-radius-review](../concepts/llm-engineering/release-readiness-blast-radius-review.md) - Release Readiness Blast-Radius Review
 
 ## scalability
 
@@ -554,14 +607,23 @@
 - [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
 - [ssl-termination](../concepts/system-design/ssl-termination.md) - SSL Termination
 
+## skills
+
+- [learned-operational-knowledge-files](../concepts/llm-engineering/learned-operational-knowledge-files.md) - Learned Operational Knowledge Files
+
 ## smoking
 
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
 - [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
+- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
 - [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
+- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
 - [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
 - [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
+
+## sre
+
+- [autonomous-incident-investigation](../concepts/llm-engineering/autonomous-incident-investigation.md) - Autonomous Incident Investigation
+- [proactive-incident-prevention-loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md) - Proactive Incident Prevention Loop
 
 ## stateful-workflows
 
@@ -600,6 +662,10 @@
 - [sticky-sessions](../concepts/system-design/sticky-sessions.md) - Sticky Sessions
 - [vertical-scaling](../concepts/system-design/vertical-scaling.md) - Vertical Scaling
 
+## testing
+
+- [change-specific-release-testing](../concepts/llm-engineering/change-specific-release-testing.md) - Change-Specific Release Testing
+
 ## tool-use
 
 - [langchain-tool-schema-contract](../concepts/llm-engineering/langchain-tool-schema-contract.md) - LangChain Tool Schema Contract
@@ -617,14 +683,18 @@
 - [surgical-context-compression](../concepts/llm-engineering/surgical-context-compression.md) - Surgical Context Compression
 - [toolsets-and-mcp-unified-tool-surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) - Toolsets and MCP Unified Tool Surface
 
+## topology
+
+- [devops-agent-topology-context](../concepts/llm-engineering/devops-agent-topology-context.md) - DevOps Agent Topology Context
+
 ## tracing
 
 - [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
+- [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
 
 ## transport
 
 - [mcp-transport-separation](../concepts/llm-engineering/mcp-transport-separation.md) - MCP Transport Separation
-- [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
 
 ## vocabulary
 
@@ -632,21 +702,21 @@
 - [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
 - [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
 - [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
 - [construction-plans-vocabulary](../concepts/english/construction-plans-vocabulary.md) - Construction Plans Vocabulary
 - [construction-tools-vocabulary](../concepts/english/construction-tools-vocabulary.md) - Construction Tools Vocabulary
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
 - [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
 - [deck-backyard-platform-vocabulary](../concepts/english/deck-backyard-platform-vocabulary.md) - Deck as Backyard Platform Vocabulary
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
 - [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb
 - [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
 - [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
 - [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
+- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
 - [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
 - [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
 - [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
+- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
+- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
 - [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
 - [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets

@@ -13,6 +13,8 @@ related:
 - acp-agent-backend-for-ides
 - multi-platform-agent-gateway
 - natural-language-cron-agent-automation
+- learned-operational-knowledge-files
+- proactive-incident-prevention-loop
 tags:
 - llm-engineering
 - ai-agent
@@ -28,7 +30,7 @@ tags:
 - **一句話定義**：A self-improving agent skill memory loop is a closed feedback cycle where an agent stores useful knowledge, creates or updates reusable skills, and uses that accumulated experience to improve later work.
 - **為什麼存在 / 解決什麼問題**：Hermes is positioned around persistent learning rather than stateless completion. The README and docs emphasize memory, session search, self-created skills, and periodic nudges to preserve useful knowledge. This matters because agent quality over time depends on converting one-off task experience into reusable future leverage.
 - **關鍵字**：llm-engineering, ai-agent, ide-integration, tools, memory, automation, mcp
-- **相關概念**：[[langgraph-store-long-term-memory]], [[actionable-side-information]], [[acp-agent-backend-for-ides]], [[multi-platform-agent-gateway]], [[natural-language-cron-agent-automation]]
+- **相關概念**：[[langgraph-store-long-term-memory]], [[actionable-side-information]], [[acp-agent-backend-for-ides]], [[multi-platform-agent-gateway]], [[natural-language-cron-agent-automation]], [[learned-operational-knowledge-files]], [[proactive-incident-prevention-loop]]
 - **深度等級**：2/4
 - **最後更新**：2026-05-13
 - **來源**：nousresearch/hermes-agent
@@ -48,6 +50,8 @@ Suppose an engineering team is turning an agent prototype into a service used ev
 - [[acp-agent-backend-for-ides]]: self-improving-agent-skill-memory-loop connects to acp-agent-backend-for-ides because both describe a nearby part of the same learning path or system design problem.
 - [[multi-platform-agent-gateway]]: self-improving-agent-skill-memory-loop connects to multi-platform-agent-gateway because both describe a nearby part of the same learning path or system design problem.
 - [[natural-language-cron-agent-automation]]: self-improving-agent-skill-memory-loop connects to natural-language-cron-agent-automation because both describe a nearby part of the same learning path or system design problem.
+- [[learned-operational-knowledge-files]]: Learned files are one concrete way an operations agent stores reusable skills and memories.
+- [[proactive-incident-prevention-loop]]: Prevention loops use stored lessons from prior incidents to improve future operations.
 
 ## 我的疑問
 
