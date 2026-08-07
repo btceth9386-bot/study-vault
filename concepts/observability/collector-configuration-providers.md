@@ -11,6 +11,7 @@ related:
   - collector-component-factory-lifecycle
   - collector-pipeline-architecture
   - opentelemetry-collector-builder-distributions
+  - opamp-supervised-collector-fleet-management
 tags:
   - observability
   - opentelemetry
@@ -42,6 +43,7 @@ An exporter endpoint can be written as `${env:OTLP_ENDPOINT}` in a YAML file. In
 - [[collector-component-factory-lifecycle]]: Resolved configuration supplies the settings factories use to create components.
 - [[collector-pipeline-architecture]]: Configuration declares the receivers, processors, and exporters in each pipeline.
 - [[opentelemetry-collector-builder-distributions]]: A custom distribution determines which provider implementations are available.
+- [[opamp-supervised-collector-fleet-management]]: Supervisors supply and apply remote configuration through a managed local boundary.
 
 ## Open questions
 

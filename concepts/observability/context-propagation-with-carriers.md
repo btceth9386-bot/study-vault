@@ -12,6 +12,8 @@ related:
   - consistent-probability-sampling
   - llm-observability
   - microservices
+  - agentic-workflow-span-hierarchy
+  - mcp-client-server-trace-correlation
 tags:
   - observability
   - opentelemetry
@@ -44,6 +46,8 @@ Service A receives a request with trace ID `abc`, starts a span, and calls Servi
 - [[consistent-probability-sampling]]: Sampling decisions need propagation so downstream services make compatible decisions.
 - [[llm-observability]]: Tool calls and service requests in an AI workflow need shared context to remain traceable.
 - [[microservices]]: Network boundaries are exactly where propagation prevents distributed debugging from breaking apart.
+- [[agentic-workflow-span-hierarchy]]: Propagation preserves parent-child context when agent work crosses processes.
+- [[mcp-client-server-trace-correlation]]: MCP client and server spans depend on injection and extraction across their boundary.
 
 ## Open questions
 

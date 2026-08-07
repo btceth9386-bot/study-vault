@@ -11,6 +11,7 @@ related:
   - collector-pipeline-architecture
   - otlp-vendor-neutral-telemetry-protocol
   - collector-extensions
+  - collector-storage-extensions
 tags:
   - observability
   - opentelemetry
@@ -42,6 +43,7 @@ If a telemetry backend returns HTTP 503 for two minutes, an exporter can queue a
 - [[collector-pipeline-architecture]]: Resilience controls the final delivery step of a pipeline.
 - [[otlp-vendor-neutral-telemetry-protocol]]: OTLP exporters apply these protections while delivering standard telemetry.
 - [[collector-extensions]]: A storage extension can make an export queue durable across restarts.
+- [[collector-storage-extensions]]: Storage extensions provide the persistent state used by durable queues.
 
 ## Open questions
 

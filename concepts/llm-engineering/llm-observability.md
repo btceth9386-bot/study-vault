@@ -3,10 +3,11 @@ id: llm-observability
 title: LLM Observability
 depth: 2
 lab_status: not-started
-last_reviewed: 2026-05-04
-review_due: 2026-05-07
+last_reviewed: 2026-08-07
+review_due: 2026-08-10
 sources:
   - sources/repos/langfuse-langfuse
+  - sources/repos/open-telemetry-semantic-conventions-genai/
 related:
   - llm-as-judge-evaluation
   - prompt-version-management
@@ -27,6 +28,8 @@ related:
   - metrics-views-and-aggregations
   - consistent-probability-sampling
   - collector-pipeline-architecture
+  - genai-operation-span-taxonomy
+  - genai-streaming-telemetry-lifecycle
 tags:
   - llm-engineering
   - observability
@@ -87,3 +90,12 @@ The fix is no longer guesswork: update retrieval data, compare prompt version 12
 
 - Which LLM fields should be captured by default, and which should be redacted for privacy?
 - How should teams balance full trace visibility against storage cost and sensitive-data risk?
+
+## OpenTelemetry GenAI refinements
+
+OpenTelemetry adds a portable way to break an AI request into spans for inference, retrieval, memory, and tool work. For streaming responses, one inference span stays open until the final chunk so it can include both time to first chunk and final usage data.
+
+Content capture should be opt-in. Prompts, responses, tool arguments, retrieved documents, and memory records can expose private data or create large telemetry payloads; ordinary operational fields remain useful even when that content is omitted.
+
+- [[genai-operation-span-taxonomy]]: Supplies distinct boundaries for the operations inside an AI request.
+- [[genai-streaming-telemetry-lifecycle]]: Preserves both perceived responsiveness and completed-stream facts.

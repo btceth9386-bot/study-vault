@@ -12,6 +12,7 @@ related:
   - mcp-capability-negotiation-handshake
   - mcp-oauth-protected-resource-discovery
   - protocol-based-agent-access-surface
+  - mcp-client-server-trace-correlation
 tags:
   - llm-engineering
   - mcp
@@ -48,6 +49,7 @@ Both servers can expose `tools/list` and `tools/call`; only the transport setup 
 - [[mcp-capability-negotiation-handshake]]: Both transports begin with the same logical initialization phase.
 - [[mcp-oauth-protected-resource-discovery]]: Remote HTTP deployments need a discoverable authorization model.
 - [[protocol-based-agent-access-surface]]: MCP transport choices are one part of exposing an operations agent to remote clients.
+- [[mcp-client-server-trace-correlation]]: The correlation model keeps method semantics visible over either stdio or HTTP.
 
 ## Open questions
 

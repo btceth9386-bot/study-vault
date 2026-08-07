@@ -1,0 +1,5 @@
+- **Splunk HEC Exporter Client**: [exporter/splunkhecexporter/client.go:54-93]()
+- **Splunk HEC Receiver Implementation**: [receiver/splunkhecreceiver/receiver.go:85-180]()
+- **Splunk Enterprise Scraper**: [receiver/splunkenterprisereceiver/scraper.go:34-250]()
+- **Shared Splunk Constants**: [internal/splunk/common.go:7-26]()
+- **Metadata Definitions**: [receiver/splunkenterprisereceiver/metadata.yaml:1-167]()

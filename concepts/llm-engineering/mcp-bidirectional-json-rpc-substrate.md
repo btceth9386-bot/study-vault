@@ -12,6 +12,7 @@ related:
   - mcp-transport-separation
   - mcp-schema-generation-pipeline
   - toolsets-and-mcp-unified-tool-surface
+  - mcp-client-server-trace-correlation
 tags:
   - llm-engineering
   - mcp
@@ -49,6 +50,7 @@ The first line asks for available tools, the second answers, and the third annou
 - [[mcp-transport-separation]]: The same JSON-RPC messages can travel over different transports.
 - [[mcp-schema-generation-pipeline]]: The schema pipeline defines and validates the messages exchanged over JSON-RPC.
 - [[toolsets-and-mcp-unified-tool-surface]]: A unified tool surface is one higher-level use of MCP messages.
+- [[mcp-client-server-trace-correlation]]: Correlated spans make the client and server sides of a JSON-RPC method visible in one trace.
 
 ## Open questions
 

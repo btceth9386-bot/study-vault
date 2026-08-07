@@ -1,0 +1,29 @@
+type: repo
+title: OpenTelemetry Semantic Conventions for Generative AI
+url: https://github.com/open-telemetry/semantic-conventions-genai
+authors:
+  - OpenTelemetry Authors
+language: en
+date_consumed: 2026-08-07
+date_added: 2026-08-07
+estimated_time: 2 hours
+status: processed
+related_concepts:
+  - genai-operation-span-taxonomy
+  - agentic-workflow-span-hierarchy
+  - opt-in-genai-content-recording
+  - genai-structured-telemetry-content
+  - genai-streaming-telemetry-lifecycle
+  - genai-cross-signal-observability
+  - cross-provider-genai-telemetry-refinements
+  - mcp-client-server-trace-correlation
+  - executable-semantic-convention-reference-scenarios
+  - llm-observability
+  - semantic-conventions-as-telemetry-schema
+  - context-propagation-with-carriers
+tags:
+  - opentelemetry
+  - observability
+  - generative-ai
+  - semantic-conventions
+  - tracing

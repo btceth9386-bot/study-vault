@@ -12,6 +12,7 @@ related:
   - release-readiness-blast-radius-review
   - llm-observability
   - learned-operational-knowledge-files
+  - agentic-workflow-span-hierarchy
 tags:
   - llm-engineering
   - aws
@@ -44,6 +45,7 @@ A Lambda function starts timing out after a deployment. The topology shows that 
 - [[release-readiness-blast-radius-review]]: Release review uses topology to estimate which services a change could affect.
 - [[llm-observability]]: Observability data becomes more useful when attached to services, dependencies, and request paths.
 - [[learned-operational-knowledge-files]]: Learned topology summaries are one way the agent preserves environment structure for future tasks.
+- [[agentic-workflow-span-hierarchy]]: The hierarchy shows which workflow and agent step produced each topology-aware operation.
 
 ## Open questions
 

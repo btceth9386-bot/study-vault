@@ -1,0 +1,27 @@
+type: repo
+title: open-telemetry/semantic-conventions
+url: https://github.com/open-telemetry/semantic-conventions
+authors:
+  - OpenTelemetry Authors
+language: en
+date_consumed: 2026-08-07
+date_added: 2026-08-07
+estimated_time: 3-4h
+status: processed
+related_concepts:
+  - semantic-convention-model-as-source-of-truth
+  - semantic-attribute-registry-reuse
+  - telemetry-attribute-requirement-levels
+  - semantic-convention-stability-lifecycle
+  - telemetry-schema-migration-mappings
+  - semantic-convention-validation-and-generation
+  - domain-owned-semantic-conventions
+  - semantic-conventions-as-telemetry-schema
+  - telemetry-signal-model
+  - resource-bound-telemetry-identity
+tags:
+  - observability
+  - opentelemetry
+  - semantic-conventions
+  - telemetry
+  - schema-evolution
