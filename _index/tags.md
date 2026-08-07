@@ -66,6 +66,17 @@
 - [protocol-based-agent-access-surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md) - Protocol-Based Agent Access Surface
 - [release-readiness-blast-radius-review](../concepts/llm-engineering/release-readiness-blast-radius-review.md) - Release Readiness Blast-Radius Review
 
+## collector
+
+- [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
+- [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
+- [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
+- [collector-connectors](../concepts/observability/collector-connectors.md) - OpenTelemetry Collector Connectors
+- [collector-extensions](../concepts/observability/collector-extensions.md) - Collector Extensions
+- [collector-configuration-providers](../concepts/observability/collector-configuration-providers.md) - Collector Configuration Providers and Resolution
+- [collector-exporter-resilience](../concepts/observability/collector-exporter-resilience.md) - Collector Exporter Resilience
+- [opentelemetry-collector-builder-distributions](../concepts/observability/opentelemetry-collector-builder-distributions.md) - Custom Distributions with the OpenTelemetry Collector Builder
+
 ## car-repair
 
 - [busted-informal-broken](../concepts/english/busted-informal-broken.md) - Busted as Informal Broken
@@ -156,7 +167,12 @@
 ## distributed-systems
 
 - [cap-theorem](../concepts/system-design/cap-theorem.md) - CAP Theorem
+- [consistent-probability-sampling](../concepts/observability/consistent-probability-sampling.md) - Consistent Probability Sampling
+- [context-propagation-with-carriers](../concepts/observability/context-propagation-with-carriers.md) - Context Propagation with Carriers
 - [eventual-consistency](../concepts/system-design/eventual-consistency.md) - Eventual Consistency
+- [otlp-vendor-neutral-telemetry-protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md) - OTLP as a Vendor-Neutral Telemetry Protocol
+- [resource-bound-telemetry-identity](../concepts/observability/resource-bound-telemetry-identity.md) - Resource-Bound Telemetry Identity
+- [semantic-conventions-as-telemetry-schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md) - Semantic Conventions as Telemetry Schema
 
 ## dspy
 
@@ -485,10 +501,45 @@
 
 ## observability
 
+- [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
+- [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
+- [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
+- [collector-connectors](../concepts/observability/collector-connectors.md) - OpenTelemetry Collector Connectors
+- [collector-extensions](../concepts/observability/collector-extensions.md) - OpenTelemetry Collector Extensions
+- [collector-configuration-providers](../concepts/observability/collector-configuration-providers.md) - Collector Configuration Providers and Resolution
+- [collector-exporter-resilience](../concepts/observability/collector-exporter-resilience.md) - Collector Exporter Resilience
+- [opentelemetry-collector-builder-distributions](../concepts/observability/opentelemetry-collector-builder-distributions.md) - Custom Distributions with the OpenTelemetry Collector Builder
+- [consistent-probability-sampling](../concepts/observability/consistent-probability-sampling.md) - Consistent Probability Sampling
+- [context-propagation-with-carriers](../concepts/observability/context-propagation-with-carriers.md) - Context Propagation with Carriers
 - [devops-agent-topology-context](../concepts/llm-engineering/devops-agent-topology-context.md) - DevOps Agent Topology Context
 - [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
 - [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
 - [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability
+- [metrics-views-and-aggregations](../concepts/observability/metrics-views-and-aggregations.md) - Metrics Views and Aggregations
+- [opentelemetry-api-sdk-separation](../concepts/observability/opentelemetry-api-sdk-separation.md) - OpenTelemetry API-SDK Separation
+- [otlp-vendor-neutral-telemetry-protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md) - OTLP as a Vendor-Neutral Telemetry Protocol
+- [resource-bound-telemetry-identity](../concepts/observability/resource-bound-telemetry-identity.md) - Resource-Bound Telemetry Identity
+- [semantic-conventions-as-telemetry-schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md) - Semantic Conventions as Telemetry Schema
+- [telemetry-signal-model](../concepts/observability/telemetry-signal-model.md) - Telemetry Signal Model
+
+## opentelemetry
+
+- [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
+- [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
+- [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
+- [collector-connectors](../concepts/observability/collector-connectors.md) - OpenTelemetry Collector Connectors
+- [collector-extensions](../concepts/observability/collector-extensions.md) - OpenTelemetry Collector Extensions
+- [collector-configuration-providers](../concepts/observability/collector-configuration-providers.md) - Collector Configuration Providers and Resolution
+- [collector-exporter-resilience](../concepts/observability/collector-exporter-resilience.md) - Collector Exporter Resilience
+- [opentelemetry-collector-builder-distributions](../concepts/observability/opentelemetry-collector-builder-distributions.md) - Custom Distributions with the OpenTelemetry Collector Builder
+- [consistent-probability-sampling](../concepts/observability/consistent-probability-sampling.md) - Consistent Probability Sampling
+- [context-propagation-with-carriers](../concepts/observability/context-propagation-with-carriers.md) - Context Propagation with Carriers
+- [metrics-views-and-aggregations](../concepts/observability/metrics-views-and-aggregations.md) - Metrics Views and Aggregations
+- [opentelemetry-api-sdk-separation](../concepts/observability/opentelemetry-api-sdk-separation.md) - OpenTelemetry API-SDK Separation
+- [otlp-vendor-neutral-telemetry-protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md) - OTLP as a Vendor-Neutral Telemetry Protocol
+- [resource-bound-telemetry-identity](../concepts/observability/resource-bound-telemetry-identity.md) - Resource-Bound Telemetry Identity
+- [semantic-conventions-as-telemetry-schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md) - Semantic Conventions as Telemetry Schema
+- [telemetry-signal-model](../concepts/observability/telemetry-signal-model.md) - Telemetry Signal Model
 
 ## open-source
 

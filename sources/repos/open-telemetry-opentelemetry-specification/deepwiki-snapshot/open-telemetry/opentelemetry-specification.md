@@ -1,0 +1,31 @@
+# opentelemetry-specification Documentation Index
+
+This file contains links to all extracted documents.
+Please refer to the files below for detailed information.
+
+- [Introduction](opentelemetry-specification/Introduction.md)
+- [OpenTelemetry Specification Overview](opentelemetry-specification/OpenTelemetry_Specification_Overview.md)
+- [Getting Started and Repository Structure](opentelemetry-specification/Getting_Started_and_Repository_Structure.md)
+- [Specification Principles and Design Goals](opentelemetry-specification/Specification_Principles_and_Design_Goals.md)
+- [OpenTelemetry Architecture](opentelemetry-specification/OpenTelemetry_Architecture.md)
+- [Common Data Model and Attributes](opentelemetry-specification/Common_Data_Model_and_Attributes.md)
+- [Resource SDK](opentelemetry-specification/Resource_SDK.md)
+- [Entities](opentelemetry-specification/Entities.md)
+- [Core Components](opentelemetry-specification/Core_Components.md)
+- [Metrics System](opentelemetry-specification/Metrics_System.md)
+- [Logging System](opentelemetry-specification/Logging_System.md)
+- [Context API and Baggage](opentelemetry-specification/Context_API_and_Baggage.md)
+- [Propagators and Carriers](opentelemetry-specification/Propagators_and_Carriers.md)
+- [Exporters and Protocol](opentelemetry-specification/Exporters_and_Protocol.md)
+- [OTLP Exporters](opentelemetry-specification/OTLP_Exporters.md)
+- [Environment Variable Configuration](opentelemetry-specification/Environment_Variable_Configuration.md)
+- [Declarative Configuration](opentelemetry-specification/Declarative_Configuration.md)
+- [Semantic Conventions](opentelemetry-specification/Semantic_Conventions.md)
+- [Migration and Compatibility](opentelemetry-specification/Migration_and_Compatibility.md)
+- [OpenTracing and OpenCensus Compatibility](opentelemetry-specification/OpenTracing_and_OpenCensus_Compatibility.md)
+- [Prometheus and OpenMetrics Compatibility](opentelemetry-specification/Prometheus_and_OpenMetrics_Compatibility.md)
+- [Development Process](opentelemetry-specification/Development_Process.md)
+- [Spec Compliance Matrix](opentelemetry-specification/Spec_Compliance_Matrix.md)
+- [Advanced Topics](opentelemetry-specification/Advanced_Topics.md)
+- [Metrics Data Model](opentelemetry-specification/Metrics_Data_Model.md)
+- [Glossary](opentelemetry-specification/Glossary.md)

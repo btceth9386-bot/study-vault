@@ -5,6 +5,10 @@
 - [Web Scalability: From Single Server to Production](../topics/web-scalability.md) — 11 concepts · 6–8h · Follow the growth arc from a single machine to a redundant multi-tier architecture.
 - [Distributed Systems Foundations](../topics/distributed-systems-foundations.md) — 16 concepts · 5–6h · Build the reasoning model for CAP, consistency, async messaging, microservices, and distributed data design.
 
+## Observability
+
+- [OpenTelemetry Foundations](../topics/opentelemetry-foundations.md) — 16 concepts · 6–8h · Build portable telemetry from signals and instrumentation through Collector pipelines, configuration, delivery, and sampling.
+
 ## LLM Engineering
 
 - [Production LLM Engineering](../topics/production-llm-engineering.md) — 43 concepts · 16–20h · The complete stack: observability, evaluation, LangChain + LangGraph, DSPy optimization, and durable pipelines.

@@ -1,0 +1,28 @@
+type: repo
+title: open-telemetry/opentelemetry-collector
+url: https://github.com/open-telemetry/opentelemetry-collector
+authors:
+  - OpenTelemetry Authors
+language: en
+date_consumed: 2026-08-07
+date_added: 2026-08-07
+estimated_time: 4-5h
+status: processed
+related_concepts:
+  - collector-pipeline-architecture
+  - collector-component-factory-lifecycle
+  - collector-pdata-ownership-at-fanout
+  - collector-connectors
+  - collector-extensions
+  - opentelemetry-collector-builder-distributions
+  - collector-configuration-providers
+  - collector-exporter-resilience
+  - telemetry-signal-model
+  - otlp-vendor-neutral-telemetry-protocol
+  - llm-observability
+tags:
+  - observability
+  - opentelemetry
+  - telemetry
+  - collector
+  - go

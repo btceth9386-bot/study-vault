@@ -18,6 +18,15 @@ related:
   - devops-agent-topology-context
   - autonomous-incident-investigation
   - proactive-incident-prevention-loop
+  - opentelemetry-api-sdk-separation
+  - telemetry-signal-model
+  - context-propagation-with-carriers
+  - resource-bound-telemetry-identity
+  - semantic-conventions-as-telemetry-schema
+  - otlp-vendor-neutral-telemetry-protocol
+  - metrics-views-and-aggregations
+  - consistent-probability-sampling
+  - collector-pipeline-architecture
 tags:
   - llm-engineering
   - observability
@@ -64,6 +73,15 @@ The fix is no longer guesswork: update retrieval data, compare prompt version 12
 - [[devops-agent-topology-context]]: Operational telemetry is easier to interpret when it is attached to services, dependencies, and request paths.
 - [[autonomous-incident-investigation]]: Incident agents depend on observability data as their evidence base.
 - [[proactive-incident-prevention-loop]]: Prevention recommendations need historical operational signals to find recurring failure modes.
+- [[opentelemetry-api-sdk-separation]]: OpenTelemetry keeps AI instrumentation independent from the runtime exporter and backend.
+- [[telemetry-signal-model]]: Traces, metrics, logs, and baggage provide the general observability model beneath LLM-specific data.
+- [[context-propagation-with-carriers]]: Context propagation keeps an AI workflow trace intact across services and tool calls.
+- [[resource-bound-telemetry-identity]]: Resource attributes identify the service and deployment that emitted a trace or metric.
+- [[semantic-conventions-as-telemetry-schema]]: Shared attribute names keep telemetry portable and comparable across systems.
+- [[otlp-vendor-neutral-telemetry-protocol]]: OTLP carries LLM telemetry to collectors and backends without application-level vendor lock-in.
+- [[metrics-views-and-aggregations]]: Views control the cost and shape of exported LLM latency and token metrics.
+- [[consistent-probability-sampling]]: Consistent sampling preserves complete distributed traces while limiting observability cost.
+- [[collector-pipeline-architecture]]: Collector pipelines route AI telemetry to one or more backends without changing application instrumentation.
 
 ## Open questions
 

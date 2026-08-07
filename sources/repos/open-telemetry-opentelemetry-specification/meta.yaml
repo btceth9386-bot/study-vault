@@ -1,0 +1,26 @@
+type: repo
+title: open-telemetry/opentelemetry-specification
+url: https://github.com/open-telemetry/opentelemetry-specification
+authors:
+  - OpenTelemetry Authors
+language: en
+date_consumed: 2026-08-07
+date_added: 2026-08-07
+estimated_time: 3-4h
+status: processed
+tags:
+  - observability
+  - opentelemetry
+  - telemetry
+  - distributed-systems
+related_concepts:
+  - opentelemetry-api-sdk-separation
+  - telemetry-signal-model
+  - context-propagation-with-carriers
+  - resource-bound-telemetry-identity
+  - semantic-conventions-as-telemetry-schema
+  - otlp-vendor-neutral-telemetry-protocol
+  - metrics-views-and-aggregations
+  - consistent-probability-sampling
+  - llm-observability
+  - microservices
