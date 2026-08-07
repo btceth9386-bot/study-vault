@@ -13,6 +13,11 @@ related:
   - async-processing
   - eventual-consistency
   - langgraph-remotegraph-server-execution
+  - context-propagation-with-carriers
+  - resource-bound-telemetry-identity
+  - semantic-conventions-as-telemetry-schema
+  - consistent-probability-sampling
+  - collector-pipeline-architecture
 tags:
   - system-design
   - architecture
@@ -54,6 +59,11 @@ Each service scales independently: the Feed Service might need 50 instances duri
 - [[async-processing]]: Services communicate asynchronously via message queues to avoid tight coupling and blocking calls.
 - [[eventual-consistency]]: Without cross-service transactions, data consistency between services is eventual by nature.
 - [[langgraph-remotegraph-server-execution]]: A deployed LangGraph can act as a service boundary while still exposing graph-native operations.
+- [[context-propagation-with-carriers]]: HTTP and messaging carriers keep trace identity intact as requests cross service boundaries.
+- [[resource-bound-telemetry-identity]]: Resource attributes identify the service and runtime that emitted each signal.
+- [[semantic-conventions-as-telemetry-schema]]: Common field names make cross-service telemetry queries portable.
+- [[consistent-probability-sampling]]: Coordinated sampling keeps retained traces complete across independently deployed services.
+- [[collector-pipeline-architecture]]: A Collector pipeline centralizes telemetry routing across independently deployed services.
 
 ## Open questions
 

@@ -1,0 +1,31 @@
+# opentelemetry-collector Documentation Index
+
+This file contains links to all extracted documents.
+Please refer to the files below for detailed information.
+
+- [Introduction](opentelemetry-collector/Introduction.md)
+- [Overview](opentelemetry-collector/Overview.md)
+- [Architecture](opentelemetry-collector/Architecture.md)
+- [Component Model](opentelemetry-collector/Component_Model.md)
+- [Module Structure and Dependencies](opentelemetry-collector/Module_Structure_and_Dependencies.md)
+- [Pipeline and Data Flow](opentelemetry-collector/Pipeline_and_Data_Flow.md)
+- [URI Expansion and Dynamic Configuration](opentelemetry-collector/URI_Expansion_and_Dynamic_Configuration.md)
+- [Receivers](opentelemetry-collector/Receivers.md)
+- [Connectors and Extensions](opentelemetry-collector/Connectors_and_Extensions.md)
+- [OTLP Protocol Implementation](opentelemetry-collector/OTLP_Protocol_Implementation.md)
+- [OTLP Receiver](opentelemetry-collector/OTLP_Receiver.md)
+- [OTLP Exporters](opentelemetry-collector/OTLP_Exporters.md)
+- [Service Initialization and Lifecycle](opentelemetry-collector/Service_Initialization_and_Lifecycle.md)
+- [Builder Configuration](opentelemetry-collector/Builder_Configuration.md)
+- [Metadata Generator mdatagen](opentelemetry-collector/Metadata_Generator_mdatagen.md)
+- [Build Process and Distribution Examples](opentelemetry-collector/Build_Process_and_Distribution_Examples.md)
+- [Development Workflow](opentelemetry-collector/Development_Workflow.md)
+- [Code Generation Tools](opentelemetry-collector/Code_Generation_Tools.md)
+- [GitHub Actions Workflows](opentelemetry-collector/GitHub_Actions_Workflows.md)
+- [Multi-Platform Testing](opentelemetry-collector/Multi-Platform_Testing.md)
+- [Security and Quality Gates](opentelemetry-collector/Security_and_Quality_Gates.md)
+- [Cross-Repository Testing](opentelemetry-collector/Cross-Repository_Testing.md)
+- [Release Process](opentelemetry-collector/Release_Process.md)
+- [Tag beta modules](opentelemetry-collector/Tag_beta_modules.md)
+- [Tag stable modules](opentelemetry-collector/Tag_stable_modules.md)
+- [Glossary](opentelemetry-collector/Glossary.md)
