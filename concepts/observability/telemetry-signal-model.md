@@ -12,11 +12,15 @@ related:
   - context-propagation-with-carriers
   - resource-bound-telemetry-identity
   - semantic-conventions-as-telemetry-schema
+  - semantic-convention-model-as-source-of-truth
+  - telemetry-attribute-requirement-levels
   - otlp-vendor-neutral-telemetry-protocol
   - llm-observability
   - collector-pipeline-architecture
   - collector-pdata-ownership-at-fanout
   - collector-connectors
+  - ottl-declarative-telemetry-transformation
+  - genai-streaming-telemetry-lifecycle
 tags:
   - observability
   - opentelemetry
@@ -27,7 +31,7 @@ tags:
 - **One-sentence definition**: The telemetry signal model gives traces, metrics, logs, and baggage different jobs while letting them describe the same running system.
 - **Why it exists / what problem it solves**: A latency question, a capacity trend, an error event, and request-scoped metadata need different data shapes; forcing them into one signal makes analysis unclear and expensive.
 - **Keywords**: traces, metrics, logs, baggage, correlation, observability
-- **Related concepts**: [[opentelemetry-api-sdk-separation]], [[context-propagation-with-carriers]], [[resource-bound-telemetry-identity]], [[semantic-conventions-as-telemetry-schema]], [[otlp-vendor-neutral-telemetry-protocol]], [[llm-observability]], [[collector-pipeline-architecture]], [[collector-pdata-ownership-at-fanout]], [[collector-connectors]]
+- **Related concepts**: [[opentelemetry-api-sdk-separation]], [[context-propagation-with-carriers]], [[resource-bound-telemetry-identity]], [[semantic-conventions-as-telemetry-schema]], [[semantic-convention-model-as-source-of-truth]], [[telemetry-attribute-requirement-levels]], [[otlp-vendor-neutral-telemetry-protocol]], [[llm-observability]], [[collector-pipeline-architecture]], [[collector-pdata-ownership-at-fanout]], [[collector-connectors]]
 - **Depth**: 2/4
 - **Last updated**: 2026-08-07
 - **Source**: open-telemetry/opentelemetry-specification
@@ -48,11 +52,15 @@ For a slow checkout, a trace shows which service spent two seconds on a database
 - [[context-propagation-with-carriers]]: Propagation keeps trace context and baggage connected across service boundaries.
 - [[resource-bound-telemetry-identity]]: Resources identify the producer behind every signal.
 - [[semantic-conventions-as-telemetry-schema]]: Shared field names make signals understandable across tools.
+- [[semantic-convention-model-as-source-of-truth]]: The model defines the signal-specific fields from which artifacts are derived.
+- [[telemetry-attribute-requirement-levels]]: Requirement levels specify which signal fields are expected in each context.
 - [[otlp-vendor-neutral-telemetry-protocol]]: OTLP carries signals between SDKs, collectors, and backends.
 - [[llm-observability]]: LLM traces and evaluation scores are a domain-specific use of this general model.
 - [[collector-pipeline-architecture]]: Collector pipelines move each signal through configurable routes.
 - [[collector-pdata-ownership-at-fanout]]: Ownership rules protect signal batches when pipelines branch.
 - [[collector-connectors]]: Connectors can route or convert telemetry signals between pipelines.
+- [[ottl-declarative-telemetry-transformation]]: OTTL reads and changes signal fields through context-aware paths.
+- [[genai-streaming-telemetry-lifecycle]]: Streaming uses spans for the complete operation, events for chunk details, and metrics for fleet-wide latency.
 
 ## Open questions
 

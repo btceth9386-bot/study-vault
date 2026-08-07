@@ -12,6 +12,7 @@ related:
   - telemetry-signal-model
   - resource-bound-telemetry-identity
   - llm-observability
+  - genai-cross-signal-observability
 tags:
   - observability
   - opentelemetry
@@ -43,6 +44,7 @@ An API records `http.server.duration` with `http.route`, `status_code`, and `use
 - [[telemetry-signal-model]]: Views shape the metrics branch of the broader signal model.
 - [[resource-bound-telemetry-identity]]: Resource attributes identify the service even when views filter measurement attributes.
 - [[llm-observability]]: Metric views can control the cost and usefulness of model latency, token, and tool-call measurements.
+- [[genai-cross-signal-observability]]: Views shape the aggregate metrics that complement individual GenAI traces.
 
 ## Open questions
 

@@ -17,6 +17,7 @@ related:
 - langgraph-send-command-control-flow
 - langchain-core-message-model-for-langgraph-state
 - autonomous-incident-investigation
+- agentic-workflow-span-hierarchy
 tags:
 - llm-engineering
 - dspy
@@ -71,3 +72,4 @@ The agent can ask the search tool for missing information before answering, inst
 ## Relationship to newly promoted concepts
 
 - [[langchain-core-message-model-for-langgraph-state]]: Added as a promoted concept related to this existing concept.
+- [[agentic-workflow-span-hierarchy]]: Shows the trace structure of each reasoning, action, and observation step.

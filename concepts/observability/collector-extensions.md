@@ -11,6 +11,8 @@ related:
   - collector-component-factory-lifecycle
   - collector-pipeline-architecture
   - collector-exporter-resilience
+  - collector-authentication-extensions
+  - collector-storage-extensions
 tags:
   - observability
   - opentelemetry
@@ -42,6 +44,8 @@ A storage extension provides durable space for an exporter's sending queue. The 
 - [[collector-component-factory-lifecycle]]: Extensions are created, started, and shut down through the common component contract.
 - [[collector-pipeline-architecture]]: Extensions support pipelines while remaining outside their data path.
 - [[collector-exporter-resilience]]: A storage extension can preserve queued exports across restarts.
+- [[collector-authentication-extensions]]: Authentication extensions centralize credential verification and injection.
+- [[collector-storage-extensions]]: Storage extensions provide durable component state.
 
 ## Open questions
 

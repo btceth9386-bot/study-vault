@@ -1,5 +1,16 @@
 # Tags Index
 
+## generative-ai
+
+- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
+- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
+- [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
+- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
+
+## streaming
+
+- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
+
 ## access-control
 
 - [agent-space-access-boundary](../concepts/llm-engineering/agent-space-access-boundary.md) - Agent Space Access Boundary
@@ -13,6 +24,7 @@
 - [langgraph-toolnode-prebuilt-components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) - LangGraph ToolNode and Prebuilt Components
 - [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
 - [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
+- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
 
 ## ai-agent
 
@@ -76,6 +88,14 @@
 - [collector-configuration-providers](../concepts/observability/collector-configuration-providers.md) - Collector Configuration Providers and Resolution
 - [collector-exporter-resilience](../concepts/observability/collector-exporter-resilience.md) - Collector Exporter Resilience
 - [opentelemetry-collector-builder-distributions](../concepts/observability/opentelemetry-collector-builder-distributions.md) - Custom Distributions with the OpenTelemetry Collector Builder
+- [collector-authentication-extensions](../concepts/observability/collector-authentication-extensions.md) - Collector Authentication Extensions
+- [collector-resource-detection-and-enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md) - Collector Resource Detection and Enrichment
+- [collector-storage-extensions](../concepts/observability/collector-storage-extensions.md) - Collector Storage Extensions
+- [kubernetes-collector-placement-modes](../concepts/observability/kubernetes-collector-placement-modes.md) - Kubernetes Collector Placement Modes
+- [metadata-driven-component-stability](../concepts/observability/metadata-driven-component-stability.md) - Metadata-Driven Component Stability
+- [observer-driven-dynamic-receivers](../concepts/observability/observer-driven-dynamic-receivers.md) - Observer-Driven Dynamic Receivers
+- [opamp-supervised-collector-fleet-management](../concepts/observability/opamp-supervised-collector-fleet-management.md) - OpAMP-Supervised Collector Fleet Management
+- [ottl-declarative-telemetry-transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md) - OTTL Declarative Telemetry Transformation
 
 ## car-repair
 
@@ -348,6 +368,7 @@
 ## json-rpc
 
 - [mcp-bidirectional-json-rpc-substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md) - MCP Bidirectional JSON-RPC Substrate
+- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
 
 ## langchain
 
@@ -423,6 +444,7 @@
 - [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
 - [mcp-schema-generation-pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md) - MCP Schema Generation Pipeline
 - [mcp-transport-separation](../concepts/llm-engineering/mcp-transport-separation.md) - MCP Transport Separation
+- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
 - [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
 - [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
 - [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
@@ -501,6 +523,11 @@
 
 ## observability
 
+- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
+- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
+- [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
+- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
+- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
 - [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
 - [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
 - [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
@@ -519,11 +546,31 @@
 - [opentelemetry-api-sdk-separation](../concepts/observability/opentelemetry-api-sdk-separation.md) - OpenTelemetry API-SDK Separation
 - [otlp-vendor-neutral-telemetry-protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md) - OTLP as a Vendor-Neutral Telemetry Protocol
 - [resource-bound-telemetry-identity](../concepts/observability/resource-bound-telemetry-identity.md) - Resource-Bound Telemetry Identity
+- [domain-owned-semantic-conventions](../concepts/observability/domain-owned-semantic-conventions.md) - Domain-Owned Semantic Conventions
+- [semantic-attribute-registry-reuse](../concepts/observability/semantic-attribute-registry-reuse.md) - Semantic Attribute Registry Reuse
 - [semantic-conventions-as-telemetry-schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md) - Semantic Conventions as Telemetry Schema
+- [semantic-convention-model-as-source-of-truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md) - Semantic Convention Model as Source of Truth
+- [semantic-convention-stability-lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md) - Semantic Convention Stability Lifecycle
+- [semantic-convention-validation-and-generation](../concepts/observability/semantic-convention-validation-and-generation.md) - Semantic Convention Validation and Generation
+- [telemetry-attribute-requirement-levels](../concepts/observability/telemetry-attribute-requirement-levels.md) - Telemetry Attribute Requirement Levels
+- [telemetry-schema-migration-mappings](../concepts/observability/telemetry-schema-migration-mappings.md) - Telemetry Schema Migration Mappings
 - [telemetry-signal-model](../concepts/observability/telemetry-signal-model.md) - Telemetry Signal Model
+- [collector-authentication-extensions](../concepts/observability/collector-authentication-extensions.md) - Collector Authentication Extensions
+- [collector-resource-detection-and-enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md) - Collector Resource Detection and Enrichment
+- [collector-storage-extensions](../concepts/observability/collector-storage-extensions.md) - Collector Storage Extensions
+- [kubernetes-collector-placement-modes](../concepts/observability/kubernetes-collector-placement-modes.md) - Kubernetes Collector Placement Modes
+- [metadata-driven-component-stability](../concepts/observability/metadata-driven-component-stability.md) - Metadata-Driven Component Stability
+- [observer-driven-dynamic-receivers](../concepts/observability/observer-driven-dynamic-receivers.md) - Observer-Driven Dynamic Receivers
+- [opamp-supervised-collector-fleet-management](../concepts/observability/opamp-supervised-collector-fleet-management.md) - OpAMP-Supervised Collector Fleet Management
+- [ottl-declarative-telemetry-transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md) - OTTL Declarative Telemetry Transformation
 
 ## opentelemetry
 
+- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
+- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
+- [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
+- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
+- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
 - [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
 - [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
 - [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
@@ -538,8 +585,34 @@
 - [opentelemetry-api-sdk-separation](../concepts/observability/opentelemetry-api-sdk-separation.md) - OpenTelemetry API-SDK Separation
 - [otlp-vendor-neutral-telemetry-protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md) - OTLP as a Vendor-Neutral Telemetry Protocol
 - [resource-bound-telemetry-identity](../concepts/observability/resource-bound-telemetry-identity.md) - Resource-Bound Telemetry Identity
+- [domain-owned-semantic-conventions](../concepts/observability/domain-owned-semantic-conventions.md) - Domain-Owned Semantic Conventions
+- [semantic-attribute-registry-reuse](../concepts/observability/semantic-attribute-registry-reuse.md) - Semantic Attribute Registry Reuse
 - [semantic-conventions-as-telemetry-schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md) - Semantic Conventions as Telemetry Schema
+- [semantic-convention-model-as-source-of-truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md) - Semantic Convention Model as Source of Truth
+- [semantic-convention-stability-lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md) - Semantic Convention Stability Lifecycle
+- [semantic-convention-validation-and-generation](../concepts/observability/semantic-convention-validation-and-generation.md) - Semantic Convention Validation and Generation
+- [telemetry-attribute-requirement-levels](../concepts/observability/telemetry-attribute-requirement-levels.md) - Telemetry Attribute Requirement Levels
+- [telemetry-schema-migration-mappings](../concepts/observability/telemetry-schema-migration-mappings.md) - Telemetry Schema Migration Mappings
 - [telemetry-signal-model](../concepts/observability/telemetry-signal-model.md) - Telemetry Signal Model
+
+## semantic-conventions
+
+- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
+- [domain-owned-semantic-conventions](../concepts/observability/domain-owned-semantic-conventions.md) - Domain-Owned Semantic Conventions
+- [semantic-attribute-registry-reuse](../concepts/observability/semantic-attribute-registry-reuse.md) - Semantic Attribute Registry Reuse
+- [semantic-convention-model-as-source-of-truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md) - Semantic Convention Model as Source of Truth
+- [semantic-convention-stability-lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md) - Semantic Convention Stability Lifecycle
+- [semantic-convention-validation-and-generation](../concepts/observability/semantic-convention-validation-and-generation.md) - Semantic Convention Validation and Generation
+- [telemetry-attribute-requirement-levels](../concepts/observability/telemetry-attribute-requirement-levels.md) - Telemetry Attribute Requirement Levels
+- [telemetry-schema-migration-mappings](../concepts/observability/telemetry-schema-migration-mappings.md) - Telemetry Schema Migration Mappings
+- [collector-authentication-extensions](../concepts/observability/collector-authentication-extensions.md) - Collector Authentication Extensions
+- [collector-resource-detection-and-enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md) - Collector Resource Detection and Enrichment
+- [collector-storage-extensions](../concepts/observability/collector-storage-extensions.md) - Collector Storage Extensions
+- [kubernetes-collector-placement-modes](../concepts/observability/kubernetes-collector-placement-modes.md) - Kubernetes Collector Placement Modes
+- [metadata-driven-component-stability](../concepts/observability/metadata-driven-component-stability.md) - Metadata-Driven Component Stability
+- [observer-driven-dynamic-receivers](../concepts/observability/observer-driven-dynamic-receivers.md) - Observer-Driven Dynamic Receivers
+- [opamp-supervised-collector-fleet-management](../concepts/observability/opamp-supervised-collector-fleet-management.md) - OpAMP-Supervised Collector Fleet Management
+- [ottl-declarative-telemetry-transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md) - OTTL Declarative Telemetry Transformation
 
 ## open-source
 
@@ -606,6 +679,7 @@
 ## provider-integrations
 
 - [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
+- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
 
 ## python
 
@@ -740,6 +814,10 @@
 
 ## tracing
 
+- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
+- [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
+- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
+- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
 - [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
 - [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
 

@@ -3,14 +3,16 @@ id: standardized-message-content-blocks
 title: Standardized Message Content Blocks
 depth: 2
 lab_status: not-started
-last_reviewed: 2026-05-05
-review_due: 2026-05-08
+last_reviewed: 2026-08-07
+review_due: 2026-08-10
 sources:
   - sources/repos/langchain-ai-langchain
+  - sources/repos/open-telemetry-semantic-conventions-genai/
 related:
   - provider-chat-model-wrappers-in-langgraph-nodes
   - langchain-tool-schema-contract
   - langgraph-stategraph-state-schema
+  - genai-operation-span-taxonomy
 tags:
   - llm-engineering
   - langchain
@@ -60,3 +62,9 @@ The graph code can branch on block type instead of guessing whether a provider e
 
 - Which content block types should be stored in checkpoints for debugging, and which should be trimmed for privacy or cost?
 - How should application code degrade when a provider cannot emit the same block types as another provider?
+
+## Telemetry schema refinement
+
+The same typed-parts idea also makes telemetry portable. OpenTelemetry schemas can represent input and output messages, tool definitions, retrieval documents, and memory records without flattening them into ambiguous strings. Capture remains opt-in because these payloads can be sensitive.
+
+- [[genai-operation-span-taxonomy]]: Operation spans can reference these structured payload shapes when content capture is enabled.

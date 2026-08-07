@@ -13,6 +13,9 @@ related:
   - collector-extensions
   - collector-configuration-providers
   - opentelemetry-collector-builder-distributions
+  - metadata-driven-component-stability
+  - observer-driven-dynamic-receivers
+  - opamp-supervised-collector-fleet-management
 tags:
   - observability
   - opentelemetry
@@ -46,6 +49,9 @@ When configuration enables an OTLP receiver and an OTLP exporter, their factorie
 - [[collector-extensions]]: Extensions use the same lifecycle while serving outside the data path.
 - [[collector-configuration-providers]]: Resolved configuration is the input to factory creation.
 - [[opentelemetry-collector-builder-distributions]]: A custom distribution chooses which factories are registered.
+- [[metadata-driven-component-stability]]: Metadata records the maturity and ownership of factory-created components.
+- [[observer-driven-dynamic-receivers]]: Dynamic discovery creates and stops receiver instances through the shared lifecycle.
+- [[opamp-supervised-collector-fleet-management]]: A Supervisor manages the Collector runtime that operates component lifecycles.
 
 ## Open questions
 

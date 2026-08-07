@@ -12,6 +12,7 @@ related:
   - collector-configuration-providers
   - collector-pipeline-architecture
   - otlp-vendor-neutral-telemetry-protocol
+  - metadata-driven-component-stability
 tags:
   - observability
   - opentelemetry
@@ -44,6 +45,7 @@ A team that only receives OTLP and exports to one backend can build a distributi
 - [[collector-configuration-providers]]: The manifest selects which configuration URI schemes the binary can resolve.
 - [[collector-pipeline-architecture]]: The generated binary hosts the pipelines declared in runtime configuration.
 - [[otlp-vendor-neutral-telemetry-protocol]]: OTLP support exists only when the appropriate receiver or exporter modules are selected.
+- [[metadata-driven-component-stability]]: Component metadata informs which maturity levels a distribution can safely promise.
 
 ## Open questions
 

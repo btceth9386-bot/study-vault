@@ -1,0 +1,29 @@
+type: repo
+title: open-telemetry/opentelemetry-collector-contrib
+url: https://github.com/open-telemetry/opentelemetry-collector-contrib
+authors:
+  - OpenTelemetry Authors
+language: en
+date_consumed: 2026-08-07
+date_added: 2026-08-07
+estimated_time: 5 hours
+status: processed
+related_concepts:
+  - ottl-declarative-telemetry-transformation
+  - kubernetes-collector-placement-modes
+  - collector-resource-detection-and-enrichment
+  - observer-driven-dynamic-receivers
+  - opamp-supervised-collector-fleet-management
+  - metadata-driven-component-stability
+  - collector-authentication-extensions
+  - collector-storage-extensions
+  - collector-pipeline-architecture
+  - collector-component-factory-lifecycle
+  - collector-connectors
+  - collector-extensions
+  - collector-exporter-resilience
+tags:
+  - observability
+  - opentelemetry
+  - collector
+  - telemetry-pipeline

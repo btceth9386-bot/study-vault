@@ -7,7 +7,7 @@
 
 ## Observability
 
-- [OpenTelemetry Foundations](../topics/opentelemetry-foundations.md) — 16 concepts · 6–8h · Build portable telemetry from signals and instrumentation through Collector pipelines, configuration, delivery, and sampling.
+- [OpenTelemetry Foundations](../topics/opentelemetry-foundations.md) — 37 concepts · 10–12h · Build portable telemetry from signals and instrumentation through semantic-convention evolution, GenAI telemetry, production Collector deployment, transformation, durability, and fleet operations.
 
 ## LLM Engineering
 

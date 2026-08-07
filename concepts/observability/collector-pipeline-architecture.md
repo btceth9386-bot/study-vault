@@ -19,6 +19,9 @@ related:
   - opentelemetry-collector-builder-distributions
   - llm-observability
   - microservices
+  - collector-authentication-extensions
+  - kubernetes-collector-placement-modes
+  - ottl-declarative-telemetry-transformation
 tags:
   - observability
   - opentelemetry
@@ -58,6 +61,9 @@ A `traces` pipeline can receive OTLP from several services, remove sensitive att
 - [[opentelemetry-collector-builder-distributions]]: A custom distribution determines which pipeline components are available.
 - [[llm-observability]]: Collector pipelines can route AI application telemetry without vendor-specific application code.
 - [[microservices]]: Pipelines collect evidence that helps debug work spanning many services.
+- [[collector-authentication-extensions]]: Authentication extensions protect pipeline boundaries.
+- [[kubernetes-collector-placement-modes]]: Placement decides where pipeline stages can access and process telemetry.
+- [[ottl-declarative-telemetry-transformation]]: OTTL applies configurable transformations within a pipeline.
 
 ## Open questions
 
