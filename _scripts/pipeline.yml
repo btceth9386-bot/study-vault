@@ -21,31 +21,31 @@ kb_root: "."
 agents:
   - name: claude-ingest
     role: ingest
-    command: "codex exec --yolo --skip-git-repo-check --model gpt-5.4 resume --last"
+    command: "codex exec --yolo --skip-git-repo-check --model gpt-5.6-sol resume --last"
     max_concurrent: 1
     env: {}
 
   - name: codex-review
     role: review
-    command: "claude --dangerously-skip-permissions --continue --model claude-sonnet-4-6 -p"
+    command: "claude --dangerously-skip-permissions --continue --model claude-sonnet-5 -p"
     max_concurrent: 1
     env: {}
 
   - name: codex-promote
     role: promote
-    command: "codex exec --yolo --skip-git-repo-check --model gpt-5.5 resume --last"
+    command: "codex exec --yolo --skip-git-repo-check --model gpt-5.6-terra resume --last"
     max_concurrent: 1
     env: {}
 
   - name: claude-topics
     role: topics
-    command: "codex exec --yolo --skip-git-repo-check --model gpt-5.5 resume --last"
+    command: "codex exec --yolo --skip-git-repo-check --model gpt-5.6-terra resume --last"
     max_concurrent: 1
     env: {}
 
   - name: codex-lab
     role: lab
-    command: "codex exec --yolo --skip-git-repo-check --model gpt-5.5 resume --last"
+    command: "codex exec --yolo --skip-git-repo-check --model gpt-5.6-sol resume --last"
     max_concurrent: 1
     env: {}
 
