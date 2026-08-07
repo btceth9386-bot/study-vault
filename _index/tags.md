@@ -1,22 +1,12 @@
 # Tags Index
 
-## generative-ai
-
-- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
-- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
-- [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
-- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
-
-## streaming
-
-- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
-
 ## access-control
 
 - [agent-space-access-boundary](../concepts/llm-engineering/agent-space-access-boundary.md) - Agent Space Access Boundary
 
 ## agents
 
+- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
 - [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
 - [langgraph-channels-and-reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md) - LangGraph Channels and Reducers
 - [langgraph-runtime-dependency-injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md) - LangGraph Runtime Dependency Injection
@@ -24,7 +14,6 @@
 - [langgraph-toolnode-prebuilt-components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) - LangGraph ToolNode and Prebuilt Components
 - [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
 - [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
-- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
 
 ## ai-agent
 
@@ -78,25 +67,6 @@
 - [protocol-based-agent-access-surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md) - Protocol-Based Agent Access Surface
 - [release-readiness-blast-radius-review](../concepts/llm-engineering/release-readiness-blast-radius-review.md) - Release Readiness Blast-Radius Review
 
-## collector
-
-- [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
-- [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
-- [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
-- [collector-connectors](../concepts/observability/collector-connectors.md) - OpenTelemetry Collector Connectors
-- [collector-extensions](../concepts/observability/collector-extensions.md) - Collector Extensions
-- [collector-configuration-providers](../concepts/observability/collector-configuration-providers.md) - Collector Configuration Providers and Resolution
-- [collector-exporter-resilience](../concepts/observability/collector-exporter-resilience.md) - Collector Exporter Resilience
-- [opentelemetry-collector-builder-distributions](../concepts/observability/opentelemetry-collector-builder-distributions.md) - Custom Distributions with the OpenTelemetry Collector Builder
-- [collector-authentication-extensions](../concepts/observability/collector-authentication-extensions.md) - Collector Authentication Extensions
-- [collector-resource-detection-and-enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md) - Collector Resource Detection and Enrichment
-- [collector-storage-extensions](../concepts/observability/collector-storage-extensions.md) - Collector Storage Extensions
-- [kubernetes-collector-placement-modes](../concepts/observability/kubernetes-collector-placement-modes.md) - Kubernetes Collector Placement Modes
-- [metadata-driven-component-stability](../concepts/observability/metadata-driven-component-stability.md) - Metadata-Driven Component Stability
-- [observer-driven-dynamic-receivers](../concepts/observability/observer-driven-dynamic-receivers.md) - Observer-Driven Dynamic Receivers
-- [opamp-supervised-collector-fleet-management](../concepts/observability/opamp-supervised-collector-fleet-management.md) - OpAMP-Supervised Collector Fleet Management
-- [ottl-declarative-telemetry-transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md) - OTTL Declarative Telemetry Transformation
-
 ## car-repair
 
 - [busted-informal-broken](../concepts/english/busted-informal-broken.md) - Busted as Informal Broken
@@ -117,6 +87,25 @@
 
 - [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
 - [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
+
+## collector
+
+- [collector-authentication-extensions](../concepts/observability/collector-authentication-extensions.md) - Collector Authentication Extensions
+- [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
+- [collector-configuration-providers](../concepts/observability/collector-configuration-providers.md) - Collector Configuration Providers and Resolution
+- [collector-connectors](../concepts/observability/collector-connectors.md) - OpenTelemetry Collector Connectors
+- [collector-exporter-resilience](../concepts/observability/collector-exporter-resilience.md) - Collector Exporter Resilience
+- [collector-extensions](../concepts/observability/collector-extensions.md) - OpenTelemetry Collector Extensions
+- [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
+- [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
+- [collector-resource-detection-and-enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md) - Collector Resource Detection and Enrichment
+- [collector-storage-extensions](../concepts/observability/collector-storage-extensions.md) - Collector Storage Extensions
+- [kubernetes-collector-placement-modes](../concepts/observability/kubernetes-collector-placement-modes.md) - Kubernetes Collector Placement Modes
+- [metadata-driven-component-stability](../concepts/observability/metadata-driven-component-stability.md) - Metadata-Driven Component Stability
+- [observer-driven-dynamic-receivers](../concepts/observability/observer-driven-dynamic-receivers.md) - Observer-Driven Dynamic Receivers
+- [opamp-supervised-collector-fleet-management](../concepts/observability/opamp-supervised-collector-fleet-management.md) - OpAMP-Supervised Collector Fleet Management
+- [opentelemetry-collector-builder-distributions](../concepts/observability/opentelemetry-collector-builder-distributions.md) - Custom Distributions with the OpenTelemetry Collector Builder
+- [ottl-declarative-telemetry-transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md) - OTTL Declarative Telemetry Transformation
 
 ## comedy
 
@@ -142,17 +131,17 @@
 - [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
 - [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
 - [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
+- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
+- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
 - [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
+- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
 - [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
 - [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
 - [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
 - [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
 - [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
 - [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
 - [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
 - [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
@@ -214,34 +203,34 @@
 - [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
 - [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
 - [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
+- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
 - [construction-plans-vocabulary](../concepts/english/construction-plans-vocabulary.md) - Construction Plans Vocabulary
 - [construction-tools-vocabulary](../concepts/english/construction-tools-vocabulary.md) - Construction Tools Vocabulary
+- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
 - [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
+- [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
 - [deck-backyard-platform-vocabulary](../concepts/english/deck-backyard-platform-vocabulary.md) - Deck as Backyard Platform Vocabulary
+- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
 - [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb
+- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
 - [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
 - [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
-- [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
-- [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
-- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
 - [its-not-my-day-idiom](../concepts/english/its-not-my-day-idiom.md) - Idiom: It's Not My Day
-- [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb
-- [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
+- [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
 - [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
 - [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
 - [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
 - [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
 - [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
 - [ripped-informal-body-description](../concepts/english/ripped-informal-body-description.md) - Ripped as Informal Body Description
+- [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb
 - [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
 - [stand-up-comedy-vocabulary](../concepts/english/stand-up-comedy-vocabulary.md) - Stand-up Comedy Vocabulary
 - [supermarket-checkout-vocabulary](../concepts/english/supermarket-checkout-vocabulary.md) - Supermarket Checkout Vocabulary
 - [take-apart-put-back-together](../concepts/english/take-apart-put-back-together.md) - Take Apart and Put Back Together
+- [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
 - [up-to-code-phrase](../concepts/english/up-to-code-phrase.md) - Up to Code Phrase
 - [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
 
@@ -282,6 +271,13 @@
 - [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
 - [ripped-informal-body-description](../concepts/english/ripped-informal-body-description.md) - Ripped as Informal Body Description
 
+## generative-ai
+
+- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
+- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
+- [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
+- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
+
 ## gym
 
 - [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
@@ -293,10 +289,10 @@
 
 ## habits
 
-- [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
 - [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
-- [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
 - [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
+- [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
+- [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
 - [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
 - [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
 
@@ -325,29 +321,29 @@
 - [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
 - [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
 - [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
+- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
+- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
 - [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
+- [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
+- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
+- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
 - [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
 - [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
-- [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
-- [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
-- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
 - [its-not-my-day-idiom](../concepts/english/its-not-my-day-idiom.md) - Idiom: It's Not My Day
-- [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb
-- [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
+- [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
 - [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
 - [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
 - [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
 - [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
 - [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
 - [ripped-informal-body-description](../concepts/english/ripped-informal-body-description.md) - Ripped as Informal Body Description
+- [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb
 - [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
 - [stand-up-comedy-vocabulary](../concepts/english/stand-up-comedy-vocabulary.md) - Stand-up Comedy Vocabulary
 - [take-apart-put-back-together](../concepts/english/take-apart-put-back-together.md) - Take Apart and Put Back Together
+- [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
 - [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
 
 ## incident-response
@@ -433,9 +429,9 @@
 - [langgraph-store-long-term-memory](../concepts/llm-engineering/langgraph-store-long-term-memory.md) - LangGraph Store Long-Term Memory
 - [langgraph-toolnode-prebuilt-components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) - LangGraph ToolNode and Prebuilt Components
 - [learned-operational-knowledge-files](../concepts/llm-engineering/learned-operational-knowledge-files.md) - Learned Operational Knowledge Files
+- [llm-as-judge-evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md) - LLM-as-Judge Evaluation
 - [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability
 - [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
-- [llm-as-judge-evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md) - LLM-as-Judge Evaluation
 - [mcp-bidirectional-json-rpc-substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md) - MCP Bidirectional JSON-RPC Substrate
 - [mcp-capability-negotiation-handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md) - MCP Capability Negotiation Handshake
 - [mcp-elicitation-for-structured-user-input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md) - MCP Elicitation for Structured User Input
@@ -444,7 +440,6 @@
 - [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
 - [mcp-schema-generation-pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md) - MCP Schema Generation Pipeline
 - [mcp-transport-separation](../concepts/llm-engineering/mcp-transport-separation.md) - MCP Transport Separation
-- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
 - [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
 - [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
 - [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
@@ -472,6 +467,7 @@
 - [acp-agent-backend-for-ides](../concepts/llm-engineering/acp-agent-backend-for-ides.md) - ACP Agent Backend for IDEs
 - [mcp-bidirectional-json-rpc-substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md) - MCP Bidirectional JSON-RPC Substrate
 - [mcp-capability-negotiation-handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md) - MCP Capability Negotiation Handshake
+- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
 - [mcp-elicitation-for-structured-user-input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md) - MCP Elicitation for Structured User Input
 - [mcp-extension-negotiation-framework](../concepts/llm-engineering/mcp-extension-negotiation-framework.md) - MCP Extension Negotiation Framework
 - [mcp-oauth-protected-resource-discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md) - MCP OAuth Protected Resource Discovery
@@ -524,100 +520,89 @@
 ## observability
 
 - [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
-- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
-- [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
-- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
-- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
-- [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
+- [collector-authentication-extensions](../concepts/observability/collector-authentication-extensions.md) - Collector Authentication Extensions
 - [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
-- [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
-- [collector-connectors](../concepts/observability/collector-connectors.md) - OpenTelemetry Collector Connectors
-- [collector-extensions](../concepts/observability/collector-extensions.md) - OpenTelemetry Collector Extensions
 - [collector-configuration-providers](../concepts/observability/collector-configuration-providers.md) - Collector Configuration Providers and Resolution
+- [collector-connectors](../concepts/observability/collector-connectors.md) - OpenTelemetry Collector Connectors
 - [collector-exporter-resilience](../concepts/observability/collector-exporter-resilience.md) - Collector Exporter Resilience
-- [opentelemetry-collector-builder-distributions](../concepts/observability/opentelemetry-collector-builder-distributions.md) - Custom Distributions with the OpenTelemetry Collector Builder
+- [collector-extensions](../concepts/observability/collector-extensions.md) - OpenTelemetry Collector Extensions
+- [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
+- [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
+- [collector-resource-detection-and-enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md) - Collector Resource Detection and Enrichment
+- [collector-storage-extensions](../concepts/observability/collector-storage-extensions.md) - Collector Storage Extensions
 - [consistent-probability-sampling](../concepts/observability/consistent-probability-sampling.md) - Consistent Probability Sampling
 - [context-propagation-with-carriers](../concepts/observability/context-propagation-with-carriers.md) - Context Propagation with Carriers
+- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
 - [devops-agent-topology-context](../concepts/llm-engineering/devops-agent-topology-context.md) - DevOps Agent Topology Context
-- [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
-- [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
-- [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability
-- [metrics-views-and-aggregations](../concepts/observability/metrics-views-and-aggregations.md) - Metrics Views and Aggregations
-- [opentelemetry-api-sdk-separation](../concepts/observability/opentelemetry-api-sdk-separation.md) - OpenTelemetry API-SDK Separation
-- [otlp-vendor-neutral-telemetry-protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md) - OTLP as a Vendor-Neutral Telemetry Protocol
-- [resource-bound-telemetry-identity](../concepts/observability/resource-bound-telemetry-identity.md) - Resource-Bound Telemetry Identity
 - [domain-owned-semantic-conventions](../concepts/observability/domain-owned-semantic-conventions.md) - Domain-Owned Semantic Conventions
-- [semantic-attribute-registry-reuse](../concepts/observability/semantic-attribute-registry-reuse.md) - Semantic Attribute Registry Reuse
-- [semantic-conventions-as-telemetry-schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md) - Semantic Conventions as Telemetry Schema
-- [semantic-convention-model-as-source-of-truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md) - Semantic Convention Model as Source of Truth
-- [semantic-convention-stability-lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md) - Semantic Convention Stability Lifecycle
-- [semantic-convention-validation-and-generation](../concepts/observability/semantic-convention-validation-and-generation.md) - Semantic Convention Validation and Generation
-- [telemetry-attribute-requirement-levels](../concepts/observability/telemetry-attribute-requirement-levels.md) - Telemetry Attribute Requirement Levels
-- [telemetry-schema-migration-mappings](../concepts/observability/telemetry-schema-migration-mappings.md) - Telemetry Schema Migration Mappings
-- [telemetry-signal-model](../concepts/observability/telemetry-signal-model.md) - Telemetry Signal Model
-- [collector-authentication-extensions](../concepts/observability/collector-authentication-extensions.md) - Collector Authentication Extensions
-- [collector-resource-detection-and-enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md) - Collector Resource Detection and Enrichment
-- [collector-storage-extensions](../concepts/observability/collector-storage-extensions.md) - Collector Storage Extensions
-- [kubernetes-collector-placement-modes](../concepts/observability/kubernetes-collector-placement-modes.md) - Kubernetes Collector Placement Modes
-- [metadata-driven-component-stability](../concepts/observability/metadata-driven-component-stability.md) - Metadata-Driven Component Stability
-- [observer-driven-dynamic-receivers](../concepts/observability/observer-driven-dynamic-receivers.md) - Observer-Driven Dynamic Receivers
-- [opamp-supervised-collector-fleet-management](../concepts/observability/opamp-supervised-collector-fleet-management.md) - OpAMP-Supervised Collector Fleet Management
-- [ottl-declarative-telemetry-transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md) - OTTL Declarative Telemetry Transformation
-
-## opentelemetry
-
-- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
-- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
+- [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
 - [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
 - [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
+- [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
+- [kubernetes-collector-placement-modes](../concepts/observability/kubernetes-collector-placement-modes.md) - Kubernetes Collector Placement Modes
+- [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability
 - [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
-- [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
-- [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
-- [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
-- [collector-connectors](../concepts/observability/collector-connectors.md) - OpenTelemetry Collector Connectors
-- [collector-extensions](../concepts/observability/collector-extensions.md) - OpenTelemetry Collector Extensions
-- [collector-configuration-providers](../concepts/observability/collector-configuration-providers.md) - Collector Configuration Providers and Resolution
-- [collector-exporter-resilience](../concepts/observability/collector-exporter-resilience.md) - Collector Exporter Resilience
-- [opentelemetry-collector-builder-distributions](../concepts/observability/opentelemetry-collector-builder-distributions.md) - Custom Distributions with the OpenTelemetry Collector Builder
-- [consistent-probability-sampling](../concepts/observability/consistent-probability-sampling.md) - Consistent Probability Sampling
-- [context-propagation-with-carriers](../concepts/observability/context-propagation-with-carriers.md) - Context Propagation with Carriers
+- [metadata-driven-component-stability](../concepts/observability/metadata-driven-component-stability.md) - Metadata-Driven Component Stability
 - [metrics-views-and-aggregations](../concepts/observability/metrics-views-and-aggregations.md) - Metrics Views and Aggregations
+- [observer-driven-dynamic-receivers](../concepts/observability/observer-driven-dynamic-receivers.md) - Observer-Driven Dynamic Receivers
+- [opamp-supervised-collector-fleet-management](../concepts/observability/opamp-supervised-collector-fleet-management.md) - OpAMP-Supervised Collector Fleet Management
 - [opentelemetry-api-sdk-separation](../concepts/observability/opentelemetry-api-sdk-separation.md) - OpenTelemetry API-SDK Separation
+- [opentelemetry-collector-builder-distributions](../concepts/observability/opentelemetry-collector-builder-distributions.md) - Custom Distributions with the OpenTelemetry Collector Builder
 - [otlp-vendor-neutral-telemetry-protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md) - OTLP as a Vendor-Neutral Telemetry Protocol
+- [ottl-declarative-telemetry-transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md) - OTTL Declarative Telemetry Transformation
 - [resource-bound-telemetry-identity](../concepts/observability/resource-bound-telemetry-identity.md) - Resource-Bound Telemetry Identity
-- [domain-owned-semantic-conventions](../concepts/observability/domain-owned-semantic-conventions.md) - Domain-Owned Semantic Conventions
 - [semantic-attribute-registry-reuse](../concepts/observability/semantic-attribute-registry-reuse.md) - Semantic Attribute Registry Reuse
-- [semantic-conventions-as-telemetry-schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md) - Semantic Conventions as Telemetry Schema
 - [semantic-convention-model-as-source-of-truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md) - Semantic Convention Model as Source of Truth
 - [semantic-convention-stability-lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md) - Semantic Convention Stability Lifecycle
 - [semantic-convention-validation-and-generation](../concepts/observability/semantic-convention-validation-and-generation.md) - Semantic Convention Validation and Generation
+- [semantic-conventions-as-telemetry-schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md) - Semantic Conventions as Telemetry Schema
 - [telemetry-attribute-requirement-levels](../concepts/observability/telemetry-attribute-requirement-levels.md) - Telemetry Attribute Requirement Levels
 - [telemetry-schema-migration-mappings](../concepts/observability/telemetry-schema-migration-mappings.md) - Telemetry Schema Migration Mappings
 - [telemetry-signal-model](../concepts/observability/telemetry-signal-model.md) - Telemetry Signal Model
-
-## semantic-conventions
-
-- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
-- [domain-owned-semantic-conventions](../concepts/observability/domain-owned-semantic-conventions.md) - Domain-Owned Semantic Conventions
-- [semantic-attribute-registry-reuse](../concepts/observability/semantic-attribute-registry-reuse.md) - Semantic Attribute Registry Reuse
-- [semantic-convention-model-as-source-of-truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md) - Semantic Convention Model as Source of Truth
-- [semantic-convention-stability-lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md) - Semantic Convention Stability Lifecycle
-- [semantic-convention-validation-and-generation](../concepts/observability/semantic-convention-validation-and-generation.md) - Semantic Convention Validation and Generation
-- [telemetry-attribute-requirement-levels](../concepts/observability/telemetry-attribute-requirement-levels.md) - Telemetry Attribute Requirement Levels
-- [telemetry-schema-migration-mappings](../concepts/observability/telemetry-schema-migration-mappings.md) - Telemetry Schema Migration Mappings
-- [collector-authentication-extensions](../concepts/observability/collector-authentication-extensions.md) - Collector Authentication Extensions
-- [collector-resource-detection-and-enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md) - Collector Resource Detection and Enrichment
-- [collector-storage-extensions](../concepts/observability/collector-storage-extensions.md) - Collector Storage Extensions
-- [kubernetes-collector-placement-modes](../concepts/observability/kubernetes-collector-placement-modes.md) - Kubernetes Collector Placement Modes
-- [metadata-driven-component-stability](../concepts/observability/metadata-driven-component-stability.md) - Metadata-Driven Component Stability
-- [observer-driven-dynamic-receivers](../concepts/observability/observer-driven-dynamic-receivers.md) - Observer-Driven Dynamic Receivers
-- [opamp-supervised-collector-fleet-management](../concepts/observability/opamp-supervised-collector-fleet-management.md) - OpAMP-Supervised Collector Fleet Management
-- [ottl-declarative-telemetry-transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md) - OTTL Declarative Telemetry Transformation
 
 ## open-source
 
 - [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
 - [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
+
+## opentelemetry
+
+- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
+- [collector-authentication-extensions](../concepts/observability/collector-authentication-extensions.md) - Collector Authentication Extensions
+- [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
+- [collector-configuration-providers](../concepts/observability/collector-configuration-providers.md) - Collector Configuration Providers and Resolution
+- [collector-connectors](../concepts/observability/collector-connectors.md) - OpenTelemetry Collector Connectors
+- [collector-exporter-resilience](../concepts/observability/collector-exporter-resilience.md) - Collector Exporter Resilience
+- [collector-extensions](../concepts/observability/collector-extensions.md) - OpenTelemetry Collector Extensions
+- [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
+- [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
+- [collector-resource-detection-and-enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md) - Collector Resource Detection and Enrichment
+- [collector-storage-extensions](../concepts/observability/collector-storage-extensions.md) - Collector Storage Extensions
+- [consistent-probability-sampling](../concepts/observability/consistent-probability-sampling.md) - Consistent Probability Sampling
+- [context-propagation-with-carriers](../concepts/observability/context-propagation-with-carriers.md) - Context Propagation with Carriers
+- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
+- [domain-owned-semantic-conventions](../concepts/observability/domain-owned-semantic-conventions.md) - Domain-Owned Semantic Conventions
+- [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
+- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
+- [kubernetes-collector-placement-modes](../concepts/observability/kubernetes-collector-placement-modes.md) - Kubernetes Collector Placement Modes
+- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
+- [metadata-driven-component-stability](../concepts/observability/metadata-driven-component-stability.md) - Metadata-Driven Component Stability
+- [metrics-views-and-aggregations](../concepts/observability/metrics-views-and-aggregations.md) - Metrics Views and Aggregations
+- [observer-driven-dynamic-receivers](../concepts/observability/observer-driven-dynamic-receivers.md) - Observer-Driven Dynamic Receivers
+- [opamp-supervised-collector-fleet-management](../concepts/observability/opamp-supervised-collector-fleet-management.md) - OpAMP-Supervised Collector Fleet Management
+- [opentelemetry-api-sdk-separation](../concepts/observability/opentelemetry-api-sdk-separation.md) - OpenTelemetry API-SDK Separation
+- [opentelemetry-collector-builder-distributions](../concepts/observability/opentelemetry-collector-builder-distributions.md) - Custom Distributions with the OpenTelemetry Collector Builder
+- [otlp-vendor-neutral-telemetry-protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md) - OTLP as a Vendor-Neutral Telemetry Protocol
+- [ottl-declarative-telemetry-transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md) - OTTL Declarative Telemetry Transformation
+- [resource-bound-telemetry-identity](../concepts/observability/resource-bound-telemetry-identity.md) - Resource-Bound Telemetry Identity
+- [semantic-attribute-registry-reuse](../concepts/observability/semantic-attribute-registry-reuse.md) - Semantic Attribute Registry Reuse
+- [semantic-convention-model-as-source-of-truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md) - Semantic Convention Model as Source of Truth
+- [semantic-convention-stability-lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md) - Semantic Convention Stability Lifecycle
+- [semantic-convention-validation-and-generation](../concepts/observability/semantic-convention-validation-and-generation.md) - Semantic Convention Validation and Generation
+- [semantic-conventions-as-telemetry-schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md) - Semantic Conventions as Telemetry Schema
+- [telemetry-attribute-requirement-levels](../concepts/observability/telemetry-attribute-requirement-levels.md) - Telemetry Attribute Requirement Levels
+- [telemetry-schema-migration-mappings](../concepts/observability/telemetry-schema-migration-mappings.md) - Telemetry Schema Migration Mappings
+- [telemetry-signal-model](../concepts/observability/telemetry-signal-model.md) - Telemetry Signal Model
 
 ## optimization
 
@@ -678,8 +663,8 @@
 
 ## provider-integrations
 
-- [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
 - [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
+- [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
 
 ## python
 
@@ -732,16 +717,27 @@
 - [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
 - [ssl-termination](../concepts/system-design/ssl-termination.md) - SSL Termination
 
+## semantic-conventions
+
+- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
+- [domain-owned-semantic-conventions](../concepts/observability/domain-owned-semantic-conventions.md) - Domain-Owned Semantic Conventions
+- [semantic-attribute-registry-reuse](../concepts/observability/semantic-attribute-registry-reuse.md) - Semantic Attribute Registry Reuse
+- [semantic-convention-model-as-source-of-truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md) - Semantic Convention Model as Source of Truth
+- [semantic-convention-stability-lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md) - Semantic Convention Stability Lifecycle
+- [semantic-convention-validation-and-generation](../concepts/observability/semantic-convention-validation-and-generation.md) - Semantic Convention Validation and Generation
+- [telemetry-attribute-requirement-levels](../concepts/observability/telemetry-attribute-requirement-levels.md) - Telemetry Attribute Requirement Levels
+- [telemetry-schema-migration-mappings](../concepts/observability/telemetry-schema-migration-mappings.md) - Telemetry Schema Migration Mappings
+
 ## skills
 
 - [learned-operational-knowledge-files](../concepts/llm-engineering/learned-operational-knowledge-files.md) - Learned Operational Knowledge Files
 
 ## smoking
 
-- [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
 - [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
-- [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
 - [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
+- [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
+- [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
 - [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
 - [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
 
@@ -758,6 +754,10 @@
 - [langgraph-runtime-dependency-injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md) - LangGraph Runtime Dependency Injection
 - [langgraph-stategraph-state-schema](../concepts/llm-engineering/langgraph-stategraph-state-schema.md) - LangGraph StateGraph State Schema
 - [langgraph-toolnode-prebuilt-components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) - LangGraph ToolNode and Prebuilt Components
+
+## streaming
+
+- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
 
 ## structured-output
 
@@ -815,11 +815,11 @@
 ## tracing
 
 - [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
+- [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
 - [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
 - [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
-- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
-- [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
 - [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
+- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
 
 ## transport
 
@@ -831,21 +831,21 @@
 - [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
 - [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
 - [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
+- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
 - [construction-plans-vocabulary](../concepts/english/construction-plans-vocabulary.md) - Construction Plans Vocabulary
 - [construction-tools-vocabulary](../concepts/english/construction-tools-vocabulary.md) - Construction Tools Vocabulary
+- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
 - [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
 - [deck-backyard-platform-vocabulary](../concepts/english/deck-backyard-platform-vocabulary.md) - Deck as Backyard Platform Vocabulary
+- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
 - [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb
 - [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
 - [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
 - [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
 - [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
 - [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
 - [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
 - [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
 - [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
 - [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
