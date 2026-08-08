@@ -107,7 +107,7 @@ The key difference is that assessment calibrates the scaffold instead of blockin
 
 This is now wired into Exobrain:
 
-- `_scripts/prompts/lab-design.md` — autonomous: generates artifacts under `labs/<lab-id>/`, builds an English human-review HTML with `web-artifacts-builder`, publishes the sanitized page through Wrangler to Cloudflare Pages, and sets included concepts to `lab_status: scaffolded`.
+- `_scripts/prompts/lab-design.md` — autonomous: generates artifacts under `labs/<lab-id>/`, builds an English human-review HTML with `web-artifacts-builder`, uses Wrangler to create a dedicated `<lab-id>-review` Cloudflare Pages application and publish the sanitized page, and sets included concepts to `lab_status: scaffolded`.
 - `_scripts/prompts/lab-review.md` — interactive: run AFTER you fill the predictions and core. The AI grades, corrects, emits `application` quiz cards for your mistakes (due tomorrow), and updates `lab_status` to `completed`/`explained`. Deliberately NOT automated — automating it would recreate the "AI does it for you" problem.
 
 **Fallback method:** `_scripts/prompts/labs-tiny-from-concept.md` is a lighter, single-shot lab generator (15–45 min, no scaffolding fade, no AI grading, no quiz feedback). Keep it as a fallback: if the full prediction → fill-core → review loop ever feels too slow or heavy for a given concept, drop back to a tiny lab for quick hands-on intuition.

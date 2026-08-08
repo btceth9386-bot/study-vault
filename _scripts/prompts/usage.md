@@ -83,7 +83,7 @@ Read _scripts/prompts/lab-design.md then design a learn-by-building lab for conc
 Read _scripts/prompts/lab-design.md then design a lab combining Kiro CLI and Langfuse for evaluation.
 ```
 
-The agent creates `labs/<lab-id>/`, builds a human-readable review HTML with `web-artifacts-builder`, and deploys only the sanitized review page to the shared `study-vault-labs` Cloudflare Pages project. If deployment is unavailable, the local HTML and retry command remain in the lab folder.
+The agent creates `labs/<lab-id>/`, builds a human-readable review HTML with `web-artifacts-builder`, then uses the `wrangler` skill to create a dedicated Cloudflare Pages application named `<lab-id>-review` and deploy only the sanitized review page. A rerun reuses that lab's own Pages application, never a shared project. If deployment is unavailable, the local HTML and retry commands remain in the lab folder.
 
 Then **you** do the hands-on part:
 1. Open the review URL and confirm the architecture and learning goal.

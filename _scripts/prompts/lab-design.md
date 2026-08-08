@@ -126,15 +126,19 @@ Public safety rules:
 
 ## Cloudflare Pages preview
 
-Use the installed `wrangler` skill and current official Cloudflare documentation. Check Wrangler v4+ and authentication first. If Wrangler v4+ is unavailable, install `wrangler@latest` as a dev dependency inside `labs/<lab-id>/review-site/` and invoke it through `npx`; do not add it to the study-vault root. Reuse one Pages project named `study-vault-labs`; create it only if it does not exist. Deploy each lab as a preview branch named `<lab-id>`:
+Use the installed `wrangler` skill and current official Cloudflare documentation. Check Wrangler v4+ and authentication first. If Wrangler v4+ is unavailable, install `wrangler@latest` as a dev dependency inside `labs/<lab-id>/review-site/` and invoke it through `npx`; do not add it to the study-vault root.
+
+Create a dedicated Cloudflare Pages application for each lab. Name it `<lab-id>-review`; keep the name lowercase and short enough for Cloudflare Pages. On a rerun, reuse only the existing project for that same lab. Never deploy different labs to a shared Pages project.
 
 ```bash
+npx wrangler pages project create <lab-id>-review --production-branch main
+
 npx wrangler pages deploy labs/<lab-id>/pages \
-  --project-name study-vault-labs \
-  --branch <lab-id>
+  --project-name <lab-id>-review \
+  --branch main
 ```
 
-Write the resulting review URL and deployment status to `labs/<lab-id>/deployment.md`. If Wrangler or authentication is unavailable, keep the complete local HTML, record the blocker and exact retry command, and never invent a URL.
+Write the Pages project name, review URL, and deployment status to `labs/<lab-id>/deployment.md`. If Wrangler or authentication is unavailable, keep the complete local HTML, record the blocker and exact retry commands, and never invent a URL.
 
 ## Concept update
 

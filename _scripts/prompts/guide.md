@@ -123,7 +123,7 @@ Start once the learner recognizes the main term and can state its problem or exp
 .venv/bin/python3 _scripts/pipeline.py "Kiro CLI + Langfuse for evaluation" --step lab
 ```
 
-The lab agent creates `labs/<lab-id>/`, uses `web-artifacts-builder` to produce a human-readable review HTML, and uses Wrangler to publish the sanitized page as a Cloudflare Pages preview. Secrets, learner predictions, private answer keys, and completed core solutions must never be published.
+The lab agent creates `labs/<lab-id>/`, uses `web-artifacts-builder` to produce a human-readable review HTML, then uses the Wrangler skill to create a dedicated `<lab-id>-review` Cloudflare Pages application and publish the sanitized page. Secrets, learner predictions, private answer keys, and completed core solutions must never be published.
 
 Then (manually, in order):
 1. Review the published architecture and acceptance criteria.
