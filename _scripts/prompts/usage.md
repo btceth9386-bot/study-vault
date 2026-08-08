@@ -83,6 +83,23 @@ Read _scripts/prompts/lab-design.md then design a learn-by-building lab for conc
 Read _scripts/prompts/lab-design.md then design a lab combining Kiro CLI and Langfuse for evaluation.
 ```
 
+### Advanced integration example
+
+```text
+Read _scripts/prompts/lab-design.md then design an advanced integration lab
+combining Kiro CLI and Langfuse for evaluation.
+
+Complexity: advanced
+Time box: 90-120 minutes
+Setup mode: real-tool
+Include:
+- An end-to-end evaluation dataset and scoring workflow.
+- Kiro CLI execution traced into Langfuse.
+- A baseline-versus-improved comparison.
+- Two intentional failure cases.
+- Observable traces, metrics, and acceptance criteria.
+```
+
 The agent creates `labs/<lab-id>/`, builds a human-readable review HTML with `web-artifacts-builder`, then uses the `wrangler` skill to create a dedicated Cloudflare Pages application named `<lab-id>-review` and deploy only the sanitized review page. A rerun reuses that lab's own Pages application, never a shared project. If deployment is unavailable, the local HTML and retry commands remain in the lab folder.
 
 Then **you** do the hands-on part:
