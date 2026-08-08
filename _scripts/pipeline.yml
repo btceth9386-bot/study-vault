@@ -8,10 +8,9 @@
 #   review    — Step 3: Review drafts against source material
 #   promote   — Step 4: Promote approved drafts to concepts
 #   topics    — Step 5: Generate learning paths from concepts
-#   lab       — Manual-only: generate a fading-scaffold lab for ONE concept
-#               (per-concept, not part of the per-source run; invoke via
-#                `pipeline.py <concept-path> --step lab`). Grading is interactive
-#                and stays manual via _scripts/prompts/lab-review.md.
+#   lab       — Manual-only: generate and publish a learn-by-building lab for
+#               one or more concepts or a concrete integration request. Grading
+#               stays manual via _scripts/prompts/lab-review.md.
 #
 # Step 1 (ingest scripts) and Step 6 (quiz) are run manually.
 # Step 7 (weekly-refine) should be run via crontab separately.
@@ -71,6 +70,8 @@ prompts:
     where the new concepts fit. Only create new topic files if no existing
     path covers the domain. Update _index/topics.md. Write in English.
   lab: >
-    Read _scripts/prompts/lab-design.md then design a fading-scaffold lab for
-    the concept at {source_dir}. Generate the lab artifacts only — do not fill
-    the learner's predictions or the stubbed core. Write all output in English.
+    Read _scripts/prompts/lab-design.md then design a learn-by-building,
+    fading-scaffold lab for this target or request: {source_dir}. Generate the
+    lab and human review site, publish the site as a Cloudflare Pages preview,
+    and do not fill the learner's predictions or stubbed core. Write all output
+    in English.
