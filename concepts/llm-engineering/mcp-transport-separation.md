@@ -13,6 +13,8 @@ related:
   - mcp-oauth-protected-resource-discovery
   - protocol-based-agent-access-surface
   - mcp-client-server-trace-correlation
+  - mcp-interaction-cassette
+  - declarative-mcp-scenario-recording
 tags:
   - llm-engineering
   - mcp
@@ -25,7 +27,7 @@ tags:
 - **One-sentence definition**: MCP keeps its message contract separate from transport, so the same protocol can run through local stdio or remote Streamable HTTP.
 - **Why it exists / what problem it solves**: Local IDE tools and hosted services have different networking needs. Keeping transport separate prevents the ecosystem from inventing a new logical protocol for every deployment style.
 - **Keywords**: stdio, Streamable HTTP, SSE, local process, remote server, transport
-- **Related concepts**: [[mcp-bidirectional-json-rpc-substrate]], [[mcp-capability-negotiation-handshake]], [[mcp-oauth-protected-resource-discovery]], [[protocol-based-agent-access-surface]]
+- **Related concepts**: [[mcp-bidirectional-json-rpc-substrate]], [[mcp-capability-negotiation-handshake]], [[mcp-oauth-protected-resource-discovery]], [[protocol-based-agent-access-surface]], [[mcp-interaction-cassette]], [[declarative-mcp-scenario-recording]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-31
 - **Source**: sources/repos/modelcontextprotocol-modelcontextprotocol/
@@ -50,6 +52,8 @@ Both servers can expose `tools/list` and `tools/call`; only the transport setup 
 - [[mcp-oauth-protected-resource-discovery]]: Remote HTTP deployments need a discoverable authorization model.
 - [[protocol-based-agent-access-surface]]: MCP transport choices are one part of exposing an operations agent to remote clients.
 - [[mcp-client-server-trace-correlation]]: The correlation model keeps method semantics visible over either stdio or HTTP.
+- [[mcp-interaction-cassette]]: A single cassette can preserve sessions delivered over either transport.
+- [[declarative-mcp-scenario-recording]]: A scenario can target either local stdio or remote HTTP recording.
 
 ## Open questions
 

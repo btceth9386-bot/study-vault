@@ -13,6 +13,8 @@ related:
   - mcp-schema-generation-pipeline
   - toolsets-and-mcp-unified-tool-surface
   - mcp-client-server-trace-correlation
+  - mcp-interaction-cassette
+  - deterministic-mcp-replay-matching
 tags:
   - llm-engineering
   - mcp
@@ -25,7 +27,7 @@ tags:
 - **One-sentence definition**: MCP uses JSON-RPC 2.0 as a two-way message layer so clients and servers can both send requests, responses, and notifications.
 - **Why it exists / what problem it solves**: A simple tool API assumes the client always asks and the server always answers. Agent systems need more: a server may ask the host to run a model, collect user input, or report progress. MCP uses one shared message format for both directions.
 - **Keywords**: MCP, JSON-RPC, request, response, notification, bidirectional
-- **Related concepts**: [[mcp-capability-negotiation-handshake]], [[mcp-transport-separation]], [[mcp-schema-generation-pipeline]], [[toolsets-and-mcp-unified-tool-surface]]
+- **Related concepts**: [[mcp-capability-negotiation-handshake]], [[mcp-transport-separation]], [[mcp-schema-generation-pipeline]], [[toolsets-and-mcp-unified-tool-surface]], [[mcp-interaction-cassette]], [[deterministic-mcp-replay-matching]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-31
 - **Source**: sources/repos/modelcontextprotocol-modelcontextprotocol/
@@ -51,6 +53,8 @@ The first line asks for available tools, the second answers, and the third annou
 - [[mcp-schema-generation-pipeline]]: The schema pipeline defines and validates the messages exchanged over JSON-RPC.
 - [[toolsets-and-mcp-unified-tool-surface]]: A unified tool surface is one higher-level use of MCP messages.
 - [[mcp-client-server-trace-correlation]]: Correlated spans make the client and server sides of a JSON-RPC method visible in one trace.
+- [[mcp-interaction-cassette]]: A cassette preserves the JSON-RPC conversation as test evidence.
+- [[deterministic-mcp-replay-matching]]: Replay matches the JSON-RPC requests stored in a cassette.
 
 ## Open questions
 

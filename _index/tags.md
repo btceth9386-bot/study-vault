@@ -408,9 +408,12 @@
 - [adapter-based-llm-optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md) - Adapter-Based LLM Optimization
 - [agent-space-access-boundary](../concepts/llm-engineering/agent-space-access-boundary.md) - Agent Space Access Boundary
 - [autonomous-incident-investigation](../concepts/llm-engineering/autonomous-incident-investigation.md) - Autonomous Incident Investigation
+- [cassette-backed-mcp-pytest-fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md) - Cassette-Backed MCP Pytest Fixtures
 - [caching-strategies](../concepts/system-design/caching-strategies.md) - Caching Strategies
 - [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
 - [change-specific-release-testing](../concepts/llm-engineering/change-specific-release-testing.md) - Change-Specific Release Testing
+- [declarative-mcp-scenario-recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md) - Declarative MCP Scenario Recording
+- [deterministic-mcp-replay-matching](../concepts/llm-engineering/deterministic-mcp-replay-matching.md) - Deterministic MCP Replay Matching
 - [devops-agent-topology-context](../concepts/llm-engineering/devops-agent-topology-context.md) - DevOps Agent Topology Context
 - [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
 - [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures
@@ -440,6 +443,8 @@
 - [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
 - [mcp-schema-generation-pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md) - MCP Schema Generation Pipeline
 - [mcp-transport-separation](../concepts/llm-engineering/mcp-transport-separation.md) - MCP Transport Separation
+- [mcp-interaction-cassette](../concepts/llm-engineering/mcp-interaction-cassette.md) - MCP Interaction Cassette
+- [mcp-record-replay-verify-cycle](../concepts/llm-engineering/mcp-record-replay-verify-cycle.md) - MCP Record-Replay-Verify Cycle
 - [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
 - [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
 - [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
@@ -453,12 +458,14 @@
 - [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
 - [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
 - [reflective-mutation-proposer](../concepts/llm-engineering/reflective-mutation-proposer.md) - Reflective Mutation Proposer
+- [replay-safe-cassette-scrubbing](../concepts/llm-engineering/replay-safe-cassette-scrubbing.md) - Replay-Safe Cassette Scrubbing
 - [release-readiness-blast-radius-review](../concepts/llm-engineering/release-readiness-blast-radius-review.md) - Release Readiness Blast-Radius Review
 - [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
 - [self-improving-agent-skill-memory-loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md) - Self-Improving Agent Skill Memory Loop
 - [sparse-validation-evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md) - Sparse Validation Evaluation
 - [standardized-message-content-blocks](../concepts/llm-engineering/standardized-message-content-blocks.md) - Standardized Message Content Blocks
 - [surgical-context-compression](../concepts/llm-engineering/surgical-context-compression.md) - Surgical Context Compression
+- [volatility-aware-structural-verification](../concepts/llm-engineering/volatility-aware-structural-verification.md) - Volatility-Aware Structural Verification
 - [system-aware-candidate-merge](../concepts/llm-engineering/system-aware-candidate-merge.md) - System-Aware Candidate Merge
 - [toolsets-and-mcp-unified-tool-surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) - Toolsets and MCP Unified Tool Surface
 
@@ -474,6 +481,8 @@
 - [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
 - [mcp-schema-generation-pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md) - MCP Schema Generation Pipeline
 - [mcp-transport-separation](../concepts/llm-engineering/mcp-transport-separation.md) - MCP Transport Separation
+- [mcp-interaction-cassette](../concepts/llm-engineering/mcp-interaction-cassette.md) - MCP Interaction Cassette
+- [mcp-record-replay-verify-cycle](../concepts/llm-engineering/mcp-record-replay-verify-cycle.md) - MCP Record-Replay-Verify Cycle
 - [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
 - [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
 - [persistent-agent-session-restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md) - Persistent Agent Session Restoration
@@ -481,6 +490,11 @@
 - [protocol-based-agent-access-surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md) - Protocol-Based Agent Access Surface
 - [self-improving-agent-skill-memory-loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md) - Self-Improving Agent Skill Memory Loop
 - [surgical-context-compression](../concepts/llm-engineering/surgical-context-compression.md) - Surgical Context Compression
+- [cassette-backed-mcp-pytest-fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md) - Cassette-Backed MCP Pytest Fixtures
+- [declarative-mcp-scenario-recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md) - Declarative MCP Scenario Recording
+- [deterministic-mcp-replay-matching](../concepts/llm-engineering/deterministic-mcp-replay-matching.md) - Deterministic MCP Replay Matching
+- [replay-safe-cassette-scrubbing](../concepts/llm-engineering/replay-safe-cassette-scrubbing.md) - Replay-Safe Cassette Scrubbing
+- [volatility-aware-structural-verification](../concepts/llm-engineering/volatility-aware-structural-verification.md) - Volatility-Aware Structural Verification
 - [toolsets-and-mcp-unified-tool-surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) - Toolsets and MCP Unified Tool Surface
 
 ## mechanic
@@ -692,6 +706,16 @@
 - [s3-first-durability](../concepts/llm-engineering/s3-first-durability.md) - S3-First Durability Pattern
 - [single-point-of-failure](../concepts/system-design/single-point-of-failure.md) - Single Point of Failure
 
+## record-replay
+
+- [cassette-backed-mcp-pytest-fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md) - Cassette-Backed MCP Pytest Fixtures
+- [declarative-mcp-scenario-recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md) - Declarative MCP Scenario Recording
+- [deterministic-mcp-replay-matching](../concepts/llm-engineering/deterministic-mcp-replay-matching.md) - Deterministic MCP Replay Matching
+- [mcp-interaction-cassette](../concepts/llm-engineering/mcp-interaction-cassette.md) - MCP Interaction Cassette
+- [mcp-record-replay-verify-cycle](../concepts/llm-engineering/mcp-record-replay-verify-cycle.md) - MCP Record-Replay-Verify Cycle
+- [replay-safe-cassette-scrubbing](../concepts/llm-engineering/replay-safe-cassette-scrubbing.md) - Replay-Safe Cassette Scrubbing
+- [volatility-aware-structural-verification](../concepts/llm-engineering/volatility-aware-structural-verification.md) - Volatility-Aware Structural Verification
+
 ## retrieval
 
 - [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
@@ -790,6 +814,13 @@
 ## testing
 
 - [change-specific-release-testing](../concepts/llm-engineering/change-specific-release-testing.md) - Change-Specific Release Testing
+- [cassette-backed-mcp-pytest-fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md) - Cassette-Backed MCP Pytest Fixtures
+- [declarative-mcp-scenario-recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md) - Declarative MCP Scenario Recording
+- [deterministic-mcp-replay-matching](../concepts/llm-engineering/deterministic-mcp-replay-matching.md) - Deterministic MCP Replay Matching
+- [mcp-interaction-cassette](../concepts/llm-engineering/mcp-interaction-cassette.md) - MCP Interaction Cassette
+- [mcp-record-replay-verify-cycle](../concepts/llm-engineering/mcp-record-replay-verify-cycle.md) - MCP Record-Replay-Verify Cycle
+- [replay-safe-cassette-scrubbing](../concepts/llm-engineering/replay-safe-cassette-scrubbing.md) - Replay-Safe Cassette Scrubbing
+- [volatility-aware-structural-verification](../concepts/llm-engineering/volatility-aware-structural-verification.md) - Volatility-Aware Structural Verification
 
 ## tool-use
 

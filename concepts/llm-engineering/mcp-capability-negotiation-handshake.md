@@ -14,6 +14,7 @@ related:
   - mcp-elicitation-for-structured-user-input
   - mcp-oauth-protected-resource-discovery
   - mcp-extension-negotiation-framework
+  - mcp-interaction-cassette
 tags:
   - llm-engineering
   - mcp
@@ -26,7 +27,7 @@ tags:
 - **One-sentence definition**: MCP starts with an `initialize` exchange where client and server agree on protocol version and optional features before normal work begins.
 - **Why it exists / what problem it solves**: MCP implementations do not all support the same feature set. The handshake makes support explicit so each side can avoid calling features the other side cannot handle.
 - **Keywords**: initialize, initialized, capabilities, protocol version, graceful degradation
-- **Related concepts**: [[mcp-bidirectional-json-rpc-substrate]], [[mcp-transport-separation]], [[mcp-roots-advisory-boundaries]], [[mcp-elicitation-for-structured-user-input]], [[mcp-oauth-protected-resource-discovery]], [[mcp-extension-negotiation-framework]]
+- **Related concepts**: [[mcp-bidirectional-json-rpc-substrate]], [[mcp-transport-separation]], [[mcp-roots-advisory-boundaries]], [[mcp-elicitation-for-structured-user-input]], [[mcp-oauth-protected-resource-discovery]], [[mcp-extension-negotiation-framework]], [[mcp-interaction-cassette]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-31
 - **Source**: sources/repos/modelcontextprotocol-modelcontextprotocol/
@@ -60,6 +61,7 @@ A server that does not advertise `tools` should not receive `tools/call` request
 - [[mcp-elicitation-for-structured-user-input]]: Elicitation is another optional client capability.
 - [[mcp-oauth-protected-resource-discovery]]: Remote clients complete authorization before relying on the negotiated MCP session.
 - [[mcp-extension-negotiation-framework]]: Extensions reuse the capability negotiation mechanism.
+- [[mcp-interaction-cassette]]: A recorded session preserves the handshake that precedes normal MCP calls.
 
 ## Open questions
 
