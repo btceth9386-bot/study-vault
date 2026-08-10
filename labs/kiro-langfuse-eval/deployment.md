@@ -4,9 +4,10 @@
 
 - Project: `kiro-langfuse-eval-review`
 - Account: `Kimisme9386@gmail.com's Account` (`d2fdb3684575e76cf1be3d922daddebc`)
-- Live URL: **https://kiro-langfuse-eval-review.pages.dev**
-- This deployment's direct URL: https://fcd6e849.kiro-langfuse-eval-review.pages.dev
-- Deployed from: `labs/kiro-langfuse-eval/pages/index.html` (single static file, no build step)
+- Live URL (English): **https://kiro-langfuse-eval-review.pages.dev**
+- Live URL (Traditional Chinese): **https://kiro-langfuse-eval-review.pages.dev/index-zh.html** (each page links to the other via the language-switch pill in the header)
+- This deployment's direct URL: https://15e8d6c8.kiro-langfuse-eval-review.pages.dev
+- Deployed from: `labs/kiro-langfuse-eval/pages/{index.html,index-zh.html}` (two static files, no build step)
 
 ## Redeploy (reuse this same project — do not create a second one)
 
