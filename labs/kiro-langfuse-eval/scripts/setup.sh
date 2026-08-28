@@ -30,10 +30,14 @@ if [ ! -f .env ]; then
   exit 1
 fi
 set -a; source .env; set +a
-for var in KIRO_API_KEY LANGFUSE_PUBLIC_KEY LANGFUSE_SECRET_KEY LANGFUSE_BASE_URL; do
+for var in KIRO_API_KEY JUDGE_PROVIDER JUDGE_API_KEY LANGFUSE_PUBLIC_KEY LANGFUSE_SECRET_KEY LANGFUSE_BASE_URL; do
   [ -n "${!var:-}" ] || { echo "FAIL: $var is empty in .env"; exit 1; }
 done
-echo "OK: required env vars are set"
+case "$JUDGE_PROVIDER" in
+  anthropic|openai|gemini) ;;
+  *) echo "FAIL: JUDGE_PROVIDER='$JUDGE_PROVIDER' is not one of anthropic|openai|gemini (see scripts/lib/judge_client.py)"; exit 1 ;;
+esac
+echo "OK: required env vars are set (including JUDGE_PROVIDER=$JUDGE_PROVIDER — confirm yourself it doesn't share a model family with your Kiro CLI task --model, see spec.md)"
 
 echo
 echo "== 4. Langfuse reachability =="

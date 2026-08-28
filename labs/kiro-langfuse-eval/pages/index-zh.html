@@ -232,7 +232,7 @@
     </div>
     <div class="arrow-row">→</div>
     <div class="col">
-      <div class="box accent"><strong>評審呼叫</strong>獨立的 kiro-cli 呼叫 + 評分規則 prompt</div>
+      <div class="box accent"><strong>評審呼叫</strong>獨立的第三方 provider（不同模型家族）+ 評分規則 prompt</div>
       <div class="box"><strong>Langfuse SDK</strong>dataset.run_experiment(task, evaluators)</div>
     </div>
     <div class="arrow-row">→</div>
@@ -241,7 +241,7 @@
       <div class="box"><strong>Langfuse UI</strong>baseline-v1 vs improved-v1<br/>並排比較</div>
     </div>
   </div>
-  <p>每一筆資料集項目會同時跑兩條平行的資料路徑：<strong>回答路徑</strong>（task → Kiro CLI → output）與<strong>評分路徑</strong>（output + expected_output → 評審 → Evaluation）。第三條獨立的路徑——<strong>成本路徑</strong>——完全跑在 Kiro CLI 自己的行程裡，透過 <code>Stop</code> hook 寫下用量快照，之後再由一個 run 層級的 evaluator 統整。三條路徑最終都會落在同一個 Langfuse dataset run 裡，這也是為什麼「有沒有變好、花了多少錢」這兩個問題可以在同一個畫面上得到答案。</p>
+  <p>每一筆資料集項目會同時跑兩條平行的資料路徑：<strong>回答路徑</strong>（task → Kiro CLI → output）與<strong>評分路徑</strong>（output + expected_output → 一個獨立的評審 provider，刻意不是 Kiro CLI → Evaluation）。第三條獨立的路徑——<strong>成本路徑</strong>——完全跑在 Kiro CLI 自己的行程裡，透過 <code>Stop</code> hook 寫下用量快照，之後再由一個 run 層級的 evaluator 統整；因為評審永遠不會碰到 Kiro CLI，這條成本路徑只反映任務執行本身，不包含評估的額外成本。三條路徑最終都會落在同一個 Langfuse dataset run 裡，這也是為什麼「有沒有變好、花了多少錢」這兩個問題可以在同一個畫面上得到答案。</p>
 </section>
 
 <section id="boundaries">
@@ -252,10 +252,10 @@
       <tr><td>Kiro CLI</td><td>執行 agent、產生回答、觸發生命週期 hooks（<code>Stop</code> 等）</td><td>結構化追蹤、評分、成本彙總——它只負責印出文字然後結束</td></tr>
       <tr><td>Harness（這個 lab 的 Python 程式）</td><td>把 subprocess 呼叫轉成 Langfuse observation；擁有評審的評分規則</td><td>作為「Kiro CLI 是否真的可連線」的判斷依據——那是 Setup 階段的事</td></tr>
       <tr><td><code>Stop</code> hook</td><td>在<em>每一次</em>回應之後觸發用量檢查，不需要 harness 主動去問</td><td>如果 <code>trigger</code> 欄位對不上 Kiro 真正的 trigger 名稱，就什麼都不會發生——見失敗案例二</td></tr>
-      <tr><td>Langfuse</td><td>儲存 trace/score，把它們歸類成可比較的 dataset run，並提供 UI</td><td>自己判斷回答品質好壞——那是評審呼叫在做的事，本質上也只是另一次 Kiro CLI 呼叫</td></tr>
+      <tr><td>Langfuse</td><td>儲存 trace/score，把它們歸類成可比較的 dataset run，並提供 UI</td><td>自己判斷回答品質好壞——那是評審呼叫在做的事，而且刻意跑在跟 task 不同的 provider 上</td></tr>
     </tbody>
   </table>
-  <p>最值得留意的一條介面：<strong>「評審」本身並不是 Langfuse 的功能</strong>。它就是一次普通、獨立的 Kiro CLI 呼叫，只是剛好跑在一個叫做「evaluator」的函式裡面。Langfuse 只是把那次呼叫的輸出被解析出來的分數存起來而已。</p>
+  <p>最值得留意的一條介面：<strong>「評審」本身既不是 Langfuse 的功能，也不是 Kiro CLI</strong>。它是一次普通、獨立的呼叫,打到一個不同模型家族的獨立 provider,只是剛好跑在一個叫做「evaluator」的函式裡面。刻意不讓評審碰 Kiro CLI 有兩個原因：如果評審也走同一個 CLI，會透過同一個 <code>Stop</code> hook 把成本重複算進 task 的用量裡；而且用同一個模型家族評自己的輸出,容易出現偏袒自己家族的系統性偏差。Langfuse 只是把那次呼叫的輸出被解析出來的分數存起來而已。</p>
 </section>
 
 <section id="steps">
@@ -302,9 +302,10 @@
   <table>
     <tbody>
       <tr><td>Kiro CLI</td><td>需要已安裝並完成驗證（API key）。不是每個環境都預裝，開始前請先確認。</td></tr>
+      <tr><td>評審 provider</td><td>跟 Kiro CLI 完全獨立的憑證（Anthropic、OpenAI 或 Gemini，看你手邊有哪個），且模型家族要跟你的 Kiro CLI task 端不同——永遠不會透過 Kiro CLI 發送。</td></tr>
       <tr><td>Langfuse</td><td>一個可連線的 Langfuse 專案（叢集內既有的實例，或 <a href="https://cloud.langfuse.com" target="_blank" rel="noopener">cloud.langfuse.com</a>），並使用你自己的 API key。</td></tr>
       <tr><td>預估時間</td><td>90–120 分鐘，包含閱讀 scaffold 以及兩個失敗案例的調查時間。</td></tr>
-      <tr><td>成本風險</td><td>兩個資料集變體、評審呼叫、加上模型比較任務，總共大約會產生 40–50 次 Kiro CLI 呼叫。如果是計量制方案，建議前後各檢查一次用量。</td></tr>
+      <tr><td>成本風險</td><td>兩個獨立的計費來源：兩個資料集變體加上模型比較任務,大約會產生 25 次 Kiro CLI 呼叫（只有 task 執行）；另外大約 25 次評審 provider 呼叫則另外計費。兩邊都建議前後各檢查一次用量。</td></tr>
       <tr><td>備援方案（mock fallback）</td><td>沒有提供。這個 lab 刻意採用 real-tool 模式——它想教的失敗模式，只有在真正的 CLI 行程與真正的 hook 比對邏輯介入時才會出現。</td></tr>
     </tbody>
   </table>

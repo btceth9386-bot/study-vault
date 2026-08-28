@@ -13,6 +13,7 @@ from typing import Any, Optional
 from langfuse import Evaluation, Langfuse
 
 from kiro_client import call_kiro
+from judge_client import call_judge
 
 LAB_DIR = Path(__file__).resolve().parent.parent
 DATASET_PATH = LAB_DIR / "dataset" / "eval-items.jsonl"
@@ -95,9 +96,13 @@ def judge_score(*, input, output, expected_output=None, metadata=None, **kwargs)
        own case: score on whether the answer *acknowledges* the ambiguity
        or missing policy context, not on whether it matches a "right"
        answer — none exists for that item by design (see item-07).
-    3. Call `call_kiro(...)` with your rubric prompt as a fresh, separate
-       call from the one that produced `output` — the judge must not grade
-       itself using cached output from the same call.
+    3. Call `call_judge(...)` (from judge_client.py) with your rubric
+       prompt — never `call_kiro(...)`. The judge must run on a distinct
+       provider from the task, both so its cost isn't attributed to the
+       task's Kiro credit usage and to avoid self-preference bias from
+       judging output produced by the same model family (see spec.md
+       "Why the task model and the judge model must not be the same
+       provider or model family").
     4. Parse a 1-5 score and a short reason out of the judge's free-text
        reply. Be tolerant of formatting (e.g. a regex for the first digit
        1-5); on a parse failure return value=-1 with the raw judge reply in
@@ -120,9 +125,15 @@ def credit_usage_run_evaluator(*, item_results, **kwargs):
     this run into one run-level score.
 
     Reads USAGE_LOG_PATH, which scripts/log_usage.sh appends to every time
-    the Stop hook fires. If the hook never fired (wrong trigger name, wrong
-    path, disabled), this reports 0 snapshots for a run that clearly made
-    Kiro CLI calls — that gap is failure case 2 (see spec.md).
+    the Stop hook fires. The hook only fires on Kiro CLI responses — judge
+    calls go through judge_client.call_judge() and never touch Kiro CLI, so
+    this count reflects task-side credit usage only, never evaluation cost.
+    For an 8-item dataset, a healthy run therefore logs exactly 8 snapshots.
+    If the hook never fired at all (wrong trigger name, wrong path,
+    disabled), this reports 0 snapshots for a run that clearly made Kiro CLI
+    calls — that gap is failure case 2 (see spec.md). If you see 16 instead
+    of 8, judge_score() is still (incorrectly) calling call_kiro() instead
+    of call_judge().
     """
     if not USAGE_LOG_PATH.exists():
         return Evaluation(

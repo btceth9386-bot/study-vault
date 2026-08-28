@@ -231,7 +231,7 @@
     </div>
     <div class="arrow-row">→</div>
     <div class="col">
-      <div class="box accent"><strong>Judge call</strong>independent kiro-cli call + rubric prompt</div>
+      <div class="box accent"><strong>Judge call</strong>separate provider, different model family + rubric prompt</div>
       <div class="box"><strong>Langfuse SDK</strong>dataset.run_experiment(task, evaluators)</div>
     </div>
     <div class="arrow-row">→</div>
@@ -240,7 +240,7 @@
       <div class="box"><strong>Langfuse UI</strong>baseline-v1 vs improved-v1<br/>side-by-side comparison</div>
     </div>
   </div>
-  <p>Two data paths run in parallel per dataset item: the <strong>answer path</strong> (task → Kiro CLI → output) and the <strong>score path</strong> (output + expected_output → judge → Evaluation). A third, independent path — the <strong>cost path</strong> — runs entirely inside Kiro CLI's own process via the <code>Stop</code> hook, writing usage snapshots that a run-level evaluator later aggregates. All three paths land in the same Langfuse dataset run, which is what makes "was it better, and what did it cost" answerable from one screen.</p>
+  <p>Two data paths run in parallel per dataset item: the <strong>answer path</strong> (task → Kiro CLI → output) and the <strong>score path</strong> (output + expected_output → a separate judge provider, deliberately not Kiro CLI → Evaluation). A third, independent path — the <strong>cost path</strong> — runs entirely inside Kiro CLI's own process via the <code>Stop</code> hook, writing usage snapshots that a run-level evaluator later aggregates; because the judge never touches Kiro CLI, this cost path reflects task execution only, never evaluation overhead. All three paths land in the same Langfuse dataset run, which is what makes "was it better, and what did it cost" answerable from one screen.</p>
 </section>
 
 <section id="boundaries">
@@ -251,10 +251,10 @@
       <tr><td>Kiro CLI</td><td>Running the agent, producing an answer, firing lifecycle hooks (<code>Stop</code>, etc.)</td><td>Structured tracing, scoring, cost aggregation — it emits text and exits</td></tr>
       <tr><td>Harness (this lab's Python)</td><td>Turning subprocess calls into Langfuse observations; owning the judge rubric</td><td>Being the source of truth for "was Kiro CLI actually reachable" — that's Setup</td></tr>
       <tr><td>The <code>Stop</code> hook</td><td>Triggering a credit-usage check after <em>every</em> response, without the harness having to ask</td><td>Anything if its <code>trigger</code> field doesn't match a real Kiro trigger name — see Failure case 2</td></tr>
-      <tr><td>Langfuse</td><td>Storing traces/scores, grouping them into comparable dataset runs, rendering the UI</td><td>Judging answer quality itself — that's the judge call, which is just another Kiro CLI call</td></tr>
+      <tr><td>Langfuse</td><td>Storing traces/scores, grouping them into comparable dataset runs, rendering the UI</td><td>Judging answer quality itself — that's the judge call, which deliberately runs on a separate provider from the task</td></tr>
     </tbody>
   </table>
-  <p>The seam most worth paying attention to: the <strong>judge is not a Langfuse feature</strong>. It is an ordinary, independent Kiro CLI call that happens to run inside an "evaluator" function. Langfuse only stores whatever score that call's output gets parsed into.</p>
+  <p>The seam most worth paying attention to: the <strong>judge is not a Langfuse feature, and it is not Kiro CLI</strong>. It is an ordinary, independent call to a distinct provider from a different model family, that happens to run inside an "evaluator" function. Keeping it off Kiro CLI is deliberate, for two reasons: a same-CLI judge call would double-count against the task's credit usage (via the same <code>Stop</code> hook), and a same-family judge is prone to rating its own family's output more favorably. Langfuse only stores whatever score that call's output gets parsed into.</p>
 </section>
 
 <section id="steps">
@@ -301,9 +301,10 @@
   <table>
     <tbody>
       <tr><td>Kiro CLI</td><td>Installed and authenticated (API key). Not bundled with every environment — verify before starting.</td></tr>
+      <tr><td>Judge provider</td><td>A separate credential from Kiro CLI (Anthropic, OpenAI, or Gemini — whichever you hold), from a model family different than your Kiro CLI task model — never dispatched through Kiro CLI.</td></tr>
       <tr><td>Langfuse</td><td>A reachable Langfuse project (in-cluster instance or <a href="https://cloud.langfuse.com" target="_blank" rel="noopener">cloud.langfuse.com</a>) with your own API keys.</td></tr>
       <tr><td>Estimated time</td><td>90–120 minutes, including reading the scaffold and both failure investigations.</td></tr>
-      <tr><td>Cost risk</td><td>Roughly 40–50 total Kiro CLI calls across both dataset variants, judge calls, and the model-comparison task. Check your usage before and after if metered.</td></tr>
+      <tr><td>Cost risk</td><td>Two separate billing sources: roughly 25 Kiro CLI calls (task execution only) across both dataset variants and the model-comparison task, plus roughly 25 judge-provider calls billed separately. Check usage on both before and after if metered.</td></tr>
       <tr><td>Mock fallback</td><td>None. This lab is intentionally real-tool — the failure modes being taught only exist when a real CLI process and a real hook-matching engine are involved.</td></tr>
     </tbody>
   </table>
