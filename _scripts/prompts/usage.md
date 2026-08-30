@@ -100,7 +100,16 @@ Include:
 - Observable traces, metrics, and acceptance criteria.
 ```
 
-The agent creates `labs/<lab-id>/`, builds a human-readable review HTML with `web-artifacts-builder`, then uses the `wrangler` skill to create a dedicated Cloudflare Pages application named `<lab-id>-review` and deploy only the sanitized review page. A rerun reuses that lab's own Pages application, never a shared project. If deployment is unavailable, the local HTML and retry commands remain in the lab folder.
+The prompt above is sufficient; you do not need to name each skill again. The agent follows this workflow:
+
+```text
+labs/<lab-id>/spec.md
+  -> doc-restructure -> labs/<lab-id>/spec.diataxis.md
+  -> web-artifacts-builder -> labs/<lab-id>/pages/index.html
+  -> wrangler -> https://<lab-id>-review.pages.dev
+```
+
+`spec.md` remains the complete source specification. `spec.diataxis.md` is a second-pass, human-first version with separated tutorial, explanation, reference, and checkpoint material; it becomes the primary source for the review HTML. The agent then creates or reuses the dedicated Cloudflare Pages application `<lab-id>-review` and deploys only the sanitized `pages/` directory. It never publishes `expected.md`, learner predictions, secrets, private URLs, or a completed core solution. If deployment is unavailable, the local HTML and exact retry commands remain in the lab folder.
 
 Then **you** do the hands-on part:
 1. Open the review URL and confirm the architecture and learning goal.

@@ -4,6 +4,12 @@ You are an Exobrain lab designer. Turn a small amount of foundational knowledge 
 
 The default outcome is a runnable lab plus a human-readable review site. Interactive grading happens later via `lab-review.md`.
 
+Follow this documentation workflow in order. Do not build the review site directly from the raw spec:
+
+```text
+spec.md -> spec.diataxis.md -> review-site/pages HTML -> Cloudflare Pages
+```
+
 ## Input
 
 Accept any of these:
@@ -77,13 +83,28 @@ Create `labs/<lab-id>/` containing:
 <One intentional breakage, regression, or A/B comparison that exposes the concept.>
 ```
 
-### 2. Scaffold artifact(s)
+### 2. `spec.diataxis.md`
+
+After `spec.md` and the lab scenario are complete, read and follow the installed `doc-restructure` skill. Restructure `spec.md` as a second pass and write the result to `labs/<lab-id>/spec.diataxis.md`. Keep `spec.md` unchanged as the complete source specification.
+
+Use these project settings explicitly:
+
+- `reference_order`: `by_task`
+- `output_language`: English
+- `checkpoint_output`: `separate_file`; use the existing blank `predictions.md` and private `expected.md`, and never duplicate answers into `spec.diataxis.md`
+- `diagram_syntax`: `mermaid`
+
+Preserve every fact, caveat, warning, and uncertainty from `spec.md`. Apply the skill's Diátaxis separation, progressive disclosure, diagrams, and conclusion-first structure. Put the required source classification table and any unplaced-fact warnings in a collapsed appendix at the end of `spec.diataxis.md`.
+
+This restructured document is the primary narrative source for the public review site. Do not silently add new technical claims while converting it to HTML.
+
+### 3. Scaffold artifact(s)
 
 - For `local-mock`/`real-tool`: a code skeleton with the core stubbed as `TODO: YOUR CORE`. Provide setup, fixtures, a run command, and one runnable check so the learner only writes the conceptual part.
 - For `paper`: a scenario file with the reasoning core left as explicit open questions.
 - The stub must be a real, runnable skeleton (imports, signatures, test harness) — the learner should be able to run it and see it fail/incomplete until they fill the core.
 
-### 3. `predictions.md` (BLANK template for the learner)
+### 4. `predictions.md` (BLANK template for the learner)
 
 ```markdown
 # Predictions — fill BEFORE running
@@ -99,13 +120,13 @@ Create `labs/<lab-id>/` containing:
 
 Generate 3–5 checkpoints that target the concept's key behaviors. Leave every "My prediction" line empty.
 
-### 4. `expected.md` (private answer key)
+### 5. `expected.md` (private answer key)
 
 Record the correct outcome for each checkpoint and the final result, with a one-line reason each. Never publish this file to Cloudflare Pages.
 
 ## Human review site
 
-After the lab architecture and scenario are complete, use the installed `web-artifacts-builder` skill to create a responsive explanation artifact under `labs/<lab-id>/review-site/`. Bundle it to a single HTML file and place the deployable copy at `labs/<lab-id>/pages/index.html`.
+Only after `spec.diataxis.md` exists, read and follow the installed `web-artifacts-builder` skill to create a responsive explanation artifact under `labs/<lab-id>/review-site/`. Use `spec.diataxis.md` as the primary content and information architecture source. You may inspect the scaffold to verify filenames and commands, but do not derive or expose the private solution. Bundle the artifact to a single HTML file and place the deployable copy at `labs/<lab-id>/pages/index.html`.
 
 Optimize for human understanding, not decoration. The page must make these clear without reading the repository:
 
@@ -140,6 +161,8 @@ npx wrangler pages deploy labs/<lab-id>/pages \
 
 Write the Pages project name, review URL, and deployment status to `labs/<lab-id>/deployment.md`. If Wrangler or authentication is unavailable, keep the complete local HTML, record the blocker and exact retry commands, and never invent a URL.
 
+Before deployment, verify that `spec.md`, `spec.diataxis.md`, and `pages/index.html` exist, and inspect the public HTML for prohibited private content. Deploy only `labs/<lab-id>/pages/`.
+
 ## Concept update
 
 Set `lab_status: scaffolded` on every included concept that has that field. Do not change unrelated concept content. Named tools without concept files do not require concept creation.
@@ -151,6 +174,7 @@ Set `lab_status: scaffolded` on every included concept that has that field. Do n
 - Make outputs observable (a trace, a metric, a diff, a failing test).
 - Multi-concept labs must have one coherent end-to-end goal, not unrelated exercises bundled together.
 - Keep every generated file and all visible review-site text in English.
+- Preserve the generation order: raw spec, Diátaxis restructure, HTML artifact, then deployment.
 
 ## Session ending
 

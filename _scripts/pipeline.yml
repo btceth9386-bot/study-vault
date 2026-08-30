@@ -72,6 +72,8 @@ prompts:
   lab: >
     Read _scripts/prompts/lab-design.md then design a learn-by-building,
     fading-scaffold lab for this target or request: {source_dir}. Generate the
-    lab and human review site, publish the site as a Cloudflare Pages preview,
-    and do not fill the learner's predictions or stubbed core. Write all output
-    in English.
+    raw spec first, restructure it as spec.diataxis.md with the doc-restructure
+    skill, build the human review site from that document with the
+    web-artifacts-builder skill, then publish the sanitized site as a dedicated
+    Cloudflare Pages preview with the wrangler skill. Do not fill the learner's
+    predictions or stubbed core. Write all output in English.
