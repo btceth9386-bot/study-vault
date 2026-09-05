@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:37f065c41817126eccde0966ac6b16bf9881c78e2e6614e45f71bbf7ee92fff0",
+  "claims": [
+    {
+      "id": "claim_fc89a13a70b64803a90f6eca65b1cb12",
+      "statement": "The repository’s workflow treats `concepts/` as promoted knowledge assets and `topics/` as cross-concept learning paths, while `_index/` holds auto-generated indexes.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L45-L51",
+          "version": "repo-lines-v1:sha256:6a68379b6bc849c59020b8326bf2f1a19a299cdf6c924b3fae4d2f7aef37a929:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjI2MjNkYzBiNWQ3NjczNTA4NzYzYmRjNzI0ZjEzMTU2NWQ5ZWZmNzI5MDNmN2Q4ZmFiNjliOGUyZjNhYTNiNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjFlMDEzMGUzNjBlODViN2E4ZGZjMzhmMTljNmFhOGFiZjMxMGFhN2Y1OGMyOTUwNTZlMWE0NjdjNzkyZDA2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWI5OGUwOGU1MjRlMGI1OWE0YWZjNWZhZGY1MTMxY2ZjN2VlZmM0ODFlNTZiOWM0NzhmN2FiZDM2OTFmYWQ4NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYThhMGRkMzY3OWMwNjRhOTBjZjQzZWY5NTMzZmNjZTNkNTEzY2UyY2MyYWI5Y2MxYmE1ZjNhNDI4NTgyM2RmNyJ9"
+        },
+        {
+          "resource": "repo://README.md#L95-L117",
+          "version": "repo-lines-v1:sha256:a0a9a102c371506c0f12b286bfab922f475095268c9a33407b8ab1dc46f09737:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1YmE0YWMyMzVlYjljNWY2MjdlZDgyN2U0YjkzZjVlNjBiOTEwNDJhOGEyMGI1NzkyNTZiNDViNWY4YjJjNzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgxODkxYmM4ZTFkYjhiZmQ0OGMwMDI0OWU5OTVjNjVkY2I0NmVmYzdiNTMyNDZmZDI1NTI5MmVhY2ZhNzZlNDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg2ODk0YWViNjJkZmU3YmQyZDBiZWMyZmRkMzcyZmRkOGUzNWQzNDY3ZGEwZjZmYTIxY2UwNWMxYmUxOWNhODYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_838c13f091d84b73b06a3c80ff9102f0",
+      "statement": "OpenWiki is an orientation layer over canonical concepts, topics, and lab specifications rather than a replacement for the repository’s canonical files; repository guidance says not to hand-edit generated OpenWiki pages unless explicitly asked.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L139-L146",
+          "version": "repo-lines-v1:sha256:cb7fb6c3ed0db2f9a666e8426aa041c2ea98b5b2458d051d1eff45f3db580f8f:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjQ4MzZlZDdlMDA1Mzc3NWEwYTk2NmNlODYxMzRiMjM0N2Q4NTFhN2IwMmY0ODEyYmViMmM1OWQxYzY4ZDUyNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWI1Mzk1M2JmYjcyYzEyNjJiYmFlMmVhY2E3MmNhYmYxYWY0OTkyN2EwYmJhMTE1N2IyZDViZGIyODVjNGJkMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWIxYmM1YmM0YTIzN2Y1NzhlNmFmNGE0MTVkMDY0N2Y5OTEwYjAzYjM2NGUxZTI3YzFmMWRiYWE3NDNkMDNiYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzA4OWRmOTNmOGJhNTdhNGRkYmZkOGYwMTM5NjJjMzk3OGNlNGRiNjgxOTljNGRhNjY2NjQ5YjA5OTZjZWRhOSJ9"
+        },
+        {
+          "resource": "repo://README.md#L193-L215",
+          "version": "repo-lines-v1:sha256:bb606a314d99a97dd36d4cc8560f35914d7fbff5284e632797135ecfc25b0e61:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY4NWI3NDk4NGUwMmExOTlkYzUxN2FkMjEzNTYwZGUyMTBjNTRkMWVjZWQ2ZWVmYTZhOTJjZjY4YjFlZDE4ZjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzMDY3MDkyYWI1MTlhNDZjZjQzMTEyMTZjYTY0NjRlNWUzOGNkYzM3MDE0ZTkyZTBiNjEyNzk0NTAzMzU4MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjExYjBiNDZlYjVhNmE2NDk5NzI1MzA2MjAxMWQ2MDkyMjc2YTMyZTc4YTIyYTNmNzJlNDBmMzNjZjY3MWVjZTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ5NDZiNTFiODZhN2U4OGQwNmQ5ZGNmMDgwODlhY2I2YWE4NDQ2MDUwOGUyODg5YjM1N2JmMDQ2NTg3YjExYzIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_348491ff289e49a4b8de47e3275e9aa5",
+      "statement": "The new-source workflow may create normalized source assets, drafts, and a concepts index entry, but it must not modify `concepts/` or create quiz questions; candidates are written to `_drafts/` for review and may carry a `merge_candidate` when they overlap an existing concept.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/new-source.md#L119-L160",
+          "version": "repo-lines-v1:sha256:4d18bde17fadf169e7bc4daa8c8dcf31179ea81b67b0cd585c66507f65b8c38e:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdkZjdkOGE2OGYwOGIyMGU5NjViNjMyNTBjZDM1OTU2NTdjOGZmM2Q3ZTIyMDRlOGExMWZjNDIxNjlmMzFlYmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExZTc5ZTQzY2JhZmI4NzQ5ZDg1NmMwYzI5ZWFmZWRiMTZkYWI2MWM0MzAyYjNmZTFlMTQwNTFmNDJkMjI0Y2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI4ZDRiNGRkYzVkZmRiYTJkMDQzMGFkYWNhYTE5ZjNmMTA2MWE4Mzk4MWM5Y2ExMDdmOGVlODMzZjRhZWIyZjQifQ"
+        },
+        {
+          "resource": "repo://_scripts/prompts/new-source.md#L164-L185",
+          "version": "repo-lines-v1:sha256:6e888000446acf8efad5eebdbc4abe9adb8a997c8a4ae4e43d982f1751dfc94b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIzMDcwOTM2NTBiYzEyNDIzY2M3ZDdmYjBkZDA5ZGMyOTY3M2M2YjZhMTI4MDZmYjEwMDM5M2Y1YTNiNDQ2MzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyZDljMzUzZWIwNWExMGUyMDMzMWFiNTUwOTc0ZDgxN2YzZTg1ZWYzZWIxMDJmMzY3OWNkYzY1YjhmNmQxYWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI4ZDRiNGRkYzVkZmRiYTJkMDQzMGFkYWNhYTE5ZjNmMTA2MWE4Mzk4MWM5Y2ExMDdmOGVlODMzZjRhZWIyZjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYxMTFkNGFiYzNhMTk0NDQ5ZWZkMzc0ZTU0MDlmMzg2NzM2YzJmZTYwNGY4MWU3MDFiYjg1MDgwYzcxOGIyMjcifQ"
+        },
+        {
+          "resource": "repo://_scripts/prompts/new-source.md#L5-L15",
+          "version": "repo-lines-v1:sha256:48f1328cee8eb711f2011ab978da5df012b018adef263485c05076779e52ad81:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmNDg5Yzk2Y2FlZjE5YTRjZGMwYWEwZWMzOWI5NmJiYjI2ZDAxZDIwZDRjZDNmMjNmOGQ5NjhjOWZjYzQ5YmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYxN2FmYjRhMjMyZTUxMjkwMWI0YTA4NDA5YTUxZDg1ZjQyYjcwYTc1OWRhOGU4NDU4MDVjZjI3YjIzN2M5ZWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI4MTNmZDAxMzA2OTE5NzM2ZmViZmQyMzcxYzkyYzQ1MjMzMGY5NmI5YjY1OWJjNjQyODkxMGQ1NzljOTZhYzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIxNmY2OWY3M2QzOTEyZDQ0ODA3OWE1NmMxZTIzNzI0MGNlZGI5MTgzMTgzMGZmZDY4YTZlODcwY2YxMzFjMGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_48e52f3114d24e0488caf8c3bbc9dafe",
+      "statement": "The promotion workflow is intended for a user-approved single draft: it writes the formal concept, quiz bank, indexes, and required related-concept backlinks, and deletes the draft only after those required outputs complete successfully.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/promote-concept.md#L1-L34",
+          "version": "repo-lines-v1:sha256:12dc7503ff84130518f8b445281e46028b63501829eba4944de90199bba289ee:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5YTNkYzZjMzUyYmUyYjI4MDUyZGE2MTg3Y2JhM2VmNGFmM2FlMTkyNDJjZGExY2M5Y2QzM2VjZTg2M2RkMDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhM2ZmM2M2YTJiMzY2MGFjOGUxOGNjMDY4NjY3YTljMjhkYmVlMDk3ZjEzZjA2ZmM4MGI5OGY0NmVjNjk4OWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc2OTU5MjZmYzQxOTFiMWFmOTVlZDdmYTVkZWZhM2QwNjNiYzcxNTNkMzJhNmIyNWE2MDAyYTY2ZWUxYzkyZTgifQ"
+        },
+        {
+          "resource": "repo://_scripts/prompts/promote-concept.md#L176-L215",
+          "version": "repo-lines-v1:sha256:a9b3f9b285f271ee8a6e3dd199850226b2c35fc937438a93de9dcbadc49daac0:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0OGYyZjg0ODY3N2VjMWFiMTZhZGZhMDkwOWY1NTc5MDIyZmJjYzQwYjhmZWQ2NTZlNzlmMDY3MDEwMmI0NzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyMzc3NGNlMGJlMzIyNWFhM2MxZmMyNjEwZDMyNzcwM2NiMzlkODk5ZTY1YWZiYTU0NjBhODcxYmU4NDc5ZjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJmNmRkYjgzNjRlN2ZmOTI5ZDNlNzliZWEyMDU2ZTgxY2YzN2MyMjdjY2EyODdiMThhZTc3YjA3NDkzZjdjMWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIwMGZkMjI4MmIzZjljNTYyZDJhYWRmNWFjNTA4NTIxZWIzY2FjNTU3YTA3MzJkMzA4NmU0YmQ3YTY2NDY1OGQifQ"
+        },
+        {
+          "resource": "repo://_scripts/prompts/promote-concept.md#L217-L245",
+          "version": "repo-lines-v1:sha256:803a7ffea395e377e8f32244380b9e71a79a3297e1361c8045060a178e8128ca:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkYzljNmZhM2RiMDdhODZkZmFkYzEwZTc4M2VlY2IyNGFlZmI2ZGNlMjg0ZjkzNmMwNTAxNWQ3ZWIzMjcwOTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MTkxMWI0ODNiNTY5ZmJlZTJiNmEzOTBlMTczM2M0MDE0N2M0MDFkYmYxZjZjZDExY2Y5ZGYzNGRmNTM5NDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE4MTNlZjk5YTVmMDJlYTMzNTcyNjE3ZjY2NGM3NTBmMWE1YTA3M2EzZGVhZDkyY2I0MDkzZDRkZDA0YWVjMTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_10a02d7655e0453a8eedf68dc400f133",
+      "statement": "The pipeline runner dispatches configured agents by interpolating a prompt and running the agent in `kb_root`; it reports success from the subprocess return code, so the prompt-defined review boundary is not a filesystem sandbox or an independent approval check.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/pipeline.py#L169-L193",
+          "version": "repo-lines-v1:sha256:8efff3661fd6445d0caafaf575a4dacb12046ca5da3bb102da1fee33dbdd7ace:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2MGM3NWU4M2NmMzE4MjZjZDZlNTc4NDNmZTBjMTZkZjI4OTJjNTVlYWU1MDM5YzZkOGQzMjQ5YjY4N2JjMzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzYzA2NTJhZWZiOGJiOTAyYjMyNTg2ODJiMTY4NzM5N2NiZmFlZWRlN2E2NGE3ODUzYWJjNThhZTYxOTUwYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEzMjkzNTc5ZTQyOGZiYjllMmM0YWUyZmZmODYwMjU4ODYyODZkNzU1ZjMxYmEwM2VjZDljYWE0NzVhN2VkMDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNkNDEzNDBjYzIzOWExNTljZTliNjAyMmU5ZjYzMjI4MzJlMmVhZDc2Y2FlOWU0NzU0ZDIxMGViOGZiNmQ1ZTgifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.py#L62-L123",
+          "version": "repo-lines-v1:sha256:47b50d5a3f08561ca5beabb244dda5ce86090798c16cf138afdc93138ad6458e:eyJzZWxlY3RlZExpbmVDb3VudCI6NjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2YjhiOGRiYjQ4OWE3MTM0MTYwNGUxODc0ZTQ4ZDFkYWYxMjg2NTlhNGMxY2UxZjcyODIzNDY5Nzk1OWE2NjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwZTJhNDY1MDA5NWZhOTVkMGUyYmI0MWIyZGIyOTA5NGQzNDA0ZDI4Y2UxMjMzOWVjODhiYjRiNWM1YmU4ZjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVkN2NhYTY3M2IwZDMxMzA1NzBjODg5ZDFjNzk5ZGE0MWM1MWJjZTMwMjlkOGI5MjBkMGExNjc2YTQ0ZjdkMDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg5M2JkNjZlMmJiNzFmM2I4YTkyNDA2NGJiZjdiMDdjNTkwM2E3NzNmYTRmOGMzNTQ2MDYwMzg2NjcxZDNhNzMifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.yml#L54-L71",
+          "version": "repo-lines-v1:sha256:ba6b7873c1aa336caa6f64d244a56818471cc9a8306ddac52c227d58a31ceee7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5NzA3MzM5NTYyZGMzZTNiYWJmNmZiNGZiNmEwMzYzNTA4Mzc1MDRiOTQ2YjNmN2Y5NGU3YTU5MDkyOGZkMTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1NDg4NDhlNTZiM2EzNDJlM2RmYTRiZTdiMTYxYTAzZDk0Zjg2ZWI1OWZjZDdjNzlkMDlhODNhMjllZDhmYzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiYjIwNjRjYWYzYjljNzMyNzk3Mzc4YjQ2NTE4ODY2M2E3ZmYyNjg5Y2I2ZTY1OGRhY2M5OTNiNTcyNThjYTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhhMjcyNDY1NzUxOTUwNTUxYmZmNDEyNDc0YzA2MjE3NjUzMDIzNjZlOTE2M2UxZDY4NGRjY2JmZDU3MTc4YTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_99b61af165c54fed8b507e6cd49555ce",
+      "statement": "The default pipeline sequence is `ingest`, `review`, `promote`, and `topics`; `lab` is manual-only, while weekly refinement is configured to run separately.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/pipeline.py#L169-L175",
+          "version": "repo-lines-v1:sha256:d177d77b132ba6da1b25711906283e53fb469d4b56978ccecec0da6918852ee9:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTYwYzc1ZTgzY2YzMTgyNmNkNmU1Nzg0M2ZlMGMxNmRmMjg5MmM1NWVhZTUwMzljNmQ4ZDMyNDliNjg3YmMzMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2VjNWQ1YmE3Y2UyNWY3NTM3OGJiYWZhYWI4NGUxMGU2ZjM1ZjdjMGE3MGI0YTRjOTFhNTg4NjFhNjg3MDM4ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTMyOTM1NzllNDI4ZmJiOWUyYzRhZTJmZmY4NjAyNTg4NjI4NmQ3NTVmMzFiYTAzZWNkOWNhYTQ3NWE3ZWQwOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2EwNjAyMmNhZGFmMWIwNDk3NjUwNGFlOWYxY2U5YTlmMDQzMWZhNTIwZjRkMTRhNWFiMDQ2OGMzNDgyNmJiNiJ9"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.py#L34-L38",
+          "version": "repo-lines-v1:sha256:435b0b2f141e465f957f9c1b3a1f0e04296e480aaee892d21d14c8f0b90f60dd:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzU1NzFlMmRkZDU4YWNkMjFlNWE1ZWZjYWE4YmU4OTZiM2I2YTk1MGJjYTcyNTliODQwNTY2OTlkMjU5YjU1NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2UyMjVmYTcxNmQzNjAxZTU5NmVkYzMxNTEyYTY4NDQ5Y2MyOGZhM2ZiNjI0NDc5MzYzYzBkY2FkYzJkYjM0MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzQ4MTA3ZWY2Y2Y3MDkwN2U5OWRmOTU3NTU4Y2MzZDhkMDM5YTgwOWVjMDczM2I4Yzk4ZDNhYmFkMThkYTVlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzQ4MDYxNTM0YmQyODNkNWY1NTQzMDhhZjYzZDAzMjY0ODUyZDc0ZTAzZTU1ZWU2NDZmNjZiMGM1OTY0ZDI1NSJ9"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.yml#L6-L17",
+          "version": "repo-lines-v1:sha256:a1b8d8c3faec0556bb20648cea99b62cc70a7866bb91a0c3044cef7a9a7acbb7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyNDA1MjRmNDU2OTJmMTlmNjFhZjAwMTRlNzYzZjBmMGUwMGIwNmQ3OTM5ZDI4YWYzZmRlZDhjY2FiZTA0NmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcyNWU4YTc0Nzk3NTczMzE5MjFiZTEzOTQ5YjUyYjljNDNkZjY5ZGQ5ODE4NDAzZTM4MGJiZTNjNzdkOTkzY2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc0N2MyOTk4NTIyZWNmMDhlMmQyN2Q2ZjJlOTRjYzNkNTU2NWJhYzRjNGJjOGUzZGMxOTdkNjNiMGI0Njk5OWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_68a87a7c9024422ea42bea0dbe6a3e78",
+      "statement": "Index generation overwrites Markdown indexes under `_index/`: concepts and tags scan both `concepts/` and `_drafts/`, topics scans `topics/`, and title discovery falls back from frontmatter to an H1 and then a filename-derived title.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/index_generator.py#L12-L25",
+          "version": "repo-lines-v1:sha256:df0416e25827b87584b9c00b532d0b2e86d4533cda159bdf69defaf830b90d86:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhY2UwOWY5ODMxNmE2ZjRlODdhMWY4Y2Y0ODY4MWM4NThiYTc4ZTg5MTZiYmY1NzNlZWFhYjFiZDU2NTQ4N2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjZjYxNjViYjAzM2JlNTRhMjE1OGY4YjBlNTcyZDg2ZjJjNTU5ODQzNTRkYjI3NDNmZWNhOWNhMjIzYjVkMGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI4NWVlNzkxMDMzMjk3ZTc4MDFlMjAyNDk0MjFlMTNmNTgyYTJlZTcwOWRmNDkwYjAyYjNkNmVmNGJiOTMzYWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ5YzhiNDc3ZjU5M2Y5YjI2MjlhNzY5ZmViYWNkMDUzY2M3OGM3YTFlMmMyYjNkN2M0ZDliYzY2ZGRkNWFjMjkifQ"
+        },
+        {
+          "resource": "repo://_scripts/index_generator.py#L123-L159",
+          "version": "repo-lines-v1:sha256:3404146b47fef3038275f80ef50adc3196c0bbade138226e6f31ea61faad42d5:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxZjNmNTBiM2U3NjIxOWU0N2ZmODc2ODU1OGNmNzM5ODdjOWYzMjA0NDQwMDQ3NDk0ZTM4ZTk3ODBlZjQ0Y2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkZTQ3MDhmZTU3Nzc5MjE4NTA2OWJkMmUxZTc2OWViYzViODlmNjBlNDYwNmRjYzhiNmIyZjdkZmY0ZTZiNTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRlYzI3NGFiMWYzMDM0N2RkYzhmNjZjYzg2NTMyYjc2Yjg4ZTkwZDUzMTZiOTQ0MTYxMTNkZjZmYjgzNTE5NmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://_scripts/index_generator.py#L28-L51",
+          "version": "repo-lines-v1:sha256:29c7ceda557fa1d8089ae45e1348a87873ffab2ad507c79716ba99192a85f610:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzZTJmZmZhNGE5ODg0MzA5NWNiMTk4MDFkNTg0MGY3MzNiYzllZWJjZmRmMzkxNWQxN2VhYThmOGFiNmU0YWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM0OTExMTVjNDRhYTJjMWIyMzA0NmM0MDMyZDNkZGYxMWNiZGU5ZjMxNTEwMGI5MWNmNWM2Yzc5ZTZmZGMyYmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ3NTE1NzZhMjc3NDdlYWMxZWZlYWU4MzNmMTA5YzE4Y2M3NjRjYjNhNDZiMzc3NDE2OTAyNmQ3NjE1YmJiMTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYwN2QyNTRjN2NkZDFlZGNjNTc2ZGE3ODEwN2ZlNTA3YTkxZjE3ZjcwZTMxZGJkZGU4ODZjNTUwYmY2MTkwYzEifQ"
+        },
+        {
+          "resource": "repo://_scripts/index_generator.py#L70-L120",
+          "version": "repo-lines-v1:sha256:c4c0ef4add7d3268afaffc55ea3c15a8e3ecbdc087ddb83bb1e2b29b3726227b:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZjY2JmYjcyZjhiMzNlZmNhMjU0YjM1NzIzNzlkMDhkODc2MjUzNTZhODZiMzYzM2VjNDBhZTVlZmNhZTViZDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkZTQ3MDhmZTU3Nzc5MjE4NTA2OWJkMmUxZTc2OWViYzViODlmNjBlNDYwNmRjYzhiNmIyZjdkZmY0ZTZiNTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM4NTdmNThmODk3ZDBmYWEzNmJiYjc5NGE1OWVkNjRjMmVlZWI3YjIzNjFlMGRjMTUyMGQyNTE1YmYwMGNhZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIyY2IyZGM4MjZkYzU5NDBiNTAzZDlhM2ZkZDkxOTViNzMyOWEwM2ExYTM5YzJjNmNlMWNmMDU1ZjdiZjdjZTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ce8d11a79f894484929be7daa3f0dc56",
+      "statement": "The index-generator tests verify that concepts and drafts are listed with distinct statuses, topics are listed, and tags can include both active concepts and drafts, so index visibility is not equivalent to concept approval.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/tests/test_index_generator.py#L28-L59",
+          "version": "repo-lines-v1:sha256:d25745ec6867cecf4d6904ba7e4da919f713bd59dca43777e0eee81b9036ebaa:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRjNDNjNzcyMGI4ZmVjZDJmMTgxNjkwY2FlNzIxMmY2NWI1YTcyNzBhYzY4YzRhYmRhYzJkYjNhYjliZTlmYTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA0ZTNiMjI4N2RmN2ExZTQ5MzU4MGJkYzgzYmNmOWYzNzQzMmVmMDdhZDJkMWZjM2VlM2UwYWIxYjdhN2Y2MDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2Mzc1M2IxM2ZkOTllNWQ5Mjg1MjZkOGJkNzk4NTFkMDI4MmE5MTYxMzNjOGQ1ZTk0M2MyNmNiYzk0YWUxZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUwNWY3MjhmZWJkZTMwNGRiZjNmMjk0NGJkMDhiZTk1MzBiZjg2ODc4NDZkZGE3YWEwOWRmZjkyNDdlMTRlZmEifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_index_generator.py#L62-L76",
+          "version": "repo-lines-v1:sha256:421eba4f10358266c2cd803345d171ce34339163e73105ca5b94cefefe47649e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUzNTE3ZjMwMmVlYmZmZTE5YzMxZmQ1NDQ5ZDBmNjIzOGM1ZDY4YWE0MTIyYzYyNmU1MWIyYTAxZGY2MGFhNmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1YjU2NjliZmZmMjU2NTIzZTczNjQzZTIyMjY0NjZhNGY5ZTRhZDMzMjg4NGM5MDgzYTUzZDI2N2MyZDY5ZmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhMTQxOGIzYzdmNmEzN2JmZThlZTliMzJkNGEzMzEwNTI1NTk2NTEwOGI1MmZjMGE0NDk0MzQ3NzliMmNhZDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYxNjYyOGQwMmRhYjY4ZGJkMTA3ZjJjMzNiNTcwODFmMDMzNGM1YTY2NmRhZDk4OGYwYzk0M2RiY2M5ZTY3NzQifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_index_generator.py#L79-L112",
+          "version": "repo-lines-v1:sha256:cc3da8455fdcd0dfddf557f155abc957bf1239f7a48d46e9be302e2a893c74d0:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0YThjNDU1ZTQ2YTg5YjhiMzI4NGUyYjU0YmU5MzZkYzYxZjIyMDhkNThiNjM1YjJmNjFlN2I0ZmE3M2ZkYTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyNjg1OWIzMGE0OGUwZDQyZjIyMTNkY2E4NjA3ZWIxZDRmZTc5ZWY3ZmJiMjIxYjYzODgyNWNmNWE4MzJjN2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2ODIyNzhjNDNlMTRiYWZmYTdiMWNjMTEzZjEyNWI2YTlhNDdlNDc3YTQ4MTc1ZDczYjRmOWY2ZWM2NTdmMWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_75a2ee06f6184eccbc82675595a4d755",
+      "statement": "Weekly refinement may write a dated inbox report, quiz data, generated indexes, and a refine log, but it must not modify or directly promote `concepts/`; proposed concept corrections must remain recommendations for human review.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L217-L225",
+          "version": "repo-lines-v1:sha256:307f2805cad987bb02c3340f98f33dedab5c5995b7321641e70596884b6ef806:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTVlNzY3NjExNThhNDFmMTQ2Y2NhNzgyMzQ5NTAwNWQ0NTI5MGM1YWQ4NzAxYjM2YTFiOWM3Mzg4ZGMyMjA3NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2YxYmI5N2YwYzRkOGY0ZDM4N2U0Mzc1MjcxOTEzODIyZjNiZDVlOTU3OWU1MjEzOWJjY2Y1ZmFiNzc2YThjNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTg3NmMxZWZiYzQ3NjE3NWJiNzJiOWI0MDIxYWNkNWI2OGI1MjIzZWExZTA4Y2JkNWZlOTBkYjQxNWZhZTc1MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L26-L43",
+          "version": "repo-lines-v1:sha256:ad2419a86cef8473e69360b7ebc1e120ffa882b2a29f0d4c2513d54d00486a0a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwNGVhMGNhM2M4MmI4MGI0MGYzNDA3Yzc5YjU4MGUxY2ZhN2NjMjkwMGJlN2QwMDk3ODhhYmVmYzRiZGY5MmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkMDdkZGFmNGIzMzA5YjE2ZWU3MjFmMWMxZmVkMGNhMGExZDBkNzFkYzliOTgzNDk1NzJjOTc3NTE3ZDY2ZTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE0MzQ5NDYwNGY0ODEwNjE5NjM3NmNiODhmNTNkODQ0NWIwZjVkMzMzMDczYWFjZDMxYjkxNTBhMDEyMTRlYTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyMzkzMGRiYWRhOWQxMGE2YzJlZWNlMGNiYmExZDEwMjNlMzRjNmJlZTI5YjMyNThkYmViN2JiYjNjOWJhMWEifQ"
+        },
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L45-L60",
+          "version": "repo-lines-v1:sha256:013bf9b0b1bad57d272d9f3849e3eb0a83c10d2d234d2b21c95c54f418a725a1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4ZTFlYTE2NzVhYjA1MjI1NjgwOTgxYWJmMjkwNGUwNmVjMDNkOGUxODdhYjg5ODkxNGVlYmIxMWYyMDc3MjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2MDhkYzNmZmIxMjVkNmRjYjRjMzkxZGM0NDE4ZDkwNjg3NDY5MWExNjllMmIxMTc2MjVkNDI1NDgxYWY5YTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgzOWJhNzY2MjNhZTAxZmQ2NGQzZWVhODcwZjJhNTdiNGNjNzM2NTgzMjIwM2ViZTNhYWNkM2ZmYmIwZTJiNWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlmOGM2YjQzMTEwNWVkYjM5NWJkNTJmYjc5YzI5ZDk4NDg1Njg1ODE1NmVkN2FlYTBlNTE4N2FkMTUwMWM5N2IifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7c7dc87af12d4f18a10fd270f3392f70",
+      "statement": "The OpenWiki exclusion policy omits drafts, inbox material, raw sources, quiz data, private learner state, and generated lab review artifacts.",
+      "evidence": [
+        {
+          "resource": "repo://.openwikiignore#L1-L18",
+          "version": "repo-lines-v1:sha256:9224e4b111461e8d2ac710dfe3c257feff8e2aea616f0f69c10585810e08c7be:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkYjlkZmM1MjFiY2FjZjY2YTcyMDg3YzZmYTBiZDk1YjZkMjVjMTQwMmFjMTJlZjFhMmZjZWMyMzQ5ZDQ3NDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMwYTJkZWIyNmM0YjE0MjAxMGU2NDg0N2RmOTkxNTEyOGFjNGE0ZWQ1NTI3YmRlMDliYmI2MDhiOGJjYzU5OTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkNTZjMmMwMzM2ZDBjNDcxYjRhYjJjNTk5NmY0NDQ2MDc5OTM0MTU1NjQ4ODMwOTE2ZWQ4ZDMwOTk2Mzc2N2MifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.0",
+    "at": "2026-09-05T08:40:09.738Z"
+  }
+}

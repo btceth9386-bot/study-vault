@@ -8,6 +8,9 @@ ISSUE.md
 .copilot/
 .gemini/
 
+# OpenWiki pilot uses manual updates; do not commit its generated CI schedule
+.github/workflows/openwiki-update.yml
+
 # Python
 __pycache__/
 *.py[cod]

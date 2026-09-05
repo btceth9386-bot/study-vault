@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:c91daf795930bef5b23e59aef26d163aded917a71859953a18a3f7d1dbe298ca",
+  "claims": [
+    {
+      "id": "claim_b79023c38d174fd6a56f28433816a678",
+      "statement": "The repository’s LLM Engineering index presents Production LLM Engineering as the broad path and distinct focused paths for production agent runtime, AWS DevOps agent operations, MCP protocol foundations, MCP record-replay testing, LangGraph application development, LLM quality/evaluation, and DSPy program optimization.",
+      "evidence": [
+        {
+          "resource": "repo://_index/topics.md#L13-L24",
+          "version": "repo-lines-v1:sha256:92795dc56c9189f0b3fcf53b9ff196f69eeff9171d4e4e3d5a4bddd1457369c7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4Y2JmYjM4Y2E0ZWJjOGVjNzk3ZmQ3MzJlYjJjM2Q2ZjBhZjA3OTMwNWI1OTRkMDBiYzAwZTBjZDhkM2ViZGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ2ZDVmMzdkMDE5ZmFiMWJlZjRiZWY5Njc2Njk3OTMyNTU0NGUzMWU0NTllOGQzYjY1M2Q1ZTk4ODFkMzVlOTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwNzk2MzEyMTZkZjg2ZmE4ZWMyOGYxMTBjNjFiYzRmYWFhZjhmMDgxMGVlZmVjMDVhNjk0Y2VkOTJiYzkzMGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJiODNlZmNhMGI2MDZhMDZjOGU0NDFlNjcwODgwZTg3ZTZmYTBjNGExMDY0MWI1OTkyMTMxYzM1YTYzNDgxNzkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3edd46278a5944ef9f4b8d3e14fe9337",
+      "statement": "LLM observability models an AI request or workflow as a trace, its internal work as observations, and quality feedback as scores; this structured data supports debugging latency, cost, output quality, and behavior changes.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/llm-engineering/llm-observability.md#L49-L53",
+          "version": "repo-lines-v1:sha256:b75ac7dbb8dc5b4811c66c9696edbf00f7ce71812f838e8145d9d08a1f70fde5:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmQ5NWZmZmNiZDg4MWY4ZmQxMjhhMTAyNTJlZGVjZDJkMGY2ZWVhOWQyM2Q3MDZhOWZhNzBmNWRhZGU5MGVkMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTU3MTAyNTMyNGJkNmI0ODBhMTM4OWQ2MWNmNzI1MDFmMzIwYmRjMDczMGRlMzliMGIxMDhiNjYyYjMyODMzZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bc2870fac1e949a7946d74f3aa82d38e",
+      "statement": "The production LLM learning path connects versioned prompts and LLM-as-judge evaluation into a feedback loop in which judges score production traces, teams compare prompt versions, and behavior can be rolled back or promoted.",
+      "evidence": [
+        {
+          "resource": "repo://topics/production-llm-engineering.md#L24-L28",
+          "version": "repo-lines-v1:sha256:e8e2cf74ca29593a8c4af84de4380d5b421ae0cacdc3843e2253fd6d8b4431a2:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTA5MDMxYTcxYTFlNjU5YjgxMzg4ODQyMzVlMzNmZTQwZjMzMTE3ZjBlMmQ1ODI5MzJlNDNmODBhNzMwZTc4ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODJjMjlkMGUxODk3Y2MyNmYxNjdlNjlkZDcxMWIyZmI0MmJlOTNjMTJiMjg2OTlmYWZhNDBjMDljMTUzOWI3YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWNhZGQ0M2E4MWM3N2ViNGNkYWYwNzlmODFiOTJiYjhmNDczMGM5NGIyMmZjZDYwZDU3YTkwNGEwNDc5ZmQ1YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzcyZTBkMzEyNTJiODc1OWQwNWE4NDI3YzhkYTYxZmY3NTNjYWU1YzQzNDkxZWI4NGUxZTYzYWY2NDNjZTNiMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cbae45c28ec14bb49fc8709917ece131",
+      "statement": "DSPy represents task structure with Signatures and composable Modules, and metric-driven optimization searches instructions, demonstrations, or rules to produce a compiled program artifact rather than relying on manual prompt editing.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/llm-engineering/dspy-module-composition.md#L34-L38",
+          "version": "repo-lines-v1:sha256:65a2dfd1f9a2d301fb16d7da117498a7e2af4e1b71231fcd0301f0faa715fbfa:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWU4YzE1MmU3ZDdiOWY1MzU1ODkzNGZjYjU4MTg3ZmMxMjE4NTI5ZDM3NzE5NWM0YTg5M2MzMjA5ZTJiNGJhMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzM5MDhjNzM5ODI0MjE0NTg2MjYyMTdkNGRjYzNkMGI3ZGFhODQ3M2E0MDI0MjQyMDM4ODFlMWRkMmZiNzUxNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        },
+        {
+          "resource": "repo://concepts/llm-engineering/metric-driven-llm-optimization.md#L41-L58",
+          "version": "repo-lines-v1:sha256:893c2ded6088201f30adeb67ace729a8b200ca975e7543cdaeefb2e602db3801:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0MTViMmRiNGVmM2FlZWRiNDNhMGViZmQyNTYzMDEyMmNlNjM3YzcwMmQwZWRlMjliNjY2ODU5ZjNhYjMwMjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0YzJhNjliNjU4NTFkNzU5ZWY0ZmIzZGEzNmUyY2Q5MTFlYzAyNWI1NjZmZWQwNzQxMGZiNTc0MjVhMDE1NjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMzOTA4YzczOTgyNDIxNDU4NjI2MjE3ZDRkY2MzZDBiN2RhYTg0NzNhNDAyNDI0MjAzODgxZTFkZDJmYjc1MTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU2ZmNiNGE5M2RmMTg5NjRmOWM3YWFmOWJkMWIyNzdkZWUxNGI1OTAzMjU1M2YwMzMwODFiMjI2NGMwZmRjNjMifQ"
+        },
+        {
+          "resource": "repo://topics/llm-program-optimization-dspy.md#L20-L33",
+          "version": "repo-lines-v1:sha256:f978696a75ffb33e6377d04cb4942c9ba719d4da56fac7cd93af405e42abc725:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzOTIwNDJkYTJjNzU3Njc3NDEzNTBlYzdjNmFlNzc0YzhhYTE1MWZkNTY3NDBhZTJmYjJhY2M0ZmIyYzZkM2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEwNDgzZGM2OWRlYjBmNzI1MzJiZDZlNGQyNGJiY2ZmNjlmODJmMDEwYzYyZmUwMmMxMmUxNWFmYzYwMmU5NDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFhZTlmOTFlZjgyYjJmYzZhZmQyZDEyYTkyNDg0Yjc0NjlhZjdmYTIwZGEyMzQ0OTlkYzEwNTY4NmQwODhjMmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgzNWJhNzBmOTc4OTAwZDI5YTEzODU3YjA3OTgzOGI0ZWVhNTRiZjczY2Y0MGQyOTFlOTM2ZWE1OWJiNzY2OTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1bc6c58d577448cab3a1aa75405927af",
+      "statement": "LangGraph executes runnable graph nodes in concurrent Pregel supersteps and applies writes together only after execution, so same-step nodes cannot read one another’s new writes and concurrent updates require appropriate channel or reducer semantics.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/llm-engineering/langgraph-pregel-bsp-execution.md#L34-L38",
+          "version": "repo-lines-v1:sha256:945663f6822ec84e5a1244888088c9d9556f14e31a18ffa4c0a0e48539347f9c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWU2ZGM5NGYwMzYyYWNlNzM5YmEyZTUyMmY3MTAwN2RkY2JlNDlkYjAwYmUwZTk0ZDE0ZjM5NGEwZmY5NTc2NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzg0MGU2ZmE4NTAwYzgxZWMxNTQ4ZjE2MjFiYTUyNTUwMWRjYzhlNjJmZDFiNmNmMjljOGE2YzQ1MzNlMzhmZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzhiNWNjZjI0NTVjMDgwZGNjMTQyMGRkNWVkNTJjMDU2ZDU0Mjk0NzE4OGMzYWM2NTUzZTJkOGQwZGEzZTIwMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        },
+        {
+          "resource": "repo://concepts/llm-engineering/langgraph-pregel-bsp-execution.md#L52-L59",
+          "version": "repo-lines-v1:sha256:c28006bc301337513d0cbd104a10263b77ca7cde882c88e3163ca4c6c4fb6f4b:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTFlMjQyOGY0YzJjYmI2NGIyYThkNDg1NmFjZTM3MDE0MjdlNmNkZTFjM2NmMmVjMjQzZWM1MGRkNDc2MzlhYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjQ3NjdiNjk4MGE2MTQ4OTlhZTUwYTRiZDQ1YjE2MDI1MjMwYmM3NWRmOWVlMjJmYWFkN2EyY2Q5NzBlNTBjNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODU0Nzk0OWU5MjQ0YzY3NjY0ZWNmMTUwNDQ2Yzk4ZDk1MDNiZmIyODYwZmY4NGU1ZDZiOTJjMTk2NmY3ZmUzMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmQzOGQzOGFhODlkMTlmYTIzYjE0YzY2MGQ1MGIyNzBlNThiYTJlZDlkYWIxZGI3NWMxM2I4YjZkNzI4OTViNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_30c30c42b77340ea9cb03b82f9d62b72",
+      "statement": "LangGraph checkpoints persist execution state for resumption, history inspection, replay, and forks; interrupts rely on persisted state, and dynamic `interrupt()` nodes re-execute from their beginning on resume, requiring idempotent side-effect handling.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/llm-engineering/langgraph-checkpoint-time-travel-forking.md#L31-L37",
+          "version": "repo-lines-v1:sha256:b429a5e3dc105ca83513e42141f5a28e97d668cb8f051f0ea50374ca6bc9af8d:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2Y4NWM1ZGM4MThjNzdjNjBhZjhkZDFkNDllNzg1OTc3YTc5ZDg2MTExMzA4M2NiZTUwMGJiMzdlZjcyNGRlZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzZhNDgxMWY5NDhkYjY5NGY4ZjkxYjNmODEyZDhiZGI1YjRhNDdiYjA1ZTg0ZGU3YWJhYzNiZjdlYTA0NGJkOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        },
+        {
+          "resource": "repo://concepts/llm-engineering/langgraph-human-in-the-loop-interrupts.md#L30-L36",
+          "version": "repo-lines-v1:sha256:17503ab48ce89ac5347451b839c09252e66460a38f2b3bdc776159ca47dd6784:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTlhYjdjZmExNjI2NjQ1NzhlMWI2MjAxMTA2NGI3OWIyMGIwZmUxZTA4ZTc1ZmVhZGM4ZjViZDI3NGRlM2E0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzZhNDgxMWY5NDhkYjY5NGY4ZjkxYjNmODEyZDhiZGI1YjRhNDdiYjA1ZTg0ZGU3YWJhYzNiZjdlYTA0NGJkOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_715a4bb2cd7547dca3dee6f6d41de331",
+      "statement": "The production-agent-runtime path separates framework-agnostic operating concerns from graph mechanics: it covers a selectively composed unified native/MCP tool surface, client gateways, persistent sessions, context compression, scheduled automation, skill memory, and toolset variation for evaluation.",
+      "evidence": [
+        {
+          "resource": "repo://topics/production-agent-runtime.md#L22-L44",
+          "version": "repo-lines-v1:sha256:1876634d10acf2a060b9d210cb38c3c1ed1e255ce4347a776a80eb9e4b206adb:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxNTJhNzNiNjY5YmNhODk1MmIxNjliM2M1NjMwZTY1MmJlYTcwMWFlOTJhZjc0N2U3N2I5ZWU1MjQ3ZjFmMzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg3MGJiM2Y4ZDE0ODUwOTYxZDkzN2JlYzJmOGE4OGVhYjE0YTEzOWJkM2YwMDA3OTYxM2Q2MTgyNzY5NzYwZDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFhZTlmOTFlZjgyYjJmYzZhZmQyZDEyYTkyNDg0Yjc0NjlhZjdmYTIwZGEyMzQ0OTlkYzEwNTY4NmQwODhjMmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwMWYyZWMxNzU5M2MxMDU0ZWI0NjM2N2Q4NDUzZWYyNGExNzNjZTk2YjcxMTdkOTFmOWE2OGQ0NGZlZjhiMDEifQ"
+        },
+        {
+          "resource": "repo://topics/production-agent-runtime.md#L7-L13",
+          "version": "repo-lines-v1:sha256:3d8ccea164ca4a157461daa7f6ef42905aca3efcedc98123a7029508dd5aba38:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzEzM2JiNjRkNWJiOTg3NGViZjk3Y2JkNmJhYzYyNzQ5NTZkZTI3M2ZkMThjZjY5N2ZmMGUwNzAyOGQ5MjY5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTZlZmVlZDZkYjFiMjc0Njk4MDZkMDZmNmQ3NGJkMTZkYmFkOGY2NTc4NDc1Njc0ZTkwYjNlMmIyNjFhYjZiMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWIzNGFlNjA5MjdmNTZkYTU0ZDBkYzBkNjA1M2JhZTQwYWIwN2JhZjVlZDcxNzc5M2JkNWRlZGY4MGViYzQ4YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzQwNDMwZjEwZTAyZTIyMWI1NWY4OTFkM2M2ZjRiZWU4NGNiMDNhMGUzZmIwNGE3M2Y2NjU5NjhkMTBiNjMzMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e763569213004ecdbd2ec6e6f7ada96a",
+      "statement": "MCP is a bidirectional JSON-RPC protocol that starts with an `initialize` capability exchange and `notifications/initialized`; its transport is separate from protocol semantics, and client-provided roots are advisory rather than an enforcement boundary.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/llm-engineering/mcp-capability-negotiation-handshake.md#L35-L37",
+          "version": "repo-lines-v1:sha256:26d20588ebc08427f1a171ec0d0d5ea9344d18c66bfbcd74fdf49bd59a4b649d:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWJlMDVkMzcwNjg4NzE3N2I2MDEyOWUyZGFhZTcwMjJlMzA4NWU4MjZkYTg3YjMxY2VjMTkyMDA1MDQ2MDFlYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzEyZmI1ZWUwOTViMjMzNTc0MjgzMDM4YThjMGVhNWJjYWJlZTFiMjE3ZDQ1M2MxMjE4NDc3YmFjMWM4Y2NhMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        },
+        {
+          "resource": "repo://topics/mcp-protocol-foundations.md#L22-L44",
+          "version": "repo-lines-v1:sha256:9a38a692e679fb6c7bf0e6f3ceea641d522c93dca752a3fbb00378a20c37c510:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4YjkwNGQyM2VlMmQ4ZTk1YTU2OTU1YmE1ZTU4OWQwMjg4YzgxNDQxMTVhYjBkZjA2NDUzOWNmZjE5ZDc1ZDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5NDY1YjRjMWEwZWJiYWRhNDMzNWZjZTc1ZGY5NDJkZTg3YjM3ZjYxY2QxZDVjODQ0MjIxYjU0NGQ5MjNkZGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFhZTlmOTFlZjgyYjJmYzZhZmQyZDEyYTkyNDg0Yjc0NjlhZjdmYTIwZGEyMzQ0OTlkYzEwNTY4NmQwODhjMmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwMWYyZWMxNzU5M2MxMDU0ZWI0NjM2N2Q4NDUzZWYyNGExNzNjZTk2YjcxMTdkOTFmOWE2OGQ0NGZlZjhiMDEifQ"
+        },
+        {
+          "resource": "repo://topics/mcp-protocol-foundations.md#L7-L13",
+          "version": "repo-lines-v1:sha256:49f9655bee9339fc3b5358cc76dc41b5598178d51c7e6aba8b4abe9b6d554853:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzEzM2JiNjRkNWJiOTg3NGViZjk3Y2JkNmJhYzYyNzQ5NTZkZTI3M2ZkMThjZjY5N2ZmMGUwNzAyOGQ5MjY5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTY1MDA4MTc3N2JiNzgxNGJlODUzODVlZWI3ZTRjODNhNGUyYTdjMWI3YzFmMTQxODNiZWY3MmViNjNlZGYxYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWUyZDg5MWFhMmJiZTNjMThiNGI0ZTMyYTg3OTBmNjRkYTFlZWQyNTZiNGVkMWFiMTJhZTQ1ZmIwNWQ3ZDVmOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTFkMDAyYWJlZmRjMDFhZTU3MTgxNDNiZWE1NzNmNzQ4MWM0YzBjYjJkMDFmOWU5MDA5ODc1YzBmYmExZTVkMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1747cc65937946009dd614282de84210",
+      "statement": "MCP record-replay testing reuses a captured successful session as a cassette: replay supports deterministic offline client tests, while live verification compares recorded requests against the current server; replay matching, secret-safe scrubbing, volatility-aware comparison, scenarios, and pytest fixtures address the boundary’s test reliability.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/llm-engineering/mcp-record-replay-verify-cycle.md#L34-L55",
+          "version": "repo-lines-v1:sha256:b3df6cd546c77b32595d44dea62e360ba399f94036851adddd18641732bbe9f1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0MTViMmRiNGVmM2FlZWRiNDNhMGViZmQyNTYzMDEyMmNlNjM3YzcwMmQwZWRlMjliNjY2ODU5ZjNhYjMwMjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiYWIzMTFjYmNmNTlkMDVlYzA1MzE0NTM2NDhkMzE1MTk5OGRlZjVkYTI5Y2VkODY5YTU1OWRjMDk2Nzk0OWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIwYzUxYjQyOTdlZTZjNGU0ZWI1OWMzYzhmNzViYzE2NTg5ZmUyMDdkOTRhNjA1ZmM5ZGEzMWFhYzJkMWRlODUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkMzhkMzhhYTg5ZDE5ZmEyM2IxNGM2NjBkNTBiMjcwZTU4YmEyZWQ5ZGFiMWRiNzVjMTNiOGI2ZDcyODk1YjUifQ"
+        },
+        {
+          "resource": "repo://topics/mcp-record-replay-testing.md#L20-L39",
+          "version": "repo-lines-v1:sha256:fac112134ce9a4e5248a2a53ea4c88ca8d6d7a8b662b55892ca29f45d532dfd3:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkNzlhY2QxMTVmYjlhYmIzODExZjE2YzMyZDY4NzY3NTFjZmMwYmViNjM0ZjMzY2NmZTExZjRlODAwYzI5NzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUyNDJmYjU4N2JmZmFkZTA1NTNiZjBkZDBkNTQ3YTljNmFiMTg0YzFmZTExNzhiODJhNGU2MjQwOTkyODAxM2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFhZTlmOTFlZjgyYjJmYzZhZmQyZDEyYTkyNDg0Yjc0NjlhZjdmYTIwZGEyMzQ0OTlkYzEwNTY4NmQwODhjMmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwMWYyZWMxNzU5M2MxMDU0ZWI0NjM2N2Q4NDUzZWYyNGExNzNjZTk2YjcxMTdkOTFmOWE2OGQ0NGZlZjhiMDEifQ"
+        },
+        {
+          "resource": "repo://topics/mcp-record-replay-testing.md#L7-L14",
+          "version": "repo-lines-v1:sha256:c6b786a43fda77e267e1e43f94cd8f1eb156ae6b6791f2dc5a41331ac47939b8:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzEzM2JiNjRkNWJiOTg3NGViZjk3Y2JkNmJhYzYyNzQ5NTZkZTI3M2ZkMThjZjY5N2ZmMGUwNzAyOGQ5MjY5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjMwNzgwMjczMjZmNDU1MzExM2ViMDY4ZWZjOWJmMDI4MzYyNGE4OWVhMzI2NTcyMDU3ZmI4OWY5MjQ3NzZmMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWVhNTE0ZTFmZWIxMzE0Mzk5MWI1Njc4ZWYwOGFjYWU4OTdkMmRmMzBmZGE3YjdiOGVjMGU4NDhlMTk1MDU4MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDAxZjJlYzE3NTkzYzEwNTRlYjQ2MzY3ZDg0NTNlZjI0YTE3M2NlOTZiNzExN2Q5MWY5YTY4ZDQ0ZmVmOGIwMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5d171642a994491d8904fd46b4bf7981",
+      "statement": "An Agent Space is a named access boundary for an operations agent’s accounts, integrations, identities, and permissions; the AWS DevOps Agent path places that governance boundary before topology context, retained knowledge, release review/testing, incident investigation, prevention, and protocol-based access.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/llm-engineering/agent-space-access-boundary.md#L23-L35",
+          "version": "repo-lines-v1:sha256:3954357dafe7d8efb76a926971b1a1422701fd143daf9d37aea86c98e6c49f9f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhMmQzMjM0NzdmODY0M2VhODhlOTEwZjUwNjU0MzM5NGIwOWM5NzI1ZmJiODYxZTdiZWVhMjY0YmIzNGM5NjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmMTQ2NDU4MmQ0ZWM5MzMxOTU4MWQ0YWU1MmUwMDRiZjBhMDFiMWY0Y2NkNTE3ODgyOTMyODMwN2FlOWY1ODUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEwYjA3YTJiYWI1NDBkZDAyMTRmNDdlNmJlMWIzOGJlYmZmNTc2ZDI5ZGVhZmNmZWEwOTUwYWNjZWYxYTc4M2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        },
+        {
+          "resource": "repo://topics/aws-devops-agent-operations.md#L20-L44",
+          "version": "repo-lines-v1:sha256:6f684b849d32d25fb2ae6a94e6194dfb26efd1cca6cbe7977ecedd2ef7a9497a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjZTk3MjFjMzRjYjI3NzUyN2E0YmZmMDhlZWRjYjc4NzQ4OGQ4YTM1ZDkyYjdhMjMwMzMxMTA0MzhkZTE1MTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRlNmZiY2NhNDFjNDhlYTM1NjJmN2M0MzhjOGE2ZTg0YzExNWU5OWQxMGQyNmQ2ZjIxZDE3NWViNjk4NjNmYzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAwMWYyZWMxNzU5M2MxMDU0ZWI0NjM2N2Q4NDUzZWYyNGExNzNjZTk2YjcxMTdkOTFmOWE2OGQ0NGZlZjhiMDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwMWYyZWMxNzU5M2MxMDU0ZWI0NjM2N2Q4NDUzZWYyNGExNzNjZTk2YjcxMTdkOTFmOWE2OGQ0NGZlZjhiMDEifQ"
+        },
+        {
+          "resource": "repo://topics/aws-devops-agent-operations.md#L7-L13",
+          "version": "repo-lines-v1:sha256:66a58980fb432e9332800a6f752341a993c95791bd1a44fc4d38d83a4c0cf48f:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzEzM2JiNjRkNWJiOTg3NGViZjk3Y2JkNmJhYzYyNzQ5NTZkZTI3M2ZkMThjZjY5N2ZmMGUwNzAyOGQ5MjY5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmRkMjFiNmNiMGM4NDA4NzY0NzhhN2MwZmZkZTg0M2U0ZGZhNTMxMzhkNTlmNzRhZTZiMTRjN2FmYTBkNGI2MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGQyNWNmN2YwNDVjNjM0MmE5MGQ1ODk5YjhjYzgwNTI4MGUzNzQ1YjVkNDI5YzdlODkyNDA1MTllZmIxMDFlMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjUzNWJjZGI3MDAyMDgwMTI1OTY0MDA4N2JhZDI0YzcyMzcxNTFkMTc3M2Y1OTU1YzY0ODIxYTcxNTU5MDk4NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_08d23189096d45f2b8fc7750ce3682ac",
+      "statement": "Autonomous incident investigation gathers evidence from alerts, telemetry, deployments, and topology to propose mitigation, and prevention uses historical incidents and operational patterns to recommend durable improvements; protocol access surfaces can make a governed agent reachable through MCP, A2A, ACP, webhooks, and EventBridge.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/llm-engineering/autonomous-incident-investigation.md#L23-L46",
+          "version": "repo-lines-v1:sha256:784e30a9041728b6bd8c3f934fcaeee3507be262967a8d36399efb91756ce669:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExMGM5NmMzNmNhNGY5MWUwOWM1MTI4YzJhZGE0YzA5YzAzNzNjMzU5NWYxMGE4M2VkNTM4NTE3MTVlOGU4NzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJiMjAwNDY5OGQxYmJlMGVkZTgxZjFmZTc0ZDJlNTgzNmZlZGUyY2Q4MzQ2NDM3MDViODQwNjRlZjE1YmNkNGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlhNDBhMjQ2MzU5ZGU5ZWZkZTlhMjk4ZmNhYjE2NjdmMGJlMzc1ZWI2YWQwMjMwYmYyMjIzYzZjY2YzYzNmYjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkMzhkMzhhYTg5ZDE5ZmEyM2IxNGM2NjBkNTBiMjcwZTU4YmEyZWQ5ZGFiMWRiNzVjMTNiOGI2ZDcyODk1YjUifQ"
+        },
+        {
+          "resource": "repo://concepts/llm-engineering/proactive-incident-prevention-loop.md#L23-L46",
+          "version": "repo-lines-v1:sha256:5b9aed8613bdc3973cd6784c953f781cfe299f6ff210b7007bf0781b96cb4053:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5NGVmNjgwZDIxOGIzNzI5MGRhN2NkYjU1Yjc0YmUxYTJmYjY0NWNkNjU2ODY5NjY4MTIyZmJlODdiNTkwYWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkNDA5Y2ViYmMzYmMwZjE3ZDVjMGUyMjgyNDIzODRhNzQ3MjllZjhhZTE0M2VhMTZhYWVjZmFkMjQ5NjczMjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlhNDBhMjQ2MzU5ZGU5ZWZkZTlhMjk4ZmNhYjE2NjdmMGJlMzc1ZWI2YWQwMjMwYmYyMjIzYzZjY2YzYzNmYjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkMzhkMzhhYTg5ZDE5ZmEyM2IxNGM2NjBkNTBiMjcwZTU4YmEyZWQ5ZGFiMWRiNzVjMTNiOGI2ZDcyODk1YjUifQ"
+        },
+        {
+          "resource": "repo://concepts/llm-engineering/protocol-based-agent-access-surface.md#L23-L46",
+          "version": "repo-lines-v1:sha256:88169b0d19d7ed5a1ff43f08685e074bf9b77b75a30f4ffdfbc4b47c5095d752:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5YmIxMWIxNDNkNDhlNzFlNTQxZTQ1NzQ1MTMwZjI2MTlmZDVlYmZkYzRkOTZhZDhhNDk4ZDYzNjVmMGExNmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5OGQzZDIyYzI3MDZlMDZkZWIwYzdhNjYzOTcwZDkxMWFkYTY3MTk0ZmIzODA5ZjdiN2JhNWI2YjFhYWMwZTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQzN2NlN2UwZjQ2NGJlYmI5N2VlN2RjN2I1YzUyYTUyYjU1MzBiZmM0OTI1Mzc0OTIyMDQzY2ZmMjFlODQyNzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkMzhkMzhhYTg5ZDE5ZmEyM2IxNGM2NjBkNTBiMjcwZTU4YmEyZWQ5ZGFiMWRiNzVjMTNiOGI2ZDcyODk1YjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a1fbcbc58b4149508f1805455ba7600d",
+      "statement": "The repository explicitly relates LLM observability to evaluation, prompt versioning, DSPy signatures, ReAct, LangGraph interrupts, and OpenTelemetry concepts, and explicitly relates the unified tool surface to MCP protocol foundations and agent access boundaries.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/llm-engineering/llm-observability.md#L11-L32",
+          "version": "repo-lines-v1:sha256:ace0f486a9e677ea30847756e3b7016672b95fe71d27fca24964b8bb1c046090:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjOTdlYzNkNTIwMDA3NWEzMGE3NWYwNTg0NjkwMDQ4OTgyMWJlOGRiNjcwMmQ0ZWVjMGY0OWE2ZjRiZThkMDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRiNjYwM2I0YmIwNDc3MTExYjc0ZGUxMzNlNjI4NDM1YzdjZTdjMzhlZjU4NmM3NmVjYzBhNTc5MmQ3NzZlNzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiMDYxOTU2N2Q3NGNhODZjYmU4MTI5ZjEyNDE4YmQxN2M2ZTA4YjAxYzFiMTYwNjQ3YzU3OTE5NWM5ZmFjYjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRmMzgzNDkyZDAzNGJhOGVkMzEwYmE3NjI0ZjAwNTRlOTI3MTdkZTY0MDVjMmU2ZDEwMWMxOTJiMWI4ZGI4YzcifQ"
+        },
+        {
+          "resource": "repo://concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md#L10-L19",
+          "version": "repo-lines-v1:sha256:9a653f42946dfa2d9b6172fc6c9e66163d724ebc2ef69b764c000d991032aaa9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjOTdlYzNkNTIwMDA3NWEzMGE3NWYwNTg0NjkwMDQ4OTgyMWJlOGRiNjcwMmQ0ZWVjMGY0OWE2ZjRiZThkMDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFiMjc1ZmQ0MWY2ZjY5MjcyNjBkYTIyMGY3MWU0ZDgzYzQzODlkNzc1ZmE0ZmVlNTA3MDlmZmE3NTczZmUyZGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg5NTdiZjMxMzExNmEyNWM5YzczZjQ3N2U2MjcxNzY1YTRhYjVmMGNlZjMzMGIyMzg1NzAyNmFiNDg1NzViYjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg3ZGY3NTI2NTBiNmRlNjViZWIyMjk2NTA5Y2ZhOTE0NmMxOGNjNTJhNjA3NWNiMzA1NjJjZTJkZGMzZjdmYWYifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.0",
+    "at": "2026-09-05T08:40:09.738Z"
+  }
+}

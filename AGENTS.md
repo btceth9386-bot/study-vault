@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-Exobrain is a personal knowledge base system currently in **design phase** (no implementation code yet). It ingests learning materials from 6 source types, converts them to Markdown, uses AI agents to refine content through a draft-then-promote workflow, and provides SM-2 spaced-repetition quizzing.
+Exobrain is an implemented personal knowledge base system. It ingests learning materials from 6 source types, converts them to Markdown, uses AI agents to refine content through a draft-then-promote workflow, provides SM-2 spaced-repetition quizzing, and supports learn-by-building labs.
 
 Specification documents are written in **Traditional Chinese (zh-TW)**.
 
@@ -20,9 +20,9 @@ study-vault/
 └── .agents/summary/                       # Generated documentation (see below)
 ```
 
-### Planned Implementation Structure
+### Knowledge Base Structure
 
-When implementation begins, the knowledge base will use this structure:
+The knowledge base uses this structure:
 
 ```
 _inbox/           → Staging area for new sources
@@ -133,3 +133,16 @@ node _scripts/<script>.js
 ```bash
 .venv/bin/python3 -m pytest _scripts/tests/ -v
 ```
+
+<!-- OPENWIKI:START -->
+
+## OpenWiki
+
+This repository has a generated `openwiki/` evidence index. It is optional just-in-time context, not required startup reading.
+
+- Treat source code and tests as authoritative. A brief's unknowns and review items are verification gaps, not automatic requirements.
+- Prefer the narrowest quiet validation that proves the changed behavior. Preserve complete failure output.
+
+OpenWiki updates are manual during the pilot. Do not hand-edit generated OpenWiki pages unless explicitly asked; prefer updating canonical content and running the documented update command.
+
+<!-- OPENWIKI:END -->

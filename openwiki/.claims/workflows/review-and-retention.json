@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:b47a25b240f643efb31191e98eb2967f46160ef4dc12cfb3b529856a798869f5",
+  "claims": [
+    {
+      "id": "claim_920684aac8684d5d99186f0b50bd166d",
+      "statement": "`quiz_cli.py` is the terminal adapter: it accepts count, concept, bank, and knowledge-base-root options, then drives session start, sequential question retrieval/submission, and final summary through `quiz_session`.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/quiz_cli.py#L11-L23",
+          "version": "repo-lines-v1:sha256:1aa541fb7ec245b1e709e6e0cf161b8544d2bed849a5d31522759e1a408e5ee4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlN2Q4NTY3YmJlYjI0NjQ5MDljMzhmOWY4ZTY3Yjg2MWQxOWYwOTBiZjkzNjJiMjNmNjUwZmU0MTA2Y2FlNTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxNTIzNjE4ZDI3MWZlNWJmYTQzOTUyMWY3OWUxZDk1ZDdiNWE1MDk2YTQ3ZjEzMTdiZTI3MmM0ZGUwYWNiYmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg3ZTUzYTRmYjJjODM0NmRhMjNlYWRhNTA1ZjFhMjNmZGIyYWU2ZGFjZGFkZmVmN2ZhODk0MjBkNzQyNmFjNDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkNjE0ZDQwZTQyMDM4ZThlNjk5ZWNhOWY1YjdhZmZjNGEyOTQxMGRhYjY2OGQzNzQ5MWVkODZjZGU1YmViMTUifQ"
+        },
+        {
+          "resource": "repo://_scripts/quiz_cli.py#L79-L118",
+          "version": "repo-lines-v1:sha256:41d040bc01f6ae67534703d4e9a09f9c89d523bdbed66b46075cb3dafbf12f85:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiMzk3OTMzYTI0YTgwMWVlOTIzMzI3YmQ2OWEwMTA0OWMwNzc5MTUwMjFjZjJlYzM5ZGRhNGY4MWFhODM3ZTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2MjMzYjNmZmVhMzJhMjNkZjUzMDY1MzQzNDhmMmRlZTc3NmE1YTZmNzRmYjUzMzE3NWRkYzUzOWE4ZmU0NjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRhMjRhZDJlNzhiNmY1OWMyOGQ5ZDFkYTYxNTQ1ZGUzOTM4MWJkYjZmOWExZDZkZGVmNTM4MDkwZjFjYzJmNTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNkNDEzNDBjYzIzOWExNTljZTliNjAyMmU5ZjYzMjI4MzJlMmVhZDc2Y2FlOWU0NzU0ZDIxMGViOGZiNmQ1ZTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c7c2bef819114fa1a2892a9d65c08a14",
+      "statement": "A quiz session selects questions due on or before the effective ISO date before future questions, sorting both groups by `next_review` and id; a concept filter is applied before this count limit.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/quiz_manager.py#L76-L95",
+          "version": "repo-lines-v1:sha256:7dbaae6de9bf9db8cefe239b50e0753c3e9fcb6ebb9ec2c5740230d024b69147:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1NDVkM2E2M2FiZDRkZWE2NTY5MWQxZWJiYTc0MjAwZTYzYzMxMjlmZDE1MTA3ZWEzZjBhZjNkZTAxMjhiZjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc3ZDVmMmVkOTFjN2E2YjI1MTYxYzIxNjZkYzVhOWIyOWQ2ZjgzN2NjYWVjNjkyNDVjMGU4YTkxOTRjOGNlZmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyMzFjOGNjM2FjOGE2ZGI2YTBhZTI2ZWFlMmIzZWM3OGQ2YmY1NzQyNGFhNGZlNTRlMGZiZTUzN2M5NjMxZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://_scripts/quiz_session.py#L70-L95",
+          "version": "repo-lines-v1:sha256:dd7580308322ee84ae6341e6f5a57b20ebeef9935dca8f7c58e46cd092142357:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmYzI5MGFlM2I1ODkxNTQyOTBhY2Q3M2I1OGJlZGY2ZmEzYzk3Zjk2MGJjYmE4MmZhMmQ4MDgzMjBiMWU5NDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ2NTcyNDMxZWNjMTNiNzQzNmUzODUxNGJhOTA1NjUwNTY0N2UwNmE1ODRiYTA0MjYzNmM3MjM0NTUzN2E1Y2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjYzRhN2QxY2M3OTZhYmEzZTQ2NzIzMzI3ZjUxN2U5ZjgxMTk4MmQyNTBmMDcwMjk4NmU0YjU3NjRhZDk1ODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFlYWQ4OWI4NjY1NTQ4ZGFlYmVhYjUyMzc4YjdjZWM0MDA3YWVjZWUzMjA3OGZhMGI5ZDEzMzQ2ZjkxNGIxMWUifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_quiz_manager.py#L80-L104",
+          "version": "repo-lines-v1:sha256:279288c54b0ce8f0e09901c27e965579360d64ac1474452b6b1cb3073bf0bd20:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4OTE5YzBlYzE1OThiN2Q2ODhiZDQwMjFkMjE0NzkwYzNmY2IwZGI3YmJjYWE2MDI5NGE3NDkzN2E5ZGZiMWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmM2RhNzllMTliZTk5NjBkZDYzMTFlNDA3NzZmMWU3MjhmNWNlYzhiMGYxMjE4YWM0MmViNmFlZDM5ODA1OTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAwMTdkYjI4OGVlOGU3ODcwZjFkYzIzOWEzYTQyNGZjMmMwNzlmOGMwMjc5MmNlMmNhYTIwZmYzMzhlZDNkZGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhNjJiNjk4MjY3ZDNlNTMwMTJlNTkxYjA1MzVjMjBiN2FlY2RhNTdmYmI3ODM0ZjY4NzVjZGRiOGM4MjIyODIifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_quiz_session.py#L317-L365",
+          "version": "repo-lines-v1:sha256:d3be9d5de4a3d7fff373340622af50183427c0f827ff713ff685a04e13f3a6c3:eyJzZWxlY3RlZExpbmVDb3VudCI6NDksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5NTc1ODk3NDZlOGUxMjE0M2FhY2I5ZWJlNmZlYWRhOGI2ZmYwMWYxNjQ4MjdjNDEwMTRiZGQyYTg2Yjk4MzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE1MDQwMzJkNTg0M2U2ZDQyMTVmYTA1ZjlhN2E5ZjE3YzZjN2VlODM5NmJkYzg0MTFmMjBlNDA5YzVjYTFjOGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlhODJlYmU5ZWQ0MDdjM2E2YmE0YjAwMzQyOTJiYWE1MmMxMWNlNWFlMjg2MTA3NDAyZGU0NzkyZWVlY2FjZmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjczZDQwM2I3MWY0MzgzMDM0YTM2YjA0ODY1ZTMwNzdlYjg3NTdkNmNhN2FmMzU0NDVlNWJmMTliNjU0NTU4YmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_29483f70e3774ff4a97554f881a4127a",
+      "statement": "Session startup associates selected question concept ids with review material from canonical concept files, extracting title, summary, relationships, and source references; it supports either `related_concepts` or `related` and supplies empty fallback material when no concept file exists.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/quiz_session.py#L242-L279",
+          "version": "repo-lines-v1:sha256:fcc5d87cd926e2323c80613284b960305368568fc3d5dce961e8b1bd14bcb323:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzMDFlYjUzMzhmZTU3MDFmZmI1MDhmZTcxODYxMWNjZDljNTM2OWViYTA1N2FmYzgyZjg4YjVlNmZkODBkMzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE4MDYwMDA3OGM1NzhhNWU0YTAzZjVhNmU4YWY1YzJmODYyMjg0NDVhZjg0MTRhMjk2ODliZjI5ZTE4NTY2MGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQwYzg3MTRkYWMzMWE4YmMxNzNkZjU1MGU3MDM4NjVjYmU2NGQ3N2FlODFjYjJkYTQxOTc5ZmRjNWQ4OTdjMmUifQ"
+        },
+        {
+          "resource": "repo://_scripts/quiz_session.py#L98-L191",
+          "version": "repo-lines-v1:sha256:abec94626bcf25b411a74e4abe8dcee135c1dc4b843877518b860eca220e804a:eyJzZWxlY3RlZExpbmVDb3VudCI6OTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkYjIxYTM2MjM5ZTI3NzgyZDU4ODJkMDc0YTgyOTQwZTZiNGE1NTk2ZmVhNzgxMWFhOWY1MDA0NTdhYTYwZDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhZjVjNjdiYTM3M2EzMzZiMjBkODc3ZDEwNjk2NmNiYzYwOWYzOWEzN2NmZGFlYjBhOGU2YjQ4MzQ0ODAwMjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU5ODhkMjRmNWM4MDg1ODY1ODA0MDM2NTgyNGNkNTQ4OGYzYzhkMjk0MTkxZWFkMTNiZDZhZmM5OTVjOWI0ZjgifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_quiz_session.py#L167-L221",
+          "version": "repo-lines-v1:sha256:c03b848e080037bcde0e214446422d16dd04169e1e8fa3ef1c34e897b495df8b:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE4MWJkYmY5YjVhNjIyZDgwZGMxODEwOTMxZTRlYWQxMTA4NGJmYjYyYjMzYjZmMzVjMzkyNDEzMjRjYjkwNmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5NzU3Zjk5NGQ0NzRiOTNkZjkwODhmMGY2MjhjOTcyZGExZjE4NzJlY2UyNDBiMjQ3NjJkMWVlMGU1YWM0YjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ1YWM0MzM4NzY0ZTYzNWZkZDhlYTIwOTNhNjVjNWQ2OGU2OWQyYTY1ZGEyOGNmNTcyOGE4ZjMxYzRlNTRhYzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4MTE0YjZiNGVlZjZmYjczN2ZiOWNhYmVmODMwOTQzNDYxNzYzZmU4NmIwNmQ3YWQ3MTU4YjE0ZGE1MWI2YjgifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_quiz_session.py#L368-L404",
+          "version": "repo-lines-v1:sha256:16373b5baf053bf81f8e2003cdb446cbe5b55dc4a33806f778ee8da2e6f7d39d:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4MWU4OWUxYWJjMGZhMGQyZWNlM2I2OGJjMWU5ZTA5YTQxYThjZDQ2Y2E3YzQ2MzZjODVhYzBmNzZjNDIyN2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3YzE0ZWM3MmFiYTY3ZmU0YjU5MGI3NDc1MWQzNWM0NzFlZTc5NTliYzY1MzYxN2EwZTVhODk3MzQxNzdkNGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlhM2U1ZmZhMDYxYTI4OWRlNmIwODYxYjc3ZmQxZjU2ZDI3N2EzYTBiMThkZWZhYjM0MWQwNjhkNDk5NGQ0MWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_152f53b759434eb9a7b2d499e2599aaa",
+      "statement": "Quiz sessions are process-local rather than durable: `SESSION_STORE` holds selected-question snapshots, cursor, results, and review materials under a generated session id.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/quiz_session.py#L18-L20",
+          "version": "repo-lines-v1:sha256:b1deb2c7e45b358ac664c8d0b6a7b81e7ba20c720a1c31ce7f6c265251ded671:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2M1NjJlYThjMGRkOTllZDVlYTNjZmNkNzc2YWFjZTIzMzNhYjdkZTQyZDcxYjlmMjQ2MjY0ZWIxYmYzNjM5YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGJkNjBiMWU3MjhiZjE1NDk2OThlNmFkNDNlNGY4MTBkMjVjODU1MjhjNmNhYjM1NjRjNzBkYjdhZjZlYjY0NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDI5MWYxMDMyZjhiMjU0ZmM4MzljMDRjZTdkMTUwNThmMTczYzRiYTRlZTZlNTM5NjllMDQ1MGI4YWZkMjBiOSJ9"
+        },
+        {
+          "resource": "repo://_scripts/quiz_session.py#L242-L279",
+          "version": "repo-lines-v1:sha256:fcc5d87cd926e2323c80613284b960305368568fc3d5dce961e8b1bd14bcb323:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzMDFlYjUzMzhmZTU3MDFmZmI1MDhmZTcxODYxMWNjZDljNTM2OWViYTA1N2FmYzgyZjg4YjVlNmZkODBkMzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE4MDYwMDA3OGM1NzhhNWU0YTAzZjVhNmU4YWY1YzJmODYyMjg0NDVhZjg0MTRhMjk2ODliZjI5ZTE4NTY2MGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQwYzg3MTRkYWMzMWE4YmMxNzNkZjU1MGU3MDM4NjVjYmU2NGQ3N2FlODFjYjJkYTQxOTc5ZmRjNWQ4OTdjMmUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4445cd07e27544c2878f4a16e08d7f26",
+      "statement": "The question-facing session API returns a public representation without the stored answer, does not advance the cursor on retrieval, and accepts submissions only for the next pending question; completed or out-of-order submissions raise `ValueError`.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/quiz_session.py#L203-L213",
+          "version": "repo-lines-v1:sha256:5d38d5459bd9c68460c21d7fadbd608da74b86501d6ce1846b388f72b618ada4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiNDRiOTE3MTNjYWNiNzcyOWFlMTBhYzM3NWIzYWU2NjQ2YjRlZmFlNjVlYjc4M2ViMjgyNWQ4NTcwZjEwNGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRmYmQwMDkzMTRiYzI3MDg0MTY3MzRhMDJhZTVmZjM5YTFlNDhhMDUwYmU5MWY0M2IyZmFhOTIwMDJjNjJiZmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU1N2FjZjExOTIwNmJhMTdkZTdlMjFjOTdkNjk0MjA2ODU5OTFjMjc1ZmIxMWFmNGNlY2EyNzRmYWM1Zjg3YzEifQ"
+        },
+        {
+          "resource": "repo://_scripts/quiz_session.py#L282-L293",
+          "version": "repo-lines-v1:sha256:6d387b8407917bd24141bfc627ad341971309ea4bc313bc8e20dd7903a715545:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3NGZlNGNhNTkyN2E4NjkxODFjZmNiYmVkNzYyOThjNzg2ZjYxNDY2YmI4NWIzZTg1NzZlM2MyMTg2Njg3ODYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2ZWJmMTRlN2MwMWQ3Y2ZjNGI2MzNlYWUwM2M0OWY2Y2M1YTY2YTdlYzcwYWMxYjg0OWJiYTNmZWI3YjI1YmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRmYmQwMDkzMTRiYzI3MDg0MTY3MzRhMDJhZTVmZjM5YTFlNDhhMDUwYmU5MWY0M2IyZmFhOTIwMDJjNjJiZmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhNjY0M2JlM2YzODMzMDlhNjY4MDllZmM1M2JlMDA3MzRkMGI0YWY5ZWI5OWJlMDgwOTIxYTA2MjUzNjkxMDkifQ"
+        },
+        {
+          "resource": "repo://_scripts/quiz_session.py#L296-L324",
+          "version": "repo-lines-v1:sha256:2e83b75e8e3cc0f6e575ba70b59317cd92d50744e409449dd107e6121ff11dae:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxY2YwZjI0ZGQxZTJkYWZkYzRjYTNhNDFlOTE2MzEzNzBhY2VkMjFiYmFjYWQzZmUzZTJhNzZmNzJjOGY4NjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2NGE5YjA2MWNjNjY4ZWFiMTVmMTA5YzQ2YWE2MzMxZTZmOGIxNGY1ZDhhZDRkMjFhMzVmMWZjZTc3MTQ2YTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlNmM2ZTJkNDE5OTI5MDkxOWMxNDI1NzNhOWI0OTA0ZDdhZjczYTc1M2UwZjcxMjIzOTYzOTg5NjBlYjU5OTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY5ZDY5Mjc3ZTM0ODEyMTE0ZGZhNDQxOTZjOTVmMjZiZWFmYjU1NGY5ZmVjNDYwMWZlNzFiM2Y4Y2MwN2YxYzYifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_quiz_session.py#L223-L240",
+          "version": "repo-lines-v1:sha256:6e388cfcf01d1a3d4752e2b62f66b97323a4603677376192bdb4612bf59f10a6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjYTJkODJlNDdjOTA2NWZlNDljYmRlMzQ3YzZjNzcwMjlkOWE0NTNjYmIwYzU3ZTE5ZGYyZDJmZDk3OWU2MTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiZTUzNTNjYTAxZGM1YTFlMTg5NGUwNmI0ZDljYjhkNTZjM2ZhM2M5N2M3ODBmZGExZTA0MmIyZWY1OGJmZDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI1YTMyYzQ1ZDA3MWNlOWNkNmYxM2RhMmEwN2Q1MWQ3OGNmNDI2N2FjMzEwZDY1NDJmYzVkNzMxNGY4YTY2N2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMzMDc4OTExN2NlYzZiZWVhYjJlMTNkNzY0Yzg5YTg4M2VkYTQ5OGYwOGI1YTRhNTdmNWE0ZjUxYzNiM2E3MDUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_03d27924f05e4fe5a751c6809134471d",
+      "statement": "Multiple-choice answers are evaluated by normalized equality to the stored expected value, whereas short-answer and application entries require explicit caller self-evaluation.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/quiz_cli.py#L39-L49",
+          "version": "repo-lines-v1:sha256:6f840bb8abf72b01540c41c094e02c57016310e9bd8132d8ca42c2f788ac54de:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5MTA5NDlkYzBjNzlkMjgwNjY4MjlmZTVjNGM0YjQyYzgzMTI5MjI1Y2Y5OTYyYTUwODY4YmZhYTg4NGRhZDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhNjRiNzQ2NTgzYzA1MzU4ODJjMmMyZTk3YzAyOWZlYTliYjIxMjliYTRjNWVlMDUzZTJmNmUxZDJkYjUwODUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlYmQ4MzQ2OTc5ODc1MDM5YzliMjJmZjUxNjg4YmIxNTNmZTZkNDg0ZWExZGU4ZDdiNzFhYTRkNWEzOTY2OWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU2OTcyZjRhMDliYzBlNTVhNWZiOThmZjY5YzhhN2NkOGNlMDQ5NjhmZjc1NTlkNDk0YjVhYjQ4ZjVlN2RjZWIifQ"
+        },
+        {
+          "resource": "repo://_scripts/quiz_session.py#L223-L230",
+          "version": "repo-lines-v1:sha256:53f1501640255b5981bf0081aaf7df580175e885c267fe75833bcc4a378dc9b2:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzRhNWRlYzExNWZiMTZhMDU0NWEwMzExYjRmMmVmMDNhN2U4NmJkMDcxZDRmOTc2NjVjNzRjZDliYmViYjMyOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmU4ZTY1MGI5NmEwYWUxMTAzZWIwZTlkMmU3ZjBmYzU4NzQ0MTc3YTI2OTNlYzE0Mjg3MDM3MmZlYWU2YmY2NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTYyOWI0NzAxZTgxZWRmYzkzNjllMzQ2ZDBiOTRmNDhlMjIzZmY5NmFlZjY0NDk2ZmVlN2M3MzdhYTE4NWZiMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmI3NGRlYzRkMzk3ZmNkYzBjZTg4MDM5NTUwYzgzM2E4NjEzNDhiM2MzZDhhMDkxZDQxOGM4OTU5MzE4NzMxOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1cde233bed684ad7b4ca6f737e70b044",
+      "statement": "On a successful submission, the session applies a scheduling update, advances its cursor, reloads the bank, replaces the matching id, and writes the original list-or-object bank shape; a missing matching entry causes an error rather than updating another entry.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/quiz_session.py#L233-L239",
+          "version": "repo-lines-v1:sha256:a3e17316c0815bd64dabab5045040d5dce9c77150a73a8d491bec7fef3a4d9b5:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTJkNjNmNjFmM2MzNzhlOGI1YTA2MmFmOGMyMGUyMzVmMjJiZmI3YzQwMWY0ZTRlYjY0ZTY4YTQ5OTdjYWNmMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmIxZTJkYjI2ZDAwYjMzZGEwOTE3YTNlNjJhMmMzMDQxNjgzMWQ3M2YzMDQ0ZDFhYjQ0MjRmY2I0YjUwMzBmOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjMzZjZjNTE2MmFhODFmOTM5NTY2NGVlMjZjMWI5NjRkODhmOGE1ZjEwNTI0NTAwODk4MGMzMGVjMmE4MGNhZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmQ0YWY3ODhmMzVhNmE4OTFjNGVmMDk3ZGI5MzA4OTZhN2I2NGJjZTliZjQ3NzBkZGRmYTZkYTY4MTc0ZmIzZiJ9"
+        },
+        {
+          "resource": "repo://_scripts/quiz_session.py#L315-L343",
+          "version": "repo-lines-v1:sha256:940a22118c27ff3550065d3efe73b2788e6d3b4c335014b8aabd91583ba25a7b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3MjAzYjMwNDhjMTI1ZWU0ZmZlZTBhZDk5Mzk5ZGZlZjZkOTg1YzhjZWIzMjdiYTdmYTI5Nzg1ODAyZDY0MjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUxYzM1YjM4ODM2NWEwMGI3NTQwNDE5YTM3M2U0NmY2MDMxMzIwMDQ0NDMzZDk4NjE4M2NjZWY4ZjAyZjY3M2MiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMyYzU0MThlMWE4NjJhN2RhMDQzODg5ZDE1MGE2MzY1Yzg0M2I4YTVmNzc3MjgyMWIyNzU2YzRmZGFiNDhkODYifQ"
+        },
+        {
+          "resource": "repo://_scripts/quiz_session.py#L48-L67",
+          "version": "repo-lines-v1:sha256:ba84ea15309e8b0ad9a6ebe8fa28ee067ce967a5782f0ecf3f7c4c7ccaf7437f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2YzViMTY1YTJmOGNmYzJjMjUyZGZiNjlkZmE5NjBjNTJlNjFhOTQ1NjVkMjQ2MTBjYjRjODE4YTc4N2NiZDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU0NDhlZGUwNjFkZjA3ZjRiNTYwNjc2ZWRlOTE2MjEwZTJiMDhjNDAwMzk1NzI1ZTE4NjY4MDZhNjczZTNhZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZiNWRhZmRlMzE0MTA1NjFjNzhkMDdkNmMwMjRlYTBlODI0MTRmZGQ2YjAzNjk5M2Y1ZmFmNWFlYzBiNzlkMDkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_527711d9c530487abff4c211a020dc86",
+      "statement": "The simplified scheduler defaults interval to one day and ease to 2.5 with a 1.3 floor; correct results multiply interval by ease, incorrect results reset interval and reduce ease by 0.2 with that floor, and both append a dated result and calculate the next review.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/sm2_scheduler.py#L12-L15",
+          "version": "repo-lines-v1:sha256:d6e2f985b9cbe5addc6063cb09c56af4d91381c64eff95e5db6f865b47cb57e3:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODgyMTlhMjQ5MTQwMWMyOWZmY2ZhY2Q5MzM3NGJkYzM4ODZlMDMzMDVlY2M5OTE0NGRjNWFjNGMzNTAwMDEzMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWQzN2EzM2QwNzNhYjhkYTI5ZGM3NGNlNmE4OTEzMTgxOGE1MmE1YzE2NWQxNmYzMWQ5OTE5OTdmMGU2NmNmNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWRlOGExOTc1Mzk0YmUyNDY4ZTAxMTNlMGI0NDQzNTBiZDg2N2MxM2I5N2QwMWQ5NzM1MDMxZmEyODM3ZTYxNCJ9"
+        },
+        {
+          "resource": "repo://_scripts/sm2_scheduler.py#L44-L76",
+          "version": "repo-lines-v1:sha256:8622ab7f69faa1cc4f1a54067795a35d94cec88c3a4b208a912a9db4cfdfbb7a:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjMjYzZjAwNGFhNDZkZjI2MTQ5NTE0ZTE3MjhjMzU3ZTUwNWY2OGNiZWMwNjQyNzc2MmYyNDI4NjcxZWQ5NWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiMWUyZGIyNmQwMGIzM2RhMDkxN2EzZTYyYTJjMzA0MTY4MzFkNzNmMzA0NGQxYWI0NDI0ZmNiNGI1MDMwZjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjYzRhN2QxY2M3OTZhYmEzZTQ2NzIzMzI3ZjUxN2U5ZjgxMTk4MmQyNTBmMDcwMjk4NmU0YjU3NjRhZDk1ODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3NzJkOGMwZGM1MGJjMTBkN2Y3M2Q1ZWJiMzk4ZjQ4MmNjNDM5ZGIxMTU4ODBmYWVmNmU1NmY1YzgxMDAzZmIifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_sm2_scheduler.py#L48-L68",
+          "version": "repo-lines-v1:sha256:99733ed0ce319cbeb7bc2fa336e8ed9b99ed931f01f88d1052a0b7a5b98080b7:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcxZWJiOTJkNmRhYTc0ZGE0MjBkMWExOWE5MjJiN2VhYTc4NDQxODM3NDg1NWNiZDY1YzEyNzIwNzQ4OWQ2YWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmNWZkNzgyOGMxY2VhYjdmMDAwZDMzZjYxNDBhNWI5YjNlOTU2YWNhOTZkYTAxM2Q5Y2U5MzRiOThhMTg3NjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjYzRhN2QxY2M3OTZhYmEzZTQ2NzIzMzI3ZjUxN2U5ZjgxMTk4MmQyNTBmMDcwMjk4NmU0YjU3NjRhZDk1ODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjllYWIzOTdmZjE5NmUzNjBkN2ZhZWEwZTgyMmE0OGMxNGIyNTVhZjQwZDVkMmM0Zjk5NWYwYmQ2NTRkMzJjOTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_91491f5c8d45469f9d3cfbd9ea3911f2",
+      "statement": "The session persistence path rounds the scheduler result to a positive integer interval and recalculates `next_review`, while the direct scheduler helper can retain fractional intervals; this is an observable distinction between the two update APIs.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/quiz_session.py#L233-L239",
+          "version": "repo-lines-v1:sha256:a3e17316c0815bd64dabab5045040d5dce9c77150a73a8d491bec7fef3a4d9b5:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTJkNjNmNjFmM2MzNzhlOGI1YTA2MmFmOGMyMGUyMzVmMjJiZmI3YzQwMWY0ZTRlYjY0ZTY4YTQ5OTdjYWNmMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmIxZTJkYjI2ZDAwYjMzZGEwOTE3YTNlNjJhMmMzMDQxNjgzMWQ3M2YzMDQ0ZDFhYjQ0MjRmY2I0YjUwMzBmOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjMzZjZjNTE2MmFhODFmOTM5NTY2NGVlMjZjMWI5NjRkODhmOGE1ZjEwNTI0NTAwODk4MGMzMGVjMmE4MGNhZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmQ0YWY3ODhmMzVhNmE4OTFjNGVmMDk3ZGI5MzA4OTZhN2I2NGJjZTliZjQ3NzBkZGRmYTZkYTY4MTc0ZmIzZiJ9"
+        },
+        {
+          "resource": "repo://_scripts/sm2_scheduler.py#L55-L76",
+          "version": "repo-lines-v1:sha256:aa11928c77af362aac646b54bf628b3bb6168067b63386f66f8e2afa4d460f72:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBkZDRhOWE1OTc4YTA2NDdiNDBlMWExN2NhNzI2OWUyZWM3N2QwZTZkNGE0OTkyMTJkMDk1ZWIwNjkzY2M5NjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiMWUyZGIyNmQwMGIzM2RhMDkxN2EzZTYyYTJjMzA0MTY4MzFkNzNmMzA0NGQxYWI0NDI0ZmNiNGI1MDMwZjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE4MDYwMDA3OGM1NzhhNWU0YTAzZjVhNmU4YWY1YzJmODYyMjg0NDVhZjg0MTRhMjk2ODliZjI5ZTE4NTY2MGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3NzJkOGMwZGM1MGJjMTBkN2Y3M2Q1ZWJiMzk4ZjQ4MmNjNDM5ZGIxMTU4ODBmYWVmNmU1NmY1YzgxMDAzZmIifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_sm2_scheduler.py#L145-L149",
+          "version": "repo-lines-v1:sha256:132edaff421f692834e3170aea00e35ba2a0580c70e4f3c9a72bd3b91b39893b:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGY3ZjFiN2Y5ZmFjNDk2NzJkZTA0M2U2ZGFhYTAwNDEzZDhlM2ZhZDA0Njg2OGRiMWZhZjcwYzQxNDI2Y2I4ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmQzYWE2YjlmNjU1ZDc4NDRmYWEwZTVmMmQwM2QwYWE2NzA1NGYyYmM4Y2VhZmRjMTAyNWI0NTMwOWY0M2IzMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmI2NGJkZTVkMWNlNTViNzFhZDA4N2EwM2ZmZGFlMzJjM2NlMjI5NTZkN2JiMDFlYzA3MzZiNGVjYjM2ZmU2NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWM1NWY3YWU5MzI1ZjkxMWU0YzQ2ZmVjMDZlOTMxZDZjNTI2NTQ1NDA1ZDQ0NzkyMmI3YWM4ZjIyNzBiMzU1MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d1b892ea2a1e41d4b8bf8cfe9bf71594",
+      "statement": "Quiz-bank helpers accept either a top-level question list or an object containing `questions`, while the standalone scheduler requires the object form; `add_questions` performs required-field validation before appending.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/metadata_validator.py#L111-L117",
+          "version": "repo-lines-v1:sha256:f6d0848c02acef0d4f2e86c7bb3a72de56772be9a2fef8bda13f3893fd77726f:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzFiMjJlOWMwMDc3ZjIxMDA1ZDY2ZjM5YjJhYzAyZmRhYjMwYmJjZjc1NzkwNWJlMTcxYjRlNDNhOTYwOGZlNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODk2ZmJmZjFjMmVlYjg3ZWY0MDkwZjJhNDNjMGRkMGFkYTg2MDRlODIzMmQ4ZTU2NzFiODJjZTQ0Y2Q3M2FkMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZjZmZiYjA3ZDkxMmQ2N2E3ZTZiZjcwYmM2Y2UwYmQ4MmUwMWFhMDg1YWE4YzgxMDExNmRlYmZhYmUyNjY2NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://_scripts/metadata_validator.py#L28-L41",
+          "version": "repo-lines-v1:sha256:3b9be8c5e627768b92fb3edf93c187562d89559925085cb898cbdca3d82b5eb2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5M2I0NTA0YmNlMzNlNzdmNTgzYzBlN2YxY2IyYmYwNzllYzJhYmMzYjgwMzdmOWE2YWM3OWVkYzRlMzY3YWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhZmJhMDUyN2MzOTUzYzRiNmUwZTViNTczOWJhODM2MTJmODA1M2JjZGM5NDY2NzMwMTkzY2QxZDU5MGI0MDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA4MzNiZTVlYzczMDJjMDczOWE2M2YxZTllNmJiZjNhOWVlMWY4MzRmMzYwMTE2OWJkY2I4YTM3ZTEyZmIxN2MiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE2OWJiZGJlYTBlNzJkOTlmOTA2NWM3ODA1ZmY3YWQ3ZTZiN2RhM2VmZTY3MDZmNTY3YzVjOWQ5YzgxMzE3ZTYifQ"
+        },
+        {
+          "resource": "repo://_scripts/quiz_manager.py#L17-L59",
+          "version": "repo-lines-v1:sha256:c92d16f0de17457c06ff1436c7310af372b73169c5549792af9d5ba476eaa4f2:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyYjNkNzZlZjExNmQ4MGQ3NzE5MzE2NzZmYWU3ZDIxM2ZhOTVhZWQxMWE2YTIyMGJmZWM0YWNkN2IxMmI1ZTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE4ZDFiMTIzMGQ3MDk5NTYxM2RiNDgwNjRlNDNlNmM3MWQzMzQ2NjMyYTljM2MyYzEwZjk2MWE0NDUxYmFkNTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQzMzBhZmZhNzhjNDdhMmNkOGE5NDZlYjYxMWEyNmRiZGFjMTc3NThkMjQzOTU4MDkxZjc3NDg1ZTYzNzhhODkifQ"
+        },
+        {
+          "resource": "repo://_scripts/quiz_manager.py#L62-L73",
+          "version": "repo-lines-v1:sha256:28e7cd5677dbdbafdce9d58747d299a1ba0ad488f2fb0af17a7f1b4135e30415:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1YWMzMWYyZTk3NWVmOGEwZjkyNDZlZDUwYTMyZjgxYTY5NmZmZjYzNWFkMWZiY2U3MWI3Yzk3OGYyY2I5Y2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzNjIyYzE5MzA3MTc5YjFlYjMzMWQ3NDcwM2M2Mzg1MjhiZjM1ZjMxM2MxYTI0MjgyNjNmNmEyMjYzYmYyMDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjYzRhN2QxY2M3OTZhYmEzZTQ2NzIzMzI3ZjUxN2U5ZjgxMTk4MmQyNTBmMDcwMjk4NmU0YjU3NjRhZDk1ODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRkMjc3OWYzYzM4ZmViYTEzMGY5MTY0ZTc3MjlhNThiYjQ4ZTMzMDk4OTJkOTQ5NjRmMDIwYzBmYmUwYjBiZTMifQ"
+        },
+        {
+          "resource": "repo://_scripts/sm2_scheduler.py#L25-L34",
+          "version": "repo-lines-v1:sha256:0767150c72cd22fa6ea2de17f2b0b3c11e38fe11e0e06c54a2469b81d4f8d436:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2MDM4YWZiYjYwNGE1OGEyZDI4ODI3YzEwMTdkYzI2OWM3NDdmYzk3NDFkMmYzNWFjYWZmMTJiNjk0YTE0MGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhMDg1MWFjNWEwNGQ5MDdlNjRjOTA4ZTUyMDQxMDI4YmI4M2ZkMGZlYWE3Y2ZlNTdjYjBjZmM4NjQxNDA2NTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcxODA1OGQ1ODBhMWE3YWQ5NjU0ZTlkYWIyZGRkYzM3MzdlZTg4ZDc4ODVkMGViODE2YWU3MTg1NTUwODk5MjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkNWM0ZjE3Mjk3MTA1Njk0MGQ5ZWMyMmVmMmNhODkxOThiNDhhZTYzMjQ0YmM5OWI0OWY1Njg3NjA5NDI5NmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a9d9c08bc66a4cb5a6b41ad2bf255fe1",
+      "statement": "Quiz-entry validation checks only that required fields are present, not their types, date formats, allowed values, uniqueness, or cross-record concept references.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/metadata_validator.py#L111-L117",
+          "version": "repo-lines-v1:sha256:f6d0848c02acef0d4f2e86c7bb3a72de56772be9a2fef8bda13f3893fd77726f:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzFiMjJlOWMwMDc3ZjIxMDA1ZDY2ZjM5YjJhYzAyZmRhYjMwYmJjZjc1NzkwNWJlMTcxYjRlNDNhOTYwOGZlNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODk2ZmJmZjFjMmVlYjg3ZWY0MDkwZjJhNDNjMGRkMGFkYTg2MDRlODIzMmQ4ZTU2NzFiODJjZTQ0Y2Q3M2FkMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZjZmZiYjA3ZDkxMmQ2N2E3ZTZiZjcwYmM2Y2UwYmQ4MmUwMWFhMDg1YWE4YzgxMDExNmRlYmZhYmUyNjY2NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://_scripts/metadata_validator.py#L28-L45",
+          "version": "repo-lines-v1:sha256:6005556399416849b4e65c6ad8aa57263fefccff3ce0d79ec7191cdc4e895ed1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5M2I0NTA0YmNlMzNlNzdmNTgzYzBlN2YxY2IyYmYwNzllYzJhYmMzYjgwMzdmOWE2YWM3OWVkYzRlMzY3YWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlNTY3NTM5OTg4YmI1OTA2YzllYTM1OGMxYmQwY2M4MDJhYjZjZmM5NWE4MDNjZDBkNmU5YzdiMGMyZDQxZmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA4MzNiZTVlYzczMDJjMDczOWE2M2YxZTllNmJiZjNhOWVlMWY4MzRmMzYwMTE2OWJkY2I4YTM3ZTEyZmIxN2MiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRjMDgwZGM5NmNkYTVlZmFjNzA1YTk3MzdhY2E0NmU0Zjc2OGQ3MDlkMTZhZDI2YzRhNDAyNmFkMjQwZDE0NmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4b17c9f3719644deada05c8b12926043",
+      "statement": "The weekly-refine prompt uses a single current date to scan concepts, drafts, sources, topics, quiz data, and indexes; it produces overdue/staleness/contradiction/review recommendations and selects a five-to-ten-question due-first weekly pack when possible.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L45-L60",
+          "version": "repo-lines-v1:sha256:013bf9b0b1bad57d272d9f3849e3eb0a83c10d2d234d2b21c95c54f418a725a1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4ZTFlYTE2NzVhYjA1MjI1NjgwOTgxYWJmMjkwNGUwNmVjMDNkOGUxODdhYjg5ODkxNGVlYmIxMWYyMDc3MjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2MDhkYzNmZmIxMjVkNmRjYjRjMzkxZGM0NDE4ZDkwNjg3NDY5MWExNjllMmIxMTc2MjVkNDI1NDgxYWY5YTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgzOWJhNzY2MjNhZTAxZmQ2NGQzZWVhODcwZjJhNTdiNGNjNzM2NTgzMjIwM2ViZTNhYWNkM2ZmYmIwZTJiNWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlmOGM2YjQzMTEwNWVkYjM5NWJkNTJmYjc5YzI5ZDk4NDg1Njg1ODE1NmVkN2FlYTBlNTE4N2FkMTUwMWM5N2IifQ"
+        },
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L5-L24",
+          "version": "repo-lines-v1:sha256:37c6293c6c9376769ea37834e60cb700fa30ffe18030b57439c8a9773ecce89b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4MTljYTRkODYzYTQ1MjJjZTY5YWYxMzQyYTQ1ZTAzMWUzMDllNTZkZWMwOWI4ZGQ4YjgxZTZkMzdiY2YyYzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5YzUwN2VmMzA5NDZhZGY0NzY5Zjg2NWRkNWI3NDBjYWExNWU3ZWNkN2UyMWMzOTBmNGNiNDMxNDk3MmJjNWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlZWE5YmNlZDY0MGU3OWQwOTU1ZDliZDdlNWQwNjA2MjM1YTBhODI3NWFjZTY4NDlkZjNjNjAxYTRmY2U5MzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRhNzIxOTc3MjQ2N2NhYWY4ZTRmYTlmYjUxZjdkY2VkNDg4YjcyZmQwY2FiMjE1ODAyNWJiODJjOGI1MjRhZjEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d30e429d75414d75850047dd3e0d7eb1",
+      "statement": "Weekly refinement may write a dated inbox report, quiz bank, generated indexes, and refine log, but it must not mutate or promote `concepts/`; needed canonical changes must be reported for human review, and a scan without answer results must not arbitrarily change schedules.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L143-L192",
+          "version": "repo-lines-v1:sha256:055f1bf3787628950b8eab24cfd2619d86271a3ac1ba5ed0fa4a59d63c1456cf:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjNTMwMjBhOWZjZTFiOTZmNDZlMGVhODUzNDY1NTNjMWU5OTFmM2VmN2RhYzI0ZWNmYjQ5OTNlZTY5ZTg0M2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3MDBhYTdjMTNmN2ZmNmNmYTY4NzIzZWI3MmQ2NGFlZjY0Y2E2NGJiNjg2OTVjZjBhMjI1NWMyNjY1ZWViNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg5ODIxM2E0Njk4ZmY4NjcwZjVhOGVhNDVhMmMzYWE1ZDdkMjJmNmUxYTBhZTkwYjMxOGM1ZTQwZDY4MTU3OGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkyYTQ2YWQ5ZmI2NTgxYzZmODZkODdlMzY2NWZiMGJiNTMwYTZiYzlmYmRjZWQxMmY0YWNjODAyYjhjYmY2NzUifQ"
+        },
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L217-L225",
+          "version": "repo-lines-v1:sha256:307f2805cad987bb02c3340f98f33dedab5c5995b7321641e70596884b6ef806:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTVlNzY3NjExNThhNDFmMTQ2Y2NhNzgyMzQ5NTAwNWQ0NTI5MGM1YWQ4NzAxYjM2YTFiOWM3Mzg4ZGMyMjA3NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2YxYmI5N2YwYzRkOGY0ZDM4N2U0Mzc1MjcxOTEzODIyZjNiZDVlOTU3OWU1MjEzOWJjY2Y1ZmFiNzc2YThjNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTg3NmMxZWZiYzQ3NjE3NWJiNzJiOWI0MDIxYWNkNWI2OGI1MjIzZWExZTA4Y2JkNWZlOTBkYjQxNWZhZTc1MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L26-L43",
+          "version": "repo-lines-v1:sha256:ad2419a86cef8473e69360b7ebc1e120ffa882b2a29f0d4c2513d54d00486a0a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwNGVhMGNhM2M4MmI4MGI0MGYzNDA3Yzc5YjU4MGUxY2ZhN2NjMjkwMGJlN2QwMDk3ODhhYmVmYzRiZGY5MmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkMDdkZGFmNGIzMzA5YjE2ZWU3MjFmMWMxZmVkMGNhMGExZDBkNzFkYzliOTgzNDk1NzJjOTc3NTE3ZDY2ZTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE0MzQ5NDYwNGY0ODEwNjE5NjM3NmNiODhmNTNkODQ0NWIwZjVkMzMzMDczYWFjZDMxYjkxNTBhMDEyMTRlYTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyMzkzMGRiYWRhOWQxMGE2YzJlZWNlMGNiYmExZDEwMjNlMzRjNmJlZTI5YjMyNThkYmViN2JiYjNjOWJhMWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ac9c2cae1efa4a8391e5c552db75dc27",
+      "statement": "`quiz/` is excluded from OpenWiki canonical inputs along with drafts, inbox material, and sources, establishing a documentation boundary for private assessment state.",
+      "evidence": [
+        {
+          "resource": "repo://.openwikiignore#L1-L13",
+          "version": "repo-lines-v1:sha256:63136b89950e855b8c4b68caaa731b26ac89fc73b74c76c07ed01268a261347a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkYjlkZmM1MjFiY2FjZjY2YTcyMDg3YzZmYTBiZDk1YjZkMjVjMTQwMmFjMTJlZjFhMmZjZWMyMzQ5ZDQ3NDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4MmZkNmJiYjkwZGQyZDgwN2E4NDYzODQ5NjYwMDAxODdlOTAyZmJiZTc4NzFmYTUyMDk1NWFlOTJiNjYwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgzZGNjOTBjYjcyYmQyOTM3YzU2ZWVkNzUwNmI2Y2M4MTM4OGM4NDI4YTZhNWE4YTM5N2JhNDEzYWI5MjgxZTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d217fc6f7941474393d7de4e79ebe36c",
+      "statement": "Focused tests cover session end-to-end behavior and property-based history/accounting, scheduler outcomes/due filtering/persistence, review-pack ordering, and CLI-to-session delegation.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/tests/test_quiz_cli.py#L33-L132",
+          "version": "repo-lines-v1:sha256:c95c2cfb3996112cd178b5b4d92eeb4504edc18c69c7dd3250ab3525733862e9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJjYmIyMTZhMzcyMTE3MjE3NTMyYWQ4ZjM0YzM5OWRiMTY1M2UwNDEwNDllNGJiMjRkYmI3ZWMzNGI5MmUyNGM2IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzOTRhYjJmYzAyNDY2NjQ2MTgzMjU3ZmRhODk5OWE4MDdiZGZlYzQzMDBlZmVlNDc0YTczNzAwNTJhN2YxMTZlIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJjMjcyZGZkYWEyNzcxNWZlMTFkZDE2MTBmN2NkNjQwYmMzZTkyZGQ1M2NhZGNiMmI1Zjc1NzVhZDc2MDUzMGRjIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MSwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJhZGQyNDQ1ODJiNmZiMDNkMjNiODQxNWFiZWNkMzQ2YjBjOWY0NjZiNmY3NTJiMDY4MTg5Y2U3ZTlhMmRjMzUwIn0"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_quiz_manager.py#L70-L104",
+          "version": "repo-lines-v1:sha256:32c41d5f51ba0c0c5ad3316a31e5da9d5d3d92bcf7d4ce9c125cf1080ffd4e97:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4OTE5YzBlYzE1OThiN2Q2ODhiZDQwMjFkMjE0NzkwYzNmY2IwZGI3YmJjYWE2MDI5NGE3NDkzN2E5ZGZiMWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmM2RhNzllMTliZTk5NjBkZDYzMTFlNDA3NzZmMWU3MjhmNWNlYzhiMGYxMjE4YWM0MmViNmFlZDM5ODA1OTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA5MWU4MWYzMjEyYjM4MmFiYjJkZjllMDA5ZjZjMDc3OWU4M2Q1NzU4MDJlNTg0NjY3MWJkODZiY2FlMjg1NjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhNjJiNjk4MjY3ZDNlNTMwMTJlNTkxYjA1MzVjMjBiN2FlY2RhNTdmYmI3ODM0ZjY4NzVjZGRiOGM4MjIyODIifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_quiz_session.py#L125-L257",
+          "version": "repo-lines-v1:sha256:d5a1d6ec2a0c642d65459e50dcaf3b498aba4e470906581fbc84b50aaf737a59:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4ZGZiZWM4YzM5NmI1MzhkYWMyOTIyYzY1OTg5MzJjODNkZWRiZGM4NWU1MmNjYTk4YmQzZTM2NzRhOTVjM2I4IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI2OGIxZjI1NmI5MzNkM2E5NjVjNTQ2NjVmMGM3YTRlNDBhY2E3MTIzNDYxNjM2OGQ2MmFhMzZlZjM1MGVhOThkIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI2NDA3MmJjNzY0NjViZjUwOTI1ODQ0MzI2ZGIxODJmNjU0M2QzNDQxOGM5YTg4OTM0OWZkYTZmMGQyZjNmMzBhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlYjA3MmMyNjU2MDg2NDAyZmZhNTAzYWMzY2IzZTUxNmY4Njk5NjFkZDZkYTUzZjg0ZGJhOGM2MjRlMTE1NTA2In0"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_sm2_scheduler.py#L48-L160",
+          "version": "repo-lines-v1:sha256:819cfcd333aca6eb484e4c015eac8bcea7290c2f30f470642fe47b436f788c1b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI3MWViYjkyZDZkYWE3NGRhNDIwZDFhMTlhOTIyYjdlYWE3ODQ0MTgzNzQ4NTVjYmQ2NWMxMjcyMDc0ODlkNmFjIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI3MTM4Y2E4NjY2MWZmNmE0YTc2MDVjZDk5OTczZWM4YjcwYTVjNDEyMWQzOTAyMjBjNzJiZjNjNjkzYzI5YzJkIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI4Y2M0YTdkMWNjNzk2YWJhM2U0NjcyMzMyN2Y1MTdlOWY4MTE5ODJkMjUwZjA3MDI5ODZlNGI1NzY0YWQ5NTg5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MiwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJkNjc0ZTBjN2ExZTcxMjFjNWNlMDg2N2NiZmJkODU0Zjc2NTEzNjNkNWY1MGMyOTI3YTAwMjE4M2UxOWU2ZmM2In0"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.0",
+    "at": "2026-09-05T08:40:09.738Z"
+  }
+}

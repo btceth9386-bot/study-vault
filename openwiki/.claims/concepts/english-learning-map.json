@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:53f8f4cc96a97c43028df16d55677d270e930fa5ea4e4d4fb5ac2a2697fad807",
+  "claims": [
+    {
+      "id": "claim_2dfbe20f2a7e466bbba14500bc9b3f49",
+      "statement": "The English workplace topic assumes basic comprehension of simple conversations and prescribes an 11-item progression: four construction concepts, supermarket checkout, expire, then five workplace/everyday idioms.",
+      "evidence": [
+        {
+          "resource": "repo://topics/english-workplace-vocabulary.md#L23-L25",
+          "version": "repo-lines-v1:sha256:ec56e02b81a71d67a1c6627dba60aceb112aaac3f9f71fd2ae4eaf2faa3722d7:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzZhNjVlMTEzNzAwYjg2MzNjMWI0NDAxZDhmMzJjMjc1NTY2YTk0M2VlZTQ5MWEzZjZiMDc5YjNlYTYxNWVjNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODkwMzg1NjEwNDkyZTBhMTExZDIwN2RhNWExNzQzODFmMmYwOTk0MTQ1OGRjOGY0ZWJiYTJkMmQ0YTU1MWI4NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjZhM2M3MjY5MWJiMmQyYjJmZWUyNWRiYzcyYmMwZGI1MzNkMWJhZTYxYTU4YTM4MmZlYjcxOTBmZDU3MmJjYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTczNGJiODg4OTk2ODRhYjBkODAyNmNjYWEwMjBjMzYyZDk5OGExMmE5MDY1OGU4MzhmYzQzNjY0ZmE5MDMwMiJ9"
+        },
+        {
+          "resource": "repo://topics/english-workplace-vocabulary.md#L3-L21",
+          "version": "repo-lines-v1:sha256:d4016a3ca786a6f0df793dda09b7f091862bf3e190e8ac5b48425d172e18d46c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyNTIwYjQyMjFkODY0YmYwZmRkNDRlOTJhYzVmMGRlMThhOGE4NDA1ZTc4ZDk2YmMwNjI5YjI2ZDFkOTQxMjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3YmUzNGE0NTBmYzY3NjkwOGFhYWFmNGE2MWJjMmNiODUxOThmNzUyZWM4NmJmNDdkYWRhOTZhZThlNjg4ZWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ4MGViODNhMDk0MGQwOGUzMGRjODhlMDY2MTU2NjgxODQ3MTViZGIxNGQzOTI2M2RlNjNmYTQ1MjUwNTgyOGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIyYmZkNmZmOWFkNTU3NjVkMzRmOTY4OTUxODkzNjViZGZjMmJkNWNiMzZhYzc2ZjYzODdmMjEyMDE4ZmMwM2QifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7a32e82a12024ba0b633ca85bdead425",
+      "statement": "The construction portion of the workplace path groups tools, deck, plans, and up-to-code language as a complete job story covering what is used, what is built, its design instructions, and the inspection standard.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/english/construction-tools-vocabulary.md#L57-L63",
+          "version": "repo-lines-v1:sha256:bd97426c2b436d3bc1224fb1708b88f3fef7e6450263425e8b7d2622e693da5c:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmYzYWJiYzAxMGU2ZjkwMWYzYjAyZGFjNmQ5OGYzMDUzZjM5ZDdjMThiMjk2ZmY3OTEyMWRlNjkxOTE2NjZiNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2Y1NmU3MmY4NWM2NTEwM2JiZDJlNzU5Mzg1YWMxODk0NWM0MTM1N2Q0NTg2M2IwMGJlNTM4ZmIyZDJkMmJiZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2Y2MmI2N2JhNjFkMjgwMmEyYzUxMWU4M2ZiMjEzMGQyYWJkNzZlMTUwOGEzOGRlYWM5NmRjMzBmZjFkZDU2MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmQzOGQzOGFhODlkMTlmYTIzYjE0YzY2MGQ1MGIyNzBlNThiYTJlZDlkYWIxZGI3NWMxM2I4YjZkNzI4OTViNSJ9"
+        },
+        {
+          "resource": "repo://topics/english-workplace-vocabulary.md#L11-L15",
+          "version": "repo-lines-v1:sha256:cd1984676469818b8f9eb804c7ef05df7886fc0cad1a3d40a006a498a8c8c163:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODRiNjE4NThhYmM1ZTgzYzE5NGUxOGVhYzc2NDM0NTJjZGE0MGJhYzIwN2Y0YjIyZTE1OWNhMmZhMzg0ZTgxYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGQ5MjUwZWI4NTQ0ZDgxYmMxMWUzYTMwMmNkNTI5YWVhNDUwZjdiOTg2YjYxNzAzNGIyNzU1MDI2NGFkNDczNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzYzNjAxZTYxY2VkODA3M2E1ZGQxOGJmMmFlNTUwMGU2NmYwYjhhYjhkNjhiOWVlYTlkMTM4YmM4MDZmMDQ0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTMwNjc1ZWM4NGIwNTVhNmQyZDQzYmNhMTE4NmZhYWY4YTI1MTZhNmI0ZmQ5Y2Y1YjZkZjRkOTg0ZDM2MWUzZSJ9"
+        },
+        {
+          "resource": "repo://topics/english-workplace-vocabulary.md#L23-L25",
+          "version": "repo-lines-v1:sha256:ec56e02b81a71d67a1c6627dba60aceb112aaac3f9f71fd2ae4eaf2faa3722d7:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzZhNjVlMTEzNzAwYjg2MzNjMWI0NDAxZDhmMzJjMjc1NTY2YTk0M2VlZTQ5MWEzZjZiMDc5YjNlYTYxNWVjNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODkwMzg1NjEwNDkyZTBhMTExZDIwN2RhNWExNzQzODFmMmYwOTk0MTQ1OGRjOGY0ZWJiYTJkMmQ0YTU1MWI4NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjZhM2M3MjY5MWJiMmQyYjJmZWUyNWRiYzcyYmMwZGI1MzNkMWJhZTYxYTU4YTM4MmZlYjcxOTBmZDU3MmJjYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTczNGJiODg4OTk2ODRhYjBkODAyNmNjYWEwMjBjMzYyZDk5OGExMmE5MDY1OGU4MzhmYzQzNjY0ZmE5MDMwMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a444200fa1a141228163fb2743eaaf00",
+      "statement": "Construction plans are technical drawings that direct the build, whereas “up to code” denotes the official safety, legal, or inspection standard the work must meet; the plans concept explicitly distinguishes formal instructions from a rule of thumb.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/english/construction-plans-vocabulary.md#L24-L36",
+          "version": "repo-lines-v1:sha256:b5257c9152fc45ad58853a97154bc4c8c2493e6e8d207840089a25c940d9b8de:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4MWI4MzQ0MDZkOGZlYWU1ODJhNGY1Mjc3OTM1ZDYwODFiYjhkODMxZjYxODRjNzczMmViY2UxMTQ2MmFiNjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwOWY1MzMxNGZhYTZjZDQwODI1MWYxMjgwOThlMGZmMDgzMWQzMGE1YmQ0MmM4ZjkzY2ZjYjhiODdjNDUzOTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM4YWRhNjJhYTg0MGM2MTFiMjQwYTAzOTY2NjNiMzhjODBjYzRiZGM0YjZjMGQ1MzY0MjhjOTI5MThhOTU2NjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        },
+        {
+          "resource": "repo://concepts/english/construction-plans-vocabulary.md#L47-L52",
+          "version": "repo-lines-v1:sha256:332843b042de9bd359e06a3e009c5b0d68fabd48c9ab6c0edc64420614584ab9:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGI4OTFlMzY0YWE0NjIxNjA4NTdhOTJkNWRjMDUxNmI2NmJjZjFlODlkMzU1YTQ5OWJiY2MzN2E4MWI0ZTkxZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2E2ZTNiMDQ1MzBhZGQzNTYwNWQ3YmE5ZGQ5Y2QwMmFjNjFhNmNiMWQyZjcwMWJlNGFjOGVkNDlmZmNjNzFlOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWY4NTM5MGY2ZjA5NWQxYjYwMDBiMjgzN2NmM2Y2MGIxMDdmYTViMDg4MTM2Nzc3YzUwNzczNGI4Y2YwMTdlNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmQzOGQzOGFhODlkMTlmYTIzYjE0YzY2MGQ1MGIyNzBlNThiYTJlZDlkYWIxZGI3NWMxM2I4YjZkNzI4OTViNSJ9"
+        },
+        {
+          "resource": "repo://concepts/english/up-to-code-phrase.md#L24-L36",
+          "version": "repo-lines-v1:sha256:4e4d09236522e2ed5f0db1c46669652b3580fdf7f86acfb630fae90b443f6881:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwNjgyMWM4OGUzNDc5YmVmMWU4YWY3N2ZiNTYxYTk3ZjU3YzQ3ZmEyNmE0NzY2ODliN2YyYzYzZDEzZDAwMjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyODgxNmM1YjJlMGM4MWVkZDYwOGNlMTViM2ZlYTQwY2QxZTIwOWI0Zjk0NmQ3N2M4ODI2ZTNhYzY0MmE5OWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU4ZmUyNGM1YjY2ZDkxYjM3ZTk5NDBmNzZjNDI0MTFiOGQ4ZTNhZjhmMWVlZjM2ZTViNTkwMTI2YWE5ZjQyZjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        },
+        {
+          "resource": "repo://concepts/english/up-to-code-phrase.md#L47-L52",
+          "version": "repo-lines-v1:sha256:143bb412095e225ba64ab16e567e7c5939ce44d1f147fb940957bf708afcedf3:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGI4OTFlMzY0YWE0NjIxNjA4NTdhOTJkNWRjMDUxNmI2NmJjZjFlODlkMzU1YTQ5OWJiY2MzN2E4MWI0ZTkxZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjYwNWZlNTU4OThjNWQ1YjYzNzI4MTg4MGYzNDUxMTU1MmRlYTcyYTk5ZTRiMjYxMWY0ZWU2Yzk0YmMwYzdiZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWU0ZDA0MDc0MThhMjAyOGEzZGViYjJjN2ZjY2NmYmM2NTJlODRjNGRhODNkOGE1NTBhZWZlMmQ4OTIwZjE2NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmQzOGQzOGFhODlkMTlmYTIzYjE0YzY2MGQ1MGIyNzBlNThiYTJlZDlkYWIxZGI3NWMxM2I4YjZkNzI4OTViNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a44e149ba2a540c99cd33b64e3b6437d",
+      "statement": "The construction-tools concept explicitly relates to rule-of-thumb and take-pride-in-your-work, while the related idiom concepts distinguish practical but non-absolute guidance from work quality/care and its possible corrective use.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/english/construction-tools-vocabulary.md#L10-L17",
+          "version": "repo-lines-v1:sha256:bb772fb768241caee6a22051dd2fb36b68799e12b5f8c40b0d91b42bb2bfd225:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2M5N2VjM2Q1MjAwMDc1YTMwYTc1ZjA1ODQ2OTAwNDg5ODIxYmU4ZGI2NzAyZDRlZWMwZjQ5YTZmNGJlOGQwMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQyOWExNDFkNTA3YWUyOGNkNzUzZjg4YWQ5MjRkMDc1MDBhMmRhODc5OGU2MjU5MmUyNzFkNzIyZmY5ODFkMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWE4ZmRiNmU2N2E2MWI1MTQyYWVhMWJhYzFlNTEzM2Y0ZThjZWE5MjljNGEzOGVmZWM4ZmJiZGJmODQyZTFlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDE4ODBmOGViNzMwZDg4MTdkZjk1ZTZkZGZhMjM5MzgwMjQ5MGQwMjdmOThiY2I0ZjNjMzhiN2FlMzg0NjM4MSJ9"
+        },
+        {
+          "resource": "repo://concepts/english/rule-of-thumb-idiom.md#L21-L38",
+          "version": "repo-lines-v1:sha256:cf95542da251e4058f9b8624baa2247aad814aea2df14a4b966b749cacea3cac:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY5MzdiM2IxYWRkZDcwYmFiNjVhNmYyMTEzZDA0YzI2N2ZjZDZkYTk0MmJiZmFhNDZhZWI0NTI4YWUzNzgyM2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhMmE2MDZlN2VkYTQ3YjkwNGJhNGI3ZjI4ZjkyMDdmMzk5ZTNiNjU2YTMyZjg5M2JhMDc3NTFjOTJmZDZkNjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI3Zjg0ZTE5YjM3MzQ5OTJkMzRhNzc5NzhlMjVhMmVjZWVjNGM4M2RjNzlkY2ExZDk1MDU0OThlOWNlNDdiNGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        },
+        {
+          "resource": "repo://concepts/english/take-pride-in-your-work.md#L22-L37",
+          "version": "repo-lines-v1:sha256:0cf1fd87918f7f7cc61ecb549c7b195f6ba97cf1dab644984c6d99c4cbaae74e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlN2IxNThlN2EyMDkxMzg1NGVjNTdmN2E5NGFjNDNmNmE0NDczOTBhZmE4NGFhODVkNzY2NTcwMDY2ODM3MTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhNTk3ODU3YmJjMDk2M2ZkMmNkYjMwNTMxYmIxNTI4ODMyZWZhYWE2ZmQ4M2VkNjIzNmEwMWFkMTFjNjZiMjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZmZTdkY2M0YzE1ZWNiZTc4M2QwYzY4NzcyNjdmMjhhMzRkZjgwZDk0NTkyZGMzNjczZDRkZmU0NjU2YjkwMjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5NGRmZDUzYmQzYzIwNmUyNjZiMjU5YTMxNmM2ZDVhMTZjZjRmZjAwYjQ3MDJiMTQ5ZWVmZmRkMTIxNDI4YjYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6353471df92f4d54bf72b540a7617f56",
+      "statement": "The supermarket checkout concept presents a transaction sequence from lane and belt through bags, coupons, payment, and receipt; it introduces “expire” through coupons and explicitly connects to the leniency and bad-luck idioms.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/english/supermarket-checkout-vocabulary.md#L10-L16",
+          "version": "repo-lines-v1:sha256:e05f58be857a588b74d7ec7c080b26fed3f3dd09666ffd25866291e4a363de73:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2M5N2VjM2Q1MjAwMDc1YTMwYTc1ZjA1ODQ2OTAwNDg5ODIxYmU4ZGI2NzAyZDRlZWMwZjQ5YTZmNGJlOGQwMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY0ODhkMTQ2ZjQ2NTgwMGZmMTY1YjUyNjE4NTA2YjBlYzQ1ZGU2Yjk2MWVlODIzMjViMTE0ZWQwOGZkYzc0MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzk5NGQ0YWRmOTM0NWU3ZGI2MDkxNDVkZTJjOGI3M2Y1Y2E5MmJiZWJhYzM4YzJjYWQ1ZWI4Njk0NTJmYWVkOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmRjNTE4MDIyZGQ3YmZjMTU0MmI5ZTcxZmNjNTM2MWJlOGU2MDQ4Y2MxOWYzZjIzYjY2ZjNjZDJhMDUxYjdmZCJ9"
+        },
+        {
+          "resource": "repo://concepts/english/supermarket-checkout-vocabulary.md#L35-L53",
+          "version": "repo-lines-v1:sha256:6d576af7d818090295f3502de177125cbe226efae4e6bad1881751468aba4b9e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3Y2EwZjFkNWMyYWEwYmQwOTU1ZjFiMzczYjYxYzM3OGZjOWU2YzliNmUyYjM1YzgxNjI1OGI1OTdkYjVmOWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUwY2M3OGFiNDEzMGMyODNlZmMxOTBkMDE2Nzg1YzZkM2FlZDhiMjViMjJlYzc0ODBjMDc5ZTU2ZGY3ZGYyNjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM4YjVjY2YyNDU1YzA4MGRjYzE0MjBkZDVlZDUyYzA1NmQ1NDI5NDcxODhjM2FjNjU1M2UyZDhkMGRhM2UyMDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        },
+        {
+          "resource": "repo://concepts/english/supermarket-checkout-vocabulary.md#L74-L79",
+          "version": "repo-lines-v1:sha256:e743ba04377c75c817bab57bf26c8d4999a8df6842df3a09493b06f4f1ca1a04:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmYzYWJiYzAxMGU2ZjkwMWYzYjAyZGFjNmQ5OGYzMDUzZjM5ZDdjMThiMjk2ZmY3OTEyMWRlNjkxOTE2NjZiNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzViYzFjNjA3MDMwMDgyMjBiYWE5MjdjM2E3YjlhYjI1NjA3MjkyNGZkMjFjNGMzYmY3YWQ2YzQ2YTVkZTA4YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjkzOTk1MzE0NjA1Njk2ODk3ZDhlZGVhMGZjYjViMWUyNGRhYjg4NzM5OTllZDgzYTE0ZWU2MzgyZDAwZjFjNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmQzOGQzOGFhODlkMTlmYTIzYjE0YzY2MGQ1MGIyNzBlNThiYTJlZDlkYWIxZGI3NWMxM2I4YjZkNzI4OTViNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_76e6aa92b9534b739d5fb70fa338b3c3",
+      "statement": "Within the approved lessons, “expire” generalizes a time-limited loss of validity or usability beyond coupons, “cut me some slack” requests informal leniency, and “it’s not my day” lightly acknowledges a series of minor setbacks.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/english/cut-me-some-slack-idiom.md#L22-L42",
+          "version": "repo-lines-v1:sha256:baf67e80853c988468751d3cd803e83f30e3ea47b23ea808edfb018315a3e1b4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhMmE3ZWEwM2U0Y2ZkOThkODk1MTY3ZmQwYjBiMmMyYzA2MDFkM2E2YzAyYjI1ZmU4M2I1YmRjZWRiYmQ4M2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliNzAyZTUxZDBmNDJlOGE3MTMxYWJmMDMxZTY1NGIzYTIxMWUwNjc2YzcxNDdkZDZhMGQwMDY4OTQ0MWUxODciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc2YmZkMWE3YWU3MTQ3ZDhlNWM3ZDc5ODcyMTk1OWJiYmEyMzc1YjExNjNkMTY4MmIzYTRhOTJiOWRmNGMxMGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        },
+        {
+          "resource": "repo://concepts/english/expire-everyday-validity-verb.md#L20-L32",
+          "version": "repo-lines-v1:sha256:cafad8d4ea7f0a6acc4195e51fb9495ec41a52876f5ce26ad1628d98628a5ea3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlZDQyNzY3NmRhOTBiZjFmOTUwNGViOGFiZTE4MGFlN2VlYmUzYWY5MDEwM2ZkZTFkMWNiNWUyMGQ4YTBmZTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFlOWVkOTQ0MWU1ZWQwMTcwZGJiNTA4NGVhOGYwYjExNWJlYzE4MmY0YWM5YWJhOWI5ZDlmZTk0OTgzZDU3ZjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzMzBlMjc4ZTdlZGViMmUxZjMzNTM1NWI1NjkyNDUxYmY0MGNiMjdlNzg3OTJiMDE3OGZiMTk2YzA0NWU2ODgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        },
+        {
+          "resource": "repo://concepts/english/its-not-my-day-idiom.md#L21-L43",
+          "version": "repo-lines-v1:sha256:1719fb52c5c49636847a9bf45783b8f87a16d7a6093193662b101385b899a036:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkZDc1OWNmMjhlZDFiMTY3YWJjNjIwMDUwZTM2ZTcwMzdiMjIyZWVjMmQwZTQxZmQxMmZmNmNlNjc1MWQwOTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4Yzk3ODEzYmNlYjQwMGMwMGE5NzM4MmI1MGZhNDg0OTMwZjlmMjY2MmQyZjI3MjU2MDUwY2I2ZDJmYzhkZDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZjODBlYjYxZGMxZWZmNjcxMzBlZjhkMDM2NjdkOGE3ZmI4YzJhYzE1YTI2NGMyMjY5YWJmOGUyNTAwNDYyNjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_30caedeb57ad40009cf3d1d478ba12c1",
+      "statement": "The workplace topic’s stated rationale is to anchor learners in concrete vocabulary before shifting to transferable language and idioms, which is why its construction cluster precedes supermarket language and the later idiom sequence.",
+      "evidence": [
+        {
+          "resource": "repo://topics/english-workplace-vocabulary.md#L23-L25",
+          "version": "repo-lines-v1:sha256:ec56e02b81a71d67a1c6627dba60aceb112aaac3f9f71fd2ae4eaf2faa3722d7:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzZhNjVlMTEzNzAwYjg2MzNjMWI0NDAxZDhmMzJjMjc1NTY2YTk0M2VlZTQ5MWEzZjZiMDc5YjNlYTYxNWVjNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODkwMzg1NjEwNDkyZTBhMTExZDIwN2RhNWExNzQzODFmMmYwOTk0MTQ1OGRjOGY0ZWJiYTJkMmQ0YTU1MWI4NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjZhM2M3MjY5MWJiMmQyYjJmZWUyNWRiYzcyYmMwZGI1MzNkMWJhZTYxYTU4YTM4MmZlYjcxOTBmZDU3MmJjYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTczNGJiODg4OTk2ODRhYjBkODAyNmNjYWEwMjBjMzYyZDk5OGExMmE5MDY1OGU4MzhmYzQzNjY0ZmE5MDMwMiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.0",
+    "at": "2026-09-05T08:40:09.738Z"
+  }
+}

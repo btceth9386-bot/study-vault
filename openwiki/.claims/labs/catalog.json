@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:0cdd86683bfbb7c3103235ea04acea705638913560a6dc2b9f141280d4a30b9e",
+  "claims": [
+    {
+      "id": "claim_28c204dfc8b0477ba03533725b588907",
+      "statement": "The Kiro CLI + Langfuse evaluation lab is a 90–120 minute real-tool exercise intended to make non-interactive Kiro answers into scored, comparable Langfuse dataset runs.",
+      "evidence": [
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/spec.md#L27-L29",
+          "version": "repo-lines-v1:sha256:824df36c1562d136281093cbef87d3bdcbb976bcdbe93ad2511a925fc2b0625a:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmFkYzllNzUxMTlhNmEwM2IyOTIzNjAzMTBkM2Q0MGYyY2E0NTg4MTU2ZWQ4MzRjZTRjZDQzM2I1ZTcxZGJkMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWVjZDg4NjA2Y2YwNDJjMDUyYTc1Njc4MWQ4NjU2NDY3MWNiYTE4YzJiZjdiMzVkMzYzNzA5MGMyNmU1NTkxZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTI5M2ZmMmMzYWYwYWU2YTQ1MjQxNmM0Mzg4ZTU5NmZmZTMwYzcwYzhjYjg2YjYwNWIxYTJjYWQyMGFlM2Q4MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDc3YjljYTZhOGMzYTIzZWRiZmY3MDIxNTgzNWM5ODU2OTJlNWMwZjg1OTlkZTk3YWY5YmZjMWEzYmYwZTJhYyJ9"
+        },
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/spec.md#L3-L7",
+          "version": "repo-lines-v1:sha256:a49384b1f3cdc9490977db0446fbe622fcf25660e1a6a586f34ba3a597c5e65f:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDk4NmE5Mjk3NzZlYjAwN2RkMjEwZWYzNWRmYjYxZDYxM2U0ZTkzM2U3YWEwMTYxZGI2Njc1N2Q2NjUwYzc2YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmI4MTVjMzQwZWI3YTBkNTI0ZDc0YjU2ZjgyM2JmMTNjMTQ0ZTk2OGU4MzIxZjIxMDZiODAyYjk5NTI3NzVhZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTk4MTA3MTMzYjk1ZTBlN2FiZGY5Y2YwZWRkNGU3YzY4NDg4YjZlYzA4NGFmNDQ1OGVlNWYwNjYyNTMwM2VkMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTFkMWEyMjNkNzczOTNhMTAyMmE3NjE4MmUwZWYzYTg5YTZhZGE5MjcyYmFiMzY0ODMyZjM3YTI0ZWZmNTc3YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ae92c4f9644e4a28a8ec8963348751a3",
+      "statement": "The catalog uses `labs/kiro-langfuse-eval/spec.md` as this lab's canonical specification; the lab-design workflow normally places a Diátaxis narrative after `spec.md`, but this lab has no `spec.diataxis.md` narrative to route readers to.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/lab-design.md#L7-L11",
+          "version": "repo-lines-v1:sha256:d2c094045f1405abf392a6f36d8c9b446b1611e3ba170dd30af43a35bbe5ce1e:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDVkOTM0NjQ2NmViYWQ5NmU2ZjNlN2Q5MmQ1NmQyOGY1NThhMzAyMDZjZTVlNzdiM2MwMTU3OGZmNWY5ZGQxOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdjMDZjNTYxZDVjMzI3MzQzNjg1MjY4YTQ2YjMzOTFmMzk5OGVlZTg5MGQyYmU1MWYwZDIxY2M0YTUzYWU2ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzM4NmJiYTI3Mjc3ZDBkODcyZWI3YjA0MDk1M2FiNTU2NGUxOWE0YjA4OWFiNTk2OTEzYTExNjgxOTY0YmY0YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTk2MzQzMjUxYTI1ODBlYzBiNGMxZTE1ZDY1ZmZkMDQ2YTgxY2I5NTNkMjZlZTg0MTE0MDQ4ODkzYWZhMzczYiJ9"
+        },
+        {
+          "resource": "repo://_scripts/prompts/lab-design.md#L86-L99",
+          "version": "repo-lines-v1:sha256:c19b05a7df9ea80746ce2d7d3506eb975ad170ff7a400ff7fc74bf745a36251b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0MjE4YmQ0MTFhZGFjNmMxMGIxZGM4ZDU0ODM5OThjYTk0M2UzMDNiOTBiZTdhMGZjMGEyNTk2NzlkNGQ0NzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkNzU4MjNlMTdmYjUyY2M3ZmIzYTFhYmFkZTgwY2JkOWM5NDA4ODMyMWU0Y2QyN2Y2Mzg2MGI2Yjg4ZDdlYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk4ZGJiOGNmNzBhMzZlOGJkODM1NmRkNjhmMGZjMzBkYmZlYTQ5YmZhNjk0M2IzMTI4NDI3N2UwNDc4NDZlM2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiMTE0ZDcwY2NhZTMyMjc2YmQ1M2Q5MTIwNmY4Y2Q4NmI2MjBlY2Y5MmI1M2JmMTI1ZTMwNzE1NWNhNjAyMzAifQ"
+        },
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/spec.md#L1-L7",
+          "version": "repo-lines-v1:sha256:9c056760bb03626be9b196464d110705bc38d6b48dda349ffbfdabc5a6581561:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODM0OWQ5YjM1NjVkYjNmYjdhNDMyMDBmZWQyMDgwZDgyOTU5NWMzOWJhY2U4OTM0MTI4YWYwM2IzYjRmNzk1YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmI4MTVjMzQwZWI3YTBkNTI0ZDc0YjU2ZjgyM2JmMTNjMTQ0ZTk2OGU4MzIxZjIxMDZiODAyYjk5NTI3NzVhZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTFkMWEyMjNkNzczOTNhMTAyMmE3NjE4MmUwZWYzYTg5YTZhZGE5MjcyYmFiMzY0ODMyZjM3YTI0ZWZmNTc3YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e4c5c61f92024fc2a29a597e941f7c0e",
+      "statement": "The learner-owned integration seam is `judge_score()`: it must use the separate judge client, apply an ambiguity-aware rubric, parse a 1–5 score tolerantly, and return `-1` rather than crash the dataset run when a judge response cannot be parsed.",
+      "evidence": [
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/scripts/lib/langfuse_glue.py#L85-L120",
+          "version": "repo-lines-v1:sha256:4b0e6b1aa3709e2694bbc01218c769ac5fa251b714d330e1eacdd2b84be19055:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYwODY1Y2I3ZjEwMDNjYWY5ZDBlZGNjNTNkN2M0MWMxZTVlZWQwZGRkMTI0MWY3MGFjYjVkYTUzZmM2N2I2MGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNjY2UzNDhhZmI4N2E1NDFjNjk1MWU2OTY4ZDc2YThhNzdiYjE4YjY0ODA5ZTUwNmE0NzMwNGUxZjkzNGMxZTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNlMDJiMTEzM2FkNmM1NmJhNmEyYTA5ZmMzYzgwZmNkMDNkNmIzNzBhMTVjZTU3NzViMjY3ODUzYWEyZWIzMzAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9cb8d170e4ab4538b394aacf54650f29",
+      "statement": "Task answers traverse `call_kiro()` while judge requests traverse `call_judge()`; the lab requires a judge from a different model family so judge cost is not mixed into task-side Kiro credit tracking and to avoid self-preference bias.",
+      "evidence": [
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/scripts/lib/judge_client.py#L71-L110",
+          "version": "repo-lines-v1:sha256:21948070e5dfe205d8de8d8ee3baac7d16670c066c415232cc914614998e0134:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg0OTNmMjU1NzkyN2IyMmVkNTRlOGEwYWZlMDA4MzViYzY0ZjE1ZmE5NjZjNjY5NDllN2JiMDU4MjkyNTNmMWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE5Nzk0NmEyMjJiOTI1NWFlZDA5ZDVjYzI4NWI5MTc2NmY5ZTU1M2U2ZjhjY2Q0YWM4YWNmOTQ2N2ZhOTgzZjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY5NzgxYjM5ZjJlZGZiNTQxMDY1ODdlM2IzOTdkNWYwNmM3YzNhMWY4OGI4YzAxNjNhM2QxYzg4M2ExY2NhNjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/scripts/lib/langfuse_glue.py#L15-L16",
+          "version": "repo-lines-v1:sha256:3c8fbc00fce7c1c508d0bfcaefac8e9c5e7cfa9a4cf30b60b0912b7998350e28:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTJmYzYxNzM4MGI0NjhkZTNlNDFmOWYzOTYyNTI3YWE1NzcyZDQ0MTNhOTU1NmVjNzA1OTc3ZmQ0MWY2ZmY2NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTRlYmIwYWQ1ODM4MDllNjlmNTBhYjY1NzFkNDNhYTFjY2RhNDBiYmQwYTU4OTQ5ZDFmN2I2ZDAwOGViOWU5NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzk3OWY3ZWY0ZmJiNzcwOTEwZTIyNmQyMDQzNDBlMDc5YmUzMDNiNDg1MDU3YWIzNmFjY2E0NjczMWY1N2MxMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNThmM2VmMzljZjM2YjM2ZDkyMmIxZDQ1OTA3MDYzZDNiOGIzN2NhZTk1YWEwZWYzZDUzZDM5YmU4ZTAxMjg0MyJ9"
+        },
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/spec.md#L22-L25",
+          "version": "repo-lines-v1:sha256:0b3b4769823ff5fcc3f356f077309a4d518c88bc74281dc0b676368658563de3:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmYzNzFhN2FiOGZkM2NmMzhhOTJjZGE2NDQ2OWVkN2VkMmVjMmVjMjZlZDdiNGNkZGYwYWNkNjhmYzBjZjJiYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDQxNGQ1MGEyYzk4MzU0ZTM3N2RmMzViYTgwZjQ0N2I1YTY3ZWI1YjMyZGRkNDg5YzBmN2E3ZTRkMzk2MzIyMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDEwZThiYTM3YTMwMDg5OTc1MmYwM2U0ZDY2YjU0Y2U0ZWIxOWRhZTU2YjA1YmZhMWM2NWQwYjU5NWQ5ZDgwYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGMwNTAwNjZiNzAwZGI3YTNiM2E0NDRlOWZkODcwMjBjMTJjM2M1NmEyOTA2NTk3ODc4ZTEwMmViYTg3MDFjNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fc35f4307f6a4c07bfc62b9ff65fb600",
+      "statement": "`scripts/setup.sh` fails early unless Kiro CLI, the required Kiro/judge/Langfuse configuration, and Langfuse reachability are present; it also performs a live Kiro stdin-shape smoke test and a usage-log smoke test.",
+      "evidence": [
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/scripts/setup.sh#L27-L64",
+          "version": "repo-lines-v1:sha256:9cc9be20aaa26409114f7ae492bb022ff715ad4205fc7fa5d877580fc67b1f5c:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjNTk4NzcxZjcxYjBlMTE2NmI0MTQ5MGRiYmFjNDM3Y2RkYmNjY2Q0ZDQzYWJmYTM2NzZkYzFlNDEzYzRlYTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0ZGEyYTczYWRiN2YzYWZlYzc3MTQ4ZmI4MGEwMDQ1OWIwYWNjMDBlYWZkOTg2ZDFjZjQ1MjRkMjQ5OWM2MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjODBkZjc5YzAzZmNlOWRlMTA0OTUyMDhlNmU2NGZhOGI5MTU0MTJjYjZmMzAyYzI0MDRhNzE1YmUxYTA3NWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgxYzg0Y2M2NjlkMWIxNWU0OTZkZmI1MGZlYjM2YzczYmI1N2M0NTVlN2RlM2RlOWY4N2U3MDJiZGM2ZjAxYWEifQ"
+        },
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/scripts/setup.sh#L9-L16",
+          "version": "repo-lines-v1:sha256:90ca730457058caaef73b75c7c8bd888bc8f0dc27cbdb2633a3fcec16d307551:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2U2YmFjMWQ3NDc0YzI1MWZmMjBjM2I5Yzc4Y2JmMjc4NzljY2Y5ZTU4ZTQwMDQ2ZmJlYzQ4YmRkMjNmODVhOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTg4YjJmZDZlMGI5ZjU1ZTJkZTI5YmVmNzQ3NWMzNjJkYTAzZTcwMTg5YWY2NDg2NzhkMWUyNzYxZDRjZDNkNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTQxMjMzNWUzM2MwMTkyMTE3NmNkZDdmYmIxY2E2ZjQ3MmMxZmRkNjRhNzlmMzZhNzgxODczYmNiNDkwYWYyMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjIxMDEwNDUzYTQ0OGRiZTg0NDUwZGViOGQ5MjA3MDUwMzQwMGZiNDA1ZjE3YjVkOWU5OGIzZjA5ODA0ZTIwZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_03ebabd74af14a6aa350cf7bc7fdd3fc",
+      "statement": "Each variant runner seeds the Langfuse dataset, binds a prompt and optional model into a Kiro task, executes `dataset.run_experiment()` with item and run evaluators, and writes a local variant summary for later comparison.",
+      "evidence": [
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/scripts/run_variant.py#L40-L57",
+          "version": "repo-lines-v1:sha256:ac03757f3db84622b73edbcbc79a748ef13a887f4ee533866a9848470bbc0e7a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhNTFhMWVmOWI4NjY2OWUyMmJkMThlNDM2OGMyNTNmZDY2YjRhNjRkNmYzYzY3NTJkY2U0MDYxZTFkNmM3OTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5OTQ3ODRkMGMwNzZkYzJiNmQ4YTMyNzVkY2M3ZGM0ZDBlNWUyODAzOTJkYmUyNDBkNjdjNmUzMTk0ODk2NzQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVlNDY2YjFkOTI0MDdlNTljNGVmNjZhMDM4NzViYjhiZTEzODk1ZjE4NzE2OGEwMmQ3M2Q2NmI3YjQ3MDQzNzIifQ"
+        },
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/scripts/run_variant.py#L62-L86",
+          "version": "repo-lines-v1:sha256:d3076ceb9021c993bc7a5f2deb51f6fede22df99db2e1985ac8051d21564bf4f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmZWMzN2I1YjY1MzRhNDhiZjgyYjY2N2U3ZTA5NTIwMTY5NWZlN2FjYmM3YzUzNjY5Njc3YTExYTc0YmE0MTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjllMDFlMjU1MGEwYzkzZWUyZTMzMWY4OTkyN2I2ZjdkMjhiMDE1ZWQzZjU4OGM4NmMwMGEyMDEwY2RjMWM0MTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYzNGI0OWUxMzA0NTY1MzFkYTI0MjMwODE3NThkODA4NTYwOTEzZTJmZDg5NTA0ZTk1NWQwNjhhOGY4Mjc3YzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNkNDEzNDBjYzIzOWExNTljZTliNjAyMmU5ZjYzMjI4MzJlMmVhZDc2Y2FlOWU0NzU0ZDIxMGViOGZiNmQ1ZTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0549bffa9efb4a6394a231e3d659487e",
+      "statement": "Dataset seeding is designed to be repeatable: the dataset is created by name and each local item is upserted by ID; the bound task invokes Kiro once per dataset item, producing one task call per item.",
+      "evidence": [
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/scripts/lib/langfuse_glue.py#L45-L82",
+          "version": "repo-lines-v1:sha256:24dc44acd4a6f532ae7bab677be71f6fd27129207cd1c124bd865518ab41472d:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk1ZDM2YmMyZWQ5N2E3NGU0ODQ2ZTEzNWRjMWViYTM5YjRjZDBhNmZjN2FmM2Q3MGYyYzMwODEzNjE3M2I1ZTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiODkyMzk0ZjZiOWUwMmFkOWQzZmY5NGIwY2E2YWQ2OTg1M2I4MGIzNjM5ZDQ3MjFhNGY2MzQwZTU2YTlkOWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJkNGEwMDhlYWYwZjRjMjJlM2IyMTUyYWVkMTYwYzYxY2UyNDc1NjM4NjA4NzE3MjBmODAzNjRkZTYwZWU1ZGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU5OTk5MDc5YzhjMjE3NzQ0ZTczODU3Y2I0MzQ3YzIxMTMyYmJmY2MyMTY0ODEzMTU2NmI2MzVhZmQ0ZGE2OTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5d269c26a1444958ae5ef2232e7042ba",
+      "statement": "The model-comparison entrypoint holds the improved prompt constant, runs a three-item subset across selected Kiro models, scores each response with the judge evaluator, and records score and measured latency per model-item pair.",
+      "evidence": [
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/scripts/model_compare.py#L29-L40",
+          "version": "repo-lines-v1:sha256:46745b1d3fe7e85ac1c21af60102bcd635e48f6e3258a5f072f581b260a3146e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVmMjdkMGI0MDZjMWFhNzVlODI1MzQ5ZDI1MGQ4Y2ZlZmRhMmQ2MGFmMTk5NzQ3MDUzYWRmYTU3N2VlOGI3OTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxZTJiMDVkMmFjZjM1ODA5NTE2OGM5OGZiYzY4ZDQ4Yzg1ZTFkYjEyYmM3MWM5OWU5OWZkNWEyZTJhNDUyYmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBkNGRkMzM5N2IyMjFhMzAxYzcxYWVlMTY3MDljN2Y1MzBkYWUyOTJiYmIzYTkyODFkYTc3YmNmMWM0MDg4OWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE1NGJiM2E3NTIxOTAwZDQzYmZjYTg3ZGMwMTJjNjEyNWFiYzkyYzVjNGQ0YWRmMzQzZTU3NjQxNDI0OGQ0ZTgifQ"
+        },
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/scripts/model_compare.py#L42-L83",
+          "version": "repo-lines-v1:sha256:b48cfdf63d1c3b1357959a66bdb451e207159a1305eb1c17ec6ac399f57483ca:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3MjQ3ZDkwNTA3OTBmMWY4ZjhlMzk3MzRkNzJkMDY4MGU3Zjc5YWM5YjJlM2NkM2U0YTljZjg2ZjljNzdmNmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxMTZiY2Q1ODc3MGY0YmJhMWI5Mjc4Y2E0NjY1YzliMzZjOGVlNWRiN2QzYmUzZTQ4NmEwMDUyNTk0YzRhMmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3ZGFiNzE0MTNlNTdhMWNhZTA1NTMzOTA1MjE0OTYyNTczMzgxNjg0NmU0Njk5ZTgwZjJhMmJhMDAwMDNkNTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZjI0NjQ1NGY2MmIyZWMyYmQ1NWExNGY0MjQ4ZDk2YmZmOTVkYjc3OWY5NTlmMzI4NTcyOWE3ZjUxOGZhYTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_97f1ad45a3c74250b51e16ca2c4530ef",
+      "statement": "Kiro usage accounting is hook-based: the `Stop` hook invokes the usage logger, and the run evaluator reads JSON snapshots to return a `credits_logged` count and summed credit metadata; an eight-item healthy run is expected to have eight task-side snapshots because judge calls do not use Kiro CLI.",
+      "evidence": [
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/scripts/lib/langfuse_glue.py#L123-L161",
+          "version": "repo-lines-v1:sha256:c151c1e5d0a1ebffdb7e0a6883f08aa46bbd3d26a90ec1ffafd42c7fadfc8b18:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE1MTZkYmU1Y2RhOWRkNmQ2YmQzNTQ5ZGExZmEzZTdkMjhjMzhkZWI5ZDVkMzk1NjlhMDQ5NzIxMTUzYWRiNzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM1MmZjNzUxNjcwOTI4ZjNhZWMzNGEwODExYWQxNjk1OWE0ZjhiYjkwNWY3YWU5MTljZWQ5NjVhYmY5MTRiNjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjYzRhN2QxY2M3OTZhYmEzZTQ2NzIzMzI3ZjUxN2U5ZjgxMTk4MmQyNTBmMDcwMjk4NmU0YjU3NjRhZDk1ODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMifQ"
+        },
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/scripts/log_usage.sh#L1-L30",
+          "version": "repo-lines-v1:sha256:b86c026c76aa9ab3eb2f788245e111e7ddee0264d045bf1353df333ca7d1fdf8:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkOTVmYzA0YTgwYzk1MmY0OWNlNDE4ODYyN2M1M2IwZmJlOGM0NDA0MWI5NTJkNTkyYWNkMWRlOTk4NjE0NjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlYjk0Y2Q5YzQxMmJmMTRjYzg0MjMyY2ZjZWJjZDc4NTMwZWE2YmM5NWI4NTU2MzlhOTdlZDIyN2M5MjM1YTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_37b1e047928d4e648e12cdc506d149ac",
+      "statement": "The lab deliberately ships an inert `PostStop` hook instead of the required `Stop` trigger; the focused symptom is missing usage snapshots and a zero credit-log score after a run.",
+      "evidence": [
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/spec.md#L77-L81",
+          "version": "repo-lines-v1:sha256:848354cfd8e9fabf1e9f5add2f69b77a44e5f1afa6a771e1ea1398808e3d9910:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjc3YzQ5ZGE5MzdiMTcyNmZjMmE1YzczOGUwNjVmZmY2OTZhOWM0ZDM0MWJjZGQ2NDJmZjUzNTE5NzAxOGEzYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjVlMTkxN2M2MTRkMzViZTQ3NWFjODI5MDE2ZDRiYzNkMzFjNGQyMDBiMzFlMjc4MzRmZWNmMzZmN2Y2MjU5NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2Q5NWNkMDA4Y2JmYzk4NjA0Y2ExZTE5ZmNhNTFhZDU4YTc2MjllODVjY2Q0MmY0NDAyZTRiNjJiMzk5NDE5MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjEwN2MwNGJmNDA2MmJkZDFmOGY0M2M5NzRlMGQ3ZDk3YzY3MzE4ODE3MDA5ZWYwNTEyMmVmMTgzZDYzMDA3YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7a61522ebb0f4e9f82f8ff471dfc331c",
+      "statement": "`compare_report.py` requires both variant summaries and judge scores, reports score and logged-credit aggregates, and exits unsuccessfully when the baseline has usage snapshots but the improved variant has none.",
+      "evidence": [
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/scripts/compare_report.py#L45-L92",
+          "version": "repo-lines-v1:sha256:70250cd629c4fce29fcd998b2a545d53bf4f16dd27db3fb8da2de4a45edead79:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiMzk3OTMzYTI0YTgwMWVlOTIzMzI3YmQ2OWEwMTA0OWMwNzc5MTUwMjFjZjJlYzM5ZGRhNGY4MWFhODM3ZTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmNWIyOWRhNjZiODFkOWUzYjgzMzIwZWM3NDg4MmI5NWEzMzIzMmRiOTU3YjZjZDk0NWZiNDg4NTNhM2ZlNGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA1NzIyYjhjNGYyODMxYTA4YTZmZjE2OGQxNjUxMTRiNmZkYmFjZjk4NDIxNTM2NjI3NzY5M2JkY2IzYmQwMjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNkNDEzNDBjYzIzOWExNTljZTliNjAyMmU5ZjYzMjI4MzJlMmVhZDc2Y2FlOWU0NzU0ZDIxMGViOGZiNmQ1ZTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_918cf8380bb94d09b36e5ca7117e860e",
+      "statement": "The lab has no mock fallback because observing real Kiro CLI behavior and a real Langfuse UI is its stated learning goal; it requires separately configured Kiro, judge-provider, and Langfuse access and carries separate task-side and judge-side cost exposure.",
+      "evidence": [
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/.env.example#L1-L23",
+          "version": "repo-lines-v1:sha256:49042fa9cc6912b4968eb1ebd40e24204cb7d7d0c648a0b3d7118c5e604e27a8:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhZTBiMDMyZGQyNzJiNmQ3ODVmYmRiYzg3MzBiMzJlOGM3NDAyOTNlMTdhY2U1YTlkNjk0YzEwOGMwYTJkNDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkZTkxMzdjNTAyOWI5NzlmZTg5NGYxNjlhZTgwMjViZDg2YWQ1YjRiOGIyZjcwZTJhMzk3MDNkMWY1NTI3YjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/spec.md#L31-L42",
+          "version": "repo-lines-v1:sha256:bdb7be357eb97c2e52c85e70e82847a9a474e77423c25148020aaa13eb2749be:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjOTU4NDkwYTExZjVhMTEwZGQyOTg5NGFiNDIyYTIwOThiMmE0MGZjYmRiZjAyMTA4Njk5YjMyYmMxMGQ1ZDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhYjIwYTlmMjk4M2ZkOTljMGQxNDAwYzE5MTBjZTY4MTEzMjI2Y2U0MTY3MTdlNWQ5NzgwN2ZiNjE2MGFlZGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRkYTMzNTM2ZTkzMzBjYjI1NjYxNDdhNjYxOGQ4YzM2NTQxYzkxOWRiZTY3Y2U3NDNkYjg0ZjY4YzEwZjZhYWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQzYWY3ODBjNGNjZTg0ZjFjOWIyYTc5ZDQ5MzhjOTA1MDc3OWUwZTllZjFmMzYwMzRjNmQ0Yjc2NmQ0ZGQ1ZjYifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.0",
+    "at": "2026-09-05T08:40:09.738Z"
+  }
+}

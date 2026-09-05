@@ -190,6 +190,31 @@ Use your AI agent with the prompts in `_scripts/prompts/`:
 .venv/bin/python3 -m _scripts.quiz_cli --count 10
 ```
 
+## OpenWiki knowledge map
+
+OpenWiki provides a derived, interlinked orientation layer over approved
+`concepts/`, `topics/`, and lab specifications. It does not replace those
+canonical files or the draft-then-promote workflow. Scope and exclusions live in
+`openwiki/INSTRUCTIONS.md` and `.openwikiignore`.
+
+Requires Node.js 22+ and an OpenWiki-supported model credential such as
+`OPENAI_API_KEY`.
+
+```bash
+# Create the initial wiki.
+OPENWIKI_TELEMETRY_DISABLED=1 npx --yes openwiki@0.5.0 code --init --print --language en
+
+# Reconcile it after canonical knowledge changes.
+OPENWIKI_TELEMETRY_DISABLED=1 npx --yes openwiki@0.5.0 code --update --print --language en
+
+# Explore the generated Markdown as a local graph and reader.
+npx --yes openwiki@0.5.0 visualize openwiki --no-open
+```
+
+OpenWiki telemetry is enabled by default; the commands above opt out. Automated
+updates are intentionally not configured during the pilot because they add model
+cost and need a separate review policy.
+
 ## Documentation
 
 For detailed documentation, see `.agents/summary/index.md` which provides a complete guide to:
