@@ -2,7 +2,7 @@
 id: collector-pipeline-architecture
 title: OpenTelemetry Collector Pipeline Architecture
 depth: 2
-lab_status: not-started
+lab_status: scaffolded
 last_reviewed: 2026-08-07
 review_due: 2026-08-10
 sources:

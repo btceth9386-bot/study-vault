@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Log Kiro credit usage after each response",
+      "trigger": "PostStop",
+      "enabled": true,
+      "action": {
+        "type": "command",
+        "command": "./scripts/log_usage.sh"
+      },
+      "timeout": 30
+    }
+  ]
+}

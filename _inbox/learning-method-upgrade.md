@@ -51,40 +51,37 @@ This preserves the generation effect (you struggle first) while guaranteeing no 
 - **Interleaving**: mix quizzes from different concepts in one session (caching + sharding + CAP together). Harder in the moment, far better long-term transfer. `quiz_cli` already supports this — just mix deliberately.
 - **Feynman wrap-up**: after each lab, explain in 3–4 sentences, to a layperson, what you just did and why you designed it that way. Where you get stuck is where you didn't actually understand.
 
-## Two methods are not in conflict — they are phases of the same concept's lifecycle
+## Learn by building from the first useful mental model
 
-Your previous approach (concept-first → reinforcing quiz) and this prediction-first loop are **not either/or — they are sequential phases** keyed to how much prior knowledge you have. This follows the **expertise reversal effect / guidance fading** principle: high guidance for novices, faded guidance as expertise grows.
+Concept-first review and prediction-first labs are not mutually exclusive. A novice can begin with a small lab as soon as they recognize the problem or expected input/output; the amount of scaffold then fades as understanding grows.
 
 | Phase | State | Method | Maps to |
 |-------|-------|--------|---------|
-| **A — Acquisition** | zero / low prior knowledge | read concept first → light quiz (multiple-choice / recall) to encode the schema | your previous approach |
-| **B — Consolidation** | can roughly explain it | prediction + fading-scaffold lab + application questions (with AI feedback) | the 7-step loop |
+| **A — Guided acquisition** | zero / low prior knowledge | short primer → orientation question → heavily scaffolded lab | learn while building |
+| **B — Consolidation** | can roughly explain it | prediction + fading-scaffold lab + application questions | less guidance |
 | **C — Retention** | mastered | interleaved SM-2 review, reverse labs, teach-back | shared |
 
 ### How to decide which phase a concept is in
 
-No new machinery needed — use the existing `depth` field plus the new `lab_status` field:
+No new machinery is needed. Use `depth` and `lab_status` to calibrate support, not as a hard gate:
 
-- `depth 1` (just encountered) → **Phase A**: concept-first + encoding quiz.
+- `depth 1` (just encountered) → **Phase A**: short primer + highly guided lab with one small learner-owned decision.
 - `depth 2` (can explain) + `lab_status: not-started|scaffolded` → **Phase B**: prediction + lab.
 - `depth 3-4` or `lab_status: completed|explained` → **Phase C**: interleaved review, reverse labs, teaching.
 
-Simple self-check: **"Without notes, can I explain this concept in my own words?"**
-- No → Phase A (old approach)
-- Yes → Phase B (new approach)
+Minimum starting check: **"Can I name the problem this addresses or its expected input/output?"** If not, the lab begins with a 2–5 minute primer and one orientation question. Explain-back and quiz history decide how much scaffold to remove; they do not prevent the lab.
 
-## The merged loop (old approach slots in as Phase A)
+## The merged loop
 
 ```
-[Phase A — new concept, build the schema first]
-A1. Read the concept (in full, not patching holes)        ~10 min
-A2. Encoding quiz: mostly multiple-choice + recall          ~5 min
-    Goal: "remember + initial understanding," not application
-    On pass, the concept's depth rises to 2
+[Phase A — first exposure, guided building]
+A1. Read a focused primer and answer one orientation question ~5 min
+A2. Review the lab architecture and observable outcome        ~5 min
+A3. Predict one behavior and fill one small scaffolded core   ~15 min
+    -> AI reviews the attempt and turns gaps into quiz cards
 
-[Phase B — depth >= 2, hands-on consolidation]   <- the 7-step loop
-B1. Breadth quiz as a ROUTER:
-    pass -> go to B3;  still stuck -> fall back to A1 to patch
+[Phase B — familiar concept, fading scaffold]
+B1. Use quiz history and explain-back to calibrate support
 B3. Prediction: write your expected lab result              ~5 min
     -> AI reviews: flags gaps/misconceptions, pushes with
        targeted questions; never gives the full answer
@@ -98,21 +95,19 @@ B6. Feynman wrap-up: explain in 3 sentences to a layperson  ~3 min
 C. Enter SM-2, review across concepts (interleaved)
 ```
 
-The key difference: **step B1's breadth quiz changes from a "fixed start" into a "router"** — its job is to decide whether you start at Phase A or jump straight to Phase B, not to re-test from scratch every time.
-
-This way the old approach isn't replaced — it becomes Phase A of the new loop, and the two connect naturally.
+The key difference is that assessment calibrates the scaffold instead of blocking hands-on work. The learner always owns at least one meaningful prediction or implementation decision.
 
 ## Where this lives in Exobrain
 
 - `_scripts/prompts/promote-concept.md` — defines the `lab_status` frontmatter field and the depth→phase mapping (already updated).
 - `concepts/<category>/<id>.md` — each concept now carries `lab_status` so you can see at a glance which concepts you've actually practiced vs. only read.
-- Suggested next step: a `_scripts/prompts/lab-design.md` prompt that, given a concept, produces a fading-scaffold lab spec + prediction checkpoints + expected results, with the AI acting as the feedback layer (review prediction → review fill-in → emit quiz cards), and updates `lab_status` accordingly.
+- `_scripts/prompts/lab-design.md` accepts one or more concepts or a concrete tool-integration request, then produces a fading-scaffold lab and human review site.
 
 ## Implementation status & the lightweight fallback
 
 This is now wired into Exobrain:
 
-- `_scripts/prompts/lab-design.md` — autonomous: generates the fading-scaffold lab artifacts under `labs/<concept-id>/` (spec, stubbed core, blank predictions, expected answer key) and sets `lab_status: scaffolded`. Available as a manual pipeline step: `pipeline.py concepts/<cat>/<id>.md --step lab`.
+- `_scripts/prompts/lab-design.md` — autonomous: generates artifacts under `labs/<lab-id>/`, builds an English human-review HTML with `web-artifacts-builder`, uses Wrangler to create a dedicated `<lab-id>-review` Cloudflare Pages application and publish the sanitized page, and sets included concepts to `lab_status: scaffolded`.
 - `_scripts/prompts/lab-review.md` — interactive: run AFTER you fill the predictions and core. The AI grades, corrects, emits `application` quiz cards for your mistakes (due tomorrow), and updates `lab_status` to `completed`/`explained`. Deliberately NOT automated — automating it would recreate the "AI does it for you" problem.
 
 **Fallback method:** `_scripts/prompts/labs-tiny-from-concept.md` is a lighter, single-shot lab generator (15–45 min, no scaffolding fade, no AI grading, no quiz feedback). Keep it as a fallback: if the full prediction → fill-core → review loop ever feels too slow or heavy for a given concept, drop back to a tiny lab for quick hands-on intuition.

@@ -1,0 +1,1 @@
+mcp-recorder record-scenarios scenarios.yml

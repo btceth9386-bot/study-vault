@@ -1,0 +1,27 @@
+type: repo
+title: devhelmhq/mcp-recorder
+url: https://github.com/devhelmhq/mcp-recorder
+authors:
+  - DevHelmHQ
+language: en
+date_consumed: 2026-08-09
+date_added: 2026-08-09
+estimated_time: 2-3h
+status: processed
+related_concepts:
+  - mcp-interaction-cassette
+  - mcp-record-replay-verify-cycle
+  - deterministic-mcp-replay-matching
+  - replay-safe-cassette-scrubbing
+  - volatility-aware-structural-verification
+  - declarative-mcp-scenario-recording
+  - cassette-backed-mcp-pytest-fixtures
+  - mcp-bidirectional-json-rpc-substrate
+  - mcp-capability-negotiation-handshake
+  - mcp-transport-separation
+tags:
+  - llm-engineering
+  - mcp
+  - testing
+  - record-replay
+  - regression-testing

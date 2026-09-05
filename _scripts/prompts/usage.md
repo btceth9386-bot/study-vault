@@ -64,31 +64,65 @@ Both are diagram-first, one question at a time, conducted in the Discord chat. S
 
 ---
 
-## 3. Hands-on Labs (Phase B: depth >= 2 concepts)
+## 3. Learn-by-Building Labs
 
-> **When is a concept lab-ready?** `depth: 2` alone isn't enough (it's just the default set at promotion). Practice a concept only when EITHER you can explain it from memory without notes, OR its quiz cards hit **>= 80% over >= 3 questions, no hints**. Otherwise do a Phase A review first. Generate labs **on demand, one concept at a time** — never pre-generate for all concepts. Track which you've practiced via each concept's `lab_status` frontmatter field (`not-started` → `scaffolded` → `completed` → `explained`).
+> Start as soon as you recognize the main term and can state its problem or expected input/output. If that foundation is missing, the agent gives a 2–5 minute primer and continues with more scaffold. Quiz scores and explain-back calibrate difficulty; they do not block the lab. A lab may combine multiple concepts and named tools around one coherent scenario.
 
 ### Generate a fading-scaffold lab
 
 **Say in Discord:**
 
 ```
-Read _scripts/prompts/lab-design.md then design a fading-scaffold lab for <concept>.
+Read _scripts/prompts/lab-design.md then design a learn-by-building lab for <concepts or integration request>.
 ```
 
-*(agent runs: `.venv/bin/python3 _scripts/pipeline.py concepts/<category>/<concept-id>.md --step lab`)*
+Examples:
+
+```text
+Read _scripts/prompts/lab-design.md then design a learn-by-building lab for concepts/observability/llm-observability.md.
+Read _scripts/prompts/lab-design.md then design a lab combining Kiro CLI and Langfuse for evaluation.
+```
+
+### Advanced integration example
+
+```text
+Read _scripts/prompts/lab-design.md then design an advanced integration lab
+combining Kiro CLI and Langfuse for evaluation.
+
+Complexity: advanced
+Time box: 90-120 minutes
+Setup mode: real-tool
+Include:
+- An end-to-end evaluation dataset and scoring workflow.
+- Kiro CLI execution traced into Langfuse.
+- A baseline-versus-improved comparison.
+- Two intentional failure cases.
+- Observable traces, metrics, and acceptance criteria.
+```
+
+The prompt above is sufficient; you do not need to name each skill again. The agent follows this workflow:
+
+```text
+labs/<lab-id>/spec.md
+  -> doc-restructure -> labs/<lab-id>/spec.diataxis.md
+  -> web-artifacts-builder -> labs/<lab-id>/pages/index.html
+  -> wrangler -> https://<lab-id>-review.pages.dev
+```
+
+`spec.md` remains the complete source specification. `spec.diataxis.md` is a second-pass, human-first version with separated tutorial, explanation, reference, and checkpoint material; it becomes the primary source for the review HTML. The agent then creates or reuses the dedicated Cloudflare Pages application `<lab-id>-review` and deploys only the sanitized `pages/` directory. It never publishes `expected.md`, learner predictions, secrets, private URLs, or a completed core solution. If deployment is unavailable, the local HTML and exact retry commands remain in the lab folder.
 
 Then **you** do the hands-on part:
-1. Fill `labs/<concept-id>/predictions.md` **before** running.
-2. Implement the stubbed core (`TODO: YOUR CORE`).
-3. Diff your result against `labs/<concept-id>/expected.md`.
+1. Open the review URL and confirm the architecture and learning goal.
+2. Fill `labs/<lab-id>/predictions.md` **before** running.
+3. Implement the stubbed core (`TODO: YOUR CORE`).
+4. Diff your result against `labs/<lab-id>/expected.md`.
 
 ### Grade your attempt (run AFTER filling predictions + core)
 
 **Say in Discord:**
 
 ```
-Read _scripts/prompts/lab-review.md then review my labs/<concept-id>/ attempt.
+Read _scripts/prompts/lab-review.md then review my labs/<lab-id>/ attempt.
 ```
 
 The agent corrects mistakes, adds `application` quiz cards (due tomorrow), and updates `lab_status`.
@@ -133,7 +167,7 @@ The agent generates a refine report in `_inbox/`, flags stale concepts/expired d
 | Ingest YouTube videos | "ingest these episodes for English learning following guide.md: `<urls>`" |
 | Review + quiz (still learning it) | "review-then-quiz `<topic>`" (Phase A) |
 | Review + quiz (already know it) | "visual-feynman-apply review `<topic>`" (Phase B) |
-| Practice a concept hands-on | "design a lab for `<concept>`" → later "review my lab attempt" |
+| Practice concepts/tools hands-on | "design a lab combining `<concepts/tools>` for `<goal>`" → later "review my lab attempt" |
 | Quick hands-on, no grading | "make a tiny lab for `<concept>`" |
 | Daily spaced repetition | "quiz me on due cards" |
 | Weekly cleanup | "run weekly-refine" |

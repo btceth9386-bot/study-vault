@@ -2,7 +2,7 @@
 id: llm-as-judge-evaluation
 title: LLM-as-Judge Evaluation
 depth: 2
-lab_status: not-started
+lab_status: scaffolded
 last_reviewed: 2026-05-04
 review_due: 2026-05-07
 sources:

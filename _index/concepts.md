@@ -147,7 +147,14 @@
 - [up-to-code-phrase](../concepts/english/up-to-code-phrase.md) - Up to Code Phrase [english] · tags: english, vocabulary, construction, compliance · review_due: 2026-05-12 · sources: sources/videos/tools-english-conversation-practice-episode-113
 - [vertical-scaling](../concepts/system-design/vertical-scaling.md) - Vertical Scaling [system-design] · tags: system-design, scalability · review_due: 2026-05-03 · sources: sources/videos/cs75-summer-2012-lecture-9-scalability-harvard-web-development-david-malan
 - [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary [english] · tags: english, vocabulary, idioms, conversation, smoking, habits · review_due: 2026-05-16 · sources: sources/videos/no-smoking-english-conversation-practice-episode-114/
+- [cassette-backed-mcp-pytest-fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md) - Cassette-Backed MCP Pytest Fixtures [llm-engineering]
+- [declarative-mcp-scenario-recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md) - Declarative MCP Scenario Recording [llm-engineering]
+- [deterministic-mcp-replay-matching](../concepts/llm-engineering/deterministic-mcp-replay-matching.md) - Deterministic MCP Replay Matching [llm-engineering]
+- [mcp-interaction-cassette](../concepts/llm-engineering/mcp-interaction-cassette.md) - MCP Interaction Cassette [llm-engineering]
+- [mcp-record-replay-verify-cycle](../concepts/llm-engineering/mcp-record-replay-verify-cycle.md) - MCP Record-Replay-Verify Cycle [llm-engineering]
+- [replay-safe-cassette-scrubbing](../concepts/llm-engineering/replay-safe-cassette-scrubbing.md) - Replay-Safe Cassette Scrubbing [llm-engineering]
+- [volatility-aware-structural-verification](../concepts/llm-engineering/volatility-aware-structural-verification.md) - Volatility-Aware Structural Verification [llm-engineering]
 
 ## Draft
 
-(無 — `_drafts/` 目前沒有任何草稿檔案)
+_No draft concepts._

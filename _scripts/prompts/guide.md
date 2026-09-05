@@ -111,23 +111,29 @@ Test your understanding with spaced-repetition quizzing:
 .venv/bin/python3 -m _scripts.quiz_cli --count 10
 ```
 
-## Step 6.5 — Hands-on labs (Phase B: prediction-first + fading scaffold)
+## Step 6.5 — Learn-by-building labs
 
-Once a concept reaches `depth >= 2` (you can explain it), reinforce it with a lab. The AI sets up a scaffold and stubs the conceptual core; you fill it. See `_inbox/learning-method-upgrade.md` for the full method.
+Start once the learner recognizes the main term and can state its problem or expected input/output. If needed, the agent gives a short primer and continues with a heavier scaffold. Labs may combine multiple concepts and named tools around one practical scenario.
 
 ```bash
-# Generate a fading-scaffold lab for one concept (autonomous setup):
+# One concept:
 .venv/bin/python3 _scripts/pipeline.py concepts/<category>/<concept-id>.md --step lab
+
+# A composed integration request:
+.venv/bin/python3 _scripts/pipeline.py "Kiro CLI + Langfuse for evaluation" --step lab
 ```
+
+The lab agent creates `labs/<lab-id>/`, uses `web-artifacts-builder` to produce a human-readable review HTML, then uses the Wrangler skill to create a dedicated `<lab-id>-review` Cloudflare Pages application and publish the sanitized page. Secrets, learner predictions, private answer keys, and completed core solutions must never be published.
 
 Then (manually, in order):
-1. Fill `labs/<concept-id>/predictions.md` BEFORE running.
-2. Implement the stubbed core (`TODO: YOUR CORE`).
-3. Diff your result against `labs/<concept-id>/expected.md`.
-4. Ask an AI agent to grade your attempt — it corrects mistakes and feeds them into the quiz bank:
+1. Review the published architecture and acceptance criteria.
+2. Fill `labs/<lab-id>/predictions.md` BEFORE running.
+3. Implement the stubbed core (`TODO: YOUR CORE`).
+4. Diff your result against `labs/<lab-id>/expected.md`.
+5. Ask an AI agent to grade your attempt — it corrects mistakes and feeds them into the quiz bank:
 
 ```
-Read _scripts/prompts/lab-review.md then review my labs/<concept-id>/ attempt.
+Read _scripts/prompts/lab-review.md then review my labs/<lab-id>/ attempt.
 ```
 
 Lighter fallback (single-shot, no grading loop): `Read _scripts/prompts/labs-tiny-from-concept.md then make a tiny lab for <concept>`.

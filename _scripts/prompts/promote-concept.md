@@ -10,12 +10,12 @@
 - 首次晉升的 `depth` 預設為 `2`，代表「能解釋」。只有使用者明確要求時才設定其他深度。
 - Set `lab_status: not-started` on first promotion. This field tracks hands-on practice and drives the learning phase (see Learning Phase Mapping below). Allowed values: `not-started`, `scaffolded`, `completed`, `explained`.
 
-  **Learning Phase Mapping** — `depth` and `lab_status` together signal which study method applies to a concept:
-  - `depth 1` → **Phase A (Acquisition)**: read the concept fully, then take encoding quizzes (multiple-choice / recall). Goal: build the initial schema. No labs yet.
-  - `depth 2` + `lab_status: not-started|scaffolded` → **Phase B (Consolidation)**: prediction-first + fading-scaffold lab + application quizzes. Hands-on.
-  - `depth 3-4` or `lab_status: completed|explained` → **Phase C (Retention)**: interleaved SM-2 review, reverse labs, teach-back.
+  **Learning Phase Mapping** — `depth` and `lab_status` tune the amount of support rather than blocking hands-on work:
+  - `depth 1` or first exposure → **Guided acquisition**: give a 2–5 minute primer, then a heavily scaffolded lab with one small learner-owned decision.
+  - `depth 2` + `lab_status: not-started|scaffolded` → **Consolidation**: prediction-first fading scaffold plus application quizzes.
+  - `depth 3-4` or `lab_status: completed|explained` → **Retention**: less scaffold, new failure modes, interleaved review, and teach-back.
 
-  Self-check for the learner: "Without notes, can I explain this concept in my own words?" No → Phase A. Yes → Phase B. Objective version of the gate: the concept's quiz cards show >= 80% correct over >= 3 questions answered without hints (see `history` in `quiz/bank.json`). Note: `depth: 2` is the nominal default at promotion, not proof of readiness — use the self-check or quiz accuracy, not depth alone.
+  Minimum lab gate: the learner only needs to recognize the term and state the problem it addresses or its expected input/output. If they cannot, provide the short primer and one orientation question before continuing. Quiz accuracy and explain-back still calibrate difficulty, but are not prerequisites.
 - 首次晉升的 `review_due` 必須設定為「今天 + 3 天」，格式為 `YYYY-MM-DD`。
 - 每個正式概念至少要有 1 個具體範例，可以是程式碼、現實場景、操作流程或類比。
 - 必須建立雙向連結：新概念連到 related concepts，也要在被連結的既有概念中補上回指。
