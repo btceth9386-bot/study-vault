@@ -1,116 +1,86 @@
 ---
 type: lab catalog
 title: Hands-On Lab Catalog
-description: Approved hands-on labs that connect repository concepts to practical work. The current catalog begins with a real-tool Kiro CLI and Langfuse evaluation lab, including its learning boundary, operational prerequisites, and intentional failure cases.
-tags: [labs, hands-on-learning, llm-evaluation, observability, kiro-cli, langfuse]
+description: Catalog of the three repository-resident lab recovery capsules, their approved concept links, and canonical specifications. Use it to select or recover a lab while keeping runnable work and review artifacts in the external workspace.
+tags: [labs, hands-on-learning, recovery-capsules, llm-engineering, observability]
 verified:
   - by: openwiki/0.5.0
-    at: 2026-09-05T08:40:09.738Z
+    at: 2026-09-06T04:14:39.619Z
 sources:
   - id: openwiki-source-e11325fe5026a3874a69376f
     resource: repo://_scripts/prompts/lab-design.md
-  - id: openwiki-source-720aa200de02fad9b7dcb6c6
-    resource: repo://labs/kiro-langfuse-eval/.env.example
-  - id: openwiki-source-b91edefcf6f7ee669fd7224d
-    resource: repo://labs/kiro-langfuse-eval/scripts/compare_report.py
-  - id: openwiki-source-1496eed1e95290ae3c372522
-    resource: repo://labs/kiro-langfuse-eval/scripts/lib/judge_client.py
-  - id: openwiki-source-a18c8e16e9e41f4c71dcbe40
-    resource: repo://labs/kiro-langfuse-eval/scripts/lib/langfuse_glue.py
-  - id: openwiki-source-5087a1c61960507d0fbf30ea
-    resource: repo://labs/kiro-langfuse-eval/scripts/log_usage.sh
-  - id: openwiki-source-5f7268bdf7d47f76fd5481b2
-    resource: repo://labs/kiro-langfuse-eval/scripts/model_compare.py
-  - id: openwiki-source-62c61bb65fa0cd7b73b91256
-    resource: repo://labs/kiro-langfuse-eval/scripts/run_variant.py
-  - id: openwiki-source-1208ec4fa8cc920e6b2c4b7a
-    resource: repo://labs/kiro-langfuse-eval/scripts/setup.sh
+  - id: openwiki-source-92eab7e5213be05201442af4
+    resource: repo://_scripts/prompts/lab-review.md
+  - id: openwiki-source-e119253b3c3737247dc63f2a
+    resource: repo://.openwikiignore
+  - id: openwiki-source-48472eed2b7d05affcbff47f
+    resource: repo://labs/kiro-langfuse-eval/manifest.yaml
   - id: openwiki-source-3157dd7558008dcc412dd11c
     resource: repo://labs/kiro-langfuse-eval/spec.md
-generated: { by: "openwiki/0.5.0", at: "2026-09-05T08:40:09.738Z" }
+  - id: openwiki-source-51f5b3747f7658cbaf70609f
+    resource: repo://labs/langgraph-state-flow/manifest.yaml
+  - id: openwiki-source-2483947c0005a39ae355f8fb
+    resource: repo://labs/langgraph-state-flow/spec.md
+  - id: openwiki-source-ff244e76d1b895b26904dcf6
+    resource: repo://labs/otel-collector-positioning/manifest.yaml
+  - id: openwiki-source-86239438e8660e4bbacd1c6a
+    resource: repo://labs/otel-collector-positioning/spec.md
+  - id: openwiki-source-c2819cde93975d4de977b166
+    resource: repo://labs/README.md
+generated: { by: "openwiki/0.5.0", at: "2026-09-06T04:14:39.619Z" }
 ---
 
 # Hands-On Lab Catalog
 
-Labs are guided practice, not replacement specifications or authorization to alter their source material. Use a catalog entry to choose a learning exercise, then read the lab's canonical specification and follow the repository's concept maps for the underlying theory.
+This is a navigation page for the repository's **three recovery capsules**. A capsule preserves a lab's identity, approved concept links, recovery location, and canonical learning contract; it is not the runnable lab. Read the linked `spec.md` to understand a lab's goal, core task, intentional failure or comparison, prerequisites, and acceptance criteria. OpenWiki is derived navigation: it neither replaces those canonical files nor authorizes edits to the capsules, concepts, or external lab workspace.
 
-## Current catalog
+## Catalog
 
-| Lab | Practice focus | Setup | Time box | Canonical entrypoint |
-| --- | --- | --- | --- | --- |
-| **Kiro CLI + Langfuse for Evaluation** | Turn non-interactive Kiro CLI answers into scored, comparable Langfuse dataset runs; compare prompt variants and a small model subset while keeping task cost separate from judge cost. | `real-tool` | 90–120 minutes | [`labs/kiro-langfuse-eval/spec.md`](../../labs/kiro-langfuse-eval/spec.md) |
+| Lab | Setup and time box | Approved concepts | Canonical specification |
+| --- | --- | --- | --- |
+| **Kiro CLI + Langfuse for Evaluation** | `real-tool`; 90–120 min | [LLM Observability](../../concepts/llm-engineering/llm-observability.md); [LLM-as-Judge Evaluation](../../concepts/llm-engineering/llm-as-judge-evaluation.md); `acp-agent-backend-for-ides` | [`labs/kiro-langfuse-eval/spec.md`](../../labs/kiro-langfuse-eval/spec.md) |
+| **LangGraph State Flow — Reducer vs. Overwrite** | `local-mock`; 20–30 min | [LangGraph StateGraph State Schema](../../concepts/llm-engineering/langgraph-stategraph-state-schema.md); [LangGraph Channels and Reducers](../../concepts/llm-engineering/langgraph-channels-and-reducers.md) | [`labs/langgraph-state-flow/spec.md`](../../labs/langgraph-state-flow/spec.md) |
+| **OpenTelemetry Positioning — Where the Collector Sits** | `local-mock`; 45–75 min | [Telemetry Signal Model](../../concepts/observability/telemetry-signal-model.md); [OpenTelemetry Collector Pipeline Architecture](../../concepts/observability/collector-pipeline-architecture.md); `otlp-vendor-neutral-telemetry-protocol`; `opentelemetry-api-sdk-separation` | [`labs/otel-collector-positioning/spec.md`](../../labs/otel-collector-positioning/spec.md) |
 
-This lab has **no** `labs/kiro-langfuse-eval/spec.diataxis.md`. Although the lab-design workflow normally restructures a completed specification into that human learning narrative, use `spec.md` above as the canonical specification for this lab. Do not infer a second narrative, a completed learner solution, or verified run results from the catalog.
+The concept links above are the approved starting points for theory. The canonical specification is the entrypoint for the corresponding exercise; it is not a completed implementation or a record of any learner run.
 
-## Kiro CLI + Langfuse for Evaluation
+## What the repository preserves
 
-### What it teaches
+Each lab directory contains two recovery-contract files:
 
-The exercise is an integration boundary, rather than native Kiro telemetry: the harness surrounds each Kiro CLI subprocess task call with the Langfuse dataset-experiment workflow. The learner implements only the `judge_score()` evaluator; the scaffold provides dataset seeding, task construction, CLI wrapping, provider dispatch, usage collection, and comparison tooling. This deliberately small ownership boundary makes the learning objective concrete: define a rubric that evaluates outputs—including an intentionally ambiguous item—without crashing an entire run when a judge reply cannot be parsed.
+- **`manifest.yaml`** identifies the capsule, its `status`, concept IDs, external `workspace_path`, canonical-spec filename, generator prompt, review URLs, and the artifact categories to regenerate. Its `spec_sha256` records the canonical specification's SHA-256 value for damage detection.
+- **`spec.md`** is the repository-resident canonical learning contract. It defines the learning intent and the behavior a recovered lab must preserve, including the scaffold boundary, learner-owned core, failure or comparison case, prerequisites, and acceptance criteria.
 
-The task model and judge are intentionally separate. Kiro CLI produces the answer under test; `judge_client.call_judge()` sends the rubric to a separately configured provider. The separation prevents judge-side calls from appearing in Kiro credit snapshots and avoids grading a model family with itself. Provider choice alone is not sufficient: the learner must confirm that the chosen judge model family does not overlap the Kiro task model family.
+The current manifests mark all three capsules `scaffolded`. Their `canonical_spec` is `spec.md`, and their recovery workspace is under `~/orb_pods_share/<lab-id>/`.
 
 ```mermaid
-flowchart TD
-    Items["Sanitized local dataset"] --> Seed["Idempotent Langfuse dataset seed"]
-    Seed --> Run["Dataset experiment variant"]
-    Run --> Task["Bound task function"]
-    Task --> Kiro["Kiro CLI subprocess"]
-    Kiro --> Trace["Langfuse task trace"]
-    Trace --> Judge["Separate judge provider"]
-    Judge --> Score["judge_correctness score"]
-    Kiro --> Hook["Kiro Stop hook"]
-    Hook --> Usage["Usage snapshot log"]
-    Usage --> RunScore["credits_logged run score"]
-    Score --> Compare["Variant and model comparison"]
-    RunScore --> Compare
+flowchart LR
+    Capsule["Repository recovery capsule"] --> Manifest["manifest.yaml identity and recovery metadata"]
+    Capsule --> Spec["spec.md canonical learning contract"]
+    Manifest --> Workspace["External orb_pods_share workspace"]
+    Spec --> Workspace
+    Workspace --> Scaffold["Runnable scaffold and learner work"]
+    Workspace --> Narrative["Diataxis narrative and review artifacts"]
 ```
 
-*The harness traces and scores task answers through Langfuse while the hook-based usage path records only Kiro-side activity.*
+*The repository retains the recovery contract; the external workspace holds reconstructed runnable and presentation artifacts.*
 
-### Entrypoints and control boundaries
+## Recovery and ownership boundary
 
-- `scripts/setup.sh` is the operational gate. It checks for `kiro-cli`, creates or reuses a virtual environment, installs requirements, requires the Kiro, judge-provider, and Langfuse configuration variables, tests Langfuse health, performs a live Kiro stdin-shape smoke test, and invokes the usage logger once. It stops on missing prerequisites rather than offering a mock fallback.
-- `scripts/run_variant.py --variant baseline` and `scripts/run_variant.py --variant improved` seed the dataset, bind the chosen system prompt and optional model to a task, and call `dataset.run_experiment()` with the learner evaluator and the run-level credit evaluator. They write local summaries for the comparison step; these summaries are run artifacts, not catalog content.
-- The baseline and improved prompts are the controlled variable. The improved prompt asks for concise, direct policy or steps and for missing context rather than guessing; the runner records variant and model metadata so the resulting dataset runs can be compared.
-- `scripts/model_compare.py` holds the improved prompt constant while iterating a deliberately small three-item subset over selected Kiro models. It records the judge score and measured task latency per model-item pair, leaving the learner to weigh those results against model cost.
-- `scripts/compare_report.py` is the runnable acceptance check. It requires both local variant summaries and `judge_correctness` evaluations, reports their mean and count alongside logged-credit counts, and returns failure when a baseline has usage snapshots but the improved run has none.
+To recover a lost lab, provide its `manifest.yaml` and `spec.md` to an agent and follow [`_scripts/prompts/lab-design.md`](../../_scripts/prompts/lab-design.md). Recovery targets equivalent learning behavior and acceptance criteria, not byte-for-byte reproduction. The design workflow places the complete lab in the external workspace and only then creates the minimal repository capsule.
 
-### Data and lifecycle invariants
+The follow-on review workflow is also external and happens after a learner attempt. [`lab-review.md`](../../_scripts/prompts/lab-review.md) reads the external specification, learner predictions, learner-owned core, and private answer key; it must stop rather than grade when the attempt is empty. It is feedback and retention support, not catalog content.
 
-Dataset seeding is safe to repeat: the Langfuse dataset is created by name and items are upserted by ID. `make_kiro_task()` builds one task function for a chosen prompt/model; the experiment invokes it once per item, so each task call is a separate Kiro invocation and Langfuse trace. The lab dataset contains eight sanitized support-FAQ items, including one intentionally ambiguous item that must be judged for acknowledgement of ambiguity or missing policy context rather than textual agreement with a single answer.
+### Deliberately outside this repository
 
-The judge evaluator must return `Evaluation(name="judge_correctness", ...)` with a 1–5 value, or `-1` and the judge text when parsing fails. Returning an evaluation lets `run_experiment()` attach it; the evaluator should not create Langfuse scores itself. A provider configuration error is intentionally loud—there is no fallback from the judge client to Kiro CLI.
+Do not treat a manifest's regeneration list or review URLs as proof that these files are present here. Runnable scaffolds and fixtures, learner work, `predictions.md`, answer keys, Diátaxis narratives, review sites and pages, deployment material, generated runs, usage logs, and credentials belong outside this repository. The repository ignore policy also excludes private learner state and generated lab artifacts from its canonical knowledge surface.
 
-The usage path has a different lifecycle. A Kiro `Stop` hook invokes `scripts/log_usage.sh`, which runs `/usage`, extracts the first two numbers from the usage block, and appends a JSON snapshot. The run evaluator reads available snapshots, skips malformed JSON lines, sums recorded credits, and returns their count as `credits_logged`. For an eight-item healthy dataset run, that count should be eight because judge calls do not traverse Kiro CLI. The parser is deliberately tolerant of Kiro CLI output variation, so validate its interpretation during setup when using a different CLI version.
+This boundary prevents a catalog from exposing solutions, predictions, credentials, operational output, or review evidence. It also preserves the draft-then-promote rule: discovering a lab through OpenWiki does not authorize a change to canonical knowledge or lab content.
 
-### Deliberate failure cases
+## Choosing a lab
 
-1. **Ambiguous-item judge miscalibration.** A rubric that merely asks whether output matches an expected answer is unsuitable for the deliberately ambiguous dataset item. Treat this as an evaluation-design signal: inspect the judge rationale and revise the rubric to reward recognition of ambiguity or missing context, not string matching.
-2. **Inert credit hook.** The shipped hook uses `PostStop`, while the expected Kiro hook trigger is `Stop`. The configuration can therefore look installed while producing no snapshots. Run the comparison after the prescribed baseline/improved sequence; a baseline with snapshots and an improved run with none is the focused diagnostic signal. Fix the trigger and rerun the improved variant before treating cost data as trustworthy.
+- Choose **Kiro CLI + Langfuse for Evaluation** to practice a real-tool evaluation and observability integration, including a separately configured judge provider and real operational prerequisites. Read the specification before deciding whether its cost and access requirements are appropriate.
+- Choose **LangGraph State Flow — Reducer vs. Overwrite** for a compact local exercise on how a `StateGraph` state schema and reducer semantics affect accumulated versus replaced state.
+- Choose **OpenTelemetry Positioning — Where the Collector Sits** for a local exercise on separating telemetry signal types and routing them through Collector pipelines to appropriate backends.
 
-### Prerequisites and safe operation
-
-This is a real-tool exercise with separate costs for task-side Kiro calls and judge-provider calls. It requires an installed, authenticated Kiro CLI; credentials for a distinct judge provider; a Langfuse project and reachable Langfuse endpoint; and Python dependencies from `requirements.txt`. The repository does not supply a mock mode, because real CLI behavior, tracing, and the Langfuse interface are the subject of the exercise. The exact Kiro non-interactive model-selection input shape is version-sensitive, so use the setup smoke test and adjust `call_kiro()` only if the installed CLI behaves differently.
-
-Before running, copy `.env.example` to a private `.env` and supply values locally; never place credentials in lab outputs or documentation. Do not rely on the scaffold to validate cross-family model separation—the setup script validates a supported judge provider name and non-empty configuration, but leaves that semantic compatibility check to the operator.
-
-### Learning sequence and completion signals
-
-1. Read the canonical `spec.md` and the scaffold, then make predictions privately before execution.
-2. Run `./scripts/setup.sh`; resolve environment or CLI-shape issues before a dataset experiment.
-3. Implement `judge_score()` using `call_judge()`, with an ambiguity-aware rubric and parse-failure handling.
-4. Run baseline and improved variants in the specified sequence, investigate the intentional hook failure, then rerun after correcting it.
-5. Run `python scripts/compare_report.py`, inspect the Langfuse dataset-run comparison, and run the model comparison.
-6. Use the lab review workflow only after making the learner attempt.
-
-A completed healthy exercise has two eight-item scored dataset runs, a passing comparison report after the hook correction, and model-comparison records with a score and latency for every selected model-item pair. The intended interpretation is more important than a preordained winner: compare quality, latency, and separately attributable costs, and explain why the ambiguous item and a missing hook signal require different responses.
-
-## Related navigation
-
-- [LLM Engineering Domain Map](../concepts/llm-engineering-map.md) situates evaluation, observability, and prompt comparison in the production feedback loop.
-- [Observability and Telemetry Domain Map](../concepts/observability-map.md) separates application instrumentation from telemetry delivery and operations.
-
-## What this catalog excludes
-
-This page intentionally does not publish learner predictions, expected answers, completed evaluator implementations, run summaries or outputs, usage logs, credentials, generated review HTML, deployment/account details, or other lab artifacts. Those materials either belong to the learner's private work, are operationally sensitive, or are generated evidence—not stable catalog navigation.
+For broader orientation before selecting a capsule, use the [LLM Engineering Domain Map](../concepts/llm-engineering-map.md) or the [Observability and Telemetry Domain Map](../concepts/observability-map.md). The [Study Vault Quickstart](../quickstart.md) and [From Source to Learning Path](../workflows/knowledge-lifecycle.md) explain the repository's authority and learning lifecycle boundaries.

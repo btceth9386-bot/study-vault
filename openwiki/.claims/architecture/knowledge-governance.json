@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:37f065c41817126eccde0966ac6b16bf9881c78e2e6614e45f71bbf7ee92fff0",
+  "pageVersion": "sha256:575e442566c86ea06250ba76f882247b90a43d1c5511c19fb7cc09d3378ecece",
   "claims": [
     {
       "id": "claim_fc89a13a70b64803a90f6eca65b1cb12",
@@ -18,15 +18,15 @@
     },
     {
       "id": "claim_838c13f091d84b73b06a3c80ff9102f0",
-      "statement": "OpenWiki is an orientation layer over canonical concepts, topics, and lab specifications rather than a replacement for the repository’s canonical files; repository guidance says not to hand-edit generated OpenWiki pages unless explicitly asked.",
+      "statement": "OpenWiki is a derived orientation layer over approved concepts, topics, and lab specifications rather than a replacement for canonical files or the draft-then-promote workflow. Repository guidance normally says not to hand-edit generated pages unless explicitly asked, while the README specifies manual OpenWiki reconciliation during the pilot and says automated updates are deliberately not configured.",
       "evidence": [
         {
           "resource": "repo://AGENTS.md#L139-L146",
           "version": "repo-lines-v1:sha256:cb7fb6c3ed0db2f9a666e8426aa041c2ea98b5b2458d051d1eff45f3db580f8f:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjQ4MzZlZDdlMDA1Mzc3NWEwYTk2NmNlODYxMzRiMjM0N2Q4NTFhN2IwMmY0ODEyYmViMmM1OWQxYzY4ZDUyNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWI1Mzk1M2JmYjcyYzEyNjJiYmFlMmVhY2E3MmNhYmYxYWY0OTkyN2EwYmJhMTE1N2IyZDViZGIyODVjNGJkMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWIxYmM1YmM0YTIzN2Y1NzhlNmFmNGE0MTVkMDY0N2Y5OTEwYjAzYjM2NGUxZTI3YzFmMWRiYWE3NDNkMDNiYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzA4OWRmOTNmOGJhNTdhNGRkYmZkOGYwMTM5NjJjMzk3OGNlNGRiNjgxOTljNGRhNjY2NjQ5YjA5OTZjZWRhOSJ9"
         },
         {
-          "resource": "repo://README.md#L193-L215",
-          "version": "repo-lines-v1:sha256:bb606a314d99a97dd36d4cc8560f35914d7fbff5284e632797135ecfc25b0e61:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY4NWI3NDk4NGUwMmExOTlkYzUxN2FkMjEzNTYwZGUyMTBjNTRkMWVjZWQ2ZWVmYTZhOTJjZjY4YjFlZDE4ZjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzMDY3MDkyYWI1MTlhNDZjZjQzMTEyMTZjYTY0NjRlNWUzOGNkYzM3MDE0ZTkyZTBiNjEyNzk0NTAzMzU4MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjExYjBiNDZlYjVhNmE2NDk5NzI1MzA2MjAxMWQ2MDkyMjc2YTMyZTc4YTIyYTNmNzJlNDBmMzNjZjY3MWVjZTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ5NDZiNTFiODZhN2U4OGQwNmQ5ZGNmMDgwODlhY2I2YWE4NDQ2MDUwOGUyODg5YjM1N2JmMDQ2NTg3YjExYzIifQ"
+          "resource": "repo://README.md#L193-L216",
+          "version": "repo-lines-v1:sha256:afdb04dd9267d97bb231747aa1d6d4ec35c6d9db3e0628bad90389510b70580d:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY4NWI3NDk4NGUwMmExOTlkYzUxN2FkMjEzNTYwZGUyMTBjNTRkMWVjZWQ2ZWVmYTZhOTJjZjY4YjFlZDE4ZjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjllZjJkY2ViYWVmNzk4YjNlODM5ZWQ1ZjAzZDY2NWY1NWQ5MzAxNTk3ZmIxN2M4NmNlNjA1MGQyYzY5NGI5MDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjExYjBiNDZlYjVhNmE2NDk5NzI1MzA2MjAxMWQ2MDkyMjc2YTMyZTc4YTIyYTNmNzJlNDBmMzNjZjY3MWVjZTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ5NDZiNTFiODZhN2U4OGQwNmQ5ZGNmMDgwODlhY2I2YWE4NDQ2MDUwOGUyODg5YjM1N2JmMDQ2NTg3YjExYzIifQ"
         }
       ]
     },
@@ -169,10 +169,38 @@
           "version": "repo-lines-v1:sha256:9224e4b111461e8d2ac710dfe3c257feff8e2aea616f0f69c10585810e08c7be:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkYjlkZmM1MjFiY2FjZjY2YTcyMDg3YzZmYTBiZDk1YjZkMjVjMTQwMmFjMTJlZjFhMmZjZWMyMzQ5ZDQ3NDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMwYTJkZWIyNmM0YjE0MjAxMGU2NDg0N2RmOTkxNTEyOGFjNGE0ZWQ1NTI3YmRlMDliYmI2MDhiOGJjYzU5OTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkNTZjMmMwMzM2ZDBjNDcxYjRhYjJjNTk5NmY0NDQ2MDc5OTM0MTU1NjQ4ODMwOTE2ZWQ4ZDMwOTk2Mzc2N2MifQ"
         }
       ]
+    },
+    {
+      "id": "claim_a7e033b5c34543b9ae56ea50694bc1bc",
+      "statement": "The bundled pipeline configuration asks the promotion role to promote all approved drafts, but the promotion prompt itself restricts the operation to a user-approved, specified single draft; operators must preserve the stricter human approval and selected-draft boundary rather than treat sequential dispatch as authorization.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/pipeline.yml#L58-L71",
+          "version": "repo-lines-v1:sha256:46d7a8fed1d182b923e8692ed8064b18b6d25e6c8d77de37b58061408ac884fa:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlY2U1N2I1NWU2YzQyOWI1NjEyZTVlMzZmYTQ4MmMyYjUwNzUxOTFhMTEyY2M5MmFmZjQ5M2MzNzExZTc1YTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1NDg4NDhlNTZiM2EzNDJlM2RmYTRiZTdiMTYxYTAzZDk0Zjg2ZWI1OWZjZDdjNzlkMDlhODNhMjllZDhmYzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU0ZmY1NjQzMzE0ZWJhMjcxM2Q0NTVhYTU3Y2U1ZDBmMDFmNjYwNGU0ODczMjIxZmEzOTQyNGM5MjBjNzJlMmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhhMjcyNDY1NzUxOTUwNTUxYmZmNDEyNDc0YzA2MjE3NjUzMDIzNjZlOTE2M2UxZDY4NGRjY2JmZDU3MTc4YTkifQ"
+        },
+        {
+          "resource": "repo://_scripts/prompts/promote-concept.md#L24-L40",
+          "version": "repo-lines-v1:sha256:f9f57efc36132f06e97d61ad348760e9514c0c52c0c7bea9c52fd192dcd64e39:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0OTZjMDAyZjQ3NTFhM2MwYjM0YmNhMWZmMGQwNzBhZmM0ODhiMjIxODY2ZGU2Nzc4N2FhMDJjNjM4MzhhMmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhMmUxYTY3NzZlZmUxMDFiNDY0YmUwMDYyYzA2YmM4MzUyNTk5YWIwM2MyZWExZGM2ZTQzNmJmYjYxZWU2YzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3ZDhkYmE5MmQ1NTM2MTYxZjRjZWU1NmQzMzA0NzkxYTZlMmFkZjY3N2ZiMjhjNDg4NTAxM2VlZjc3OTA1ODciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIxNmY2OWY3M2QzOTEyZDQ0ODA3OWE1NmMxZTIzNzI0MGNlZGI5MTgzMTgzMGZmZDY4YTZlODcwY2YxMzFjMGMifQ"
+        },
+        {
+          "resource": "repo://_scripts/prompts/promote-concept.md#L3-L9",
+          "version": "repo-lines-v1:sha256:e3b5600ef6a926eea61190e97b465bcd267b435b1587b5c57ca2a7ba38707926:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTc3YTg3NjEzYTVkYjYxOThhZWIwNWYyYmNkZjZjYzJlMjc0ZTdiNTUxMDAxYzYzNWNmMWJmMDAzY2MzMzNjYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2NhZGI5NjNmMTM3ZDRiNTg5OWU1YzcyZDhiNzAwZDI3ZThjNWY5ZDFiYzcyOWE0ZTY1YjBlMjI3N2YzZGU5ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWYyMzYxNTI5NzlmNDRmMWE3NDAyMzgxYjI4Mjc3ZDE5ZjEzZjVhNTVjODQwODU5ZTQ0NzY4OTdlNjE3NzU2MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGRhYzIzY2FiYzY2ODIyZDJmZDQ0MGVjZTc4ZGZmMGQ3YTY1ZjMyOTJhNzk1OWQ4NGVmNGQyZDgzZjljZGZhYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0757fca5e0874b06acf07b29f0043708",
+      "statement": "Repository lab directories are recovery capsules: their manifest and spec preserve identity and canonical learning intent, while runnable workspaces, generated code, learner files, answer keys, and review HTML live outside the repository. A lab specification is therefore separate from concept/topic authority.",
+      "evidence": [
+        {
+          "resource": "repo://labs/README.md#L1-L18",
+          "version": "repo-lines-v1:sha256:a9f9c0a4560b50dcb71069c4d79356ebb6bf0a4b52927c40d93abde832fe13da:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzNDk0YmViYzVjYWNlOTUwMWE0ZTkzZjMyOGJkZmYxMGIxZmM3MjRmZTk3ODRjMmExZjMwZDZkMWRjMWM0ZTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlNzY2MDQwMWFmMDcyZjExOGM1MjVjZTM4YTQzMzMzZmY5YmNiM2I0MWMyZGM1NjBjMDNhNzlkYzlmZjQ3ODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.5.0",
-    "at": "2026-09-05T08:40:09.738Z"
+    "at": "2026-09-06T04:14:39.619Z"
   }
 }

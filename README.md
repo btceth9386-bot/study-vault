@@ -197,6 +197,16 @@ OpenWiki provides a derived, interlinked orientation layer over approved
 canonical files or the draft-then-promote workflow. Scope and exclusions live in
 `openwiki/INSTRUCTIONS.md` and `.openwikiignore`.
 
+Published knowledge map:
+
+- Language chooser: https://study-vault-knowledge-map.pages.dev/
+- English: https://study-vault-knowledge-map.pages.dev/en/
+- Traditional Chinese: https://study-vault-knowledge-map.pages.dev/zh-TW/
+
+The static export includes the interactive node graph, Markdown reader, and
+Mermaid diagrams. The viewer loads its rendering libraries from jsDelivr, so it
+requires internet access even after the site files have loaded.
+
 Requires Node.js 22+ and an OpenWiki-supported model credential such as
 `OPENAI_API_KEY`.
 

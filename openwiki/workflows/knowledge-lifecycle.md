@@ -3,9 +3,6 @@ type: workflow guide
 title: From Source to Learning Path
 description: Follow a learning source from normalized intake through AI-generated candidates, explicit human approval, promoted concepts, curated topics, hands-on labs, and retention review. Explains which steps are automated, which remain human decisions, and where the workflow can fail.
 tags: [knowledge-lifecycle, ingestion, review, promotion, learning-paths, retention]
-verified:
-  - by: openwiki/0.5.0
-    at: 2026-09-05T08:40:09.738Z
 sources:
   - id: openwiki-source-f9b2008adaa27f5fb04c4630
     resource: repo://_scripts/index_generator.py
@@ -19,6 +16,8 @@ sources:
     resource: repo://_scripts/pipeline.yml
   - id: openwiki-source-32a1d13df1c56d7f9f8c7941
     resource: repo://_scripts/prompts/guide.md
+  - id: openwiki-source-e11325fe5026a3874a69376f
+    resource: repo://_scripts/prompts/lab-design.md
   - id: openwiki-source-92eab7e5213be05201442af4
     resource: repo://_scripts/prompts/lab-review.md
   - id: openwiki-source-15abb03857bbe9acd0500e5e
@@ -29,120 +28,117 @@ sources:
     resource: repo://_scripts/prompts/weekly-refine.md
   - id: openwiki-source-004d9187ea3e47bcef87eaa0
     resource: repo://_scripts/tests/test_e2e_flow.py
-generated: { by: "openwiki/0.5.0", at: "2026-09-05T08:40:09.738Z" }
+  - id: openwiki-source-48472eed2b7d05affcbff47f
+    resource: repo://labs/kiro-langfuse-eval/manifest.yaml
+  - id: openwiki-source-c2819cde93975d4de977b166
+    resource: repo://labs/README.md
+generated: { by: "openwiki/0.5.0", at: "2026-09-06T04:14:39.619Z" }
+verified:
+  - by: openwiki/0.5.0
+    at: 2026-09-06T04:14:39.619Z
 ---
 
 # From Source to Learning Path
 
-The vault turns source material into durable learning in stages, not in one automated write. Raw material is normalized for traceability, an agent proposes candidate concepts, a person decides whether a candidate may become canonical knowledge, and only then do concept relationships, quiz material, discovery indexes, and topic curation make it easier to learn and revisit that knowledge. The key invariant is simple: **an AI-generated candidate belongs in `_drafts/`; a concept in `concepts/` requires human approval.**
+This workflow turns a normalized learning source into approved concepts, curated topic paths, practice, and review without conflating those stages. The governing boundary is **draft first, then human-approved promotion**: `_drafts/`, source material, reports, quiz state, and indexes can inform work, but only `concepts/` and `topics/` are canonical knowledge surfaces. OpenWiki is derived navigation over eligible material; it does not approve a draft or authorize a change to canonical knowledge or labs.
 
-For the authority model behind this workflow, see [Approved Knowledge and Write Boundaries](../architecture/knowledge-governance.md). For script operation and structural validation, see [Automation, Validation, and Safe Change Surfaces](../operations/automation-and-validation.md).
+For the authority model, see [Approved Knowledge and Write Boundaries](../architecture/knowledge-governance.md). For operational commands and validation details, see [Automation, Validation, and Safe Change Surfaces](../operations/automation-and-validation.md).
 
 ## Lifecycle at a glance
 
 ```mermaid
 flowchart TD
-    Inbox["Raw material in _inbox"] --> Ingest["Manual source-specific ingestion"]
-    Ingest --> Source["Normalized source in sources"]
-    Source --> DraftAgent["AI draft creation"]
-    DraftAgent --> Drafts["Candidate concepts in _drafts"]
+    Intake["Raw source material"] --> Normalize["Source-specific ingestion"]
+    Normalize --> Source["Normalized source asset"]
+    Source --> Drafting["New-source agent"]
+    Drafting --> Drafts["_drafts candidate concepts"]
     Drafts --> Review["Review against source"]
     Review --> Decision{"Human approval"}
     Decision -->|"revise or reject"| Drafts
-    Decision -->|"approve one draft"| Promote["Promotion workflow"]
-    Promote --> Concepts["Approved concepts"]
-    Promote --> Relations["Backlinks, quiz entries, indexes"]
-    Concepts --> Topics["Curate or update topic path"]
-    Topics --> TopicIndex["Topics discovery index"]
-    Concepts --> Lab["Optional manual lab"]
-    Lab --> LabReview["Learner attempt and feedback"]
+    Decision -->|"approve selected draft"| Promote["Promotion agent"]
+    Promote --> Concepts["concepts canonical knowledge"]
+    Promote --> Quiz["Quiz entries"]
+    Promote --> Indexes["_index discovery output"]
+    Concepts --> Topics["topics curated paths"]
+    Topics --> Indexes
+    Concepts --> Lab["Explicit lab step"]
+    Lab --> External["External lab workspace"]
+    External --> LabReview["Learner attempt and feedback"]
+    LabReview --> Quiz
     LabReview --> Concepts
-    Concepts --> Retention["Quiz sessions and weekly refinement"]
+    Concepts --> Retention["Quiz and refinement signals"]
     Retention --> Review
 ```
 
-*The path separates candidate creation from human-approved promotion, then connects approved knowledge to curriculum, practice, and recurring review.*
+*The lifecycle separates source-derived candidates from human-authorized canonical content; practice and retention can feed review but cannot become a promotion route.*
 
-## 1. Ingest: normalize the source before asking for concepts
+## 1. Normalize and draft a reviewable candidate
 
-Start with raw material in `_inbox/` and run the appropriate source-specific script. The workflow guide supplies entrypoints for video, PDF, repository, article, podcast, and EPUB inputs; an ingester places normalized material under a typed `sources/` directory. For example, PDF ingestion validates the file and requested destination type, requires `pdftotext` or `marker`, rejects empty conversion output, derives a slug, writes `meta.yaml` and notes, and splits content over 1 MiB into note parts. Resolve these failures before drafting: a successful agent run cannot compensate for missing or unusable source text.
+Begin with the source-specific ingestion command appropriate to the material. The guide provides commands for video, PDF, repository via DeepWiki, web article, podcast, and EPUB inputs. The resulting source asset is organized under `sources/<type>/<slug>/`; `new-source.md` calls for `meta.yaml`, `notes.md`, and `highlights.md`, with highlights retaining a source location when available.
 
 ```bash
 ./_scripts/ingest-pdf.sh /path/to/document.pdf papers
 ```
 
-The source-processing prompt then turns normalized material into a reviewable source asset. It requires a `sources/<type>/<slug>/` directory with `meta.yaml`, `notes.md`, and `highlights.md`; highlights retain a timestamp, page, line, section, or paragraph reference so a reviewer can return to the source. Before proposing concepts, the agent reads existing concepts, existing drafts, and the concept index. That comparison is intended to avoid duplicate candidates and to mark a likely overlap as `merge_candidate` rather than silently creating another concept.
+The new-source role reads the material as well as existing `concepts/`, `_drafts/`, and the concept index before it proposes one to ten independently reviewable drafts. A candidate contains its id, source, status, and a definition, rationale, and relationship discussion. A likely duplicate or substantial overlap is marked `merge_candidate` rather than silently asserted as a separate concept.
 
-## 2. Draft: AI may propose knowledge, but it may not publish it
+This is a write boundary, not an authority decision. `new-source.md` allows writes to the normalized source, `_drafts/`, and `_index/concepts.md`, but prohibits writes to `concepts/` and quiz creation. Thus neither a source reference nor a draft index listing means that the proposed knowledge is approved.
 
-The draft agent selects durable, independently reviewable ideas rather than summarizing every passage. It writes between one and ten candidate files to `_drafts/<concept-id>.md`, each with identity, title, source reference, draft status, creation date, and a short definition, rationale, and relationship discussion. It also adds draft entries to `_index/concepts.md` and records the new or related identifiers in the source metadata.
+## 2. Review, explicitly approve, then promote one draft
 
-This is a deliberately constrained write boundary. The new-source prompt permits writes to `sources/`, `_drafts/`, and the draft index, but expressly forbids creating, changing, or deleting `concepts/` and forbids quiz creation. An index may display a draft, and a source may list it as related, but neither makes it approved knowledge.
+Review checks the candidate's definition, significance, and relationships against the source and reports `APPROVE`, `REVISE`, or `REJECT`. That verdict is advice: a person must inspect it and the resulting diff, resolve any `merge_candidate`, and explicitly authorize promotion of the particular draft. A rejected or revision-needed draft leaves canonical knowledge unchanged.
 
-## 3. Review and approval: preserve the human decision point
-
-Review checks each candidate against the original source: its one-sentence definition, why it matters, relationships, factual errors, omissions, and misleading simplifications. The configured review instruction produces an `APPROVE`, `REVISE`, or `REJECT` assessment; revisions can be corrected manually or by a subsequent agent pass. **Only a person should decide that a particular reviewed draft is approved for promotion.** Rejection or revision leaves the canonical concept layer unchanged.
-
-The default pipeline can dispatch review and promotion consecutively, but that convenience is not authorization. `pipeline.py` only interpolates a role prompt, launches the configured command in `kb_root`, and interprets the agent process exit status. It neither records a human approval nor verifies that resulting files respect prompt-level write restrictions. In particular, the bundled commands use permission-bypassing flags. Run review as a separate step, inspect its verdict and resulting diff, make the human approval explicit, and then dispatch promotion for the selected draft.
+The configured full dispatcher does not provide this approval. It runs `ingest`, `review`, `promote`, and `topics` consecutively, so use separate review and promotion invocations when preserving the approval boundary matters:
 
 ```bash
 .venv/bin/python3 _scripts/pipeline.py --step review
 .venv/bin/python3 _scripts/pipeline.py sources/papers/my-paper --step promote
 ```
 
-## 4. Promote: make one approved candidate canonical and connected
+The promotion contract is deliberately narrower than the bundled pipeline prompt: it accepts a user-approved, selected `_drafts/<concept>.md` and must not sweep unrelated drafts. For a `merge_candidate`, it conservatively updates the existing concept and adds the new source unless the user explicitly requests a separate concept.
 
-Promotion is a per-draft operation, not a reason to sweep every file in `_drafts/`. The promotion prompt reads the selected candidate, its source, current concepts, quiz bank, and indexes. It either creates `concepts/<category>/<concept-id>.md` or resolves an explicit `merge_candidate`; absent a user instruction to create a separate duplicate, its conservative default is to update the existing concept and add the source.
+On first promotion, the prompt defaults to `depth: 2`, `lab_status: not-started`, and `review_due` three days later. It requires a plain-language explanation, at least one concrete example, valid related-concept references and reciprocal backlinks. It adds at least two quiz entries, normally three, and moves the entry from Draft to Active in discovery output. The selected draft is removed only after the formal concept, quiz entries, indexes, and required backlinks are complete; otherwise it remains in `_drafts/` with the blocker reported.
 
-A newly promoted concept has a stable id, source list, related ids, tags, depth, review date, and hands-on `lab_status`. The prompt defaults first promotion to `depth: 2`, `lab_status: not-started`, and `review_due` three days after promotion. It also requires a plain-language explanation and at least one concrete example. Each related concept must gain the reciprocal frontmatter/body link, so the approved concept graph remains navigable in both directions.
+## 3. Curate canonical paths; regenerate discovery output
 
-Promotion also turns the concept into learning material: it adds at least two quiz entries (normally three) with answers, explanations, and initial spaced-repetition fields, moves the concept from Draft to Active in the concept index, updates tags and applicable topic navigation, and then removes the selected draft. Draft deletion is intentionally last: if the formal concept, quiz entries, indexes, or necessary backlinks cannot be completed, the candidate must remain in `_drafts/` and the blocker should be reported.
+`topics/` represents curated learning paths: prerequisites and an intended study order over approved concepts. The topics role may update a path that fits recently promoted concepts and creates a new path only when no existing path covers the domain. It updates `_index/topics.md` as a consequence.
 
-## 5. Curate topics and regenerate discovery surfaces
+`_index/` is discovery output, never an approval or authoring surface. The index generator scans `concepts/` as active and `_drafts/` as draft, scans `topics/`, and groups tags from both concepts and drafts. Its generators overwrite their targets. Regenerate and inspect affected indexes after changing a concept or topic; do not hand-edit an index as a substitute for changing its canonical input, and never infer approval merely from index visibility.
 
-A topic is not merely a tag. `topics/` holds curated learning paths that link approved concepts in a recommended study order and include prerequisites. After promotion, the topics role examines recently promoted concepts from the source, updates a path where the concepts fit, and creates a new topic only when no existing path covers the domain. It then updates `_index/topics.md`.
+## 4. Practice is an explicit external-lab branch
 
-Treat `_index/` as regenerated discovery output rather than the source of truth. `index_generator.py` scans `concepts/` as active and `_drafts/` as draft, scans `topics/` for topic entries, and groups tags from both concepts and drafts; every generator overwrites its target. Regenerate all affected indexes after a canonical or topic change. Because indexes intentionally include drafts and tolerate sparse metadata, index visibility must never be read as evidence of approval.
+`lab` is available only as an explicit dispatcher step, not in the default source pipeline. It accepts a concept, several concepts, or a concrete integration request. The lab-design contract resolves matching canonical concepts and uses `depth` and `lab_status` to tune a fading scaffold, not as a mastery gate: the learner only needs to recognize the main term and state its problem or expected input/output. A missing minimum triggers a short primer and a more guided lab rather than blocking practice.
 
-## 6. Learn by building, then feed feedback into retention
+A complete runnable lab lives outside this repository at `~/orb_pods_share/<lab-id>/`. The designer creates its source `spec.md`, then restructures it into `spec.diataxis.md`, builds the review HTML, and only then deploys the public review page. The repository retains a recovery capsule at `labs/<lab-id>/` containing `manifest.yaml` and the canonical `spec.md`; its manifest links concepts, external workspace, review URLs, regeneration artifacts, and a SHA-256 for the spec. Recovery targets equivalent learning behavior and acceptance criteria, not byte-for-byte reproduction.
 
-Labs are an optional, manual-only branch from an approved concept or a concrete integration request; they are not part of the default source pipeline. The lab agent can create a fading-scaffold exercise under `labs/<lab-id>/` and a sanitized review site, but the learner manually reviews the exercise, records predictions before execution, fills the stubbed core, and compares the work with the expected result. Sensitive predictions, answer keys, completed cores, credentials, and generated review artifacts must not be published.
+The external boundary protects learner and generated artifacts. Runnable scaffolds, fixtures, predictions, private expected answers, completed cores, generated HTML, output, and secrets belong in the external workspace, not the repository or public page. A real-tool lab states credential, account, cost, and infrastructure prerequisites without embedding secrets and supplies a mock fallback when it preserves the learning goal. A deployment failure retains the local HTML and records the blocker and retry commands rather than inventing a URL.
 
-The separate lab-review workflow starts only after a learner attempt. It stops on blank predictions or an unfilled core, provides feedback rather than replacing the learner's work, adds next-day application cards for demonstrated gaps, and can advance each included concept's `lab_status` to `completed` or `explained`. A strong explain-back may justify raising `depth`; a struggling attempt calls for more scaffold or a smaller lab. The [Hands-On Lab Catalog](../labs/catalog.md) lists the available canonical lab entrypoints and their operational constraints.
+## 5. Attempt first; review feeds retention
 
-Quiz sessions and weekly refinement close the loop. The refinement prompt reads concepts, drafts, sources, topics, quiz data, and indexes, identifies overdue concepts, stale drafts, contradictions, questions, and potential missing concepts, and writes a dated report plus a refine log. It may update quiz scheduling and regenerate indexes, but it may not edit concepts or directly promote drafts; any canonical correction remains a recommendation for human review. This makes retention signals and maintenance reports inputs to the next review decision, not an alternate promotion route.
+The learner must fill `predictions.md` before running and implement the `TODO: YOUR CORE` portion before asking for review. `lab-review.md` stops on blank predictions or an unfilled core. It reviews and corrects the existing attempt rather than replacing it; wrong or weak predictions receive questions before an answer is disclosed when possible, while core errors receive a minimal corrective explanation.
 
-## Automated versus manual responsibilities
+For every observed prediction or core gap, lab review adds an `application` question to `quiz/bank.json` with `next_review` set to tomorrow. A completely correct attempt needs no new cards. After prediction review and a correctly filled core, the included concepts become `completed`; a sound layperson explain-back permits `explained` and may justify raising `depth` to 3. The next lab should reduce scaffolding after a strong attempt, or retain more scaffold or use the lighter fallback after a struggle.
 
-| Activity | Primary mechanism | Automation boundary | Human responsibility |
-| --- | --- | --- | --- |
-| Intake and normalization | Source-specific ingest scripts | Converts and stores source artifacts; external-tool failures stop this stage. | Choose source, run the applicable script, resolve conversion/dependency failures. |
-| Candidate creation | `new-source.md` through the ingest role | Produces source assets and `_drafts/` candidates only. | Inspect candidate quality and duplicates. |
-| Accuracy review | Review role/prompt | Produces a proposed `APPROVE`, `REVISE`, or `REJECT` verdict. | Verify against the source and explicitly approve or withhold promotion. |
-| Canonical promotion | `promote-concept.md` | Writes the selected concept and connected learning records; retains draft on incomplete outputs. | Select the approved draft and resolve merge intent. |
-| Curriculum curation | Topics role plus `topics/` | Suggests/updates paths and indexes. | Decide whether the sequence and prerequisites teach the intended path. |
-| Practice and feedback | Explicit `--step lab` and lab review | Generates a scaffold; review can add targeted cards and update included learning status. | Attempt the exercise first, keep private artifacts private, judge readiness. |
-| Maintenance | `weekly-refine.md` | Reports issues, adjusts quiz state, and regenerates indexes. | Review proposed canonical changes; never treat maintenance as promotion. |
+These status and quiz updates are learning feedback, not evidence for new canonical knowledge. They do not authorize changes to unrelated concepts, sources, drafts, topics, or labs.
 
-## Operating the dispatcher safely
+## 6. Retention and maintenance return questions to review
 
-The default full run is `ingest → review → promote → topics`; it excludes quiz sessions, labs, and weekly refinement. The runner obtains each role's first matching agent and prompt from `pipeline.yml`, expands environment references in configuration strings, substitutes `{source_dir}` and `{kb_root}`, and stops the sequence on a missing agent/prompt or nonzero process exit. `--dry-run` prints the chosen dispatch without executing it. `max_concurrent` appears in the bundled configuration but the runner does not enforce it.
+Quiz sessions supply spaced-repetition practice. Weekly refinement reads concepts, drafts, sources, topics, quiz data, and indexes; it identifies overdue concepts, stale drafts, contradictions, questions, and possible missing concepts. Its permitted writes are a dated report in `_inbox/`, `quiz/bank.json`, the three discovery indexes, and an appended `_index/refine-log.md` entry. It may reschedule questions only for actual answer results and must preserve their history.
+
+Refinement cannot create, modify, move, delete, or directly promote a concept. A correction, merge, split, or missing concept is a concrete recommendation in the report for later human review. Treat the report, raw material, drafts, and quiz state as signals—not as approved knowledge and not as evidence for OpenWiki. During the pilot, OpenWiki updates remain manual; there is no scheduled OpenWiki workflow.
+
+## Dispatcher and validation limits
+
+`pipeline.py` expands environment references in YAML strings, chooses the first configured agent for a role, substitutes `{source_dir}` and `{kb_root}` in its prompt, and executes the configured command through a shell in `kb_root`. It stops the sequence on absent configuration or a nonzero process exit. `--dry-run` prints the selected dispatch without execution, and `--config` permits a controlled configuration. `max_concurrent` is declared in the bundled configuration but is not enforced by the runner.
 
 ```bash
-# Inspect the configured normal sequence before execution.
 .venv/bin/python3 _scripts/pipeline.py sources/papers/my-paper --dry-run
-
-# Use a controlled configuration when changing agents or prompts.
 .venv/bin/python3 _scripts/pipeline.py sources/papers/my-paper --config my-pipeline.yml
 ```
 
-`pipeline.yml` is therefore a trusted execution surface: agent commands run through a shell in `kb_root`, with configured environment overrides. Keep configuration and its environment inputs trusted, preview changes, and inspect the working-tree diff after every agent step. The strongest safety control remains the process boundary—human approval before promotion—not the dispatcher.
+Treat `pipeline.yml`, agent commands, `kb_root`, and environment input as trusted execution surfaces. The bundled commands include permission-bypassing flags; the runner has no filesystem sandbox, does not record human approval, and does not check whether an agent honored a prompt's write limits. A zero exit status means only that the invoked agent succeeded. Preview dispatches and inspect every agent diff, especially around promotion.
 
-## Checks and failure boundaries
-
-Structural validation is useful but intentionally narrow. `validate_source_meta`, `validate_concept_frontmatter`, and `validate_quiz_entry` return diagnostics for unreadable or malformed inputs and missing required fields. They do not validate types, dates, allowed values, unique ids, cross-record links, or factual correctness. Use them as a fast gate alongside source review and relationship inspection.
-
-Focused regression tests make the boundaries executable:
+The metadata helpers are also narrow safeguards. `validate_source_meta`, `validate_concept_frontmatter`, and `validate_quiz_entry` report unreadable/malformed inputs and missing required fields, but do not validate types, dates, allowed values, unique ids, cross-record links, or factual correctness. Use them with source review and relationship inspection, not instead of them.
 
 ```bash
 .venv/bin/python3 -m pytest _scripts/tests/test_metadata_validator.py -v
@@ -150,16 +146,14 @@ Focused regression tests make the boundaries executable:
 .venv/bin/python3 -m pytest _scripts/tests/test_e2e_flow.py -v
 ```
 
-The end-to-end test initializes a temporary vault, uses a mocked PDF converter to exercise ingestion, validates normalized source metadata, supplies a promoted concept and quiz bank fixture, and verifies quiz-session scheduling updates. It checks compatibility across those persisted states, but does **not** run AI drafting/review/promotion or demonstrate that agents obey prompt restrictions. There is likewise no direct test of `pipeline.py`; use `--dry-run` and a safe custom configuration when changing dispatch behavior.
+The end-to-end test initializes a temporary vault, mocks PDF conversion, validates source metadata, supplies promoted-concept and quiz fixtures, and verifies quiz-session scheduling updates. It checks persisted-state compatibility but does not run AI drafting, review, promotion, labs, or the pipeline dispatcher. There is no direct `pipeline.py` test, so use `--dry-run` and a safe custom configuration when changing dispatch behavior.
 
 ## Completion checklist
 
-Before calling a source complete, confirm:
-
-1. The normalized source has traceable metadata and notes/highlights, and ingestion failures were resolved.
-2. Candidate concepts exist only in `_drafts/` until a person has reviewed and approved each one.
-3. Any `merge_candidate` has an explicit human resolution.
-4. Promotion completed its concept, reciprocal relationship, quiz, and index work before draft removal.
-5. Topic changes describe a real learning order over approved concepts, not a path assembled from draft visibility.
-6. Generated indexes were regenerated and inspected rather than hand-edited as canonical records.
-7. Labs and weekly refinement have not bypassed approval, exposed private learner material, or silently rewritten canonical concepts.
+1. Normalize the source and retain enough location information to review it.
+2. Keep all candidates in `_drafts/` until a person has reviewed, approved, and resolved merge intent for the selected draft.
+3. Verify that promotion completed the concept, reciprocal relationships, quiz entries, and discovery updates before draft removal.
+4. Curate `topics/` from approved concepts only, then regenerate `_index/` as derived discovery output.
+5. Keep runnable labs and all learner/private/generated artifacts in their external workspace; retain only the recovery capsule in `labs/`.
+6. Ensure a learner attempted predictions and the core before lab review, and treat resulting cards/statuses as retention feedback rather than canonical authority.
+7. Treat refinement reports, raw sources, drafts, quiz state, and OpenWiki navigation as non-authoritative workflow artifacts. Review diffs and keep OpenWiki updates manual during the pilot.
