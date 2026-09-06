@@ -16,8 +16,11 @@
 Ingest the repo https://deepwiki.com/<owner>/<repo> following _scripts/prompts/guide.md.
 Run step 1 (ingest-deepwiki.sh), then run the source pipeline
 (_scripts/pipeline.py): extract drafts, independently verify them, auto-promote
-only verified drafts, and update topics. Leave needs-decision/rejected drafts
-for the report. Do NOT run quiz / labs / weekly-refine / OpenWiki refresh.
+only verified drafts, and update topics. Retain needs-decision/rejected drafts
+in _drafts; report their paths and evidence, and ask only the needs-decision
+questions. Do not ask me to fact-check verified drafts. Do NOT run quiz / labs /
+weekly-refine / OpenWiki refresh inside the source pipeline; tell me whether
+canonical changes require one manual OpenWiki refresh.
 Write all output in English.
 ```
 
@@ -33,21 +36,24 @@ Write all output in English.
 Ingest these YouTube episodes for English learning, following _scripts/prompts/guide.md.
 Run step 1 (ingest-youtube.sh) per video, then the source pipeline
 (_scripts/pipeline.py): extract drafts, independently verify them, auto-promote
-only verified drafts, and update topics. Leave needs-decision/rejected drafts
-for the report. Do NOT run quiz / labs / weekly-refine / OpenWiki refresh.
+only verified drafts, and update topics. Retain needs-decision/rejected drafts
+in _drafts; report their paths and evidence, and ask only the needs-decision
+questions. Do not ask me to fact-check verified drafts. Do NOT run quiz / labs /
+weekly-refine / OpenWiki refresh inside the source pipeline; tell me whether
+canonical changes require one manual OpenWiki refresh.
 Output in English:
 https://www.youtube.com/watch?v=<id1>
 https://www.youtube.com/watch?v=<id2>
 ```
 
-*(agent runs: `./_scripts/ingest-youtube.sh <url>` for each, then `.venv/bin/python3 _scripts/pipeline.py sources/videos/<slug>`. For many episodes the agent may background it with `nohup codex exec … &`.)*
+*(agent runs: `./_scripts/ingest-youtube.sh <url>` for each, then `.venv/bin/python3 _scripts/pipeline.py sources/videos/<slug>` for each source-scoped batch.)*
 
 > Video sources land in `sources/videos/<auto-slug>/`. To re-run one step:
 > "re-run the topics step for sources/videos/<slug>" → *(agent runs: `pipeline.py sources/videos/<slug> --step topics`)*
 
 ---
 
-## 2. Review & Quiz a Topic
+## 2. Study Review & Quiz a Topic
 
 Two modes, matched to your learning phase (see `_inbox/learning-method-upgrade.md`).
 Self-check: "Without notes, can I explain this topic?" No → Phase A. Yes → Phase B.
@@ -158,9 +164,30 @@ Use when the full predict → fill-core → review loop feels too heavy for a co
 
 ```
 Read _scripts/prompts/weekly-refine.md then execute.
+Route concept corrections and new-concept suggestions to independent evidence
+verification. Ask me only about needs-decision items, not factual approval.
 ```
 
-The agent generates a refine report in `_inbox/`, flags stale concepts/expired drafts, and updates `quiz/bank.json` + `_index/`.
+The agent generates a refine report in `_inbox/`, flags stale concepts/expired drafts, updates `quiz/bank.json` + `_index/`, and prepares a follow-up verification pack. It cannot modify or promote concepts.
+
+---
+
+## 6. Refresh & Publish OpenWiki
+
+Run this only after a canonical batch is committed and changes `concepts/`,
+`topics/`, lab recovery capsules, or workflow behavior. OpenWiki is a manual
+derived view, not part of the source pipeline and not a source of truth.
+
+**Say in Discord:**
+
+```
+I authorize sending repository text not excluded by .openwikiignore to OpenAI
+for this OpenWiki refresh. Read openwiki/INSTRUCTIONS.md, update the English
+generate zh-TW from the same commit in a temporary clean copy, validate both
+outputs, and republish them under /en/ and /zh-TW/ in the existing Cloudflare
+Pages project study-vault-knowledge-map. Do not create a schedule. Do not commit
+the temporary zh-TW evidence copy; commit the canonical English OpenWiki update.
+```
 
 ---
 
@@ -176,5 +203,5 @@ The agent generates a refine report in `_inbox/`, flags stale concepts/expired d
 | Quick hands-on, no grading | "make a tiny lab for `<concept>`" |
 | Daily spaced repetition | "quiz me on due cards" |
 | Weekly cleanup | "run weekly-refine" |
-| Refresh knowledge map | "review canonical changes, then manually update and republish OpenWiki" |
+| Refresh knowledge map | Use the explicit authorization prompt in section 6; publish `/en/` + `/zh-TW/` once per canonical batch |
 | Commit & push results | "commit and push with message `<msg>`" |

@@ -159,8 +159,8 @@ Instead of running steps 2-5 manually, use the pipeline script. The source pipel
 # Resolve an exception explicitly, then promote that one draft:
 .venv/bin/python3 _scripts/pipeline.py _drafts/<concept-id>.md --step promote
 
-# Refresh OpenWiki once after the canonical batch is reviewed:
-OPENWIKI_TELEMETRY_DISABLED=1 npx --yes openwiki@0.5.0 code --update --print --language en
+# After committing a canonical batch, use usage.md section 6 for the explicit
+# data authorization, bilingual OpenWiki refresh, validation, and publication.
 
 # Single step:
 .venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo> --step ingest
