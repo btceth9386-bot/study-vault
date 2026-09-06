@@ -1,44 +1,44 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:7c2eea0525446c78487d5b6a69dfcbbb0df93f7a1944404b98d22182de1a9d71",
+  "pageVersion": "sha256:5cf4bee1c33f8e5400168b6f72250439d7e12f7f0566e7fd1aef7f044e9fded3",
   "claims": [
     {
       "id": "claim_370d104b038f45feafcb59c256216add",
-      "statement": "The knowledge lifecycle separates raw intake, normalized sources, AI-generated `_drafts/`, human approval, and canonical `concepts/`; the new-source process is prohibited from modifying `concepts/` and candidate knowledge must remain in `_drafts/` until promotion.",
+      "statement": "The lifecycle separates raw intake, normalized sources, AI-generated `_drafts/`, review verdicts, and canonical `concepts/`; the new-source process is prohibited from modifying `concepts/`, and candidates remain pending in `_drafts/` until review and promotion.",
       "evidence": [
         {
-          "resource": "repo://_scripts/prompts/guide.md#L155-L157",
-          "version": "repo-lines-v1:sha256:45e7c1aaf62c79ea99cefa7fb2949a66f16e631688309a9035433b61a3f6d5bf:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDc4NTg3YzYxM2Y5MTM3NzVjMGZmNWNjNWQ0ZTU3YjQ3YTE2YWQyNTZlMzAyYWJlYTE2OGVlYjRiN2Y1MWYyMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjFkNmZkNjE4NzZlNGRlZjZlMDcwZDBkNjliM2NhNjMzM2Q2MTJmMDU3YjM4OTM3NTkyZWY0ZmM3ZDM3MWE4YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2IyY2I1ZWI0ODEwNmY1N2UzMTZiM2FiODgzMzdiZjcyNmM5MmQ1ZjI5ODZiNjdjYzEzNGQ4MmY1NjY0OGYyMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjAxOGYzMzIyOGI0ZDZiMzRhNDYzM2NiYTA1ZTdjYzA1YmYyNmRkYWFjNjdjM2Q1NDQ0OTI5M2MwMGQ4OTZlYiJ9"
+          "resource": "repo://_scripts/prompts/guide.md#L35-L53",
+          "version": "repo-lines-v1:sha256:db72a0400fdefaecb95a091ba4007563206f1db9e15026e334538b3b8467a505:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3ODg5NjUwMGM1YWMyYjc4YTJhNzQ4MGM0ZDI5YmExMzc1OTNmMDI2MDgxNGVmMmRjZDllOWM1Y2M2MmI4MTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2MjQwM2FhNTc5YjcwN2IxNjZkNjEyMDFiZGJjNGRjMmY0NjQzNjRmMzA2MzUzODFkOTcxYThkOWEyNWI1MmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0YTJlMTI4MjQwNWViZDBhODZkYTUxZTUwODAzYWRmZjBkM2YyYWVmODlmN2JlZjE4N2M4ODRmMjhlMDk4ZmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdjM2M3ZGUwYzI2ZmYxZmFjNzRjN2FjNzNhZmMwZTgxNDFjZWE5ZTRkNGM1NzVjNjUzZGQwNzMxODg4NDgwMmMifQ"
         },
         {
-          "resource": "repo://_scripts/prompts/guide.md#L35-L53",
-          "version": "repo-lines-v1:sha256:db72a0400fdefaecb95a091ba4007563206f1db9e15026e334538b3b8467a505:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3ODg5NjUwMGM1YWMyYjc4YTJhNzQ4MGM0ZDI5YmExMzc1OTNmMDI2MDgxNGVmMmRjZDllOWM1Y2M2MmI4MTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2MjQwM2FhNTc5YjcwN2IxNjZkNjEyMDFiZGJjNGRjMmY0NjQzNjRmMzA2MzUzODFkOTcxYThkOWEyNWI1MmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0YTJlMTI4MjQwNWViZDBhODZkYTUxZTUwODAzYWRmZjBkM2YyYWVmODlmN2JlZjE4N2M4ODRmMjhlMDk4ZmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZlZTg5NWI2ZWI2Yjk2YTY1ZTIyMTk1MDJhYmNiMDNhOWJkMzJkYjBjMTk1MTAyZjRmMTlmNjNlMzhiNTYyNDQifQ"
+          "resource": "repo://_scripts/prompts/new-source.md#L119-L143",
+          "version": "repo-lines-v1:sha256:5899d991a1821fdd26b75753124435775e4cabae20e479db61c9a5e1ceda18d0:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdkZjdkOGE2OGYwOGIyMGU5NjViNjMyNTBjZDM1OTU2NTdjOGZmM2Q3ZTIyMDRlOGExMWZjNDIxNjlmMzFlYmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkZTVjNTg0MTRjNDdmNTliYzkzYTU0YTg2Nzg3NzJiMjVlYzZkNzk1NWM2MmZjMDAwZTFhZDQ3OTg0MGYyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExZTc5ZTQzY2JhZmI4NzQ5ZDg1NmMwYzI5ZWFmZWRiMTZkYWI2MWM0MzAyYjNmZTFlMTQwNTFmNDJkMjI0Y2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI1ZDA5Njk5MDc3NzJmZjM3MWJlMGUxZGZkYzlmYjc0NGM3NzA3MTcyM2UxMmY0MWNlNThmYTQwYmU1NjI2OTUifQ"
         },
         {
           "resource": "repo://_scripts/prompts/new-source.md#L7-L15",
-          "version": "repo-lines-v1:sha256:8209c07108d6d5a3b2ebb629ae43c7711d7df80afaeeec46465034f2c95f6604:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmFjMTE3YzVjZmM0OTJmNjhmMDYyNTNkYmYxZmRlZDZhMGFjZTZlNThjOGI0MWYxYjRlYzI1MDIyMWM0ZTdlZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjE3YWZiNGEyMzJlNTEyOTAxYjRhMDg0MDlhNTFkODVmNDJiNzBhNzU5ZGE4ZTg0NTgwNWNmMjdiMjM3YzllYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTM2NWQ4MzgzMzI3N2U0ZWFiNzE3NjQ2MWJmNmU2YzRmNTZjYzM0YmU4NjZlYzI3N2FjMTU5NTJiZDVkYTgxMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjE2ZjY5ZjczZDM5MTJkNDQ4MDc5YTU2YzFlMjM3MjQwY2VkYjkxODMxODMwZmZkNjhhNmU4NzBjZjEzMWMwYyJ9"
+          "version": "repo-lines-v1:sha256:5022604b6c569540bcd6584c754ac4ade6ced09fd8a962f6bfc035f31a3b219d:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmFjMTE3YzVjZmM0OTJmNjhmMDYyNTNkYmYxZmRlZDZhMGFjZTZlNThjOGI0MWYxYjRlYzI1MDIyMWM0ZTdlZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjE3YWZiNGEyMzJlNTEyOTAxYjRhMDg0MDlhNTFkODVmNDJiNzBhNzU5ZGE4ZTg0NTgwNWNmMjdiMjM3YzllYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDM1NDMxYTA2MmU1NTNiZmYyYThmNTNmMzQ1NzM2YTc2NzdjNDkzNDQxOWYzYmZhZDFlNDE5NzMzNmI5YWM0OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjE2ZjY5ZjczZDM5MTJkNDQ4MDc5YTU2YzFlMjM3MjQwY2VkYjkxODMxODMwZmZkNjhhNmU4NzBjZjEzMWMwYyJ9"
         }
       ]
     },
     {
       "id": "claim_56adbc63e6744dda8eeed4c381487b9f",
-      "statement": "The new-source workflow creates typed source directories with `meta.yaml`, `notes.md`, and `highlights.md`, creates one to ten reviewable draft concepts, checks existing concepts and drafts for duplication, and records likely canonical overlap as an optional `merge_candidate`.",
+      "statement": "The new-source workflow preserves or completes a typed source directory with `meta.yaml`, `notes.md`, and `highlights.md`; it creates one to ten reviewable draft concepts, checks existing concepts and drafts for duplication, and records likely canonical overlap as an optional `merge_candidate`.",
       "evidence": [
         {
-          "resource": "repo://_scripts/prompts/new-source.md#L119-L162",
-          "version": "repo-lines-v1:sha256:ea0690e1c4ef0f88f17da2249f013e0edea3621204ce20f634683a42bd08b161:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdkZjdkOGE2OGYwOGIyMGU5NjViNjMyNTBjZDM1OTU2NTdjOGZmM2Q3ZTIyMDRlOGExMWZjNDIxNjlmMzFlYmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzYWYyYTI1ZmJkYjc0MzA4MjI2NTQwOTQ0ZjFkMjcyNzQxMTQ0MzgwM2U0NWFkMWNlMDQ5ZDA1ZGVhZGY2NjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExZTc5ZTQzY2JhZmI4NzQ5ZDg1NmMwYzI5ZWFmZWRiMTZkYWI2MWM0MzAyYjNmZTFlMTQwNTFmNDJkMjI0Y2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZmNmJkMjEzYzY3MTkyYTNjY2RkNzU0ZWM2YzM2MzI2MjRkN2MzNDQ1YjhiMWI4ZjNmZTQyOTI3ZGY1OTIwOTYifQ"
+          "resource": "repo://_scripts/prompts/new-source.md#L119-L143",
+          "version": "repo-lines-v1:sha256:5899d991a1821fdd26b75753124435775e4cabae20e479db61c9a5e1ceda18d0:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdkZjdkOGE2OGYwOGIyMGU5NjViNjMyNTBjZDM1OTU2NTdjOGZmM2Q3ZTIyMDRlOGExMWZjNDIxNjlmMzFlYmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkZTVjNTg0MTRjNDdmNTliYzkzYTU0YTg2Nzg3NzJiMjVlYzZkNzk1NWM2MmZjMDAwZTFhZDQ3OTg0MGYyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExZTc5ZTQzY2JhZmI4NzQ5ZDg1NmMwYzI5ZWFmZWRiMTZkYWI2MWM0MzAyYjNmZTFlMTQwNTFmNDJkMjI0Y2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI1ZDA5Njk5MDc3NzJmZjM3MWJlMGUxZGZkYzlmYjc0NGM3NzA3MTcyM2UxMmY0MWNlNThmYTQwYmU1NjI2OTUifQ"
         },
         {
-          "resource": "repo://_scripts/prompts/new-source.md#L164-L185",
-          "version": "repo-lines-v1:sha256:6e888000446acf8efad5eebdbc4abe9adb8a997c8a4ae4e43d982f1751dfc94b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIzMDcwOTM2NTBiYzEyNDIzY2M3ZDdmYjBkZDA5ZGMyOTY3M2M2YjZhMTI4MDZmYjEwMDM5M2Y1YTNiNDQ2MzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyZDljMzUzZWIwNWExMGUyMDMzMWFiNTUwOTc0ZDgxN2YzZTg1ZWYzZWIxMDJmMzY3OWNkYzY1YjhmNmQxYWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI4ZDRiNGRkYzVkZmRiYTJkMDQzMGFkYWNhYTE5ZjNmMTA2MWE4Mzk4MWM5Y2ExMDdmOGVlODMzZjRhZWIyZjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYxMTFkNGFiYzNhMTk0NDQ5ZWZkMzc0ZTU0MDlmMzg2NzM2YzJmZTYwNGY4MWU3MDFiYjg1MDgwYzcxOGIyMjcifQ"
+          "resource": "repo://_scripts/prompts/new-source.md#L163-L185",
+          "version": "repo-lines-v1:sha256:599c01a8a9ebf7de91f85be8d1536801171a16e727fbc4afb488741b254a55c1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxYTNhMTQyNjlhMDY0NDI5OTM2ZDBiZmQxMTliZGJkNjNiZTlkMzczY2NhOWZkN2IzMmU0YjRmMzdmYTY3YTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZmNmJkMjEzYzY3MTkyYTNjY2RkNzU0ZWM2YzM2MzI2MjRkN2MzNDQ1YjhiMWI4ZjNmZTQyOTI3ZGY1OTIwOTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU4MmJkYmFkNDYyZTUzNWExYTMwNzNkOGEzYzhkNWIyMjk2ZmI5MjZiMjAxMjU4YjZiY2E1MWIxZGMwMTkyYWUifQ"
         },
         {
           "resource": "repo://_scripts/prompts/new-source.md#L38-L44",
-          "version": "repo-lines-v1:sha256:e512a28ae1d5ca3f1b9fd656a335da3eba9738ff4c0b8dab769dc3b6c1f1383d:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzVjMjFiMzY2MTYzMTE1YWMyNzAxMGMwY2U0YWY5Yzc3YjQyOGRjZGY0Zjc2MDZkMzdkMzM2YWE2ZTA0NzIyZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ3YTNiMWM4ODQxYmNmNmI1MTVhMTYxMjE2ODZhNDkzZjJmOWQ4Y2Y4ZGI3ZWYxNWZjOGM2YTllYWM0YWE4MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzhjMGM4OWU0NTIyYjViNGZjOGMyMWRiNGNiMmM2ZTkxZjVkNTQxYTA0YzZlZjE0ZjY4ZmFiZWQ0YjliYTNhNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzZhZTQ1MDIyYzYyZWJkMzEyNjk2ZTQyOGFmZjhhNzUzOTU2MmQwMGQzNjYxZTVjNDE2YzBlZWQ0MWQzMTMyZiJ9"
+          "version": "repo-lines-v1:sha256:fad24bc3c8fb0987d3c5d4bb9f83e1c6a9283d8730075af1cb8615a0b8ae438b:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzVjMjFiMzY2MTYzMTE1YWMyNzAxMGMwY2U0YWY5Yzc3YjQyOGRjZGY0Zjc2MDZkMzdkMzM2YWE2ZTA0NzIyZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ3YTNiMWM4ODQxYmNmNmI1MTVhMTYxMjE2ODZhNDkzZjJmOWQ4Y2Y4ZGI3ZWYxNWZjOGM2YTllYWM0YWE4MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzhjMGM4OWU0NTIyYjViNGZjOGMyMWRiNGNiMmM2ZTkxZjVkNTQxYTA0YzZlZjE0ZjY4ZmFiZWQ0YjliYTNhNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzZhZTQ1MDIyYzYyZWJkMzEyNjk2ZTQyOGFmZjhhNzUzOTU2MmQwMGQzNjYxZTVjNDE2YzBlZWQ0MWQzMTMyZiJ9"
         },
         {
-          "resource": "repo://_scripts/prompts/new-source.md#L48-L85",
-          "version": "repo-lines-v1:sha256:d1d4da7e50798ba09db13e134d27f8e6049519557842a916ede31a6f1ae5468e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2YTJiNGI2MTFjYTUwZTFkMGExMGQ5M2JhYThjYTQ5ZGZjZmU4OWE2NzU1MWYyYzM4NzM0MWI2NzgyMDk4NDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2YWU0NTAyMmM2MmViZDMxMjY5NmU0MjhhZmY4YTc1Mzk1NjJkMDBkMzY2MWU1YzQxNmMwZWVkNDFkMzEzMmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA4OWM3Zjk3MDY0YTVhZDFjYmNmZjI4NmJmOTVmNzdhZGQ0MGYxYjA4MzZkYjEyM2IxNGJiNzEzNGY2YjQ2MTAifQ"
+          "resource": "repo://_scripts/prompts/new-source.md#L48-L66",
+          "version": "repo-lines-v1:sha256:21ae9b81f83faf5c97d8d1b24f665fa58439d5f5585f025a0854a26ff89d059e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2YTJiNGI2MTFjYTUwZTFkMGExMGQ5M2JhYThjYTQ5ZGZjZmU4OWE2NzU1MWYyYzM4NzM0MWI2NzgyMDk4NDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2YWU0NTAyMmM2MmViZDMxMjY5NmU0MjhhZmY4YTc1Mzk1NjJkMDBkMzY2MWU1YzQxNmMwZWVkNDFkMzEzMmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJlNWEwYmYyN2FjOTZlOTM2Mzc3MzIyYzRiMjQ1NTMzMGNhYzIxMDAwNWU0NzI1YmI2ZTg2ZjRjMTNiYzA0YmIifQ"
         }
       ]
     },
@@ -58,73 +58,73 @@
     },
     {
       "id": "claim_2511bf9ce28b452997d4acca993395ea",
-      "statement": "Review is designed to assess draft definitions, rationale, and relationships against source material with APPROVE, REVISE, or REJECT outcomes, while the guide directs revision items to be fixed manually or by an agent; human approval remains required before promotion.",
+      "statement": "The independent reviewer scopes its work to drafts matching the supplied source, persists one of `verified`, `needs-decision`, or `rejected` with evidence and notes, and reserves learner involvement for material merge, scope, or learning-priority exceptions rather than factual approval.",
       "evidence": [
         {
-          "resource": "repo://_scripts/pipeline.yml#L58-L66",
-          "version": "repo-lines-v1:sha256:cf9dcb2905e721ce8c4e0e353393af76b4ca146c03b7db8a637c5026ff46dba9:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGVjZTU3YjU1ZTZjNDI5YjU2MTJlNWUzNmZhNDgyYzJiNTA3NTE5MWExMTJjYzkyYWZmNDkzYzM3MTFlNzVhOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjE0ZTQ0ZDUwOTcyOWZjNzdmMjE0OGRlOGQzYmRhOTg2ODdlNDRmZTg1NGUwMDY5ZDMwOGYwYjQ3YzNlY2VkMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTRmZjU2NDMzMTRlYmEyNzEzZDQ1NWFhNTdjZTVkMGYwMWY2NjA0ZTQ4NzMyMjFmYTM5NDI0YzkyMGM3MmUyZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzcyNWI5ZmJjYzM3ZTE5ZGNiYWRmYjE3NDg2Zjg5ODA1OGE0MThiYTczMzdkNGRhODJjZGJmN2Q1ZTZlZmVmNiJ9"
+          "resource": "repo://_scripts/prompts/guide.md#L55-L67",
+          "version": "repo-lines-v1:sha256:7a3d0e8d2dfce39828cbea94fba6cc00f4ea4fd1433069f6c3bd5ae200da74b4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEwMjcyYjM1OWMwMDRhZjg4MWQxYjk5OWU1MmQ4NGIyZDNjZjE1M2UwNDUwZjE0NGE2MDM3ZDQyOWZjM2JkY2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkY2NkZDEzNjBmZWY4ZmQ1MThhNzliN2E4YmFkYWRmZGY0ZDI0ZDNmOGM5MmUwYmY3YjA3MDAzYTk0ZDBhYjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM0MGQ4NGNhNjMyOWI0OTEyN2FjZDljNDYyNjE2MzQwNzVhZjVmNGE5ODg2OGEyZDZmMTdhOGQ5ODViYmM5ZTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY4ZDMwZjJkMTBiZGY0YjYwY2FhNmY2NWY4MzAyNDBkYzdmNThkNjNkNmZkZjQyMmVmMzE1OTFjOTc2NjFiNDgifQ"
         },
         {
-          "resource": "repo://_scripts/prompts/guide.md#L55-L70",
-          "version": "repo-lines-v1:sha256:a679d2b7f902bc39ab8849c7e1be6ae40982721114ea08a3fb6980e70436f76a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRjN2YxMDYwYTUyYzBiZWJjZWJhNzgzNzgzNDQ5NDZkMWE1NTUyZTg5YzJmNjQzYzMxODA0Y2IyZDI3MjcwNTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzZmQwYjM5N2IzZTIwMTJhZmFmNDRhNzVkYzdjZjBhMjQzMGZhZTZjNGJmY2ViY2MxNGVkYTFiM2NiM2M1MGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM0MGQ4NGNhNjMyOWI0OTEyN2FjZDljNDYyNjE2MzQwNzVhZjVmNGE5ODg2OGEyZDZmMTdhOGQ5ODViYmM5ZTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc4MjMxMDgwODEwN2YwMThiMmFkOTYwMGExODQxM2I2YjQ2MjVjMzkzMDMyNmY2ZjY5ODczNTBiZDA2MGUzZDcifQ"
-        },
-        {
-          "resource": "repo://_scripts/prompts/promote-concept.md#L1-L9",
-          "version": "repo-lines-v1:sha256:ae38b92e83dc50a0af7aec6099e081d91e324f47fa8f6f4d849ef41c48390f68:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzlhM2RjNmMzNTJiZTJiMjgwNTJkYTYxODdjYmEzZWY0YWYzYWUxOTI0MmNkYTFjYzljZDMzZWNlODYzZGQwMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2NhZGI5NjNmMTM3ZDRiNTg5OWU1YzcyZDhiNzAwZDI3ZThjNWY5ZDFiYzcyOWE0ZTY1YjBlMjI3N2YzZGU5ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGRhYzIzY2FiYzY2ODIyZDJmZDQ0MGVjZTc4ZGZmMGQ3YTY1ZjMyOTJhNzk1OWQ4NGVmNGQyZDgzZjljZGZhYiJ9"
+          "resource": "repo://_scripts/prompts/review-drafts.md#L3-L42",
+          "version": "repo-lines-v1:sha256:bd6e8906d0dcb8943537938519ce1dfda3f3f899ccbb65fd53bf66065b4c8577:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzOTM4MzMwNWU4NzY2OTM1MmI2YzAwMWE2NTc4Mjk1YWMwNmRiZDcyYmZhMjRmNzU1NmJiYzMzM2M0MTQ5YjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4NWQxYmE3NTJhYzM3Y2Y1OGNkZjAwMDk3OGI0Y2JmOTEwMGNjMzgyMmI3MTNjMTk5ZjI1N2VhYzE1ZGQ0MGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJhYjljZDcxN2E3NjBhM2MzZmE4MGM2YzY0NmY4NjUxZjY1MzMwY2IxMzI0OTU2NDY2OTNkYzMxNjdmOTY0MmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY3ODM5YmQyNDBlMDMxYjk4ZjYzMzUyMDdlMGE5YjI5ODlkOTYxNzk3MDY1Y2FjNzNhMTU5MzhlNjk4Njk5MTIifQ"
         }
       ]
     },
     {
       "id": "claim_257ef375c9d6489a8310234ac18f8a60",
-      "statement": "`pipeline.py` runs the configured `ingest`, `review`, `promote`, and `topics` roles in order for a full run and stops at the first failed step; `lab` is available only as an explicit single step, and `--dry-run` prints dispatch information without running an agent.",
+      "statement": "In a full run, `pipeline.py` executes `ingest` and `review`, then promotes only source-matching drafts persisted as `verified` and runs `topics` only after promotion succeeds; it skips both when none are verified, reports pending and needs-decision drafts as exceptions, retains rejected drafts, and treats unknown statuses as needs-decision. `lab` is available only as an explicit single step, and `--dry-run` does not run an agent.",
       "evidence": [
         {
-          "resource": "repo://_scripts/pipeline.py#L126-L190",
-          "version": "repo-lines-v1:sha256:ce73a489ea4d71a2bce9038e052423e53ef629c6b38344f8ea2ceb4cb5e0b4b1:eyJzZWxlY3RlZExpbmVDb3VudCI6NjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyZTMxMjU3ZGMwYWUxZDU5MzAzN2MyODBjOWFkNTA4MTliOGE2YzhjZjcyOGJlMDcxNmQwMGEzZWVjYzA0YmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5ZTdjYmQxNjhkMWE2ODMxOWMyOGUzN2E0NzYwNmIyY2FiZjE5OTc1ZTljODJjYjMwMjRiNTlkMGY1NTA4NTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRlNzU3NWMzYjc3NzZjZjJmOWMyYmZiY2E0NGYyMTQ4MTNhNzgyN2VhYTljMzg0NTRjNzAzYjY4OWE3NDQzODYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkzYWJlMDk1Mjk2N2MxOTdjMjVkYmU2NjBmNTk4OWQwYjY3N2Y1NDQzZGRlNWYyNzk5OTNiNGYyM2I5NzUzZGEifQ"
+          "resource": "repo://_scripts/pipeline.py#L198-L258",
+          "version": "repo-lines-v1:sha256:655d699bb38b165d0957ddae48341756e7dcb2342747f4c34d7dad6023f155b1:eyJzZWxlY3RlZExpbmVDb3VudCI6NjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjODZhMzg5OTE0YzRiZmIxNTQ0NjM5MWE4YWNlNzZhYWY4MTZjYmYyYzZiMzA0YzNiODE2MGNhNzVjZDU2YmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmMTlkZGEwY2U0ZWE2NTZlYTg4ODVmMjBmNzRmZTc5YjIxZDAwYzVkZjU3Y2I4YmNmODVhZjBmNzY1YTViNGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZjYTkyYmUzMDllZDE4Njk2ODQ4ZmNkM2U3N2I5ZmI2NmY3NjhhMzQyNDY4MmIwODY5ZTJkN2MzYzViNTk4ODgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNkNDEzNDBjYzIzOWExNTljZTliNjAyMmU5ZjYzMjI4MzJlMmVhZDc2Y2FlOWU0NzU0ZDIxMGViOGZiNmQ1ZTgifQ"
         },
         {
-          "resource": "repo://_scripts/pipeline.py#L34-L38",
-          "version": "repo-lines-v1:sha256:435b0b2f141e465f957f9c1b3a1f0e04296e480aaee892d21d14c8f0b90f60dd:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzU1NzFlMmRkZDU4YWNkMjFlNWE1ZWZjYWE4YmU4OTZiM2I2YTk1MGJjYTcyNTliODQwNTY2OTlkMjU5YjU1NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2UyMjVmYTcxNmQzNjAxZTU5NmVkYzMxNTEyYTY4NDQ5Y2MyOGZhM2ZiNjI0NDc5MzYzYzBkY2FkYzJkYjM0MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzQ4MTA3ZWY2Y2Y3MDkwN2U5OWRmOTU3NTU4Y2MzZDhkMDM5YTgwOWVjMDczM2I4Yzk4ZDNhYmFkMThkYTVlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzQ4MDYxNTM0YmQyODNkNWY1NTQzMDhhZjYzZDAzMjY0ODUyZDc0ZTAzZTU1ZWU2NDZmNjZiMGM1OTY0ZDI1NSJ9"
+          "resource": "repo://_scripts/pipeline.py#L34-L39",
+          "version": "repo-lines-v1:sha256:c897aa5b147e39f92403f3afa76acef4543207c6c4f2cee3309c1bcc706440be:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzU1NzFlMmRkZDU4YWNkMjFlNWE1ZWZjYWE4YmU4OTZiM2I2YTk1MGJjYTcyNTliODQwNTY2OTlkMjU5YjU1NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmIzMzQwYzUyOWM5NzU5ZjhkZTZjZjYxYTkyYzFjZjE5ODY2NjI1YWFiMmEyNTYxMGQ3NjVjMWEzYTg1ZjlhOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzQ4MTA3ZWY2Y2Y3MDkwN2U5OWRmOTU3NTU4Y2MzZDhkMDM5YTgwOWVjMDczM2I4Yzk4ZDNhYmFkMThkYTVlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzQ4MDYxNTM0YmQyODNkNWY1NTQzMDhhZjYzZDAzMjY0ODUyZDc0ZTAzZTU1ZWU2NDZmNjZiMGM1OTY0ZDI1NSJ9"
         },
         {
-          "resource": "repo://_scripts/pipeline.yml#L6-L16",
-          "version": "repo-lines-v1:sha256:1f3d23b87347dab942bd3bb483998abc19f470537b6230e9dc17e30aad35050d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyNDA1MjRmNDU2OTJmMTlmNjFhZjAwMTRlNzYzZjBmMGUwMGIwNmQ3OTM5ZDI4YWYzZmRlZDhjY2FiZTA0NmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlNWMxOGY4MDdjMTdjNTY4NWQ2YWE5OTIwZGYzNTk2NDk5YTg4ZThiMzZhYzAwMTBjNGYwMGIwYTQ1NzdiOWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcyNWU4YTc0Nzk3NTczMzE5MjFiZTEzOTQ5YjUyYjljNDNkZjY5ZGQ5ODE4NDAzZTM4MGJiZTNjNzdkOTkzY2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjExODhlOTY4ZDQ2MjIyMzhiMWMzMzliZDAxYWM1Mjg0OWRlOTRjOWQ1ODczYzRiMzNjN2RkMGJmZTdlZjM1ZWUifQ"
+          "resource": "repo://_scripts/pipeline.py#L89-L103",
+          "version": "repo-lines-v1:sha256:78400047fa7e9a9fe232572a589c3ad41e603c15c43d768625aa34eee5086bf5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkMTdlZmFlOWI4ZGJkN2MwOTA3ODQ3MDY1Y2VmN2QxNTg5NDA4MzZlNjgwOGQxN2NhNzliYjZlNzk4M2ViNTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlMWNkNjY4NmI4YThiNGZjZGVhMGQxNTIxYzQ5NzkzNzI2OWEyMzJhNGY0YjM4NzdjYjEyMTg4Mzk3ZWFkMzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzZWJkYTZiZWYyMDIzZWE3YmUzMTYwMzEwYmM5YTQ5Mzk5MGQ1ZWE1MzMzNzgxY2NiYzRhYzhkZDllM2IxNTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM4NDA0YTE3ZDUyYjlmZWVkYTBmOTNiMWE1NmYxZGE0YWM0ZTdkNTQ5ZjY0ZDk4NWEwNTlkNzFlOWE1ZmNmY2QifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_pipeline.py#L20-L35",
+          "version": "repo-lines-v1:sha256:52e59844641215871efb4c87c1b242256486efc4797569a6c1a7842b8f350137:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlNDk2ZDAyMjQyOTBhNTFkNWI3N2ZiMjBiYWRkNTBkYWY0NDkxMmRmNDQxNmE5Y2ExNDA2ZjdlY2JlMDI5ZGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiYTVkM2MzYmEzYmQ2OWNhYmQ3NTdlYTcwMDUxNzY5Nzg4ODdmZDI5NTUxNGZiYTY0NjEwMmVhNDI4NjBlNmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjYzRhN2QxY2M3OTZhYmEzZTQ2NzIzMzI3ZjUxN2U5ZjgxMTk4MmQyNTBmMDcwMjk4NmU0YjU3NjRhZDk1ODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
     },
     {
       "id": "claim_67a97fb2793e41ab8b409d3208b838a4",
-      "statement": "The pipeline runner selects the first matching configured agent, expands environment variables and prompt placeholders, executes the assembled command with `shell=True` in `kb_root`, and considers a zero exit code successful; it does not enforce agent write boundaries or record human approval.",
+      "statement": "The pipeline runner chooses the first configured agent for a role, expands environment variables in configuration strings and prompt placeholders, runs the assembled command with `shell=True` in `kb_root`, and treats a zero exit code as agent-process success. It does not sandbox agent writes, inspect diffs, or record learner decisions.",
       "evidence": [
         {
-          "resource": "repo://_scripts/pipeline.py#L41-L84",
-          "version": "repo-lines-v1:sha256:78afa9325a0d0fd750751a294b18bf1e76f55bcca63ad1961658b6cdfbc0a66a:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyODg5NjJjZTkwNTNiZDI0ZjBkYmI3NTRiMGMzNWRlYTEyMmUwZGZhOTdhNWMyNmE5MjBlODM4M2E3ODhkODciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhMTFjMDU2N2QwYTVmOWU5YjEzNWY2NWNkMjUzNzJkZmQ2Mjg3NzVmN2MxZWQyNTNmOGJhZDQyZGQyZDY2NjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiNWY3ZDAxODY1ZmE0YWE4MzNmMDBlYTM1YTljM2NlMWYyZGIxMWQ5MzEyMGI5OTgxM2YxMDg3MDk1NmY1NzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgwZjI4ZGEyNGNiYjc4MDY0MmQ0NjRjZDBjYjIyZWUzNTQ2ZTYyMGQwYWRiZDg5ZWM0MmIzYTBiM2YzYjYzNjUifQ"
+          "resource": "repo://_scripts/pipeline.py#L106-L123",
+          "version": "repo-lines-v1:sha256:92edd97ffbc8a400a9c209db5bbfb80f83a375be83623130e146748831ad6437:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4YjBkYTY5ZDc4YjhmMTM5MDMyMTJmYzUyODdmY2FjYjczYzllNjZjYjJiOGIwYTY4OGI3ZTZlYmRkODllNGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhMTFjMDU2N2QwYTVmOWU5YjEzNWY2NWNkMjUzNzJkZmQ2Mjg3NzVmN2MxZWQyNTNmOGJhZDQyZGQyZDY2NjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgwMDBmYmQ4NWI0NDhkZjE2ZmQ4NmIyODM1NzY0N2UzYjBmYzRmOWRmMjdhZDM2NjdkMDA4NzY2MmJjNTVkNjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUyNjBiM2RkYjMzNTQwZmY4MjJjMDYyYWY1ZDNhZDY0YWQ5OTA1ODY0NzMwZWU4MTg5NjQwMGNmOWY2YWE2MDgifQ"
         },
         {
-          "resource": "repo://_scripts/pipeline.py#L87-L123",
-          "version": "repo-lines-v1:sha256:25a4d7b1f6d94edb11acb86f19673a73a23ca445311875be828ae2ea5bd90a90:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1MmEwOWUxYWYxODYwOTEzNjM1ZDc3MzMxNTE2MmZkZjMxMjEyZTVmZGM0MzJjNjFkZjMyODU2NzZkOWQ0ZmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwZTJhNDY1MDA5NWZhOTVkMGUyYmI0MWIyZGIyOTA5NGQzNDA0ZDI4Y2UxMjMzOWVjODhiYjRiNWM1YmU4ZjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MjIzMTA2ZmQ4NzQyYjcwZWEyMzNmOWRjMzU5ZjRiMDJiYmIwNjliNzI4M2VlZjc2MjQ5OTUxNmJkN2I5YzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg5M2JkNjZlMmJiNzFmM2I4YTkyNDA2NGJiZjdiMDdjNTkwM2E3NzNmYTRmOGMzNTQ2MDYwMzg2NjcxZDNhNzMifQ"
+          "resource": "repo://_scripts/pipeline.py#L126-L168",
+          "version": "repo-lines-v1:sha256:50afbc030cc75bf0582dd6ecce47dbeee3920e37ca16c899a26e16ad682bfc8b:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjOGEyZGRiMDViZTAxMjNmODRiNjYwMjIzMDI0ZjRlYzk2ZGUzNDMyZDhkYjExZGY1MWVlNDFlOTBiOTg2YjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwZTJhNDY1MDA5NWZhOTVkMGUyYmI0MWIyZGIyOTA5NGQzNDA0ZDI4Y2UxMjMzOWVjODhiYjRiNWM1YmU4ZjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MjIzMTA2ZmQ4NzQyYjcwZWEyMzNmOWRjMzU5ZjRiMDJiYmIwNjliNzI4M2VlZjc2MjQ5OTUxNmJkN2I5YzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg5M2JkNjZlMmJiNzFmM2I4YTkyNDA2NGJiZjdiMDdjNTkwM2E3NzNmYTRmOGMzNTQ2MDYwMzg2NjcxZDNhNzMifQ"
         },
         {
-          "resource": "repo://_scripts/pipeline.yml#L20-L53",
-          "version": "repo-lines-v1:sha256:d4c069b8f3e9a827a84c40b3821067efc1a6f4db4b867522745770aaad9fb269:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY3YWMzMzk4MjI1MWY5NTcxYjhjYzQwMTVjYTQ5YTNhMTgyN2MzMWRkYjk4OWRkM2U0YjYyMTVhYTNkZDY4NDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA0NWQxN2Y2NTU0MjMwMmQ1YzIyZWEwNmJiNTk4YjYxNTU1ZDk3Y2MxZWZlM2VjNzI4ZTlhMzFiMTIzNTY1MzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjExODhlOTY4ZDQ2MjIyMzhiMWMzMzliZDAxYWM1Mjg0OWRlOTRjOWQ1ODczYzRiMzNjN2RkMGJmZTdlZjM1ZWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZiNmI2Zjg3ZTAzOTJiZDlkNzE2NWFmMTUzYmU0ZjE1ZWMwZTk3NDliM2M3YWY4M2NhN2RhYjQ0NDdiZGRmMDYifQ"
+          "resource": "repo://_scripts/pipeline.py#L42-L65",
+          "version": "repo-lines-v1:sha256:4ed6364ee54ed154c3d11fe960d92469afccf0b9be2a02d8e322bc8ca4e98292:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyODg5NjJjZTkwNTNiZDI0ZjBkYmI3NTRiMGMzNWRlYTEyMmUwZGZhOTdhNWMyNmE5MjBlODM4M2E3ODhkODciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkZjM3M2Y5ZTFlMTcxNGRiNjBhMjBjNmMwZDU1N2I4NDllODczYjkyYjVkMGE3Yzc1ZmViMTA1MzExOTZjNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhkNzc1NGY0YmUxNzYxYzMyNTczZjRkMTJhMzEwYjk2MGNmYjk4MmFmM2EyNzYxMDU4ZjUzZjdiMjc0OTRmOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVhMGRkNWFmMGU4ZTgyZmIwYWE5MTUxYWEzZDc5YWI4NTFmNmIyYmUwNWZlMDVlOTYzMzQyM2EzM2RmZTRhZWEifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.yml#L18-L49",
+          "version": "repo-lines-v1:sha256:f06b2622c7f3f44e093ac2ab8f5853fc0b452aaec019b103da9a9c5ca06cf1f0:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI0ZTEzYzI3M2JiYjQ4Nzc3OTU0M2I1ZGVmYzY2MzRhMTM0OTM0Njc1YjVlOTFmODg3NjZhOTRhZWE2MjNkODciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzMzM2MmEyMzQ1NDMzZmVhMWYwZTAwNzliZDZiYmQxMjM4ZWZhMDhlNmQ2YzFmNTI0NTZmMDQxMTdmZmNiYTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxYWQwN2MxOGVmNzBiODg1YmEyMzQ4NjhjNTllMDg3NzhlOWQ3MTEwYTQyNTA5OTY1MDhkNGNjNzNkMGVlZDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkyMTJkNjE0OGI1Yzk5ZTQ2NmQwNDc3M2U0YWRlOTVlMDM1OGVjM2Q3NTI5ODMzMmMxOTRkMjExODJmMTU3YzEifQ"
         }
       ]
     },
     {
       "id": "claim_4e82bb458f4f4de190741afd36300d50",
-      "statement": "Promotion is intended for one user-approved draft at a time; it creates or updates a formal concept, conservatively merges into a `merge_candidate` absent contrary user instruction, and defaults first promotion to depth 2, `lab_status: not-started`, and a review due date three days later.",
+      "statement": "Promotion has a manual mode for one explicitly selected draft and a pipeline mode restricted to the exact supplied drafts that remain `review_status: verified`; a verified `merge_candidate` with clear reviewer rationale updates the existing concept, while an unclear merge is returned to `needs-decision`. First promotion defaults to depth 2, `lab_status: not-started`, and a review due date three days later.",
       "evidence": [
         {
-          "resource": "repo://_scripts/prompts/promote-concept.md#L1-L22",
-          "version": "repo-lines-v1:sha256:853a6aa95dab926ef94e2db468601deedd9a761dd8c408b972c9270cf62b6ef9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5YTNkYzZjMzUyYmUyYjI4MDUyZGE2MTg3Y2JhM2VmNGFmM2FlMTkyNDJjZGExY2M5Y2QzM2VjZTg2M2RkMDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4YjE1YjJlMjgxMWM5ZWEyODViZjU3ZmJlN2M2NTIxODk5YmMzNzdiOTE5OWUxZGYxZmFkNmYwZmU2NWM1YWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZiZDI5OGY0OWU3M2IxZDg0NDM0NjE5MmQ4NmQ3ZGZmYzIwN2JjNTVlMTBiN2U0Zjc4MjJhOTg0MGZhNDZlMzYifQ"
+          "resource": "repo://_scripts/prompts/promote-concept.md#L3-L22",
+          "version": "repo-lines-v1:sha256:0dd6df35125a026ee37e1c815317de96680cb4f150905d4cece3d78eac07a129:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1MThjMTY5NWYyNjBkZWZkYmY4MTVjOTNhNDFlMmI1NDkwYTg4MjUzMWJlMDJkODMzMDkzYWQ4Mzg2ODUzYzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4YjE1YjJlMjgxMWM5ZWEyODViZjU3ZmJlN2M2NTIxODk5YmMzNzdiOTE5OWUxZGYxZmFkNmYwZmU2NWM1YWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFmMjM2MTUyOTc5ZjQ0ZjFhNzQwMjM4MWIyODI3N2QxOWYxM2Y1YTU1Yzg0MDg1OWU0NDc2ODk3ZTYxNzc1NjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZiZDI5OGY0OWU3M2IxZDg0NDM0NjE5MmQ4NmQ3ZGZmYzIwN2JjNTVlMTBiN2U0Zjc4MjJhOTg0MGZhNDZlMzYifQ"
         },
         {
           "resource": "repo://_scripts/prompts/promote-concept.md#L42-L66",
-          "version": "repo-lines-v1:sha256:1f2a93add94f6b443bea6b57aae6a1c0195aa0e669f2fd4ec8ab7cee5af3462d:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4MTljYTRkODYzYTQ1MjJjZTY5YWYxMzQyYTQ1ZTAzMWUzMDllNTZkZWMwOWI4ZGQ4YjgxZTZkMzdiY2YyYzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmODdmNzMxOWUzOWI2ZjdiYWRmMDg4OWRhZmNkMTk5OWFkOGEzZjc0ZGI2MGYzMzc0N2M1ZDZmZDQ5MDg4YTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyYTA3MDlmNjFiODAyYWQxMzExNGRlNzU5YmNmNjEyNTI1M2QyMGRlNzBiNWE5ZmIzYTZhMGU1NGFkOTMxZGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM1Y2QxYzAxOTlmMDYyZDhjZDk1ZDY3ZGQ1ZTExM2M0MjliYzkzZWM0M2Q1YzQ3MDA5MjZmZDRkZTJkYjU2NmUifQ"
-        },
-        {
-          "resource": "repo://_scripts/prompts/promote-concept.md#L70-L130",
-          "version": "repo-lines-v1:sha256:c6fb8dd95e444458d763300fde22e42c8fffed9060e8c9f3328108797045d317:eyJzZWxlY3RlZExpbmVDb3VudCI6NjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2MWIzYjUzNmY3YjI1ZTdjNjQ1ZDY5MDgxN2FjZTA4NDgzMDNmNDkzNjEyMjY0ZWRlMWNlMjk1NjRiNjlmODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE1YWM1OTU1NDkwMjQ4ZDFkYzBiOWM0ZGIwMDYyYWU3NGNiZjY2MWY3Nzg4NTM3ZTA1YjFkNzhkZjk2NWYwNzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM1Y2QxYzAxOTlmMDYyZDhjZDk1ZDY3ZGQ1ZTExM2M0MjliYzkzZWM0M2Q1YzQ3MDA5MjZmZDRkZTJkYjU2NmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEyZTg3YjNkMTNkNWFmODdmZWQ4ZDNiYTJkYzZhMWVkM2E3ODhlMmNkYTY3NWJhYmM0M2E0MGFlODY2MGQwYzIifQ"
+          "version": "repo-lines-v1:sha256:98251d9cfc613d7b2d086776044f745bf21e8df347b3c7a5c57bda732fafd6b7:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4MTljYTRkODYzYTQ1MjJjZTY5YWYxMzQyYTQ1ZTAzMWUzMDllNTZkZWMwOWI4ZGQ4YjgxZTZkMzdiY2YyYzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5NDI1YTllYzVhYzAwZDY1YTBlYzliNjFmZTg3ZjUzZDJhNWVhZmU2MmFiMzcwN2YyOGRjNGMyMDU5ZjYwYzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyYTA3MDlmNjFiODAyYWQxMzExNGRlNzU5YmNmNjEyNTI1M2QyMGRlNzBiNWE5ZmIzYTZhMGU1NGFkOTMxZGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM1Y2QxYzAxOTlmMDYyZDhjZDk1ZDY3ZGQ1ZTExM2M0MjliYzkzZWM0M2Q1YzQ3MDA5MjZmZDRkZTJkYjU2NmUifQ"
         }
       ]
     },
@@ -138,7 +138,7 @@
         },
         {
           "resource": "repo://_scripts/prompts/promote-concept.md#L217-L245",
-          "version": "repo-lines-v1:sha256:803a7ffea395e377e8f32244380b9e71a79a3297e1361c8045060a178e8128ca:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkYzljNmZhM2RiMDdhODZkZmFkYzEwZTc4M2VlY2IyNGFlZmI2ZGNlMjg0ZjkzNmMwNTAxNWQ3ZWIzMjcwOTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MTkxMWI0ODNiNTY5ZmJlZTJiNmEzOTBlMTczM2M0MDE0N2M0MDFkYmYxZjZjZDExY2Y5ZGYzNGRmNTM5NDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE4MTNlZjk5YTVmMDJlYTMzNTcyNjE3ZjY2NGM3NTBmMWE1YTA3M2EzZGVhZDkyY2I0MDkzZDRkZDA0YWVjMTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+          "version": "repo-lines-v1:sha256:c75074ee7f4d2829463be0bf5e47e1223b1f0270e2f05b27bfb5924e15de3cd3:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkYzljNmZhM2RiMDdhODZkZmFkYzEwZTc4M2VlY2IyNGFlZmI2ZGNlMjg0ZjkzNmMwNTAxNWQ3ZWIzMjcwOTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhMDE3NzA0MGJiNzdmMTQ3ZGZkNWM0ZDVlNzZmZDc4MjM1MWU3OWJiMDllZWExMDlkMjc2M2QzYjAxMmYwN2UiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE4MTNlZjk5YTVmMDJlYTMzNTcyNjE3ZjY2NGM3NTBmMWE1YTA3M2EzZGVhZDkyY2I0MDkzZDRkZDA0YWVjMTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
     },
@@ -202,7 +202,7 @@
       "evidence": [
         {
           "resource": "repo://_scripts/prompts/weekly-refine.md#L1-L43",
-          "version": "repo-lines-v1:sha256:076c3a8f8c2b35479c68a93ea3c1fa654ddb23c7284fb6ae69dbcdb8876d4a46:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjNDM0YzFmMGE2MTc0N2UxMmQ0YWYzOWVhZTk0YTg0MTRiNDgzYjcxZmQwODg5Y2E1YjJmYTUzZGUwZDQ0NWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkMDdkZGFmNGIzMzA5YjE2ZWU3MjFmMWMxZmVkMGNhMGExZDBkNzFkYzliOTgzNDk1NzJjOTc3NTE3ZDY2ZTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyMzkzMGRiYWRhOWQxMGE2YzJlZWNlMGNiYmExZDEwMjNlMzRjNmJlZTI5YjMyNThkYmViN2JiYjNjOWJhMWEifQ"
+          "version": "repo-lines-v1:sha256:3ee7598c54a98653998d4084eacd21dff5a3dbffde051f8353c6084111b10907:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjNDM0YzFmMGE2MTc0N2UxMmQ0YWYzOWVhZTk0YTg0MTRiNDgzYjcxZmQwODg5Y2E1YjJmYTUzZGUwZDQ0NWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjljYjBkNWFkMjIxMWNiMzE0NzQ3N2ZjMjJlNzBjZGQwYWJhNGIyY2NhNmYzMjQ3NGQ4OGEwZjVlNzc3ZmZiNzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyMzkzMGRiYWRhOWQxMGE2YzJlZWNlMGNiYmExZDEwMjNlMzRjNmJlZTI5YjMyNThkYmViN2JiYjNjOWJhMWEifQ"
         },
         {
           "resource": "repo://_scripts/prompts/weekly-refine.md#L217-L225",
@@ -303,10 +303,62 @@
           "version": "repo-lines-v1:sha256:cf241a91fe49d8f806b55837f5652069f18acf10d720159950f713577c6d4dd6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzOWI3MDRjMmM3ZTRkNjI2ZDU2NDQ1M2ZlZDdjYWYyZjhlYTRmMGM3YzlmNzYxNGExZGRkMmNlMzNjMTVmMDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjOWIzOGUyMDQzZmFlYjlmYWRhZjhmN2E0NWY0ZGI2MjMwOTIyNjExNTc3MjRiNzFmMGY2MTFjY2E0MGZlNjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3YzkzNjFjOGZlNjllZDg3ZTdhYjcyODI1ZTdlOWQ0ZTYzYTQ2NTQ3ZDRhNGFiMTAyMWI5YTliNjdmODM2M2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk4OWE2OTc5ZmYxMjMwZDQyZWM5MTA1MWVmZjkzMjIxMWRkYmZjYWFlM2E0MDRjMWYxMzEyNmIwZjUxZGVhOGUifQ"
         }
       ]
+    },
+    {
+      "id": "claim_cafdfccc4d9f4e1bb3df591a5ed07f97",
+      "statement": "The topics role is a curation step over recently promoted concepts that reuses an existing path where possible and creates a new topic only when no path covers the domain; the normal full pipeline invokes it only after successful promotion, although `--step topics` remains directly callable.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/pipeline.py#L198-L250",
+          "version": "repo-lines-v1:sha256:029357d61678506ebfc25e54ee50a6b8b669fe4fb7ad854f26c6112527ef7570:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjODZhMzg5OTE0YzRiZmIxNTQ0NjM5MWE4YWNlNzZhYWY4MTZjYmYyYzZiMzA0YzNiODE2MGNhNzVjZDU2YmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwMjZmNjEzYTk5MmJjZjgxYzIwMzczMDcwZDlhMmY0MWM3MGNmNTVkYjczNmE0OWI5YmUyNzM1ZjBiZjY2NDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZjYTkyYmUzMDllZDE4Njk2ODQ4ZmNkM2U3N2I5ZmI2NmY3NjhhMzQyNDY4MmIwODY5ZTJkN2MzYzViNTk4ODgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE1OTY4NDQ5YjFmYWQzNzI0NDdkOTI1ZGVhYTA3OTVmYjk0ZWE4YTBiMDMyODUxMGU4ZjY4YTg4NTE2ZDVmZGUifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.yml#L68-L72",
+          "version": "repo-lines-v1:sha256:a943d44b9d664ee48143162af4958985829db2f4b9bce71eda6caac58c22c1e3:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2RkOTAwYjc1Zjc1NDM5NDk5MGVjN2E1NTIzMjQ1YzljZWEzMzhhMGI1ZGYyY2Y2NzE5NjFjYzJlMDhlMjBjMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjU0ODg0OGU1NmIzYTM0MmUzZGZhNGJlN2IxNjFhMDNkOTRmODZlYjU5ZmNkN2M3OWQwOWE4M2EyOWVkOGZjMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDYxYjhlNjg4Nzg2NzNhYTJiMTJmZDc2Zjc1ZTg3M2VjN2I0ZDM1MDRkZjNhY2YzZTE1NmY2YmJlNzY5OTg1NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGEyNzI0NjU3NTE5NTA1NTFiZmY0MTI0NzRjMDYyMTc2NTMwMjM2NmU5MTYzZTFkNjg0ZGNjYmZkNTcxNzhhOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4170ec315680426d8482c7726ed9d99a",
+      "statement": "Weekly refinement has a closed write scope: it may write the dated refine report, quiz bank, three discovery indexes, and an appended refine log, but it may not write drafts or topics in addition to its prohibition on changing concepts or directly promoting drafts.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L26-L43",
+          "version": "repo-lines-v1:sha256:a119fa38089b325bf9ff931deaa5fe5876268e6254b9825bf1f62eab0467fc12:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwNGVhMGNhM2M4MmI4MGI0MGYzNDA3Yzc5YjU4MGUxY2ZhN2NjMjkwMGJlN2QwMDk3ODhhYmVmYzRiZGY5MmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjljYjBkNWFkMjIxMWNiMzE0NzQ3N2ZjMjJlNzBjZGQwYWJhNGIyY2NhNmYzMjQ3NGQ4OGEwZjVlNzc3ZmZiNzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE0MzQ5NDYwNGY0ODEwNjE5NjM3NmNiODhmNTNkODQ0NWIwZjVkMzMzMDczYWFjZDMxYjkxNTBhMDEyMTRlYTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyMzkzMGRiYWRhOWQxMGE2YzJlZWNlMGNiYmExZDEwMjNlMzRjNmJlZTI5YjMyNThkYmViN2JiYjNjOWJhMWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_887115da24d045f5babebd9e094310b6",
+      "statement": "A weekly refinement run may choose a five-to-ten-question review pack and regenerate indexes, but a report-only run may inspect quiz-bank format without arbitrarily changing schedules; result-driven updates must retain history and avoid overwriting unrelated questions.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L171-L193",
+          "version": "repo-lines-v1:sha256:f563ee83f0cff6da9b1c450caebd459bec2340de8746055435d7fdf2f72c3385:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0MTI1OWM4Yzg0MjY5ZjU1OTFiOWU0ODViMTk0Zjk1Y2FjOTFkZTFlYzIzNjUzNTg3YmUxMDliNzMzYjAzODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3MDBhYTdjMTNmN2ZmNmNmYTY4NzIzZWI3MmQ2NGFlZjY0Y2E2NGJiNjg2OTVjZjBhMjI1NWMyNjY1ZWViNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4MDkxOGFjNjQzMDcwNDAzMDA0MzI3OGFiYjE2NzAwMWM2ODM0M2ZjNWEzYWRmN2Y4MmI2MTY5NTI5Yjg0YWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkyYTQ2YWQ5ZmI2NTgxYzZmODZkODdlMzY2NWZiMGJiNTMwYTZiYzlmYmRjZWQxMmY0YWNjODAyYjhjYmY2NzUifQ"
+        },
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L52-L60",
+          "version": "repo-lines-v1:sha256:6c639e64178bb04dc9fd1d5c8fbd3c95040eb1ff5ddf3f63a32df964e944285f:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTU4ODM1YzUzZTM0MWM2YTBhYTZlYWI5ZTE4N2MzNzM0MzZhMWE5OTkwZDIxZjU1MDk3ZWY0YTExNTA1ZWI3MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTYwOGRjM2ZmYjEyNWQ2ZGNiNGMzOTFkYzQ0MThkOTA2ODc0NjkxYTE2OWUyYjExNzYyNWQ0MjU0ODFhZjlhOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDc0MzRhOThmNTk0OWQ3NjQwODVjMzRhNWNjN2Y0ZmM4ZGUxNjE5OTFjM2Y3ZGNjYzZkOGY0MGJmMDNkOWQwZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWY4YzZiNDMxMTA1ZWRiMzk1YmQ1MmZiNzljMjlkOTg0ODU2ODU4MTU2ZWQ3YWVhMGU1MTg3YWQxNTAxYzk3YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7a5d8063c6db4500845eff54b09e3cba",
+      "statement": "Refinement findings about canonical corrections, merges, splits, or additions remain report recommendations for later independent evidence verification and the normal promotion workflow; insufficient evidence is marked as requiring more evidence, and only materially different alternatives may produce a needs-decision question.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L127-L141",
+          "version": "repo-lines-v1:sha256:a96d6768d17150da26f9b0ef800196686ca2c2ba68caa386221538e44c41a041:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY4ZGI4YWI3MTgzZDdhY2RjNjI5NDc3YzQ5MGM2NzNjY2M3ZWViZTIyY2I0MDBkNjlmOTNkZWQwZjY2MjE1ZTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2NzkxOTk1ZTY1ODA3ZGZlMDM3NWY1OTM3Y2NjYjU2OTk2MzZhYmFmMWU5ODM5MjQ2MTExN2I0YjVhYzA0MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIxZDA5NWFlYTk4ZGJhOWViN2M3OWE3ZGMzNmVmMGFkZTEyNDZjZmQzZTc0MzlhZjNkZjlhYmVmMzVhMzQxMGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVjMDM3ODU1Y2Y5NWNlZWI4MTFiYjYxYTc0ZjU0Zjg5ZTZkOTY3Nzc1ZWFjZTZhOWUwZTQ0MmU2YzU2MTU4OWIifQ"
+        },
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L39-L43",
+          "version": "repo-lines-v1:sha256:63d5a496f1e258a7dde5e4a5df977fd56ce2ae427bf82d59913d086c9dc42720:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjI5MWJiOTk2ODg4NTE5NmU1ZDExZjI1NTgwNDRjODc5NDJkNjRjYjRjYTI2NWQ0OWI5OTIzMjVmMWIyMmEzMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWNiMGQ1YWQyMjExY2IzMTQ3NDc3ZmMyMmU3MGNkZDBhYmE0YjJjY2E2ZjMyNDc0ZDg4YTBmNWU3NzdmZmI3NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZThkNDI1MmE3N2U3Nzc5Yzg5NDFkMDE0OTM5MDVjYzkxMDg2YjM1ODE0ZDIzMTM4OWI3OTgxMGRkZDNhOGIwOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjIzOTMwZGJhZGE5ZDEwYTZjMmVlY2UwY2JiYTFkMTAyM2UzNGM2YmVlMjliMzI1OGRiZWI3YmJiM2M5YmExYSJ9"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.5.0",
-    "at": "2026-09-06T04:14:39.619Z"
+    "at": "2026-09-06T11:22:47.615Z"
   }
 }

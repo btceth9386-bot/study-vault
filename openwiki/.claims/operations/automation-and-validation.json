@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:dbecb430c36c4662dca98a353df3c4eadbfe3001a2d6398cc1d8ae5112c10523",
+  "pageVersion": "sha256:e2dc60882522f41d9b518cc0632b953b644ae4b6f9ed5dc6d3613af25d8df5ee",
   "claims": [
     {
       "id": "claim_1279e1be16914b5d9c6f5db4daa39c50",
@@ -12,7 +12,7 @@
         },
         {
           "resource": "repo://_scripts/init-kb.sh#L35-L60",
-          "version": "repo-lines-v1:sha256:30e07810257a6b6cffa2f17f6b549517994eb7c34431073c1357d46b1e5c8deb:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5NzA1ZTBiZjQ2ZWI5NDhkZTQ3ODhjZjQ3NTNhNTI3OGE4YTZlNWVhOThjY2VkZmViZGQ5MzA5OTkyMTg4ZWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhMjFjNWIzYmZmMDI5OWMwMTYxNDcwNDY4ZjM1NWU1YjRhZmNmMTdhNWY1OTNhYjY4Mzk0ZWY3YWYzMTljZGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk4YjFkOGM1NTg2YzM1ZDQ1Y2E0OWNlMDJhYTQ2NzlmN2JkMDdiZTJiNmVkNWYwMTU2NTc0YzZhNTI3ZGNhNjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYxODUxZmM2YjgyNzlkZGQ4NGZhMTg5ZThkYjE2NzI3Zjk5Nzg3ZWYxNjYyODA0ZjZkMWFmNzk1YTU3ZWQ5NTkifQ"
+          "version": "repo-lines-v1:sha256:d6db7d2f863c446c669fe94ca3832fa04296b601ae3b8b74e363c7364fc8fc34:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5NzA1ZTBiZjQ2ZWI5NDhkZTQ3ODhjZjQ3NTNhNTI3OGE4YTZlNWVhOThjY2VkZmViZGQ5MzA5OTkyMTg4ZWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhMjFjNWIzYmZmMDI5OWMwMTYxNDcwNDY4ZjM1NWU1YjRhZmNmMTdhNWY1OTNhYjY4Mzk0ZWY3YWYzMTljZGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk4YjFkOGM1NTg2YzM1ZDQ1Y2E0OWNlMDJhYTQ2NzlmN2JkMDdiZTJiNmVkNWYwMTU2NTc0YzZhNTI3ZGNhNjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYxODUxZmM2YjgyNzlkZGQ4NGZhMTg5ZThkYjE2NzI3Zjk5Nzg3ZWYxNjYyODA0ZjZkMWFmNzk1YTU3ZWQ5NTkifQ"
         },
         {
           "resource": "repo://_scripts/init-kb.sh#L402-L419",
@@ -44,41 +44,45 @@
     },
     {
       "id": "claim_45eb3df259c9482f8352f2c0b55b7498",
-      "statement": "The pipeline expands environment variables in YAML configuration, selects the first agent matching a role, substitutes prompt placeholders, and runs the configured command from `kb_root`; the normal sequence is ingest, review, promote, then topics, and it stops after a failed step.",
+      "statement": "The pipeline expands environment variables in YAML configuration, selects the first agent matching a role, substitutes prompt placeholders, and runs the configured command from `kb_root`. In a full source run it runs ingest and review first, groups only that source's persisted draft verdicts, and runs promote with the exact verified list followed by topics only when that list is nonempty; a failed dispatched step stops the run.",
       "evidence": [
         {
-          "resource": "repo://_scripts/pipeline.py#L169-L193",
-          "version": "repo-lines-v1:sha256:8efff3661fd6445d0caafaf575a4dacb12046ca5da3bb102da1fee33dbdd7ace:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2MGM3NWU4M2NmMzE4MjZjZDZlNTc4NDNmZTBjMTZkZjI4OTJjNTVlYWU1MDM5YzZkOGQzMjQ5YjY4N2JjMzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzYzA2NTJhZWZiOGJiOTAyYjMyNTg2ODJiMTY4NzM5N2NiZmFlZWRlN2E2NGE3ODUzYWJjNThhZTYxOTUwYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEzMjkzNTc5ZTQyOGZiYjllMmM0YWUyZmZmODYwMjU4ODYyODZkNzU1ZjMxYmEwM2VjZDljYWE0NzVhN2VkMDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNkNDEzNDBjYzIzOWExNTljZTliNjAyMmU5ZjYzMjI4MzJlMmVhZDc2Y2FlOWU0NzU0ZDIxMGViOGZiNmQ1ZTgifQ"
+          "resource": "repo://_scripts/pipeline.py#L126-L168",
+          "version": "repo-lines-v1:sha256:50afbc030cc75bf0582dd6ecce47dbeee3920e37ca16c899a26e16ad682bfc8b:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjOGEyZGRiMDViZTAxMjNmODRiNjYwMjIzMDI0ZjRlYzk2ZGUzNDMyZDhkYjExZGY1MWVlNDFlOTBiOTg2YjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwZTJhNDY1MDA5NWZhOTVkMGUyYmI0MWIyZGIyOTA5NGQzNDA0ZDI4Y2UxMjMzOWVjODhiYjRiNWM1YmU4ZjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MjIzMTA2ZmQ4NzQyYjcwZWEyMzNmOWRjMzU5ZjRiMDJiYmIwNjliNzI4M2VlZjc2MjQ5OTUxNmJkN2I5YzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg5M2JkNjZlMmJiNzFmM2I4YTkyNDA2NGJiZjdiMDdjNTkwM2E3NzNmYTRmOGMzNTQ2MDYwMzg2NjcxZDNhNzMifQ"
         },
         {
-          "resource": "repo://_scripts/pipeline.py#L41-L64",
-          "version": "repo-lines-v1:sha256:4ed6364ee54ed154c3d11fe960d92469afccf0b9be2a02d8e322bc8ca4e98292:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyODg5NjJjZTkwNTNiZDI0ZjBkYmI3NTRiMGMzNWRlYTEyMmUwZGZhOTdhNWMyNmE5MjBlODM4M2E3ODhkODciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkZjM3M2Y5ZTFlMTcxNGRiNjBhMjBjNmMwZDU1N2I4NDllODczYjkyYjVkMGE3Yzc1ZmViMTA1MzExOTZjNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiNWY3ZDAxODY1ZmE0YWE4MzNmMDBlYTM1YTljM2NlMWYyZGIxMWQ5MzEyMGI5OTgxM2YxMDg3MDk1NmY1NzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM4NDA0YTE3ZDUyYjlmZWVkYTBmOTNiMWE1NmYxZGE0YWM0ZTdkNTQ5ZjY0ZDk4NWEwNTlkNzFlOWE1ZmNmY2QifQ"
+          "resource": "repo://_scripts/pipeline.py#L228-L255",
+          "version": "repo-lines-v1:sha256:8399c6b8f770c361177e6eadbb0a7369f1d2aa52eb5825ef6702b878e66617b5:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk1ZGNkMjdiNDU3NGU4MzU4MWI4YWIxYTFhMGIzYzQwZDQzNjlkZjdhODVjZDA2MmFhZjQyOGVlOWU2YmQ3ZjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwM2Y0Njg2ZmZiMTQxOWU2MzhhNzAyZjhiYjE3YTlmMGM4Y2I4Mjk4NjI5NjEyM2IxNDgyMGY4YWI3ZDg3N2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjViNjQxM2YwYjhlMzcxYjI4NDFlN2IzNzU1ODM4ZDFjNDM1YjgyNWVkZGZjYzkxMDM1MzIxMDVlNDI3YTRhMTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJmZWE1MzYzYjZmNTIyMGE4NzVhZTNiNzBlNzc1N2JiMGJiN2ExNGE1NWMyZWE1MjI1MzRiMTFkMWE3NjczZGUifQ"
         },
         {
-          "resource": "repo://_scripts/pipeline.py#L87-L123",
-          "version": "repo-lines-v1:sha256:25a4d7b1f6d94edb11acb86f19673a73a23ca445311875be828ae2ea5bd90a90:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1MmEwOWUxYWYxODYwOTEzNjM1ZDc3MzMxNTE2MmZkZjMxMjEyZTVmZGM0MzJjNjFkZjMyODU2NzZkOWQ0ZmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwZTJhNDY1MDA5NWZhOTVkMGUyYmI0MWIyZGIyOTA5NGQzNDA0ZDI4Y2UxMjMzOWVjODhiYjRiNWM1YmU4ZjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MjIzMTA2ZmQ4NzQyYjcwZWEyMzNmOWRjMzU5ZjRiMDJiYmIwNjliNzI4M2VlZjc2MjQ5OTUxNmJkN2I5YzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg5M2JkNjZlMmJiNzFmM2I4YTkyNDA2NGJiZjdiMDdjNTkwM2E3NzNmYTRmOGMzNTQ2MDYwMzg2NjcxZDNhNzMifQ"
+          "resource": "repo://_scripts/pipeline.py#L42-L65",
+          "version": "repo-lines-v1:sha256:4ed6364ee54ed154c3d11fe960d92469afccf0b9be2a02d8e322bc8ca4e98292:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyODg5NjJjZTkwNTNiZDI0ZjBkYmI3NTRiMGMzNWRlYTEyMmUwZGZhOTdhNWMyNmE5MjBlODM4M2E3ODhkODciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkZjM3M2Y5ZTFlMTcxNGRiNjBhMjBjNmMwZDU1N2I4NDllODczYjkyYjVkMGE3Yzc1ZmViMTA1MzExOTZjNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhkNzc1NGY0YmUxNzYxYzMyNTczZjRkMTJhMzEwYjk2MGNmYjk4MmFmM2EyNzYxMDU4ZjUzZjdiMjc0OTRmOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVhMGRkNWFmMGU4ZTgyZmIwYWE5MTUxYWEzZDc5YWI4NTFmNmIyYmUwNWZlMDVlOTYzMzQyM2EzM2RmZTRhZWEifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.py#L89-L103",
+          "version": "repo-lines-v1:sha256:78400047fa7e9a9fe232572a589c3ad41e603c15c43d768625aa34eee5086bf5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkMTdlZmFlOWI4ZGJkN2MwOTA3ODQ3MDY1Y2VmN2QxNTg5NDA4MzZlNjgwOGQxN2NhNzliYjZlNzk4M2ViNTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlMWNkNjY4NmI4YThiNGZjZGVhMGQxNTIxYzQ5NzkzNzI2OWEyMzJhNGY0YjM4NzdjYjEyMTg4Mzk3ZWFkMzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzZWJkYTZiZWYyMDIzZWE3YmUzMTYwMzEwYmM5YTQ5Mzk5MGQ1ZWE1MzMzNzgxY2NiYzRhYzhkZDllM2IxNTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM4NDA0YTE3ZDUyYjlmZWVkYTBmOTNiMWE1NmYxZGE0YWM0ZTdkNTQ5ZjY0ZDk4NWEwNTlkNzFlOWE1ZmNmY2QifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.yml#L54-L72",
+          "version": "repo-lines-v1:sha256:61cd9d5bc357747c45184c55bc31bd250f45cf510c5cf56b26461afca9b00f19:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5NzA3MzM5NTYyZGMzZTNiYWJmNmZiNGZiNmEwMzYzNTA4Mzc1MDRiOTQ2YjNmN2Y5NGU3YTU5MDkyOGZkMTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1NDg4NDhlNTZiM2EzNDJlM2RmYTRiZTdiMTYxYTAzZDk0Zjg2ZWI1OWZjZDdjNzlkMDlhODNhMjllZDhmYzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiYjIwNjRjYWYzYjljNzMyNzk3Mzc4YjQ2NTE4ODY2M2E3ZmYyNjg5Y2I2ZTY1OGRhY2M5OTNiNTcyNThjYTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhhMjcyNDY1NzUxOTUwNTUxYmZmNDEyNDc0YzA2MjE3NjUzMDIzNjZlOTE2M2UxZDY4NGRjY2JmZDU3MTc4YTkifQ"
         }
       ]
     },
     {
       "id": "claim_21284336e2a545ddb4f40b5163d9462a",
-      "statement": "`pipeline.py` requires a source directory for ingestion and full-pipeline mode, supports individual ingest/review/promote/topics/lab dispatch, and its `--dry-run` path prints dispatch details without calling the agent.",
+      "statement": "`pipeline.py` requires a target argument for every configured single step and for full-pipeline mode; it supports ingest, review, promote, topics, and manual-only lab dispatch. Its dry-run path prints dispatch information without calling an agent, but does not run normal step validation or compute the eventual verified-draft list.",
       "evidence": [
         {
-          "resource": "repo://_scripts/pipeline.py#L105-L108",
-          "version": "repo-lines-v1:sha256:9ba001ffe7c6e73bfe49c02dad14924fa80da89c518617576a9e0c70ac071d28:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmFiZGNkZDA4ZTkyMWU3YmJmMjQ1YjFiMTQ1MDZmYzZjNmNkYjZlYTM1MDFjNmYwZWIzNmVjMWFlMDAxYmQ4MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk3YzcxMjQ3YWYzY2QxZWRmNTU1YTdkMTA3NTkzMTU3ZjZkYzJhMjJhZjBkZTgyZTc3NzRhYmYxMGY4YWRlMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTE4YWQyNjkxMGIwNGUwNTFjNmNiYzc3NDJlYjJmZjkxZTk4YTljNTJhN2I5MzZlMDFkOGNlOTgxMWJhYTRkNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWU1MzRlNTU2YWUzOTZhNDFlMGZmMDk0NTYzNThhMzU1MDY1YTkzZmNjMWMwMjc2OGVmN2RkMTk2MmY2MzM5NiJ9"
+          "resource": "repo://_scripts/pipeline.py#L150-L153",
+          "version": "repo-lines-v1:sha256:00234ab6c189a6b0284051742abcda3c1dff233034ec87bf4fd118b28dae727b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmFiZGNkZDA4ZTkyMWU3YmJmMjQ1YjFiMTQ1MDZmYzZjNmNkYjZlYTM1MDFjNmYwZWIzNmVjMWFlMDAxYmQ4MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk3YzcxMjQ3YWYzY2QxZWRmNTU1YTdkMTA3NTkzMTU3ZjZkYzJhMjJhZjBkZTgyZTc3NzRhYmYxMGY4YWRlMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmZhODVjMmE1Njk2YmZlYzFjYmJjNmE0MmJlNzY4MDliY2Y4NTQ1MTJiODJkOGM5MzIyOGVjNmNiNmVjNjAxMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWU1MzRlNTU2YWUzOTZhNDFlMGZmMDk0NTYzNThhMzU1MDY1YTkzZmNjMWMwMjc2OGVmN2RkMTk2MmY2MzM5NiJ9"
         },
         {
-          "resource": "repo://_scripts/pipeline.py#L126-L167",
-          "version": "repo-lines-v1:sha256:f8044faf73ab2aff0cf1b31a5967e0312a71520ef6896ca71af193624a96dee2:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyZTMxMjU3ZGMwYWUxZDU5MzAzN2MyODBjOWFkNTA4MTliOGE2YzhjZjcyOGJlMDcxNmQwMGEzZWVjYzA0YmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0MWRkMzBmYmU0OTViMjZkNTkzMTA4MmNhNDgwODk2OWUwNzJhZmZiOTg1NTIyMmQzNThiMTEwMzFkMDk5NmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRlNzU3NWMzYjc3NzZjZjJmOWMyYmZiY2E0NGYyMTQ4MTNhNzgyN2VhYTljMzg0NTRjNzAzYjY4OWE3NDQzODYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ3NzE3MDliZThlZjIwM2VmNmU3YzE4NjhjNzM0NGY3ODRiNzRjZDM5YTM5NjVlMzVmOWRmY2VlYTZmZWExM2IifQ"
+          "resource": "repo://_scripts/pipeline.py#L171-L226",
+          "version": "repo-lines-v1:sha256:e6fc32d0d4f5d610fa188f5560a7adfdc5aa580ff4dee4449472316688cf121e:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyZTMxMjU3ZGMwYWUxZDU5MzAzN2MyODBjOWFkNTA4MTliOGE2YzhjZjcyOGJlMDcxNmQwMGEzZWVjYzA0YmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiNWM4MjYzMmZjODJkNGIyYzM0MGY0MjU1OGJhM2RmYTMxYzc2NTVkZjZmY2MxNjhiNGZkY2U1N2ZhYzYwNDMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRlNzU3NWMzYjc3NzZjZjJmOWMyYmZiY2E0NGYyMTQ4MTNhNzgyN2VhYTljMzg0NTRjNzAzYjY4OWE3NDQzODYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhNmU0NTU3NzYwMzA1ZGQ5YzVmOWY4NGM1M2E0NDZjYTc2NjFjZjA4YjIwODIwMWZjYjQ2MmM1ZTg0OGU1ODUifQ"
         },
         {
-          "resource": "repo://_scripts/pipeline.py#L169-L190",
-          "version": "repo-lines-v1:sha256:f818f8ef273574687d360f2eff6b01edbffeb23a143fdf7a757292bb3b89fe93:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2MGM3NWU4M2NmMzE4MjZjZDZlNTc4NDNmZTBjMTZkZjI4OTJjNTVlYWU1MDM5YzZkOGQzMjQ5YjY4N2JjMzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5ZTdjYmQxNjhkMWE2ODMxOWMyOGUzN2E0NzYwNmIyY2FiZjE5OTc1ZTljODJjYjMwMjRiNTlkMGY1NTA4NTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEzMjkzNTc5ZTQyOGZiYjllMmM0YWUyZmZmODYwMjU4ODYyODZkNzU1ZjMxYmEwM2VjZDljYWE0NzVhN2VkMDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkzYWJlMDk1Mjk2N2MxOTdjMjVkYmU2NjBmNTk4OWQwYjY3N2Y1NDQzZGRlNWYyNzk5OTNiNGYyM2I5NzUzZGEifQ"
-        },
-        {
-          "resource": "repo://_scripts/pipeline.py#L34-L38",
-          "version": "repo-lines-v1:sha256:435b0b2f141e465f957f9c1b3a1f0e04296e480aaee892d21d14c8f0b90f60dd:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzU1NzFlMmRkZDU4YWNkMjFlNWE1ZWZjYWE4YmU4OTZiM2I2YTk1MGJjYTcyNTliODQwNTY2OTlkMjU5YjU1NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2UyMjVmYTcxNmQzNjAxZTU5NmVkYzMxNTEyYTY4NDQ5Y2MyOGZhM2ZiNjI0NDc5MzYzYzBkY2FkYzJkYjM0MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzQ4MTA3ZWY2Y2Y3MDkwN2U5OWRmOTU3NTU4Y2MzZDhkMDM5YTgwOWVjMDczM2I4Yzk4ZDNhYmFkMThkYTVlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzQ4MDYxNTM0YmQyODNkNWY1NTQzMDhhZjYzZDAzMjY0ODUyZDc0ZTAzZTU1ZWU2NDZmNjZiMGM1OTY0ZDI1NSJ9"
+          "resource": "repo://_scripts/pipeline.py#L34-L39",
+          "version": "repo-lines-v1:sha256:c897aa5b147e39f92403f3afa76acef4543207c6c4f2cee3309c1bcc706440be:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzU1NzFlMmRkZDU4YWNkMjFlNWE1ZWZjYWE4YmU4OTZiM2I2YTk1MGJjYTcyNTliODQwNTY2OTlkMjU5YjU1NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmIzMzQwYzUyOWM5NzU5ZjhkZTZjZjYxYTkyYzFjZjE5ODY2NjI1YWFiMmEyNTYxMGQ3NjVjMWEzYTg1ZjlhOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzQ4MTA3ZWY2Y2Y3MDkwN2U5OWRmOTU3NTU4Y2MzZDhkMDM5YTgwOWVjMDczM2I4Yzk4ZDNhYmFkMThkYTVlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzQ4MDYxNTM0YmQyODNkNWY1NTQzMDhhZjYzZDAzMjY0ODUyZDc0ZTAzZTU1ZWU2NDZmNjZiMGM1OTY0ZDI1NSJ9"
         }
       ]
     },
@@ -87,8 +91,12 @@
       "statement": "Although agents declare `max_concurrent` in `pipeline.yml`, the runner selects and executes only one matching agent and does not enforce that configuration field; the bundled command strings include permission-bypassing flags, and commands are executed through a shell.",
       "evidence": [
         {
-          "resource": "repo://_scripts/pipeline.py#L62-L84",
-          "version": "repo-lines-v1:sha256:09d5b463d0ee4f4ac49d8eb16955a10e79bac82bb1987982d48b28801c08c67f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2YjhiOGRiYjQ4OWE3MTM0MTYwNGUxODc0ZTQ4ZDFkYWYxMjg2NTlhNGMxY2UxZjcyODIzNDY5Nzk1OWE2NjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhMTFjMDU2N2QwYTVmOWU5YjEzNWY2NWNkMjUzNzJkZmQ2Mjg3NzVmN2MxZWQyNTNmOGJhZDQyZGQyZDY2NjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVkN2NhYTY3M2IwZDMxMzA1NzBjODg5ZDFjNzk5ZGE0MWM1MWJjZTMwMjlkOGI5MjBkMGExNjc2YTQ0ZjdkMDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgwZjI4ZGEyNGNiYjc4MDY0MmQ0NjRjZDBjYjIyZWUzNTQ2ZTYyMGQwYWRiZDg5ZWM0MmIzYTBiM2YzYjYzNjUifQ"
+          "resource": "repo://_scripts/pipeline.py#L106-L123",
+          "version": "repo-lines-v1:sha256:92edd97ffbc8a400a9c209db5bbfb80f83a375be83623130e146748831ad6437:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4YjBkYTY5ZDc4YjhmMTM5MDMyMTJmYzUyODdmY2FjYjczYzllNjZjYjJiOGIwYTY4OGI3ZTZlYmRkODllNGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhMTFjMDU2N2QwYTVmOWU5YjEzNWY2NWNkMjUzNzJkZmQ2Mjg3NzVmN2MxZWQyNTNmOGJhZDQyZGQyZDY2NjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgwMDBmYmQ4NWI0NDhkZjE2ZmQ4NmIyODM1NzY0N2UzYjBmYzRmOWRmMjdhZDM2NjdkMDA4NzY2MmJjNTVkNjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUyNjBiM2RkYjMzNTQwZmY4MjJjMDYyYWY1ZDNhZDY0YWQ5OTA1ODY0NzMwZWU4MTg5NjQwMGNmOWY2YWE2MDgifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.py#L63-L65",
+          "version": "repo-lines-v1:sha256:ad8b050f239878750afa7fe2b1b1a87247e5e8b6ba8449a0bccd15df16948cf7:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDZiOGI4ZGJiNDg5YTcxMzQxNjA0ZTE4NzRlNDhkMWRhZjEyODY1OWE0YzFjZTFmNzI4MjM0Njk3OTU5YTY2MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWRmMzczZjllMWUxNzE0ZGI2MGEyMGM2YzBkNTU3Yjg0OWU4NzNiOTJiNWQwYTdjNzVmZWIxMDUzMTE5NmM2MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWQ3Y2FhNjczYjBkMzEzMDU3MGM4ODlkMWM3OTlkYTQxYzUxYmNlMzAyOWQ4YjkyMGQwYTE2NzZhNDRmN2QwMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWEwZGQ1YWYwZThlODJmYjBhYTkxNTFhYTNkNzlhYjg1MWY2YjJiZTA1ZmUwNWU5NjMzNDIzYTMzZGZlNGFlYSJ9"
         },
         {
           "resource": "repo://_scripts/pipeline.yml#L20-L49",
@@ -171,10 +179,24 @@
           "version": "repo-lines-v1:sha256:74cd72e29df153947aae7105877fa21bd0306cc21b0139be1d7116c9b67bd2ed:eyJzZWxlY3RlZExpbmVDb3VudCI6NTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkNDA2YjM0YTU4M2Q1NzM5NTFiN2UyMDQyMjM2MmZhOWU1MGMxM2I0MWIxN2FkN2MzMWNjMTc1Y2Q5ZmI3NTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJiYjQ1ZGI1Yzk1NTczNWM2ODBhOTRkMTE5MzI1ZGU5Y2U5NDhjYmE1ZmNmZTYwNmY0NGJlYWIxYzYyY2YwYzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2Mzc1M2IxM2ZkOTllNWQ5Mjg1MjZkOGJkNzk4NTFkMDI4MmE5MTYxMzNjOGQ1ZTk0M2MyNmNiYzk0YWUxZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
+    },
+    {
+      "id": "claim_2d77fbc224b44c43ab8d1602fcb1b72a",
+      "statement": "The focused `test_pipeline.py` test verifies that `reviewed_drafts` normalizes source paths, excludes a verified draft from another source, treats missing status as pending, and maps an unknown status to needs-decision; it does not execute the dispatcher CLI or an agent command.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/pipeline.py#L79-L103",
+          "version": "repo-lines-v1:sha256:1c635bffd5429f2a9814ecae5b9ea037b13fcd61a113fb2f0169b31c47ee02e2:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NDEyNDQxZTE0OWIxZDhlY2M0NjJkNzllZDhiZTMyYmI5NzExZWM0ZjYwMmYzYjE1Mjg2NDFjMjY0MjgyYmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlMWNkNjY4NmI4YThiNGZjZGVhMGQxNTIxYzQ5NzkzNzI2OWEyMzJhNGY0YjM4NzdjYjEyMTg4Mzk3ZWFkMzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE1YjBlMWFkYzEzMWI5NjE4OTllMDg1ZjM1ZTYwY2U4OTdmZGMwMmMyNDAyNWFkNmNhZTQ2NzY3ZmE4NmY3MDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM4NDA0YTE3ZDUyYjlmZWVkYTBmOTNiMWE1NmYxZGE0YWM0ZTdkNTQ5ZjY0ZDk4NWEwNTlkNzFlOWE1ZmNmY2QifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_pipeline.py#L1-L35",
+          "version": "repo-lines-v1:sha256:dc3f6fa4597de1c2f554289d1350f001f0166221d445eeba8aa820f6b997b19e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjYjlmZmNjYmE1MTQ2YjJkZDE3N2EzMGMzMDU3YTQzOTVlYmQ1Yzc0NWQwNzg5ZDJlZDk1ZDBjZjRhZmUyNzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiYTVkM2MzYmEzYmQ2OWNhYmQ3NTdlYTcwMDUxNzY5Nzg4ODdmZDI5NTUxNGZiYTY0NjEwMmVhNDI4NjBlNmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.5.0",
-    "at": "2026-09-05T08:40:09.738Z"
+    "at": "2026-09-06T11:16:33.676Z"
   }
 }

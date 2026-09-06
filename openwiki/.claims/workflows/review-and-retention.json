@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:b47a25b240f643efb31191e98eb2967f46160ef4dc12cfb3b529856a798869f5",
+  "pageVersion": "sha256:0741381617cd5efbf9f388e803ad9722256479fa680999ccb92a2ca987963aa9",
   "claims": [
     {
       "id": "claim_920684aac8684d5d99186f0b50bd166d",
@@ -129,24 +129,6 @@
       ]
     },
     {
-      "id": "claim_527711d9c530487abff4c211a020dc86",
-      "statement": "The simplified scheduler defaults interval to one day and ease to 2.5 with a 1.3 floor; correct results multiply interval by ease, incorrect results reset interval and reduce ease by 0.2 with that floor, and both append a dated result and calculate the next review.",
-      "evidence": [
-        {
-          "resource": "repo://_scripts/sm2_scheduler.py#L12-L15",
-          "version": "repo-lines-v1:sha256:d6e2f985b9cbe5addc6063cb09c56af4d91381c64eff95e5db6f865b47cb57e3:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODgyMTlhMjQ5MTQwMWMyOWZmY2ZhY2Q5MzM3NGJkYzM4ODZlMDMzMDVlY2M5OTE0NGRjNWFjNGMzNTAwMDEzMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWQzN2EzM2QwNzNhYjhkYTI5ZGM3NGNlNmE4OTEzMTgxOGE1MmE1YzE2NWQxNmYzMWQ5OTE5OTdmMGU2NmNmNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWRlOGExOTc1Mzk0YmUyNDY4ZTAxMTNlMGI0NDQzNTBiZDg2N2MxM2I5N2QwMWQ5NzM1MDMxZmEyODM3ZTYxNCJ9"
-        },
-        {
-          "resource": "repo://_scripts/sm2_scheduler.py#L44-L76",
-          "version": "repo-lines-v1:sha256:8622ab7f69faa1cc4f1a54067795a35d94cec88c3a4b208a912a9db4cfdfbb7a:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjMjYzZjAwNGFhNDZkZjI2MTQ5NTE0ZTE3MjhjMzU3ZTUwNWY2OGNiZWMwNjQyNzc2MmYyNDI4NjcxZWQ5NWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiMWUyZGIyNmQwMGIzM2RhMDkxN2EzZTYyYTJjMzA0MTY4MzFkNzNmMzA0NGQxYWI0NDI0ZmNiNGI1MDMwZjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjYzRhN2QxY2M3OTZhYmEzZTQ2NzIzMzI3ZjUxN2U5ZjgxMTk4MmQyNTBmMDcwMjk4NmU0YjU3NjRhZDk1ODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3NzJkOGMwZGM1MGJjMTBkN2Y3M2Q1ZWJiMzk4ZjQ4MmNjNDM5ZGIxMTU4ODBmYWVmNmU1NmY1YzgxMDAzZmIifQ"
-        },
-        {
-          "resource": "repo://_scripts/tests/test_sm2_scheduler.py#L48-L68",
-          "version": "repo-lines-v1:sha256:99733ed0ce319cbeb7bc2fa336e8ed9b99ed931f01f88d1052a0b7a5b98080b7:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcxZWJiOTJkNmRhYTc0ZGE0MjBkMWExOWE5MjJiN2VhYTc4NDQxODM3NDg1NWNiZDY1YzEyNzIwNzQ4OWQ2YWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmNWZkNzgyOGMxY2VhYjdmMDAwZDMzZjYxNDBhNWI5YjNlOTU2YWNhOTZkYTAxM2Q5Y2U5MzRiOThhMTg3NjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjYzRhN2QxY2M3OTZhYmEzZTQ2NzIzMzI3ZjUxN2U5ZjgxMTk4MmQyNTBmMDcwMjk4NmU0YjU3NjRhZDk1ODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjllYWIzOTdmZjE5NmUzNjBkN2ZhZWEwZTgyMmE0OGMxNGIyNTVhZjQwZDVkMmM0Zjk5NWYwYmQ2NTRkMzJjOTEifQ"
-        }
-      ]
-    },
-    {
       "id": "claim_91491f5c8d45469f9d3cfbd9ea3911f2",
       "statement": "The session persistence path rounds the scheduler result to a positive integer interval and recalculates `next_review`, while the direct scheduler helper can retain fractional intervals; this is an observable distinction between the two update APIs.",
       "evidence": [
@@ -220,19 +202,15 @@
     },
     {
       "id": "claim_d30e429d75414d75850047dd3e0d7eb1",
-      "statement": "Weekly refinement may write a dated inbox report, quiz bank, generated indexes, and refine log, but it must not mutate or promote `concepts/`; needed canonical changes must be reported for human review, and a scan without answer results must not arbitrarily change schedules.",
+      "statement": "The weekly-refine prompt confines writes to a dated inbox report, the quiz bank, three generated discovery indexes, and an appended refine log; it prohibits creating, changing, deleting, moving, or promoting `concepts/` content and prohibits direct draft promotion.",
       "evidence": [
         {
-          "resource": "repo://_scripts/prompts/weekly-refine.md#L143-L192",
-          "version": "repo-lines-v1:sha256:055f1bf3787628950b8eab24cfd2619d86271a3ac1ba5ed0fa4a59d63c1456cf:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjNTMwMjBhOWZjZTFiOTZmNDZlMGVhODUzNDY1NTNjMWU5OTFmM2VmN2RhYzI0ZWNmYjQ5OTNlZTY5ZTg0M2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3MDBhYTdjMTNmN2ZmNmNmYTY4NzIzZWI3MmQ2NGFlZjY0Y2E2NGJiNjg2OTVjZjBhMjI1NWMyNjY1ZWViNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg5ODIxM2E0Njk4ZmY4NjcwZjVhOGVhNDVhMmMzYWE1ZDdkMjJmNmUxYTBhZTkwYjMxOGM1ZTQwZDY4MTU3OGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkyYTQ2YWQ5ZmI2NTgxYzZmODZkODdlMzY2NWZiMGJiNTMwYTZiYzlmYmRjZWQxMmY0YWNjODAyYjhjYmY2NzUifQ"
-        },
-        {
-          "resource": "repo://_scripts/prompts/weekly-refine.md#L217-L225",
-          "version": "repo-lines-v1:sha256:307f2805cad987bb02c3340f98f33dedab5c5995b7321641e70596884b6ef806:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTVlNzY3NjExNThhNDFmMTQ2Y2NhNzgyMzQ5NTAwNWQ0NTI5MGM1YWQ4NzAxYjM2YTFiOWM3Mzg4ZGMyMjA3NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2YxYmI5N2YwYzRkOGY0ZDM4N2U0Mzc1MjcxOTEzODIyZjNiZDVlOTU3OWU1MjEzOWJjY2Y1ZmFiNzc2YThjNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTg3NmMxZWZiYzQ3NjE3NWJiNzJiOWI0MDIxYWNkNWI2OGI1MjIzZWExZTA4Y2JkNWZlOTBkYjQxNWZhZTc1MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L195-L225",
+          "version": "repo-lines-v1:sha256:189a680e1f8cc9cd49b5774117f58c67ab3549f7ea0d1b47eab061348f9564ad:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRlZDc0Y2ZiYWY5M2RlNzk4NjY1NDMwOTdiODFhODI1N2U3ODRjZTE0MjljMjFkYmM0NWU5OTZiNmI0ZjExZTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3ZGQ0YTU4YmVhZGMxN2E1NDZiODM1MDQwNjgyYWZiMmNlZjFkMDQ5YWU0NjE0YzUyNWE3ZjZmNDFiZGU2NTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE2MTE0YTJlN2NjZWI2OGU2ZjJkYjczNWI1ODMxYWM0YTY1M2IxNjJhY2QyZDhhMjNkNzIxN2RmMWI4ZjAyZjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNmMWJiOTdmMGM0ZDhmNGQzODdlNDM3NTI3MTkxMzgyMmYzYmQ1ZTk1NzllNTIxMzliY2NmNWZhYjc3NmE4YzYifQ"
         },
         {
           "resource": "repo://_scripts/prompts/weekly-refine.md#L26-L43",
-          "version": "repo-lines-v1:sha256:ad2419a86cef8473e69360b7ebc1e120ffa882b2a29f0d4c2513d54d00486a0a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwNGVhMGNhM2M4MmI4MGI0MGYzNDA3Yzc5YjU4MGUxY2ZhN2NjMjkwMGJlN2QwMDk3ODhhYmVmYzRiZGY5MmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkMDdkZGFmNGIzMzA5YjE2ZWU3MjFmMWMxZmVkMGNhMGExZDBkNzFkYzliOTgzNDk1NzJjOTc3NTE3ZDY2ZTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE0MzQ5NDYwNGY0ODEwNjE5NjM3NmNiODhmNTNkODQ0NWIwZjVkMzMzMDczYWFjZDMxYjkxNTBhMDEyMTRlYTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyMzkzMGRiYWRhOWQxMGE2YzJlZWNlMGNiYmExZDEwMjNlMzRjNmJlZTI5YjMyNThkYmViN2JiYjNjOWJhMWEifQ"
+          "version": "repo-lines-v1:sha256:a119fa38089b325bf9ff931deaa5fe5876268e6254b9825bf1f62eab0467fc12:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwNGVhMGNhM2M4MmI4MGI0MGYzNDA3Yzc5YjU4MGUxY2ZhN2NjMjkwMGJlN2QwMDk3ODhhYmVmYzRiZGY5MmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjljYjBkNWFkMjIxMWNiMzE0NzQ3N2ZjMjJlNzBjZGQwYWJhNGIyY2NhNmYzMjQ3NGQ4OGEwZjVlNzc3ZmZiNzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE0MzQ5NDYwNGY0ODEwNjE5NjM3NmNiODhmNTNkODQ0NWIwZjVkMzMzMDczYWFjZDMxYjkxNTBhMDEyMTRlYTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyMzkzMGRiYWRhOWQxMGE2YzJlZWNlMGNiYmExZDEwMjNlMzRjNmJlZTI5YjMyNThkYmViN2JiYjNjOWJhMWEifQ"
         }
       ]
     },
@@ -247,30 +225,104 @@
       ]
     },
     {
-      "id": "claim_d217fc6f7941474393d7de4e79ebe36c",
-      "statement": "Focused tests cover session end-to-end behavior and property-based history/accounting, scheduler outcomes/due filtering/persistence, review-pack ordering, and CLI-to-session delegation.",
+      "id": "claim_d706d7f17a4c4d77a03da3426a5d9aa3",
+      "statement": "In a full pipeline run, source-scoped persisted draft verdicts are grouped after review and only the exact `verified` paths are supplied to promotion; the promotion contract adds initial quiz entries as part of successful promoted-concept work.",
       "evidence": [
         {
-          "resource": "repo://_scripts/tests/test_quiz_cli.py#L33-L132",
-          "version": "repo-lines-v1:sha256:c95c2cfb3996112cd178b5b4d92eeb4504edc18c69c7dd3250ab3525733862e9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJjYmIyMTZhMzcyMTE3MjE3NTMyYWQ4ZjM0YzM5OWRiMTY1M2UwNDEwNDllNGJiMjRkYmI3ZWMzNGI5MmUyNGM2IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzOTRhYjJmYzAyNDY2NjQ2MTgzMjU3ZmRhODk5OWE4MDdiZGZlYzQzMDBlZmVlNDc0YTczNzAwNTJhN2YxMTZlIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJjMjcyZGZkYWEyNzcxNWZlMTFkZDE2MTBmN2NkNjQwYmMzZTkyZGQ1M2NhZGNiMmI1Zjc1NzVhZDc2MDUzMGRjIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MSwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJhZGQyNDQ1ODJiNmZiMDNkMjNiODQxNWFiZWNkMzQ2YjBjOWY0NjZiNmY3NTJiMDY4MTg5Y2U3ZTlhMmRjMzUwIn0"
+          "resource": "repo://_scripts/pipeline.py#L228-L255",
+          "version": "repo-lines-v1:sha256:8399c6b8f770c361177e6eadbb0a7369f1d2aa52eb5825ef6702b878e66617b5:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk1ZGNkMjdiNDU3NGU4MzU4MWI4YWIxYTFhMGIzYzQwZDQzNjlkZjdhODVjZDA2MmFhZjQyOGVlOWU2YmQ3ZjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwM2Y0Njg2ZmZiMTQxOWU2MzhhNzAyZjhiYjE3YTlmMGM4Y2I4Mjk4NjI5NjEyM2IxNDgyMGY4YWI3ZDg3N2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjViNjQxM2YwYjhlMzcxYjI4NDFlN2IzNzU1ODM4ZDFjNDM1YjgyNWVkZGZjYzkxMDM1MzIxMDVlNDI3YTRhMTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJmZWE1MzYzYjZmNTIyMGE4NzVhZTNiNzBlNzc1N2JiMGJiN2ExNGE1NWMyZWE1MjI1MzRiMTFkMWE3NjczZGUifQ"
         },
         {
-          "resource": "repo://_scripts/tests/test_quiz_manager.py#L70-L104",
-          "version": "repo-lines-v1:sha256:32c41d5f51ba0c0c5ad3316a31e5da9d5d3d92bcf7d4ce9c125cf1080ffd4e97:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4OTE5YzBlYzE1OThiN2Q2ODhiZDQwMjFkMjE0NzkwYzNmY2IwZGI3YmJjYWE2MDI5NGE3NDkzN2E5ZGZiMWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmM2RhNzllMTliZTk5NjBkZDYzMTFlNDA3NzZmMWU3MjhmNWNlYzhiMGYxMjE4YWM0MmViNmFlZDM5ODA1OTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA5MWU4MWYzMjEyYjM4MmFiYjJkZjllMDA5ZjZjMDc3OWU4M2Q1NzU4MDJlNTg0NjY3MWJkODZiY2FlMjg1NjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhNjJiNjk4MjY3ZDNlNTMwMTJlNTkxYjA1MzVjMjBiN2FlY2RhNTdmYmI3ODM0ZjY4NzVjZGRiOGM4MjIyODIifQ"
+          "resource": "repo://_scripts/pipeline.py#L89-L103",
+          "version": "repo-lines-v1:sha256:78400047fa7e9a9fe232572a589c3ad41e603c15c43d768625aa34eee5086bf5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkMTdlZmFlOWI4ZGJkN2MwOTA3ODQ3MDY1Y2VmN2QxNTg5NDA4MzZlNjgwOGQxN2NhNzliYjZlNzk4M2ViNTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlMWNkNjY4NmI4YThiNGZjZGVhMGQxNTIxYzQ5NzkzNzI2OWEyMzJhNGY0YjM4NzdjYjEyMTg4Mzk3ZWFkMzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzZWJkYTZiZWYyMDIzZWE3YmUzMTYwMzEwYmM5YTQ5Mzk5MGQ1ZWE1MzMzNzgxY2NiYzRhYzhkZDllM2IxNTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM4NDA0YTE3ZDUyYjlmZWVkYTBmOTNiMWE1NmYxZGE0YWM0ZTdkNTQ5ZjY0ZDk4NWEwNTlkNzFlOWE1ZmNmY2QifQ"
         },
         {
-          "resource": "repo://_scripts/tests/test_quiz_session.py#L125-L257",
-          "version": "repo-lines-v1:sha256:d5a1d6ec2a0c642d65459e50dcaf3b498aba4e470906581fbc84b50aaf737a59:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4ZGZiZWM4YzM5NmI1MzhkYWMyOTIyYzY1OTg5MzJjODNkZWRiZGM4NWU1MmNjYTk4YmQzZTM2NzRhOTVjM2I4IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI2OGIxZjI1NmI5MzNkM2E5NjVjNTQ2NjVmMGM3YTRlNDBhY2E3MTIzNDYxNjM2OGQ2MmFhMzZlZjM1MGVhOThkIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI2NDA3MmJjNzY0NjViZjUwOTI1ODQ0MzI2ZGIxODJmNjU0M2QzNDQxOGM5YTg4OTM0OWZkYTZmMGQyZjNmMzBhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlYjA3MmMyNjU2MDg2NDAyZmZhNTAzYWMzY2IzZTUxNmY4Njk5NjFkZDZkYTUzZjg0ZGJhOGM2MjRlMTE1NTA2In0"
+          "resource": "repo://_scripts/prompts/promote-concept.md#L132-L175",
+          "version": "repo-lines-v1:sha256:67ca5999232229bf93f93e7ec98ca1caceb08330ff562e84d2098781b5236e96:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyYTFmZTUzOTAxM2JmOTc0NmE1ZDE3ZjIyNWQ2Yzk0NzI5MjIyODIzZTIxNzQzZmJlMjI3YmExZWMxZDQxMDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjViYTI2ZTZjZjdiMWEwMzM4ODAwY2U5MjEyNjk0ODI3NTVlYWQzOTg0MmFmM2U4OGM0ZjdiOTI2OTk4M2I1YTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJjMzZhYmI1ZWVjMTMwYzQ0MThiZTQ0ODZhNzA0YTkyNjg3ZGQ2NDU5YzgxN2JiODBkZDZhMmY2NDc1M2E1ZmYifQ"
         },
         {
-          "resource": "repo://_scripts/tests/test_sm2_scheduler.py#L48-L160",
-          "version": "repo-lines-v1:sha256:819cfcd333aca6eb484e4c015eac8bcea7290c2f30f470642fe47b436f788c1b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI3MWViYjkyZDZkYWE3NGRhNDIwZDFhMTlhOTIyYjdlYWE3ODQ0MTgzNzQ4NTVjYmQ2NWMxMjcyMDc0ODlkNmFjIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI3MTM4Y2E4NjY2MWZmNmE0YTc2MDVjZDk5OTczZWM4YjcwYTVjNDEyMWQzOTAyMjBjNzJiZjNjNjkzYzI5YzJkIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI4Y2M0YTdkMWNjNzk2YWJhM2U0NjcyMzMyN2Y1MTdlOWY4MTE5ODJkMjUwZjA3MDI5ODZlNGI1NzY0YWQ5NTg5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MiwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJkNjc0ZTBjN2ExZTcxMjFjNWNlMDg2N2NiZmJkODU0Zjc2NTEzNjNkNWY1MGMyOTI3YTAwMjE4M2UxOWU2ZmM2In0"
+          "resource": "repo://_scripts/prompts/promote-concept.md#L217-L227",
+          "version": "repo-lines-v1:sha256:0cd4d3822c447bf7fe8128ab8dc1ef7124d899659acd4fba35e10bfce9742aba:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkYzljNmZhM2RiMDdhODZkZmFkYzEwZTc4M2VlY2IyNGFlZmI2ZGNlMjg0ZjkzNmMwNTAxNWQ3ZWIzMjcwOTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ4MjZlOTU0NWFmOWM1YjM3Y2M2ODIxNjNhNzRjMDVlNGQ5ZjViNzhhYjBiYjRlZmE4ZTZlOTIyOTFmZDZmNzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE4MTNlZjk5YTVmMDJlYTMzNTcyNjE3ZjY2NGM3NTBmMWE1YTA3M2EzZGVhZDkyY2I0MDkzZDRkZDA0YWVjMTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJjZmY1YTc4ZThjNzQ5MzZhOGEyZDU1NWEwYWRjNGVhNmJmZWJkOGExNWFiODY2NWQ1OGQ2YzYxMmY1ZWE4YmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_381578919a0b4490a09839c93d2e548b",
+      "statement": "A successful quiz submission updates scheduling state only for the matching quiz-bank entry, while a canonical change identified by weekly refinement must remain a recommendation for later independent evidence verification and promotion.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L218-L225",
+          "version": "repo-lines-v1:sha256:6f5aab782a7f46d070fd20b744a3b81a3b2983202cba9e7aae697bce75144f9b:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTVlNzY3NjExNThhNDFmMTQ2Y2NhNzgyMzQ5NTAwNWQ0NTI5MGM1YWQ4NzAxYjM2YTFiOWM3Mzg4ZGMyMjA3NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDdkZDRhNThiZWFkYzE3YTU0NmI4MzUwNDA2ODJhZmIyY2VmMWQwNDlhZTQ2MTRjNTI1YTdmNmY0MWJkZTY1NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTg3NmMxZWZiYzQ3NjE3NWJiNzJiOWI0MDIxYWNkNWI2OGI1MjIzZWExZTA4Y2JkNWZlOTBkYjQxNWZhZTc1MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2YxYmI5N2YwYzRkOGY0ZDM4N2U0Mzc1MjcxOTEzODIyZjNiZDVlOTU3OWU1MjEzOWJjY2Y1ZmFiNzc2YThjNiJ9"
+        },
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L37-L43",
+          "version": "repo-lines-v1:sha256:dc41dd29518c6c88a8c1278b92bdbe8d10c6329b02764d64a053d26f6ad2a918:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjA2ODRmZWJhNDBkNjIzZGE0OGM2YTZjZDkzM2QyNGM4YjFjMTkxMTAwNmZhNjI1NDI1YTI3ZjRjYWQxODlmZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWNiMGQ1YWQyMjExY2IzMTQ3NDc3ZmMyMmU3MGNkZDBhYmE0YjJjY2E2ZjMyNDc0ZDg4YTBmNWU3NzdmZmI3NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGU5ZjFmYzQ2NmJiOWE5ZjFkYWU2ZGQ2Y2FjODQ1YjZjOWZhMTk2NzI3MTcyM2E1MTU2YjQ0ZGQ5Yzk2NGNjZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjIzOTMwZGJhZGE5ZDEwYTZjMmVlY2UwY2JiYTFkMTAyM2UzNGM2YmVlMjliMzI1OGRiZWI3YmJiM2M5YmExYSJ9"
+        },
+        {
+          "resource": "repo://_scripts/quiz_session.py#L304-L343",
+          "version": "repo-lines-v1:sha256:35bc96dd465b228c7a6ba62636125660fba90b761fd9009af208f4b5867c98cd:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhNTBkYTk3MWNmOTBiNWZkY2E5OTE1YTE4YjU3OTdlMWExNTUwNGQ5ZTBkZTI0ZTMzNzBhOTA5NmZiZGEyYzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM3Zjc3ZTQxMWQ5NmM1ZTRiNTM0MzE5YmRlOWQ3Y2Y3OGUwNmM1MDA3MGMxNGVmZmI5MjcyYWQwMGMyMjA0ZDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMyYzU0MThlMWE4NjJhN2RhMDQzODg5ZDE1MGE2MzY1Yzg0M2I4YTVmNzc3MjgyMWIyNzU2YzRmZGFiNDhkODYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c80a3afd3a0747b3928a1084577d9fd4",
+      "statement": "Bank persistence is an unlocked read-modify-write operation: a submission reloads the file and rewrites it after replacing an id, so concurrent sessions or external writers can lose updates.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/quiz_session.py#L304-L334",
+          "version": "repo-lines-v1:sha256:a43196e7ba8ae987a051d8e6a1210de86be6e02e81286ae3240377835e6e217e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhNTBkYTk3MWNmOTBiNWZkY2E5OTE1YTE4YjU3OTdlMWExNTUwNGQ5ZTBkZTI0ZTMzNzBhOTA5NmZiZGEyYzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5ODI5NzZkYWU0MDQ0MzA3ZDRlNWIwNjYwN2JiMWFkY2Y0ODU2ZmIxZWE5NzA3Nzk0ODMzOTBkZWJjNDgyMjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM3Zjc3ZTQxMWQ5NmM1ZTRiNTM0MzE5YmRlOWQ3Y2Y3OGUwNmM1MDA3MGMxNGVmZmI5MjcyYWQwMGMyMjA0ZDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBhN2MyZWI3MjY1MTZlMWFlZWQ0N2YwZjkxODEwMjkyNGVlZTYyNGFjNGIyZDY5Mjc1ODhjNzIwZmQwMDJkMDUifQ"
+        },
+        {
+          "resource": "repo://_scripts/quiz_session.py#L48-L67",
+          "version": "repo-lines-v1:sha256:ba84ea15309e8b0ad9a6ebe8fa28ee067ce967a5782f0ecf3f7c4c7ccaf7437f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2YzViMTY1YTJmOGNmYzJjMjUyZGZiNjlkZmE5NjBjNTJlNjFhOTQ1NjVkMjQ2MTBjYjRjODE4YTc4N2NiZDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU0NDhlZGUwNjFkZjA3ZjRiNTYwNjc2ZWRlOTE2MjEwZTJiMDhjNDAwMzk1NzI1ZTE4NjY4MDZhNjczZTNhZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZiNWRhZmRlMzE0MTA1NjFjNzhkMDdkNmMwMjRlYTBlODI0MTRmZGQ2YjAzNjk5M2Y1ZmFmNWFlYzBiNzlkMDkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_227d630cb1414fb98f26cdce767d8031",
+      "statement": "Weekly-refine write restrictions are prompt policy rather than a filesystem sandbox: the pipeline runner executes configured agent commands through the shell in `kb_root` and treats a zero exit as completion without inspecting file changes.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/pipeline.py#L106-L123",
+          "version": "repo-lines-v1:sha256:92edd97ffbc8a400a9c209db5bbfb80f83a375be83623130e146748831ad6437:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4YjBkYTY5ZDc4YjhmMTM5MDMyMTJmYzUyODdmY2FjYjczYzllNjZjYjJiOGIwYTY4OGI3ZTZlYmRkODllNGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhMTFjMDU2N2QwYTVmOWU5YjEzNWY2NWNkMjUzNzJkZmQ2Mjg3NzVmN2MxZWQyNTNmOGJhZDQyZGQyZDY2NjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgwMDBmYmQ4NWI0NDhkZjE2ZmQ4NmIyODM1NzY0N2UzYjBmYzRmOWRmMjdhZDM2NjdkMDA4NzY2MmJjNTVkNjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUyNjBiM2RkYjMzNTQwZmY4MjJjMDYyYWY1ZDNhZDY0YWQ5OTA1ODY0NzMwZWU4MTg5NjQwMGNmOWY2YWE2MDgifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.py#L150-L168",
+          "version": "repo-lines-v1:sha256:cd99476d0bce36f40971434647b1887ddaf9c6b6409d9cd3a7217c32e3f47d98:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhYmRjZGQwOGU5MjFlN2JiZjI0NWIxYjE0NTA2ZmM2YzZjZGI2ZWEzNTAxYzZmMGViMzZlYzFhZTAwMWJkODAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwZTJhNDY1MDA5NWZhOTVkMGUyYmI0MWIyZGIyOTA5NGQzNDA0ZDI4Y2UxMjMzOWVjODhiYjRiNWM1YmU4ZjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZmYTg1YzJhNTY5NmJmZWMxY2JiYzZhNDJiZTc2ODA5YmNmODU0NTEyYjgyZDhjOTMyMjhlYzZjYjZlYzYwMTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg5M2JkNjZlMmJiNzFmM2I4YTkyNDA2NGJiZjdiMDdjNTkwM2E3NzNmYTRmOGMzNTQ2MDYwMzg2NjcxZDNhNzMifQ"
+        },
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L26-L43",
+          "version": "repo-lines-v1:sha256:a119fa38089b325bf9ff931deaa5fe5876268e6254b9825bf1f62eab0467fc12:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwNGVhMGNhM2M4MmI4MGI0MGYzNDA3Yzc5YjU4MGUxY2ZhN2NjMjkwMGJlN2QwMDk3ODhhYmVmYzRiZGY5MmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjljYjBkNWFkMjIxMWNiMzE0NzQ3N2ZjMjJlNzBjZGQwYWJhNGIyY2NhNmYzMjQ3NGQ4OGEwZjVlNzc3ZmZiNzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE0MzQ5NDYwNGY0ODEwNjE5NjM3NmNiODhmNTNkODQ0NWIwZjVkMzMzMDczYWFjZDMxYjkxNTBhMDEyMTRlYTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyMzkzMGRiYWRhOWQxMGE2YzJlZWNlMGNiYmExZDEwMjNlMzRjNmJlZTI5YjMyNThkYmViN2JiYjNjOWJhMWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_21c525d0dc774a7e9e623e458b279590",
+      "statement": "Weekly refinement may check bank format on a report-only run but must not change SM-2 schedules without new answer results; when it does apply a result, existing private records are retained and unrelated schedule fields are not overwritten.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L171-L193",
+          "version": "repo-lines-v1:sha256:f563ee83f0cff6da9b1c450caebd459bec2340de8746055435d7fdf2f72c3385:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0MTI1OWM4Yzg0MjY5ZjU1OTFiOWU0ODViMTk0Zjk1Y2FjOTFkZTFlYzIzNjUzNTg3YmUxMDliNzMzYjAzODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3MDBhYTdjMTNmN2ZmNmNmYTY4NzIzZWI3MmQ2NGFlZjY0Y2E2NGJiNjg2OTVjZjBhMjI1NWMyNjY1ZWViNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4MDkxOGFjNjQzMDcwNDAzMDA0MzI3OGFiYjE2NzAwMWM2ODM0M2ZjNWEzYWRmN2Y4MmI2MTY5NTI5Yjg0YWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkyYTQ2YWQ5ZmI2NTgxYzZmODZkODdlMzY2NWZiMGJiNTMwYTZiYzlmYmRjZWQxMmY0YWNjODAyYjhjYmY2NzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8aacc4b923a341a2849c89ab40819e97",
+      "statement": "The weekly-refine prompt makes its follow-up verification and decision output a recommendation boundary: insufficient evidence is marked as requiring more evidence, and `needs-decision` is reserved for multiple materially different directions with one user question.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L127-L131",
+          "version": "repo-lines-v1:sha256:39222201595fccd942e0e81be092dda7040e91d701934a4e92a1fc2588a0d73c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjhkYjhhYjcxODNkN2FjZGM2Mjk0NzdjNDkwYzY3M2NjYzdlZWJlMjJjYjQwMGQ2OWY5M2RlZDBmNjYyMTVlMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDg0YzUxMTllMjg0NzU2MWVjODg1YTdiNjE3NGZmMWUzMGFkYWMzZmY1MWU0MGJiNzVmZDkzMTczMzczMTYyMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjFkMDk1YWVhOThkYmE5ZWI3Yzc5YTdkYzM2ZWYwYWRlMTI0NmNmZDNlNzQzOWFmM2RmOWFiZWYzNWEzNDEwYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjhiM2IzMzcxZDNjOTZmZDIzZDQwZDBhMDE1MGQwMWVlZjc4NzZkZWQ4OTllOTFjN2JiNTE4NTQ3ZGM2OWYyNSJ9"
+        },
+        {
+          "resource": "repo://_scripts/prompts/weekly-refine.md#L37-L43",
+          "version": "repo-lines-v1:sha256:dc41dd29518c6c88a8c1278b92bdbe8d10c6329b02764d64a053d26f6ad2a918:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjA2ODRmZWJhNDBkNjIzZGE0OGM2YTZjZDkzM2QyNGM4YjFjMTkxMTAwNmZhNjI1NDI1YTI3ZjRjYWQxODlmZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWNiMGQ1YWQyMjExY2IzMTQ3NDc3ZmMyMmU3MGNkZDBhYmE0YjJjY2E2ZjMyNDc0ZDg4YTBmNWU3NzdmZmI3NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGU5ZjFmYzQ2NmJiOWE5ZjFkYWU2ZGQ2Y2FjODQ1YjZjOWZhMTk2NzI3MTcyM2E1MTU2YjQ0ZGQ5Yzk2NGNjZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjIzOTMwZGJhZGE5ZDEwYTZjMmVlY2UwY2JiYTFkMTAyM2UzNGM2YmVlMjliMzI1OGRiZWI3YmJiM2M5YmExYSJ9"
         }
       ]
     }
   ],
   "verification": {
     "by": "openwiki/0.5.0",
-    "at": "2026-09-05T08:40:09.738Z"
+    "at": "2026-09-06T11:22:47.615Z"
   }
 }

@@ -1,11 +1,11 @@
 ---
 type: quickstart
 title: Study Vault Quickstart
-description: Start with approved learning paths, choose a domain route, add a hands-on lab when ready, and use review to retain knowledge. This page distinguishes canonical learning material from derived discovery and navigation.
+description: Route study through canonical topics and concepts, then use optional labs and spaced review. For contributions, follow the source-scoped verified-draft lifecycle without confusing derived navigation with approval.
 tags: [quickstart, learning-paths, knowledge-governance, retention, labs]
 verified:
   - by: openwiki/0.5.0
-    at: 2026-09-05T08:40:09.738Z
+    at: 2026-09-06T11:16:33.676Z
 sources:
   - id: openwiki-source-f9899ad835a2972666763144
     resource: repo://_index/topics.md
@@ -15,14 +15,16 @@ sources:
     resource: repo://_scripts/prompts/new-source.md
   - id: openwiki-source-792d9b4fab22e29d325c1a72
     resource: repo://_scripts/prompts/promote-concept.md
-  - id: openwiki-source-6f5839457ae5477b69a31a0c
-    resource: repo://_scripts/prompts/weekly-refine.md
+  - id: openwiki-source-1d05bd79aceb2c744ed29ee7
+    resource: repo://_scripts/prompts/review-drafts.md
   - id: openwiki-source-faf78437a2e3fd3a1c2aa841
     resource: repo://_scripts/quiz_cli.py
   - id: openwiki-source-a849d3412f6dec7d48ad2424
     resource: repo://_scripts/quiz_session.py
-  - id: openwiki-source-3157dd7558008dcc412dd11c
-    resource: repo://labs/kiro-langfuse-eval/spec.md
+  - id: openwiki-source-48472eed2b7d05affcbff47f
+    resource: repo://labs/kiro-langfuse-eval/manifest.yaml
+  - id: openwiki-source-c2819cde93975d4de977b166
+    resource: repo://labs/README.md
   - id: openwiki-source-23775c3de52f3ab95a13cb8b
     resource: repo://README.md
   - id: openwiki-source-5edd4864bd096c5be05523df
@@ -37,72 +39,82 @@ sources:
     resource: repo://topics/mcp-record-replay-testing.md
   - id: openwiki-source-52965091ff4dbe494abea436
     resource: repo://topics/production-agent-runtime.md
-generated: { by: "openwiki/0.5.0", at: "2026-09-05T08:40:09.738Z" }
+generated: { by: "openwiki/0.5.0", at: "2026-09-06T11:16:33.676Z" }
 ---
 
 # Study Vault Quickstart
 
-This is a **routing page**, not a lesson or a publication workflow. Read canonical files for the knowledge itself: `concepts/` holds approved atomic material, and `topics/` holds curated sequences and prerequisites. Use OpenWiki pages and `_index/` to find those files, then follow the canonical links. A generated index can list drafts, so visibility in `_index/` is not approval.
+This is a routing page, not a lesson or an approval workflow. **Canonical learning material lives in `concepts/` and `topics/`**: concepts explain reusable ideas, while topics provide a curated order and prerequisites. OpenWiki and `_index/` help discovery, but are derived navigation—not authority to edit concepts, topics, quiz data, or labs. An index can expose a draft, so an entry is not proof of approval. See [Approved Knowledge and Write Boundaries](architecture/knowledge-governance.md) for the ownership model.
 
-> **Keep the authority boundary:** OpenWiki is derived navigation. It does not replace canonical material and does not authorize edits to `concepts/`, `topics/`, `quiz/`, or lab content. For the full boundary and change process, see [Approved Knowledge and Write Boundaries](architecture/knowledge-governance.md).
+## Take the shortest route
 
-## The shortest useful loop
-
-1. **Choose a curated topic** below and work through its canonical order rather than collecting isolated pages.
-2. **Read concepts as needed** for the approved explanation, relationships, and examples behind that sequence.
-3. **Practice with a lab** when you can state the problem and expected input/output; labs are optional and manual, not a required pipeline stage.
-4. **Quiz and revisit** using the spaced-review entrypoint. Results update review scheduling; they do not publish or revise concepts.
-5. **Maintain deliberately:** source intake, draft review, and human-approved promotion are the route for new knowledge. Periodic refinement can report issues and maintain quiz/index state, but cannot promote or edit concepts.
-
-For the complete source-to-retention flow, including the human approval gate, use [From Source to Learning Path](workflows/knowledge-lifecycle.md). For the review-session lifecycle and scheduling behavior, use [Review, Quiz, and Maintenance Loop](workflows/review-and-retention.md).
-
-### When you are adding knowledge rather than studying it
-
-The repository supports video, PDF, repository, web-article, podcast, and EPUB ingestion. Ingested material is normalized under `sources/`; an agent can create candidates in `_drafts/`; a person reviews and explicitly approves a candidate before promotion creates or changes an approved concept. Topics then organize approved concepts into a learning order. Do not treat normalized sources, drafts, quiz state, or generated indexes as canonical knowledge.
-
-The workflow guide has the source-specific commands and the full pipeline options. The important safety rule is that the configured pipeline dispatches agents but does not itself record human approval or enforce prompt write restrictions; review the verdict and diff before promotion.
+| If you want to… | Go here | Then |
+| --- | --- | --- |
+| **Study a subject now** | Choose a canonical topic in [the domain routes](#choose-a-domain-route). | Follow its listed order and open its linked concepts as needed. |
+| **Add material from a source** | Use [the verified contribution route](#add-knowledge-through-verification). | Normalize the source, independently review its drafts, promote only verified work, then curate topics. |
+| **Practice an approved idea** | Open the [Hands-On Lab Catalog](labs/catalog.md). | Read a capsule's canonical `spec.md`; labs are an optional, explicit branch. |
+| **Retain what you learned** | Run the [review command](#retain-what-you-learned). | Use [Review, Quiz, and Maintenance Loop](workflows/review-and-retention.md) for session and scheduling details. |
 
 ## Choose a domain route
 
-| Goal | Start with the canonical learning path | Use this map for orientation |
+| Goal | Canonical learning path | Orientation map |
 | --- | --- | --- |
-| Build a broad foundation in scaling, data access, failure handling, consistency, and async work | [System Design Fundamentals](../topics/system-design-fundamentals.md) | [System Design Foundations Map](concepts/system-design-map.md) |
-| Instrument distributed systems, operate telemetry delivery, or understand GenAI tracing | [OpenTelemetry Foundations](../topics/opentelemetry-foundations.md) | [Observability and Telemetry Domain Map](concepts/observability-map.md) |
-| Make LLM behavior observable, evaluate it, build stateful agents, optimize programs, or work with MCP | [Production LLM Engineering](../topics/production-llm-engineering.md) | [LLM Engineering Domain Map](concepts/llm-engineering-map.md) |
-| Learn workplace and everyday English vocabulary and idioms in a deliberate concrete-to-abstract order | [English: Workplace Vocabulary & Idioms](../topics/english-workplace-vocabulary.md) | [English Learning Contexts Map](concepts/english-learning-map.md) |
+| Build foundations in scaling, data access, failure handling, consistency, and asynchronous work | [System Design Fundamentals](../topics/system-design-fundamentals.md) | [System Design Foundations Map](concepts/system-design-map.md) |
+| Instrument distributed systems or operate telemetry delivery | [OpenTelemetry Foundations](../topics/opentelemetry-foundations.md) | [Observability and Telemetry Domain Map](concepts/observability-map.md) |
+| Build observable, evaluated, stateful, and durable LLM applications | [Production LLM Engineering](../topics/production-llm-engineering.md) | [LLM Engineering Domain Map](concepts/llm-engineering-map.md) |
+| Learn workplace and everyday English vocabulary and idioms | [Workplace Vocabulary & Idioms](../topics/english-workplace-vocabulary.md) | [English Learning Contexts Map](concepts/english-learning-map.md) |
 
-### Pick the focused LLM path when the broad route is too large
+Use a map to orient across domains, then return to the linked topic or concept for canonical material. System-design foundations support reliable LLM and telemetry systems; the observability route provides the instrumentation and delivery foundation beneath LLM-specific tracing and evaluation.
 
-- Need a production feedback loop for quality, latency, and cost? Start with [LLM Quality and Evaluation Pipeline](../topics/llm-quality-evaluation-pipeline.md) or the broader [Production LLM Engineering](../topics/production-llm-engineering.md) path.
-- Need durable, tool-using workflow execution and review pauses? Use [LangGraph Application Development](../topics/langgraph-application-development.md) or [Building Stateful Agents with LangGraph](../topics/langgraph-stateful-agents.md).
-- Need systematic prompt/program improvement? Use [LLM Program Optimization with DSPy](../topics/llm-program-optimization-dspy.md).
-- Need an interoperable agent-tool protocol and safe regression tests? Start with [MCP Protocol Foundations](../topics/mcp-protocol-foundations.md), then [MCP Record-Replay Testing](../topics/mcp-record-replay-testing.md).
-- Need an operational agent context? Use [Production Agent Runtime](../topics/production-agent-runtime.md) or [AWS DevOps Agent Operations](../topics/aws-devops-agent-operations.md).
+### Focus an LLM route
 
-The maps explain handoffs: system-design foundations support reliable LLM and telemetry pipelines, while the observability route supplies the portable instrumentation and delivery layer beneath LLM-specific tracing and evaluation. They are navigational overlays—return to the linked topic or concept for the canonical material.
+- For quality, latency, and cost feedback loops, start with [LLM Quality and Evaluation Pipeline](../topics/llm-quality-evaluation-pipeline.md).
+- For stateful application work, choose [LangGraph Application Development](../topics/langgraph-application-development.md).
+- For program or prompt optimization, use [LLM Program Optimization with DSPy](../topics/llm-program-optimization-dspy.md).
+- For protocol foundations and regression protection, take [MCP Protocol Foundations](../topics/mcp-protocol-foundations.md), then [MCP Record-Replay Testing](../topics/mcp-record-replay-testing.md).
+- For deployment and operating context, use [Production Agent Runtime](../topics/production-agent-runtime.md) or [AWS DevOps Agent Operations](../topics/aws-devops-agent-operations.md).
 
-## Add hands-on practice
+## Add knowledge through verification
 
-The current approved practice entrypoint is [Kiro CLI + Langfuse for Evaluation](../labs/kiro-langfuse-eval/spec.md), cataloged in [Hands-On Lab Catalog](labs/catalog.md). It is a 90–120 minute real-tool exercise that surrounds non-interactive Kiro CLI task calls with Langfuse dataset experiments, compares baseline and improved variants, and keeps rubric judging on a separately configured provider.
+Start by normalizing an input with the appropriate ingest tool (video, PDF, repository, article, podcast, or EPUB). Then run the per-source dispatcher against the resulting `sources/<type>/<slug>` directory:
 
-Read its canonical `spec.md` before running anything. The lab has no `spec.diataxis.md`, no mock fallback, and version-sensitive CLI behavior, so its setup script is an operational gate rather than a formality. Make predictions before execution, implement the intentionally stubbed evaluator, run the prescribed variants, investigate the deliberately inert usage-hook case, and only then trust the comparison. Keep credentials, predictions, expected answers, completed work, run outputs, and usage logs private and out of navigation content.
+```bash
+.venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo>
+```
+
+The full route is deliberately gated:
+
+1. The ingest role completes the normalized source asset and creates candidate drafts in `_drafts/`; it cannot write `concepts/` or create quiz questions.
+2. An **independent** reviewer handles only drafts associated with that source and persists `verified`, `needs-decision`, or `rejected` with evidence. A learner resolves only material merge, scope, contradiction, or learning-priority exceptions.
+3. The dispatcher groups the source's persisted verdicts. It passes only `verified` drafts to promotion and runs topic generation only after promotion succeeds. With no verified drafts, both promotion and topics are skipped; pending, exceptional, and rejected drafts remain records.
+4. After a learner resolves an exception, select one draft explicitly for manual promotion rather than treating an entire batch as approved:
+
+```bash
+.venv/bin/python3 _scripts/pipeline.py _drafts/<concept-id>.md --step promote
+```
+
+Promotion is the route that creates or updates canonical concepts and their quiz/index outputs; topics organize the promoted concepts into learning paths. The runner dispatches configured agent commands and uses their exit status to decide whether a step succeeded—it does not sandbox agent writes, inspect a diff, or record a learner decision. Preview a dispatch and inspect the resulting changes:
+
+```bash
+.venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo> --dry-run
+```
+
+For the full lifecycle, decision meanings, and focused pipeline test, see [From Source to Learning Path](workflows/knowledge-lifecycle.md) and [Automation, Validation, and Safe Change Surfaces](operations/automation-and-validation.md).
+
+## Practice with a lab
+
+Labs are outside the default source pipeline and require the explicit `lab` step. The repository keeps recovery capsules: `manifest.yaml` identifies a lab, its linked concepts, external workspace, and recovery contract, while `spec.md` is the canonical learning contract. Runnable scaffolds, learner work, answer keys, generated review artifacts, outputs, and credentials remain outside the repository. Select an appropriate capsule from the [Hands-On Lab Catalog](labs/catalog.md), use its linked concepts for theory, and read its `spec.md` before acting.
 
 ## Retain what you learned
 
-Run a focused review session with:
+Run a focused spaced-review session:
 
 ```bash
 .venv/bin/python3 -m _scripts.quiz_cli --count 10
 ```
 
-The quiz adapter selects due questions before future questions, presents approved concept context, and persists each result’s updated schedule to the quiz bank. It intentionally does not turn quiz performance into a canonical content update. Use [Review, Quiz, and Maintenance Loop](workflows/review-and-retention.md) if you need concept filtering, session limits, SM-2 behavior, or the privacy and concurrency boundaries.
+Review results update scheduling; they do not publish or revise canonical concepts. Use [Review, Quiz, and Maintenance Loop](workflows/review-and-retention.md) for filters, session behavior, scheduling, and privacy limits.
 
-Weekly refinement is separate from the normal source pipeline. It can identify stale or contradictory material, write a report, update quiz scheduling from real results, and regenerate indexes; a needed concept correction remains a recommendation for human review. This separation keeps retention signals useful without letting them bypass draft-then-promote governance.
+## Refresh this navigation deliberately
 
-## Navigation checklist
-
-- **Want to learn now?** Open a topic in the table and follow its order.
-- **Need a cross-domain decision?** Use the matching map, then open its canonical links.
-- **Want to build skill?** Check the [lab catalog](labs/catalog.md), then read the lab specification.
-- **Want durable recall?** Run the quiz command and revisit the associated concepts.
-- **Want to add or correct knowledge?** Follow the [knowledge lifecycle](workflows/knowledge-lifecycle.md), preserve human approval before promotion, and regenerate derived indexes instead of treating them as authority.
+OpenWiki remains a derived navigation layer. During the pilot, refresh it manually only after a reviewed canonical batch is ready; do not make it a scheduled workflow. Refreshing OpenWiki neither approves content nor authorizes edits to canonical concepts, topics, quiz data, or labs.

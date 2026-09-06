@@ -1,14 +1,15 @@
 ---
 type: retention workflow
 title: Review, Quiz, and Maintenance Loop
-description: How approved concept metadata is turned into a focused review session, how results reschedule future practice, and how periodic refinement identifies maintenance work without making retention state canonical knowledge.
+description: How private quiz sessions select and reschedule review work around approved concepts, and how weekly refinement produces bounded maintenance recommendations without publishing knowledge.
 tags: [review, retention, quiz, spaced-repetition, maintenance, knowledge-governance]
-verified:
-  - by: openwiki/0.5.0
-    at: 2026-09-05T08:40:09.738Z
 sources:
   - id: openwiki-source-519d470537e27086b3ae20fc
     resource: repo://_scripts/metadata_validator.py
+  - id: openwiki-source-f03c94ce5e7172928498691c
+    resource: repo://_scripts/pipeline.py
+  - id: openwiki-source-792d9b4fab22e29d325c1a72
+    resource: repo://_scripts/prompts/promote-concept.md
   - id: openwiki-source-6f5839457ae5477b69a31a0c
     resource: repo://_scripts/prompts/weekly-refine.md
   - id: openwiki-source-faf78437a2e3fd3a1c2aa841
@@ -19,8 +20,6 @@ sources:
     resource: repo://_scripts/quiz_session.py
   - id: openwiki-source-9ee32f55afb47fe2ff42be8a
     resource: repo://_scripts/sm2_scheduler.py
-  - id: openwiki-source-13f6df55078eb59a15b92fe0
-    resource: repo://_scripts/tests/test_quiz_cli.py
   - id: openwiki-source-cb6573ec5dbef97c4673bbcb
     resource: repo://_scripts/tests/test_quiz_manager.py
   - id: openwiki-source-e3be61dbfa5b415ca7b0155d
@@ -29,77 +28,83 @@ sources:
     resource: repo://_scripts/tests/test_sm2_scheduler.py
   - id: openwiki-source-e119253b3c3737247dc63f2a
     resource: repo://.openwikiignore
-generated: { by: "openwiki/0.5.0", at: "2026-09-05T08:40:09.738Z" }
+generated: { by: "openwiki/0.5.0", at: "2026-09-06T11:22:47.615Z" }
+verified:
+  - by: openwiki/0.5.0
+    at: 2026-09-06T11:22:47.615Z
 ---
 
 # Review, Quiz, and Maintenance Loop
 
-Review is a supporting learning loop around approved concepts, not a second publication path. A session selects questions from a private quiz bank, loads lightweight context from the corresponding canonical concept files, records a result in the bank, and schedules the next encounter. Periodic refinement examines broader vault state and produces recommendations, but cannot change approved concept content. In OpenWiki, `quiz/` is excluded input: this page documents interfaces and invariants only—never question content, answer keys, attempt history, or learner predictions.
+Review is a private learning loop around approved concepts, not a second publication path. Promotion is the controlled workflow that may create canonical concept content and initialize related private quiz entries. A quiz session can read limited context from canonical concepts and update retention state in the quiz bank, while weekly refinement can identify maintenance work and recommend later action. Neither workflow can establish, alter, merge, split, or promote approved knowledge.
 
-For the ownership boundary, see [Approved Knowledge and Write Boundaries](../architecture/knowledge-governance.md); for the wider draft-to-promotion lifecycle, see [From Source to Learning Path](knowledge-lifecycle.md).
+`quiz/`, `_drafts/`, `_inbox/`, and `sources/` are excluded from OpenWiki inputs. This page therefore documents interfaces, boundaries, and operational behavior only. It does not disclose private quiz prompts, expected answers, response records, learner predictions, or refinement-report content. For canonical ownership, see [Approved Knowledge and Write Boundaries](../architecture/knowledge-governance.md); for the wider publication lifecycle, see [From Source to Learning Path](knowledge-lifecycle.md).
 
-## Responsibilities and entrypoints
+## Entry points and ownership
 
-The terminal entrypoint is:
+The interactive entry point is:
 
 ```bash
 .venv/bin/python3 -m _scripts.quiz_cli --count 10
 ```
 
-`_scripts/quiz_cli.py` parses `--count`, `--concept`, `--bank`, and `--kb-root`, starts a session, presents concept review material, iterates over pending questions, submits each result, and prints an aggregate summary. The CLI is deliberately a presentation adapter: it delegates selection, sequencing, scoring, scheduling, and bank persistence to `_scripts/quiz_session.py`. This separation makes the core callable by another interface, while the current session implementation is still an in-process service rather than a durable multi-client backend.
+`_scripts/quiz_cli.py` accepts `--count`, `--concept`, `--bank`, and `--kb-root`, then delegates session startup, sequential retrieval and submission, and final aggregation to `_scripts/quiz_session.py`. It is a terminal adapter, not a separate scoring or persistence implementation. Other interfaces can use `start_session(bank_path, kb_root, count, concept_id, today)` directly.
 
-`start_session(bank_path, kb_root, count, concept_id, today)` is the programmatic start point. It returns an opaque session id, concept materials, total count, and a metadata-only question preview. A `--concept` value filters the bank before limiting the result set. Without that filter, selection is delegated to `get_review_pack`; both paths prioritize due entries and use future entries only to fill the requested count. Non-positive counts yield no questions.
+A full source pipeline only supplies source-scoped drafts whose persisted `review_status` is `verified` to promotion. The promotion contract may update the quiz bank as part of completing promoted-concept work, but quiz state does not make a draft eligible or authorize a canonical edit. A manual promotion is likewise an explicit single-draft selection boundary.
 
 ```mermaid
 flowchart TD
-    Start["start_session"] --> Select["select due questions first"]
-    Select --> Context["load concept review material"]
-    Context --> Store["store in memory session"]
-    Store --> Next["get next public question"]
-    Next --> Evaluate["submit answer in pending order"]
-    Evaluate --> Update["apply scheduling result"]
-    Update --> Persist["replace matching bank entry"]
-    Persist --> Next
-    Next --> Summary["session summary when complete"]
-    Weekly["weekly-refine"] --> Scan["scan vault and quiz state"]
-    Scan --> Report["dated refine report"]
-    Scan --> Schedule["only apply actual result updates"]
-    Schedule --> Indexes["regenerate discovery indexes"]
+    Verified["verified draft"] --> Promote["controlled promotion"]
+    Promote --> Concepts["approved concepts"]
+    Promote --> Bank["private quiz bank"]
+    Concepts --> Materials["concept review material"]
+    Bank --> Select["due first selection"]
+    Materials --> Session["process local session"]
+    Select --> Session
+    Session --> Submit["ordered submission"]
+    Submit --> Bank
+    Concepts --> Refine["weekly refinement scan"]
+    Bank --> Refine
+    Refine --> Outputs["bounded maintenance outputs"]
+    Outputs --> Verify["later independent verification"]
+    Verify --> Verified
 ```
 
-*The interactive path selects and evaluates one question at a time, while weekly refinement reports and maintains derived state without publishing quiz content.*
+*Promotion establishes the canonical and private inputs. Sessions update retention state, while weekly refinement returns only recommendations to the verification path.*
 
-## Concept context and question selection
+## Selection and concept context
 
-A selected question identifies a concept by `concept_id`. The session resolves a matching Markdown file in `concepts/`: it first tries `concepts/<concept_id>.md`, then recursively looks for frontmatter with the same `id`. It exposes only a concept-oriented review material object: title, a summary extracted from a `## Summary` or `## 摘要` section (falling back to the first body paragraph), related concepts, and source references. It accepts either `related_concepts` or the canonical `related` frontmatter spelling. If the concept file is missing, the session preserves the question's concept id with empty supporting fields instead of rejecting the session.
+Session startup selects up to the requested count. It partitions bank entries by `next_review` against the effective ISO date, sorts due and future groups by date and id, and takes due entries before future entries. A concept filter is applied before that limit. A non-positive count returns no entries. The selection logic assumes zero-padded `YYYY-MM-DD` values; missing `next_review` is treated as due by the review-pack helpers, while the standalone scheduler skips a missing date and parses present dates strictly.
 
-The review-pack policy partitions questions by `next_review` relative to the supplied/current ISO date, sorts each partition by date and id, and takes due entries before future ones. This works correctly only when `next_review` follows zero-padded `YYYY-MM-DD` ordering; the pack helper treats absent values as empty strings, effectively placing them in the due partition. The standalone scheduler is stricter for its due query: it ignores a missing `next_review` but parses present values as dates.
+For each selected `concept_id`, the session first looks for `concepts/<concept_id>.md`, then searches canonical concept frontmatter for a matching `id`. It constructs review material from the concept title, summary, relationships, and source references. Both `related_concepts` and canonical `related` are supported. A missing concept does not abort the session: it produces empty fallback material tied to the requested id. This is a read-only use of canonical knowledge.
 
-The bank reader accepts either a top-level list or an object containing `questions`, preserving that outer shape when the session writes. In contrast, the standalone scheduler's file operations require the object-with-`questions` form. `add_questions` validates required fields before appending, but neither it nor the metadata validator verifies semantic validity such as date formats, allowed question types, unique ids, or whether `concept_id` resolves to an approved concept. Treat structural validation as a fast precondition, not as content or referential integrity assurance.
+The bank helpers accept either a top-level list or an object containing `questions` and preserve that shape on session writes. The standalone scheduler requires the object form. `add_questions` checks only that required fields exist before appending; it is not semantic, referential, date-format, or uniqueness validation.
 
-## Session state, ordering, and disclosure boundary
+## Session lifecycle and privacy boundary
 
-Despite being independent of terminal and network I/O for interaction, quiz sessions are **not stateless across process lifetime**. `SESSION_STORE` is a module-level in-memory dictionary keyed by UUID-like ids. It retains a snapshot of selected questions, a cursor, per-question result metadata, and review materials only while that Python process remains alive; a restart or a different worker cannot recover a session. Callers must therefore keep the session id and complete the session in the same process, or provide a persistence/session-service layer as an extension.
+`SESSION_STORE` is a module-level, in-memory store keyed by generated session ids. It holds the selected snapshot, cursor, session-local result metadata, and review materials only for the current Python process. A restart or another worker cannot resume a session; durable or multi-client use needs an explicit session-store extension.
 
-The question-facing API enforces a narrower disclosure surface. `get_next_question` returns only the current question's identifying and presentation metadata, prompt, and optional choices; it does not include the stored answer. It neither advances the cursor nor skips a question. `submit_answer` accepts only the id of that next pending question: a completed session or an out-of-order/mismatched id raises `ValueError`, preventing duplicate or reordered submissions through the normal API. Multiple-choice evaluation compares normalized submitted text to the stored expected value; short-answer and application questions require an explicit caller-supplied self-evaluation. This is a workflow policy, not automated natural-language grading.
+The question-facing API exposes a public representation without the stored expected answer, and retrieval does not advance the cursor. Submission is accepted only for the next pending id; an out-of-order id or a submission after completion raises `ValueError`. Multiple-choice evaluation uses normalized equality, while short-answer and application entries require caller-supplied self-evaluation. This is intentionally a workflow policy rather than automated free-text grading.
 
-A successful submission updates the session copy, advances the cursor, reloads the bank, replaces the matching entry by id, and writes the bank back. If that id is no longer in the reloaded file, it raises rather than writing an unrelated record. There is no locking, transaction, or compare-and-swap protection around that read-modify-write cycle, so concurrent sessions or external edits to the same bank require a future synchronization boundary to avoid lost updates.
+On a successful submission, the service applies the scheduling update to the selected session entry, advances the cursor, reloads the bank, replaces the matching id, and writes it back. If the entry disappears from the reloaded bank, it raises rather than changing another entry. This is an unlocked read-modify-write sequence, so concurrent sessions or external writers can lose updates; atomic persistence or coordination is required before supporting them.
 
-## Simplified SM-2 retention update
+## Scheduling behavior
 
-Scheduling belongs to `_scripts/sm2_scheduler.py`. It copies and normalizes a question before each update: the default interval is one day, the default ease factor is 2.5, the ease factor cannot be below 1.3, and history must be list-shaped. A correct result multiplies the current interval by ease without lowering ease. An incorrect result resets the interval to one day and lowers ease by 0.2, subject to the 1.3 floor. Both outcomes stamp the attempt date, append one result record, and derive `next_review` from the resulting interval.
+The simplified scheduler normalizes an entry with a one-day default interval, a default ease factor of `2.5`, and an ease floor of `1.3`. A correct result multiplies the interval by ease; an incorrect result resets the interval to one day and reduces ease by `0.2` without crossing the floor. It then derives the next review date from the resulting interval.
 
-The session path deliberately adds a persistence-friendly normalization after invoking that helper: it rounds the interval to an integer and clamps it to at least one before recalculating `next_review`. The direct scheduler update path does not round first, so the two APIs can differ for fractional intervals. Preserve this distinction—or unify it intentionally with updated tests—when changing scheduling behavior.
+The session persistence path rounds the resulting interval to a positive integer and recalculates `next_review`. The direct scheduler helper can retain a fractional interval, so these two update APIs have observably different persistence behavior. Preserve that distinction, or intentionally unify it with tests, when changing scheduling.
 
-The resulting session summary is aggregate session data: total selected, counts by outcome, accuracy, covered concept ids, and the next-review date for submitted entries. It is useful to the active caller but is not canonical learning knowledge and must not be copied into OpenWiki.
+## Weekly refinement: bounded maintenance, not promotion
 
-## Weekly refinement: maintenance, not promotion
+`_scripts/prompts/weekly-refine.md` defines a periodic agent workflow, separate from the source dispatcher. It reads the complete specified vault state: `concepts/**/*.md`, `_drafts/**/*.md`, source metadata and Markdown, `topics/**/*.md`, `quiz/bank.json`, and the three discovery indexes. It also reads the final entry of `_index/refine-log.md` when present. One `YYYY-MM-DD` current date must be used consistently for overdue checks, output naming, scheduling updates, and the appended log record.
 
-`_scripts/prompts/weekly-refine.md` defines a periodic agent workflow over concepts, drafts, sources, topics, indexes, and the quiz bank. It reads the previous refinement log and uses one consistent `YYYY-MM-DD` current date for overdue detection, report naming, rescheduling, and logging. It identifies overdue concepts, stale drafts, possible contradictions, unanswered concept questions, and candidate topics; it also selects a weekly review pack of five to ten when available, prioritizing the earliest due items and flagging an undersized pool.
+The scan identifies maintenance signals across those inputs, including overdue concepts, stale drafts, possible inconsistencies, unresolved concept questions, and source-derived candidates. It may select a due-first weekly review pack of five to ten entries when available, choosing the earliest due entries when there are too many and flagging an undersized pool. Its dated private report may recommend later independent verification or a decision; insufficient evidence is marked for further evidence, and `needs-decision` is reserved for materially different alternatives. These recommendations are not canonical changes.
 
-Its write scope is intentionally narrow: a dated report in `_inbox/`, `quiz/bank.json`, the three generated discovery indexes, and an appended `_index/refine-log.md` record. It must not create, change, move, delete, or promote `concepts/` content. A detected canonical inconsistency therefore becomes a concrete recommendation for human review, never an automatic correction. Likewise, a scan without new answer results may check the bank's format but must not arbitrarily reschedule questions.
+Its prompt-authorized write surface is closed to a dated `_inbox/refine-report-<YYYY-MM-DD>.md`, `quiz/bank.json`, `_index/concepts.md`, `_index/topics.md`, `_index/tags.md`, and an appended `_index/refine-log.md` record. It must not create, modify, delete, move, or promote anything in `concepts/`, nor directly promote a draft. A suspected correction, merge, split, or new concept must remain a recommendation for later independent evidence verification and the normal promotion path.
 
-The prompt specifies that a result update preserves existing history and changes only the relevant question's schedule fields. In a production-safe refinement run, review the diff for adherence to that prompt contract: as with other configured agents, the repository's orchestration does not itself provide a filesystem sandbox that enforces every stated writer restriction. Keep quiz material and reports excluded from OpenWiki even when the report is used operationally.
+Quiz maintenance is conditional on actual new answer results. For a relevant entry, the prompt requires the simplified scheduling update while retaining existing private records and leaving unrelated entries' scheduling fields alone. A report-only scan may check bank format, but it must not reschedule entries merely because they were scanned. This no-rescheduling-without-results rule prevents maintenance activity from fabricating learning evidence.
+
+The restriction is prompt policy, not a filesystem sandbox. `pipeline.py` renders configured prompts and runs the configured command through `shell=True` in `kb_root`; a zero exit indicates process completion, not that output changes were inspected or validated against the prompt. Treat agent commands, configuration, environment, and root path as trusted execution inputs, use `--dry-run` where applicable, and inspect the resulting diff.
 
 ## Change and validation guide
 
@@ -113,14 +118,14 @@ Use focused tests when modifying this loop:
 .venv/bin/python3 -m pytest _scripts/tests/test_metadata_validator.py -v
 ```
 
-The session tests exercise end-to-end selection, concept filtering, metadata-only public questions, history/schedule updates, and aggregate accounting across generated question sets. Scheduler tests cover both outcomes, the ease floor, due-date filtering, persistence, and unknown ids. Manager tests cover due-first ordering, deterministic truncation, and appending valid entries; CLI tests ensure the adapter drives the session API. The metadata tests are the right companion when altering required bank fields, but they cannot establish scheduling correctness or protect against concurrent writers.
+The session tests cover due-first selection, concept filtering, concept-context fallback, ordered API use, scheduling persistence, and aggregate accounting. Scheduler tests cover both update branches, the ease floor, due-date filtering, persistence, and an unknown id. Manager tests cover bounded deterministic selection and validated appends; CLI tests ensure the adapter delegates to the session API. Metadata validation is a companion for required bank fields, not proof of scheduling correctness or concurrent-write safety.
 
-When extending the system, preserve these boundaries:
+When extending the loop:
 
-1. **UI adapter:** keep input/output policy in the CLI or a new transport and call the session API rather than duplicating scoring or update rules.
-2. **Durability and concurrency:** replace or wrap `SESSION_STORE` with an explicit persistent, scoped store and make bank updates atomic before supporting restarts or parallel clients.
-3. **Assessment policy:** automated free-text evaluation is an intentional new grading capability; do not silently substitute it for the current self-evaluation requirement.
-4. **Canonical governance:** use refinement signals to request review, and keep promotion/approved-concept mutation on the human-approved path described in [knowledge governance](../architecture/knowledge-governance.md).
-5. **Documentation privacy:** do not add bank contents, answer material, histories, predictions, or reports to canonical OpenWiki inputs; `.openwikiignore` explicitly excludes `quiz/` along with other noncanonical workflow data.
+1. Keep transport-specific interaction in the CLI or a new adapter and call the session API rather than duplicating selection, evaluation, or scheduling behavior.
+2. Add durable, scoped session storage and atomic bank updates before allowing restart recovery or parallel clients.
+3. Treat automated free-text assessment as a new grading capability; do not silently replace explicit self-evaluation.
+4. Send refinement signals through independent verification and promotion; never make retention activity a canonical mutation path.
+5. Keep private assessment data and refinement reports excluded from OpenWiki, even when they inform operational work.
 
-For script invocation and the limits of validation and agent enforcement, see [Automation, Validation, and Safe Change Surfaces](../operations/automation-and-validation.md). The [Hands-On Lab Catalog](../labs/catalog.md) is a separate practice workflow; it is not required to start or complete a quiz session.
+For dispatcher invocation and safe-change limits, see [Automation, Validation, and Safe Change Surfaces](../operations/automation-and-validation.md). The [Hands-On Lab Catalog](../labs/catalog.md) is a separate practice workflow and is not required to run or complete a quiz session.

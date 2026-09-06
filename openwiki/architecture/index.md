@@ -1,3 +1,3 @@
 # Files
 
-- [Approved Knowledge and Write Boundaries](knowledge-governance.md) - How the study vault separates approved concepts and curated topics from candidate material, learner state, generated indexes, and derived OpenWiki navigation. Explains the human approval gate, prompt-level writer scopes, regeneration rules, and operational limits.
+- [Approved Knowledge and Write Boundaries](knowledge-governance.md) - Governance model for canonical concepts and topics, independently verified draft promotion, learner decisions for material exceptions, and the boundaries around derived navigation and trusted automation.
