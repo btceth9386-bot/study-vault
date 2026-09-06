@@ -26,7 +26,7 @@ The knowledge base uses this structure:
 
 ```
 _inbox/           → Staging area for new sources
-_drafts/          → AI-generated draft concepts (awaiting human review)
+_drafts/          → AI-generated draft concepts (awaiting independent verification or an exception decision)
 concepts/         → Promoted knowledge assets (by category subdirectory)
 sources/          → Processed source materials
   ├── repos/      → GitHub repos (via DeepWiki)
@@ -44,7 +44,7 @@ _scripts/         → All automation scripts
 
 ## Key Architecture Decisions
 
-- **Draft-then-promote**: AI never writes directly to `concepts/`. All AI output goes to `_drafts/` first for human review. This is the most important constraint in the system.
+- **Verified draft-then-promote**: the extraction agent never writes directly to `concepts/`. Candidates go to `_drafts/`; an independent reviewer persists `verified`, `needs-decision`, or `rejected`. Only verified drafts auto-promote. Users resolve material exceptions rather than fact-checking unfamiliar content.
 - **Layer write constraints**:
   - `new-source` prompt → writes to `sources/` and `_drafts/` only
   - `promote-concept` prompt → writes to `concepts/`, `quiz/`, `_index/`
@@ -87,11 +87,12 @@ _scripts/         → All automation scripts
 | file_splitter.py | Markdown splitting (≤1MB chunks) |
 | index_generator.py | Auto-generate concept/topic/tag indexes |
 
-### Prompt Engine (3 prompts in `_scripts/prompts/`)
+### Prompt Engine (4 prompts in `_scripts/prompts/`)
 | Prompt | Trigger | Key Constraint |
 |--------|---------|---------------|
-| new-source.md | New source in `_inbox/` | Cannot write to `concepts/` |
-| promote-concept.md | User approves draft | Feynman style, ≥2 quiz questions |
+| new-source.md | New source in `_inbox/` or normalized `sources/` | Cannot write to `concepts/` |
+| review-drafts.md | Pending drafts for one source | Writes verdicts/evidence to matching drafts only |
+| promote-concept.md | Verified draft or explicit manual override | Feynman style, ≥2 quiz questions |
 | weekly-refine.md | Weekly (manual/scheduled) | Cannot modify `concepts/` |
 
 ## Detailed Documentation

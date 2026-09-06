@@ -22,6 +22,7 @@ Keep the wiki small and navigable:
 3. Explain cross-domain relationships and unresolved questions instead of duplicating concept pages.
 4. Provide a lab catalog that links concepts to hands-on practice and explains the recovery-capsule boundary: manifests and canonical specs are in this repo; complete labs and Diátaxis review artifacts are external.
 5. Link every material claim to repository evidence through OpenWiki Claims.
+6. Only create internal Markdown links to OpenWiki pages that are generated in the same output. Point atomic concepts to repository evidence instead of inventing `/openwiki/concepts/*` pages.
 
 Use concise English, progressive disclosure, and Mermaid only when it clarifies a relationship or workflow. Preserve the draft-then-promote boundary: this wiki is derived navigation, never a new source of truth and never authorization to modify `concepts/`, `topics/`, `quiz/`, or lab content.
 

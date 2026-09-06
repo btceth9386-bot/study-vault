@@ -29,7 +29,11 @@ For any new topic (GitHub repo, book, course, podcast):
 
 ### Draft-then-Promote Workflow
 
-AI never writes directly to your knowledge base. All AI output goes to `_drafts/` first. You review, then promote to `concepts/` — ensuring you retain editorial control.
+The extraction agent never writes directly to `concepts/`. Candidates go to
+`_drafts/`, a separate reviewer verifies them against evidence, and only
+`review_status: verified` drafts are promoted automatically. You are asked only
+when evidence leaves a material merge, scope, contradiction, or learning-priority
+decision unresolved.
 
 ## Supported Sources
 
@@ -97,7 +101,7 @@ study-vault/
 ```
 <kb-root>/
 ├── _inbox/                → Staging area for new sources
-├── _drafts/               → AI-generated drafts awaiting human review
+├── _drafts/               → AI-generated drafts awaiting independent verification or an exception decision
 ├── concepts/              → Promoted knowledge assets (by category)
 ├── sources/
 │   ├── repos/             → GitHub repos (via DeepWiki)

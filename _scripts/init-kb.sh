@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 target_root="${1:-.}"
 
 mkdir -p "$target_root"
@@ -43,14 +44,14 @@ Do not commit raw audio, video, large PDFs, cloned repositories, or other genera
 
 1. Drop new raw materials into `_inbox/`.
 2. Run the appropriate ingest script from `_scripts/` to normalize the source into `sources/`.
-3. Generate draft concepts into `_drafts/` and review them before promotion.
-4. Promote approved concepts into `concepts/`, then update `quiz/bank.json` and `_index/`.
+3. Generate draft concepts into `_drafts/` and independently verify them against evidence.
+4. Auto-promote verified concepts; ask the user only about material exceptions.
 5. Regenerate indexes whenever concepts or topics change.
 
 ## Structure
 
 - `_inbox/` stores new materials waiting for ingestion.
-- `_drafts/` stores AI-generated drafts that still require review.
+- `_drafts/` stores AI-generated drafts awaiting verification or an exception decision.
 - `concepts/` stores approved concept notes.
 - `sources/` stores normalized source material grouped by type.
 - `quiz/bank.json` stores spaced-repetition questions.
@@ -216,14 +217,14 @@ write_if_missing "$target_root/_scripts/prompts/new-source.md" <<'EOF'
 
 ## 用途
 
-當新的學習材料已放入 `_inbox/`，使用本 prompt 將來源整理成標準化 source asset，並產生可供人工審核的候選概念草稿。
+當新的學習材料位於 `_inbox/`，或 ingest script 已將它正規化到 `sources/`，使用本 prompt 補齊 source asset 並產生可供獨立驗證的候選概念草稿。
 
 你是 Exobrain 的新來源處理 Agent。你的目標是建立清楚、可追溯、可 review 的中間成果；你不能把任何候選概念直接寫入正式知識庫。
 
 ## 嚴格限制
 
 - 絕對不能建立、修改、刪除 `concepts/` 下的任何檔案。
-- 所有新概念只能寫入 `_drafts/`，等待使用者用 `promote-concept.md` 審核與提升。
+- 所有新概念只能寫入 `_drafts/`，並以 `review_status: pending` 等待獨立 reviewer 驗證。
 - 可以讀取 `concepts/` 以判斷是否已有重複或高度相近的概念。
 - 可以寫入 `sources/<type>/<slug>/`、`_drafts/`、`_index/concepts.md`。
 - 不要產生 quiz 題目；quiz 題目由 promote 或 refine 流程處理。
@@ -233,7 +234,7 @@ write_if_missing "$target_root/_scripts/prompts/new-source.md" <<'EOF'
 使用者會提供以下資訊，或提供足夠內容讓你補齊合理預設值：
 
 ```yaml
-source_path: _inbox/<source-file-or-folder>
+source_path: _inbox/<source-file-or-folder> | sources/<type>/<slug>/
 type: repo | video | book | article | podcast | paper
 title: string
 url: string | null
@@ -251,7 +252,7 @@ tags:
 
 ## 前置檢查
 
-1. 讀取 `_inbox/` 中的來源內容與 metadata。
+1. 讀取使用者指定的來源路徑。若已在 `sources/`，原地使用該資料夾並保留既有檔案；若仍在 `_inbox/`，才建立對應的 source 目錄。
 2. 讀取現有 `concepts/` 概念檔的 frontmatter，至少蒐集 `id`、`title`、`related`、`tags`。
 3. 讀取 `_drafts/` 中既有草稿，避免建立重複草稿。
 4. 讀取 `_index/concepts.md` 以便加入 draft 條目。
@@ -261,7 +262,7 @@ tags:
 
 ### 1. Source 資料夾
 
-在 `sources/<type>/<slug>/` 建立完整資料夾。`<type>` 必須對應來源類型的複數目錄：
+在 `sources/<type>/<slug>/` 建立或補齊完整資料夾。`<type>` 必須對應來源類型的複數目錄：
 
 - `repo` -> `sources/repos/<slug>/`
 - `video` -> `sources/videos/<slug>/`
@@ -350,6 +351,7 @@ source: sources/<type>/<slug>
 merge_candidate: existing-concept-id
 status: draft
 created_at: YYYY-MM-DD
+review_status: pending
 ---
 ```
 
@@ -393,11 +395,13 @@ draft body 必須包含：
 - `sources/<type>/<slug>/meta.yaml`、`notes.md`、`highlights.md` 都已建立。
 - `notes.md` 摘要約 200-500 字。
 - `_drafts/` 至少新增 1 個、最多 10 個候選概念。
-- 每個 draft 都有 `id`、`title`、`source`、`status: draft`、`created_at`。
+- 每個 draft 都有 `id`、`title`、`source`、`status: draft`、`created_at`、`review_status: pending`。
 - 重複或高度相近的候選概念已用 `merge_candidate: <existing-id>` 標記。
 - `_index/concepts.md` 已加入 `[draft]` 條目。
 - 沒有建立、修改或刪除任何 `concepts/` 檔案。
 EOF
+
+write_if_missing "$target_root/_scripts/prompts/review-drafts.md" < "$script_dir/prompts/review-drafts.md"
 
 write_if_missing "$target_root/.gitignore" <<'EOF'
 # Audio and video artifacts

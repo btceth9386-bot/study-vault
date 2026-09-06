@@ -2,14 +2,14 @@
 
 ## 用途
 
-當新的學習材料已放入 `_inbox/`，使用本 prompt 將來源整理成標準化 source asset，並產生可供人工審核的候選概念草稿。
+當新的學習材料位於 `_inbox/`，或 ingest script 已將它正規化到 `sources/`，使用本 prompt 補齊 source asset 並產生可供獨立驗證的候選概念草稿。
 
 你是 Exobrain 的新來源處理 Agent。你的目標是建立清楚、可追溯、可 review 的中間成果；你不能把任何候選概念直接寫入正式知識庫。
 
 ## 嚴格限制
 
 - 絕對不能建立、修改、刪除 `concepts/` 下的任何檔案。
-- 所有新概念只能寫入 `_drafts/`，等待使用者用 `promote-concept.md` 審核與提升。
+- 所有新概念只能寫入 `_drafts/`，並以 `review_status: pending` 等待獨立 reviewer 驗證。
 - 可以讀取 `concepts/` 以判斷是否已有重複或高度相近的概念。
 - 可以寫入 `sources/<type>/<slug>/`、`_drafts/`、`_index/concepts.md`。
 - 不要產生 quiz 題目；quiz 題目由 promote 或 refine 流程處理。
@@ -19,7 +19,7 @@
 使用者會提供以下資訊，或提供足夠內容讓你補齊合理預設值：
 
 ```yaml
-source_path: _inbox/<source-file-or-folder>
+source_path: _inbox/<source-file-or-folder> | sources/<type>/<slug>/
 type: repo | video | book | article | podcast | paper
 title: string
 url: string | null
@@ -37,7 +37,7 @@ tags:
 
 ## 前置檢查
 
-1. 讀取 `_inbox/` 中的來源內容與 metadata。
+1. 讀取使用者指定的來源路徑。若已在 `sources/`，原地使用該資料夾並保留 ingest script 產生的原始 Markdown、snapshot 與 metadata；不要建立第二份 source。若仍在 `_inbox/`，才建立對應的 `sources/<type>/<slug>/`。
 2. 讀取現有 `concepts/` 概念檔的 frontmatter，至少蒐集 `id`、`title`、`related`、`tags`。
 3. 讀取 `_drafts/` 中既有草稿，避免建立重複草稿。
 4. 讀取 `_index/concepts.md` 以便加入 draft 條目。
@@ -47,7 +47,7 @@ tags:
 
 ### 1. Source 資料夾
 
-在 `sources/<type>/<slug>/` 建立完整資料夾。`<type>` 必須對應來源類型的複數目錄：
+在 `sources/<type>/<slug>/` 建立或補齊完整資料夾。`<type>` 必須對應來源類型的複數目錄：
 
 - `repo` -> `sources/repos/<slug>/`
 - `video` -> `sources/videos/<slug>/`
@@ -136,6 +136,7 @@ source: sources/<type>/<slug>
 merge_candidate: existing-concept-id
 status: draft
 created_at: YYYY-MM-DD
+review_status: pending
 ---
 ```
 
@@ -153,13 +154,9 @@ draft body 必須包含：
 
 ### 3. Index 更新
 
-更新 `_index/concepts.md`，在 `## Draft` 區塊加入每個新 draft：
+使用既有 `_scripts.index_generator.generate_concepts_index()` 重新產生 `_index/concepts.md`，讓每個新 draft 以 `draft` 狀態出現。不要手動維護第二套 index 格式。
 
-```markdown
-- [concept-id](../_drafts/concept-id.md) - Concept Title [draft]
-```
-
-若檔案尚無 `## Draft` 區塊，新增該區塊。不要把 draft 放到 `## Active`。
+不要把 draft 放到 Active，也不要更新 OpenWiki；OpenWiki 只在 verified concepts 與 topics 改變後批次更新。
 
 ## Agent 行為
 
@@ -179,10 +176,12 @@ draft body 必須包含：
 - `sources/<type>/<slug>/meta.yaml`、`notes.md`、`highlights.md` 都已建立。
 - `notes.md` 摘要約 200-500 字。
 - `_drafts/` 至少新增 1 個、最多 10 個候選概念。
-- 每個 draft 都有 `id`、`title`、`source`、`status: draft`、`created_at`。
+- 每個 draft 都有 `id`、`title`、`source`、`status: draft`、`created_at`、`review_status: pending`。
 - 重複或高度相近的候選概念已用 `merge_candidate: <existing-id>` 標記。
 - `_index/concepts.md` 已加入 `[draft]` 條目。
 - 沒有建立、修改或刪除任何 `concepts/` 檔案。
+
+下一步由獨立 agent 依 `review-drafts.md` 驗證；使用者不需要對陌生技術內容逐份做 factual approval。
 
 ## Recommended follow-up ingestions
 

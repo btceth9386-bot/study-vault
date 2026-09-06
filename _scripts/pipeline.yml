@@ -5,8 +5,8 @@
 #
 # Roles:
 #   ingest    — Step 2: Process ingested source into drafts (new-source prompt)
-#   review    — Step 3: Review drafts against source material
-#   promote   — Step 4: Promote approved drafts to concepts
+#   review    — Step 3: Independently verify drafts and persist verdicts
+#   promote   — Step 4: Promote verified drafts to concepts
 #   topics    — Step 5: Generate learning paths from concepts
 #   lab       — Manual-only: generate and publish a learn-by-building lab for
 #               one or more concepts or a concrete integration request. Grading
@@ -56,14 +56,15 @@ prompts:
     Read _scripts/prompts/new-source.md then process the new source in
     {source_dir} in English.
   review: >
-    Review all files in _drafts/ against the source material. For each draft:
-    1. Check the one-sentence definition, why it matters, and relationships.
-    2. Flag factual errors, missing key points, or misleading simplifications.
-    3. Rate each: APPROVE, REVISE (list what), or REJECT.
-    Output a summary table. Write in English.
+    Read _scripts/prompts/review-drafts.md and independently verify only drafts
+    whose source is {source_dir}. Persist review_status and verification evidence
+    in each matching draft. Write all output in English.
   promote: >
-    Read _scripts/prompts/promote-concept.md then promote all approved drafts
-    in _drafts/ to concepts. Write all output in English.
+    Read _scripts/prompts/promote-concept.md and use its verified-pipeline mode.
+    The source is {source_dir}. Promote only these exact reviewed drafts, one at
+    a time, and never scan or promote any other draft:
+    {verified_drafts}
+    Write all output in English.
   topics: >
     Look at concepts recently promoted from {source_dir} and update or create
     learning paths in topics/ that include them. Reuse existing topic files

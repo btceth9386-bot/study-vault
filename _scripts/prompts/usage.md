@@ -14,8 +14,10 @@
 
 ```
 Ingest the repo https://deepwiki.com/<owner>/<repo> following _scripts/prompts/guide.md.
-Run step 1 (ingest-deepwiki.sh), then run the Automated pipeline
-(_scripts/pipeline.py) for steps 2-5 only — do NOT run quiz / labs / weekly-refine.
+Run step 1 (ingest-deepwiki.sh), then run the source pipeline
+(_scripts/pipeline.py): extract drafts, independently verify them, auto-promote
+only verified drafts, and update topics. Leave needs-decision/rejected drafts
+for the report. Do NOT run quiz / labs / weekly-refine / OpenWiki refresh.
 Write all output in English.
 ```
 
@@ -29,8 +31,10 @@ Write all output in English.
 
 ```
 Ingest these YouTube episodes for English learning, following _scripts/prompts/guide.md.
-Run step 1 (ingest-youtube.sh) per video, then the Automated pipeline
-(_scripts/pipeline.py) for steps 2-5 only — do NOT run quiz / labs / weekly-refine.
+Run step 1 (ingest-youtube.sh) per video, then the source pipeline
+(_scripts/pipeline.py): extract drafts, independently verify them, auto-promote
+only verified drafts, and update topics. Leave needs-decision/rejected drafts
+for the report. Do NOT run quiz / labs / weekly-refine / OpenWiki refresh.
 Output in English:
 https://www.youtube.com/watch?v=<id1>
 https://www.youtube.com/watch?v=<id2>
@@ -172,4 +176,5 @@ The agent generates a refine report in `_inbox/`, flags stale concepts/expired d
 | Quick hands-on, no grading | "make a tiny lab for `<concept>`" |
 | Daily spaced repetition | "quiz me on due cards" |
 | Weekly cleanup | "run weekly-refine" |
+| Refresh knowledge map | "review canonical changes, then manually update and republish OpenWiki" |
 | Commit & push results | "commit and push with message `<msg>`" |

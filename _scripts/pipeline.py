@@ -2,14 +2,14 @@
 """Exobrain Pipeline — orchestrate AI agents through the knowledge base workflow.
 
 Usage:
-    # Run full pipeline (steps 2-5) for a source that was already ingested:
+    # Process, independently verify, and promote a source's concepts:
     .venv/bin/python3 _scripts/pipeline.py sources/videos/my-video
 
     # Run a single step:
     .venv/bin/python3 _scripts/pipeline.py sources/repos/my-repo --step ingest
-    .venv/bin/python3 _scripts/pipeline.py --step review
-    .venv/bin/python3 _scripts/pipeline.py --step promote
-    .venv/bin/python3 _scripts/pipeline.py --step topics
+    .venv/bin/python3 _scripts/pipeline.py sources/repos/my-repo --step review
+    .venv/bin/python3 _scripts/pipeline.py _drafts/my-concept.md --step promote
+    .venv/bin/python3 _scripts/pipeline.py sources/repos/my-repo --step topics
 
     # Use a custom config:
     .venv/bin/python3 _scripts/pipeline.py sources/repos/my-repo --config my-pipeline.yml
@@ -36,6 +36,7 @@ STEPS = ["ingest", "review", "promote", "topics"]
 # default per-source pipeline run, but available via --step.
 STEP_CHOICES = STEPS + ["lab"]
 DEFAULT_CONFIG = Path(__file__).parent / "pipeline.yml"
+REVIEW_STATUSES = ("pending", "verified", "needs-decision", "rejected")
 
 
 def load_config(path: Path) -> dict:
@@ -64,6 +65,44 @@ def pick_agent(config: dict, role: str) -> dict | None:
     return candidates[0] if candidates else None
 
 
+def _frontmatter(path: Path) -> dict:
+    content = path.read_text(encoding="utf-8")
+    if not content.startswith("---\n"):
+        return {}
+    parts = content.split("---\n", 2)
+    if len(parts) < 3:
+        return {}
+    data = yaml.safe_load(parts[1]) or {}
+    return data if isinstance(data, dict) else {}
+
+
+def _normalized_source(value: str, kb_root: Path) -> str:
+    path = Path(value)
+    if path.is_absolute():
+        try:
+            path = path.resolve().relative_to(kb_root.resolve())
+        except ValueError:
+            pass
+    return path.as_posix().rstrip("/")
+
+
+def reviewed_drafts(kb_root: str | Path, source_dir: str) -> dict[str, list[str]]:
+    """Group drafts for one source by the reviewer's persisted verdict."""
+
+    root = Path(kb_root)
+    source = _normalized_source(source_dir, root)
+    grouped = {status: [] for status in REVIEW_STATUSES}
+    for path in sorted((root / "_drafts").glob("*.md")):
+        metadata = _frontmatter(path)
+        if _normalized_source(str(metadata.get("source", "")), root) != source:
+            continue
+        status = str(metadata.get("review_status", "pending"))
+        if status not in grouped:
+            status = "needs-decision"
+        grouped[status].append(path.relative_to(root).as_posix())
+    return grouped
+
+
 def run_agent(agent: dict, prompt: str, cwd: str) -> subprocess.CompletedProcess:
     command = agent["command"]
     env = {**os.environ, **agent.get("env", {})}
@@ -84,7 +123,12 @@ def run_agent(agent: dict, prompt: str, cwd: str) -> subprocess.CompletedProcess
     return result
 
 
-def run_step(config: dict, step: str, source_dir: str | None = None) -> bool:
+def run_step(
+    config: dict,
+    step: str,
+    source_dir: str | None = None,
+    prompt_vars: dict[str, str] | None = None,
+) -> bool:
     kb_root = config.get("kb_root", ".")
     agent = pick_agent(config, step)
     if not agent:
@@ -98,13 +142,14 @@ def run_step(config: dict, step: str, source_dir: str | None = None) -> bool:
         return False
 
     # Fill template variables
-    prompt = prompt_template.replace("{source_dir}", source_dir or "").replace(
-        "{kb_root}", kb_root
-    )
+    values = {"source_dir": source_dir or "", "kb_root": kb_root, **(prompt_vars or {})}
+    prompt = prompt_template
+    for key, value in values.items():
+        prompt = prompt.replace(f"{{{key}}}", value)
 
     # Validate step prerequisites
-    if step == "ingest" and not source_dir:
-        log.error("Step 'ingest' requires a source_dir argument")
+    if step in STEP_CHOICES and not source_dir:
+        log.error("Step '%s' requires a target path or request", step)
         return False
 
     log.info("=== Step: %s ===", step)
@@ -157,40 +202,60 @@ def main():
             prompt = config.get("prompts", {}).get(args.step, "")
             prompt = prompt.replace("{source_dir}", args.source_dir or "").replace(
                 "{kb_root}", config.get("kb_root", ".")
-            )
+            ).replace("{verified_drafts}", args.source_dir or "")
             print(f"Agent: {agent['name'] if agent else 'NONE'}")
             print(f"Command: {agent['command'] if agent else 'NONE'}")
             print(f"Prompt: {prompt}")
             return
 
-        success = run_step(config, args.step, args.source_dir)
+        prompt_vars = None
+        if args.step == "promote":
+            prompt_vars = {"verified_drafts": args.source_dir or ""}
+        success = run_step(config, args.step, args.source_dir, prompt_vars)
         sys.exit(0 if success else 1)
 
     # Full pipeline mode (steps 2-5)
     if not args.source_dir:
         parser.error("source_dir is required for full pipeline mode")
 
-    steps_to_run = STEPS  # ingest, review, promote, topics
-
-    for step in steps_to_run:
-        if args.dry_run:
+    if args.dry_run:
+        for step in STEPS:
             agent = pick_agent(config, step)
-            prompt = config.get("prompts", {}).get(step, "")
-            prompt = prompt.replace("{source_dir}", args.source_dir or "").replace(
-                "{kb_root}", config.get("kb_root", ".")
-            )
             print(f"[{step}] Agent: {agent['name'] if agent else 'NONE'}")
-            print(f"[{step}] Prompt: {prompt[:100]}...")
-            print()
-            continue
+        print("[promote] Conditional: only drafts persisted as review_status=verified")
+        return
 
-        success = run_step(config, step, args.source_dir)
-        if not success:
+    for step in ("ingest", "review"):
+        if not run_step(config, step, args.source_dir):
             log.error("Pipeline stopped at step '%s'", step)
             sys.exit(1)
 
+    verdicts = reviewed_drafts(config.get("kb_root", "."), args.source_dir)
+    verified = verdicts["verified"]
+    exceptions = verdicts["pending"] + verdicts["needs-decision"]
+
+    if verified:
+        if not run_step(
+            config,
+            "promote",
+            args.source_dir,
+            {"verified_drafts": "\n".join(f"- {path}" for path in verified)},
+        ):
+            log.error("Pipeline stopped at step 'promote'")
+            sys.exit(1)
+        if not run_step(config, "topics", args.source_dir):
+            log.error("Pipeline stopped at step 'topics'")
+            sys.exit(1)
+    else:
+        log.info("No verified drafts for %s; skipping promote and topics", args.source_dir)
+
+    if exceptions:
+        log.warning("Drafts need a decision: %s", ", ".join(exceptions))
+    if verdicts["rejected"]:
+        log.info("Rejected drafts retained with review notes: %s", ", ".join(verdicts["rejected"]))
+
     if not args.dry_run:
-        log.info("Pipeline completed successfully!")
+        log.info("Pipeline completed; refresh OpenWiki manually if canonical content changed")
 
 
 if __name__ == "__main__":
