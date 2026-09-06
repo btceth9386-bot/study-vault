@@ -2,12 +2,14 @@
 
 You are an Exobrain lab designer. Turn a small amount of foundational knowledge into a **learn-by-building, fading-scaffold lab**. The AI creates the architecture, scenario, harness, and explanation; the learner predicts behavior and fills the conceptual core.
 
-The default outcome is a runnable lab plus a human-readable review site. Interactive grading happens later via `lab-review.md`.
+The default outcome is a runnable lab plus a human-readable review site in `~/orb_pods_share`, and a small recovery capsule in this repository. Interactive grading happens later via `lab-review.md`.
 
 Follow this documentation workflow in order. Do not build the review site directly from the raw spec:
 
 ```text
-spec.md -> spec.diataxis.md -> review-site/pages HTML -> Cloudflare Pages
+~/orb_pods_share/<lab-id>/spec.md -> spec.diataxis.md -> review-site/pages HTML -> Cloudflare Pages
+                                      |
+                                      +-> study-vault/labs/<lab-id>/{manifest.yaml,spec.md}
 ```
 
 ## Input
@@ -46,7 +48,7 @@ Use `real-tool` when the user explicitly names an integration to test. State cre
 
 ## Lab output
 
-Create `labs/<lab-id>/` containing:
+Create the complete lab under `~/orb_pods_share/<lab-id>/`. Do not keep the runnable scaffold or learner artifacts in the study-vault repository.
 
 ### 1. `spec.md`
 
@@ -85,7 +87,7 @@ Create `labs/<lab-id>/` containing:
 
 ### 2. `spec.diataxis.md`
 
-After `spec.md` and the lab scenario are complete, read and follow the installed `doc-restructure` skill. Restructure `spec.md` as a second pass and write the result to `labs/<lab-id>/spec.diataxis.md`. Keep `spec.md` unchanged as the complete source specification.
+After `spec.md` and the lab scenario are complete, read and follow the installed `doc-restructure` skill. Restructure `spec.md` as a second pass and write the result to `~/orb_pods_share/<lab-id>/spec.diataxis.md`. Keep `spec.md` unchanged as the complete source specification.
 
 Use these project settings explicitly:
 
@@ -126,7 +128,7 @@ Record the correct outcome for each checkpoint and the final result, with a one-
 
 ## Human review site
 
-Only after `spec.diataxis.md` exists, read and follow the installed `web-artifacts-builder` skill to create a responsive explanation artifact under `labs/<lab-id>/review-site/`. Use `spec.diataxis.md` as the primary content and information architecture source. You may inspect the scaffold to verify filenames and commands, but do not derive or expose the private solution. Bundle the artifact to a single HTML file and place the deployable copy at `labs/<lab-id>/pages/index.html`.
+Only after `spec.diataxis.md` exists, read and follow the installed `web-artifacts-builder` skill to create a responsive explanation artifact under `~/orb_pods_share/<lab-id>/review-site/`. Use `spec.diataxis.md` as the primary content and information architecture source. You may inspect the scaffold to verify filenames and commands, but do not derive or expose the private solution. Bundle the artifact to a single HTML file and place the deployable copy at `~/orb_pods_share/<lab-id>/pages/index.html`.
 
 Optimize for human understanding, not decoration. The page must make these clear without reading the repository:
 
@@ -147,21 +149,30 @@ Public safety rules:
 
 ## Cloudflare Pages preview
 
-Use the installed `wrangler` skill and current official Cloudflare documentation. Check Wrangler v4+ and authentication first. If Wrangler v4+ is unavailable, install `wrangler@latest` as a dev dependency inside `labs/<lab-id>/review-site/` and invoke it through `npx`; do not add it to the study-vault root.
+Use the installed `wrangler` skill and current official Cloudflare documentation. Check Wrangler v4+ and authentication first. If Wrangler v4+ is unavailable, install `wrangler@latest` as a dev dependency inside `~/orb_pods_share/<lab-id>/review-site/` and invoke it through `npx`; do not add it to the study-vault root.
 
 Create a dedicated Cloudflare Pages application for each lab. Name it `<lab-id>-review`; keep the name lowercase and short enough for Cloudflare Pages. On a rerun, reuse only the existing project for that same lab. Never deploy different labs to a shared Pages project.
 
 ```bash
 npx wrangler pages project create <lab-id>-review --production-branch main
 
-npx wrangler pages deploy labs/<lab-id>/pages \
+npx wrangler pages deploy ~/orb_pods_share/<lab-id>/pages \
   --project-name <lab-id>-review \
   --branch main
 ```
 
-Write the Pages project name, review URL, and deployment status to `labs/<lab-id>/deployment.md`. If Wrangler or authentication is unavailable, keep the complete local HTML, record the blocker and exact retry commands, and never invent a URL.
+Write the Pages project name, review URL, and deployment status to `~/orb_pods_share/<lab-id>/deployment.md`. If Wrangler or authentication is unavailable, keep the complete local HTML, record the blocker and exact retry commands, and never invent a URL.
 
-Before deployment, verify that `spec.md`, `spec.diataxis.md`, and `pages/index.html` exist, and inspect the public HTML for prohibited private content. Deploy only `labs/<lab-id>/pages/`.
+Before deployment, verify that `spec.md`, `spec.diataxis.md`, and `pages/index.html` exist, and inspect the public HTML for prohibited private content. Deploy only `~/orb_pods_share/<lab-id>/pages/`.
+
+## Study-vault recovery capsule
+
+After the full lab is ready, create `labs/<lab-id>/` in study-vault with only:
+
+- an unchanged copy of `spec.md`;
+- `manifest.yaml` containing `schema_version`, `id`, `title`, `status`, `concept_ids`, `workspace_path`, `canonical_spec`, the spec's SHA-256, `generator_prompt`, public review URLs, and the derived artifacts to regenerate.
+
+The capsule must be sufficient for a later AI agent to recreate an equivalent lab after loss of `orb_pods_share`. Equivalence means preserving the learning goal, core task, failure/comparison behavior, prerequisites, and acceptance criteria; byte-for-byte output is not required. Do not copy `spec.diataxis.md`, scaffold code, fixtures, predictions, answer keys, generated HTML, run output, or secrets into study-vault.
 
 ## Concept update
 
@@ -173,9 +184,9 @@ Set `lab_status: scaffolded` on every included concept that has that field. Do n
 - Keep the runnable scenario small; the learning is in the feedback loop, not setup work.
 - Make outputs observable (a trace, a metric, a diff, a failing test).
 - Multi-concept labs must have one coherent end-to-end goal, not unrelated exercises bundled together.
-- Keep every generated file and all visible review-site text in English.
+- Keep every full lab file and all visible review-site text in English unless the user asks for another language. The recovery capsule remains language-neutral except for its canonical spec.
 - Preserve the generation order: raw spec, Diátaxis restructure, HTML artifact, then deployment.
 
 ## Session ending
 
-Report: the lab path, included concepts and tools, setup mode, what the learner must fill, the Pages review URL or deployment blocker, and the next review command. Remind the learner to fill `predictions.md` before running the lab.
+Report: the external lab path, recovery-capsule path, included concepts and tools, setup mode, what the learner must fill, the Pages review URL or deployment blocker, and the next review command. Remind the learner to fill `predictions.md` before running the lab.

@@ -1,0 +1,22 @@
+schema_version: 1
+id: otel-collector-positioning
+title: OpenTelemetry Positioning — Where the Collector Sits
+status: scaffolded
+concept_ids:
+  - telemetry-signal-model
+  - collector-pipeline-architecture
+  - otlp-vendor-neutral-telemetry-protocol
+  - opentelemetry-api-sdk-separation
+workspace_path: ~/orb_pods_share/otel-collector-positioning
+canonical_spec: spec.md
+spec_sha256: ee65fcfc5f9a46599db7b034d05aa8fa8d162c8bcb61b075d1206359061c83a1
+generator_prompt: _scripts/prompts/lab-design.md
+review_urls:
+  en: https://otel-collector-positioning-review.pages.dev/index-v2.html
+  zh-TW: https://otel-collector-positioning-review.pages.dev/index-zh-v2.html
+regenerate:
+  - spec.diataxis.md
+  - runnable scaffold and fixtures
+  - predictions.md and expected.md
+  - review-site and pages
+  - deployment.md

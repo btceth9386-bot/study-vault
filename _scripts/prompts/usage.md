@@ -103,26 +103,27 @@ Include:
 The prompt above is sufficient; you do not need to name each skill again. The agent follows this workflow:
 
 ```text
-labs/<lab-id>/spec.md
-  -> doc-restructure -> labs/<lab-id>/spec.diataxis.md
-  -> web-artifacts-builder -> labs/<lab-id>/pages/index.html
+~/orb_pods_share/<lab-id>/spec.md
+  -> doc-restructure -> ~/orb_pods_share/<lab-id>/spec.diataxis.md
+  -> web-artifacts-builder -> ~/orb_pods_share/<lab-id>/pages/index.html
   -> wrangler -> https://<lab-id>-review.pages.dev
+  -> study-vault recovery capsule: labs/<lab-id>/{manifest.yaml,spec.md}
 ```
 
 `spec.md` remains the complete source specification. `spec.diataxis.md` is a second-pass, human-first version with separated tutorial, explanation, reference, and checkpoint material; it becomes the primary source for the review HTML. The agent then creates or reuses the dedicated Cloudflare Pages application `<lab-id>-review` and deploys only the sanitized `pages/` directory. It never publishes `expected.md`, learner predictions, secrets, private URLs, or a completed core solution. If deployment is unavailable, the local HTML and exact retry commands remain in the lab folder.
 
 Then **you** do the hands-on part:
 1. Open the review URL and confirm the architecture and learning goal.
-2. Fill `labs/<lab-id>/predictions.md` **before** running.
+2. Fill `~/orb_pods_share/<lab-id>/predictions.md` **before** running.
 3. Implement the stubbed core (`TODO: YOUR CORE`).
-4. Diff your result against `labs/<lab-id>/expected.md`.
+4. Diff your result against `~/orb_pods_share/<lab-id>/expected.md`.
 
 ### Grade your attempt (run AFTER filling predictions + core)
 
 **Say in Discord:**
 
 ```
-Read _scripts/prompts/lab-review.md then review my labs/<lab-id>/ attempt.
+Read _scripts/prompts/lab-review.md then review my ~/orb_pods_share/<lab-id>/ attempt.
 ```
 
 The agent corrects mistakes, adds `application` quiz cards (due tomorrow), and updates `lab_status`.

@@ -123,17 +123,17 @@ Start once the learner recognizes the main term and can state its problem or exp
 .venv/bin/python3 _scripts/pipeline.py "Kiro CLI + Langfuse for evaluation" --step lab
 ```
 
-The lab agent creates `labs/<lab-id>/`, uses `web-artifacts-builder` to produce a human-readable review HTML, then uses the Wrangler skill to create a dedicated `<lab-id>-review` Cloudflare Pages application and publish the sanitized page. Secrets, learner predictions, private answer keys, and completed core solutions must never be published.
+The lab agent creates the complete lab under `~/orb_pods_share/<lab-id>/`, uses `web-artifacts-builder` to produce a human-readable review HTML, then uses the Wrangler skill to create a dedicated `<lab-id>-review` Cloudflare Pages application and publish the sanitized page. It keeps only `labs/<lab-id>/{manifest.yaml,spec.md}` in study-vault as a recovery capsule. Secrets, learner predictions, private answer keys, and completed core solutions must never be published.
 
 Then (manually, in order):
 1. Review the published architecture and acceptance criteria.
-2. Fill `labs/<lab-id>/predictions.md` BEFORE running.
+2. Fill `~/orb_pods_share/<lab-id>/predictions.md` BEFORE running.
 3. Implement the stubbed core (`TODO: YOUR CORE`).
-4. Diff your result against `labs/<lab-id>/expected.md`.
+4. Diff your result against `~/orb_pods_share/<lab-id>/expected.md`.
 5. Ask an AI agent to grade your attempt — it corrects mistakes and feeds them into the quiz bank:
 
 ```
-Read _scripts/prompts/lab-review.md then review my labs/<lab-id>/ attempt.
+Read _scripts/prompts/lab-review.md then review my ~/orb_pods_share/<lab-id>/ attempt.
 ```
 
 Lighter fallback (single-shot, no grading loop): `Read _scripts/prompts/labs-tiny-from-concept.md then make a tiny lab for <concept>`.

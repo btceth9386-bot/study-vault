@@ -1,0 +1,20 @@
+schema_version: 1
+id: langgraph-state-flow
+title: LangGraph State Flow — Reducer vs. Overwrite
+status: scaffolded
+concept_ids:
+  - langgraph-stategraph-state-schema
+  - langgraph-channels-and-reducers
+workspace_path: ~/orb_pods_share/langgraph-state-flow
+canonical_spec: spec.md
+spec_sha256: cced609f3044be1438f66b8f96d22f554a117a020f082cec48ea370e800743d9
+generator_prompt: _scripts/prompts/lab-design.md
+review_urls:
+  en: https://langgraph-state-flow-review.pages.dev/index-v2.html
+  zh-TW: https://langgraph-state-flow-review.pages.dev/index-zh-v2.html
+regenerate:
+  - spec.diataxis.md
+  - runnable scaffold and fixtures
+  - predictions.md and expected.md
+  - review-site and pages
+  - deployment.md
