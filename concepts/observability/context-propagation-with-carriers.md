@@ -14,6 +14,7 @@ related:
   - microservices
   - agentic-workflow-span-hierarchy
   - mcp-client-server-trace-correlation
+  - trace-aware-agent-evaluation
 tags:
   - observability
   - opentelemetry
@@ -48,6 +49,7 @@ Service A receives a request with trace ID `abc`, starts a span, and calls Servi
 - [[microservices]]: Network boundaries are exactly where propagation prevents distributed debugging from breaking apart.
 - [[agentic-workflow-span-hierarchy]]: Propagation preserves parent-child context when agent work crosses processes.
 - [[mcp-client-server-trace-correlation]]: MCP client and server spans depend on injection and extraction across their boundary.
+- [[trace-aware-agent-evaluation]]: Propagation keeps distributed tool calls together so their full trajectory can be tested.
 
 ## Open questions
 

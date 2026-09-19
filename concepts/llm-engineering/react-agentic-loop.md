@@ -18,6 +18,7 @@ related:
 - langchain-core-message-model-for-langgraph-state
 - autonomous-incident-investigation
 - agentic-workflow-span-hierarchy
+- iterative-adversarial-testing-loop
 tags:
 - llm-engineering
 - dspy
@@ -63,6 +64,7 @@ The agent can ask the search tool for missing information before answering, inst
 - [[langchain-tool-schema-contract]]: LangChain's tool-call schema is one concrete way to carry the Action and Observation parts of a tool loop through model and tool messages.
 - [[langgraph-send-command-control-flow]]: LangGraph can express the model-tool-answer loop as explicit routing between graph nodes.
 - [[autonomous-incident-investigation]]: Incident investigation is a production example of repeated reasoning, tool use, and observation.
+- [[iterative-adversarial-testing-loop]]: Adversarial testing specializes the loop with attacker, target, judge, and attack-budget roles.
 
 ## Open questions
 
