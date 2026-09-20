@@ -6,6 +6,8 @@
 
 ## agents
 
+- [iterative-adversarial-testing-loop](../concepts/llm-engineering/iterative-adversarial-testing-loop.md) - Iterative Adversarial Testing Loop
+- [trace-aware-agent-evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md) - Trace-Aware Agent Evaluation
 - [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
 - [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
 - [langgraph-channels-and-reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md) - LangGraph Channels and Reducers
@@ -35,6 +37,7 @@
 
 ## architecture
 
+- [model-agnostic-evaluation-provider-abstraction](../concepts/llm-engineering/model-agnostic-evaluation-provider-abstraction.md) - Model-Agnostic Evaluation Provider Abstraction
 - [adapter-based-llm-optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md) - Adapter-Based LLM Optimization
 - [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
 - [microservices](../concepts/system-design/microservices.md) - Microservices Architecture
@@ -236,6 +239,10 @@
 
 ## evaluation
 
+- [composable-llm-red-team-testing](../concepts/llm-engineering/composable-llm-red-team-testing.md) - Composable LLM Red-Team Testing
+- [configuration-driven-llm-evaluation-matrix](../concepts/llm-engineering/configuration-driven-llm-evaluation-matrix.md) - Configuration-Driven LLM Evaluation Matrix
+- [hybrid-llm-output-assertions](../concepts/llm-engineering/hybrid-llm-output-assertions.md) - Hybrid LLM Output Assertions
+- [trace-aware-agent-evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md) - Trace-Aware Agent Evaluation
 - [actionable-side-information](../concepts/llm-engineering/actionable-side-information.md) - Actionable Side Information
 - [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
 - [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping
@@ -403,6 +410,12 @@
 
 ## llm-engineering
 
+- [composable-llm-red-team-testing](../concepts/llm-engineering/composable-llm-red-team-testing.md) - Composable LLM Red-Team Testing
+- [configuration-driven-llm-evaluation-matrix](../concepts/llm-engineering/configuration-driven-llm-evaluation-matrix.md) - Configuration-Driven LLM Evaluation Matrix
+- [hybrid-llm-output-assertions](../concepts/llm-engineering/hybrid-llm-output-assertions.md) - Hybrid LLM Output Assertions
+- [iterative-adversarial-testing-loop](../concepts/llm-engineering/iterative-adversarial-testing-loop.md) - Iterative Adversarial Testing Loop
+- [model-agnostic-evaluation-provider-abstraction](../concepts/llm-engineering/model-agnostic-evaluation-provider-abstraction.md) - Model-Agnostic Evaluation Provider Abstraction
+- [trace-aware-agent-evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md) - Trace-Aware Agent Evaluation
 - [acp-agent-backend-for-ides](../concepts/llm-engineering/acp-agent-backend-for-ides.md) - ACP Agent Backend for IDEs
 - [actionable-side-information](../concepts/llm-engineering/actionable-side-information.md) - Actionable Side Information
 - [adapter-based-llm-optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md) - Adapter-Based LLM Optimization
@@ -533,6 +546,7 @@
 
 ## observability
 
+- [trace-aware-agent-evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md) - Trace-Aware Agent Evaluation
 - [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
 - [collector-authentication-extensions](../concepts/observability/collector-authentication-extensions.md) - Collector Authentication Extensions
 - [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
@@ -677,6 +691,7 @@
 
 ## provider-integrations
 
+- [model-agnostic-evaluation-provider-abstraction](../concepts/llm-engineering/model-agnostic-evaluation-provider-abstraction.md) - Model-Agnostic Evaluation Provider Abstraction
 - [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
 - [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
 
@@ -684,6 +699,11 @@
 
 - [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
 - [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
+
+## red-teaming
+
+- [composable-llm-red-team-testing](../concepts/llm-engineering/composable-llm-red-team-testing.md) - Composable LLM Red-Team Testing
+- [iterative-adversarial-testing-loop](../concepts/llm-engineering/iterative-adversarial-testing-loop.md) - Iterative Adversarial Testing Loop
 
 ## quality
 
@@ -737,6 +757,7 @@
 
 ## security
 
+- [composable-llm-red-team-testing](../concepts/llm-engineering/composable-llm-red-team-testing.md) - Composable LLM Red-Team Testing
 - [mcp-oauth-protected-resource-discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md) - MCP OAuth Protected Resource Discovery
 - [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
 - [ssl-termination](../concepts/system-design/ssl-termination.md) - SSL Termination
@@ -813,6 +834,9 @@
 
 ## testing
 
+- [configuration-driven-llm-evaluation-matrix](../concepts/llm-engineering/configuration-driven-llm-evaluation-matrix.md) - Configuration-Driven LLM Evaluation Matrix
+- [hybrid-llm-output-assertions](../concepts/llm-engineering/hybrid-llm-output-assertions.md) - Hybrid LLM Output Assertions
+- [iterative-adversarial-testing-loop](../concepts/llm-engineering/iterative-adversarial-testing-loop.md) - Iterative Adversarial Testing Loop
 - [change-specific-release-testing](../concepts/llm-engineering/change-specific-release-testing.md) - Change-Specific Release Testing
 - [cassette-backed-mcp-pytest-fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md) - Cassette-Backed MCP Pytest Fixtures
 - [declarative-mcp-scenario-recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md) - Declarative MCP Scenario Recording
@@ -845,6 +869,7 @@
 
 ## tracing
 
+- [trace-aware-agent-evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md) - Trace-Aware Agent Evaluation
 - [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
 - [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
 - [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy

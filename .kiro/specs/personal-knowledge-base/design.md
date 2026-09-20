@@ -2,7 +2,7 @@
 
 ## 概覽
 
-本設計文件描述一套以 Markdown 為核心的個人知識庫系統（Exobrain），支援多種來源輸入（YouTube 影片、PDF、GitHub repo、網頁文章、Podcast、epub 書籍），透過三個核心 Prompt 驅動 AI Agent 持續 refine，將原始材料轉化為可搜尋、可複習、可考試的個人知識資產。
+本設計文件描述一套以 Markdown 為核心的個人知識庫系統（Exobrain），支援多種來源輸入（YouTube 影片、PDF、GitHub repo、網頁文章、Podcast、epub 書籍），透過四個核心 Prompt 驅動 AI Agent 持續 refine，將原始材料轉化為可搜尋、可複習、可考試的個人知識資產。
 
 核心流程：**多種來源輸入 → Ingest Pipeline 統一轉 Markdown → AI Agent 持續 refine → 可複習可考試的個人資產**
 
@@ -14,7 +14,7 @@
 | 版本控制 | Git + GitHub Free | 僅追蹤 refined 的純文字檔，大型檔案透過 .gitignore 排除 |
 | 腳本語言 | Bash + Python + Node.js | Bash 處理簡單 pipeline、Python 處理複雜邏輯（Whisper API、SM-2）、Node.js 處理 HTML 轉換 |
 | 資料格式 | Markdown + YAML frontmatter + JSON | Git 友善、AI Agent 可讀寫、可匯出至 Obsidian/Logseq |
-| 概念管理 | 先進 _drafts/ 再 promote | 避免 AI 自動寫壞知識庫，使用者保有最終審核權 |
+| 概念管理 | 先進 _drafts/、獨立驗證後再 promote | Extraction Agent 不能直接寫正式區；verified 自動晉升，使用者只處理證據無法解決的例外 |
 
 ### 技術棧
 
@@ -62,7 +62,7 @@
            v
 ┌─────────────────────────────────────────────────────────────────────┐
 │                       Prompt Engine                                  │
-│  new-source.md  |  promote-concept.md  |  weekly-refine.md          │
+│  new-source.md | review-drafts.md | promote-concept.md | refine   │
 └──────────┬──────────────────────────────────────────────────────────┘
            │
            v
@@ -84,13 +84,13 @@ sources/
    │
    │  new-source prompt
    v
-_drafts/
+_drafts/ (review_status: pending)
    │
-   │  使用者 review
+   │  獨立 reviewer 對照證據
    v
-approve? ──No──> 刪除 draft
+verified? ──needs-decision──> 使用者只處理例外
    │
-   Yes
+   Yes（自動）
    │
    │  promote-concept prompt
    v
@@ -110,14 +110,14 @@ refine-report             使用者作答
 系統嚴格分為四層：
 
 1. **來源層（sources/）**：原始材料的處理結果，只增不改
-2. **草稿層（_drafts/）**：AI 產出的候選概念，等待使用者審核
+2. **草稿層（_drafts/）**：Extraction Agent 產出的候選概念，等待獨立驗證或例外決策
 3. **概念層（concepts/）**：正式的知識資產，只透過 promote-concept 寫入
 4. **測驗層（quiz/）**：結構化題庫 + SM-2 排程狀態
 
 關鍵約束：
 - `new-source` prompt 只能寫入 `sources/` 和 `_drafts/`，不能直接寫入 `concepts/`
 - `weekly-refine` prompt 不能修改 `concepts/` 中的任何檔案內容
-- 所有寫入 `concepts/` 的操作必須經過 `promote-concept` prompt
+- 所有寫入 `concepts/` 的操作必須經過 `promote-concept` prompt；pipeline 只能傳入 `review_status: verified` drafts
 
 ---
 
@@ -489,23 +489,29 @@ def generate_tags_index(kb_root: str) -> str:
     """掃描所有 concept frontmatter 的 tags，產生 tags.md 索引"""
 ```
 
-### 4. Prompt Engine（三個核心 Prompt 檔案）
+### 4. Prompt Engine（四個核心 Prompt 檔案）
 
-三個 Markdown 格式的 prompt 檔案，放在 `_scripts/prompts/`，供 AI Agent（如 Claude Code、Cursor）讀取並執行。
+四個 Markdown 格式的 prompt 檔案，放在 `_scripts/prompts/`，分離 extraction、evidence review、promotion 與 maintenance。
 
 #### 4.1 new-source.md
 
-- 輸入：_inbox/ 中的來源內容 + 基本 metadata
+- 輸入：_inbox/ 中的來源內容，或 ingest script 已建立的 sources/<type>/<slug>/
 - 輸出：sources/<type>/<slug>/ 完整結構 + _drafts/ 候選概念 + _index 更新
 - 約束：不能直接寫入 concepts/
 
-#### 4.2 promote-concept.md
+#### 4.2 review-drafts.md
 
-- 輸入：_drafts/<concept>.md + 對應來源 + 既有 concepts/ 結構
+- 輸入：指定 source 對應的 pending drafts + 原始證據 + 既有 concepts
+- 輸出：每個 draft 的 `verified`、`needs-decision` 或 `rejected` verdict 與證據
+- 約束：只能修改 matching drafts，不能修改 concepts/、topics/、quiz/ 或 sources/
+
+#### 4.3 promote-concept.md
+
+- 輸入：pipeline 傳入的 verified drafts，或使用者明確指定的單一 draft
 - 輸出：concepts/<category>/<concept-id>.md + quiz/bank.json 新題 + _index 更新
 - 約束：Feynman 風格、至少 1 範例、depth=2 預設、反向連結
 
-#### 4.3 weekly-refine.md
+#### 4.4 weekly-refine.md
 
 - 輸入：整個知識庫狀態 + 上次執行時間戳
 - 輸出：_inbox/refine-report-<date>.md + quiz/bank.json 更新 + _index 重新產生
@@ -610,6 +616,8 @@ source: string              # 來源路徑
 merge_candidate: string     # 選填，若與既有概念重複則填入 existing concept id
 status: draft
 created_at: YYYY-MM-DD
+review_status: pending | verified | needs-decision | rejected
+reviewed_at: YYYY-MM-DD       # review 後才有
 ---
 ```
 

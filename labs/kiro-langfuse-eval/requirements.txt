@@ -1,8 +1,0 @@
-langfuse>=3.0.0
-python-dotenv>=1.0.0
-# Judge provider SDKs — judge_client.py only calls whichever one JUDGE_PROVIDER
-# names, but all three are listed so `pip install -r requirements.txt` works
-# no matter which one you pick later without re-running install.
-anthropic>=0.34.0
-openai>=1.40.0
-google-genai>=0.3.0

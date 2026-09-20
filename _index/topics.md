@@ -19,9 +19,13 @@
 - [MCP Record-Replay Testing](../topics/mcp-record-replay-testing.md) — 7 concepts · 3–4h · Turn live MCP sessions into safe, deterministic replay tests and volatility-aware live-server contract checks.
 - [LangGraph Application Development](../topics/langgraph-application-development.md) — 11 concepts · 6–8h · Build stateful LangGraph agents from model primitives through checkpoints, interrupts, memory, and server deployment.
 - [Building Stateful Agents with LangGraph](../topics/langgraph-stateful-agents.md) — 13 concepts · 8–10h · A hands-on path from LangChain's model and tool primitives through LangGraph's execution model to production deployment, persistence, human review, and long-term memory.
-- [LLM Quality and Evaluation Pipeline](../topics/llm-quality-evaluation-pipeline.md) — 7 concepts · 4–5h · Replace ad-hoc iteration with systematic traces, automated judge scoring, version correlation, and optimization targets.
+- [LLM Quality and Evaluation Pipeline](../topics/llm-quality-evaluation-pipeline.md) — 11 concepts · 7–8h · Replace ad-hoc iteration with provider-neutral evaluation matrices, layered assertions, trace checks, and optimization targets.
 - [LLM Quality and Optimization: From Measurement to Systematic Improvement](../topics/llm-quality-and-optimization.md) — 14 concepts · 9–12h · Move from hand-tuned prompts and subjective evaluation to instrumented, metric-driven LLM quality: observability, automated evaluation, DSPy optimization, and GEPA-style reflection.
 - [LLM Program Optimization with DSPy](../topics/llm-program-optimization-dspy.md) — 14 concepts · 6–9h · Declare task structure with Signatures, compose programs with Modules, and compile better prompts automatically.
+
+## LLM Security
+
+- [LLM Security Red Teaming](../topics/llm-security-red-teaming.md) — 2 concepts · 2–3h · Build reusable adversarial probes and bounded multi-turn attack loops for LLM security testing.
 
 ## Cross-Domain
 

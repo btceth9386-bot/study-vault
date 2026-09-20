@@ -1,0 +1,33 @@
+# Canonical knowledge is promoted content only.
+_drafts/
+_inbox/
+sources/
+quiz/
+
+# Private learner state and generated lab artifacts.
+labs/**/expected.md
+labs/**/predictions.md
+labs/**/runs/
+labs/**/review-site/
+labs/**/pages/
+labs/**/usage-log.jsonl
+
+# Superseded design/research notes.
+personal-knowledge-base-design-v2.md
+ai-agent-knowledge-learning-artifact-summary.md
+.agents/
+.kiro/
+
+# Local tools, caches, credentials, and build output.
+.git/
+.github/workflows/openwiki-update.yml
+.claude/
+.codex/
+.hypothesis/
+.pytest_cache/
+.venv/
+.wrangler/
+**/__pycache__/
+**/node_modules/
+**/.env
+nohup.out

@@ -12,6 +12,7 @@ related:
   - standardized-message-content-blocks
   - retrievers-vector-stores-for-langgraph-rag
   - langgraph-stategraph-state-schema
+  - model-agnostic-evaluation-provider-abstraction
 tags:
   - llm-engineering
   - langchain
@@ -56,6 +57,7 @@ The node does not manually convert messages into OpenAI request dictionaries. Th
 - [[standardized-message-content-blocks]]: Wrappers translate provider-specific content formats into LangChain's common message content structure.
 - [[retrievers-vector-stores-for-langgraph-rag]]: Retrieval results become useful only when a graph node feeds them into a model wrapper as context or messages.
 - [[langgraph-stategraph-state-schema]]: A model wrapper is usually called by a node that reads messages from graph state and writes an `AIMessage` update back.
+- [[model-agnostic-evaluation-provider-abstraction]]: Both isolate provider wiring behind adapters, but this one serves graph nodes rather than an evaluation engine.
 
 ## Open questions
 

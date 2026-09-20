@@ -11,6 +11,7 @@ related:
   - react-agentic-loop
   - devops-agent-topology-context
   - context-propagation-with-carriers
+  - trace-aware-agent-evaluation
 tags:
   - observability
   - opentelemetry
@@ -44,6 +45,7 @@ For "find the current refund policy," `invoke_workflow` is the parent span. It c
 - [[react-agentic-loop]]: Each reasoning, action, and observation step can appear in this trace hierarchy.
 - [[devops-agent-topology-context]]: Topology adds service and dependency context to the work shown by the hierarchy.
 - [[context-propagation-with-carriers]]: Propagation preserves parent-child context when a child operation runs in another process.
+- [[trace-aware-agent-evaluation]]: The hierarchy gives trajectory assertions the workflow context needed to judge agent actions.
 
 ## My questions
 

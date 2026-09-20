@@ -30,6 +30,8 @@ related:
   - collector-pipeline-architecture
   - genai-operation-span-taxonomy
   - genai-streaming-telemetry-lifecycle
+  - hybrid-llm-output-assertions
+  - trace-aware-agent-evaluation
 tags:
   - llm-engineering
   - observability
@@ -85,6 +87,8 @@ The fix is no longer guesswork: update retrieval data, compare prompt version 12
 - [[metrics-views-and-aggregations]]: Views control the cost and shape of exported LLM latency and token metrics.
 - [[consistent-probability-sampling]]: Consistent sampling preserves complete distributed traces while limiting observability cost.
 - [[collector-pipeline-architecture]]: Collector pipelines route AI telemetry to one or more backends without changing application instrumentation.
+- [[hybrid-llm-output-assertions]]: Recorded traces and operational data provide evidence for the trace-aware branch of combined grading.
+- [[trace-aware-agent-evaluation]]: This concept turns recorded trajectories into explicit tests of agent behavior.
 
 ## Open questions
 

@@ -52,38 +52,27 @@ The agent will:
 - Generate candidate concept drafts in `_drafts/`
 - Update `_index/`
 
-## Step 3 — Review drafts
+## Step 3 — Independently verify drafts
 
-Ask an AI agent to review the drafts against the original source:
-
-```
-Review all files in _drafts/ against the source material. For each draft:
-
-1. Use the DeepWiki MCP server to read https://deepwiki.com/<owner>/<repo> and verify the draft's accuracy
-2. Check: Is the one-sentence definition correct? Is "why it matters" accurate? Are relationships to other concepts valid?
-3. Flag any factual errors, missing key points, or misleading simplifications
-4. Rate each draft: APPROVE (ready to promote), REVISE (needs changes — list what), or REJECT (too inaccurate)
-
-Output a summary table with your verdict for each draft.
-```
-
-After the review, fix any REVISE items manually or ask the agent to fix them.
-
-## Step 4 — Promote approved drafts to concepts (`promote-concept.md`)
-
-Promote all approved drafts at once:
+Use a different agent/model from the extractor to verify the drafts against the original source:
 
 ```
-Read _scripts/prompts/promote-concept.md then promote all approved drafts in _drafts/ to concepts. Write all output in English.
+Read _scripts/prompts/review-drafts.md and independently verify drafts from
+sources/<type>/<slug> against their source. Persist review_status and evidence
+in each matching draft. Only ask me about needs-decision items.
 ```
 
-Or promote a specific batch if the agent runs out of context:
+The reviewer marks each draft `verified`, `needs-decision`, or `rejected`.
+Technical fact-checking is the reviewer's responsibility; the user only resolves
+material merge, scope, contradiction, or learning-priority exceptions.
+
+## Step 4 — Promote verified drafts to concepts (`promote-concept.md`)
+
+The normal pipeline automatically promotes only drafts persisted as
+`review_status: verified`. To explicitly promote one draft manually:
 
 ```
-Read _scripts/prompts/promote-concept.md then promote these drafts to concepts in English:
-_drafts/load-balancing.md
-_drafts/cap-theorem.md
-_drafts/horizontal-scaling.md
+Read _scripts/prompts/promote-concept.md then promote _drafts/<concept>.md. Write all output in English.
 ```
 
 The agent will:
@@ -91,7 +80,7 @@ The agent will:
 - Add quiz questions to `quiz/bank.json`
 - Update `_index/`
 
-Repeat for each approved draft.
+Repeat for each verified draft.
 
 ## Step 5 — Generate learning paths (topics)
 
@@ -123,17 +112,17 @@ Start once the learner recognizes the main term and can state its problem or exp
 .venv/bin/python3 _scripts/pipeline.py "Kiro CLI + Langfuse for evaluation" --step lab
 ```
 
-The lab agent creates `labs/<lab-id>/`, uses `web-artifacts-builder` to produce a human-readable review HTML, then uses the Wrangler skill to create a dedicated `<lab-id>-review` Cloudflare Pages application and publish the sanitized page. Secrets, learner predictions, private answer keys, and completed core solutions must never be published.
+The lab agent creates the complete lab under `~/orb_pods_share/<lab-id>/`, uses `web-artifacts-builder` to produce a human-readable review HTML, then uses the Wrangler skill to create a dedicated `<lab-id>-review` Cloudflare Pages application and publish the sanitized page. It keeps only `labs/<lab-id>/{manifest.yaml,spec.md}` in study-vault as a recovery capsule. Secrets, learner predictions, private answer keys, and completed core solutions must never be published.
 
 Then (manually, in order):
 1. Review the published architecture and acceptance criteria.
-2. Fill `labs/<lab-id>/predictions.md` BEFORE running.
+2. Fill `~/orb_pods_share/<lab-id>/predictions.md` BEFORE running.
 3. Implement the stubbed core (`TODO: YOUR CORE`).
-4. Diff your result against `labs/<lab-id>/expected.md`.
+4. Diff your result against `~/orb_pods_share/<lab-id>/expected.md`.
 5. Ask an AI agent to grade your attempt — it corrects mistakes and feeds them into the quiz bank:
 
 ```
-Read _scripts/prompts/lab-review.md then review my labs/<lab-id>/ attempt.
+Read _scripts/prompts/lab-review.md then review my ~/orb_pods_share/<lab-id>/ attempt.
 ```
 
 Lighter fallback (single-shot, no grading loop): `Read _scripts/prompts/labs-tiny-from-concept.md then make a tiny lab for <concept>`.
@@ -154,22 +143,30 @@ The agent will:
 
 ## Key constraint
 
-AI never writes directly to `concepts/`. All AI output goes to `_drafts/` first. You review, then promote.
+The extraction agent never writes directly to `concepts/`. Candidates go to
+`_drafts/`; an independent reviewer verifies them, and the pipeline promotes
+only verified drafts. You decide only unresolved material exceptions.
 
 ## Automated pipeline
 
-Instead of running steps 2-5 manually, use the pipeline script. **The "full pipeline" means steps 2-5 only (ingest → review → promote → topics). It does NOT include Step 6 (quiz), Step 6.5 (labs), or Step 7 (weekly-refine)** — those are separate, per-concept or periodic, and run manually.
+Instead of running steps 2-5 manually, use the pipeline script. The source pipeline runs ingest → independent review → promote verified drafts → topics. Drafts requiring a decision or rejected drafts remain in `_drafts/` with evidence. It does NOT include quiz, labs, weekly-refine, or OpenWiki refresh.
 
 ```bash
-# Full pipeline (steps 2-5) for an ingested source:
+# Source pipeline for an ingested source:
 .venv/bin/python3 _scripts/pipeline.py sources/videos/my-video
 .venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo>
 
+# Resolve an exception explicitly, then promote that one draft:
+.venv/bin/python3 _scripts/pipeline.py _drafts/<concept-id>.md --step promote
+
+# After committing a canonical batch, use usage.md section 6 for the explicit
+# data authorization, bilingual OpenWiki refresh, validation, and publication.
+
 # Single step:
 .venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo> --step ingest
-.venv/bin/python3 _scripts/pipeline.py --step review
-.venv/bin/python3 _scripts/pipeline.py --step promote
-.venv/bin/python3 _scripts/pipeline.py --step topics
+.venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo> --step review
+.venv/bin/python3 _scripts/pipeline.py _drafts/<concept-id>.md --step promote
+.venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo> --step topics
 
 # Preview commands without executing:
 .venv/bin/python3 _scripts/pipeline.py sources/repos/<owner>-<repo> --dry-run

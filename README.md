@@ -29,7 +29,11 @@ For any new topic (GitHub repo, book, course, podcast):
 
 ### Draft-then-Promote Workflow
 
-AI never writes directly to your knowledge base. All AI output goes to `_drafts/` first. You review, then promote to `concepts/` — ensuring you retain editorial control.
+The extraction agent never writes directly to `concepts/`. Candidates go to
+`_drafts/`, a separate reviewer verifies them against evidence, and only
+`review_status: verified` drafts are promoted automatically. You are asked only
+when evidence leaves a material merge, scope, contradiction, or learning-priority
+decision unresolved.
 
 ## Supported Sources
 
@@ -97,7 +101,7 @@ study-vault/
 ```
 <kb-root>/
 ├── _inbox/                → Staging area for new sources
-├── _drafts/               → AI-generated drafts awaiting human review
+├── _drafts/               → AI-generated drafts awaiting independent verification or an exception decision
 ├── concepts/              → Promoted knowledge assets (by category)
 ├── sources/
 │   ├── repos/             → GitHub repos (via DeepWiki)
@@ -189,6 +193,41 @@ Use your AI agent with the prompts in `_scripts/prompts/`:
 ```bash
 .venv/bin/python3 -m _scripts.quiz_cli --count 10
 ```
+
+## OpenWiki knowledge map
+
+OpenWiki provides a derived, interlinked orientation layer over approved
+`concepts/`, `topics/`, and lab specifications. It does not replace those
+canonical files or the draft-then-promote workflow. Scope and exclusions live in
+`openwiki/INSTRUCTIONS.md` and `.openwikiignore`.
+
+Published knowledge map:
+
+- Language chooser: https://study-vault-knowledge-map.pages.dev/
+- English: https://study-vault-knowledge-map.pages.dev/en/
+- Traditional Chinese: https://study-vault-knowledge-map.pages.dev/zh-TW/
+
+The static export includes the interactive node graph, Markdown reader, and
+Mermaid diagrams. The viewer loads its rendering libraries from jsDelivr, so it
+requires internet access even after the site files have loaded.
+
+Requires Node.js 22+ and an OpenWiki-supported model credential such as
+`OPENAI_API_KEY`.
+
+```bash
+# Create the initial wiki.
+OPENWIKI_TELEMETRY_DISABLED=1 npx --yes openwiki@0.5.0 code --init --print --language en
+
+# Reconcile it after canonical knowledge changes.
+OPENWIKI_TELEMETRY_DISABLED=1 npx --yes openwiki@0.5.0 code --update --print --language en
+
+# Explore the generated Markdown as a local graph and reader.
+npx --yes openwiki@0.5.0 visualize openwiki --no-open
+```
+
+OpenWiki telemetry is enabled by default; the commands above opt out. Automated
+updates are intentionally not configured during the pilot because they add model
+cost and need a separate review policy.
 
 ## Documentation
 

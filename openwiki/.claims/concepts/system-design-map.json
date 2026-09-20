@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:47b7ae8ddcfbdf44a4386cde86c2ae2655f4fb391d2b4a6c041bac77e41243d4",
+  "claims": [
+    {
+      "id": "claim_639c0034c3754ecd9deb9082642ec0dc",
+      "statement": "The system-design learning material distinguishes the growth path from a single server through horizontal scaling, load balancing, caching, replication, sharding, SPOF analysis, high availability, distributed consistency, microservices, and asynchronous processing.",
+      "evidence": [
+        {
+          "resource": "repo://topics/system-design-fundamentals.md#L18-L61",
+          "version": "repo-lines-v1:sha256:0d48cd01045ad77c7e937d62102897627c9714c8900bcee05d246ab7543ffa8e:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiYzdkYjkwZWNhMTE2Y2ZmNzBjZTAyMDkwZjA3YWE1MmZkZDVlMDQ0MzU3NDE1MTFhMmM3OTBlNTRlN2FjODYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRiNzUyMmM5N2Q0YTI3ZDY5Mjc5Mzg1MWJmNTRkZGIzZWNiZWY0NGY5NDZkZDlkMWNkYmVkN2UwYTdhYTA2MzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFhZTlmOTFlZjgyYjJmYzZhZmQyZDEyYTkyNDg0Yjc0NjlhZjdmYTIwZGEyMzQ0OTlkYzEwNTY4NmQwODhjMmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwMWYyZWMxNzU5M2MxMDU0ZWI0NjM2N2Q4NDUzZWYyNGExNzNjZTk2YjcxMTdkOTFmOWE2OGQ0NGZlZjhiMDEifQ"
+        },
+        {
+          "resource": "repo://topics/system-design-fundamentals.md#L7-L12",
+          "version": "repo-lines-v1:sha256:a4d6b392a72018c37a26bac9a5d1c57b3f776bf2bede461dd6661dce7b24f327:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzEzM2JiNjRkNWJiOTg3NGViZjk3Y2JkNmJhYzYyNzQ5NTZkZTI3M2ZkMThjZjY5N2ZmMGUwNzAyOGQ5MjY5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODQ0NjRjM2E4ZmFmMDMzMzZmNzVmNDEzYjU1N2QwZTMzZWIwMmE4MzRiMTdlMWVmMThhM2U1NDg0MWM4N2UwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmFiMmFjNTJjNmRkNjQxNTM5NDE4YjE2MDQxZGY1YTc5ZWYyOWRiZGU5ZmI5NWJhOTdkZmQ5NTE0Njc3OGRmYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDAxZjJlYzE3NTkzYzEwNTRlYjQ2MzY3ZDg0NTNlZjI0YTE3M2NlOTZiNzExN2Q5MWY5YTY4ZDQ0ZmVmOGIwMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c834ba4e94bc4b40a573b5c3de9a8dca",
+      "statement": "Horizontal scaling adds machines but requires externalizing server-local session state so any instance can serve a request; a load balancer distributes traffic and uses health checks to avoid unhealthy backends.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/system-design/horizontal-scaling.md#L31-L37",
+          "version": "repo-lines-v1:sha256:721aa8443983f7445b5df6724902b67a307fda4fbec7619a6b4ef47cb036b1cb:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDhjYzMwMzM0YTExMmJmY2EyYzY0YjE1MDAyNzY3NGM2NDljMGRlY2Q5MzMzMjA5MTYwNzNkNDY1MDA4Y2RlNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWI3MmVkZWZlNDQ0ODgzOWM5OGVhNTQ4MWY3MjExMjEzNDZmNmY5ZTk0ZWM5NGFiZGYxODcwZjEwMGViM2JmNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        },
+        {
+          "resource": "repo://concepts/system-design/load-balancing.md#L37-L41",
+          "version": "repo-lines-v1:sha256:9bda6135e5308a275be6d6fb5886ad5be0a68721fab4e550acddfea379cb6198:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjM3MmE5MDgxZjc1NTIxMDM4ZTA5NDFlN2MwNDM3MzBiYTRlOGI0MzgwNzhmMDU5Y2NlOTVmMTY3YmYwOGIxYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2FiZTI2ZmY0NzNiYTM2OGRlNDNmZWEwNTVlODQyOTlhYjZmYTQ1ZDcxMTZiOTZmYWVhOTdlZWRhYzdmZjE2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDdmYjk1OTBkMTkyMGJmYjg1ZTZiZWVlZTg0ZDdjOWJkMmZlZmU4MjEwN2Q1MzQzODc2OTkyNzhiZjAwNDQ5MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_14d47c1b320149bcb25f97003fae6681",
+      "statement": "Caching is primarily a read-load mechanism with update-pattern trade-offs: cache-aside can return stale data, write-through synchronously persists writes, and write-behind asynchronously flushes writes and risks losing data not yet flushed when the cache fails.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/system-design/caching-strategies.md#L39-L44",
+          "version": "repo-lines-v1:sha256:7e3c0fe0ee84f63491efdaeb81278be02eb55b843f6fe93a4aeb1fc11f34f74e:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTJjOTVkMjJhNGE0MTg4MzU0MGNkMjVjZjhkNDYwMjRkNzc4YjcyMzViYzRhYTdkYjJhNGNjZjljNjczMWZjMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmM4OTA4NGMxZTcwNWJlY2MzNmIzMDg2NDBhYTk5Y2IyNTIzYzI0ZjA5Zjg3YjVhZmMxMThhN2I4MzhjNDUwZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWM5Y2U4ZGQwZWJjMGEwYTIwMjQxNTRjZWU0OTYwODkyZTM3NjVkNzFlMjNiMDc5NTlkODBjZjY2NTQ3NzA2NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        },
+        {
+          "resource": "repo://topics/system-design-fundamentals.md#L30-L31",
+          "version": "repo-lines-v1:sha256:a70650df3b91a17d2adce26fad9159386d1a0c91d1b2b2c0427de87911d9819d:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzY2MmJhZDFhM2YyOWY2MTQ0MTNiYjU3Y2ZiNzViZmEwOWI1ZWNlNmJkYmUxZjc2NDMwMTNjZGZlOTBhYmRjNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTAyMjM0NGMzYmUwMjZkZjdhMGVmM2JhNTViNGI1ZDNlNjdiYmZkMmI2Nzc2NjhjMWUzZTk1YzllZjNjMzg2NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjQwZTVmN2I2MGYwMTVjYThlOGYwN2FkOGE0MjZlOGZlM2U0NDMzNzZmNWI5YTNmYjY5Yzc3NDEyZTY3YjYzYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmQ3MTQzMzk2MzY1Yjg1ODFiMzI3YmEyNTlmNDJlZWJiNTNmM2UyMWEyNWI1NzgwOTVmZjYwM2ZkYTdhZDFiYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3aa4fdd352ea45278f7283754bf2d17f",
+      "statement": "Replication copies a dataset for read scaling and failover, whereas sharding partitions rows across independent instances when data size or write volume outgrows a single database; an OLTP/OLAP split instead assigns transactional and analytical workloads to different stores.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/llm-engineering/oltp-olap-split.md#L22-L34",
+          "version": "repo-lines-v1:sha256:d5f875cc34c28abee86a99e89f8462e0a6038c879d92476ea1426118c0e45ef4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyNjdlMWJiMzVkMjhlZmVmNmZkMWZiN2VjZjY4ZTdlY2M3YWExMGYxOTkwOWE5YmIzZDkxMmU5ODJjMDNiOWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0OThlMjk0OTRkODAyZGM1OTAyNWVjM2FkYzEzYjNlNmFlM2U5NWIxMGNmNDI5MzBjNjBiZjQ1ODU5NzZlYjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJjYTlmODc0OTE5OWYwYjVmYmI2MTMzMmU1YjY5MzlmN2VkNTcxNzFiNTU3NTIyMDRmY2YxMjM1MWFkYWNmYTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        },
+        {
+          "resource": "repo://concepts/system-design/database-replication.md#L22-L36",
+          "version": "repo-lines-v1:sha256:dd28922ae0d91f24fa418bc9f411bb9e36d8178a792075038e7d4acac5b897dc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5NmE4Y2RiZTNjOGYyZTMwMjFlMzA1YzIwYzMxMTQwMzI5MTZlZTc1ZDAzM2RlZjMzNTQxMTFiOTdmODA1YjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhNTlhNWI4NmY0ZmY3Yzg0OTk5N2Y1NmU0MWYzZGYxNGZlMjA0MjI2MTM0ODkzOTcwZjA4YWM3ZWFmYzM2OWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgzZmZjNDVkZmIzOTlmNWQ1YzNmMGUxMGNhMTMyOGY4YzUyNGVhMzE4NWZlNzQ0MWM4YWEzNTVmMTk4M2JkMDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        },
+        {
+          "resource": "repo://concepts/system-design/database-sharding.md#L20-L39",
+          "version": "repo-lines-v1:sha256:a8c770f15a977e4df60282d6d2280a9f36c71030ee50cb32d11cde6336d4f8f5:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjNjk2MTZmYmYxNzlkNTAzOGJiMDE3MzJjMjc5YzE3NjI3MGYzM2IzYWNhMDdkODFiNjAxYzRmZDcwYTA2ZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2ZWJjOTY2YWVhYTg2ODZkYmY5YTk3MzIxYmVkZmIxZDIwZjhmYzgzNmY1MjVmOWU2MTY1NmM0NDA2OGVkN2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIxMjg0YjMxZWNiYzgxYjEyOTAwMzViMmQzZTE4Zjk1OTE4MDA5Mjk2OWJkYTk1YTFmMjVhMDlhNWZiYTkyOTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7b117827bb624777b22edfd71de9f051",
+      "statement": "Asynchronous processing separates request acceptance from background work through a queue, and its operational contract includes back pressure, exponential-backoff retries, delayed results, possible message loss, and non-guaranteed ordering in standard queues.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/system-design/async-processing.md#L25-L27",
+          "version": "repo-lines-v1:sha256:7109e63af979531f2f5ba59d1e3c0c24909e944982afbc4fadcd4587e0fe0e7c:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmYzNjhhYzEwZGI3ZjNkOGFlMDg5ZWIzYWVhMTVkZTE1NWFkMmI1M2EwY2FjOTFiMDljY2IyZDljOWYwMGUwMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmMwNTAwMmVkOWRkZjM3MTM4YWI4ZDFhMjc2N2Q0MGI3M2Y1MWViYjBmODRiZjRlOGIzYTQ3YTA3OWRmOWYzNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTNhNGI3ZmRiMTIyOTdhOTcwNTI4MDVlNDk1YmUwYjdmYzFlYzJjY2IyZTkzYmEzNTJiMjMyYjk0OWE4YWYzZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjI3ODI4ZDI3MWNiYWNmZjBjZjZhNTU4NmExOTRkMDFiN2U3NjhiOWVmNWY4OTA4ZGE1NGY0YTI3NTZmNzg4ZiJ9"
+        },
+        {
+          "resource": "repo://concepts/system-design/async-processing.md#L37-L41",
+          "version": "repo-lines-v1:sha256:8832910a8ed7a9ffeae55c3d2d721289f419718f038c7e5818326a2594154a37:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDMyOTI1YmM0OTE2M2EwM2FhYzEzMmNmODJkNWZiYzc4NDMwNjM4ZjcyNTk3OGQxNTRkOTdkNjRlNjdkNDk3YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjliYWJiNTI4MDMzMDFiMmExZmNhN2RhODE5NjVkMzBjMTU5ZTRmZGZkZTllOTQyZmMxNWY1NTk0YjdlNjFiZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTQwM2MyZTk4YTE4NjdlZGNmN2M0ZjEwMDVlMWEwNDZjMmFiMDEyYzdiNmZmNzgxYjg0NDc5MWMxNzM3YzJiNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9f20c6fd2fb84feba024f0a492285621",
+      "statement": "S3-first durability persists a raw event payload to object storage before enqueueing processing work, so a worker or analytical-store failure can be recovered by replaying the retained payload; the API can therefore accept data before it appears in analytical tables.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/llm-engineering/s3-first-durability.md#L22-L34",
+          "version": "repo-lines-v1:sha256:acac0fe9d945f61623d7282902a1b8e675469beeb1acf17f69ed6eead7d90a56:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhZjk0MTlmMDYwZmIxMjhiNTkwMzFjYzM4ZjUzYmE1MzQ5MGVkM2QzY2EwMDdhZmZlODY4M2UyODM4NTg3MzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1MjQ0ZWZjMGYyZGZhNzIwMTNjNGJjZjJhMGMyNjBmNmMxYzRjNWNkOWU1NGJiZDliOGIyZjNlN2E1OWIxODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUxNzg1N2U5MjhiNGVjOWQ3MTRlY2UzNzM1YzYyMTllYjE1NDE4NWQ2ZjEyYzBhYTgxNzdiYjlmYWI4NDcyMjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        },
+        {
+          "resource": "repo://concepts/llm-engineering/s3-first-durability.md#L38-L51",
+          "version": "repo-lines-v1:sha256:1f26f8ff6a3cc58c28711f08097f1d0a513710b2b63463fa6fc1e0b77adf7a1a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcxNzJkOWU3NjY1OGMzYTI2YjAwNzk3YmU2NDExNzc1ODg2NDE0ODZkYmM4NWY5YmViOGM1ZmUyYjViY2E2OTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3YmJmMjg0MjFkYmQ0YjU0ZjNiNGRlZmU4MTQyZmE2NGVhNjRmODJmMThhMWMxODE1Nzk0ZWViNzdlODU5NjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkMzhkMzhhYTg5ZDE5ZmEyM2IxNGM2NjBkNTBiMjcwZTU4YmEyZWQ5ZGFiMWRiNzVjMTNiOGI2ZDcyODk1YjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_457db69200e64922843bec6f22f28243",
+      "statement": "During a network partition, CAP requires a distributed system to choose between latest-write consistency and serving every request; asynchronous processing, cache invalidation, and asynchronous replication create eventual-consistency windows in which reads can be stale before convergence.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/system-design/cap-theorem.md#L22-L36",
+          "version": "repo-lines-v1:sha256:d03bf5a9f50c5f24c2acacd5b08f009bd5b4244245de4100c626ec6244e97ec4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2ODE5NGU5NDZkYmZhMTRkZDQwZGU5YzEzY2U2YjBlOWYzYTU1NDFkM2I5MGVkMzllMDRkZmE2YTUzYzFiYTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2ZDNjYzhmNzYxNTI1OTkwOTY5ODZjOThmZTliOTEzYTA5Mzk3NjdiZDJmYWZlZDU3YzA1YjAyYmYwYmEzYzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIxNmRkOWM4ZDJhM2YyMzU5Y2QwY2QyNzkzZmNhNjRlYjRkZjc2YTdmZWJmMmJhOWM0MzExOWYzODY4MzBlMmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        },
+        {
+          "resource": "repo://concepts/system-design/eventual-consistency.md#L23-L24",
+          "version": "repo-lines-v1:sha256:0f195a97aa08bacf6aab8a4c1b5d9ae3d2fd3014d84a8114a8c7ee1f06738d4a:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTJjOWRhOGQ5ZWIwNWZhOGE1MjQwYjVlOTVkNTk1MjVlZDBjNGJmNDAyNmIyNjllOTRmMjA0MmFkMzEzZWVjNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDNhYmFlMDQ1YWQ4YjE5NzE1OWFmNmQ3MmQxNWRkYzQxMGFiYWMzZGFhNThkMmIzYzgzMzE3NWMyNDNiODY2NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODczNWU4OTNlMWRmYjNmOGZhNTc5YjA0ZmZiZWJhZGI5Zjg2NzUxMDUzZThkYWVhMTE2Mjc5OTNkMzRlYTAzZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2I0ZTVkZDI1ZjhlODZmMjM2ZjVmYThjNDcxMTQxYTBmMzdhY2I4MDBiYjcxMDE1Nzk5ZjA4ZjA4ZmJjZDFmYSJ9"
+        },
+        {
+          "resource": "repo://concepts/system-design/eventual-consistency.md#L54-L59",
+          "version": "repo-lines-v1:sha256:3c6d36bdf945a957647d84c5ee3a9617401117168324fa848f4221ffa792ed22:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmYzYWJiYzAxMGU2ZjkwMWYzYjAyZGFjNmQ5OGYzMDUzZjM5ZDdjMThiMjk2ZmY3OTEyMWRlNjkxOTE2NjZiNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTliNmQzZTExZGE3N2Q4NzBlMWQ5MTQzODc3NjYxZmQ3NzIyZGJlODliM2M5YmEwNDhhYWU4ZWQxMzk4ZDI5ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYThjODk2OTAyMGRhMzAyNDM3MWE5YzRhYzY4NDcwN2VhOTQ2NzIyNWEwOWE4OWFmNTUzYmI1OTJjNWVhZmQ4NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmQzOGQzOGFhODlkMTlmYTIzYjE0YzY2MGQ1MGIyNzBlNThiYTJlZDlkYWIxZGI3NWMxM2I4YjZkNzI4OTViNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a1fb484b797442fdab05d764817ad63b",
+      "statement": "High availability begins by identifying single points of failure across layers and addresses a selected failure with redundant components and automatic failover; active-active serves traffic from both units while active-passive promotes a heartbeat-monitored standby after failure detection.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/system-design/high-availability.md#L23-L39",
+          "version": "repo-lines-v1:sha256:5ccd71af46338785ba6f409f6f363cdcfa18df7a1e29b88d6578e2871104809b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlNWY3MTUwYWY5N2UyYmZjODBjYzQyMDMxZTFhMDBjYjQxNDI1NjU2MDY0NjkyNTBiNjVhMmE4YTVjZDY1YzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQyYmMzZWU5OGVjNjllNmQ5YWQwMzg2MzQ4YjFiMmIxZjRjZjQ1YTA0MTZmYWFkNDkwNDdkZWU3ZWEyMGU0MWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI1MjI3N2JiY2JhYTY0N2RjZGM0YWM2NTZkM2ZhY2U2NjliM2U2ZGY3OWNkMDUyNjEwZGFmY2UwYjAzMTNmNjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        },
+        {
+          "resource": "repo://concepts/system-design/single-point-of-failure.md#L21-L35",
+          "version": "repo-lines-v1:sha256:03b7f1b92b3215ad2bd8180970f5b0ecdd587937f142b27e2c5060db118daa97:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4NThhY2JmZmY4MDhlYWMzNzU0MTYwYjYwNTVlZGNjMzUwZTRlODVkMDhlYTZmNGVkNTQwMTNmZTgwZWRkMzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhMDg0NGQwNGMwNDY4MzE5NzI1MTQwYmMxZWExNzZiMGNjOTdhMjdmNDdiMzBmZjhjYjBjZTVkYmU4NzllZWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMxM2U0YmI4NGE3Njg2Njk2NTRlMTgwY2I1ODkyZTE3N2RhMTQxZDRkMmY0NmVhYTFlYjBlZWY3ODkzNTNmM2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0405cca54d1e4fb58e530fabe4c30819",
+      "statement": "For LLM observability backends, traces, observations, and scores are high-volume analytical data, while users, projects, API keys, prompts, and evaluator configuration are transactional metadata; the approved material routes those workload classes to analytical and relational stores respectively and uses asynchronous durable ingestion for bursty event processing.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/llm-engineering/llm-observability.md#L41-L53",
+          "version": "repo-lines-v1:sha256:c388f7b94fcc4249bf7c91877d9fa6d77e56c70e2b5c104e3964180958d8a358:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjOGY1OWVjYTRjMGJmMjY5MDZiMDBjZWU3ZjIyZTZmZGI2ZTFlZTRhMjcwNTVlNjBmZWY1YWUyYzNmMjRmMTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZkOTVmZmZjYmQ4ODFmOGZkMTI4YTEwMjUyZWRlY2QyZDBmNmVlYTlkMjNkNzA2YTlmYTcwZjVkYWRlOTBlZDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc3ZDZmMDdjMTNjODkyMjc3ODM4MzRiNjlkNjllYzIzYmNiMmUyYTkzODc1ZTcwZTc2NzA4OGIxMDc2NWYyOGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTY1OTJlMDcyYTFjNGNjYjI0NmNlNTYyYTNiYTE0ZTU2NzVlODIzNzdkNzJiNWUyODlkYzc4MzAzYzYyYTYifQ"
+        },
+        {
+          "resource": "repo://concepts/llm-engineering/oltp-olap-split.md#L32-L43",
+          "version": "repo-lines-v1:sha256:592b6629f4cf12ef809e8a7782843bcd7d748fb29a6c7abb9a4604ca07efd571:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmMWM3ZWQ5ZjdmYTA5ZjE3ODFhMGRhZjI5MmFjNzY2MjNiNDVjZjg0NjJlNDIxYTNiMzExYmM3M2JiZWY2ZjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ZjVmNWZlZDNmYjViYmUyYzg5NzgzYzFlYmE1YzI0NWRiMGFjYmM1MzZiY2RiMWIzMzJlZGU0N2Y0ODQ3NDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM4YjVjY2YyNDU1YzA4MGRjYzE0MjBkZDVlZDUyYzA1NmQ1NDI5NDcxODhjM2FjNjU1M2UyZDhkMGRhM2UyMDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU2ZmNiNGE5M2RmMTg5NjRmOWM3YWFmOWJkMWIyNzdkZWUxNGI1OTAzMjU1M2YwMzMwODFiMjI2NGMwZmRjNjMifQ"
+        },
+        {
+          "resource": "repo://topics/reliability-engineering-for-ai-backends.md#L20-L30",
+          "version": "repo-lines-v1:sha256:c9bd5e4c9f4c2129f351e06a4b6ee2b360f849c8fef1cb1faf55a12c79d0076c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkYzQ3YzRkNjZjYjU2NGFiMzRiNTU5MzY4Mjg4ODY4MGY0ODA5ZDU5Y2UzZjEyMGJiMTgxMmRhYjliYTlkNTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2YzU5MGJmYTJhNzkyNTI3M2M2ZWZlN2M5ZDk3YTk4OWYyNjEyYzhhMGUxYTFlMzJkMWEyMDdlNWI4OTc1NDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFhZTlmOTFlZjgyYjJmYzZhZmQyZDEyYTkyNDg0Yjc0NjlhZjdmYTIwZGEyMzQ0OTlkYzEwNTY4NmQwODhjMmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJlZjkxNzE5ZTk3MjNiOWEzZmU2YjQ5MzBhNTc2NmRlYmZmY2I4NDNjMWJkZGQ2MTdhODUyOGVjNGMwNDFhNTEifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.0",
+    "at": "2026-09-05T08:40:09.738Z"
+  }
+}

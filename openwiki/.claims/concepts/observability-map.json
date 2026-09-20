@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:a574a4b7ce4922ba2f37e4c2ca64f24ef2cf5f1cf18d32d94c7aa9861d68ab31",
+  "claims": [
+    {
+      "id": "claim_3b35a0637e974d4c9bf335aa7eb2f822",
+      "statement": "The repository presents OpenTelemetry observability as a connected model: applications create traces, metrics, logs, and baggage; API instrumentation is separate from SDK processing/export; resource identity, propagation, semantic conventions, and OTLP make that telemetry usable across services and tools.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/observability/opentelemetry-api-sdk-separation.md#L29-L33",
+          "version": "repo-lines-v1:sha256:5c4a4aa634660fe936e2c59bae29d45218c27986897975b5cbc5f084cd3c4115:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWRkZDM5YWNhMGQ5M2E1ZjNhODkwYjNjZDI1Y2Q5ODE5MTY0MGNhYjViNDIyMTExYTVhYWFlOTVkNDQzMDUyNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2U2M2I0MDdmMzlmZGE5NDA1N2Y2YjBlMjFhMDdlYWM2OWViMWI5MDdkZTQ1M2M4MjFiYzhjMWZhYmJhMzg4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        },
+        {
+          "resource": "repo://concepts/observability/otlp-vendor-neutral-telemetry-protocol.md#L34-L38",
+          "version": "repo-lines-v1:sha256:57ca0681325bd5b81607708b09c069250ff3c0c3c4b3ccc346a362505ccdd654:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzJlMzMwMzM4OTdkOWJlMDMyZWQzMzdmNjhlNjNkNGUzYTg3NTNjYmNhNWJlNjJlMWMwOTZiZTczZmM3ZDAwNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2U2M2I0MDdmMzlmZGE5NDA1N2Y2YjBlMjFhMDdlYWM2OWViMWI5MDdkZTQ1M2M4MjFiYzhjMWZhYmJhMzg4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        },
+        {
+          "resource": "repo://concepts/observability/resource-bound-telemetry-identity.md#L35-L39",
+          "version": "repo-lines-v1:sha256:b4e4f73da67347c938e8c0fba18f71c465f595c8084b362f7ac3279e89786dde:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTRlZDBlYTQ1N2ViZDQxODdiZGIyZjk2YmU3NDY2MGU0ZDhlMTNjYzExZDgzNzkwMTEzZTVlZTQzZGZiY2Q3YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2U2M2I0MDdmMzlmZGE5NDA1N2Y2YjBlMjFhMDdlYWM2OWViMWI5MDdkZTQ1M2M4MjFiYzhjMWZhYmJhMzg4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        },
+        {
+          "resource": "repo://concepts/observability/semantic-conventions-as-telemetry-schema.md#L38-L42",
+          "version": "repo-lines-v1:sha256:ac90f40652a069cb865bb6705694e7d9f9028e55457dd8bd9e35ad5b717e5ddd:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ2MTE1NDZhYzI1Y2Q0ODllZTc1MWQyODExNWRhMGNhNjEzOTliYWQxZGM5N2M0ZWNiZWU1N2VhNzYwYWIwMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2U2M2I0MDdmMzlmZGE5NDA1N2Y2YjBlMjFhMDdlYWM2OWViMWI5MDdkZTQ1M2M4MjFiYzhjMWZhYmJhMzg4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        },
+        {
+          "resource": "repo://concepts/observability/telemetry-signal-model.md#L39-L43",
+          "version": "repo-lines-v1:sha256:94787fad7c5255c752c59b64ff2002abfab49d72cf485f5a19cc6cf5c01d6379:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjU2N2M3MGE5OTQyYjJmYzhkYzQ0ZGIwM2ZkZjdkNTZmYWU3ZjkyZjdmNTljMzM5MDRjYmI1ZWVjOGY4NjQ0OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2U2M2I0MDdmMzlmZGE5NDA1N2Y2YjBlMjFhMDdlYWM2OWViMWI5MDdkZTQ1M2M4MjFiYzhjMWZhYmJhMzg4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlNjU5MmUwNzJhMWM0Y2NiMjQ2Y2U1NjJhM2JhMTRlNTY3NWU4MjM3N2Q3MmI1ZTI4OWRjNzgzMDNjNjJhNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2f2a84a788d14ed98de337f95a375beb",
+      "statement": "Libraries can emit telemetry through the OpenTelemetry API without choosing a vendor, while the application selects SDK behavior such as sampling and exporters; without an SDK, API instrumentation can behave as a no-op.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/observability/opentelemetry-api-sdk-separation.md#L29-L37",
+          "version": "repo-lines-v1:sha256:fd2f5a1b60eafae8cce13bc5fa9eb8f0895f54c3c54ceaea49ea545671f5a1b0:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzBhNTI3ZDA1OTViNDcyODllNTNlZTQ3NjEyNTg0ZTMxMjgwM2Y0N2JkOTZjNzc3MDM2YjQ0NWE2MjY2Zjg5NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2U2M2I0MDdmMzlmZGE5NDA1N2Y2YjBlMjFhMDdlYWM2OWViMWI5MDdkZTQ1M2M4MjFiYzhjMWZhYmJhMzg4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTZmY2I0YTkzZGYxODk2NGY5YzdhYWY5YmQxYjI3N2RlZTE0YjU5MDMyNTUzZjAzMzA4MWIyMjY0YzBmZGM2MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b8c58764b3d841eeba16d07ce34a45c0",
+      "statement": "Trace context and baggage must be injected into and extracted from a transport carrier to connect work across service boundaries, whereas resource attributes identify the emitting service or deployment rather than an individual request.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/observability/context-propagation-with-carriers.md#L33-L41",
+          "version": "repo-lines-v1:sha256:550f920137e2dc5e2a1e764f68d6931e4d847300f8e841e87370e8835d84bb71:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTU1NTk3NmJkZTRmYjA4ZGJlOWJiNDljMGMxOTJhZTRkNjAyYWMwMjgyNTcwMzk2YjQxY2Y1ZDY2OGU4MWNhZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2U2M2I0MDdmMzlmZGE5NDA1N2Y2YjBlMjFhMDdlYWM2OWViMWI5MDdkZTQ1M2M4MjFiYzhjMWZhYmJhMzg4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTZmY2I0YTkzZGYxODk2NGY5YzdhYWY5YmQxYjI3N2RlZTE0YjU5MDMyNTUzZjAzMzA4MWIyMjY0YzBmZGM2MyJ9"
+        },
+        {
+          "resource": "repo://concepts/observability/resource-bound-telemetry-identity.md#L35-L43",
+          "version": "repo-lines-v1:sha256:9540b4b90e2ffe9508d60333654a8f8af695358678a9db9a24d5a87c6900c6c0:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMThjMWRjMjllNDEwZmExNWVkMDIxNjY5MGUxN2VjNTNkMGI2NmEwMTI5Zjk3ZmY2ZjM4NjMxNmE4NGMzYjg3NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2U2M2I0MDdmMzlmZGE5NDA1N2Y2YjBlMjFhMDdlYWM2OWViMWI5MDdkZTQ1M2M4MjFiYzhjMWZhYmJhMzg4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTZmY2I0YTkzZGYxODk2NGY5YzdhYWY5YmQxYjI3N2RlZTE0YjU5MDMyNTUzZjAzMzA4MWIyMjY0YzBmZGM2MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a1b745ca1b86437687a8c1a2da892478",
+      "statement": "OTLP standardizes how telemetry is delivered over transports such as gRPC or HTTP with protobuf, while semantic conventions standardize field meaning; transport interoperability alone does not establish a shared schema.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/observability/otlp-vendor-neutral-telemetry-protocol.md#L34-L42",
+          "version": "repo-lines-v1:sha256:3afbcaf02aa10eef197d70e080258d2c111d640a57a5d523eb6a1e231d6d40bf:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZThhZDVlYjZiZWZlMDU3MDVhZGU2YWY2N2VjZTdlM2E3M2ZmYTAxYmIwZTI0YmUwNWQxYzY4ZDBmODlmODg5ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2U2M2I0MDdmMzlmZGE5NDA1N2Y2YjBlMjFhMDdlYWM2OWViMWI5MDdkZTQ1M2M4MjFiYzhjMWZhYmJhMzg4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTZmY2I0YTkzZGYxODk2NGY5YzdhYWY5YmQxYjI3N2RlZTE0YjU5MDMyNTUzZjAzMzA4MWIyMjY0YzBmZGM2MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f538837aece94e54adc5dc036d85788d",
+      "statement": "A Collector pipeline is a named, signal-specific route in which receivers accept telemetry, optional processors modify it, and exporters send it to one or more destinations, allowing operational routing changes without application instrumentation changes.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/observability/collector-pipeline-architecture.md#L41-L49",
+          "version": "repo-lines-v1:sha256:f0e5a1150b420141dc9d43a8c5e8891707d5a5b97cb586317e70f8f502d0e2ec:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDcxMTU2ODg1MTY4NzZiMjhmZWM1ZjY4NGMwNjc1ZGQ2NWIyMDAxOGVkNjIyZDliNDc5MTEyOGYzOWIzYTJlZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGE3MDJhZTM3MTgzZGI2ZTg4ZWMxNzNiMDRhZWIwYmYxNWNiOWM4MzQ2MDQwODk2MDMxNmEyMzE4ODRlZDQ1MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTZmY2I0YTkzZGYxODk2NGY5YzdhYWY5YmQxYjI3N2RlZTE0YjU5MDMyNTUzZjAzMzA4MWIyMjY0YzBmZGM2MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bd4a4532de094439992c2541c2a5d4ca",
+      "statement": "Consistent probability sampling propagates shared randomness and threshold information so distributed services make compatible trace-retention decisions, avoiding the misleading partial traces caused by independent sampling.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/observability/consistent-probability-sampling.md#L31-L39",
+          "version": "repo-lines-v1:sha256:77c466154a71518539cabd2bb7689f5c2e554defc5a15ab7f2391456128447c9:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjYwM2ZmZjI4YjZkZWZhNDBlNzNkZmYzNmU2Y2FmZDg2ZjcyNDEwOTczOTk4NmEwMGIwOTllZjFiNTFiOWUwZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2U2M2I0MDdmMzlmZGE5NDA1N2Y2YjBlMjFhMDdlYWM2OWViMWI5MDdkZTQ1M2M4MjFiYzhjMWZhYmJhMzg4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTZmY2I0YTkzZGYxODk2NGY5YzdhYWY5YmQxYjI3N2RlZTE0YjU5MDMyNTUzZjAzMzA4MWIyMjY0YzBmZGM2MyJ9"
+        },
+        {
+          "resource": "repo://concepts/observability/context-propagation-with-carriers.md#L43-L50",
+          "version": "repo-lines-v1:sha256:a8fd980f89909ab12dc8c2b6ff78afda4b548bf32684f6532ec4ca287138b29b:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGI4OTFlMzY0YWE0NjIxNjA4NTdhOTJkNWRjMDUxNmI2NmJjZjFlODlkMzU1YTQ5OWJiY2MzN2E4MWI0ZTkxZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODg1YzU0ZGNhYzlhZDc0M2FkNTY5YzE5ZWI0ZDA5N2Q5ZDI0MGYzZTJlYTJjYTIwMTg4MjZmMWI3ZWIyZjg5MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjkxMTFlOGI3MzA5MjViODAyMWQxMjAxNThiMmQzMGNmMmU0MmZiODBhMjcwMWQ5YTU3NDY1MzdiZmE2ZDBiNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmQzOGQzOGFhODlkMTlmYTIzYjE0YzY2MGQ1MGIyNzBlNThiYTJlZDlkYWIxZGI3NWMxM2I4YjZkNzI4OTViNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6d8b6e966d004ad6952fb19093f07a2f",
+      "statement": "A semantic convention's stability label describes its maturity and compatibility expectation, not whether an implementation should send a field; versioned schema mappings provide an operational translation path while producers and consumers upgrade at different times.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/observability/semantic-convention-stability-lifecycle.md#L30-L38",
+          "version": "repo-lines-v1:sha256:8ec7c49d565762c13e0243c098c4eb9a5a57ac5ffad60dd9485e673c8c13af5e:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWVlYjNjNjQ5Y2UzM2I4NWU5YTQxNDEzN2JlNGNkMTZkODM0ZWQwNjdiNzM4MjIxZGY2NTkzYTI1YThiMTAxOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDhkMzI4ODdiN2UwYWVhYTViZDljNWIwNDBlYjA2M2M5ZTlhYTc3MzM2ZTUyYTllZWE3OGIyMjc4MDVjZTc0OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGU5NWVlZGUzZDkyMDQ2YjIxMTFmZmRmNjIyNzM0ZjdiNWVmZDRhNTQyMTYwN2ZlNzAwMDEzYTVkMjgwNTNhOSJ9"
+        },
+        {
+          "resource": "repo://concepts/observability/telemetry-schema-migration-mappings.md#L30-L44",
+          "version": "repo-lines-v1:sha256:c21f37d4adb398495523ddcf0d3dcf84e067243a0c52926e55afdfa53e5c8abc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0MTViMmRiNGVmM2FlZWRiNDNhMGViZmQyNTYzMDEyMmNlNjM3YzcwMmQwZWRlMjliNjY2ODU5ZjNhYjMwMjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjZmI4YThkZmEzZTNkNGRiN2FhOTI3MzYyOWZhYzZhZDI5ZmZkYzNhYzFiZDBkNzk3MjkyMzc0NWYyN2Q1ZTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA4ZDMyODg3YjdlMGFlYWE1YmQ5YzViMDQwZWIwNjNjOWU5YWE3NzMzNmU1MmE5ZWVhNzhiMjI3ODA1Y2U3NDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUxMjUyNzI3OTY4MTkxY2QyMWQwZmM1YzliYjcwZDY1YThmMzllYmJjYjZiNjY5MmE1ZTc2OGZmMzhkZDlmMzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e06376ff3f89422d9195025388069406",
+      "statement": "GenAI observability uses operation-specific spans for inference, embeddings, retrieval, memory, and tool execution, and agentic workflows can nest workflow, agent, plan, and operation spans to preserve causal structure.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/observability/agentic-workflow-span-hierarchy.md#L32-L46",
+          "version": "repo-lines-v1:sha256:8c5d50d37aaa34e674be2088f8d329f7d7c19206e53d6965880bfd5751608c64:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0MTViMmRiNGVmM2FlZWRiNDNhMGViZmQyNTYzMDEyMmNlNjM3YzcwMmQwZWRlMjliNjY2ODU5ZjNhYjMwMjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZhM2ZiZThlNjlkOTEwZDJjNGQyNzQyN2JlNDBkNzRmZDE1ZWRiOWEwMWM1YjA4N2U0MzMwYWE1ZTA2ZTA5ZjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlN2RkZjg3MDYyYjU0ZDQ2MGE4YjU4MDI1MjIyNTNiOTU5MGI0NTVmNTkyZTcwMTIyMThhZGY2Nzg0NTZmZTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdjZDY4ZWU1NGFhMzkyMzJiNzM2Y2UwMTQ3MTllMmVkY2RhMDJkNTExYTgzYzMzM2ViOTRjYmQ2ZTk1NzA5YjcifQ"
+        },
+        {
+          "resource": "repo://concepts/observability/genai-operation-span-taxonomy.md#L30-L38",
+          "version": "repo-lines-v1:sha256:c3a6bc04dad0e9df4bc56c01e23a81effaad878668a43c5d445835ddf2166d08:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQxNWIyZGI0ZWYzYWVlZGI0M2EwZWJmZDI1NjMwMTIyY2U2MzdjNzAyZDBlZGUyOWI2NjY4NTlmM2FiMzAyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmZiYzEzNzVkYjE0YjNiMWQyNWY5YjcxMGU4MDc0MWUwYmYwNTI1MTQzNWEzYTdjYTI3ZDIzNmNkMmMwZWQ2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmU3ZGRmODcwNjJiNTRkNDYwYThiNTgwMjUyMjI1M2I5NTkwYjQ1NWY1OTJlNzAxMjIxOGFkZjY3ODQ1NmZlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTZmY2I0YTkzZGYxODk2NGY5YzdhYWY5YmQxYjI3N2RlZTE0YjU5MDMyNTUzZjAzMzA4MWIyMjY0YzBmZGM2MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c42d577bdc344ffe90802a07447bc3a9",
+      "statement": "MCP client-server correlation requires trace-context propagation so client and server spans for a JSON-RPC method remain part of the originating agent trace across stdio or HTTP.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/observability/mcp-client-server-trace-correlation.md#L32-L46",
+          "version": "repo-lines-v1:sha256:a6388034e1374ecf645db1a020f9ea1bd9403e548f3a65fb0c8d5baca945b84c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0MTViMmRiNGVmM2FlZWRiNDNhMGViZmQyNTYzMDEyMmNlNjM3YzcwMmQwZWRlMjliNjY2ODU5ZjNhYjMwMjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViNzcxODc2YWRkODJiNDhkZTliNGEyMzU3YjhlOWUxNTZhYWZiZjIzZmQ3YzlhZDg4NDQ5MzBmM2IxMWFhNTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlN2RkZjg3MDYyYjU0ZDQ2MGE4YjU4MDI1MjIyNTNiOTU5MGI0NTVmNTkyZTcwMTIyMThhZGY2Nzg0NTZmZTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdjZDY4ZWU1NGFhMzkyMzJiNzM2Y2UwMTQ3MTllMmVkY2RhMDJkNTExYTgzYzMzM2ViOTRjYmQ2ZTk1NzA5YjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3bccd40fd8c040a1bf2cc14b0f192ca5",
+      "statement": "For streaming GenAI inference, one span begins before the request and closes only after the final chunk, which retains both time to first output and final usage, finish status, or errors on the same operation.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/observability/genai-streaming-telemetry-lifecycle.md#L31-L44",
+          "version": "repo-lines-v1:sha256:73d439968d76f1b1a5bba6a1c1b802febde6d2d4b6d2caab29494047bef6073b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0MTViMmRiNGVmM2FlZWRiNDNhMGViZmQyNTYzMDEyMmNlNjM3YzcwMmQwZWRlMjliNjY2ODU5ZjNhYjMwMjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyZDNiMTdjNDcwMjUxMTgwZjg3NzlmMzJhZmVkMjc3MWIxZjZiODZhNzEzNTUzODMzZDNmNDllZjczYTJhYTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlN2RkZjg3MDYyYjU0ZDQ2MGE4YjU4MDI1MjIyNTNiOTU5MGI0NTVmNTkyZTcwMTIyMThhZGY2Nzg0NTZmZTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdjZDY4ZWU1NGFhMzkyMzJiNzM2Y2UwMTQ3MTllMmVkY2RhMDJkNTExYTgzYzMzM2ViOTRjYmQ2ZTk1NzA5YjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3c8f50a5ff2149968d88b3cc417b0d96",
+      "statement": "Cross-provider GenAI telemetry retains a common `gen_ai.*` vocabulary for comparisons and adds provider-specific fields only for genuinely distinct capabilities.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/observability/cross-provider-genai-telemetry-refinements.md#L31-L44",
+          "version": "repo-lines-v1:sha256:7cc1e05099e86fed330e4b77f1d59e26614f88d9e0c48ca948e0268c581452f2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0MTViMmRiNGVmM2FlZWRiNDNhMGViZmQyNTYzMDEyMmNlNjM3YzcwMmQwZWRlMjliNjY2ODU5ZjNhYjMwMjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJlNTc3NDI4YTQzMWM4NDVhY2NiY2U5ZmRmMTFhMGYwMTkxZTZiN2FhOTdlY2ZmYTdjY2NmMTg3OTgyMDNhN2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlN2RkZjg3MDYyYjU0ZDQ2MGE4YjU4MDI1MjIyNTNiOTU5MGI0NTVmNTkyZTcwMTIyMThhZGY2Nzg0NTZmZTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdjZDY4ZWU1NGFhMzkyMzJiNzM2Y2UwMTQ3MTllMmVkY2RhMDJkNTExYTgzYzMzM2ViOTRjYmQ2ZTk1NzA5YjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2cf5ecc5569644ffa8a78d315a207236",
+      "statement": "LLM observability represents an AI request or workflow as a trace, its work as observations, and feedback or evaluation as scores; content capture is opt-in because prompts, responses, tool arguments, retrieved documents, and memory can expose private data or create large payloads.",
+      "evidence": [
+        {
+          "resource": "repo://concepts/llm-engineering/llm-observability.md#L49-L65",
+          "version": "repo-lines-v1:sha256:42ffc088c3159ed702496ec0c86bfcb355195397ac77290887396fabf7ad3708:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0MTViMmRiNGVmM2FlZWRiNDNhMGViZmQyNTYzMDEyMmNlNjM3YzcwMmQwZWRlMjliNjY2ODU5ZjNhYjMwMjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4YmUxZjU5YzZkYWI4NTBhMjkzNTM4MjA2MzJjYThkZTZlZjI0YWI0Y2YwYzJmMTdhMTA4OTBmMDYyZTI3YjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU1NzEwMjUzMjRiZDZiNDgwYTEzODlkNjFjZjcyNTAxZjMyMGJkYzA3MzBkZTM5YjBiMTA4YjY2MmIzMjgzM2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU2ZmNiNGE5M2RmMTg5NjRmOWM3YWFmOWJkMWIyNzdkZWUxNGI1OTAzMjU1M2YwMzMwODFiMjI2NGMwZmRjNjMifQ"
+        },
+        {
+          "resource": "repo://concepts/llm-engineering/llm-observability.md#L94-L100",
+          "version": "repo-lines-v1:sha256:156db642de41fe57daa044c13ff3a07dbde9576ce393ac6f350743004ccfa4f8:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDRmZjFhOTE2NTU1YWRmNWU2ZDc1YTAyMDQwZWZhZDZmNWQ3NjcyNTE1YTgyNTA5ZTdjYTRiNTY3YTA5MTYzNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGM5ZjhmZWFiNjFhYjcxNjY3ZWQzMGNiY2U4OGYwODVhZWUzNmQ2YmNhNTZmOTIyMmE0ZTRlNGExNWNiMTMwNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTBhODMwNjg1ZjA3NjhmYTAzMTdjZDNmNWFmOGVmNzliNjQ1MzY5NGQ5Y2NmZDViOGI1ZWRhN2I3MmRhOWY4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjJlODhkMzMxYjVlODk0ZjQxNjVlNjVjNWQxN2VlNDRhZmJlNjAzMDQ4ODIyYThhOGY1NjY2ZDQ4YjJjM2QyMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e9936bb6ae3f459ab12b6f54569a2d79",
+      "statement": "The OpenTelemetry Foundations topic explicitly orders portable signal, API/SDK, identity, schema, propagation, OTLP, sampling, Collector, semantic-convention, and GenAI concepts as a learning path, while directing application-level use to LLM Observability.",
+      "evidence": [
+        {
+          "resource": "repo://topics/opentelemetry-foundations.md#L20-L110",
+          "version": "repo-lines-v1:sha256:addd27021e9a6f285bc4f9858e6b843404aa13e69120c8387146cbd13e4d9a8c:eyJzZWxlY3RlZExpbmVDb3VudCI6OTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjZTk3MjFjMzRjYjI3NzUyN2E0YmZmMDhlZWRjYjc4NzQ4OGQ4YTM1ZDkyYjdhMjMwMzMxMTA0MzhkZTE1MTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc3NWFlODkzYzI3MjQ0N2EyNzViY2UwNWIyZGEwNWNhZjdiMWE2OTdkZWY2YjU5NmZmN2Q3N2Y2MTQ5ZmQ0MWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAwMWYyZWMxNzU5M2MxMDU0ZWI0NjM2N2Q4NDUzZWYyNGExNzNjZTk2YjcxMTdkOTFmOWE2OGQ0NGZlZjhiMDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNmMDliYzVlMzgxYTUxM2I5MGU2NDM2MzkwZWNkZmUyYTI3YWEwNGVkZDJmOTQ2NGJmNjdmYTJiOTZiYzk2ZDIifQ"
+        },
+        {
+          "resource": "repo://topics/opentelemetry-foundations.md#L7-L13",
+          "version": "repo-lines-v1:sha256:18310668628869503db44ae613484bdddbf6d2887a7f6b8f10b68a772c818f66:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzEzM2JiNjRkNWJiOTg3NGViZjk3Y2JkNmJhYzYyNzQ5NTZkZTI3M2ZkMThjZjY5N2ZmMGUwNzAyOGQ5MjY5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTRiNTAxYzc5OGQ1OGYwZTEyODlhMTU1NDY0ZWViOGVmMmQ2ZWZmMzdmMzQzYWI1NjAzYmY3NzFmYzk3MTE5NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmM4OTFiNDA2ZjU5NDg3YTdiMGI1MzY4YTY1YzljMTJmMjczZjJmNDc5ZmQ5OWIxNzZiNWQwMWFlMTcxZGIyMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjUwMTA1YWZkZTczZWJkYzY1MDMxMWRmZTgzOTlmYzM2N2RkY2M2ZWFmNzNhYWQzNGViMmMzNWIyZjFiZWY4NyJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.0",
+    "at": "2026-09-05T08:40:09.738Z"
+  }
+}

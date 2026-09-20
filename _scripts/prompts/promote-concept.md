@@ -1,11 +1,11 @@
 # promote-concept.md
 
-你是 Exobrain 知識庫的概念晉升代理。你的任務是把一個已由使用者核准的 `_drafts/` 草稿，整理成正式 `concepts/` 概念檔，並同步更新測驗題庫與索引。
+你是 Exobrain 知識庫的概念晉升代理。你的任務是把獨立 reviewer 驗證通過或使用者明確指定的 `_drafts/` 草稿，整理成正式 `concepts/` 概念檔，並同步更新測驗題庫與索引。
 
 ## 核心原則
 
-- 只處理使用者指定的單一草稿：`_drafts/<concept>.md`。
-- 這個 prompt 只有在使用者已決定 promote 草稿時使用；不要自行掃描並批次晉升其他草稿。
+- 手動模式只處理使用者指定的單一草稿：`_drafts/<concept>.md`；執行該明確命令即代表使用者選定它。
+- Pipeline 模式可依序處理 pipeline 傳入的精確清單，但每個草稿都必須有 `review_status: verified`。不要自行掃描 `_drafts/`，也絕不能 promote `pending`、`needs-decision` 或 `rejected`。
 - 正式概念必須採用 Feynman Technique：用日常語言讓不熟此領域的人也能理解。避免術語堆疊；如果必須使用術語，第一次出現時用一句話解釋。
 - 首次晉升的 `depth` 預設為 `2`，代表「能解釋」。只有使用者明確要求時才設定其他深度。
 - Set `lab_status: not-started` on first promotion. This field tracks hands-on practice and drives the learning phase (see Learning Phase Mapping below). Allowed values: `not-started`, `scaffolded`, `completed`, `explained`.
@@ -44,8 +44,8 @@
 執行前讀取並確認以下資料：
 
 1. 指定草稿檔：`_drafts/<concept>.md`
-   - 讀取 frontmatter：`id`、`title`、`source`、`merge_candidate`、`status`、`created_at`
-   - 讀取正文中的一句話定義、存在理由、既有概念關聯與任何使用者筆記
+   - 讀取 frontmatter：`id`、`title`、`source`、`merge_candidate`、`status`、`created_at`、`review_status`、`reviewed_at`
+   - 讀取正文中的一句話定義、存在理由、既有概念關聯、`## Verification` 證據與任何使用者筆記
 2. 對應來源
    - 從草稿 frontmatter 的 `source` 找到來源路徑
    - 如果草稿或使用者提供多個來源，全部納入 `sources` frontmatter
@@ -63,7 +63,7 @@
    - 使用執行環境或使用者提供的今天日期
    - `review_due = today + 3 days`
 
-如果 `merge_candidate` 指向既有概念，先判斷使用者是否要求「合併到既有概念」或「建立新概念」。若未明確指定，保守做法是更新既有概念並保留原 `id`，同時把新來源加入 `sources`。
+如果 verified draft 的 `merge_candidate` 指向既有概念，依 reviewer 記錄的明確合併理由更新既有概念並保留原 `id`。若合併方向仍不明確，將 draft 改回 `review_status: needs-decision` 並停止處理該 draft。
 
 ## 輸出
 
@@ -217,7 +217,7 @@ _drafts/<concept>.md
 ## 執行步驟
 
 1. 讀取草稿、來源、既有概念、題庫與索引。
-2. 決定 promote 目標：新建概念或合併到 `merge_candidate`。
+2. 確認 pipeline draft 已是 `review_status: verified`，再決定新建概念或合併到 `merge_candidate`。
 3. 決定 `<category>`、`<concept-id>`、`tags`、`related`。
 4. 撰寫 Feynman 風格正式概念檔，包含至少 1 個具體範例。
 5. 計算 `review_due = today + 3 days`，並寫入 frontmatter。
@@ -225,6 +225,7 @@ _drafts/<concept>.md
 7. 更新 backlinks。
 8. 更新 `_index/`。
 9. 驗證所有輸出後刪除原草稿。
+10. 不要自動更新 OpenWiki；在整批 verified concepts 與 topics 完成後，回報應手動 refresh 一次。
 
 ## 品質檢查
 
@@ -243,3 +244,4 @@ _drafts/<concept>.md
 - [ ] `_index/concepts.md` 已從 draft 更新為 active。
 - [ ] `_index/tags.md` 與必要 topic/index 已更新。
 - [ ] 原 `_drafts/<concept>.md` 已在成功 promote 後移除。
+- [ ] Pipeline 模式沒有處理清單外或非 `verified` 的 draft。

@@ -14,6 +14,8 @@ related:
 - llm-as-judge-evaluation
 - probabilistic-toolset-distributions
 - change-specific-release-testing
+- configuration-driven-llm-evaluation-matrix
+- hybrid-llm-output-assertions
 tags:
 - llm-engineering
 - evaluation
@@ -55,6 +57,8 @@ Later policies can choose examples that have less coverage and avoid repeatedly 
 - [[caching-strategies]]: Evaluation caching prevents repeated candidate-example checks from consuming budget again.
 - [[llm-as-judge-evaluation]]: Judge-based metrics can be expensive, making sparse validation especially useful.
 - [[change-specific-release-testing]]: Both concepts spend limited validation effort on the cases most likely to reveal useful signal.
+- [[configuration-driven-llm-evaluation-matrix]]: Sparse selection controls the cost of large prompt-provider-test matrices.
+- [[hybrid-llm-output-assertions]]: Sparse validation can limit expensive model-graded checks in a combined grading system.
 
 ## Open questions
 

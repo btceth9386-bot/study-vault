@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:a06dfeb0c4a223bea6d22aee72158d7b962b01bc2c4232079fd1e8c42e2515eb",
+  "claims": [
+    {
+      "id": "claim_c8b510415f4e459495b86f0de4c555dc",
+      "statement": "The repository contains exactly three lab recovery capsules—`kiro-langfuse-eval`, `langgraph-state-flow`, and `otel-collector-positioning`—and each manifest is marked `scaffolded`, names `spec.md` as its canonical specification, and assigns an external `~/orb_pods_share/<lab-id>` workspace.",
+      "evidence": [
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/manifest.yaml#L1-L12",
+          "version": "repo-lines-v1:sha256:5e0f0e8c1813574b6337378cf0dfef46b3cc4d69010c66e71be45bfe9b8c01df:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjOTUzNmMwZjY0MTkzZjUzNWM0MjViYWY5ZjJjNzQzMWI4OWViNDZiYWI1ZmI4NWQ0YmZjZmZhYmI1NjVmNDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0ODQ1MWU4ZmM4MTFmZjFlODUwZjk2YWIwM2I5ODEyNzAxODQ3MWRjZGFhMzdjMWNhMjg1N2M0NGFhNWIyZDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEzZTYzNTlmZWU2NTEwZTgzMjg2NTQ2ZGYxNGJkNjgxMzkyOTNmYWJjYWY3YzYzNThiNjA5ZThkNjQ4ZjZkMDcifQ"
+        },
+        {
+          "resource": "repo://labs/langgraph-state-flow/manifest.yaml#L1-L11",
+          "version": "repo-lines-v1:sha256:b233ac9adc69c08b02d11c032c97ae5efa175b9cb660749ef364137af8d10e1d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjOTUzNmMwZjY0MTkzZjUzNWM0MjViYWY5ZjJjNzQzMWI4OWViNDZiYWI1ZmI4NWQ0YmZjZmZhYmI1NjVmNDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0ODQ1MWU4ZmM4MTFmZjFlODUwZjk2YWIwM2I5ODEyNzAxODQ3MWRjZGFhMzdjMWNhMjg1N2M0NGFhNWIyZDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI2YjA2ZDY2MGMwM2FmMTM0ZTk3YmU4OTBiNjAwNzlkODViODA5Y2I0ZWU3YTQyOTQ5ZGFkNGExNGI3ODdiMGUifQ"
+        },
+        {
+          "resource": "repo://labs/otel-collector-positioning/manifest.yaml#L1-L13",
+          "version": "repo-lines-v1:sha256:31842f4b3fd7f18152c8a97e6ae8364417608678968dce3a8dd1a5cf565eee44:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjOTUzNmMwZjY0MTkzZjUzNWM0MjViYWY5ZjJjNzQzMWI4OWViNDZiYWI1ZmI4NWQ0YmZjZmZhYmI1NjVmNDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0ODQ1MWU4ZmM4MTFmZjFlODUwZjk2YWIwM2I5ODEyNzAxODQ3MWRjZGFhMzdjMWNhMjg1N2M0NGFhNWIyZDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU4ZGJiZWMyZmRjYTIyOTEzMzY3OTY4MGE1NWRlMmVkNzk0MjljMTdlZTU5ZTUyZTJlYmZjZDM1ZjIzYjAxYTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e8e9608d152541d49ec223a38a95135a",
+      "statement": "A recovery capsule consists of `manifest.yaml` and `spec.md`: the manifest carries identity, concept links, workspace path, review URLs, regeneration contract, and a SHA-256 value for detecting canonical-spec damage, while `spec.md` preserves the learning intent, scaffold description, failure cases, and acceptance criteria.",
+      "evidence": [
+        {
+          "resource": "repo://labs/README.md#L3-L18",
+          "version": "repo-lines-v1:sha256:03ae8e1a9c9028185b3a564ace9e7da9c580e4dff3b56cfedca0fc4734acf2e0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjYjRlYjkyYjNjNDBmZTY3OTE0NDhjY2E4NDg2OWQxNmNhZjUzMWI4NWE5Yjg0ODI2MGFlOTk3Mjg2MzBlNDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlNzY2MDQwMWFmMDcyZjExOGM1MjVjZTM4YTQzMzMzZmY5YmNiM2I0MWMyZGM1NjBjMDNhNzlkYzlmZjQ3ODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk0OWE0YTc4ODc5N2I5ZjllYTMyOWZjNWRhYzBiMzNhYWJjMTYxMDI4NDkwNjBmZDliNDAzOGM0ZjE0YTBlMTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/manifest.yaml#L5-L21",
+          "version": "repo-lines-v1:sha256:018038459b0ec3c6355f2df64f295ac69975ec3001065217185ca13b35a6496b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwZTQwZjY2NGRmN2RkYjk1MDU1YWVkMGYzZDAwOTU1NTE0NjdjNWJlNWQ0YTM0MGRiN2IwNThhYWEzMzcyMDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJjYWVhYzUyMzZmMTE3OWZkZmI5MWNhMWYyYzRiNDkwODAxYzYyNzEyNjYzNmQwYzE0ODU1NDk5N2I5OTE1YTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjllZGI3OTg3ZTZlNDEzYzZhZGVlZTFkZDg3NDg5OWRkYTI2ODRhMzA2ODAzMjcwZTNjYzEzNWM3ZjZkMjRkYzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3b24ec31dc424c1a87122739d9e7f6e7",
+      "statement": "The catalog's three capsules respectively cover Kiro/Langfuse evaluation, LangGraph state reducer-versus-overwrite behavior, and OpenTelemetry Collector placement; their canonical specifications declare the corresponding setup modes and time boxes.",
+      "evidence": [
+        {
+          "resource": "repo://labs/kiro-langfuse-eval/spec.md#L1-L7",
+          "version": "repo-lines-v1:sha256:9c056760bb03626be9b196464d110705bc38d6b48dda349ffbfdabc5a6581561:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODM0OWQ5YjM1NjVkYjNmYjdhNDMyMDBmZWQyMDgwZDgyOTU5NWMzOWJhY2U4OTM0MTI4YWYwM2IzYjRmNzk1YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmI4MTVjMzQwZWI3YTBkNTI0ZDc0YjU2ZjgyM2JmMTNjMTQ0ZTk2OGU4MzIxZjIxMDZiODAyYjk5NTI3NzVhZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTFkMWEyMjNkNzczOTNhMTAyMmE3NjE4MmUwZWYzYTg5YTZhZGE5MjcyYmFiMzY0ODMyZjM3YTI0ZWZmNTc3YyJ9"
+        },
+        {
+          "resource": "repo://labs/langgraph-state-flow/spec.md#L1-L7",
+          "version": "repo-lines-v1:sha256:dc3c918b85a159efc61bf4d6060c3af48c32b9fc8f935a723c554b15e81ae0f7:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDZiNGNmNDA4ZjZhNmVlZjYzNGNjNmExMjhhMGRmMjYzNDc5MDgxMDVhYjdhMWJmNmNjZDMwMDRhYmZmZDU0MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWYyNTU4YWQ1MWE1YTljYTlhMjgyMmYwMmJiZGRkNDUzZjViOTExYWY1MTRmOWQ1NThlOTk4NzZkMjc5ZTY2MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTFkMWEyMjNkNzczOTNhMTAyMmE3NjE4MmUwZWYzYTg5YTZhZGE5MjcyYmFiMzY0ODMyZjM3YTI0ZWZmNTc3YyJ9"
+        },
+        {
+          "resource": "repo://labs/otel-collector-positioning/spec.md#L1-L7",
+          "version": "repo-lines-v1:sha256:b230927d2a1a2c0ca854d9ae9145843845bd15d769526f435b1e73e62584cf1e:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQ4YmE4ZDJiMThhYzZlNzEzNzVlNzljOTZhZjc4ZTljZDk0YmQ2ZDM2MTA3MDc0ZWZhYzNlMmVkZTA2MmQ0OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzRkNjJhYzRkNThmYTVhYzU0ODEyMmE4N2JlODI3ZGFmMTA0Y2U2MTY5MTBiY2JkZmJmZThkYmE1YjU2YTE4YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTFkMWEyMjNkNzczOTNhMTAyMmE3NjE4MmUwZWYzYTg5YTZhZGE5MjcyYmFiMzY0ODMyZjM3YTI0ZWZmNTc3YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1324fe3d64654ca1b41616a7450490b2",
+      "statement": "Recovery uses a capsule's manifest and specification with the lab-design workflow and aims to recreate equivalent learning behavior and acceptance criteria rather than byte-for-byte artifacts; complete runnable labs are created in the external workspace.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/lab-design.md#L168-L175",
+          "version": "repo-lines-v1:sha256:09d287247dbd347dc9c98d3650055051946cdda0d199557dc7b11e2a2a010688:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmMzNzQ3NjJjNjg3MmVjNmQ2YjMxNzBjODc0Nzc4NDc0ZjgzMGQwNjYxMGY4ZWY2ZjE1YTJhYmM1NTAwZGI4ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2RhOTcwODQ0MzFkZmZkNWMzMjgyMDMyYTdlZmFlYjA1NDdhODcyOTcxZGJmMzU5YmJhZmVlNWEyM2I4OGUwMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWM0M2Q0MjAwZDY1NzdjNDllZTNiYWNkMjg2M2U5YzlhNTI0YzViNmY1OGNiYjU5MzZlY2RiNmRkMmNiNDc2YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjc5MmYwYmFlZTE4MzdmYmY3Y2U5MTAwNzhiMTQzNTgyNzE5MDA5Y2JhMzViZGQ5Yjk5YmJiMDhjODIwM2RlMCJ9"
+        },
+        {
+          "resource": "repo://_scripts/prompts/lab-design.md#L49-L52",
+          "version": "repo-lines-v1:sha256:4acb93bed55c81ba15ddf39cdb20e9fd6d913582fa701f5cfda4c8e6396adb44:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjVmZjZkYTAzYTg4YTY0YjNmNWQ5M2NmMDBhMmNiYTM1YjYxZjk3NDAyMjU4YmU4Y2M0MWQ3OGIwMzAzN2FkMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmQwYzdkZDNhMmJjY2RlZDg0NDhjYjliY2E1MDE0YzYxYzViY2M4OWE3OTA5MTdhYzgzOWNlNmUyNWUxODZhOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2MzNzQ1Y2E3NmVhNmM2MGJhMDAyMDIzNGVlZjg1NDdhNDQ2YjU5MTJjNWM4NDhkYzM5ZDMzZmFjZmVkMTE5YyJ9"
+        },
+        {
+          "resource": "repo://labs/README.md#L3-L18",
+          "version": "repo-lines-v1:sha256:03ae8e1a9c9028185b3a564ace9e7da9c580e4dff3b56cfedca0fc4734acf2e0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjYjRlYjkyYjNjNDBmZTY3OTE0NDhjY2E4NDg2OWQxNmNhZjUzMWI4NWE5Yjg0ODI2MGFlOTk3Mjg2MzBlNDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlNzY2MDQwMWFmMDcyZjExOGM1MjVjZTM4YTQzMzMzZmY5YmNiM2I0MWMyZGM1NjBjMDNhNzlkYzlmZjQ3ODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk0OWE0YTc4ODc5N2I5ZjllYTMyOWZjNWRhYzBiMzNhYWJjMTYxMDI4NDkwNjBmZDliNDAzOGM0ZjE0YTBlMTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9d13f6bd70684da1a0d3ef76b7d7f20c",
+      "statement": "Runnable scaffolds, learner predictions and work, answer keys, Diátaxis narratives, review pages, generated runs, usage logs, and credentials are outside the repository's canonical lab surface; the ignore policy excludes private learner state and generated lab artifacts.",
+      "evidence": [
+        {
+          "resource": "repo://.openwikiignore#L7-L13",
+          "version": "repo-lines-v1:sha256:ef528c1d5e76c6a4d1c33e6140bf702318b72cd54410051da9082a3fb7fc2095:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGZiNGY3NDg3MDg1M2M3YmQ0ZDY5YWE2ZjBjZmYzMjAwZDZmMTBmOTVjMzc2NThlYWJiNzFlZmIyMjk0MTdlMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDgyZmQ2YmJiOTBkZDJkODA3YTg0NjM4NDk2NjAwMDE4N2U5MDJmYmJlNzg3MWZhNTIwOTU1YWU5MmI2NjAxMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTNmYzMwZjVhNDEwZjQzZmViZGEyMzZhOWFjMjg4YTg2MDFiMWJiMTRkNjExN2NhNmI5OGZjNjkzM2FiYTYyYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODNkY2M5MGNiNzJiZDI5MzdjNTZlZWQ3NTA2YjZjYzgxMzg4Yzg0MjhhNmE1YThhMzk3YmE0MTNhYjkyODFlMiJ9"
+        },
+        {
+          "resource": "repo://_scripts/prompts/lab-design.md#L170-L175",
+          "version": "repo-lines-v1:sha256:bf0ba39d2b6fc6e7e06121a77449151df9f90ee17eaf12d2a9149989cfc952bf:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDE1NjBiNTYwMmNhZWFjZjA2M2U3YTdmMmViOWY5NWVmMjhhZWQxOTZmZjQ1YWE2N2M4OGExNTMyMzMzYTViMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2RhOTcwODQ0MzFkZmZkNWMzMjgyMDMyYTdlZmFlYjA1NDdhODcyOTcxZGJmMzU5YmJhZmVlNWEyM2I4OGUwMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjRmZDBhZjgxYzFkMmQ4YzNkYWFkNzQzODU5ZTVjZWIwZWExYTU0YWI5ZjRlNzhkNzVhYWU1ZmUxMjA2YmU1MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjc5MmYwYmFlZTE4MzdmYmY3Y2U5MTAwNzhiMTQzNTgyNzE5MDA5Y2JhMzViZGQ5Yjk5YmJiMDhjODIwM2RlMCJ9"
+        },
+        {
+          "resource": "repo://labs/README.md#L12-L14",
+          "version": "repo-lines-v1:sha256:f48aa5260f919ef07d3cdc52bc6cb229e3ef8eba1038ea55b787240e3173addc:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWJlOWJhYzZlNTQzM2ZiZGIzNTY5NTUyOGFjNzFjOGJlYzg4MWZlMDU1N2I0Y2ZmNGU0ZDE4YzMwMzYzY2E1YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTlmM2I0YmE0MjM2MGU0YzhkM2NiZmE2NDA5NmJmY2U1NzdiMmRhN2IyMzc2ZjViZDM4ZDVjMDU1NGQ0MmUxNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjBlOWRlYjUzODc5M2Y5ZGFkZTRhYTNhMmMyNTZmZTUwMmIzNTgyNzYxOWM0YjE0YTVjZjZlMjQ3NmY4NDU0YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjU5NWU3OWNhYjI1ZmE2NzNlM2M3NjlkMWQzODE5YmYzN2EwMTk4NTMzZDk5MjM2N2JmYmM0NWYyMWYyZjc1MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_764c015884044fdc8532ddf87ec67f3b",
+      "statement": "The external lab-review workflow is a post-attempt feedback step: it reads the external specification, learner prediction, learner core, and private answer key, and stops rather than grading an empty prediction or unfilled core.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/prompts/lab-review.md#L1-L18",
+          "version": "repo-lines-v1:sha256:6893c0cac8ac3c5c13ad607db0b996d7e5b8512db0a1e4433cefaaa697e48c00:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEyMmY5YzFmNTI0OGRhNGI3Mzk5ODJmZWFiNzlhYzIzZjJiODU1M2JiYWQ0ZWM2YTlkMDRjMGE3Nzg1ODBiZmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzYTBlYTIxYzY4Y2RlMjJhMTg2YTBkODBlZmM2Yjg0OTNmMTA4MWYwZGQ3MDZhNDIwZmE4MjEyNzM1NzNlZWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ1MDBhYjdkNjVhMzIxMjhhYzg0MmYwM2M1ZTRhMGY2NzRmN2FmOTExOTU5ZDUyNmRjMzlmOTBkNjI5ZjJmMDUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.0",
+    "at": "2026-09-06T04:14:39.619Z"
+  }
+}

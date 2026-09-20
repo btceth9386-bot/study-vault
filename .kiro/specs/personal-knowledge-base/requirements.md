@@ -17,8 +17,8 @@
 - **Ingest_Pipeline（匯入管線）**：將外部來源轉換為統一 Markdown 格式的自動化流程
 - **Source（來源）**：原始學習材料（影片、文章、repo、PDF、Podcast、書籍等）
 - **Concept（概念）**：從來源中提煉出的核心知識單元，為知識庫的第一公民
-- **Draft（草稿）**：AI 產出但尚未經使用者 review 的候選概念檔
-- **Prompt_Engine（提示引擎）**：三個核心 Prompt（new-source、promote-concept、weekly-refine）的統稱
+- **Draft（草稿）**：Extraction Agent 產出、等待獨立證據驗證或例外決策的候選概念檔
+- **Prompt_Engine（提示引擎）**：四個核心 Prompt（new-source、review-drafts、promote-concept、weekly-refine）的統稱
 - **Quiz_Bank（題庫）**：結構化的測驗題目集合，支援間隔重複複習
 - **SM2_Scheduler（SM-2 排程器）**：基於 SM-2 演算法計算下次複習時間的排程邏輯
 - **Transcript（逐字稿）**：影片或語音轉換後的文字內容
@@ -130,30 +130,31 @@
 
 ### 需求 10：new-source Prompt 執行
 
-**使用者故事：** 身為使用者，我希望新來源進入知識庫時，AI Agent 能自動產出摘要並抽取候選概念，以便我後續 review。
+**使用者故事：** 身為使用者，我希望新來源進入知識庫時，AI Agent 能自動產出摘要與候選概念，再由獨立 Agent 對照證據驗證，避免要求我 fact-check 不熟悉的內容。
 
 #### 驗收標準
 
 1. WHEN 新來源內容進入 `_inbox/`，THE Prompt_Engine SHALL 執行 `new-source` prompt 進行初步處理
 2. WHEN `new-source` 執行完成，THE Prompt_Engine SHALL 在 `sources/<type>/<slug>/` 建立 `meta.yaml`（所有欄位完整）、`notes.md`（200-500 字摘要）、`highlights.md`（關鍵段落含行號或時間戳）
-3. WHEN `new-source` 執行完成，THE Prompt_Engine SHALL 在 `_drafts/` 建立 1-10 個候選概念檔，每個概念包含：一句話定義、為什麼存在、與既有概念的關聯
+3. WHEN `new-source` 執行完成，THE Prompt_Engine SHALL 在 `_drafts/` 建立 1-10 個候選概念檔，每個概念包含：一句話定義、為什麼存在、與既有概念的關聯，以及 `review_status: pending`
 4. WHEN `_drafts/` 中的候選概念與 `concepts/` 中已存在的概念重複，THE Prompt_Engine SHALL 在 draft 的 frontmatter 中標記 `merge_candidate: <existing-id>`
 5. THE Prompt_Engine SHALL 在 `_index/concepts.md` 中加入新概念條目並標記為 draft
 6. THE Prompt_Engine SHALL 不直接寫入 `concepts/` 目錄，僅寫入 `_drafts/`
 
 ### 需求 11：promote-concept Prompt 執行
 
-**使用者故事：** 身為使用者，我希望能將 AI 產出的草稿概念提煉為正式概念，並自動產生測驗題目。
+**使用者故事：** 身為使用者，我希望獨立 reviewer 驗證通過的草稿能自動提煉為正式概念並產生測驗題目，而我只需要處理證據無法解決的例外。
 
 #### 驗收標準
 
-1. WHEN 使用者選定一個 `_drafts/<concept>.md` 進行 promote，THE Prompt_Engine SHALL 在 `concepts/<category>/<concept-id>.md` 建立正式概念檔
+1. WHEN 獨立 reviewer 將 draft 標記為 `review_status: verified`，或使用者明確選定單一 draft，THE Prompt_Engine SHALL 在 `concepts/<category>/<concept-id>.md` 建立或更新正式概念檔
 2. THE Prompt_Engine SHALL 以 Feynman Technique 風格撰寫概念摘要：使用日常語言解釋，術語附簡短說明
 3. THE Prompt_Engine SHALL 在概念檔中包含至少 1 個具體範例（程式碼、現實場景或類比）
 4. WHEN 概念檔建立完成，THE Prompt_Engine SHALL 在 `quiz/bank.json` 新增至少 2 題測驗題（包含選擇題、簡答題、應用題中至少兩種類型），每題含正確答案與解釋
 5. WHEN 概念檔建立完成，THE Prompt_Engine SHALL 設定 `depth=2`（能解釋）作為預設深度，並設定 `review_due` 為建立日期 + 3 天
 6. WHEN 概念檔建立完成，THE Prompt_Engine SHALL 檢查 related concepts 並在相關概念檔中加入反向連結
 7. WHEN promote 完成，THE Prompt_Engine SHALL 更新 `_index/concepts.md` 將該概念從 draft 改為 active，並從 `_drafts/` 移除該檔案
+8. THE Prompt_Engine SHALL 不自動 promote `pending`、`needs-decision` 或 `rejected` drafts
 
 ### 需求 12：weekly-refine Prompt 執行
 
@@ -225,16 +226,17 @@
 3. WHEN 執行 `ingest-pdf.sh` 並提供 PDF 檔案路徑，THE Ingest_Pipeline SHALL 完成文字擷取、Markdown 轉換、meta.yaml 建立的完整流程
 4. WHEN 執行 `ingest-deepwiki.sh` 並提供 DeepWiki URL，THE Ingest_Pipeline SHALL 完成 wiki 下載、Markdown 轉換、meta.yaml 建立的完整流程
 
-### 需求 18：三個核心 Prompt 檔案
+### 需求 18：四個核心 Prompt 檔案
 
-**使用者故事：** 身為使用者，我希望知識庫內建三個核心 Prompt 檔案，以便 AI Agent 能重複使用標準化的處理流程。
+**使用者故事：** 身為使用者，我希望知識庫內建四個核心 Prompt 檔案，以便 extraction、獨立驗證、promotion 與維護能使用分離的標準流程。
 
 #### 驗收標準
 
-1. THE Knowledge_Base SHALL 在 `_scripts/prompts/` 目錄中提供 `new-source.md`、`promote-concept.md`、`weekly-refine.md` 三個 Prompt 檔案
+1. THE Knowledge_Base SHALL 在 `_scripts/prompts/` 目錄中提供 `new-source.md`、`review-drafts.md`、`promote-concept.md`、`weekly-refine.md` 四個 Prompt 檔案
 2. THE Knowledge_Base SHALL 確保 `new-source.md` 的內容符合需求 10 定義的輸入、輸出與行為規範
-3. THE Knowledge_Base SHALL 確保 `promote-concept.md` 的內容符合需求 11 定義的輸入、輸出與行為規範
-4. THE Knowledge_Base SHALL 確保 `weekly-refine.md` 的內容符合需求 12 定義的輸入、輸出與行為規範
+3. THE Knowledge_Base SHALL 確保 `review-drafts.md` 將 verdict 與證據持久化，並禁止修改正式概念
+4. THE Knowledge_Base SHALL 確保 `promote-concept.md` 的內容符合需求 11 定義的輸入、輸出與行為規範
+5. THE Knowledge_Base SHALL 確保 `weekly-refine.md` 的內容符合需求 12 定義的輸入、輸出與行為規範
 
 ### 需求 19：OpenAI Whisper API 整合
 

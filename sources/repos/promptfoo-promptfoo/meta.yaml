@@ -1,0 +1,26 @@
+type: repo
+title: promptfoo/promptfoo
+url: https://github.com/promptfoo/promptfoo
+authors:
+  - promptfoo
+language: en
+date_consumed: 2026-09-19
+date_added: 2026-09-19
+estimated_time: 6-8h
+status: processed
+related_concepts:
+  - configuration-driven-llm-evaluation-matrix
+  - hybrid-llm-output-assertions
+  - model-agnostic-evaluation-provider-abstraction
+  - composable-llm-red-team-testing
+  - iterative-adversarial-testing-loop
+  - trace-aware-agent-evaluation
+  - llm-as-judge-evaluation
+  - llm-observability
+  - prompt-version-management
+tags:
+  - llm-engineering
+  - evaluation
+  - red-teaming
+  - testing
+  - observability

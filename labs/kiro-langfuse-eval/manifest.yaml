@@ -1,0 +1,21 @@
+schema_version: 1
+id: kiro-langfuse-eval
+title: Kiro CLI + Langfuse for Evaluation
+status: scaffolded
+concept_ids:
+  - llm-observability
+  - llm-as-judge-evaluation
+  - acp-agent-backend-for-ides
+workspace_path: ~/orb_pods_share/kiro-langfuse-eval
+canonical_spec: spec.md
+spec_sha256: f8b4bd327915184ec9338a6f24c4bf8967d150c6b993a3873f6b165cd22795d5
+generator_prompt: _scripts/prompts/lab-design.md
+review_urls:
+  en: https://kiro-langfuse-eval-review.pages.dev
+  zh-TW: https://kiro-langfuse-eval-review.pages.dev/index-zh.html
+regenerate:
+  - spec.diataxis.md
+  - runnable scaffold and fixtures
+  - predictions.md and expected.md
+  - review-site and pages
+  - deployment.md

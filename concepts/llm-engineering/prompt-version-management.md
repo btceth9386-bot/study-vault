@@ -16,6 +16,7 @@ related:
 - metric-driven-llm-optimization
 - optimize-anything-pattern
 - surgical-context-compression
+- configuration-driven-llm-evaluation-matrix
 tags:
 - llm-engineering
 - prompts
@@ -57,6 +58,7 @@ Each generation can record the prompt version it used, so later debugging can co
 - [[dspy-module-composition]]: A compiled DSPy module can be treated as a reproducible behavior artifact.
 - [[metric-driven-llm-optimization]]: Optimization creates better prompt/program variants that still need safe deployment discipline.
 - [[optimize-anything-pattern]]: Optimized text artifacts still need versioning, review, and rollback before production use.
+- [[configuration-driven-llm-evaluation-matrix]]: A shared evaluation matrix makes prompt-version comparisons repeatable.
 
 ## Open questions
 

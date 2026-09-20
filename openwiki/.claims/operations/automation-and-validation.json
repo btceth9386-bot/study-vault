@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:e2dc60882522f41d9b518cc0632b953b644ae4b6f9ed5dc6d3613af25d8df5ee",
+  "claims": [
+    {
+      "id": "claim_1279e1be16914b5d9c6f5db4daa39c50",
+      "statement": "`init-kb.sh` creates the vault’s staging, draft, concept, source-type, quiz, index, topic, and prompt directories; it seeds example content, placeholder indexes, prompt material, and artifact ignore rules, while `write_if_missing` preserves existing files on subsequent runs.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/init-kb.sh#L196-L214",
+          "version": "repo-lines-v1:sha256:48bca7223d1ae95448bbdbbb5258fc5c1f6caa051cd30222b6493d5e23dc23d5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEzOTk4YmYxMWUyZDgwOTczOTEyYmQ0ZWY3ODViYTRmYTQ0MzRiNDA1NzRmNDY2M2NhMDBjYmUyYTQ1ZWY4NGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY3Njc5N2YzMjBjYjA3YmMxN2FlMmIwNzA0YWM2ZGEzYmUwNzJmYTM4NGU1NDA3ZWY0NGNmZjA0ZjNmMTk2ODEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI4Y2YwOTg3OTk2NzExNDRjMWFiZjJjN2E3ZjZlMzNjMjUxMTEwMzg4MjlkOGIwODFlMjhlMWRiMDZmYzg3NWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEwN2FhZTMyYjM0ZDIyMzU0MDA0Yzk5ZmIwYzI0MzhiMjk2NzA5MjdmMjI3NmJkOGMwNWQwNGJjMGNjMmE5ODkifQ"
+        },
+        {
+          "resource": "repo://_scripts/init-kb.sh#L35-L60",
+          "version": "repo-lines-v1:sha256:d6db7d2f863c446c669fe94ca3832fa04296b601ae3b8b74e363c7364fc8fc34:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5NzA1ZTBiZjQ2ZWI5NDhkZTQ3ODhjZjQ3NTNhNTI3OGE4YTZlNWVhOThjY2VkZmViZGQ5MzA5OTkyMTg4ZWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhMjFjNWIzYmZmMDI5OWMwMTYxNDcwNDY4ZjM1NWU1YjRhZmNmMTdhNWY1OTNhYjY4Mzk0ZWY3YWYzMTljZGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk4YjFkOGM1NTg2YzM1ZDQ1Y2E0OWNlMDJhYTQ2NzlmN2JkMDdiZTJiNmVkNWYwMTU2NTc0YzZhNTI3ZGNhNjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYxODUxZmM2YjgyNzlkZGQ4NGZhMTg5ZThkYjE2NzI3Zjk5Nzg3ZWYxNjYyODA0ZjZkMWFmNzk1YTU3ZWQ5NTkifQ"
+        },
+        {
+          "resource": "repo://_scripts/init-kb.sh#L402-L419",
+          "version": "repo-lines-v1:sha256:6b979e89ad6bf1d076c68605df63b4f874588a3a3e1235c0aeb05d4547400ff8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1ZTE1MjExOTU5MzJhNjVkNGEzOGE2ZDMyYTM3OGY1YmY1MDlkNmMzNTE5MWVlNmE1NjNhMGQ1MDFkODFlMmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhMjFjNWIzYmZmMDI5OWMwMTYxNDcwNDY4ZjM1NWU1YjRhZmNmMTdhNWY1OTNhYjY4Mzk0ZWY3YWYzMTljZGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE5ZjVhM2M0OTUzYzhkZWFmY2ZhZmY4Y2QyODI4NjMwMGRlNGEwYjkxOTRmOWZjZjE0NTIwM2Y4Njk1YzEwMWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://_scripts/init-kb.sh#L5-L33",
+          "version": "repo-lines-v1:sha256:86cbc543acf2d679bdccb9e043bd14085d7fefd5e4f732861dc9979dfb2b5e91:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQxZjE0ZDNmN2Y5OTEyZGFjZWJlYmI0Y2U0ZTVkN2M1NjU3MTczZDRmZDM0MmRjNTQ0OWI1ZDQ3OTAwMDQ4MmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQyNjU5YjU4MWFkZmY3MjNmZjA1YTUwZTE2OTRmNzEyYzQwNDljODEzNWYyZGM1MGYyZDdlYTczNDBmODcwMzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExOTg0ZjI4NTg4NzhjMzQwMjJjYzU0NDQ0NjVjNGY1NjczYTE0ZGVhNGE1N2E1NmRiZTdmOTA2M2E2ODQwYzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNkOGI2ZThjMzJhMTFlMzg2ZGQxY2ZmNmQ3ZmQ3MDFiYWFiNjE2NjM2Yjg3ODQ4ZDMyZTVlZDZhMTVlNTI1ZDYifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_init_kb.py#L25-L105",
+          "version": "repo-lines-v1:sha256:ecf29d9d569880e56690cb247974057c2d6ee1523e978fa6c5215b3bd7694ee1:eyJzZWxlY3RlZExpbmVDb3VudCI6ODEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ4M2VhM2MxODdjOWM2MDczNjA0YTFlMDNjNjcxNGZlZWE3MDRiZmViMjk3MjkxMTk5MGUyNGExNzU4NzJlYWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkZDI0NDU4MmI2ZmIwM2QyM2I4NDE1YWJlY2QzNDZiMGM5ZjQ2NmI2Zjc1MmIwNjgxODljZTdlOWEyZGMzNTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNmOWM0Mjc3NDhkZDdkNDhjYmJiOWM5MjQwOWQyNzM1ZGQyOTczMWRhZDcyNGMyNzQxMzQzMTBhNjdhZGY2NjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a43d50b90a474d6fb61db22ac4bde2a6",
+      "statement": "PDF ingestion validates its input and source type, requires `pdftotext` or `marker`, rejects empty conversions, writes normalized content and metadata under `sources/<type>/<slug>/`, and splits extracted content above 1 MiB into numbered Markdown parts.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/ingest-pdf.sh#L11-L43",
+          "version": "repo-lines-v1:sha256:f3b4d82e5059f7b0214868bee3d8b801b706b25fd700479f9b1d41ee02100708:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyNDI1ZWVkNmRkZTE4Nzk0MzNlNTJhNTk3ZDAzNjkzZjdmMDZhM2UzZTE0MTczZDQ3NmNhY2VlYjQwYTJlYjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmZGM2ODUyOWVjNzdiN2I4MGViNTQ5YmFmNWJjYTlkOTczMjkzZGQ1NWMwNjEwNWIwYjE3NjA3OWFhM2M1ZWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFiZWJjM2E5Y2NkOGRkNDEzYzYxN2U3NDU4ODc2NGY1ZGRmNzg2MGFhZDBhZTNhNjhiMGJkN2VjZWNiZjViOWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ2MWQwNzg5OWUyNjlhYmVkMTkwZTEzMjgxODMzMmFmYTk0YTU3MjBkODg3MDViMTlkOGIyNDcyNDAwNGMyYmMifQ"
+        },
+        {
+          "resource": "repo://_scripts/ingest-pdf.sh#L46-L109",
+          "version": "repo-lines-v1:sha256:bec044e6eee6a05f61770a591ffc8f8cdceaaf394b2ce96dbe12f72377b043cb:eyJzZWxlY3RlZExpbmVDb3VudCI6NjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyZGMyNWMzMzU5NDFmMWQzN2Y3MjRjMmNhODJhNmU4MDA2MGZhNTgwZTc3ZWZhZTY5MjcyMDEzNjQ2NzBkODciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc2ODcyZGZkY2E5NGE1ODQzMDBhZDY1ZWQwMWNhMzU0NzkxYTRmNTIzNmQ4ZmZlNDdjODhmN2ZkYzFlNmIwY2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMxY2UxYWExMTY5NWQ5YjUxNTcwZGExNWYyMzlkNzBkMmY1Y2FkNThhNzg1MGQyYThkYTljZWQ1ODYxZDQ4MzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlZWI1M2U4NTlkMjA5ZmIzNTE0NjY3OTU2NjcxNTIxNTgxMjIyNGFlOTliODlkMmU0OTc0YjA2NjgwYTk5YTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_45eb3df259c9482f8352f2c0b55b7498",
+      "statement": "The pipeline expands environment variables in YAML configuration, selects the first agent matching a role, substitutes prompt placeholders, and runs the configured command from `kb_root`. In a full source run it runs ingest and review first, groups only that source's persisted draft verdicts, and runs promote with the exact verified list followed by topics only when that list is nonempty; a failed dispatched step stops the run.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/pipeline.py#L126-L168",
+          "version": "repo-lines-v1:sha256:50afbc030cc75bf0582dd6ecce47dbeee3920e37ca16c899a26e16ad682bfc8b:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjOGEyZGRiMDViZTAxMjNmODRiNjYwMjIzMDI0ZjRlYzk2ZGUzNDMyZDhkYjExZGY1MWVlNDFlOTBiOTg2YjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwZTJhNDY1MDA5NWZhOTVkMGUyYmI0MWIyZGIyOTA5NGQzNDA0ZDI4Y2UxMjMzOWVjODhiYjRiNWM1YmU4ZjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MjIzMTA2ZmQ4NzQyYjcwZWEyMzNmOWRjMzU5ZjRiMDJiYmIwNjliNzI4M2VlZjc2MjQ5OTUxNmJkN2I5YzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg5M2JkNjZlMmJiNzFmM2I4YTkyNDA2NGJiZjdiMDdjNTkwM2E3NzNmYTRmOGMzNTQ2MDYwMzg2NjcxZDNhNzMifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.py#L228-L255",
+          "version": "repo-lines-v1:sha256:8399c6b8f770c361177e6eadbb0a7369f1d2aa52eb5825ef6702b878e66617b5:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk1ZGNkMjdiNDU3NGU4MzU4MWI4YWIxYTFhMGIzYzQwZDQzNjlkZjdhODVjZDA2MmFhZjQyOGVlOWU2YmQ3ZjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwM2Y0Njg2ZmZiMTQxOWU2MzhhNzAyZjhiYjE3YTlmMGM4Y2I4Mjk4NjI5NjEyM2IxNDgyMGY4YWI3ZDg3N2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjViNjQxM2YwYjhlMzcxYjI4NDFlN2IzNzU1ODM4ZDFjNDM1YjgyNWVkZGZjYzkxMDM1MzIxMDVlNDI3YTRhMTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJmZWE1MzYzYjZmNTIyMGE4NzVhZTNiNzBlNzc1N2JiMGJiN2ExNGE1NWMyZWE1MjI1MzRiMTFkMWE3NjczZGUifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.py#L42-L65",
+          "version": "repo-lines-v1:sha256:4ed6364ee54ed154c3d11fe960d92469afccf0b9be2a02d8e322bc8ca4e98292:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyODg5NjJjZTkwNTNiZDI0ZjBkYmI3NTRiMGMzNWRlYTEyMmUwZGZhOTdhNWMyNmE5MjBlODM4M2E3ODhkODciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkZjM3M2Y5ZTFlMTcxNGRiNjBhMjBjNmMwZDU1N2I4NDllODczYjkyYjVkMGE3Yzc1ZmViMTA1MzExOTZjNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhkNzc1NGY0YmUxNzYxYzMyNTczZjRkMTJhMzEwYjk2MGNmYjk4MmFmM2EyNzYxMDU4ZjUzZjdiMjc0OTRmOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVhMGRkNWFmMGU4ZTgyZmIwYWE5MTUxYWEzZDc5YWI4NTFmNmIyYmUwNWZlMDVlOTYzMzQyM2EzM2RmZTRhZWEifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.py#L89-L103",
+          "version": "repo-lines-v1:sha256:78400047fa7e9a9fe232572a589c3ad41e603c15c43d768625aa34eee5086bf5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkMTdlZmFlOWI4ZGJkN2MwOTA3ODQ3MDY1Y2VmN2QxNTg5NDA4MzZlNjgwOGQxN2NhNzliYjZlNzk4M2ViNTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlMWNkNjY4NmI4YThiNGZjZGVhMGQxNTIxYzQ5NzkzNzI2OWEyMzJhNGY0YjM4NzdjYjEyMTg4Mzk3ZWFkMzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzZWJkYTZiZWYyMDIzZWE3YmUzMTYwMzEwYmM5YTQ5Mzk5MGQ1ZWE1MzMzNzgxY2NiYzRhYzhkZDllM2IxNTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM4NDA0YTE3ZDUyYjlmZWVkYTBmOTNiMWE1NmYxZGE0YWM0ZTdkNTQ5ZjY0ZDk4NWEwNTlkNzFlOWE1ZmNmY2QifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.yml#L54-L72",
+          "version": "repo-lines-v1:sha256:61cd9d5bc357747c45184c55bc31bd250f45cf510c5cf56b26461afca9b00f19:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5NzA3MzM5NTYyZGMzZTNiYWJmNmZiNGZiNmEwMzYzNTA4Mzc1MDRiOTQ2YjNmN2Y5NGU3YTU5MDkyOGZkMTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1NDg4NDhlNTZiM2EzNDJlM2RmYTRiZTdiMTYxYTAzZDk0Zjg2ZWI1OWZjZDdjNzlkMDlhODNhMjllZDhmYzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiYjIwNjRjYWYzYjljNzMyNzk3Mzc4YjQ2NTE4ODY2M2E3ZmYyNjg5Y2I2ZTY1OGRhY2M5OTNiNTcyNThjYTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhhMjcyNDY1NzUxOTUwNTUxYmZmNDEyNDc0YzA2MjE3NjUzMDIzNjZlOTE2M2UxZDY4NGRjY2JmZDU3MTc4YTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_21284336e2a545ddb4f40b5163d9462a",
+      "statement": "`pipeline.py` requires a target argument for every configured single step and for full-pipeline mode; it supports ingest, review, promote, topics, and manual-only lab dispatch. Its dry-run path prints dispatch information without calling an agent, but does not run normal step validation or compute the eventual verified-draft list.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/pipeline.py#L150-L153",
+          "version": "repo-lines-v1:sha256:00234ab6c189a6b0284051742abcda3c1dff233034ec87bf4fd118b28dae727b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmFiZGNkZDA4ZTkyMWU3YmJmMjQ1YjFiMTQ1MDZmYzZjNmNkYjZlYTM1MDFjNmYwZWIzNmVjMWFlMDAxYmQ4MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk3YzcxMjQ3YWYzY2QxZWRmNTU1YTdkMTA3NTkzMTU3ZjZkYzJhMjJhZjBkZTgyZTc3NzRhYmYxMGY4YWRlMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmZhODVjMmE1Njk2YmZlYzFjYmJjNmE0MmJlNzY4MDliY2Y4NTQ1MTJiODJkOGM5MzIyOGVjNmNiNmVjNjAxMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWU1MzRlNTU2YWUzOTZhNDFlMGZmMDk0NTYzNThhMzU1MDY1YTkzZmNjMWMwMjc2OGVmN2RkMTk2MmY2MzM5NiJ9"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.py#L171-L226",
+          "version": "repo-lines-v1:sha256:e6fc32d0d4f5d610fa188f5560a7adfdc5aa580ff4dee4449472316688cf121e:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyZTMxMjU3ZGMwYWUxZDU5MzAzN2MyODBjOWFkNTA4MTliOGE2YzhjZjcyOGJlMDcxNmQwMGEzZWVjYzA0YmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiNWM4MjYzMmZjODJkNGIyYzM0MGY0MjU1OGJhM2RmYTMxYzc2NTVkZjZmY2MxNjhiNGZkY2U1N2ZhYzYwNDMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRlNzU3NWMzYjc3NzZjZjJmOWMyYmZiY2E0NGYyMTQ4MTNhNzgyN2VhYTljMzg0NTRjNzAzYjY4OWE3NDQzODYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhNmU0NTU3NzYwMzA1ZGQ5YzVmOWY4NGM1M2E0NDZjYTc2NjFjZjA4YjIwODIwMWZjYjQ2MmM1ZTg0OGU1ODUifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.py#L34-L39",
+          "version": "repo-lines-v1:sha256:c897aa5b147e39f92403f3afa76acef4543207c6c4f2cee3309c1bcc706440be:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzU1NzFlMmRkZDU4YWNkMjFlNWE1ZWZjYWE4YmU4OTZiM2I2YTk1MGJjYTcyNTliODQwNTY2OTlkMjU5YjU1NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmIzMzQwYzUyOWM5NzU5ZjhkZTZjZjYxYTkyYzFjZjE5ODY2NjI1YWFiMmEyNTYxMGQ3NjVjMWEzYTg1ZjlhOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzQ4MTA3ZWY2Y2Y3MDkwN2U5OWRmOTU3NTU4Y2MzZDhkMDM5YTgwOWVjMDczM2I4Yzk4ZDNhYmFkMThkYTVlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzQ4MDYxNTM0YmQyODNkNWY1NTQzMDhhZjYzZDAzMjY0ODUyZDc0ZTAzZTU1ZWU2NDZmNjZiMGM1OTY0ZDI1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_604e00bd276541a28508f8a7d302bd71",
+      "statement": "Although agents declare `max_concurrent` in `pipeline.yml`, the runner selects and executes only one matching agent and does not enforce that configuration field; the bundled command strings include permission-bypassing flags, and commands are executed through a shell.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/pipeline.py#L106-L123",
+          "version": "repo-lines-v1:sha256:92edd97ffbc8a400a9c209db5bbfb80f83a375be83623130e146748831ad6437:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4YjBkYTY5ZDc4YjhmMTM5MDMyMTJmYzUyODdmY2FjYjczYzllNjZjYjJiOGIwYTY4OGI3ZTZlYmRkODllNGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhMTFjMDU2N2QwYTVmOWU5YjEzNWY2NWNkMjUzNzJkZmQ2Mjg3NzVmN2MxZWQyNTNmOGJhZDQyZGQyZDY2NjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgwMDBmYmQ4NWI0NDhkZjE2ZmQ4NmIyODM1NzY0N2UzYjBmYzRmOWRmMjdhZDM2NjdkMDA4NzY2MmJjNTVkNjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUyNjBiM2RkYjMzNTQwZmY4MjJjMDYyYWY1ZDNhZDY0YWQ5OTA1ODY0NzMwZWU4MTg5NjQwMGNmOWY2YWE2MDgifQ"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.py#L63-L65",
+          "version": "repo-lines-v1:sha256:ad8b050f239878750afa7fe2b1b1a87247e5e8b6ba8449a0bccd15df16948cf7:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDZiOGI4ZGJiNDg5YTcxMzQxNjA0ZTE4NzRlNDhkMWRhZjEyODY1OWE0YzFjZTFmNzI4MjM0Njk3OTU5YTY2MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWRmMzczZjllMWUxNzE0ZGI2MGEyMGM2YzBkNTU3Yjg0OWU4NzNiOTJiNWQwYTdjNzVmZWIxMDUzMTE5NmM2MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWQ3Y2FhNjczYjBkMzEzMDU3MGM4ODlkMWM3OTlkYTQxYzUxYmNlMzAyOWQ4YjkyMGQwYTE2NzZhNDRmN2QwMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWEwZGQ1YWYwZThlODJmYjBhYTkxNTFhYTNkNzlhYjg1MWY2YjJiZTA1ZmUwNWU5NjMzNDIzYTMzZGZlNGFlYSJ9"
+        },
+        {
+          "resource": "repo://_scripts/pipeline.yml#L20-L49",
+          "version": "repo-lines-v1:sha256:7d6f16c5c0280b45903ea39c7232dd1bc1323e6ff3a4e8f1cd2970f579609cfa:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY3YWMzMzk4MjI1MWY5NTcxYjhjYzQwMTVjYTQ5YTNhMTgyN2MzMWRkYjk4OWRkM2U0YjYyMTVhYTNkZDY4NDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzMzM2MmEyMzQ1NDMzZmVhMWYwZTAwNzliZDZiYmQxMjM4ZWZhMDhlNmQ2YzFmNTI0NTZmMDQxMTdmZmNiYTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjExODhlOTY4ZDQ2MjIyMzhiMWMzMzliZDAxYWM1Mjg0OWRlOTRjOWQ1ODczYzRiMzNjN2RkMGJmZTdlZjM1ZWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkyMTJkNjE0OGI1Yzk5ZTQ2NmQwNDc3M2U0YWRlOTVlMDM1OGVjM2Q3NTI5ODMzMmMxOTRkMjExODJmMTU3YzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8ba5b4f02b7146e5adfd927c3f19bea3",
+      "statement": "The metadata validator reports diagnostics as lists and checks required-field presence for source YAML, concept frontmatter, and quiz mappings; its file readers also report unreadable, invalid-YAML, non-mapping, and missing/incomplete-frontmatter cases, but it does not impose value or cross-record validation.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/metadata_validator.py#L11-L117",
+          "version": "repo-lines-v1:sha256:735b6b06d0fd4067c1229bcc580382744da69ef06cff70a61cb0e4de6a54a1e0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTA3LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIzMTk0MWRiODYxNzc1YjYxNDI2YzUzNDJiOThjOTVkMjE0NDUwZmU1OTAwZjhlMDViMjAzOWU4ZjAxZWU2YTdmIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI4OTZmYmZmMWMyZWViODdlZjQwOTBmMmE0M2MwZGQwYWRhODYwNGU4MjMyZDhlNTY3MWI4MmNlNDRjZDczYWQwIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIyODVlZTc5MTAzMzI5N2U3ODAxZTIwMjQ5NDIxZTEzZjU4MmEyZWU3MDlkZjQ5MGIwMmIzZDZlZjRiYjkzM2FhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_metadata_validator.py#L94-L147",
+          "version": "repo-lines-v1:sha256:74cd72e29df153947aae7105877fa21bd0306cc21b0139be1d7116c9b67bd2ed:eyJzZWxlY3RlZExpbmVDb3VudCI6NTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkNDA2YjM0YTU4M2Q1NzM5NTFiN2UyMDQyMjM2MmZhOWU1MGMxM2I0MWIxN2FkN2MzMWNjMTc1Y2Q5ZmI3NTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJiYjQ1ZGI1Yzk1NTczNWM2ODBhOTRkMTE5MzI1ZGU5Y2U5NDhjYmE1ZmNmZTYwNmY0NGJlYWIxYzYyY2YwYzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2Mzc1M2IxM2ZkOTllNWQ5Mjg1MjZkOGJkNzk4NTFkMDI4MmE5MTYxMzNjOGQ1ZTk0M2MyNmNiYzk0YWUxZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b45ac56233a145ccb222668906ab9012",
+      "statement": "The YouTube ingester validates its emitted `meta.yaml` with `validate_source_meta` and exits nonzero when that validator returns diagnostics.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/ingest-youtube.sh#L139-L175",
+          "version": "repo-lines-v1:sha256:6e601a3c0d5a54fe259ea87eb35db149018e60f6f5945b941430ca5b9ad3ee73:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkYjg5NzBlZTczNWVmMzFmODU5MTcyMmQ0ZDFhNWE5ODc0NmFhMTI1Yjc0M2VkZGUzNmExNmRiOTYxYWUzNzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmZGM2ODUyOWVjNzdiN2I4MGViNTQ5YmFmNWJjYTlkOTczMjkzZGQ1NWMwNjEwNWIwYjE3NjA3OWFhM2M1ZWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjljNTRjYzcxMjNhMGUzNDM2YjNjM2I2ZDUxOWE5YzBhODMxMzE4ZTE0ZjM1MGE4NWIwM2Y2OTIyZWY0OTc1NzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE1NDIzODIwMjRiZTNiNzI5Nzc5YWEyMDQxYWEyNzU5N2Y2ODJiZWNhNWNkYzdiNGE1MDkyMDFlYzFlMzA4MTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b04972a17bcf4b6dbe3195d796b4249d",
+      "statement": "The index generator overwrites concept, topic, and tag indexes under `_index/`; concept and tag indexes include both active concepts and drafts, topic indexes scan topics, and missing inputs produce explicit empty states.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/index_generator.py#L123-L159",
+          "version": "repo-lines-v1:sha256:3404146b47fef3038275f80ef50adc3196c0bbade138226e6f31ea61faad42d5:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxZjNmNTBiM2U3NjIxOWU0N2ZmODc2ODU1OGNmNzM5ODdjOWYzMjA0NDQwMDQ3NDk0ZTM4ZTk3ODBlZjQ0Y2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkZTQ3MDhmZTU3Nzc5MjE4NTA2OWJkMmUxZTc2OWViYzViODlmNjBlNDYwNmRjYzhiNmIyZjdkZmY0ZTZiNTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRlYzI3NGFiMWYzMDM0N2RkYzhmNjZjYzg2NTMyYjc2Yjg4ZTkwZDUzMTZiOTQ0MTYxMTNkZjZmYjgzNTE5NmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://_scripts/index_generator.py#L28-L37",
+          "version": "repo-lines-v1:sha256:c4c7a1d3167ca483d8283317c67c4693079a9274da03ad044249d0d05cbbb8a5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzZTJmZmZhNGE5ODg0MzA5NWNiMTk4MDFkNTg0MGY3MzNiYzllZWJjZmRmMzkxNWQxN2VhYThmOGFiNmU0YWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0NTZlYzM4OWQ3YmEzMmE4MmE4OGI1YzYxNmQ4MDI2MGI1NTVkYTZlY2NiZjIwMjBmYWNjYmZmOTAwMTIxMTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ3NTE1NzZhMjc3NDdlYWMxZWZlYWU4MzNmMTA5YzE4Y2M3NjRjYjNhNDZiMzc3NDE2OTAyNmQ3NjE1YmJiMTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI3ZjQ4MTViNDgxNWZlNDA3ZTM1YjAzZWU4M2QzYjE0YjQwNjc3ZDA3N2IxM2Y5ZTQyNjMzNTFmNDJkM2U3MzgifQ"
+        },
+        {
+          "resource": "repo://_scripts/index_generator.py#L54-L95",
+          "version": "repo-lines-v1:sha256:e99b8270432b4110a2ff7bb67e27b799e5eabb75c9868d64694ff1edb446dea2:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUxYWI1ZGNmMWNhYTFhZDQwNDk5MTYzZjllZDQ0ZTE2NmUwNTMwZDBiODcxNjFmMTZmNThjZWM5ZDlhMDliNzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkZTQ3MDhmZTU3Nzc5MjE4NTA2OWJkMmUxZTc2OWViYzViODlmNjBlNDYwNmRjYzhiNmIyZjdkZmY0ZTZiNTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUxMTIyY2QzMjc2MTUzMmY5ZjFhMDRmZjE0ODljNWQ3MGEwNTM0MzJiOTU1OWZjM2M5NTAwNjFjMDQ1ZTdiZjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU4Yjg3NjY0OTRhZmQ5NjBmOGI3YWRmM2YwNWFiYTdiOTA3M2Y3YTUwNDYyNzk0ZGM1Mjk2MDQ3ODU5ZGRiZDcifQ"
+        },
+        {
+          "resource": "repo://_scripts/index_generator.py#L98-L120",
+          "version": "repo-lines-v1:sha256:b089faf4203ca6a78c0c327eb823ef42fd58f3f10a13c4786d9aeb9e2b9cf6ce:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwMjlmZjQ5Yzk1NDRiZjU0MTZiNzVhMjRhZGM1ZGMzNDk0ZGJjNTgyMWI3OWJhYzdkNTRmNzhiZGQyYWY5NzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkZTQ3MDhmZTU3Nzc5MjE4NTA2OWJkMmUxZTc2OWViYzViODlmNjBlNDYwNmRjYzhiNmIyZjdkZmY0ZTZiNTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRlYzI3NGFiMWYzMDM0N2RkYzhmNjZjYzg2NTMyYjc2Yjg4ZTkwZDUzMTZiOTQ0MTYxMTNkZjZmYjgzNTE5NmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIyY2IyZGM4MjZkYzU5NDBiNTAzZDlhM2ZkZDkxOTViNzMyOWEwM2ExYTM5YzJjNmNlMWNmMDU1ZjdiZjdjZTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e1cb5df163c943ad954ccd865bbfeda4",
+      "statement": "Focused tests cover metadata required fields with property-based payloads, index content, initialization and idempotence, mocked ingestion integrations, and an end-to-end flow that composes initialization, PDF ingestion, metadata checks, and quiz state; no test under `_scripts/tests` directly references `pipeline.py`.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/tests/test_e2e_flow.py#L121-L236",
+          "version": "repo-lines-v1:sha256:4a1841fbf0dd8c87d83933704d8c5daa0a2b9f98b17e7eab3ae168b4fccf28e5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTE2LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIzN2E3ODQzMzE4M2NkNGIxYWQ3OTZlMTdlNjY1ODdiZjVlNzIzNjc5ODc1Y2U1OTI5ODhkOWU5MTdlNDgzNzljIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzYzIyZTNmNDZjYjNjNTM2NTZiOTAzZGQ0MWVmM2JmZGY3NGEzYmZiMDA5YjY5MTAzYzcwMDBmNDdhMDY4NDcyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJlYjgxNGZlOTM4ZmJkYjEzMmQ5OGViZTI5MGM5NWE3NDJlY2MxMzNiYTdhZGRkNzdhNjlmZTM1M2U1YjVhZWQ0IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_index_generator.py#L28-L112",
+          "version": "repo-lines-v1:sha256:f585fae560623ede4422de2198c8bf0b8f99b36c3177d64ef27bdb478c32c81a:eyJzZWxlY3RlZExpbmVDb3VudCI6ODUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRjNDNjNzcyMGI4ZmVjZDJmMTgxNjkwY2FlNzIxMmY2NWI1YTcyNzBhYzY4YzRhYmRhYzJkYjNhYjliZTlmYTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyNjg1OWIzMGE0OGUwZDQyZjIyMTNkY2E4NjA3ZWIxZDRmZTc5ZWY3ZmJiMjIxYjYzODgyNWNmNWE4MzJjN2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2Mzc1M2IxM2ZkOTllNWQ5Mjg1MjZkOGJkNzk4NTFkMDI4MmE5MTYxMzNjOGQ1ZTk0M2MyNmNiYzk0YWUxZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_ingest_pipeline.bats#L1-L38",
+          "version": "repo-lines-v1:sha256:e48f44d1402027650ba3a3f750fa6cbd499b9f622dca3b43221a82af14c7c65c:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjMDIzY2JjOTExY2Y3NzQxMWI3OWIzOTQ0NDM4ZjJlMTExNDViMjY2MWI5NDcyNDgxZDliN2FhOGJkZGRkZDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU5OGMzYjc5ODQwYjc1ZTljNmZjMmRmNmU3MjJlZWMxNzljOWE2NDE1NDM2OWY1OGNiOTYwYTRkNGFmMjg3ZTkifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_ingest_pipeline.bats#L59-L178",
+          "version": "repo-lines-v1:sha256:f51902e78426812b27a16c60d7a6de246237c03e7e589cb10b208777bbb4188e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI1NDE1ODIyMDU5OTJiMzZlNDU1N2YyZmE4ZTJiNzhhZWZjYTZmYTUwYWFmY2Q2NjQ0NWM2Y2FjYjE1YmEwMDM3IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0MTJjYTM0NWNjZjc1YmY5YzA4MDZiY2U2OTViZThkZTgwOGI3OTk4NDI1MWE3YTU0ZDIwMmNmNjEwMWRkNDUxIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI1YWRiYTQ2M2RlNGIyZTU1NzEwM2VlMjNkYjQzNDY1NTZmY2I0OWEzMGE3YTM5MzllNTYzYTNjZGY5Y2NlMmY5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIxMjhmMWQyMTljNDFlN2M1MmRjNTFiZDUyMjNhNzgzNmY0MDBhYmU4OWM5OTkxYjBhYzkzODJiMWVjOTBhNzU1In0"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_init_kb.py#L25-L105",
+          "version": "repo-lines-v1:sha256:ecf29d9d569880e56690cb247974057c2d6ee1523e978fa6c5215b3bd7694ee1:eyJzZWxlY3RlZExpbmVDb3VudCI6ODEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ4M2VhM2MxODdjOWM2MDczNjA0YTFlMDNjNjcxNGZlZWE3MDRiZmViMjk3MjkxMTk5MGUyNGExNzU4NzJlYWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkZDI0NDU4MmI2ZmIwM2QyM2I4NDE1YWJlY2QzNDZiMGM5ZjQ2NmI2Zjc1MmIwNjgxODljZTdlOWEyZGMzNTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNmOWM0Mjc3NDhkZDdkNDhjYmJiOWM5MjQwOWQyNzM1ZGQyOTczMWRhZDcyNGMyNzQxMzQzMTBhNjdhZGY2NjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_metadata_validator.py#L94-L147",
+          "version": "repo-lines-v1:sha256:74cd72e29df153947aae7105877fa21bd0306cc21b0139be1d7116c9b67bd2ed:eyJzZWxlY3RlZExpbmVDb3VudCI6NTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkNDA2YjM0YTU4M2Q1NzM5NTFiN2UyMDQyMjM2MmZhOWU1MGMxM2I0MWIxN2FkN2MzMWNjMTc1Y2Q5ZmI3NTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJiYjQ1ZGI1Yzk1NTczNWM2ODBhOTRkMTE5MzI1ZGU5Y2U5NDhjYmE1ZmNmZTYwNmY0NGJlYWIxYzYyY2YwYzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2Mzc1M2IxM2ZkOTllNWQ5Mjg1MjZkOGJkNzk4NTFkMDI4MmE5MTYxMzNjOGQ1ZTk0M2MyNmNiYzk0YWUxZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2d77fbc224b44c43ab8d1602fcb1b72a",
+      "statement": "The focused `test_pipeline.py` test verifies that `reviewed_drafts` normalizes source paths, excludes a verified draft from another source, treats missing status as pending, and maps an unknown status to needs-decision; it does not execute the dispatcher CLI or an agent command.",
+      "evidence": [
+        {
+          "resource": "repo://_scripts/pipeline.py#L79-L103",
+          "version": "repo-lines-v1:sha256:1c635bffd5429f2a9814ecae5b9ea037b13fcd61a113fb2f0169b31c47ee02e2:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NDEyNDQxZTE0OWIxZDhlY2M0NjJkNzllZDhiZTMyYmI5NzExZWM0ZjYwMmYzYjE1Mjg2NDFjMjY0MjgyYmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlMWNkNjY4NmI4YThiNGZjZGVhMGQxNTIxYzQ5NzkzNzI2OWEyMzJhNGY0YjM4NzdjYjEyMTg4Mzk3ZWFkMzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE1YjBlMWFkYzEzMWI5NjE4OTllMDg1ZjM1ZTYwY2U4OTdmZGMwMmMyNDAyNWFkNmNhZTQ2NzY3ZmE4NmY3MDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM4NDA0YTE3ZDUyYjlmZWVkYTBmOTNiMWE1NmYxZGE0YWM0ZTdkNTQ5ZjY0ZDk4NWEwNTlkNzFlOWE1ZmNmY2QifQ"
+        },
+        {
+          "resource": "repo://_scripts/tests/test_pipeline.py#L1-L35",
+          "version": "repo-lines-v1:sha256:dc3f6fa4597de1c2f554289d1350f001f0166221d445eeba8aa820f6b997b19e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjYjlmZmNjYmE1MTQ2YjJkZDE3N2EzMGMzMDU3YTQzOTVlYmQ1Yzc0NWQwNzg5ZDJlZDk1ZDBjZjRhZmUyNzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiYTVkM2MzYmEzYmQ2OWNhYmQ3NTdlYTcwMDUxNzY5Nzg4ODdmZDI5NTUxNGZiYTY0NjEwMmVhNDI4NjBlNmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.0",
+    "at": "2026-09-06T11:16:33.676Z"
+  }
+}

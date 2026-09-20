@@ -15,6 +15,8 @@ related:
   - metric-driven-llm-optimization
   - actionable-side-information
   - sparse-validation-evaluation
+  - configuration-driven-llm-evaluation-matrix
+  - hybrid-llm-output-assertions
 tags:
   - llm-engineering
   - evaluation
@@ -56,6 +58,8 @@ Every new support trace enters an evaluation queue. The judge model reads the us
 - [[metric-driven-llm-optimization]]: A judge can serve as the metric that guides compile-time optimization.
 - [[actionable-side-information]]: Judge explanations can become feedback for reflective optimization, not just stored scores.
 - [[sparse-validation-evaluation]]: Judge calls can be expensive, so sparse validation helps decide which examples to score.
+- [[configuration-driven-llm-evaluation-matrix]]: A judge rubric can score selected cells in a repeatable comparison matrix.
+- [[hybrid-llm-output-assertions]]: Judge rubrics are one evidence source alongside deterministic and trace-aware checks.
 
 ## Open questions
 

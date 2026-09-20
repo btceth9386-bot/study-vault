@@ -22,6 +22,7 @@ related:
 - sparse-validation-evaluation
 - optimize-anything-pattern
 - probabilistic-toolset-distributions
+- configuration-driven-llm-evaluation-matrix
 tags:
 - llm-engineering
 - dspy
@@ -72,6 +73,7 @@ The metric defines the target. The optimizer searches for a better compiled prog
 - [[adapter-based-llm-optimization]]: Adapters make the same metric-driven loop work across different LLM systems.
 - [[sparse-validation-evaluation]]: Sparse validation keeps metric costs manageable when full evaluation is expensive.
 - [[optimize-anything-pattern]]: `optimize_anything()` applies metric-driven optimization to arbitrary scored text artifacts.
+- [[configuration-driven-llm-evaluation-matrix]]: Matrix cells supply repeatable scores across prompts, providers, and tests.
 
 ## Open questions
 
