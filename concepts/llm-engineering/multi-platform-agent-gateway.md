@@ -15,6 +15,7 @@ related:
 - self-improving-agent-skill-memory-loop
 - protocol-based-agent-access-surface
 - a2ui-trusted-catalog-rendering
+- agentcore-external-agent-observability-onboarding
 tags:
 - llm-engineering
 - ai-agent
@@ -52,6 +53,7 @@ Suppose an engineering team is turning an agent prototype into a service used ev
 - [[self-improving-agent-skill-memory-loop]]: multi-platform-agent-gateway connects to self-improving-agent-skill-memory-loop because both describe a nearby part of the same learning path or system design problem.
 - [[protocol-based-agent-access-surface]]: Protocol endpoints are one way a multi-platform gateway exposes the same agent to different clients and triggers.
 - [[a2ui-trusted-catalog-rendering]]: Catalog renderers let one UI intent appear natively on different client platforms.
+- [[agentcore-external-agent-observability-onboarding]]: Both let one core capability (an agent, or an observability surface) serve infrastructure it was not originally deployed on, through a documented configuration contract rather than a rewrite.
 
 ## 我的疑問
 

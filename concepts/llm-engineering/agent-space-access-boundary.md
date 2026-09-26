@@ -21,6 +21,7 @@ related:
   - effective-trust-for-agents
   - ephemeral-agent-execution-sandbox
   - zero-ambient-authority-for-agents
+  - agent-resource-registry-governance
 tags:
   - llm-engineering
   - aws
@@ -62,6 +63,7 @@ A platform team manages production payments and a separate internal analytics ap
 - [[effective-trust-for-agents]]: The boundary is one input to the live decision about whether an agent may continue.
 - [[ephemeral-agent-execution-sandbox]]: Sandboxes receive only the resources permitted by the boundary.
 - [[zero-ambient-authority-for-agents]]: Task-scoped credentials enforce the boundary without inherited privilege.
+- [[agent-resource-registry-governance]]: A registry answers whether a resource can be found; the access boundary still governs whether the discovering agent may use it.
 
 ## Open questions
 

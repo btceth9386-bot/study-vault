@@ -10,6 +10,7 @@ sources:
 related:
   - trace-aware-agent-evaluation
   - llm-observability
+  - continuous-online-agent-evaluation
 tags:
   - coding-agents
   - evaluation
@@ -39,6 +40,7 @@ Two agents both produce a valid component on their first turn. One reaches the u
 
 - [[trace-aware-agent-evaluation]]: Provides the full-session execution record.
 - [[llm-observability]]: Supplies the cost and latency measurements.
+- [[continuous-online-agent-evaluation]]: Another evaluation modality distinguished by being continuous rather than session-scoped; both treat the whole interaction, not a single turn, as the unit worth measuring.
 
 ## My questions
 

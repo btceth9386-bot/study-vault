@@ -17,6 +17,7 @@ related:
   - agent-specialization-as-scaling-mechanism
   - effective-trust-for-agents
   - ephemeral-agent-execution-sandbox
+  - agentcore-harness-vs-runtime-tradeoff
 tags:
   - agentic-engineering
   - coding-agents
@@ -53,6 +54,7 @@ Before an agent can edit a service, its harness gives it a read-only code-search
 - [[agent-specialization-as-scaling-mechanism]]: The harness enforces the routing and tool boundaries that let specialists remain focused.
 - [[effective-trust-for-agents]]: The harness continuously measures and enforces the agent's authorization to continue.
 - [[ephemeral-agent-execution-sandbox]]: A disposable isolated runner is a concrete harness control for generated code.
+- [[agentcore-harness-vs-runtime-tradeoff]]: A concrete commercial split of this concept's general principle — buy the whole orchestration loop as configuration, or write it yourself and buy only the infrastructure underneath it.
 
 ## My questions
 

@@ -11,6 +11,7 @@ related:
   - llm-observability
   - trace-aware-agent-evaluation
   - effective-trust-for-agents
+  - cross-account-observability-aggregation
 tags:
   - coding-agents
   - observability
@@ -41,6 +42,7 @@ A research agent begins with a search API and a public document store. When it r
 - [[llm-observability]]: Records the runtime events that populate the inventory.
 - [[trace-aware-agent-evaluation]]: Uses the resulting trajectory to judge whether tool use was acceptable.
 - [[effective-trust-for-agents]]: Uses the live inventory when deciding whether continued execution remains authorized.
+- [[cross-account-observability-aggregation]]: A live resource inventory is most useful for fleet-wide oversight when it can be seen across every AWS account a fleet runs in, not just one.
 
 ## My questions
 

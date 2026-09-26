@@ -11,6 +11,8 @@ related:
   - langgraph-store-long-term-memory
   - persistent-agent-session-restoration
   - self-improving-agent-skill-memory-loop
+  - long-term-memory-vs-rag-boundary
+  - memory-namespace-multi-tenant-isolation
 tags:
   - llm-engineering
   - agents
@@ -40,6 +42,8 @@ A support agent keeps the current customer case in working memory, a compact cas
 - [[langgraph-store-long-term-memory]]: A persistent store implements the layer for knowledge reused across conversations.
 - [[persistent-agent-session-restoration]]: Session restoration preserves one conversation's continuity across process restarts.
 - [[self-improving-agent-skill-memory-loop]]: Episodic lessons can become reusable skills after evaluation and consolidation.
+- [[long-term-memory-vs-rag-boundary]]: Draws a second, orthogonal line inside the long-term layer specifically — separating remembered personal state from retrieved shared knowledge, which is easy to conflate since both feed the same prompt.
+- [[memory-namespace-multi-tenant-isolation]]: A concrete organizational scheme for the long-term layer when it must be safely shared across many actors or agents rather than owned by a single conversation.
 
 ## My questions
 

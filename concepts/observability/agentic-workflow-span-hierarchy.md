@@ -12,6 +12,7 @@ related:
   - devops-agent-topology-context
   - context-propagation-with-carriers
   - trace-aware-agent-evaluation
+  - agentcore-session-trace-span-hierarchy
 tags:
   - observability
   - opentelemetry
@@ -46,6 +47,7 @@ For "find the current refund policy," `invoke_workflow` is the parent span. It c
 - [[devops-agent-topology-context]]: Topology adds service and dependency context to the work shown by the hierarchy.
 - [[context-propagation-with-carriers]]: Propagation preserves parent-child context when a child operation runs in another process.
 - [[trace-aware-agent-evaluation]]: The hierarchy gives trajectory assertions the workflow context needed to judge agent actions.
+- [[agentcore-session-trace-span-hierarchy]]: AWS Bedrock AgentCore's session/trace/span model is a managed-platform naming layer built on top of this same span-nesting idea, adding a session tier above the trace.
 
 ## My questions
 

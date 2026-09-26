@@ -11,6 +11,7 @@ related:
   - standardized-message-content-blocks
   - provider-chat-model-wrappers-in-langgraph-nodes
   - composable-llm-red-team-testing
+  - trace-derived-evaluation-field-contract
 tags:
   - llm-engineering
   - architecture
@@ -42,6 +43,7 @@ One test suite compares a hosted model with an internal agent endpoint. The runn
 - [[standardized-message-content-blocks]]: Both normalize provider differences, but content blocks standardize message payloads while this abstraction standardizes the execution boundary.
 - [[provider-chat-model-wrappers-in-langgraph-nodes]]: Both use adapters; this one serves an evaluation engine rather than a graph node.
 - [[composable-llm-red-team-testing]]: The provider boundary lets one set of red-team probes run against different target types.
+- [[trace-derived-evaluation-field-contract]]: Abstracts over the model provider answering a call, while that concept abstracts over the agent framework that produced the trace being evaluated — a different axis of the same generic-support idea.
 
 ## My questions
 

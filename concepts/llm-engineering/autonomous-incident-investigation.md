@@ -12,6 +12,7 @@ related:
   - proactive-incident-prevention-loop
   - llm-observability
   - react-agentic-loop
+  - continuous-online-agent-evaluation
 tags:
   - llm-engineering
   - aws
@@ -44,6 +45,7 @@ PagerDuty opens an incident for elevated 5xx errors. The agent checks the affect
 - [[proactive-incident-prevention-loop]]: Investigation findings become raw material for prevention recommendations.
 - [[llm-observability]]: Structured traces, logs, metrics, and deployment data are the evidence an investigation needs.
 - [[react-agentic-loop]]: Investigation follows a reason, tool-call, observe loop.
+- [[continuous-online-agent-evaluation]]: Both rely on always-on production telemetry as their evidence base, applied to different questions — incident cause here, agent output quality there.
 
 ## Open questions
 

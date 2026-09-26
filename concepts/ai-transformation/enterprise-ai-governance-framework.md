@@ -12,6 +12,7 @@ related:
   - context-aware-high-stakes-agent-approval
   - llm-observability
   - hybrid-agent-build-strategy
+  - cross-account-observability-aggregation
 tags: [enterprise-ai, ai-governance, compliance, risk-management]
 ---
 
@@ -39,6 +40,7 @@ A company permits an internal summarization tool for approved documents, blocks 
 - [[context-aware-high-stakes-agent-approval]]: Approval protects consequential actions that policy identifies as high risk.
 - [[llm-observability]]: Observability provides the evidence needed for audit and continuous improvement.
 - [[hybrid-agent-build-strategy]]: The same governance controls apply across packaged and custom agent components.
+- [[cross-account-observability-aggregation]]: A concrete technical mechanism for the centralized oversight this framework calls for, when agents run across multiple AWS accounts.
 
 ## My questions
 

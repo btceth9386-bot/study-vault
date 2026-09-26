@@ -9,6 +9,8 @@
 | Actionable Side Information | `actionable-side-information` | active | [concepts/llm-engineering/actionable-side-information.md](../concepts/llm-engineering/actionable-side-information.md) |
 | Adapter-Based LLM Optimization | `adapter-based-llm-optimization` | active | [concepts/llm-engineering/adapter-based-llm-optimization.md](../concepts/llm-engineering/adapter-based-llm-optimization.md) |
 | Agent Instruction Placement by Scope | `agent-instruction-placement-by-scope` | active | [concepts/llm-engineering/agent-instruction-placement-by-scope.md](../concepts/llm-engineering/agent-instruction-placement-by-scope.md) |
+| Agent Loop Termination Policy | `agent-loop-termination-policy` | active | [concepts/llm-engineering/agent-loop-termination-policy.md](../concepts/llm-engineering/agent-loop-termination-policy.md) |
+| Agent Resource Registry Governance | `agent-resource-registry-governance` | active | [concepts/llm-engineering/agent-resource-registry-governance.md](../concepts/llm-engineering/agent-resource-registry-governance.md) |
 | Agent Skill Evaluation Coverage | `agent-skill-evaluation-coverage` | active | [concepts/llm-engineering/agent-skill-evaluation-coverage.md](../concepts/llm-engineering/agent-skill-evaluation-coverage.md) |
 | Agent Skill Supply-Chain Governance | `agent-skill-supply-chain-governance` | active | [concepts/llm-engineering/agent-skill-supply-chain-governance.md](../concepts/llm-engineering/agent-skill-supply-chain-governance.md) |
 | Agent Skills as Procedural Memory | `agent-skills-as-procedural-memory` | active | [concepts/llm-engineering/agent-skills-as-procedural-memory.md](../concepts/llm-engineering/agent-skills-as-procedural-memory.md) |
@@ -16,6 +18,13 @@
 | Agent Specialization as a Scaling Mechanism | `agent-specialization-as-scaling-mechanism` | active | [concepts/llm-engineering/agent-specialization-as-scaling-mechanism.md](../concepts/llm-engineering/agent-specialization-as-scaling-mechanism.md) |
 | Agent-Centered Workflow Redesign | `agent-centered-workflow-redesign` | active | [concepts/ai-transformation/agent-centered-workflow-redesign.md](../concepts/ai-transformation/agent-centered-workflow-redesign.md) |
 | Agent-Ready Context Infrastructure | `agent-ready-context-infrastructure` | active | [concepts/ai-transformation/agent-ready-context-infrastructure.md](../concepts/ai-transformation/agent-ready-context-infrastructure.md) |
+| AgentCore A2A Protocol Contract | `agentcore-a2a-protocol-contract` | active | [concepts/llm-engineering/agentcore-a2a-protocol-contract.md](../concepts/llm-engineering/agentcore-a2a-protocol-contract.md) |
+| AgentCore External-Agent Observability Onboarding | `agentcore-external-agent-observability-onboarding` | active | [concepts/llm-engineering/agentcore-external-agent-observability-onboarding.md](../concepts/llm-engineering/agentcore-external-agent-observability-onboarding.md) |
+| AgentCore Harness vs. Runtime Tradeoff | `agentcore-harness-vs-runtime-tradeoff` | active | [concepts/llm-engineering/agentcore-harness-vs-runtime-tradeoff.md](../concepts/llm-engineering/agentcore-harness-vs-runtime-tradeoff.md) |
+| AgentCore Insights Triage-to-Optimization Loop | `agentcore-insights-triage-loop` | active | [concepts/llm-engineering/agentcore-insights-triage-loop.md](../concepts/llm-engineering/agentcore-insights-triage-loop.md) |
+| AgentCore Managed-Service Telemetry Defaults | `agentcore-managed-service-telemetry-defaults` | active | [concepts/llm-engineering/agentcore-managed-service-telemetry-defaults.md](../concepts/llm-engineering/agentcore-managed-service-telemetry-defaults.md) |
+| AgentCore Session-Trace-Span Hierarchy | `agentcore-session-trace-span-hierarchy` | active | [concepts/llm-engineering/agentcore-session-trace-span-hierarchy.md](../concepts/llm-engineering/agentcore-session-trace-span-hierarchy.md) |
+| AgentCore Trust-Boundary Hardening | `agentcore-trust-boundary-hardening` | active | [concepts/llm-engineering/agentcore-trust-boundary-hardening.md](../concepts/llm-engineering/agentcore-trust-boundary-hardening.md) |
 | Agentic Engineering Total-Cost Curve | `agentic-engineering-tco-curve` | active | [concepts/llm-engineering/agentic-engineering-tco-curve.md](../concepts/llm-engineering/agentic-engineering-tco-curve.md) |
 | Agentic Security Response Triad | `agentic-security-response-triad` | active | [concepts/llm-engineering/agentic-security-response-triad.md](../concepts/llm-engineering/agentic-security-response-triad.md) |
 | Agentic Software Factory Model | `agentic-software-factory-model` | active | [concepts/llm-engineering/agentic-software-factory-model.md](../concepts/llm-engineering/agentic-software-factory-model.md) |
@@ -23,9 +32,11 @@
 | Agentic Workflow Span Hierarchy | `agentic-workflow-span-hierarchy` | active | [concepts/observability/agentic-workflow-span-hierarchy.md](../concepts/observability/agentic-workflow-span-hierarchy.md) |
 | AI-Compressed Software Development Lifecycle | `ai-compressed-sdlc` | active | [concepts/llm-engineering/ai-compressed-sdlc.md](../concepts/llm-engineering/ai-compressed-sdlc.md) |
 | Approval-Fatigue-Resistant Agent Oversight | `approval-fatigue-resistant-agent-oversight` | active | [concepts/llm-engineering/approval-fatigue-resistant-agent-oversight.md](../concepts/llm-engineering/approval-fatigue-resistant-agent-oversight.md) |
+| Artifact-Based Agent Handoffs | `artifact-based-agent-handoffs` | active | [concepts/llm-engineering/artifact-based-agent-handoffs.md](../concepts/llm-engineering/artifact-based-agent-handoffs.md) |
 | Asynchronous Processing | `async-processing` | active | [concepts/system-design/async-processing.md](../concepts/system-design/async-processing.md) |
 | Authority-Tiered Agent Skills | `authority-tiered-agent-skills` | active | [concepts/llm-engineering/authority-tiered-agent-skills.md](../concepts/llm-engineering/authority-tiered-agent-skills.md) |
 | Autonomous Incident Investigation | `autonomous-incident-investigation` | active | [concepts/llm-engineering/autonomous-incident-investigation.md](../concepts/llm-engineering/autonomous-incident-investigation.md) |
+| Bounded Agent Cognitive State | `bounded-agent-cognitive-state` | active | [concepts/llm-engineering/bounded-agent-cognitive-state.md](../concepts/llm-engineering/bounded-agent-cognitive-state.md) |
 | Bounded Tool Calls vs. Agent Delegation | `bounded-tool-calls-vs-agent-delegation` | active | [concepts/llm-engineering/bounded-tool-calls-vs-agent-delegation.md](../concepts/llm-engineering/bounded-tool-calls-vs-agent-delegation.md) |
 | Business-Outcome-Aligned AI Use-Case Selection | `business-outcome-aligned-ai-use-case-selection` | active | [concepts/ai-transformation/business-outcome-aligned-ai-use-case-selection.md](../concepts/ai-transformation/business-outcome-aligned-ai-use-case-selection.md) |
 | Busted as Informal Broken | `busted-informal-broken` | active | [concepts/english/busted-informal-broken.md](../concepts/english/busted-informal-broken.md) |
@@ -34,9 +45,11 @@
 | Car Repair Cost and Waiting Phrases | `car-repair-cost-and-waiting-phrases` | active | [concepts/english/car-repair-cost-and-waiting-phrases.md](../concepts/english/car-repair-cost-and-waiting-phrases.md) |
 | Car Repair Vocabulary | `car-repair-vocabulary` | active | [concepts/english/car-repair-vocabulary.md](../concepts/english/car-repair-vocabulary.md) |
 | Cassette-Backed MCP Pytest Fixtures | `cassette-backed-mcp-pytest-fixtures` | active | [concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md) |
+| Cedar Policy Gateway Authorization | `cedar-policy-gateway-authorization` | active | [concepts/llm-engineering/cedar-policy-gateway-authorization.md](../concepts/llm-engineering/cedar-policy-gateway-authorization.md) |
 | Chain-of-Thought Reasoning | `chain-of-thought-reasoning` | active | [concepts/llm-engineering/chain-of-thought-reasoning.md](../concepts/llm-engineering/chain-of-thought-reasoning.md) |
 | Change-Specific Release Testing | `change-specific-release-testing` | active | [concepts/llm-engineering/change-specific-release-testing.md](../concepts/llm-engineering/change-specific-release-testing.md) |
 | Clean Jokes and Cultural Register | `clean-jokes-cultural-register` | active | [concepts/english/clean-jokes-cultural-register.md](../concepts/english/clean-jokes-cultural-register.md) |
+| Code-as-Action Agent Loop | `code-as-action-agent-loop` | active | [concepts/llm-engineering/code-as-action-agent-loop.md](../concepts/llm-engineering/code-as-action-agent-loop.md) |
 | Coding Agent Harness Engineering | `coding-agent-harness-engineering` | active | [concepts/llm-engineering/coding-agent-harness-engineering.md](../concepts/llm-engineering/coding-agent-harness-engineering.md) |
 | Collector Authentication Extensions | `collector-authentication-extensions` | active | [concepts/observability/collector-authentication-extensions.md](../concepts/observability/collector-authentication-extensions.md) |
 | Collector Component Factory and Lifecycle | `collector-component-factory-lifecycle` | active | [concepts/observability/collector-component-factory-lifecycle.md](../concepts/observability/collector-component-factory-lifecycle.md) |
@@ -47,6 +60,7 @@
 | Collector Storage Extensions | `collector-storage-extensions` | active | [concepts/observability/collector-storage-extensions.md](../concepts/observability/collector-storage-extensions.md) |
 | Composable LLM Red-Team Testing | `composable-llm-red-team-testing` | active | [concepts/llm-engineering/composable-llm-red-team-testing.md](../concepts/llm-engineering/composable-llm-red-team-testing.md) |
 | Conductor and Orchestrator Developer Modes | `conductor-orchestrator-developer-modes` | active | [concepts/llm-engineering/conductor-orchestrator-developer-modes.md](../concepts/llm-engineering/conductor-orchestrator-developer-modes.md) |
+| Config-Bundle A/B Testing for Agent Behavior | `config-bundle-ab-testing-for-agent-behavior` | active | [concepts/llm-engineering/config-bundle-ab-testing-for-agent-behavior.md](../concepts/llm-engineering/config-bundle-ab-testing-for-agent-behavior.md) |
 | Configuration-Driven LLM Evaluation Matrix | `configuration-driven-llm-evaluation-matrix` | active | [concepts/llm-engineering/configuration-driven-llm-evaluation-matrix.md](../concepts/llm-engineering/configuration-driven-llm-evaluation-matrix.md) |
 | Consistent Probability Sampling | `consistent-probability-sampling` | active | [concepts/observability/consistent-probability-sampling.md](../concepts/observability/consistent-probability-sampling.md) |
 | Construction Plans Vocabulary | `construction-plans-vocabulary` | active | [concepts/english/construction-plans-vocabulary.md](../concepts/english/construction-plans-vocabulary.md) |
@@ -54,6 +68,10 @@
 | Context Engineering for Coding Agents | `context-engineering-for-coding-agents` | active | [concepts/llm-engineering/context-engineering-for-coding-agents.md](../concepts/llm-engineering/context-engineering-for-coding-agents.md) |
 | Context Propagation with Carriers | `context-propagation-with-carriers` | active | [concepts/observability/context-propagation-with-carriers.md](../concepts/observability/context-propagation-with-carriers.md) |
 | Context-Aware Approval for High-Stakes Agent Actions | `context-aware-high-stakes-agent-approval` | active | [concepts/llm-engineering/context-aware-high-stakes-agent-approval.md](../concepts/llm-engineering/context-aware-high-stakes-agent-approval.md) |
+| Context-Rot-Aware Context Management | `context-rot-aware-context-management` | active | [concepts/llm-engineering/context-rot-aware-context-management.md](../concepts/llm-engineering/context-rot-aware-context-management.md) |
+| Continuous Online Agent Evaluation | `continuous-online-agent-evaluation` | active | [concepts/llm-engineering/continuous-online-agent-evaluation.md](../concepts/llm-engineering/continuous-online-agent-evaluation.md) |
+| Cross-Account Memory Resource Sharing | `cross-account-memory-resource-sharing` | active | [concepts/llm-engineering/cross-account-memory-resource-sharing.md](../concepts/llm-engineering/cross-account-memory-resource-sharing.md) |
+| Cross-Account Observability Aggregation | `cross-account-observability-aggregation` | active | [concepts/llm-engineering/cross-account-observability-aggregation.md](../concepts/llm-engineering/cross-account-observability-aggregation.md) |
 | Cross-Functional AI Center of Excellence | `cross-functional-ai-center-of-excellence` | active | [concepts/ai-transformation/cross-functional-ai-center-of-excellence.md](../concepts/ai-transformation/cross-functional-ai-center-of-excellence.md) |
 | Cross-Functional AI Steering Committee | `cross-functional-ai-steering-committee` | active | [concepts/ai-transformation/cross-functional-ai-steering-committee.md](../concepts/ai-transformation/cross-functional-ai-steering-committee.md) |
 | Cross-Provider GenAI Telemetry Refinements | `cross-provider-genai-telemetry-refinements` | active | [concepts/observability/cross-provider-genai-telemetry-refinements.md](../concepts/observability/cross-provider-genai-telemetry-refinements.md) |
@@ -83,10 +101,13 @@
 | Execution-Mode-Specific Agent Prompting | `execution-mode-specific-agent-prompting` | active | [concepts/llm-engineering/execution-mode-specific-agent-prompting.md](../concepts/llm-engineering/execution-mode-specific-agent-prompting.md) |
 | Expire as an Everyday Validity Verb | `expire-everyday-validity-verb` | active | [concepts/english/expire-everyday-validity-verb.md](../concepts/english/expire-everyday-validity-verb.md) |
 | Few-Shot Bootstrapping | `few-shot-bootstrapping` | active | [concepts/llm-engineering/few-shot-bootstrapping.md](../concepts/llm-engineering/few-shot-bootstrapping.md) |
+| GenAI Observability Dashboard Abstraction | `genai-observability-dashboard-abstraction` | active | [concepts/llm-engineering/genai-observability-dashboard-abstraction.md](../concepts/llm-engineering/genai-observability-dashboard-abstraction.md) |
 | GenAI Operation Span Taxonomy | `genai-operation-span-taxonomy` | active | [concepts/observability/genai-operation-span-taxonomy.md](../concepts/observability/genai-operation-span-taxonomy.md) |
 | GenAI Streaming Telemetry Lifecycle | `genai-streaming-telemetry-lifecycle` | active | [concepts/observability/genai-streaming-telemetry-lifecycle.md](../concepts/observability/genai-streaming-telemetry-lifecycle.md) |
 | Gym Workout Vocabulary | `gym-workout-vocabulary` | active | [concepts/english/gym-workout-vocabulary.md](../concepts/english/gym-workout-vocabulary.md) |
 | Hallucinated-Package Slopsquatting Defense | `hallucinated-package-slopsquatting-defense` | active | [concepts/llm-engineering/hallucinated-package-slopsquatting-defense.md](../concepts/llm-engineering/hallucinated-package-slopsquatting-defense.md) |
+| Harness Cost Attribution and Hard Limits | `harness-cost-attribution-and-hard-limits` | active | [concepts/llm-engineering/harness-cost-attribution-and-hard-limits.md](../concepts/llm-engineering/harness-cost-attribution-and-hard-limits.md) |
+| Health-Probe-Driven Task Liveness | `health-probe-driven-task-liveness` | active | [concepts/llm-engineering/health-probe-driven-task-liveness.md](../concepts/llm-engineering/health-probe-driven-task-liveness.md) |
 | Heckler and Tough Crowd | `heckler-and-tough-crowd` | active | [concepts/english/heckler-and-tough-crowd.md](../concepts/english/heckler-and-tough-crowd.md) |
 | Hierarchical RBAC | `hierarchical-rbac` | active | [concepts/system-design/hierarchical-rbac.md](../concepts/system-design/hierarchical-rbac.md) |
 | High Availability | `high-availability` | active | [concepts/system-design/high-availability.md](../concepts/system-design/high-availability.md) |
@@ -102,6 +123,7 @@
 | Idiom: It's Not My Day | `its-not-my-day-idiom` | active | [concepts/english/its-not-my-day-idiom.md](../concepts/english/its-not-my-day-idiom.md) |
 | Idiom: Rule of Thumb | `rule-of-thumb-idiom` | active | [concepts/english/rule-of-thumb-idiom.md](../concepts/english/rule-of-thumb-idiom.md) |
 | Idiom: Take Pride in Your Work | `take-pride-in-your-work` | active | [concepts/english/take-pride-in-your-work.md](../concepts/english/take-pride-in-your-work.md) |
+| Immutable Versioned Endpoints for Agent Config | `immutable-versioned-endpoints-for-agent-config` | active | [concepts/llm-engineering/immutable-versioned-endpoints-for-agent-config.md](../concepts/llm-engineering/immutable-versioned-endpoints-for-agent-config.md) |
 | Iterative Adversarial Testing Loop | `iterative-adversarial-testing-loop` | active | [concepts/llm-engineering/iterative-adversarial-testing-loop.md](../concepts/llm-engineering/iterative-adversarial-testing-loop.md) |
 | Kubernetes Collector Placement Modes | `kubernetes-collector-placement-modes` | active | [concepts/observability/kubernetes-collector-placement-modes.md](../concepts/observability/kubernetes-collector-placement-modes.md) |
 | LangChain Message Model for LangGraph State | `langchain-core-message-model-for-langgraph-state` | active | [concepts/llm-engineering/langchain-core-message-model-for-langgraph-state.md](../concepts/llm-engineering/langchain-core-message-model-for-langgraph-state.md) |
@@ -116,11 +138,13 @@
 | LangGraph StateGraph State Schema | `langgraph-stategraph-state-schema` | active | [concepts/llm-engineering/langgraph-stategraph-state-schema.md](../concepts/llm-engineering/langgraph-stategraph-state-schema.md) |
 | LangGraph Store Long-Term Memory | `langgraph-store-long-term-memory` | active | [concepts/llm-engineering/langgraph-store-long-term-memory.md](../concepts/llm-engineering/langgraph-store-long-term-memory.md) |
 | LangGraph ToolNode and Prebuilt Components | `langgraph-toolnode-prebuilt-components` | active | [concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) |
+| Layered Agent Memory | `layered-agent-memory` | active | [concepts/llm-engineering/layered-agent-memory.md](../concepts/llm-engineering/layered-agent-memory.md) |
 | Learned Operational Knowledge Files | `learned-operational-knowledge-files` | active | [concepts/llm-engineering/learned-operational-knowledge-files.md](../concepts/llm-engineering/learned-operational-knowledge-files.md) |
 | LLM Observability | `llm-observability` | active | [concepts/llm-engineering/llm-observability.md](../concepts/llm-engineering/llm-observability.md) |
 | LLM Program Distillation | `llm-program-distillation` | active | [concepts/llm-engineering/llm-program-distillation.md](../concepts/llm-engineering/llm-program-distillation.md) |
 | LLM-as-Judge Evaluation | `llm-as-judge-evaluation` | active | [concepts/llm-engineering/llm-as-judge-evaluation.md](../concepts/llm-engineering/llm-as-judge-evaluation.md) |
 | Load Balancing | `load-balancing` | active | [concepts/system-design/load-balancing.md](../concepts/system-design/load-balancing.md) |
+| Long-Term Memory vs. RAG Boundary | `long-term-memory-vs-rag-boundary` | active | [concepts/llm-engineering/long-term-memory-vs-rag-boundary.md](../concepts/llm-engineering/long-term-memory-vs-rag-boundary.md) |
 | MCP Bidirectional JSON-RPC Substrate | `mcp-bidirectional-json-rpc-substrate` | active | [concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md) |
 | MCP Capability Negotiation Handshake | `mcp-capability-negotiation-handshake` | active | [concepts/llm-engineering/mcp-capability-negotiation-handshake.md](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md) |
 | MCP Client-Server Trace Correlation | `mcp-client-server-trace-correlation` | active | [concepts/observability/mcp-client-server-trace-correlation.md](../concepts/observability/mcp-client-server-trace-correlation.md) |
@@ -133,11 +157,15 @@
 | MCP Roots as Advisory Boundaries | `mcp-roots-advisory-boundaries` | active | [concepts/llm-engineering/mcp-roots-advisory-boundaries.md](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) |
 | MCP Schema Generation Pipeline | `mcp-schema-generation-pipeline` | active | [concepts/llm-engineering/mcp-schema-generation-pipeline.md](../concepts/llm-engineering/mcp-schema-generation-pipeline.md) |
 | MCP Transport Separation | `mcp-transport-separation` | active | [concepts/llm-engineering/mcp-transport-separation.md](../concepts/llm-engineering/mcp-transport-separation.md) |
+| Memory Namespace Multi-Tenant Isolation | `memory-namespace-multi-tenant-isolation` | active | [concepts/llm-engineering/memory-namespace-multi-tenant-isolation.md](../concepts/llm-engineering/memory-namespace-multi-tenant-isolation.md) |
+| Memory Poisoning Defense in Agent Systems | `memory-poisoning-defense-in-agent-systems` | active | [concepts/llm-engineering/memory-poisoning-defense-in-agent-systems.md](../concepts/llm-engineering/memory-poisoning-defense-in-agent-systems.md) |
 | Metadata-Driven Component Stability | `metadata-driven-component-stability` | active | [concepts/observability/metadata-driven-component-stability.md](../concepts/observability/metadata-driven-component-stability.md) |
 | Metric-Driven LLM Optimization | `metric-driven-llm-optimization` | active | [concepts/llm-engineering/metric-driven-llm-optimization.md](../concepts/llm-engineering/metric-driven-llm-optimization.md) |
 | Metrics Views and Aggregations | `metrics-views-and-aggregations` | active | [concepts/observability/metrics-views-and-aggregations.md](../concepts/observability/metrics-views-and-aggregations.md) |
 | Microservices Architecture | `microservices` | active | [concepts/system-design/microservices.md](../concepts/system-design/microservices.md) |
+| microVM Session Isolation and Lifecycle | `microvm-session-isolation-lifecycle` | active | [concepts/llm-engineering/microvm-session-isolation-lifecycle.md](../concepts/llm-engineering/microvm-session-isolation-lifecycle.md) |
 | Model-Agnostic Evaluation Provider Abstraction | `model-agnostic-evaluation-provider-abstraction` | active | [concepts/llm-engineering/model-agnostic-evaluation-provider-abstraction.md](../concepts/llm-engineering/model-agnostic-evaluation-provider-abstraction.md) |
+| Multi-Dimension Rate Limiting with Fail-Open Defaults | `multi-dimension-rate-limiting-with-fail-open` | active | [concepts/llm-engineering/multi-dimension-rate-limiting-with-fail-open.md](../concepts/llm-engineering/multi-dimension-rate-limiting-with-fail-open.md) |
 | Multi-Platform Agent Gateway | `multi-platform-agent-gateway` | active | [concepts/llm-engineering/multi-platform-agent-gateway.md](../concepts/llm-engineering/multi-platform-agent-gateway.md) |
 | Multidimensional AI Pilot Scorecard | `multidimensional-ai-pilot-scorecard` | active | [concepts/ai-transformation/multidimensional-ai-pilot-scorecard.md](../concepts/ai-transformation/multidimensional-ai-pilot-scorecard.md) |
 | Multidimensional Coding-Agent Evaluation | `multidimensional-coding-agent-evaluation` | active | [concepts/llm-engineering/multidimensional-coding-agent-evaluation.md](../concepts/llm-engineering/multidimensional-coding-agent-evaluation.md) |
@@ -189,6 +217,7 @@
 | Semantic Convention Validation and Generation | `semantic-convention-validation-and-generation` | active | [concepts/observability/semantic-convention-validation-and-generation.md](../concepts/observability/semantic-convention-validation-and-generation.md) |
 | Semantic Conventions as Telemetry Schema | `semantic-conventions-as-telemetry-schema` | active | [concepts/observability/semantic-conventions-as-telemetry-schema.md](../concepts/observability/semantic-conventions-as-telemetry-schema.md) |
 | Session Convergence Evaluation | `session-convergence-evaluation` | active | [concepts/llm-engineering/session-convergence-evaluation.md](../concepts/llm-engineering/session-convergence-evaluation.md) |
+| Shadow-Mode Policy Testing with Decision-Flip Telemetry | `shadow-mode-policy-testing-with-decision-flip-telemetry` | active | [concepts/llm-engineering/shadow-mode-policy-testing-with-decision-flip-telemetry.md](../concepts/llm-engineering/shadow-mode-policy-testing-with-decision-flip-telemetry.md) |
 | Single Point of Failure | `single-point-of-failure` | active | [concepts/system-design/single-point-of-failure.md](../concepts/system-design/single-point-of-failure.md) |
 | Skill Description as a Routing Interface | `skill-description-as-routing-interface` | active | [concepts/llm-engineering/skill-description-as-routing-interface.md](../concepts/llm-engineering/skill-description-as-routing-interface.md) |
 | Skills as the Unit of Agent Improvement | `skills-as-unit-of-agent-improvement` | active | [concepts/llm-engineering/skills-as-unit-of-agent-improvement.md](../concepts/llm-engineering/skills-as-unit-of-agent-improvement.md) |
@@ -200,6 +229,7 @@
 | State-Externalized Skill Composition | `state-externalized-skill-composition` | active | [concepts/llm-engineering/state-externalized-skill-composition.md](../concepts/llm-engineering/state-externalized-skill-composition.md) |
 | Static vs. Dynamic Agent Context | `static-vs-dynamic-agent-context` | active | [concepts/llm-engineering/static-vs-dynamic-agent-context.md](../concepts/llm-engineering/static-vs-dynamic-agent-context.md) |
 | Sticky Sessions | `sticky-sessions` | active | [concepts/system-design/sticky-sessions.md](../concepts/system-design/sticky-sessions.md) |
+| Structured Payload Injection via Type Confusion | `structured-payload-injection-via-type-confusion` | active | [concepts/llm-engineering/structured-payload-injection-via-type-confusion.md](../concepts/llm-engineering/structured-payload-injection-via-type-confusion.md) |
 | Supermarket Checkout Vocabulary | `supermarket-checkout-vocabulary` | active | [concepts/english/supermarket-checkout-vocabulary.md](../concepts/english/supermarket-checkout-vocabulary.md) |
 | Surgical Context Compression | `surgical-context-compression` | active | [concepts/llm-engineering/surgical-context-compression.md](../concepts/llm-engineering/surgical-context-compression.md) |
 | System-Aware Candidate Merge | `system-aware-candidate-merge` | active | [concepts/llm-engineering/system-aware-candidate-merge.md](../concepts/llm-engineering/system-aware-candidate-merge.md) |
@@ -207,22 +237,22 @@
 | Telemetry Attribute Requirement Levels | `telemetry-attribute-requirement-levels` | active | [concepts/observability/telemetry-attribute-requirement-levels.md](../concepts/observability/telemetry-attribute-requirement-levels.md) |
 | Telemetry Schema Migration Mappings | `telemetry-schema-migration-mappings` | active | [concepts/observability/telemetry-schema-migration-mappings.md](../concepts/observability/telemetry-schema-migration-mappings.md) |
 | Telemetry Signal Model | `telemetry-signal-model` | active | [concepts/observability/telemetry-signal-model.md](../concepts/observability/telemetry-signal-model.md) |
+| Temporal Session-Aware Policy Conditions | `temporal-session-aware-policy-conditions` | active | [concepts/llm-engineering/temporal-session-aware-policy-conditions.md](../concepts/llm-engineering/temporal-session-aware-policy-conditions.md) |
 | The 80% Problem in Agentic Coding | `agentic-coding-80-percent-problem` | active | [concepts/llm-engineering/agentic-coding-80-percent-problem.md](../concepts/llm-engineering/agentic-coding-80-percent-problem.md) |
 | Tiered Continuous Code Review Runtime | `tiered-continuous-code-review-runtime` | active | [concepts/llm-engineering/tiered-continuous-code-review-runtime.md](../concepts/llm-engineering/tiered-continuous-code-review-runtime.md) |
 | Toolsets and MCP Unified Tool Surface | `toolsets-and-mcp-unified-tool-surface` | active | [concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) |
 | Trace-Aware Agent Evaluation | `trace-aware-agent-evaluation` | active | [concepts/llm-engineering/trace-aware-agent-evaluation.md](../concepts/llm-engineering/trace-aware-agent-evaluation.md) |
+| Trace-Derived Evaluation Field Contract | `trace-derived-evaluation-field-contract` | active | [concepts/llm-engineering/trace-derived-evaluation-field-contract.md](../concepts/llm-engineering/trace-derived-evaluation-field-contract.md) |
 | UCP and AP2 Commerce-Payment Separation | `ucp-ap2-commerce-payment-separation` | active | [concepts/llm-engineering/ucp-ap2-commerce-payment-separation.md](../concepts/llm-engineering/ucp-ap2-commerce-payment-separation.md) |
 | Underspecification Gap in Agent Evaluation | `underspecification-gap-in-agent-evaluation` | active | [concepts/llm-engineering/underspecification-gap-in-agent-evaluation.md](../concepts/llm-engineering/underspecification-gap-in-agent-evaluation.md) |
+| Untrusted Content Isolation for Agents | `untrusted-content-isolation-for-agents` | active | [concepts/llm-engineering/untrusted-content-isolation-for-agents.md](../concepts/llm-engineering/untrusted-content-isolation-for-agents.md) |
 | Up to Code Phrase | `up-to-code-phrase` | active | [concepts/english/up-to-code-phrase.md](../concepts/english/up-to-code-phrase.md) |
 | Vertical Scaling | `vertical-scaling` | active | [concepts/system-design/vertical-scaling.md](../concepts/system-design/vertical-scaling.md) |
 | Vibe Coding to Agentic Engineering Spectrum | `vibe-coding-to-agentic-engineering-spectrum` | active | [concepts/llm-engineering/vibe-coding-to-agentic-engineering-spectrum.md](../concepts/llm-engineering/vibe-coding-to-agentic-engineering-spectrum.md) |
 | Volatility-Aware Structural Verification | `volatility-aware-structural-verification` | active | [concepts/llm-engineering/volatility-aware-structural-verification.md](../concepts/llm-engineering/volatility-aware-structural-verification.md) |
 | Willpower and Urge Vocabulary | `willpower-and-urge-vocabulary` | active | [concepts/english/willpower-and-urge-vocabulary.md](../concepts/english/willpower-and-urge-vocabulary.md) |
 | Zero Ambient Authority for Agents | `zero-ambient-authority-for-agents` | active | [concepts/llm-engineering/zero-ambient-authority-for-agents.md](../concepts/llm-engineering/zero-ambient-authority-for-agents.md) |
-| Agent Loop Termination Policy | `agent-loop-termination-policy` | active | [concepts/llm-engineering/agent-loop-termination-policy.md](../concepts/llm-engineering/agent-loop-termination-policy.md) |
-| Artifact-Based Agent Handoffs | `artifact-based-agent-handoffs` | active | [concepts/llm-engineering/artifact-based-agent-handoffs.md](../concepts/llm-engineering/artifact-based-agent-handoffs.md) |
-| Bounded Agent Cognitive State | `bounded-agent-cognitive-state` | active | [concepts/llm-engineering/bounded-agent-cognitive-state.md](../concepts/llm-engineering/bounded-agent-cognitive-state.md) |
-| Code-as-Action Agent Loop | `code-as-action-agent-loop` | active | [concepts/llm-engineering/code-as-action-agent-loop.md](../concepts/llm-engineering/code-as-action-agent-loop.md) |
-| Context-Rot-Aware Context Management | `context-rot-aware-context-management` | active | [concepts/llm-engineering/context-rot-aware-context-management.md](../concepts/llm-engineering/context-rot-aware-context-management.md) |
-| Layered Agent Memory | `layered-agent-memory` | active | [concepts/llm-engineering/layered-agent-memory.md](../concepts/llm-engineering/layered-agent-memory.md) |
-| Untrusted Content Isolation for Agents | `untrusted-content-isolation-for-agents` | active | [concepts/llm-engineering/untrusted-content-isolation-for-agents.md](../concepts/llm-engineering/untrusted-content-isolation-for-agents.md) |
+| Dependency-Only Auto-Instrumentation Under ADOT | `dependency-only-auto-instrumentation-under-adot` | draft | [_drafts/dependency-only-auto-instrumentation-under-adot.md](../_drafts/dependency-only-auto-instrumentation-under-adot.md) |
+| Dual Semantic-Convention Support for Agent Spans | `dual-semantic-convention-support-for-agent-spans` | draft | [_drafts/dual-semantic-convention-support-for-agent-spans.md](../_drafts/dual-semantic-convention-support-for-agent-spans.md) |
+| Partial Span Taxonomy per Framework | `partial-span-taxonomy-per-framework` | draft | [_drafts/partial-span-taxonomy-per-framework.md](../_drafts/partial-span-taxonomy-per-framework.md) |
+| Split vs. Unified Telemetry Delivery Modes | `split-vs-unified-telemetry-delivery-modes` | draft | [_drafts/split-vs-unified-telemetry-delivery-modes.md](../_drafts/split-vs-unified-telemetry-delivery-modes.md) |

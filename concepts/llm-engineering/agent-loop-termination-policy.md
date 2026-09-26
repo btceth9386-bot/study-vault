@@ -10,6 +10,7 @@ sources:
 related:
   - react-agentic-loop
   - trace-aware-agent-evaluation
+  - harness-cost-attribution-and-hard-limits
 tags:
   - llm-engineering
   - agents
@@ -38,6 +39,7 @@ A bug-fixing agent may call `submit` when its tests pass. Its runtime still enfo
 
 - [[react-agentic-loop]]: This policy supplies the runtime boundary that stops a ReAct loop from running indefinitely.
 - [[trace-aware-agent-evaluation]]: A trace or verifier can provide evidence that a claimed completion really satisfied the goal.
+- [[harness-cost-attribution-and-hard-limits]]: A concrete managed-platform counterpart at a different layer — this concept covers the agent's own internal stopping logic, while that concept is a platform-enforced outer bound that holds regardless of what the agent's own logic decides, acting as a second, independent line of defense.
 
 ## My questions
 

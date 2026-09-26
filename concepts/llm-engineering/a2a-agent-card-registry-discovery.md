@@ -10,6 +10,8 @@ sources:
 related:
   - protocol-based-agent-access-surface
   - agent-space-access-boundary
+  - agent-resource-registry-governance
+  - agentcore-a2a-protocol-contract
 tags:
   - llm-engineering
   - a2a
@@ -38,6 +40,8 @@ An expense-report orchestrator needs a tax specialist. It searches the company r
 
 - [[protocol-based-agent-access-surface]]: An Agent Card explains how to use an A2A access surface and makes that surface discoverable.
 - [[agent-space-access-boundary]]: Discovery does not grant access; the access boundary still limits what the chosen agent may use.
+- [[agent-resource-registry-governance]]: A concrete productization of this concept's registry half, adding an approval/deprecation workflow and hybrid search on top of the general card-and-catalog idea.
+- [[agentcore-a2a-protocol-contract]]: A concrete productization of this concept's card half — a specific, testable wire contract (fixed port, transport, and endpoints) that an Agent Card can point to.
 
 ## My questions
 

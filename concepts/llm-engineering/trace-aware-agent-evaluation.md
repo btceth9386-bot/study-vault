@@ -18,6 +18,8 @@ related:
   - runtime-agent-bill-of-materials
   - session-convergence-evaluation
   - agent-loop-termination-policy
+  - trace-derived-evaluation-field-contract
+  - continuous-online-agent-evaluation
 tags:
   - llm-engineering
   - evaluation
@@ -58,6 +60,8 @@ A customer-support agent correctly tells a user that a refund is available. A tr
 - [[runtime-agent-bill-of-materials]]: The live inventory adds context about the resources active in a trajectory.
 - [[session-convergence-evaluation]]: Full-session traces provide the evidence needed to measure convergence.
 - [[agent-loop-termination-policy]]: Goal verification can use trace evidence before an agent is allowed to stop.
+- [[trace-derived-evaluation-field-contract]]: AgentCore's documented span-classification and field-extraction rules are one concrete mechanism for turning a raw trace into the structured evidence this evaluation style needs.
+- [[continuous-online-agent-evaluation]]: This trajectory-grading approach can run as a one-time check or, in AgentCore's online evaluation mode, continuously against live production traffic.
 
 ## My questions
 

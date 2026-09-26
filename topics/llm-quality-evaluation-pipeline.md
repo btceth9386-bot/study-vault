@@ -1,16 +1,16 @@
 ---
 id: llm-quality-evaluation-pipeline
 title: "LLM Quality and Evaluation Pipeline: From Traces to Systematic Improvement"
-description: A focused path for teams who need to measure LLM application quality and improve it without hand-tuning prompts — covering the full eval cycle from structured observability through automated scoring, skill coverage, promotion gates, metric definition, and optimization targets.
+description: A focused path for teams who need to measure LLM application quality and improve it without hand-tuning prompts — covering the full eval cycle from structured observability through automated scoring, skill coverage, promotion gates, metric definition, continuous production evaluation, and optimization targets.
 ---
 
 ## Overview
 
-Most LLM teams evaluate their applications by running them and seeing if the output feels right. That approach doesn't scale: it can't catch regressions, can't attribute quality changes to specific prompt versions, and can't tell you why a particular output failed. This path builds the engineering foundation for systematic quality measurement — starting from structured data collection, adding automated scoring, connecting scores to prompt versions, and finally extending the framework to arbitrary optimization targets.
+Most LLM teams evaluate their applications by running them and seeing if the output feels right. That approach doesn't scale: it can't catch regressions, can't attribute quality changes to specific prompt versions, and can't tell you why a particular output failed. This path builds the engineering foundation for systematic quality measurement — starting from structured data collection, adding automated scoring, connecting scores to prompt versions, extending evaluation from one-off runs into continuous production monitoring, and finally extending the framework to arbitrary optimization targets. A closing pair of concepts looks at how Amazon Bedrock AgentCore implements framework-agnostic evaluation and a triage-to-optimization loop as a managed service.
 
 This path is a focused extract from the broader [Production LLM Engineering](../topics/production-llm-engineering.md) path. It covers the eval and quality side only; for DSPy program optimization with bootstrapping and GEPA-style reflection, see [LLM Program Optimization with DSPy](../topics/llm-program-optimization-dspy.md).
 
-**Estimated study time:** 9–10 hours
+**Estimated study time:** 10–11 hours
 **Prerequisites:** Basic LLM API experience. Helpful — though not required — to have at least one LLM application already running in production or staging, so the observability concepts are immediately applicable.
 
 ---
@@ -68,6 +68,15 @@ Use complementary tests, browser checks, judges, traces, and review to cover the
 ### 17. [Session Convergence Evaluation](../concepts/llm-engineering/session-convergence-evaluation.md)
 Close by measuring whether the full multi-turn session reaches a user-accepted result, rather than rewarding isolated good turns.
 
+### 18. [Trace-Derived Evaluation Field Contract](../concepts/llm-engineering/trace-derived-evaluation-field-contract.md)
+A concrete answer to how the model-agnostic provider abstraction from step 3 and the trace-aware evaluation from step 8 can support a framework nobody wrote a custom integration for: AgentCore Evaluations classifies spans by kind and reads prompts, responses, and tool data from documented locations, using the same logic whether or not the producing framework has dedicated support. The contract also has to absorb real-world variation across the seven frameworks AWS documents directly: two non-identical, coexisting span-classification conventions (OpenTelemetry's `gen_ai.operation.name` and OpenInference's `openinference.span.kind`) that different instrumentation libraries emit for the same three span kinds, two delivery modes for where conversation content actually lives (a correlated event record versus attributes or events inline on the span), and frameworks that legitimately emit fewer than three span kinds by design rather than by broken instrumentation.
+
+### 19. [Continuous Online Agent Evaluation](../concepts/llm-engineering/continuous-online-agent-evaluation.md)
+Every evaluation so far runs once, on demand or in batch. Online evaluation is a standing configuration that scores live production traffic continuously, so a quality regression from a model update or prompt change surfaces close to when it happens rather than at the next manual audit. Study this after session convergence because it extends the same "measure the whole interaction" mindset from a point-in-time check into an ongoing production signal.
+
+### 20. [AgentCore Insights Triage-to-Optimization Loop](../concepts/llm-engineering/agentcore-insights-triage-loop.md)
+Close the path where it started: a score alone doesn't say why an agent failed or what to do about it. Insights clusters failures into root causes, extracts user intent, and can pass findings to a system-prompt recommendation that gets validated through A/B testing — a managed-service instance of the same actionable-side-information and optimize-anything ideas from steps 12 and 14, applied end to end.
+
 ## What You'll Be Able to Do
 
 - Instrument an LLM application to emit structured traces with spans and scores instead of unstructured logs
@@ -81,3 +90,6 @@ Close by measuring whether the full multi-turn session reaches a user-accepted r
 - Design a sparse validation strategy that limits judge call volume while maintaining enough signal for regression detection
 - Interpret actionable side information from failed traces to inform prompt revisions instead of guessing
 - Wrap any scored text artifact in an evaluator using `optimize_anything()` without requiring a full optimization framework
+- Design a span-reading contract that lets an evaluator support any framework, not only the ones with dedicated integrations
+- Configure continuous online evaluation so quality regressions surface in production, not just at release time
+- Turn clustered failure diagnostics into a validated system-prompt improvement through a triage-to-optimization loop

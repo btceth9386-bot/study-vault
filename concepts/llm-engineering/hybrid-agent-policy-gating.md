@@ -11,6 +11,7 @@ related:
   - zero-ambient-authority-for-agents
   - context-aware-high-stakes-agent-approval
   - untrusted-content-isolation-for-agents
+  - cedar-policy-gateway-authorization
 tags:
   - coding-agents
   - security
@@ -40,6 +41,7 @@ A support agent with the `viewer` role tries to call `send_email`. Structural ga
 - [[zero-ambient-authority-for-agents]]: Task-scoped authority provides the narrow permissions that structural gating enforces at the tool boundary.
 - [[context-aware-high-stakes-agent-approval]]: A flagged action can be explained and sent to a person for action-specific approval instead of being executed automatically.
 - [[untrusted-content-isolation-for-agents]]: Prevents tool and retrieval content from becoming authority before policy gating evaluates an action.
+- [[cedar-policy-gateway-authorization]]: A concrete, managed productization of this pattern — Cedar policies enforced deterministically at a Gateway boundary, with an auto-generated schema and natural-language authoring, rather than custom structural-and-semantic gate code a team builds itself.
 
 ## My questions
 

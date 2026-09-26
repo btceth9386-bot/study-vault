@@ -12,7 +12,9 @@ This path covers the patterns that answer those questions, drawn from the Hermes
 
 For the protocol mechanics behind MCP-based integrations, study [MCP Protocol Foundations](../topics/mcp-protocol-foundations.md) first or use it as a companion path. For the internal mechanics of LangGraph state machines, checkpoints, and interrupts, see [LangGraph Application Development](../topics/langgraph-application-development.md). For evaluation pipelines and quality measurement, see [LLM Quality and Evaluation Pipeline](../topics/llm-quality-evaluation-pipeline.md).
 
-**Estimated study time:** 9–11 hours
+A closing case study applies the session, memory, and hosting decisions above to a real managed multi-agent platform, Amazon Bedrock AgentCore, showing a config-vs-code hosting tradeoff, infrastructure-enforced session isolation, a health-probe pattern for long-running tasks, shared memory safely namespaced across many agents, and a durable-memory-specific security concern that single-turn content isolation doesn't cover. A second case-study wave then covers the operational and governance layer on top of that architecture: per-second cost attribution and hard runaway-agent limits, immutable versioned deployment, two concrete AWS-documented security failure modes and their fixes, gateway rate limiting with an explicit fail-open caveat, Cedar-based deterministic policy authorization with session-aware temporal extensions and safe shadow-testing, and statistically validated A/B testing for rolling out a behavior change.
+
+**Estimated study time:** 16–19 hours
 **Prerequisites:** Built at least one working LLM agent with tool calling. No specific framework required.
 
 ---
@@ -87,6 +89,66 @@ When evaluating or training an agent, always exposing the same full tool surface
 
 ---
 
+## Case Study: Amazon Bedrock AgentCore's Session, Hosting, and Shared-Memory Model
+
+Everything above describes runtime patterns as engineering decisions you implement yourself. This closing case study looks at how one managed multi-agent platform, Amazon Bedrock AgentCore, makes the same hosting, session, and memory decisions concretely — and where a managed default still needs a security control you must add.
+
+### 23. [AgentCore Harness vs. Runtime Tradeoff](../concepts/llm-engineering/agentcore-harness-vs-runtime-tradeoff.md)
+The entry point into the case study: a config-driven managed orchestration loop (Harness) versus infrastructure underneath orchestration code you write yourself (Runtime). Study this first because it is the hosting decision everything else in the case study sits inside — AWS frames these as complementary, not competing, options.
+
+### 24. [microVM Session Isolation and Lifecycle](../concepts/llm-engineering/microvm-session-isolation-lifecycle.md)
+The infrastructure layer under either hosting choice: every session gets its own dedicated microVM, moves through Active/Idle/Stopped states, and is destroyed with its memory sanitized by default. Study this after the hosting tradeoff, and alongside step 11's persistent session restoration, as the opposite default assumption — sessions are ephemeral and isolated unless you deliberately make them durable.
+
+### 25. [Health-Probe-Driven Task Liveness](../concepts/llm-engineering/health-probe-driven-task-liveness.md)
+A specific mechanism sitting underneath step 24's session lifecycle: overloading a health-check endpoint to report "busy with real work" so the platform's existing idle timeout skips a legitimate long-running task, with no separate task-tracking system required. Study this right after session isolation because it only makes sense once you know what default timeout it's designed to bypass.
+
+### 26. [Memory Namespace Multi-Tenant Isolation](../concepts/llm-engineering/memory-namespace-multi-tenant-isolation.md)
+Moves from session infrastructure to shared memory: a hierarchical, trailing-slash-terminated path scheme that lets one memory resource be safely shared across many actors or agents, doubling as an IAM condition key so the organizational scheme becomes an enforced access boundary. Study this after step 10's layered memory model, as the concrete answer to organizing the long-term layer once multiple agents share it.
+
+### 27. [Cross-Account Memory Resource Sharing](../concepts/llm-engineering/cross-account-memory-resource-sharing.md)
+Extends namespace isolation across AWS account boundaries: resource-based policies let a principal in another account call memory APIs directly, or let the memory resource deliver data to another account's S3, SNS, or Kinesis. Study this right after namespace isolation, since a real multi-team deployment typically needs both — namespacing within an account and policy-based sharing across accounts.
+
+### 28. [Long-Term Memory vs. RAG Boundary](../concepts/llm-engineering/long-term-memory-vs-rag-boundary.md)
+A design-boundary concept for the memory layer: long-term memory holds personalized, evolving state about a specific user, while RAG retrieves current, authoritative knowledge from a shared repository. Study this after the namespace and cross-account concepts because it clarifies which content should even be routed into the shared memory system you just designed, versus a separate retrieval pipeline.
+
+### 29. [Memory Poisoning Defense in Agent Systems](../concepts/llm-engineering/memory-poisoning-defense-in-agent-systems.md)
+Closes the case study by returning to step 19's untrusted-content isolation with a longer time horizon: because long-term memory extraction runs asynchronously through an LLM, poisoned input becomes a persistent, repeatedly-retrieved corruption rather than a single-turn hijack, so the defense has to sit at the write boundary, before persistence, not after. Study this last because it depends on understanding the memory pipeline (steps 26–28) that poisoned content would actually flow through.
+
+---
+
+## Case Study: Amazon Bedrock AgentCore's Operational Controls and Policy Governance
+
+The first case study covered architecture — hosting, sessions, and memory. This second wave covers what it takes to actually operate that architecture safely at scale: cost and runaway-agent limits, safe deployment, concrete documented security failure modes, and a governance layer for controlling what agents are allowed to do.
+
+### 30. [Harness Cost Attribution and Hard Limits](../concepts/llm-engineering/harness-cost-attribution-and-hard-limits.md)
+Start with the operational basics that apply to any deployed harness, following naturally from step 23's hosting choice: billing reflects actual per-second CPU and memory consumption rather than wall-clock time, and hard caps (max iterations, timeout, token budget, idle and max session lifetime) bound a runaway agent regardless of the agent's own stopping logic from step 21.
+
+### 31. [Immutable Versioned Endpoints for Agent Config](../concepts/llm-engineering/immutable-versioned-endpoints-for-agent-config.md)
+The second operational basic: every configuration change creates a new, complete, immutable version, and a named endpoint only moves to a new version when explicitly repointed. Study this alongside cost and limits as the other prerequisite for operating any harness safely — it's what makes promoting a change to production, and rolling it back, a deliberate, low-risk act rather than an implicit side effect of redeploying.
+
+### 32. [Structured Payload Injection via Type Confusion](../concepts/llm-engineering/structured-payload-injection-via-type-confusion.md)
+Moves into concrete, documented security failure modes. If an agent's entrypoint doesn't enforce that its `prompt` field is actually a string, a caller can smuggle a structured `toolUse` block that some frameworks execute directly, bypassing the model and its guardrails entirely. Study this first among the security concepts because it's the most surprising failure — a type-checking omission, not a sophisticated attack — and the easiest to fix once known.
+
+### 33. [AgentCore Trust-Boundary Hardening](../concepts/llm-engineering/agentcore-trust-boundary-hardening.md)
+Widens the security lens from the entrypoint to the surrounding IAM and network trust boundary: confused-deputy trust-policy conditions, resource-based policies that must be configured on both a runtime and its endpoint, and closing direct Runtime access so a gateway's policies can't be trivially bypassed. Study this after the payload vulnerability as the next layer of AgentCore-specific hardening a team needs to check.
+
+### 34. [Multi-Dimension Rate Limiting with Fail-Open Defaults](../concepts/llm-engineering/multi-dimension-rate-limiting-with-fail-open.md)
+A Gateway-level throughput control that groups traffic by caller, tool, or model and fails open by default — allowed through if the rate-limit service is unavailable. Study this right after trust-boundary hardening as an explicit caveat: this control protects availability, not authorization, and must never be treated as the security boundary that step 33's hardening actually provides.
+
+### 35. [Cedar Policy Gateway Authorization](../concepts/llm-engineering/cedar-policy-gateway-authorization.md)
+The governance centerpiece: Policy in AgentCore intercepts every tool call at the Gateway boundary and evaluates it against Cedar policies with default-deny and forbid-wins semantics, moving authorization outside the agent's own code so it can't be bypassed by manipulating the agent. Study this once the surrounding trust boundary (step 33) and rate limiting (step 34) are both understood, since this is the actual access-control mechanism those Gateway-level controls sit alongside.
+
+### 36. [Temporal Session-Aware Policy Conditions](../concepts/llm-engineering/temporal-session-aware-policy-conditions.md)
+Extends step 35 specifically where plain Cedar can't reach: rules that depend on what already happened earlier in the same session, such as requiring a prior approval or capping a running total. Study this immediately after Cedar policy authorization as its most consequential extension for multi-step, stateful agent workflows.
+
+### 37. [Shadow-Mode Policy Testing with Decision-Flip Telemetry](../concepts/llm-engineering/shadow-mode-policy-testing-with-decision-flip-telemetry.md)
+A safety mechanism for deploying new policies from step 35 or step 36: a `LOG_ONLY` policy or engine evaluates against real traffic without ever affecting the returned decision, and decision-flip telemetry shows whether promoting it to enforcement would actually change outcomes. Study this once you have policies worth testing, as the safe on-ramp to enforcing them.
+
+### 38. [Config-Bundle A/B Testing for Agent Behavior](../concepts/llm-engineering/config-bundle-ab-testing-for-agent-behavior.md)
+Closes both case studies with the general-purpose validation mechanism for any behavior change: live traffic is split between a control and treatment variant — built on step 31's immutable versioning for configuration-only changes — scored by online evaluation, and promoted only once a statistically significant improvement is confirmed. Study this last because it is the rollout mechanism that every other change discussed in this path — a new prompt, a new policy, a new tool — should ultimately pass through before reaching all production traffic.
+
+---
+
 ## What You'll Be Able to Do
 
 - Organize built-in and MCP tools into a unified registry with configurable toolsets that can be selectively exposed per session
@@ -99,3 +161,13 @@ When evaluating or training an agent, always exposing the same full tool surface
 - Build a feedback loop that converts task experience into reusable skills the agent applies in future sessions
 - Split an overloaded generalist into focused agents without widening their tool or access boundaries
 - Vary tool access across evaluation runs to generate realistic trajectories instead of overfitting to a single capability regime
+- Evaluate the config-vs-code tradeoff between a managed orchestration loop and infrastructure-only hosting for a multi-agent deployment
+- Design infrastructure-enforced session isolation and a health-probe pattern that safely extends a session's lifetime for long-running background tasks
+- Namespace shared long-term memory across many actors or agents, and extend that isolation across AWS account boundaries with resource-based policies
+- Decide which content belongs in long-term memory versus a RAG pipeline, and defend a shared memory store against poisoning at the point of persistence
+- Attribute agent cost to actual per-second consumption and bound a runaway agent with platform-enforced hard limits, independent of the agent's own stopping logic
+- Deploy agent configuration changes as immutable, named-endpoint-pinned versions so promotion and rollback are explicit, low-risk acts
+- Recognize and fix a type-confusion payload vulnerability, and harden an AgentCore Runtime's trust boundary against confused-deputy and gateway-bypass failures
+- Apply Gateway rate limiting as a throughput control (with its fail-open caveat) and distinguish it from a real, fail-closed authorization boundary
+- Move tool-call authorization outside agent code with Cedar policies, extend it with session-aware temporal conditions, and safely test a new policy with LOG_ONLY shadow mode before enforcing it
+- Validate a prompt, policy, or config change with a statistically significant live A/B test before routing all traffic to it

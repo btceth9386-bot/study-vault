@@ -11,6 +11,7 @@ related:
   - telemetry-signal-model
   - otlp-vendor-neutral-telemetry-protocol
   - llm-observability
+  - agentcore-managed-service-telemetry-defaults
 tags:
   - observability
   - opentelemetry
@@ -41,6 +42,7 @@ An HTTP library creates a span through the OpenTelemetry API when it sends a req
 - [[telemetry-signal-model]]: The API exposes the instruments used to create different telemetry signals.
 - [[otlp-vendor-neutral-telemetry-protocol]]: An SDK can export the API-created data through OTLP.
 - [[llm-observability]]: AI applications can instrument model and tool calls without binding their code to one observability vendor.
+- [[agentcore-managed-service-telemetry-defaults]]: ADOT, AWS's redistribution of the OpenTelemetry SDK, is the standard instrumentation path AgentCore documents for the traces its managed resources do not emit by default.
 
 ## Open questions
 

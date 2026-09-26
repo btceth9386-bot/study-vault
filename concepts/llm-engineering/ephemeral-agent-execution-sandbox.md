@@ -13,6 +13,7 @@ related:
   - risk-bounded-ai-pilot-design
   - code-as-action-agent-loop
   - untrusted-content-isolation-for-agents
+  - microvm-session-isolation-lifecycle
 tags:
   - coding-agents
   - security
@@ -45,6 +46,7 @@ An agent needs to test a package-install script. The harness runs it in a new ne
 - [[risk-bounded-ai-pilot-design]]: A technical sandbox limits code execution, while a risk-bounded pilot limits business rollout scope.
 - [[code-as-action-agent-loop]]: Generated multi-tool code needs the isolated execution boundary a sandbox provides.
 - [[untrusted-content-isolation-for-agents]]: Contains generated code even if hostile retrieved content influenced the agent.
+- [[microvm-session-isolation-lifecycle]]: A related but distinct use of "destroy the environment when done" — that concept isolates legitimate multi-turn user sessions from each other for multi-tenancy, rather than containing untrusted generated code.
 
 ## My questions
 

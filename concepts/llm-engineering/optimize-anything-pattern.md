@@ -12,6 +12,7 @@ related:
   - actionable-side-information
   - metric-driven-llm-optimization
   - prompt-version-management
+  - agentcore-insights-triage-loop
 tags:
   - llm-engineering
   - optimization
@@ -54,6 +55,7 @@ The policy text is not a normal prompt module, but it is still a scored text art
 - [[actionable-side-information]]: The evaluator's logs and metadata become side information for reflection.
 - [[metric-driven-llm-optimization]]: The evaluator score defines what "better" means.
 - [[prompt-version-management]]: Optimized text artifacts still need safe versioning before production use.
+- [[agentcore-insights-triage-loop]]: A specific managed-service instance of the broader "optimize anything with evaluation feedback" pattern, applied to AgentCore system prompts.
 
 ## Open questions
 
