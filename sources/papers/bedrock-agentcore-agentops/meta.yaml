@@ -1,0 +1,33 @@
+type: paper
+title: "Amazon Bedrock AgentCore Developer Guide — Operations, reliability, and governance (selected chapters)"
+url: https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/
+authors:
+  - Amazon Web Services
+language: en
+date_consumed: 2026-09-26
+date_added: 2026-09-26
+estimated_time: 2 hours
+status: processed
+related_concepts:
+  - harness-cost-attribution-and-hard-limits
+  - immutable-versioned-endpoints-for-agent-config
+  - structured-payload-injection-via-type-confusion
+  - agentcore-trust-boundary-hardening
+  - multi-dimension-rate-limiting-with-fail-open
+  - cedar-policy-gateway-authorization
+  - temporal-session-aware-policy-conditions
+  - shadow-mode-policy-testing-with-decision-flip-telemetry
+  - config-bundle-ab-testing-for-agent-behavior
+  - agent-loop-termination-policy
+  - untrusted-content-isolation-for-agents
+  - hybrid-agent-policy-gating
+  - health-probe-driven-task-liveness
+  - agentcore-insights-triage-loop
+tags:
+  - aws
+  - agentcore
+  - agent-operations
+  - security
+  - policy
+  - reliability
+  - governance
