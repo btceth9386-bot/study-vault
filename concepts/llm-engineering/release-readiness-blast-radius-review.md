@@ -12,6 +12,8 @@ related:
   - change-specific-release-testing
   - system-aware-candidate-merge
   - agent-space-access-boundary
+  - ai-compressed-sdlc
+  - risk-focused-high-velocity-code-review
 tags:
   - llm-engineering
   - aws
@@ -25,7 +27,7 @@ tags:
 - **One-sentence definition**: Release readiness blast-radius review is a pre-production agent review that evaluates code and infrastructure changes against dependencies, permissions, policies, and affected services.
 - **Why it exists / what problem it solves**: A pull request can look safe locally while breaking another repository, widening permissions, or affecting a critical downstream service. Blast-radius review asks what the change touches before it reaches production.
 - **Keywords**: release readiness, blast radius, dependency impact, permissions, policy review
-- **Related concepts**: [[devops-agent-topology-context]], [[change-specific-release-testing]], [[system-aware-candidate-merge]], [[agent-space-access-boundary]]
+- **Related concepts**: [[devops-agent-topology-context]], [[change-specific-release-testing]], [[system-aware-candidate-merge]], [[agent-space-access-boundary]], [[ai-compressed-sdlc]], [[risk-focused-high-velocity-code-review]]
 - **Depth**: 2/4
 - **Last updated**: 2026-07-11
 - **Source**: sources/articles/aws-devops-agent-docs/
@@ -44,6 +46,8 @@ A pull request changes an IAM policy for a service that writes invoices. The cod
 - [[change-specific-release-testing]]: Risky areas found during readiness review become good targets for focused tests.
 - [[system-aware-candidate-merge]]: Both concepts judge local changes in the context of broader system behavior.
 - [[agent-space-access-boundary]]: Review quality depends on the accounts, repositories, and integrations available inside the Agent Space.
+- [[ai-compressed-sdlc]]: Readiness review helps manage deployment risk in faster development cycles.
+- [[risk-focused-high-velocity-code-review]]: Blast-radius findings become a concise risk summary that helps reviewers prioritize scarce attention.
 
 ## Open questions
 

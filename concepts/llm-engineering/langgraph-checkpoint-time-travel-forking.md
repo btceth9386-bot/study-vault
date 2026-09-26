@@ -11,6 +11,7 @@ related:
   - langgraph-pregel-bsp-execution
   - langgraph-human-in-the-loop-interrupts
   - langgraph-remotegraph-server-execution
+  - artifact-based-agent-handoffs
 tags:
   - llm-engineering
   - langgraph
@@ -57,6 +58,7 @@ The updated checkpoint becomes a new branch. The original history remains availa
 - [[langgraph-pregel-bsp-execution]]: Pregel superstep boundaries provide natural points where checkpointed state is consistent.
 - [[langgraph-human-in-the-loop-interrupts]]: Interrupts depend on checkpoints to pause and resume safely.
 - [[langgraph-remotegraph-server-execution]]: LangGraph Server exposes thread state and history through remote APIs.
+- [[artifact-based-agent-handoffs]]: Checkpoints can preserve the artifacts exchanged between stages for recovery and inspection.
 
 ## Open questions
 

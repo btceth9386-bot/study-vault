@@ -12,6 +12,7 @@ related:
   - learned-operational-knowledge-files
   - self-improving-agent-skill-memory-loop
   - llm-observability
+  - continuous-online-agent-evaluation
 tags:
   - llm-engineering
   - aws
@@ -44,6 +45,7 @@ Three incidents in two weeks involve slow database queries after a nightly impor
 - [[learned-operational-knowledge-files]]: Memories and learned skills preserve the patterns prevention depends on.
 - [[self-improving-agent-skill-memory-loop]]: Both concepts turn past work into future leverage.
 - [[llm-observability]]: Prevention needs reliable historical signals to identify repeated failure modes.
+- [[continuous-online-agent-evaluation]]: Shares the idea of turning standing production signal into ongoing monitoring rather than one-off inspection, though this loop concerns operational incidents while that concept concerns agent output quality.
 
 ## Open questions
 

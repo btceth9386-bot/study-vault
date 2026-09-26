@@ -1,0 +1,31 @@
+type: paper
+title: "The New SDLC with Vibe Coding: From Ad-hoc Prompting to Agentic Engineering"
+url: null
+authors:
+  - Addy Osmani
+  - Shubham Saboo
+  - Sokratis Kartakis
+language: en
+date_consumed: "2026-09-25"
+date_added: "2026-09-25"
+estimated_time: 45 minutes
+status: processed
+related_concepts:
+  - vibe-coding-to-agentic-engineering-spectrum
+  - context-engineering-for-coding-agents
+  - static-vs-dynamic-agent-context
+  - ai-compressed-sdlc
+  - agentic-software-factory-model
+  - coding-agent-harness-engineering
+  - conductor-orchestrator-developer-modes
+  - agentic-coding-80-percent-problem
+  - agentic-engineering-tco-curve
+  - trace-aware-agent-evaluation
+  - hybrid-llm-output-assertions
+  - llm-observability
+tags:
+  - ai-assisted-development
+  - agentic-engineering
+  - coding-agents
+  - context-engineering
+  - software-development-lifecycle

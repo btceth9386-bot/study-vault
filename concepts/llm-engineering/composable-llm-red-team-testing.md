@@ -10,6 +10,7 @@ sources:
 related:
   - hybrid-llm-output-assertions
   - model-agnostic-evaluation-provider-abstraction
+  - agentic-security-response-triad
 tags:
   - llm-engineering
   - evaluation
@@ -46,3 +47,7 @@ To check whether a support agent leaks account data, define one privacy-leakage 
 
 - Which combinations of risks and strategies give useful coverage without making a suite too expensive?
 - When should a red-team finding require human review before it is reported as a vulnerability?
+
+## Promotion backlinks
+
+- [[agentic-security-response-triad]]: Uses reusable adversarial probes for its Red role.

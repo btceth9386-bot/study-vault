@@ -8,6 +8,7 @@ review_due: 2026-05-07
 sources:
 - sources/repos/langfuse-langfuse
 related:
+- skills-as-unit-of-agent-improvement
 - llm-observability
 - llm-as-judge-evaluation
 - caching-strategies
@@ -17,6 +18,7 @@ related:
 - optimize-anything-pattern
 - surgical-context-compression
 - configuration-driven-llm-evaluation-matrix
+ - agentic-software-factory-model
 tags:
 - llm-engineering
 - prompts
@@ -27,7 +29,7 @@ tags:
 - **One-sentence definition**: Prompt version management treats prompts as tracked, deployable artifacts instead of anonymous strings inside application code.
 - **Why it exists / what problem it solves**: Prompt edits can change product behavior as much as code changes. Without versions, labels, history, and rollback, teams cannot safely test, deploy, or explain why an LLM response changed.
 - **Keywords**: prompt version, label, production, latest, cache epoch, prompt dependency
-- **Related concepts**: [[llm-observability]], [[llm-as-judge-evaluation]], [[caching-strategies]], [[dspy-signatures]], [[dspy-module-composition]], [[metric-driven-llm-optimization]], [[optimize-anything-pattern]]
+- **Related concepts**: [[skills-as-unit-of-agent-improvement]], [[llm-observability]], [[llm-as-judge-evaluation]], [[caching-strategies]], [[dspy-signatures]], [[dspy-module-composition]], [[metric-driven-llm-optimization]], [[optimize-anything-pattern]], [[agentic-software-factory-model]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/langfuse-langfuse
@@ -51,6 +53,7 @@ Each generation can record the prompt version it used, so later debugging can co
 
 ## Relationship to existing concepts
 
+- [[skills-as-unit-of-agent-improvement]]: Skills are narrower, conditionally loaded behavior artifacts that need the same versioning discipline.
 - [[llm-observability]]: Observability connects model outputs back to the prompt version that produced them.
 - [[llm-as-judge-evaluation]]: Judge rubrics are prompts too, so evaluator behavior should be versioned.
 - [[caching-strategies]]: Prompt lookup uses caching, but cache invalidation must be tied to prompt changes.
@@ -59,6 +62,7 @@ Each generation can record the prompt version it used, so later debugging can co
 - [[metric-driven-llm-optimization]]: Optimization creates better prompt/program variants that still need safe deployment discipline.
 - [[optimize-anything-pattern]]: Optimized text artifacts still need versioning, review, and rollback before production use.
 - [[configuration-driven-llm-evaluation-matrix]]: A shared evaluation matrix makes prompt-version comparisons repeatable.
+- [[agentic-software-factory-model]]: Versioned instructions make an agentic factory's behavior reproducible and safe to roll back.
 
 ## Open questions
 

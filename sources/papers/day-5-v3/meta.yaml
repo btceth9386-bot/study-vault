@@ -1,0 +1,31 @@
+type: paper
+title: "Spec-Driven Production Grade Development in the Age of Vibe Coding"
+url: null
+authors:
+  - Lee Boonstra
+language: en
+date_consumed: 2026-09-25
+date_added: 2026-09-25
+estimated_time: 45 minutes
+status: processed
+related_concepts:
+  - executable-specification-as-architectural-north-star
+  - agent-instruction-placement-by-scope
+  - execution-mode-specific-agent-prompting
+  - risk-focused-high-velocity-code-review
+  - tiered-continuous-code-review-runtime
+  - hybrid-agent-policy-gating
+  - approval-fatigue-resistant-agent-oversight
+  - agentic-software-factory-model
+  - static-vs-dynamic-agent-context
+  - context-aware-high-stakes-agent-approval
+  - hybrid-llm-output-assertions
+  - ephemeral-agent-execution-sandbox
+  - zero-ambient-authority-for-agents
+  - mcp-n-plus-m-integration-scaling
+tags:
+  - agentic-engineering
+  - coding-agents
+  - spec-driven-development
+  - code-review
+  - agent-security

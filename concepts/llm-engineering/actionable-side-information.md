@@ -14,6 +14,7 @@ related:
 - reflective-mutation-proposer
 - optimize-anything-pattern
 - self-improving-agent-skill-memory-loop
+- agentcore-insights-triage-loop
 tags:
 - llm-engineering
 - optimization
@@ -63,3 +64,4 @@ A reflection model can use that side information to rewrite the tool instruction
 ## Relationship to newly promoted concepts
 
 - [[self-improving-agent-skill-memory-loop]]: Added as a promoted concept related to this existing concept.
+- [[agentcore-insights-triage-loop]]: A managed-service feature with its own taxonomy and API surface that distills trace data into diagnostic findings, the same underlying purpose as actionable side information, applied to AgentCore's own optimization loop rather than a general reflection model.

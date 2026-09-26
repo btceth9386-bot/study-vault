@@ -15,6 +15,7 @@ related:
   - mcp-client-server-trace-correlation
   - mcp-interaction-cassette
   - declarative-mcp-scenario-recording
+  - mcp-n-plus-m-integration-scaling
 tags:
   - llm-engineering
   - mcp
@@ -54,6 +55,7 @@ Both servers can expose `tools/list` and `tools/call`; only the transport setup 
 - [[mcp-client-server-trace-correlation]]: The correlation model keeps method semantics visible over either stdio or HTTP.
 - [[mcp-interaction-cassette]]: A single cassette can preserve sessions delivered over either transport.
 - [[declarative-mcp-scenario-recording]]: A scenario can target either local stdio or remote HTTP recording.
+- [[mcp-n-plus-m-integration-scaling]]: Transport-independent contracts help preserve the N-plus-M integration benefit across local and remote deployments.
 
 ## Open questions
 

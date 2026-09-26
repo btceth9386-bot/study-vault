@@ -22,6 +22,7 @@ related:
   - collector-authentication-extensions
   - kubernetes-collector-placement-modes
   - ottl-declarative-telemetry-transformation
+  - genai-observability-dashboard-abstraction
 tags:
   - observability
   - opentelemetry
@@ -64,6 +65,7 @@ A `traces` pipeline can receive OTLP from several services, remove sensitive att
 - [[collector-authentication-extensions]]: Authentication extensions protect pipeline boundaries.
 - [[kubernetes-collector-placement-modes]]: Placement decides where pipeline stages can access and process telemetry.
 - [[ottl-declarative-telemetry-transformation]]: OTTL applies configurable transformations within a pipeline.
+- [[genai-observability-dashboard-abstraction]]: A managed platform's domain-specific dashboard is one kind of destination this generic pipeline architecture can route the same telemetry toward.
 
 ## Open questions
 

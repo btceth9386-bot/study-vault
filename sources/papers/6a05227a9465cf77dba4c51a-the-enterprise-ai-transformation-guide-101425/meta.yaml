@@ -1,0 +1,29 @@
+type: paper
+title: The Enterprise AI Transformation Guide
+url: null
+authors:
+  - Anthropic
+language: en
+date_consumed: 2026-09-25
+date_added: 2026-09-25
+estimated_time: 25 minutes
+status: processed
+related_concepts:
+  - enterprise-ai-transformation-stages
+  - business-outcome-aligned-ai-use-case-selection
+  - cross-functional-ai-steering-committee
+  - multidimensional-ai-pilot-scorecard
+  - risk-bounded-ai-pilot-design
+  - enterprise-ai-change-champion-network
+  - role-based-ai-capability-building
+  - cross-functional-ai-center-of-excellence
+  - enterprise-ai-governance-framework
+  - llm-observability
+  - metric-driven-llm-optimization
+  - hierarchical-rbac
+tags:
+  - enterprise-ai
+  - ai-transformation
+  - ai-adoption
+  - ai-governance
+  - change-management

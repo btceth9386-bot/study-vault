@@ -1,927 +1,1470 @@
 # Tags Index
 
+## a2a
+
+- [A2A Agent Card and Registry Discovery](../concepts/llm-engineering/a2a-agent-card-registry-discovery.md)
+- [AgentCore A2A Protocol Contract](../concepts/llm-engineering/agentcore-a2a-protocol-contract.md)
+- [Bounded Tool Calls vs. Agent Delegation](../concepts/llm-engineering/bounded-tool-calls-vs-agent-delegation.md)
+
+## a2ui
+
+- [A2UI Layout Ownership Patterns](../concepts/llm-engineering/a2ui-layout-ownership-patterns.md)
+- [A2UI Trusted Catalog Rendering](../concepts/llm-engineering/a2ui-trusted-catalog-rendering.md)
+
 ## access-control
 
-- [agent-space-access-boundary](../concepts/llm-engineering/agent-space-access-boundary.md) - Agent Space Access Boundary
+- [Agent Space Access Boundary](../concepts/llm-engineering/agent-space-access-boundary.md)
+- [Memory Namespace Multi-Tenant Isolation](../concepts/llm-engineering/memory-namespace-multi-tenant-isolation.md)
+
+## agent-architecture
+
+- [Agent Specialization as a Scaling Mechanism](../concepts/llm-engineering/agent-specialization-as-scaling-mechanism.md)
+- [AgentCore Harness vs. Runtime Tradeoff](../concepts/llm-engineering/agentcore-harness-vs-runtime-tradeoff.md)
+
+## agent-improvement
+
+- [Skills as the Unit of Agent Improvement](../concepts/llm-engineering/skills-as-unit-of-agent-improvement.md)
+
+## agent-memory
+
+- [Cross-Account Memory Resource Sharing](../concepts/llm-engineering/cross-account-memory-resource-sharing.md)
+- [Long-Term Memory vs. RAG Boundary](../concepts/llm-engineering/long-term-memory-vs-rag-boundary.md)
+- [Memory Namespace Multi-Tenant Isolation](../concepts/llm-engineering/memory-namespace-multi-tenant-isolation.md)
+- [Memory Poisoning Defense in Agent Systems](../concepts/llm-engineering/memory-poisoning-defense-in-agent-systems.md)
+
+## agent-registry
+
+- [Agent Resource Registry Governance](../concepts/llm-engineering/agent-resource-registry-governance.md)
+
+## agent-skills
+
+- [Agent Skill Evaluation Coverage](../concepts/llm-engineering/agent-skill-evaluation-coverage.md)
+- [Agent Skill Supply-Chain Governance](../concepts/llm-engineering/agent-skill-supply-chain-governance.md)
+- [Agent Skills as Procedural Memory](../concepts/llm-engineering/agent-skills-as-procedural-memory.md)
+- [Authority-Tiered Agent Skills](../concepts/llm-engineering/authority-tiered-agent-skills.md)
+- [Evaluation-Gated Meta-Skills](../concepts/llm-engineering/evaluation-gated-meta-skills.md)
+- [Progressive Disclosure for Agent Skills](../concepts/llm-engineering/agent-skill-progressive-disclosure.md)
+- [Skill Description as a Routing Interface](../concepts/llm-engineering/skill-description-as-routing-interface.md)
+- [Skills as the Unit of Agent Improvement](../concepts/llm-engineering/skills-as-unit-of-agent-improvement.md)
+- [State-Externalized Skill Composition](../concepts/llm-engineering/state-externalized-skill-composition.md)
+
+## agentcore
+
+- [Agent Resource Registry Governance](../concepts/llm-engineering/agent-resource-registry-governance.md)
+- [AgentCore A2A Protocol Contract](../concepts/llm-engineering/agentcore-a2a-protocol-contract.md)
+- [AgentCore External-Agent Observability Onboarding](../concepts/llm-engineering/agentcore-external-agent-observability-onboarding.md)
+- [AgentCore Harness vs. Runtime Tradeoff](../concepts/llm-engineering/agentcore-harness-vs-runtime-tradeoff.md)
+- [AgentCore Insights Triage-to-Optimization Loop](../concepts/llm-engineering/agentcore-insights-triage-loop.md)
+- [AgentCore Managed-Service Telemetry Defaults](../concepts/llm-engineering/agentcore-managed-service-telemetry-defaults.md)
+- [AgentCore Session-Trace-Span Hierarchy](../concepts/llm-engineering/agentcore-session-trace-span-hierarchy.md)
+- [AgentCore Trust-Boundary Hardening](../concepts/llm-engineering/agentcore-trust-boundary-hardening.md)
+- [Cedar Policy Gateway Authorization](../concepts/llm-engineering/cedar-policy-gateway-authorization.md)
+- [Config-Bundle A/B Testing for Agent Behavior](../concepts/llm-engineering/config-bundle-ab-testing-for-agent-behavior.md)
+- [Continuous Online Agent Evaluation](../concepts/llm-engineering/continuous-online-agent-evaluation.md)
+- [Cross-Account Memory Resource Sharing](../concepts/llm-engineering/cross-account-memory-resource-sharing.md)
+- [Cross-Account Observability Aggregation](../concepts/llm-engineering/cross-account-observability-aggregation.md)
+- [GenAI Observability Dashboard Abstraction](../concepts/llm-engineering/genai-observability-dashboard-abstraction.md)
+- [Harness Cost Attribution and Hard Limits](../concepts/llm-engineering/harness-cost-attribution-and-hard-limits.md)
+- [Health-Probe-Driven Task Liveness](../concepts/llm-engineering/health-probe-driven-task-liveness.md)
+- [Immutable Versioned Endpoints for Agent Config](../concepts/llm-engineering/immutable-versioned-endpoints-for-agent-config.md)
+- [Long-Term Memory vs. RAG Boundary](../concepts/llm-engineering/long-term-memory-vs-rag-boundary.md)
+- [Memory Namespace Multi-Tenant Isolation](../concepts/llm-engineering/memory-namespace-multi-tenant-isolation.md)
+- [Memory Poisoning Defense in Agent Systems](../concepts/llm-engineering/memory-poisoning-defense-in-agent-systems.md)
+- [microVM Session Isolation and Lifecycle](../concepts/llm-engineering/microvm-session-isolation-lifecycle.md)
+- [Multi-Dimension Rate Limiting with Fail-Open Defaults](../concepts/llm-engineering/multi-dimension-rate-limiting-with-fail-open.md)
+- [Shadow-Mode Policy Testing with Decision-Flip Telemetry](../concepts/llm-engineering/shadow-mode-policy-testing-with-decision-flip-telemetry.md)
+- [Structured Payload Injection via Type Confusion](../concepts/llm-engineering/structured-payload-injection-via-type-confusion.md)
+- [Temporal Session-Aware Policy Conditions](../concepts/llm-engineering/temporal-session-aware-policy-conditions.md)
+- [Trace-Derived Evaluation Field Contract](../concepts/llm-engineering/trace-derived-evaluation-field-contract.md)
+
+## agentic-engineering
+
+- [Agent Instruction Placement by Scope](../concepts/llm-engineering/agent-instruction-placement-by-scope.md)
+- [Agentic Engineering Total-Cost Curve](../concepts/llm-engineering/agentic-engineering-tco-curve.md)
+- [Agentic Security Response Triad](../concepts/llm-engineering/agentic-security-response-triad.md)
+- [Agentic Software Factory Model](../concepts/llm-engineering/agentic-software-factory-model.md)
+- [AI-Compressed Software Development Lifecycle](../concepts/llm-engineering/ai-compressed-sdlc.md)
+- [Approval-Fatigue-Resistant Agent Oversight](../concepts/llm-engineering/approval-fatigue-resistant-agent-oversight.md)
+- [Coding Agent Harness Engineering](../concepts/llm-engineering/coding-agent-harness-engineering.md)
+- [Conductor and Orchestrator Developer Modes](../concepts/llm-engineering/conductor-orchestrator-developer-modes.md)
+- [Context Engineering for Coding Agents](../concepts/llm-engineering/context-engineering-for-coding-agents.md)
+- [Effective Trust for Agents](../concepts/llm-engineering/effective-trust-for-agents.md)
+- [Executable Specification as an Architectural North Star](../concepts/llm-engineering/executable-specification-as-architectural-north-star.md)
+- [Execution-Mode-Specific Agent Prompting](../concepts/llm-engineering/execution-mode-specific-agent-prompting.md)
+- [Static vs. Dynamic Agent Context](../concepts/llm-engineering/static-vs-dynamic-agent-context.md)
+- [The 80% Problem in Agentic Coding](../concepts/llm-engineering/agentic-coding-80-percent-problem.md)
+- [Tiered Continuous Code Review Runtime](../concepts/llm-engineering/tiered-continuous-code-review-runtime.md)
+- [Vibe Coding to Agentic Engineering Spectrum](../concepts/llm-engineering/vibe-coding-to-agentic-engineering-spectrum.md)
+
+## agentic-workflows
+
+- [Agent-Centered Workflow Redesign](../concepts/ai-transformation/agent-centered-workflow-redesign.md)
+- [Agentic Workflow Complexity Ladder](../concepts/ai-transformation/agentic-workflow-complexity-ladder.md)
 
 ## agents
 
-- [iterative-adversarial-testing-loop](../concepts/llm-engineering/iterative-adversarial-testing-loop.md) - Iterative Adversarial Testing Loop
-- [trace-aware-agent-evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md) - Trace-Aware Agent Evaluation
-- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
-- [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
-- [langgraph-channels-and-reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md) - LangGraph Channels and Reducers
-- [langgraph-runtime-dependency-injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md) - LangGraph Runtime Dependency Injection
-- [langgraph-send-command-control-flow](../concepts/llm-engineering/langgraph-send-command-control-flow.md) - LangGraph Send and Command Control Flow
-- [langgraph-toolnode-prebuilt-components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) - LangGraph ToolNode and Prebuilt Components
-- [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
-- [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
+- [Agent Loop Termination Policy](../concepts/llm-engineering/agent-loop-termination-policy.md)
+- [Agentic Workflow Span Hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md)
+- [Artifact-Based Agent Handoffs](../concepts/llm-engineering/artifact-based-agent-handoffs.md)
+- [Bounded Agent Cognitive State](../concepts/llm-engineering/bounded-agent-cognitive-state.md)
+- [Chain-of-Thought Reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md)
+- [Code-as-Action Agent Loop](../concepts/llm-engineering/code-as-action-agent-loop.md)
+- [Context-Rot-Aware Context Management](../concepts/llm-engineering/context-rot-aware-context-management.md)
+- [Iterative Adversarial Testing Loop](../concepts/llm-engineering/iterative-adversarial-testing-loop.md)
+- [LangGraph Channels and Reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md)
+- [LangGraph Runtime Dependency Injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md)
+- [LangGraph Send and Command Control Flow](../concepts/llm-engineering/langgraph-send-command-control-flow.md)
+- [LangGraph ToolNode and Prebuilt Components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md)
+- [Layered Agent Memory](../concepts/llm-engineering/layered-agent-memory.md)
+- [LLM Program Distillation](../concepts/llm-engineering/llm-program-distillation.md)
+- [ReAct Agentic Loop](../concepts/llm-engineering/react-agentic-loop.md)
+- [Trace-Aware Agent Evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md)
+- [Untrusted Content Isolation for Agents](../concepts/llm-engineering/untrusted-content-isolation-for-agents.md)
+
+## ai-adoption
+
+- [Cross-Functional AI Center of Excellence](../concepts/ai-transformation/cross-functional-ai-center-of-excellence.md)
+- [Enterprise AI Change-Champion Network](../concepts/ai-transformation/enterprise-ai-change-champion-network.md)
+- [Human-Agent Work Redesign Metrics](../concepts/ai-transformation/human-agent-work-redesign-metrics.md)
+- [Multidimensional AI Pilot Scorecard](../concepts/ai-transformation/multidimensional-ai-pilot-scorecard.md)
 
 ## ai-agent
 
-- [acp-agent-backend-for-ides](../concepts/llm-engineering/acp-agent-backend-for-ides.md) - ACP Agent Backend for IDEs
-- [agent-space-access-boundary](../concepts/llm-engineering/agent-space-access-boundary.md) - Agent Space Access Boundary
-- [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
-- [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
-- [persistent-agent-session-restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md) - Persistent Agent Session Restoration
-- [probabilistic-toolset-distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md) - Probabilistic Toolset Distributions
-- [protocol-based-agent-access-surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md) - Protocol-Based Agent Access Surface
-- [self-improving-agent-skill-memory-loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md) - Self-Improving Agent Skill Memory Loop
-- [surgical-context-compression](../concepts/llm-engineering/surgical-context-compression.md) - Surgical Context Compression
-- [toolsets-and-mcp-unified-tool-surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) - Toolsets and MCP Unified Tool Surface
+- [ACP Agent Backend for IDEs](../concepts/llm-engineering/acp-agent-backend-for-ides.md)
+- [Agent Space Access Boundary](../concepts/llm-engineering/agent-space-access-boundary.md)
+- [Agent Specialization as a Scaling Mechanism](../concepts/llm-engineering/agent-specialization-as-scaling-mechanism.md)
+- [Multi-Platform Agent Gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md)
+- [Natural-Language Cron Agent Automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md)
+- [Persistent Agent Session Restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md)
+- [Probabilistic Toolset Distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md)
+- [Protocol-Based Agent Access Surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md)
+- [Self-Improving Agent Skill Memory Loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md)
+- [Surgical Context Compression](../concepts/llm-engineering/surgical-context-compression.md)
+- [Toolsets and MCP Unified Tool Surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md)
+
+## ai-governance
+
+- [Cross-Functional AI Steering Committee](../concepts/ai-transformation/cross-functional-ai-steering-committee.md)
+- [Enterprise AI Governance Framework](../concepts/ai-transformation/enterprise-ai-governance-framework.md)
+
+## ai-pilots
+
+- [Business-Outcome-Aligned AI Use-Case Selection](../concepts/ai-transformation/business-outcome-aligned-ai-use-case-selection.md)
+- [Enterprise AI Transformation Stages](../concepts/ai-transformation/enterprise-ai-transformation-stages.md)
+- [Multidimensional AI Pilot Scorecard](../concepts/ai-transformation/multidimensional-ai-pilot-scorecard.md)
+- [Risk-Bounded AI Pilot Design](../concepts/ai-transformation/risk-bounded-ai-pilot-design.md)
+
+## ai-training
+
+- [Role-Based AI Capability Building](../concepts/ai-transformation/role-based-ai-capability-building.md)
+
+## ai-transformation
+
+- [Enterprise AI Transformation Stages](../concepts/ai-transformation/enterprise-ai-transformation-stages.md)
 
 ## analytics
 
-- [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability
-- [oltp-olap-split](../concepts/llm-engineering/oltp-olap-split.md) - OLTP/OLAP Database Split
+- [LLM Observability](../concepts/llm-engineering/llm-observability.md)
+- [OLTP/OLAP Database Split](../concepts/llm-engineering/oltp-olap-split.md)
 
 ## architecture
 
-- [model-agnostic-evaluation-provider-abstraction](../concepts/llm-engineering/model-agnostic-evaluation-provider-abstraction.md) - Model-Agnostic Evaluation Provider Abstraction
-- [adapter-based-llm-optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md) - Adapter-Based LLM Optimization
-- [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
-- [microservices](../concepts/system-design/microservices.md) - Microservices Architecture
-- [oltp-olap-split](../concepts/llm-engineering/oltp-olap-split.md) - OLTP/OLAP Database Split
-- [system-aware-candidate-merge](../concepts/llm-engineering/system-aware-candidate-merge.md) - System-Aware Candidate Merge
+- [A2UI Layout Ownership Patterns](../concepts/llm-engineering/a2ui-layout-ownership-patterns.md)
+- [Adapter-Based LLM Optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md)
+- [Agent Specialization as a Scaling Mechanism](../concepts/llm-engineering/agent-specialization-as-scaling-mechanism.md)
+- [DSPy Module Composition](../concepts/llm-engineering/dspy-module-composition.md)
+- [Microservices Architecture](../concepts/system-design/microservices.md)
+- [Model-Agnostic Evaluation Provider Abstraction](../concepts/llm-engineering/model-agnostic-evaluation-provider-abstraction.md)
+- [OLTP/OLAP Database Split](../concepts/llm-engineering/oltp-olap-split.md)
+- [System-Aware Candidate Merge](../concepts/llm-engineering/system-aware-candidate-merge.md)
+
+## async-agents
+
+- [Health-Probe-Driven Task Liveness](../concepts/llm-engineering/health-probe-driven-task-liveness.md)
 
 ## async-processing
 
-- [s3-first-durability](../concepts/llm-engineering/s3-first-durability.md) - S3-First Durability Pattern
+- [S3-First Durability Pattern](../concepts/llm-engineering/s3-first-durability.md)
+
+## authorization
+
+- [Cedar Policy Gateway Authorization](../concepts/llm-engineering/cedar-policy-gateway-authorization.md)
+- [Context-Aware Approval for High-Stakes Agent Actions](../concepts/llm-engineering/context-aware-high-stakes-agent-approval.md)
+- [Hybrid Agent Policy Gating](../concepts/llm-engineering/hybrid-agent-policy-gating.md)
+- [Shadow-Mode Policy Testing with Decision-Flip Telemetry](../concepts/llm-engineering/shadow-mode-policy-testing-with-decision-flip-telemetry.md)
+- [Temporal Session-Aware Policy Conditions](../concepts/llm-engineering/temporal-session-aware-policy-conditions.md)
+- [Zero Ambient Authority for Agents](../concepts/llm-engineering/zero-ambient-authority-for-agents.md)
 
 ## automation
 
-- [acp-agent-backend-for-ides](../concepts/llm-engineering/acp-agent-backend-for-ides.md) - ACP Agent Backend for IDEs
-- [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
-- [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
-- [persistent-agent-session-restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md) - Persistent Agent Session Restoration
-- [probabilistic-toolset-distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md) - Probabilistic Toolset Distributions
-- [self-improving-agent-skill-memory-loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md) - Self-Improving Agent Skill Memory Loop
-- [surgical-context-compression](../concepts/llm-engineering/surgical-context-compression.md) - Surgical Context Compression
-- [toolsets-and-mcp-unified-tool-surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) - Toolsets and MCP Unified Tool Surface
+- [ACP Agent Backend for IDEs](../concepts/llm-engineering/acp-agent-backend-for-ides.md)
+- [Multi-Platform Agent Gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md)
+- [Natural-Language Cron Agent Automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md)
+- [Persistent Agent Session Restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md)
+- [Probabilistic Toolset Distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md)
+- [Self-Improving Agent Skill Memory Loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md)
+- [Surgical Context Compression](../concepts/llm-engineering/surgical-context-compression.md)
+- [Toolsets and MCP Unified Tool Surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md)
 
 ## aws
 
-- [agent-space-access-boundary](../concepts/llm-engineering/agent-space-access-boundary.md) - Agent Space Access Boundary
-- [autonomous-incident-investigation](../concepts/llm-engineering/autonomous-incident-investigation.md) - Autonomous Incident Investigation
-- [change-specific-release-testing](../concepts/llm-engineering/change-specific-release-testing.md) - Change-Specific Release Testing
-- [devops-agent-topology-context](../concepts/llm-engineering/devops-agent-topology-context.md) - DevOps Agent Topology Context
-- [learned-operational-knowledge-files](../concepts/llm-engineering/learned-operational-knowledge-files.md) - Learned Operational Knowledge Files
-- [proactive-incident-prevention-loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md) - Proactive Incident Prevention Loop
-- [protocol-based-agent-access-surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md) - Protocol-Based Agent Access Surface
-- [release-readiness-blast-radius-review](../concepts/llm-engineering/release-readiness-blast-radius-review.md) - Release Readiness Blast-Radius Review
+- [Agent Resource Registry Governance](../concepts/llm-engineering/agent-resource-registry-governance.md)
+- [Agent Space Access Boundary](../concepts/llm-engineering/agent-space-access-boundary.md)
+- [AgentCore A2A Protocol Contract](../concepts/llm-engineering/agentcore-a2a-protocol-contract.md)
+- [AgentCore External-Agent Observability Onboarding](../concepts/llm-engineering/agentcore-external-agent-observability-onboarding.md)
+- [AgentCore Harness vs. Runtime Tradeoff](../concepts/llm-engineering/agentcore-harness-vs-runtime-tradeoff.md)
+- [AgentCore Insights Triage-to-Optimization Loop](../concepts/llm-engineering/agentcore-insights-triage-loop.md)
+- [AgentCore Managed-Service Telemetry Defaults](../concepts/llm-engineering/agentcore-managed-service-telemetry-defaults.md)
+- [AgentCore Session-Trace-Span Hierarchy](../concepts/llm-engineering/agentcore-session-trace-span-hierarchy.md)
+- [AgentCore Trust-Boundary Hardening](../concepts/llm-engineering/agentcore-trust-boundary-hardening.md)
+- [Autonomous Incident Investigation](../concepts/llm-engineering/autonomous-incident-investigation.md)
+- [Cedar Policy Gateway Authorization](../concepts/llm-engineering/cedar-policy-gateway-authorization.md)
+- [Change-Specific Release Testing](../concepts/llm-engineering/change-specific-release-testing.md)
+- [Config-Bundle A/B Testing for Agent Behavior](../concepts/llm-engineering/config-bundle-ab-testing-for-agent-behavior.md)
+- [Continuous Online Agent Evaluation](../concepts/llm-engineering/continuous-online-agent-evaluation.md)
+- [Cross-Account Memory Resource Sharing](../concepts/llm-engineering/cross-account-memory-resource-sharing.md)
+- [Cross-Account Observability Aggregation](../concepts/llm-engineering/cross-account-observability-aggregation.md)
+- [DevOps Agent Topology Context](../concepts/llm-engineering/devops-agent-topology-context.md)
+- [GenAI Observability Dashboard Abstraction](../concepts/llm-engineering/genai-observability-dashboard-abstraction.md)
+- [Harness Cost Attribution and Hard Limits](../concepts/llm-engineering/harness-cost-attribution-and-hard-limits.md)
+- [Health-Probe-Driven Task Liveness](../concepts/llm-engineering/health-probe-driven-task-liveness.md)
+- [Immutable Versioned Endpoints for Agent Config](../concepts/llm-engineering/immutable-versioned-endpoints-for-agent-config.md)
+- [Learned Operational Knowledge Files](../concepts/llm-engineering/learned-operational-knowledge-files.md)
+- [Long-Term Memory vs. RAG Boundary](../concepts/llm-engineering/long-term-memory-vs-rag-boundary.md)
+- [Memory Namespace Multi-Tenant Isolation](../concepts/llm-engineering/memory-namespace-multi-tenant-isolation.md)
+- [Memory Poisoning Defense in Agent Systems](../concepts/llm-engineering/memory-poisoning-defense-in-agent-systems.md)
+- [microVM Session Isolation and Lifecycle](../concepts/llm-engineering/microvm-session-isolation-lifecycle.md)
+- [Multi-Dimension Rate Limiting with Fail-Open Defaults](../concepts/llm-engineering/multi-dimension-rate-limiting-with-fail-open.md)
+- [Proactive Incident Prevention Loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md)
+- [Protocol-Based Agent Access Surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md)
+- [Release Readiness Blast-Radius Review](../concepts/llm-engineering/release-readiness-blast-radius-review.md)
+- [Shadow-Mode Policy Testing with Decision-Flip Telemetry](../concepts/llm-engineering/shadow-mode-policy-testing-with-decision-flip-telemetry.md)
+- [Structured Payload Injection via Type Confusion](../concepts/llm-engineering/structured-payload-injection-via-type-confusion.md)
+- [Temporal Session-Aware Policy Conditions](../concepts/llm-engineering/temporal-session-aware-policy-conditions.md)
+- [Trace-Derived Evaluation Field Contract](../concepts/llm-engineering/trace-derived-evaluation-field-contract.md)
+
+## build-vs-buy
+
+- [Hybrid Agent Build Strategy](../concepts/ai-transformation/hybrid-agent-build-strategy.md)
+
+## business-value
+
+- [Business-Outcome-Aligned AI Use-Case Selection](../concepts/ai-transformation/business-outcome-aligned-ai-use-case-selection.md)
+
+## capability-building
+
+- [Role-Based AI Capability Building](../concepts/ai-transformation/role-based-ai-capability-building.md)
 
 ## car-repair
 
-- [busted-informal-broken](../concepts/english/busted-informal-broken.md) - Busted as Informal Broken
-- [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
-- [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
-- [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
+- [Busted as Informal Broken](../concepts/english/busted-informal-broken.md)
+- [Car Repair Cost and Waiting Phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md)
+- [Car Repair Vocabulary](../concepts/english/car-repair-vocabulary.md)
+- [Pop the Hood](../concepts/english/pop-the-hood-phrase.md)
 
 ## cars
 
-- [busted-informal-broken](../concepts/english/busted-informal-broken.md) - Busted as Informal Broken
-- [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
-- [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
-- [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
-- [take-apart-put-back-together](../concepts/english/take-apart-put-back-together.md) - Take Apart and Put Back Together
+- [Busted as Informal Broken](../concepts/english/busted-informal-broken.md)
+- [Car Repair Cost and Waiting Phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md)
+- [Car Repair Vocabulary](../concepts/english/car-repair-vocabulary.md)
+- [Phrasal Verb: Die On Me](../concepts/english/die-on-phrasal-verb.md)
+- [Pop the Hood](../concepts/english/pop-the-hood-phrase.md)
+- [Take Apart and Put Back Together](../concepts/english/take-apart-put-back-together.md)
+
+## center-of-excellence
+
+- [Cross-Functional AI Center of Excellence](../concepts/ai-transformation/cross-functional-ai-center-of-excellence.md)
 
 ## chain-of-thought
 
-- [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
-- [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
+- [Chain-of-Thought Reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md)
+- [LLM Program Distillation](../concepts/llm-engineering/llm-program-distillation.md)
+
+## change-management
+
+- [Enterprise AI Change-Champion Network](../concepts/ai-transformation/enterprise-ai-change-champion-network.md)
+- [Risk-Bounded AI Pilot Design](../concepts/ai-transformation/risk-bounded-ai-pilot-design.md)
+- [Role-Based AI Capability Building](../concepts/ai-transformation/role-based-ai-capability-building.md)
+
+## coding-agents
+
+- [Agent Instruction Placement by Scope](../concepts/llm-engineering/agent-instruction-placement-by-scope.md)
+- [Agentic Engineering Total-Cost Curve](../concepts/llm-engineering/agentic-engineering-tco-curve.md)
+- [Agentic Security Response Triad](../concepts/llm-engineering/agentic-security-response-triad.md)
+- [Agentic Software Factory Model](../concepts/llm-engineering/agentic-software-factory-model.md)
+- [AI-Compressed Software Development Lifecycle](../concepts/llm-engineering/ai-compressed-sdlc.md)
+- [Approval-Fatigue-Resistant Agent Oversight](../concepts/llm-engineering/approval-fatigue-resistant-agent-oversight.md)
+- [Coding Agent Harness Engineering](../concepts/llm-engineering/coding-agent-harness-engineering.md)
+- [Conductor and Orchestrator Developer Modes](../concepts/llm-engineering/conductor-orchestrator-developer-modes.md)
+- [Context Engineering for Coding Agents](../concepts/llm-engineering/context-engineering-for-coding-agents.md)
+- [Context-Aware Approval for High-Stakes Agent Actions](../concepts/llm-engineering/context-aware-high-stakes-agent-approval.md)
+- [Effective Trust for Agents](../concepts/llm-engineering/effective-trust-for-agents.md)
+- [Ephemeral Agent Execution Sandbox](../concepts/llm-engineering/ephemeral-agent-execution-sandbox.md)
+- [Executable Specification as an Architectural North Star](../concepts/llm-engineering/executable-specification-as-architectural-north-star.md)
+- [Execution-Mode-Specific Agent Prompting](../concepts/llm-engineering/execution-mode-specific-agent-prompting.md)
+- [Hallucinated-Package Slopsquatting Defense](../concepts/llm-engineering/hallucinated-package-slopsquatting-defense.md)
+- [Hybrid Agent Policy Gating](../concepts/llm-engineering/hybrid-agent-policy-gating.md)
+- [Multidimensional Coding-Agent Evaluation](../concepts/llm-engineering/multidimensional-coding-agent-evaluation.md)
+- [Risk-Focused High-Velocity Code Review](../concepts/llm-engineering/risk-focused-high-velocity-code-review.md)
+- [Runtime Agent Bill of Materials](../concepts/llm-engineering/runtime-agent-bill-of-materials.md)
+- [Session Convergence Evaluation](../concepts/llm-engineering/session-convergence-evaluation.md)
+- [Static vs. Dynamic Agent Context](../concepts/llm-engineering/static-vs-dynamic-agent-context.md)
+- [The 80% Problem in Agentic Coding](../concepts/llm-engineering/agentic-coding-80-percent-problem.md)
+- [Tiered Continuous Code Review Runtime](../concepts/llm-engineering/tiered-continuous-code-review-runtime.md)
+- [Underspecification Gap in Agent Evaluation](../concepts/llm-engineering/underspecification-gap-in-agent-evaluation.md)
+- [Vibe Coding to Agentic Engineering Spectrum](../concepts/llm-engineering/vibe-coding-to-agentic-engineering-spectrum.md)
+- [Zero Ambient Authority for Agents](../concepts/llm-engineering/zero-ambient-authority-for-agents.md)
 
 ## collector
 
-- [collector-authentication-extensions](../concepts/observability/collector-authentication-extensions.md) - Collector Authentication Extensions
-- [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
-- [collector-configuration-providers](../concepts/observability/collector-configuration-providers.md) - Collector Configuration Providers and Resolution
-- [collector-connectors](../concepts/observability/collector-connectors.md) - OpenTelemetry Collector Connectors
-- [collector-exporter-resilience](../concepts/observability/collector-exporter-resilience.md) - Collector Exporter Resilience
-- [collector-extensions](../concepts/observability/collector-extensions.md) - OpenTelemetry Collector Extensions
-- [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
-- [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
-- [collector-resource-detection-and-enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md) - Collector Resource Detection and Enrichment
-- [collector-storage-extensions](../concepts/observability/collector-storage-extensions.md) - Collector Storage Extensions
-- [kubernetes-collector-placement-modes](../concepts/observability/kubernetes-collector-placement-modes.md) - Kubernetes Collector Placement Modes
-- [metadata-driven-component-stability](../concepts/observability/metadata-driven-component-stability.md) - Metadata-Driven Component Stability
-- [observer-driven-dynamic-receivers](../concepts/observability/observer-driven-dynamic-receivers.md) - Observer-Driven Dynamic Receivers
-- [opamp-supervised-collector-fleet-management](../concepts/observability/opamp-supervised-collector-fleet-management.md) - OpAMP-Supervised Collector Fleet Management
-- [opentelemetry-collector-builder-distributions](../concepts/observability/opentelemetry-collector-builder-distributions.md) - Custom Distributions with the OpenTelemetry Collector Builder
-- [ottl-declarative-telemetry-transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md) - OTTL Declarative Telemetry Transformation
+- [Collector Authentication Extensions](../concepts/observability/collector-authentication-extensions.md)
+- [Collector Component Factory and Lifecycle](../concepts/observability/collector-component-factory-lifecycle.md)
+- [Collector Configuration Providers and Resolution](../concepts/observability/collector-configuration-providers.md)
+- [Collector Exporter Resilience](../concepts/observability/collector-exporter-resilience.md)
+- [Collector pdata Ownership at Fan-Out](../concepts/observability/collector-pdata-ownership-at-fanout.md)
+- [Collector Resource Detection and Enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md)
+- [Collector Storage Extensions](../concepts/observability/collector-storage-extensions.md)
+- [Custom Distributions with the OpenTelemetry Collector Builder](../concepts/observability/opentelemetry-collector-builder-distributions.md)
+- [Kubernetes Collector Placement Modes](../concepts/observability/kubernetes-collector-placement-modes.md)
+- [Metadata-Driven Component Stability](../concepts/observability/metadata-driven-component-stability.md)
+- [Observer-Driven Dynamic Receivers](../concepts/observability/observer-driven-dynamic-receivers.md)
+- [OpAMP-Supervised Collector Fleet Management](../concepts/observability/opamp-supervised-collector-fleet-management.md)
+- [OpenTelemetry Collector Connectors](../concepts/observability/collector-connectors.md)
+- [OpenTelemetry Collector Extensions](../concepts/observability/collector-extensions.md)
+- [OpenTelemetry Collector Pipeline Architecture](../concepts/observability/collector-pipeline-architecture.md)
+- [OTTL Declarative Telemetry Transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md)
 
 ## comedy
 
-- [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
-- [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
-- [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
-- [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
-- [stand-up-comedy-vocabulary](../concepts/english/stand-up-comedy-vocabulary.md) - Stand-up Comedy Vocabulary
+- [Clean Jokes and Cultural Register](../concepts/english/clean-jokes-cultural-register.md)
+- [English Pun Jokes and Wordplay](../concepts/english/english-pun-jokes-wordplay.md)
+- [Heckler and Tough Crowd](../concepts/english/heckler-and-tough-crowd.md)
+- [Open Mic Night Vocabulary](../concepts/english/open-mic-night-vocabulary.md)
+- [Stand-up Comedy Vocabulary](../concepts/english/stand-up-comedy-vocabulary.md)
 
 ## compliance
 
-- [up-to-code-phrase](../concepts/english/up-to-code-phrase.md) - Up to Code Phrase
+- [Enterprise AI Governance Framework](../concepts/ai-transformation/enterprise-ai-governance-framework.md)
+- [Up to Code Phrase](../concepts/english/up-to-code-phrase.md)
 
 ## construction
 
-- [construction-plans-vocabulary](../concepts/english/construction-plans-vocabulary.md) - Construction Plans Vocabulary
-- [deck-backyard-platform-vocabulary](../concepts/english/deck-backyard-platform-vocabulary.md) - Deck as Backyard Platform Vocabulary
-- [up-to-code-phrase](../concepts/english/up-to-code-phrase.md) - Up to Code Phrase
+- [Construction Plans Vocabulary](../concepts/english/construction-plans-vocabulary.md)
+- [Deck as Backyard Platform Vocabulary](../concepts/english/deck-backyard-platform-vocabulary.md)
+- [Up to Code Phrase](../concepts/english/up-to-code-phrase.md)
+
+## context-engineering
+
+- [Agent Instruction Placement by Scope](../concepts/llm-engineering/agent-instruction-placement-by-scope.md)
+- [Agent Skill Evaluation Coverage](../concepts/llm-engineering/agent-skill-evaluation-coverage.md)
+- [Agent-Ready Context Infrastructure](../concepts/ai-transformation/agent-ready-context-infrastructure.md)
+- [Bounded Agent Cognitive State](../concepts/llm-engineering/bounded-agent-cognitive-state.md)
+- [Context-Rot-Aware Context Management](../concepts/llm-engineering/context-rot-aware-context-management.md)
+- [Progressive Disclosure for Agent Skills](../concepts/llm-engineering/agent-skill-progressive-disclosure.md)
+- [Skill Description as a Routing Interface](../concepts/llm-engineering/skill-description-as-routing-interface.md)
 
 ## conversation
 
-- [busted-informal-broken](../concepts/english/busted-informal-broken.md) - Busted as Informal Broken
-- [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
-- [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
-- [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
-- [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
-- [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
-- [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
-- [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
-- [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
-- [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
-- [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
-- [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
-- [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
-- [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
-- [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
-- [ripped-informal-body-description](../concepts/english/ripped-informal-body-description.md) - Ripped as Informal Body Description
-- [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
-- [stand-up-comedy-vocabulary](../concepts/english/stand-up-comedy-vocabulary.md) - Stand-up Comedy Vocabulary
-- [take-apart-put-back-together](../concepts/english/take-apart-put-back-together.md) - Take Apart and Put Back Together
-- [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
+- [Busted as Informal Broken](../concepts/english/busted-informal-broken.md)
+- [Car Repair Cost and Waiting Phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md)
+- [Car Repair Vocabulary](../concepts/english/car-repair-vocabulary.md)
+- [Clean Jokes and Cultural Register](../concepts/english/clean-jokes-cultural-register.md)
+- [Cut Down vs Quit](../concepts/english/cut-down-vs-quit.md)
+- [English Pun Jokes and Wordplay](../concepts/english/english-pun-jokes-wordplay.md)
+- [Gym Workout Vocabulary](../concepts/english/gym-workout-vocabulary.md)
+- [Heckler and Tough Crowd](../concepts/english/heckler-and-tough-crowd.md)
+- [I Know How It Is](../concepts/english/know-how-it-is-empathy-phrase.md)
+- [Idiom: Go Cold Turkey](../concepts/english/cold-turkey-idiom.md)
+- [Muscle Tone, Definition, and Physique](../concepts/english/muscle-tone-definition-physique.md)
+- [No Smoking Polite Notices](../concepts/english/no-smoking-polite-notices.md)
+- [Open Mic Night Vocabulary](../concepts/english/open-mic-night-vocabulary.md)
+- [Phrasal Verb: Crack Down On](../concepts/english/crack-down-phrasal-verb.md)
+- [Phrasal Verb: Die On Me](../concepts/english/die-on-phrasal-verb.md)
+- [Pop the Hood](../concepts/english/pop-the-hood-phrase.md)
+- [Pull a Muscle Safety Phrase](../concepts/english/pull-a-muscle-safety-phrase.md)
+- [Reps and Sets](../concepts/english/reps-and-sets.md)
+- [Ripped as Informal Body Description](../concepts/english/ripped-informal-body-description.md)
+- [Smoking Cessation Vocabulary](../concepts/english/smoking-cessation-vocabulary.md)
+- [Stand-up Comedy Vocabulary](../concepts/english/stand-up-comedy-vocabulary.md)
+- [Take Apart and Put Back Together](../concepts/english/take-apart-put-back-together.md)
+- [Willpower and Urge Vocabulary](../concepts/english/willpower-and-urge-vocabulary.md)
+
+## cost-management
+
+- [Harness Cost Attribution and Hard Limits](../concepts/llm-engineering/harness-cost-attribution-and-hard-limits.md)
+
+## cross-functional
+
+- [Cross-Functional AI Steering Committee](../concepts/ai-transformation/cross-functional-ai-steering-committee.md)
+
+## data-infrastructure
+
+- [Agent-Ready Context Infrastructure](../concepts/ai-transformation/agent-ready-context-infrastructure.md)
 
 ## databases
 
-- [database-replication](../concepts/system-design/database-replication.md) - Database Replication
-- [database-sharding](../concepts/system-design/database-sharding.md) - Database Sharding
-- [oltp-olap-split](../concepts/llm-engineering/oltp-olap-split.md) - OLTP/OLAP Database Split
+- [Database Replication](../concepts/system-design/database-replication.md)
+- [Database Sharding](../concepts/system-design/database-sharding.md)
+- [OLTP/OLAP Database Split](../concepts/llm-engineering/oltp-olap-split.md)
+
+## dependencies
+
+- [Hallucinated-Package Slopsquatting Defense](../concepts/llm-engineering/hallucinated-package-slopsquatting-defense.md)
 
 ## deployment
 
-- [langgraph-remotegraph-server-execution](../concepts/llm-engineering/langgraph-remotegraph-server-execution.md) - LangGraph RemoteGraph and Server Execution
-- [prompt-version-management](../concepts/llm-engineering/prompt-version-management.md) - Prompt Version Management
+- [Immutable Versioned Endpoints for Agent Config](../concepts/llm-engineering/immutable-versioned-endpoints-for-agent-config.md)
+- [LangGraph RemoteGraph and Server Execution](../concepts/llm-engineering/langgraph-remotegraph-server-execution.md)
+- [Prompt Version Management](../concepts/llm-engineering/prompt-version-management.md)
 
 ## devops-agent
 
-- [agent-space-access-boundary](../concepts/llm-engineering/agent-space-access-boundary.md) - Agent Space Access Boundary
-- [autonomous-incident-investigation](../concepts/llm-engineering/autonomous-incident-investigation.md) - Autonomous Incident Investigation
-- [change-specific-release-testing](../concepts/llm-engineering/change-specific-release-testing.md) - Change-Specific Release Testing
-- [devops-agent-topology-context](../concepts/llm-engineering/devops-agent-topology-context.md) - DevOps Agent Topology Context
-- [learned-operational-knowledge-files](../concepts/llm-engineering/learned-operational-knowledge-files.md) - Learned Operational Knowledge Files
-- [proactive-incident-prevention-loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md) - Proactive Incident Prevention Loop
-- [protocol-based-agent-access-surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md) - Protocol-Based Agent Access Surface
-- [release-readiness-blast-radius-review](../concepts/llm-engineering/release-readiness-blast-radius-review.md) - Release Readiness Blast-Radius Review
+- [Agent Space Access Boundary](../concepts/llm-engineering/agent-space-access-boundary.md)
+- [Autonomous Incident Investigation](../concepts/llm-engineering/autonomous-incident-investigation.md)
+- [Change-Specific Release Testing](../concepts/llm-engineering/change-specific-release-testing.md)
+- [DevOps Agent Topology Context](../concepts/llm-engineering/devops-agent-topology-context.md)
+- [Learned Operational Knowledge Files](../concepts/llm-engineering/learned-operational-knowledge-files.md)
+- [Proactive Incident Prevention Loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md)
+- [Protocol-Based Agent Access Surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md)
+- [Release Readiness Blast-Radius Review](../concepts/llm-engineering/release-readiness-blast-radius-review.md)
 
 ## distributed-systems
 
-- [cap-theorem](../concepts/system-design/cap-theorem.md) - CAP Theorem
-- [consistent-probability-sampling](../concepts/observability/consistent-probability-sampling.md) - Consistent Probability Sampling
-- [context-propagation-with-carriers](../concepts/observability/context-propagation-with-carriers.md) - Context Propagation with Carriers
-- [eventual-consistency](../concepts/system-design/eventual-consistency.md) - Eventual Consistency
-- [otlp-vendor-neutral-telemetry-protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md) - OTLP as a Vendor-Neutral Telemetry Protocol
-- [resource-bound-telemetry-identity](../concepts/observability/resource-bound-telemetry-identity.md) - Resource-Bound Telemetry Identity
-- [semantic-conventions-as-telemetry-schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md) - Semantic Conventions as Telemetry Schema
+- [CAP Theorem](../concepts/system-design/cap-theorem.md)
+- [Consistent Probability Sampling](../concepts/observability/consistent-probability-sampling.md)
+- [Context Propagation with Carriers](../concepts/observability/context-propagation-with-carriers.md)
+- [Eventual Consistency](../concepts/system-design/eventual-consistency.md)
+- [OTLP as a Vendor-Neutral Telemetry Protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md)
+- [Resource-Bound Telemetry Identity](../concepts/observability/resource-bound-telemetry-identity.md)
+- [Semantic Conventions as Telemetry Schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md)
 
 ## dspy
 
-- [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
-- [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures
-- [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping
-- [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
-- [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
+- [DSPy Module Composition](../concepts/llm-engineering/dspy-module-composition.md)
+- [DSPy Signatures](../concepts/llm-engineering/dspy-signatures.md)
+- [Few-Shot Bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md)
+- [Metric-Driven LLM Optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md)
+- [ReAct Agentic Loop](../concepts/llm-engineering/react-agentic-loop.md)
 
 ## durability
 
-- [langgraph-checkpoint-time-travel-forking](../concepts/llm-engineering/langgraph-checkpoint-time-travel-forking.md) - LangGraph Checkpoint Time Travel and Forking
-- [langgraph-human-in-the-loop-interrupts](../concepts/llm-engineering/langgraph-human-in-the-loop-interrupts.md) - LangGraph Human-in-the-Loop Interrupts
-- [s3-first-durability](../concepts/llm-engineering/s3-first-durability.md) - S3-First Durability Pattern
+- [LangGraph Checkpoint Time Travel and Forking](../concepts/llm-engineering/langgraph-checkpoint-time-travel-forking.md)
+- [LangGraph Human-in-the-Loop Interrupts](../concepts/llm-engineering/langgraph-human-in-the-loop-interrupts.md)
+- [S3-First Durability Pattern](../concepts/llm-engineering/s3-first-durability.md)
+
+## edge-cases
+
+- [The 80% Problem in Agentic Coding](../concepts/llm-engineering/agentic-coding-80-percent-problem.md)
 
 ## english
 
-- [busted-informal-broken](../concepts/english/busted-informal-broken.md) - Busted as Informal Broken
-- [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
-- [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
-- [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
-- [construction-plans-vocabulary](../concepts/english/construction-plans-vocabulary.md) - Construction Plans Vocabulary
-- [construction-tools-vocabulary](../concepts/english/construction-tools-vocabulary.md) - Construction Tools Vocabulary
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
-- [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
-- [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
-- [deck-backyard-platform-vocabulary](../concepts/english/deck-backyard-platform-vocabulary.md) - Deck as Backyard Platform Vocabulary
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
-- [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
-- [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb
-- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
-- [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
-- [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
-- [its-not-my-day-idiom](../concepts/english/its-not-my-day-idiom.md) - Idiom: It's Not My Day
-- [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
-- [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
-- [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
-- [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
-- [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
-- [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
-- [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
-- [ripped-informal-body-description](../concepts/english/ripped-informal-body-description.md) - Ripped as Informal Body Description
-- [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb
-- [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
-- [stand-up-comedy-vocabulary](../concepts/english/stand-up-comedy-vocabulary.md) - Stand-up Comedy Vocabulary
-- [supermarket-checkout-vocabulary](../concepts/english/supermarket-checkout-vocabulary.md) - Supermarket Checkout Vocabulary
-- [take-apart-put-back-together](../concepts/english/take-apart-put-back-together.md) - Take Apart and Put Back Together
-- [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
-- [up-to-code-phrase](../concepts/english/up-to-code-phrase.md) - Up to Code Phrase
-- [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
+- [Busted as Informal Broken](../concepts/english/busted-informal-broken.md)
+- [Car Repair Cost and Waiting Phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md)
+- [Car Repair Vocabulary](../concepts/english/car-repair-vocabulary.md)
+- [Clean Jokes and Cultural Register](../concepts/english/clean-jokes-cultural-register.md)
+- [Construction Plans Vocabulary](../concepts/english/construction-plans-vocabulary.md)
+- [Construction Tools Vocabulary](../concepts/english/construction-tools-vocabulary.md)
+- [Cut Down vs Quit](../concepts/english/cut-down-vs-quit.md)
+- [Deck as Backyard Platform Vocabulary](../concepts/english/deck-backyard-platform-vocabulary.md)
+- [English Pun Jokes and Wordplay](../concepts/english/english-pun-jokes-wordplay.md)
+- [Expire as an Everyday Validity Verb](../concepts/english/expire-everyday-validity-verb.md)
+- [Gym Workout Vocabulary](../concepts/english/gym-workout-vocabulary.md)
+- [Heckler and Tough Crowd](../concepts/english/heckler-and-tough-crowd.md)
+- [I Know How It Is](../concepts/english/know-how-it-is-empathy-phrase.md)
+- [Idiom: Cut Me Some Slack](../concepts/english/cut-me-some-slack-idiom.md)
+- [Idiom: Give 110 Percent](../concepts/english/give-110-percent-idiom.md)
+- [Idiom: Go Cold Turkey](../concepts/english/cold-turkey-idiom.md)
+- [Idiom: It's Not My Day](../concepts/english/its-not-my-day-idiom.md)
+- [Idiom: Rule of Thumb](../concepts/english/rule-of-thumb-idiom.md)
+- [Idiom: Take Pride in Your Work](../concepts/english/take-pride-in-your-work.md)
+- [Muscle Tone, Definition, and Physique](../concepts/english/muscle-tone-definition-physique.md)
+- [No Smoking Polite Notices](../concepts/english/no-smoking-polite-notices.md)
+- [Open Mic Night Vocabulary](../concepts/english/open-mic-night-vocabulary.md)
+- [Phrasal Verb: Crack Down On](../concepts/english/crack-down-phrasal-verb.md)
+- [Phrasal Verb: Die On Me](../concepts/english/die-on-phrasal-verb.md)
+- [Pop the Hood](../concepts/english/pop-the-hood-phrase.md)
+- [Pull a Muscle Safety Phrase](../concepts/english/pull-a-muscle-safety-phrase.md)
+- [Reps and Sets](../concepts/english/reps-and-sets.md)
+- [Ripped as Informal Body Description](../concepts/english/ripped-informal-body-description.md)
+- [Smoking Cessation Vocabulary](../concepts/english/smoking-cessation-vocabulary.md)
+- [Stand-up Comedy Vocabulary](../concepts/english/stand-up-comedy-vocabulary.md)
+- [Supermarket Checkout Vocabulary](../concepts/english/supermarket-checkout-vocabulary.md)
+- [Take Apart and Put Back Together](../concepts/english/take-apart-put-back-together.md)
+- [Up to Code Phrase](../concepts/english/up-to-code-phrase.md)
+- [Willpower and Urge Vocabulary](../concepts/english/willpower-and-urge-vocabulary.md)
+
+## enterprise-ai
+
+- [Agent-Centered Workflow Redesign](../concepts/ai-transformation/agent-centered-workflow-redesign.md)
+- [Agent-Ready Context Infrastructure](../concepts/ai-transformation/agent-ready-context-infrastructure.md)
+- [Agentic Workflow Complexity Ladder](../concepts/ai-transformation/agentic-workflow-complexity-ladder.md)
+- [Business-Outcome-Aligned AI Use-Case Selection](../concepts/ai-transformation/business-outcome-aligned-ai-use-case-selection.md)
+- [Cross-Functional AI Center of Excellence](../concepts/ai-transformation/cross-functional-ai-center-of-excellence.md)
+- [Cross-Functional AI Steering Committee](../concepts/ai-transformation/cross-functional-ai-steering-committee.md)
+- [Enterprise Agent Delegation Operating Model](../concepts/ai-transformation/enterprise-agent-delegation-operating-model.md)
+- [Enterprise AI Change-Champion Network](../concepts/ai-transformation/enterprise-ai-change-champion-network.md)
+- [Enterprise AI Governance Framework](../concepts/ai-transformation/enterprise-ai-governance-framework.md)
+- [Enterprise AI Transformation Stages](../concepts/ai-transformation/enterprise-ai-transformation-stages.md)
+- [Human-Agent Work Redesign Metrics](../concepts/ai-transformation/human-agent-work-redesign-metrics.md)
+- [Hybrid Agent Build Strategy](../concepts/ai-transformation/hybrid-agent-build-strategy.md)
+- [Multidimensional AI Pilot Scorecard](../concepts/ai-transformation/multidimensional-ai-pilot-scorecard.md)
+- [Risk-Bounded AI Pilot Design](../concepts/ai-transformation/risk-bounded-ai-pilot-design.md)
+- [Role-Based AI Capability Building](../concepts/ai-transformation/role-based-ai-capability-building.md)
 
 ## evaluation
 
-- [composable-llm-red-team-testing](../concepts/llm-engineering/composable-llm-red-team-testing.md) - Composable LLM Red-Team Testing
-- [configuration-driven-llm-evaluation-matrix](../concepts/llm-engineering/configuration-driven-llm-evaluation-matrix.md) - Configuration-Driven LLM Evaluation Matrix
-- [hybrid-llm-output-assertions](../concepts/llm-engineering/hybrid-llm-output-assertions.md) - Hybrid LLM Output Assertions
-- [trace-aware-agent-evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md) - Trace-Aware Agent Evaluation
-- [actionable-side-information](../concepts/llm-engineering/actionable-side-information.md) - Actionable Side Information
-- [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
-- [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping
-- [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
-- [llm-as-judge-evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md) - LLM-as-Judge Evaluation
-- [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
-- [pareto-efficient-candidate-selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md) - Pareto-Efficient Candidate Selection
-- [sparse-validation-evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md) - Sparse Validation Evaluation
+- [Actionable Side Information](../concepts/llm-engineering/actionable-side-information.md)
+- [Agent Skill Evaluation Coverage](../concepts/llm-engineering/agent-skill-evaluation-coverage.md)
+- [AgentCore Insights Triage-to-Optimization Loop](../concepts/llm-engineering/agentcore-insights-triage-loop.md)
+- [Composable LLM Red-Team Testing](../concepts/llm-engineering/composable-llm-red-team-testing.md)
+- [Configuration-Driven LLM Evaluation Matrix](../concepts/llm-engineering/configuration-driven-llm-evaluation-matrix.md)
+- [Continuous Online Agent Evaluation](../concepts/llm-engineering/continuous-online-agent-evaluation.md)
+- [Domain-Expert-Calibrated Agent Validation](../concepts/llm-engineering/domain-expert-calibrated-agent-validation.md)
+- [Evaluation-Gated Meta-Skills](../concepts/llm-engineering/evaluation-gated-meta-skills.md)
+- [Event Sourcing with Staging Propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md)
+- [Few-Shot Bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md)
+- [Hierarchical RBAC](../concepts/system-design/hierarchical-rbac.md)
+- [Hybrid LLM Output Assertions](../concepts/llm-engineering/hybrid-llm-output-assertions.md)
+- [LLM-as-Judge Evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md)
+- [Metric-Driven LLM Optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md)
+- [Multidimensional Coding-Agent Evaluation](../concepts/llm-engineering/multidimensional-coding-agent-evaluation.md)
+- [Pareto-Efficient Candidate Selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md)
+- [Session Convergence Evaluation](../concepts/llm-engineering/session-convergence-evaluation.md)
+- [Sparse Validation Evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md)
+- [Trace-Aware Agent Evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md)
+- [Trace-Derived Evaluation Field Contract](../concepts/llm-engineering/trace-derived-evaluation-field-contract.md)
+- [Underspecification Gap in Agent Evaluation](../concepts/llm-engineering/underspecification-gap-in-agent-evaluation.md)
 
 ## everyday-english
 
-- [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb
+- [Expire as an Everyday Validity Verb](../concepts/english/expire-everyday-validity-verb.md)
+
+## experimentation
+
+- [Config-Bundle A/B Testing for Agent Behavior](../concepts/llm-engineering/config-bundle-ab-testing-for-agent-behavior.md)
 
 ## extensions
 
-- [mcp-extension-negotiation-framework](../concepts/llm-engineering/mcp-extension-negotiation-framework.md) - MCP Extension Negotiation Framework
+- [MCP Extension Negotiation Framework](../concepts/llm-engineering/mcp-extension-negotiation-framework.md)
+
+## feedback-loops
+
+- [Agentic Software Factory Model](../concepts/llm-engineering/agentic-software-factory-model.md)
 
 ## few-shot-learning
 
-- [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
-- [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
+- [Chain-of-Thought Reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md)
+- [LLM Program Distillation](../concepts/llm-engineering/llm-program-distillation.md)
 
 ## filesystem
 
-- [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
+- [MCP Roots as Advisory Boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md)
 
 ## fitness
 
-- [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
-- [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
-- [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
-- [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
-- [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
-- [ripped-informal-body-description](../concepts/english/ripped-informal-body-description.md) - Ripped as Informal Body Description
+- [Gym Workout Vocabulary](../concepts/english/gym-workout-vocabulary.md)
+- [I Know How It Is](../concepts/english/know-how-it-is-empathy-phrase.md)
+- [Muscle Tone, Definition, and Physique](../concepts/english/muscle-tone-definition-physique.md)
+- [Pull a Muscle Safety Phrase](../concepts/english/pull-a-muscle-safety-phrase.md)
+- [Reps and Sets](../concepts/english/reps-and-sets.md)
+- [Ripped as Informal Body Description](../concepts/english/ripped-informal-body-description.md)
 
 ## generative-ai
 
-- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
-- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
-- [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
-- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
+- [Agentic Workflow Span Hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md)
+- [Cross-Provider GenAI Telemetry Refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md)
+- [GenAI Operation Span Taxonomy](../concepts/observability/genai-operation-span-taxonomy.md)
+- [GenAI Streaming Telemetry Lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md)
+
+## governance
+
+- [Agent Resource Registry Governance](../concepts/llm-engineering/agent-resource-registry-governance.md)
+- [Authority-Tiered Agent Skills](../concepts/llm-engineering/authority-tiered-agent-skills.md)
+- [Cedar Policy Gateway Authorization](../concepts/llm-engineering/cedar-policy-gateway-authorization.md)
+- [Cross-Account Observability Aggregation](../concepts/llm-engineering/cross-account-observability-aggregation.md)
+- [Enterprise Agent Delegation Operating Model](../concepts/ai-transformation/enterprise-agent-delegation-operating-model.md)
+- [Evaluation-Gated Meta-Skills](../concepts/llm-engineering/evaluation-gated-meta-skills.md)
+- [Temporal Session-Aware Policy Conditions](../concepts/llm-engineering/temporal-session-aware-policy-conditions.md)
 
 ## gym
 
-- [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
-- [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
-- [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
-- [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
-- [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
-- [ripped-informal-body-description](../concepts/english/ripped-informal-body-description.md) - Ripped as Informal Body Description
+- [Gym Workout Vocabulary](../concepts/english/gym-workout-vocabulary.md)
+- [I Know How It Is](../concepts/english/know-how-it-is-empathy-phrase.md)
+- [Muscle Tone, Definition, and Physique](../concepts/english/muscle-tone-definition-physique.md)
+- [Pull a Muscle Safety Phrase](../concepts/english/pull-a-muscle-safety-phrase.md)
+- [Reps and Sets](../concepts/english/reps-and-sets.md)
+- [Ripped as Informal Body Description](../concepts/english/ripped-informal-body-description.md)
 
 ## habits
 
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
-- [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
-- [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
-- [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
-- [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
+- [Cut Down vs Quit](../concepts/english/cut-down-vs-quit.md)
+- [Idiom: Go Cold Turkey](../concepts/english/cold-turkey-idiom.md)
+- [No Smoking Polite Notices](../concepts/english/no-smoking-polite-notices.md)
+- [Phrasal Verb: Crack Down On](../concepts/english/crack-down-phrasal-verb.md)
+- [Smoking Cessation Vocabulary](../concepts/english/smoking-cessation-vocabulary.md)
+- [Willpower and Urge Vocabulary](../concepts/english/willpower-and-urge-vocabulary.md)
+
+## harness-engineering
+
+- [AgentCore Harness vs. Runtime Tradeoff](../concepts/llm-engineering/agentcore-harness-vs-runtime-tradeoff.md)
 
 ## human-in-the-loop
 
-- [langgraph-channels-and-reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md) - LangGraph Channels and Reducers
-- [langgraph-human-in-the-loop-interrupts](../concepts/llm-engineering/langgraph-human-in-the-loop-interrupts.md) - LangGraph Human-in-the-Loop Interrupts
-- [langgraph-runtime-dependency-injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md) - LangGraph Runtime Dependency Injection
-- [langgraph-toolnode-prebuilt-components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) - LangGraph ToolNode and Prebuilt Components
-- [mcp-elicitation-for-structured-user-input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md) - MCP Elicitation for Structured User Input
+- [Approval-Fatigue-Resistant Agent Oversight](../concepts/llm-engineering/approval-fatigue-resistant-agent-oversight.md)
+- [Context-Aware Approval for High-Stakes Agent Actions](../concepts/llm-engineering/context-aware-high-stakes-agent-approval.md)
+- [Domain-Expert-Calibrated Agent Validation](../concepts/llm-engineering/domain-expert-calibrated-agent-validation.md)
+- [LangGraph Channels and Reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md)
+- [LangGraph Human-in-the-Loop Interrupts](../concepts/llm-engineering/langgraph-human-in-the-loop-interrupts.md)
+- [LangGraph Runtime Dependency Injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md)
+- [LangGraph ToolNode and Prebuilt Components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md)
+- [MCP Elicitation for Structured User Input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md)
+
+## iam
+
+- [AgentCore Trust-Boundary Hardening](../concepts/llm-engineering/agentcore-trust-boundary-hardening.md)
+- [Cross-Account Memory Resource Sharing](../concepts/llm-engineering/cross-account-memory-resource-sharing.md)
 
 ## ide-integration
 
-- [acp-agent-backend-for-ides](../concepts/llm-engineering/acp-agent-backend-for-ides.md) - ACP Agent Backend for IDEs
-- [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
-- [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
-- [persistent-agent-session-restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md) - Persistent Agent Session Restoration
-- [probabilistic-toolset-distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md) - Probabilistic Toolset Distributions
-- [self-improving-agent-skill-memory-loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md) - Self-Improving Agent Skill Memory Loop
-- [surgical-context-compression](../concepts/llm-engineering/surgical-context-compression.md) - Surgical Context Compression
-- [toolsets-and-mcp-unified-tool-surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) - Toolsets and MCP Unified Tool Surface
+- [ACP Agent Backend for IDEs](../concepts/llm-engineering/acp-agent-backend-for-ides.md)
+- [Multi-Platform Agent Gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md)
+- [Natural-Language Cron Agent Automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md)
+- [Persistent Agent Session Restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md)
+- [Probabilistic Toolset Distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md)
+- [Self-Improving Agent Skill Memory Loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md)
+- [Surgical Context Compression](../concepts/llm-engineering/surgical-context-compression.md)
+- [Toolsets and MCP Unified Tool Surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md)
 
 ## idioms
 
-- [busted-informal-broken](../concepts/english/busted-informal-broken.md) - Busted as Informal Broken
-- [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
-- [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
-- [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
-- [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
-- [cut-me-some-slack-idiom](../concepts/english/cut-me-some-slack-idiom.md) - Idiom: Cut Me Some Slack
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
-- [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
-- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
-- [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
-- [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
-- [its-not-my-day-idiom](../concepts/english/its-not-my-day-idiom.md) - Idiom: It's Not My Day
-- [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
-- [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
-- [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
-- [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
-- [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
-- [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
-- [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
-- [ripped-informal-body-description](../concepts/english/ripped-informal-body-description.md) - Ripped as Informal Body Description
-- [rule-of-thumb-idiom](../concepts/english/rule-of-thumb-idiom.md) - Idiom: Rule of Thumb
-- [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
-- [stand-up-comedy-vocabulary](../concepts/english/stand-up-comedy-vocabulary.md) - Stand-up Comedy Vocabulary
-- [take-apart-put-back-together](../concepts/english/take-apart-put-back-together.md) - Take Apart and Put Back Together
-- [take-pride-in-your-work](../concepts/english/take-pride-in-your-work.md) - Idiom: Take Pride in Your Work
-- [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
+- [Busted as Informal Broken](../concepts/english/busted-informal-broken.md)
+- [Car Repair Cost and Waiting Phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md)
+- [Car Repair Vocabulary](../concepts/english/car-repair-vocabulary.md)
+- [Clean Jokes and Cultural Register](../concepts/english/clean-jokes-cultural-register.md)
+- [Cut Down vs Quit](../concepts/english/cut-down-vs-quit.md)
+- [English Pun Jokes and Wordplay](../concepts/english/english-pun-jokes-wordplay.md)
+- [Gym Workout Vocabulary](../concepts/english/gym-workout-vocabulary.md)
+- [Heckler and Tough Crowd](../concepts/english/heckler-and-tough-crowd.md)
+- [I Know How It Is](../concepts/english/know-how-it-is-empathy-phrase.md)
+- [Idiom: Cut Me Some Slack](../concepts/english/cut-me-some-slack-idiom.md)
+- [Idiom: Give 110 Percent](../concepts/english/give-110-percent-idiom.md)
+- [Idiom: Go Cold Turkey](../concepts/english/cold-turkey-idiom.md)
+- [Idiom: It's Not My Day](../concepts/english/its-not-my-day-idiom.md)
+- [Idiom: Rule of Thumb](../concepts/english/rule-of-thumb-idiom.md)
+- [Idiom: Take Pride in Your Work](../concepts/english/take-pride-in-your-work.md)
+- [Muscle Tone, Definition, and Physique](../concepts/english/muscle-tone-definition-physique.md)
+- [No Smoking Polite Notices](../concepts/english/no-smoking-polite-notices.md)
+- [Open Mic Night Vocabulary](../concepts/english/open-mic-night-vocabulary.md)
+- [Phrasal Verb: Crack Down On](../concepts/english/crack-down-phrasal-verb.md)
+- [Phrasal Verb: Die On Me](../concepts/english/die-on-phrasal-verb.md)
+- [Pop the Hood](../concepts/english/pop-the-hood-phrase.md)
+- [Pull a Muscle Safety Phrase](../concepts/english/pull-a-muscle-safety-phrase.md)
+- [Reps and Sets](../concepts/english/reps-and-sets.md)
+- [Ripped as Informal Body Description](../concepts/english/ripped-informal-body-description.md)
+- [Smoking Cessation Vocabulary](../concepts/english/smoking-cessation-vocabulary.md)
+- [Stand-up Comedy Vocabulary](../concepts/english/stand-up-comedy-vocabulary.md)
+- [Take Apart and Put Back Together](../concepts/english/take-apart-put-back-together.md)
+- [Willpower and Urge Vocabulary](../concepts/english/willpower-and-urge-vocabulary.md)
 
 ## incident-response
 
-- [autonomous-incident-investigation](../concepts/llm-engineering/autonomous-incident-investigation.md) - Autonomous Incident Investigation
-- [proactive-incident-prevention-loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md) - Proactive Incident Prevention Loop
+- [Agentic Security Response Triad](../concepts/llm-engineering/agentic-security-response-triad.md)
+- [Autonomous Incident Investigation](../concepts/llm-engineering/autonomous-incident-investigation.md)
+- [Proactive Incident Prevention Loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md)
 
 ## infrastructure
 
-- [load-balancing](../concepts/system-design/load-balancing.md) - Load Balancing
-- [raid-storage](../concepts/system-design/raid-storage.md) - RAID Storage
+- [Load Balancing](../concepts/system-design/load-balancing.md)
+- [RAID Storage](../concepts/system-design/raid-storage.md)
+
+## input-validation
+
+- [Structured Payload Injection via Type Confusion](../concepts/llm-engineering/structured-payload-injection-via-type-confusion.md)
+
+## intent
+
+- [Underspecification Gap in Agent Evaluation](../concepts/llm-engineering/underspecification-gap-in-agent-evaluation.md)
 
 ## interoperability
 
-- [mcp-capability-negotiation-handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md) - MCP Capability Negotiation Handshake
-- [mcp-extension-negotiation-framework](../concepts/llm-engineering/mcp-extension-negotiation-framework.md) - MCP Extension Negotiation Framework
+- [A2A Agent Card and Registry Discovery](../concepts/llm-engineering/a2a-agent-card-registry-discovery.md)
+- [MCP Capability Negotiation Handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md)
+- [MCP Extension Negotiation Framework](../concepts/llm-engineering/mcp-extension-negotiation-framework.md)
+- [MCP N-plus-M Integration Scaling](../concepts/llm-engineering/mcp-n-plus-m-integration-scaling.md)
+
+## inventory
+
+- [Runtime Agent Bill of Materials](../concepts/llm-engineering/runtime-agent-bill-of-materials.md)
+
+## isolation
+
+- [Ephemeral Agent Execution Sandbox](../concepts/llm-engineering/ephemeral-agent-execution-sandbox.md)
 
 ## json-rpc
 
-- [mcp-bidirectional-json-rpc-substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md) - MCP Bidirectional JSON-RPC Substrate
-- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
+- [MCP Bidirectional JSON-RPC Substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md)
+- [MCP Client-Server Trace Correlation](../concepts/observability/mcp-client-server-trace-correlation.md)
+
+## knowledge-sharing
+
+- [Cross-Functional AI Center of Excellence](../concepts/ai-transformation/cross-functional-ai-center-of-excellence.md)
 
 ## langchain
 
-- [langchain-core-message-model-for-langgraph-state](../concepts/llm-engineering/langchain-core-message-model-for-langgraph-state.md) - LangChain Message Model for LangGraph State
-- [langchain-tool-schema-contract](../concepts/llm-engineering/langchain-tool-schema-contract.md) - LangChain Tool Schema Contract
-- [langgraph-channels-and-reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md) - LangGraph Channels and Reducers
-- [langgraph-runtime-dependency-injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md) - LangGraph Runtime Dependency Injection
-- [langgraph-toolnode-prebuilt-components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) - LangGraph ToolNode and Prebuilt Components
-- [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
-- [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
-- [standardized-message-content-blocks](../concepts/llm-engineering/standardized-message-content-blocks.md) - Standardized Message Content Blocks
+- [LangChain Message Model for LangGraph State](../concepts/llm-engineering/langchain-core-message-model-for-langgraph-state.md)
+- [LangChain Tool Schema Contract](../concepts/llm-engineering/langchain-tool-schema-contract.md)
+- [LangGraph Channels and Reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md)
+- [LangGraph Runtime Dependency Injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md)
+- [LangGraph ToolNode and Prebuilt Components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md)
+- [Provider Chat Model Wrappers in LangGraph Nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md)
+- [Retrievers and Vector Stores for LangGraph RAG](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md)
+- [Standardized Message Content Blocks](../concepts/llm-engineering/standardized-message-content-blocks.md)
 
 ## langgraph
 
-- [langchain-core-message-model-for-langgraph-state](../concepts/llm-engineering/langchain-core-message-model-for-langgraph-state.md) - LangChain Message Model for LangGraph State
-- [langchain-tool-schema-contract](../concepts/llm-engineering/langchain-tool-schema-contract.md) - LangChain Tool Schema Contract
-- [langgraph-channels-and-reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md) - LangGraph Channels and Reducers
-- [langgraph-checkpoint-time-travel-forking](../concepts/llm-engineering/langgraph-checkpoint-time-travel-forking.md) - LangGraph Checkpoint Time Travel and Forking
-- [langgraph-human-in-the-loop-interrupts](../concepts/llm-engineering/langgraph-human-in-the-loop-interrupts.md) - LangGraph Human-in-the-Loop Interrupts
-- [langgraph-pregel-bsp-execution](../concepts/llm-engineering/langgraph-pregel-bsp-execution.md) - LangGraph Pregel BSP Execution
-- [langgraph-remotegraph-server-execution](../concepts/llm-engineering/langgraph-remotegraph-server-execution.md) - LangGraph RemoteGraph and Server Execution
-- [langgraph-runtime-dependency-injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md) - LangGraph Runtime Dependency Injection
-- [langgraph-send-command-control-flow](../concepts/llm-engineering/langgraph-send-command-control-flow.md) - LangGraph Send and Command Control Flow
-- [langgraph-stategraph-state-schema](../concepts/llm-engineering/langgraph-stategraph-state-schema.md) - LangGraph StateGraph State Schema
-- [langgraph-store-long-term-memory](../concepts/llm-engineering/langgraph-store-long-term-memory.md) - LangGraph Store Long-Term Memory
-- [langgraph-toolnode-prebuilt-components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) - LangGraph ToolNode and Prebuilt Components
-- [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
-- [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
+- [LangChain Message Model for LangGraph State](../concepts/llm-engineering/langchain-core-message-model-for-langgraph-state.md)
+- [LangChain Tool Schema Contract](../concepts/llm-engineering/langchain-tool-schema-contract.md)
+- [LangGraph Channels and Reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md)
+- [LangGraph Checkpoint Time Travel and Forking](../concepts/llm-engineering/langgraph-checkpoint-time-travel-forking.md)
+- [LangGraph Human-in-the-Loop Interrupts](../concepts/llm-engineering/langgraph-human-in-the-loop-interrupts.md)
+- [LangGraph Pregel BSP Execution](../concepts/llm-engineering/langgraph-pregel-bsp-execution.md)
+- [LangGraph RemoteGraph and Server Execution](../concepts/llm-engineering/langgraph-remotegraph-server-execution.md)
+- [LangGraph Runtime Dependency Injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md)
+- [LangGraph Send and Command Control Flow](../concepts/llm-engineering/langgraph-send-command-control-flow.md)
+- [LangGraph StateGraph State Schema](../concepts/llm-engineering/langgraph-stategraph-state-schema.md)
+- [LangGraph Store Long-Term Memory](../concepts/llm-engineering/langgraph-store-long-term-memory.md)
+- [LangGraph ToolNode and Prebuilt Components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md)
+- [Provider Chat Model Wrappers in LangGraph Nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md)
+- [Retrievers and Vector Stores for LangGraph RAG](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md)
+
+## leadership
+
+- [Cross-Functional AI Steering Committee](../concepts/ai-transformation/cross-functional-ai-steering-committee.md)
+
+## least-privilege
+
+- [Zero Ambient Authority for Agents](../concepts/llm-engineering/zero-ambient-authority-for-agents.md)
 
 ## llm
 
-- [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
-- [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
-- [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
-- [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
+- [Chain-of-Thought Reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md)
+- [Event Sourcing with Staging Propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md)
+- [Hierarchical RBAC](../concepts/system-design/hierarchical-rbac.md)
+- [LLM Program Distillation](../concepts/llm-engineering/llm-program-distillation.md)
+
+## llm-costs
+
+- [Agentic Engineering Total-Cost Curve](../concepts/llm-engineering/agentic-engineering-tco-curve.md)
 
 ## llm-engineering
 
-- [composable-llm-red-team-testing](../concepts/llm-engineering/composable-llm-red-team-testing.md) - Composable LLM Red-Team Testing
-- [configuration-driven-llm-evaluation-matrix](../concepts/llm-engineering/configuration-driven-llm-evaluation-matrix.md) - Configuration-Driven LLM Evaluation Matrix
-- [hybrid-llm-output-assertions](../concepts/llm-engineering/hybrid-llm-output-assertions.md) - Hybrid LLM Output Assertions
-- [iterative-adversarial-testing-loop](../concepts/llm-engineering/iterative-adversarial-testing-loop.md) - Iterative Adversarial Testing Loop
-- [model-agnostic-evaluation-provider-abstraction](../concepts/llm-engineering/model-agnostic-evaluation-provider-abstraction.md) - Model-Agnostic Evaluation Provider Abstraction
-- [trace-aware-agent-evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md) - Trace-Aware Agent Evaluation
-- [acp-agent-backend-for-ides](../concepts/llm-engineering/acp-agent-backend-for-ides.md) - ACP Agent Backend for IDEs
-- [actionable-side-information](../concepts/llm-engineering/actionable-side-information.md) - Actionable Side Information
-- [adapter-based-llm-optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md) - Adapter-Based LLM Optimization
-- [agent-space-access-boundary](../concepts/llm-engineering/agent-space-access-boundary.md) - Agent Space Access Boundary
-- [autonomous-incident-investigation](../concepts/llm-engineering/autonomous-incident-investigation.md) - Autonomous Incident Investigation
-- [cassette-backed-mcp-pytest-fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md) - Cassette-Backed MCP Pytest Fixtures
-- [caching-strategies](../concepts/system-design/caching-strategies.md) - Caching Strategies
-- [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
-- [change-specific-release-testing](../concepts/llm-engineering/change-specific-release-testing.md) - Change-Specific Release Testing
-- [declarative-mcp-scenario-recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md) - Declarative MCP Scenario Recording
-- [deterministic-mcp-replay-matching](../concepts/llm-engineering/deterministic-mcp-replay-matching.md) - Deterministic MCP Replay Matching
-- [devops-agent-topology-context](../concepts/llm-engineering/devops-agent-topology-context.md) - DevOps Agent Topology Context
-- [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
-- [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures
-- [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
-- [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping
-- [langchain-core-message-model-for-langgraph-state](../concepts/llm-engineering/langchain-core-message-model-for-langgraph-state.md) - LangChain Message Model for LangGraph State
-- [langchain-tool-schema-contract](../concepts/llm-engineering/langchain-tool-schema-contract.md) - LangChain Tool Schema Contract
-- [langgraph-channels-and-reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md) - LangGraph Channels and Reducers
-- [langgraph-checkpoint-time-travel-forking](../concepts/llm-engineering/langgraph-checkpoint-time-travel-forking.md) - LangGraph Checkpoint Time Travel and Forking
-- [langgraph-human-in-the-loop-interrupts](../concepts/llm-engineering/langgraph-human-in-the-loop-interrupts.md) - LangGraph Human-in-the-Loop Interrupts
-- [langgraph-pregel-bsp-execution](../concepts/llm-engineering/langgraph-pregel-bsp-execution.md) - LangGraph Pregel BSP Execution
-- [langgraph-remotegraph-server-execution](../concepts/llm-engineering/langgraph-remotegraph-server-execution.md) - LangGraph RemoteGraph and Server Execution
-- [langgraph-runtime-dependency-injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md) - LangGraph Runtime Dependency Injection
-- [langgraph-send-command-control-flow](../concepts/llm-engineering/langgraph-send-command-control-flow.md) - LangGraph Send and Command Control Flow
-- [langgraph-stategraph-state-schema](../concepts/llm-engineering/langgraph-stategraph-state-schema.md) - LangGraph StateGraph State Schema
-- [langgraph-store-long-term-memory](../concepts/llm-engineering/langgraph-store-long-term-memory.md) - LangGraph Store Long-Term Memory
-- [langgraph-toolnode-prebuilt-components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) - LangGraph ToolNode and Prebuilt Components
-- [learned-operational-knowledge-files](../concepts/llm-engineering/learned-operational-knowledge-files.md) - Learned Operational Knowledge Files
-- [llm-as-judge-evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md) - LLM-as-Judge Evaluation
-- [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability
-- [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
-- [mcp-bidirectional-json-rpc-substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md) - MCP Bidirectional JSON-RPC Substrate
-- [mcp-capability-negotiation-handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md) - MCP Capability Negotiation Handshake
-- [mcp-elicitation-for-structured-user-input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md) - MCP Elicitation for Structured User Input
-- [mcp-extension-negotiation-framework](../concepts/llm-engineering/mcp-extension-negotiation-framework.md) - MCP Extension Negotiation Framework
-- [mcp-oauth-protected-resource-discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md) - MCP OAuth Protected Resource Discovery
-- [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
-- [mcp-schema-generation-pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md) - MCP Schema Generation Pipeline
-- [mcp-transport-separation](../concepts/llm-engineering/mcp-transport-separation.md) - MCP Transport Separation
-- [mcp-interaction-cassette](../concepts/llm-engineering/mcp-interaction-cassette.md) - MCP Interaction Cassette
-- [mcp-record-replay-verify-cycle](../concepts/llm-engineering/mcp-record-replay-verify-cycle.md) - MCP Record-Replay-Verify Cycle
-- [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
-- [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
-- [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
-- [optimize-anything-pattern](../concepts/llm-engineering/optimize-anything-pattern.md) - Optimize Anything Pattern
-- [pareto-efficient-candidate-selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md) - Pareto-Efficient Candidate Selection
-- [persistent-agent-session-restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md) - Persistent Agent Session Restoration
-- [proactive-incident-prevention-loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md) - Proactive Incident Prevention Loop
-- [probabilistic-toolset-distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md) - Probabilistic Toolset Distributions
-- [prompt-version-management](../concepts/llm-engineering/prompt-version-management.md) - Prompt Version Management
-- [protocol-based-agent-access-surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md) - Protocol-Based Agent Access Surface
-- [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
-- [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
-- [reflective-mutation-proposer](../concepts/llm-engineering/reflective-mutation-proposer.md) - Reflective Mutation Proposer
-- [replay-safe-cassette-scrubbing](../concepts/llm-engineering/replay-safe-cassette-scrubbing.md) - Replay-Safe Cassette Scrubbing
-- [release-readiness-blast-radius-review](../concepts/llm-engineering/release-readiness-blast-radius-review.md) - Release Readiness Blast-Radius Review
-- [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
-- [self-improving-agent-skill-memory-loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md) - Self-Improving Agent Skill Memory Loop
-- [sparse-validation-evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md) - Sparse Validation Evaluation
-- [standardized-message-content-blocks](../concepts/llm-engineering/standardized-message-content-blocks.md) - Standardized Message Content Blocks
-- [surgical-context-compression](../concepts/llm-engineering/surgical-context-compression.md) - Surgical Context Compression
-- [volatility-aware-structural-verification](../concepts/llm-engineering/volatility-aware-structural-verification.md) - Volatility-Aware Structural Verification
-- [system-aware-candidate-merge](../concepts/llm-engineering/system-aware-candidate-merge.md) - System-Aware Candidate Merge
-- [toolsets-and-mcp-unified-tool-surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) - Toolsets and MCP Unified Tool Surface
+- [A2A Agent Card and Registry Discovery](../concepts/llm-engineering/a2a-agent-card-registry-discovery.md)
+- [A2UI Layout Ownership Patterns](../concepts/llm-engineering/a2ui-layout-ownership-patterns.md)
+- [A2UI Trusted Catalog Rendering](../concepts/llm-engineering/a2ui-trusted-catalog-rendering.md)
+- [ACP Agent Backend for IDEs](../concepts/llm-engineering/acp-agent-backend-for-ides.md)
+- [Actionable Side Information](../concepts/llm-engineering/actionable-side-information.md)
+- [Adapter-Based LLM Optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md)
+- [Agent Loop Termination Policy](../concepts/llm-engineering/agent-loop-termination-policy.md)
+- [Agent Skill Evaluation Coverage](../concepts/llm-engineering/agent-skill-evaluation-coverage.md)
+- [Agent Skill Supply-Chain Governance](../concepts/llm-engineering/agent-skill-supply-chain-governance.md)
+- [Agent Skills as Procedural Memory](../concepts/llm-engineering/agent-skills-as-procedural-memory.md)
+- [Agent Space Access Boundary](../concepts/llm-engineering/agent-space-access-boundary.md)
+- [Agent Specialization as a Scaling Mechanism](../concepts/llm-engineering/agent-specialization-as-scaling-mechanism.md)
+- [AgentCore External-Agent Observability Onboarding](../concepts/llm-engineering/agentcore-external-agent-observability-onboarding.md)
+- [AgentCore Insights Triage-to-Optimization Loop](../concepts/llm-engineering/agentcore-insights-triage-loop.md)
+- [AgentCore Managed-Service Telemetry Defaults](../concepts/llm-engineering/agentcore-managed-service-telemetry-defaults.md)
+- [AgentCore Session-Trace-Span Hierarchy](../concepts/llm-engineering/agentcore-session-trace-span-hierarchy.md)
+- [Artifact-Based Agent Handoffs](../concepts/llm-engineering/artifact-based-agent-handoffs.md)
+- [Authority-Tiered Agent Skills](../concepts/llm-engineering/authority-tiered-agent-skills.md)
+- [Autonomous Incident Investigation](../concepts/llm-engineering/autonomous-incident-investigation.md)
+- [Bounded Agent Cognitive State](../concepts/llm-engineering/bounded-agent-cognitive-state.md)
+- [Bounded Tool Calls vs. Agent Delegation](../concepts/llm-engineering/bounded-tool-calls-vs-agent-delegation.md)
+- [Caching Strategies](../concepts/system-design/caching-strategies.md)
+- [Cassette-Backed MCP Pytest Fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md)
+- [Chain-of-Thought Reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md)
+- [Change-Specific Release Testing](../concepts/llm-engineering/change-specific-release-testing.md)
+- [Code-as-Action Agent Loop](../concepts/llm-engineering/code-as-action-agent-loop.md)
+- [Composable LLM Red-Team Testing](../concepts/llm-engineering/composable-llm-red-team-testing.md)
+- [Configuration-Driven LLM Evaluation Matrix](../concepts/llm-engineering/configuration-driven-llm-evaluation-matrix.md)
+- [Context-Rot-Aware Context Management](../concepts/llm-engineering/context-rot-aware-context-management.md)
+- [Continuous Online Agent Evaluation](../concepts/llm-engineering/continuous-online-agent-evaluation.md)
+- [Cross-Account Observability Aggregation](../concepts/llm-engineering/cross-account-observability-aggregation.md)
+- [Declarative MCP Scenario Recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md)
+- [Deterministic MCP Replay Matching](../concepts/llm-engineering/deterministic-mcp-replay-matching.md)
+- [DevOps Agent Topology Context](../concepts/llm-engineering/devops-agent-topology-context.md)
+- [DSPy Module Composition](../concepts/llm-engineering/dspy-module-composition.md)
+- [DSPy Signatures](../concepts/llm-engineering/dspy-signatures.md)
+- [Evaluation-Gated Meta-Skills](../concepts/llm-engineering/evaluation-gated-meta-skills.md)
+- [Event Sourcing with Staging Propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md)
+- [Few-Shot Bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md)
+- [GenAI Observability Dashboard Abstraction](../concepts/llm-engineering/genai-observability-dashboard-abstraction.md)
+- [Hybrid LLM Output Assertions](../concepts/llm-engineering/hybrid-llm-output-assertions.md)
+- [Iterative Adversarial Testing Loop](../concepts/llm-engineering/iterative-adversarial-testing-loop.md)
+- [LangChain Message Model for LangGraph State](../concepts/llm-engineering/langchain-core-message-model-for-langgraph-state.md)
+- [LangChain Tool Schema Contract](../concepts/llm-engineering/langchain-tool-schema-contract.md)
+- [LangGraph Channels and Reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md)
+- [LangGraph Checkpoint Time Travel and Forking](../concepts/llm-engineering/langgraph-checkpoint-time-travel-forking.md)
+- [LangGraph Human-in-the-Loop Interrupts](../concepts/llm-engineering/langgraph-human-in-the-loop-interrupts.md)
+- [LangGraph Pregel BSP Execution](../concepts/llm-engineering/langgraph-pregel-bsp-execution.md)
+- [LangGraph RemoteGraph and Server Execution](../concepts/llm-engineering/langgraph-remotegraph-server-execution.md)
+- [LangGraph Runtime Dependency Injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md)
+- [LangGraph Send and Command Control Flow](../concepts/llm-engineering/langgraph-send-command-control-flow.md)
+- [LangGraph StateGraph State Schema](../concepts/llm-engineering/langgraph-stategraph-state-schema.md)
+- [LangGraph Store Long-Term Memory](../concepts/llm-engineering/langgraph-store-long-term-memory.md)
+- [LangGraph ToolNode and Prebuilt Components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md)
+- [Layered Agent Memory](../concepts/llm-engineering/layered-agent-memory.md)
+- [Learned Operational Knowledge Files](../concepts/llm-engineering/learned-operational-knowledge-files.md)
+- [LLM Observability](../concepts/llm-engineering/llm-observability.md)
+- [LLM Program Distillation](../concepts/llm-engineering/llm-program-distillation.md)
+- [LLM-as-Judge Evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md)
+- [MCP Bidirectional JSON-RPC Substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md)
+- [MCP Capability Negotiation Handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md)
+- [MCP Elicitation for Structured User Input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md)
+- [MCP Extension Negotiation Framework](../concepts/llm-engineering/mcp-extension-negotiation-framework.md)
+- [MCP Interaction Cassette](../concepts/llm-engineering/mcp-interaction-cassette.md)
+- [MCP N-plus-M Integration Scaling](../concepts/llm-engineering/mcp-n-plus-m-integration-scaling.md)
+- [MCP OAuth Protected Resource Discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md)
+- [MCP Record-Replay-Verify Cycle](../concepts/llm-engineering/mcp-record-replay-verify-cycle.md)
+- [MCP Roots as Advisory Boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md)
+- [MCP Schema Generation Pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md)
+- [MCP Transport Separation](../concepts/llm-engineering/mcp-transport-separation.md)
+- [Metric-Driven LLM Optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md)
+- [Model-Agnostic Evaluation Provider Abstraction](../concepts/llm-engineering/model-agnostic-evaluation-provider-abstraction.md)
+- [Multi-Platform Agent Gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md)
+- [Natural-Language Cron Agent Automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md)
+- [Optimize Anything Pattern](../concepts/llm-engineering/optimize-anything-pattern.md)
+- [Pareto-Efficient Candidate Selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md)
+- [Persistent Agent Session Restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md)
+- [Proactive Incident Prevention Loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md)
+- [Probabilistic Toolset Distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md)
+- [Progressive Disclosure for Agent Skills](../concepts/llm-engineering/agent-skill-progressive-disclosure.md)
+- [Prompt Version Management](../concepts/llm-engineering/prompt-version-management.md)
+- [Protocol-Based Agent Access Surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md)
+- [Provider Chat Model Wrappers in LangGraph Nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md)
+- [ReAct Agentic Loop](../concepts/llm-engineering/react-agentic-loop.md)
+- [Reflective Mutation Proposer](../concepts/llm-engineering/reflective-mutation-proposer.md)
+- [Release Readiness Blast-Radius Review](../concepts/llm-engineering/release-readiness-blast-radius-review.md)
+- [Replay-Safe Cassette Scrubbing](../concepts/llm-engineering/replay-safe-cassette-scrubbing.md)
+- [Retrievers and Vector Stores for LangGraph RAG](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md)
+- [Secure MCP Consumption Lifecycle](../concepts/llm-engineering/secure-mcp-consumption-lifecycle.md)
+- [Self-Improving Agent Skill Memory Loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md)
+- [Skill Description as a Routing Interface](../concepts/llm-engineering/skill-description-as-routing-interface.md)
+- [Skills as the Unit of Agent Improvement](../concepts/llm-engineering/skills-as-unit-of-agent-improvement.md)
+- [Sparse Validation Evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md)
+- [Standardized Message Content Blocks](../concepts/llm-engineering/standardized-message-content-blocks.md)
+- [State-Externalized Skill Composition](../concepts/llm-engineering/state-externalized-skill-composition.md)
+- [Surgical Context Compression](../concepts/llm-engineering/surgical-context-compression.md)
+- [System-Aware Candidate Merge](../concepts/llm-engineering/system-aware-candidate-merge.md)
+- [Toolsets and MCP Unified Tool Surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md)
+- [Trace-Aware Agent Evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md)
+- [Trace-Derived Evaluation Field Contract](../concepts/llm-engineering/trace-derived-evaluation-field-contract.md)
+- [UCP and AP2 Commerce-Payment Separation](../concepts/llm-engineering/ucp-ap2-commerce-payment-separation.md)
+- [Untrusted Content Isolation for Agents](../concepts/llm-engineering/untrusted-content-isolation-for-agents.md)
+- [Volatility-Aware Structural Verification](../concepts/llm-engineering/volatility-aware-structural-verification.md)
 
 ## mcp
 
-- [acp-agent-backend-for-ides](../concepts/llm-engineering/acp-agent-backend-for-ides.md) - ACP Agent Backend for IDEs
-- [mcp-bidirectional-json-rpc-substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md) - MCP Bidirectional JSON-RPC Substrate
-- [mcp-capability-negotiation-handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md) - MCP Capability Negotiation Handshake
-- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
-- [mcp-elicitation-for-structured-user-input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md) - MCP Elicitation for Structured User Input
-- [mcp-extension-negotiation-framework](../concepts/llm-engineering/mcp-extension-negotiation-framework.md) - MCP Extension Negotiation Framework
-- [mcp-oauth-protected-resource-discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md) - MCP OAuth Protected Resource Discovery
-- [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
-- [mcp-schema-generation-pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md) - MCP Schema Generation Pipeline
-- [mcp-transport-separation](../concepts/llm-engineering/mcp-transport-separation.md) - MCP Transport Separation
-- [mcp-interaction-cassette](../concepts/llm-engineering/mcp-interaction-cassette.md) - MCP Interaction Cassette
-- [mcp-record-replay-verify-cycle](../concepts/llm-engineering/mcp-record-replay-verify-cycle.md) - MCP Record-Replay-Verify Cycle
-- [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
-- [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
-- [persistent-agent-session-restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md) - Persistent Agent Session Restoration
-- [probabilistic-toolset-distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md) - Probabilistic Toolset Distributions
-- [protocol-based-agent-access-surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md) - Protocol-Based Agent Access Surface
-- [self-improving-agent-skill-memory-loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md) - Self-Improving Agent Skill Memory Loop
-- [surgical-context-compression](../concepts/llm-engineering/surgical-context-compression.md) - Surgical Context Compression
-- [cassette-backed-mcp-pytest-fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md) - Cassette-Backed MCP Pytest Fixtures
-- [declarative-mcp-scenario-recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md) - Declarative MCP Scenario Recording
-- [deterministic-mcp-replay-matching](../concepts/llm-engineering/deterministic-mcp-replay-matching.md) - Deterministic MCP Replay Matching
-- [replay-safe-cassette-scrubbing](../concepts/llm-engineering/replay-safe-cassette-scrubbing.md) - Replay-Safe Cassette Scrubbing
-- [volatility-aware-structural-verification](../concepts/llm-engineering/volatility-aware-structural-verification.md) - Volatility-Aware Structural Verification
-- [toolsets-and-mcp-unified-tool-surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) - Toolsets and MCP Unified Tool Surface
+- [ACP Agent Backend for IDEs](../concepts/llm-engineering/acp-agent-backend-for-ides.md)
+- [Bounded Tool Calls vs. Agent Delegation](../concepts/llm-engineering/bounded-tool-calls-vs-agent-delegation.md)
+- [Cassette-Backed MCP Pytest Fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md)
+- [Declarative MCP Scenario Recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md)
+- [Deterministic MCP Replay Matching](../concepts/llm-engineering/deterministic-mcp-replay-matching.md)
+- [MCP Bidirectional JSON-RPC Substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md)
+- [MCP Capability Negotiation Handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md)
+- [MCP Client-Server Trace Correlation](../concepts/observability/mcp-client-server-trace-correlation.md)
+- [MCP Elicitation for Structured User Input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md)
+- [MCP Extension Negotiation Framework](../concepts/llm-engineering/mcp-extension-negotiation-framework.md)
+- [MCP Interaction Cassette](../concepts/llm-engineering/mcp-interaction-cassette.md)
+- [MCP N-plus-M Integration Scaling](../concepts/llm-engineering/mcp-n-plus-m-integration-scaling.md)
+- [MCP OAuth Protected Resource Discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md)
+- [MCP Record-Replay-Verify Cycle](../concepts/llm-engineering/mcp-record-replay-verify-cycle.md)
+- [MCP Roots as Advisory Boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md)
+- [MCP Schema Generation Pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md)
+- [MCP Transport Separation](../concepts/llm-engineering/mcp-transport-separation.md)
+- [Multi-Platform Agent Gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md)
+- [Natural-Language Cron Agent Automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md)
+- [Persistent Agent Session Restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md)
+- [Probabilistic Toolset Distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md)
+- [Protocol-Based Agent Access Surface](../concepts/llm-engineering/protocol-based-agent-access-surface.md)
+- [Replay-Safe Cassette Scrubbing](../concepts/llm-engineering/replay-safe-cassette-scrubbing.md)
+- [Secure MCP Consumption Lifecycle](../concepts/llm-engineering/secure-mcp-consumption-lifecycle.md)
+- [Self-Improving Agent Skill Memory Loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md)
+- [Surgical Context Compression](../concepts/llm-engineering/surgical-context-compression.md)
+- [Toolsets and MCP Unified Tool Surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md)
+- [Volatility-Aware Structural Verification](../concepts/llm-engineering/volatility-aware-structural-verification.md)
+
+## measurement
+
+- [Human-Agent Work Redesign Metrics](../concepts/ai-transformation/human-agent-work-redesign-metrics.md)
+- [Multidimensional AI Pilot Scorecard](../concepts/ai-transformation/multidimensional-ai-pilot-scorecard.md)
 
 ## mechanic
 
-- [busted-informal-broken](../concepts/english/busted-informal-broken.md) - Busted as Informal Broken
-- [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
-- [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
-- [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
-- [take-apart-put-back-together](../concepts/english/take-apart-put-back-together.md) - Take Apart and Put Back Together
+- [Busted as Informal Broken](../concepts/english/busted-informal-broken.md)
+- [Car Repair Cost and Waiting Phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md)
+- [Car Repair Vocabulary](../concepts/english/car-repair-vocabulary.md)
+- [Phrasal Verb: Die On Me](../concepts/english/die-on-phrasal-verb.md)
+- [Pop the Hood](../concepts/english/pop-the-hood-phrase.md)
+- [Take Apart and Put Back Together](../concepts/english/take-apart-put-back-together.md)
 
 ## memory
 
-- [acp-agent-backend-for-ides](../concepts/llm-engineering/acp-agent-backend-for-ides.md) - ACP Agent Backend for IDEs
-- [langgraph-store-long-term-memory](../concepts/llm-engineering/langgraph-store-long-term-memory.md) - LangGraph Store Long-Term Memory
-- [learned-operational-knowledge-files](../concepts/llm-engineering/learned-operational-knowledge-files.md) - Learned Operational Knowledge Files
-- [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
-- [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
-- [persistent-agent-session-restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md) - Persistent Agent Session Restoration
-- [probabilistic-toolset-distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md) - Probabilistic Toolset Distributions
-- [self-improving-agent-skill-memory-loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md) - Self-Improving Agent Skill Memory Loop
-- [surgical-context-compression](../concepts/llm-engineering/surgical-context-compression.md) - Surgical Context Compression
-- [toolsets-and-mcp-unified-tool-surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) - Toolsets and MCP Unified Tool Surface
+- [ACP Agent Backend for IDEs](../concepts/llm-engineering/acp-agent-backend-for-ides.md)
+- [Agent Skills as Procedural Memory](../concepts/llm-engineering/agent-skills-as-procedural-memory.md)
+- [LangGraph Store Long-Term Memory](../concepts/llm-engineering/langgraph-store-long-term-memory.md)
+- [Layered Agent Memory](../concepts/llm-engineering/layered-agent-memory.md)
+- [Learned Operational Knowledge Files](../concepts/llm-engineering/learned-operational-knowledge-files.md)
+- [Multi-Platform Agent Gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md)
+- [Natural-Language Cron Agent Automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md)
+- [Persistent Agent Session Restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md)
+- [Probabilistic Toolset Distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md)
+- [Self-Improving Agent Skill Memory Loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md)
+- [Surgical Context Compression](../concepts/llm-engineering/surgical-context-compression.md)
+- [Toolsets and MCP Unified Tool Surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md)
 
 ## messages
 
-- [standardized-message-content-blocks](../concepts/llm-engineering/standardized-message-content-blocks.md) - Standardized Message Content Blocks
+- [Standardized Message Content Blocks](../concepts/llm-engineering/standardized-message-content-blocks.md)
+
+## multi-account
+
+- [Cross-Account Memory Resource Sharing](../concepts/llm-engineering/cross-account-memory-resource-sharing.md)
+
+## multi-agent-systems
+
+- [Agent Resource Registry Governance](../concepts/llm-engineering/agent-resource-registry-governance.md)
+- [AgentCore A2A Protocol Contract](../concepts/llm-engineering/agentcore-a2a-protocol-contract.md)
+- [microVM Session Isolation and Lifecycle](../concepts/llm-engineering/microvm-session-isolation-lifecycle.md)
+
+## multi-tenancy
+
+- [Memory Namespace Multi-Tenant Isolation](../concepts/llm-engineering/memory-namespace-multi-tenant-isolation.md)
 
 ## multimodal
 
-- [standardized-message-content-blocks](../concepts/llm-engineering/standardized-message-content-blocks.md) - Standardized Message Content Blocks
+- [Standardized Message Content Blocks](../concepts/llm-engineering/standardized-message-content-blocks.md)
 
 ## oauth
 
-- [mcp-oauth-protected-resource-discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md) - MCP OAuth Protected Resource Discovery
+- [MCP OAuth Protected Resource Discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md)
 
 ## observability
 
-- [trace-aware-agent-evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md) - Trace-Aware Agent Evaluation
-- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
-- [collector-authentication-extensions](../concepts/observability/collector-authentication-extensions.md) - Collector Authentication Extensions
-- [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
-- [collector-configuration-providers](../concepts/observability/collector-configuration-providers.md) - Collector Configuration Providers and Resolution
-- [collector-connectors](../concepts/observability/collector-connectors.md) - OpenTelemetry Collector Connectors
-- [collector-exporter-resilience](../concepts/observability/collector-exporter-resilience.md) - Collector Exporter Resilience
-- [collector-extensions](../concepts/observability/collector-extensions.md) - OpenTelemetry Collector Extensions
-- [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
-- [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
-- [collector-resource-detection-and-enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md) - Collector Resource Detection and Enrichment
-- [collector-storage-extensions](../concepts/observability/collector-storage-extensions.md) - Collector Storage Extensions
-- [consistent-probability-sampling](../concepts/observability/consistent-probability-sampling.md) - Consistent Probability Sampling
-- [context-propagation-with-carriers](../concepts/observability/context-propagation-with-carriers.md) - Context Propagation with Carriers
-- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
-- [devops-agent-topology-context](../concepts/llm-engineering/devops-agent-topology-context.md) - DevOps Agent Topology Context
-- [domain-owned-semantic-conventions](../concepts/observability/domain-owned-semantic-conventions.md) - Domain-Owned Semantic Conventions
-- [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
-- [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
-- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
-- [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
-- [kubernetes-collector-placement-modes](../concepts/observability/kubernetes-collector-placement-modes.md) - Kubernetes Collector Placement Modes
-- [llm-observability](../concepts/llm-engineering/llm-observability.md) - LLM Observability
-- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
-- [metadata-driven-component-stability](../concepts/observability/metadata-driven-component-stability.md) - Metadata-Driven Component Stability
-- [metrics-views-and-aggregations](../concepts/observability/metrics-views-and-aggregations.md) - Metrics Views and Aggregations
-- [observer-driven-dynamic-receivers](../concepts/observability/observer-driven-dynamic-receivers.md) - Observer-Driven Dynamic Receivers
-- [opamp-supervised-collector-fleet-management](../concepts/observability/opamp-supervised-collector-fleet-management.md) - OpAMP-Supervised Collector Fleet Management
-- [opentelemetry-api-sdk-separation](../concepts/observability/opentelemetry-api-sdk-separation.md) - OpenTelemetry API-SDK Separation
-- [opentelemetry-collector-builder-distributions](../concepts/observability/opentelemetry-collector-builder-distributions.md) - Custom Distributions with the OpenTelemetry Collector Builder
-- [otlp-vendor-neutral-telemetry-protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md) - OTLP as a Vendor-Neutral Telemetry Protocol
-- [ottl-declarative-telemetry-transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md) - OTTL Declarative Telemetry Transformation
-- [resource-bound-telemetry-identity](../concepts/observability/resource-bound-telemetry-identity.md) - Resource-Bound Telemetry Identity
-- [semantic-attribute-registry-reuse](../concepts/observability/semantic-attribute-registry-reuse.md) - Semantic Attribute Registry Reuse
-- [semantic-convention-model-as-source-of-truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md) - Semantic Convention Model as Source of Truth
-- [semantic-convention-stability-lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md) - Semantic Convention Stability Lifecycle
-- [semantic-convention-validation-and-generation](../concepts/observability/semantic-convention-validation-and-generation.md) - Semantic Convention Validation and Generation
-- [semantic-conventions-as-telemetry-schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md) - Semantic Conventions as Telemetry Schema
-- [telemetry-attribute-requirement-levels](../concepts/observability/telemetry-attribute-requirement-levels.md) - Telemetry Attribute Requirement Levels
-- [telemetry-schema-migration-mappings](../concepts/observability/telemetry-schema-migration-mappings.md) - Telemetry Schema Migration Mappings
-- [telemetry-signal-model](../concepts/observability/telemetry-signal-model.md) - Telemetry Signal Model
+- [AgentCore External-Agent Observability Onboarding](../concepts/llm-engineering/agentcore-external-agent-observability-onboarding.md)
+- [AgentCore Insights Triage-to-Optimization Loop](../concepts/llm-engineering/agentcore-insights-triage-loop.md)
+- [AgentCore Managed-Service Telemetry Defaults](../concepts/llm-engineering/agentcore-managed-service-telemetry-defaults.md)
+- [AgentCore Session-Trace-Span Hierarchy](../concepts/llm-engineering/agentcore-session-trace-span-hierarchy.md)
+- [Agentic Engineering Total-Cost Curve](../concepts/llm-engineering/agentic-engineering-tco-curve.md)
+- [Agentic Workflow Span Hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md)
+- [AI-Compressed Software Development Lifecycle](../concepts/llm-engineering/ai-compressed-sdlc.md)
+- [Coding Agent Harness Engineering](../concepts/llm-engineering/coding-agent-harness-engineering.md)
+- [Collector Authentication Extensions](../concepts/observability/collector-authentication-extensions.md)
+- [Collector Component Factory and Lifecycle](../concepts/observability/collector-component-factory-lifecycle.md)
+- [Collector Configuration Providers and Resolution](../concepts/observability/collector-configuration-providers.md)
+- [Collector Exporter Resilience](../concepts/observability/collector-exporter-resilience.md)
+- [Collector pdata Ownership at Fan-Out](../concepts/observability/collector-pdata-ownership-at-fanout.md)
+- [Collector Resource Detection and Enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md)
+- [Collector Storage Extensions](../concepts/observability/collector-storage-extensions.md)
+- [Consistent Probability Sampling](../concepts/observability/consistent-probability-sampling.md)
+- [Context Propagation with Carriers](../concepts/observability/context-propagation-with-carriers.md)
+- [Continuous Online Agent Evaluation](../concepts/llm-engineering/continuous-online-agent-evaluation.md)
+- [Cross-Account Observability Aggregation](../concepts/llm-engineering/cross-account-observability-aggregation.md)
+- [Cross-Provider GenAI Telemetry Refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md)
+- [Custom Distributions with the OpenTelemetry Collector Builder](../concepts/observability/opentelemetry-collector-builder-distributions.md)
+- [DevOps Agent Topology Context](../concepts/llm-engineering/devops-agent-topology-context.md)
+- [Domain-Owned Semantic Conventions](../concepts/observability/domain-owned-semantic-conventions.md)
+- [Effective Trust for Agents](../concepts/llm-engineering/effective-trust-for-agents.md)
+- [Event Sourcing with Staging Propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md)
+- [GenAI Observability Dashboard Abstraction](../concepts/llm-engineering/genai-observability-dashboard-abstraction.md)
+- [GenAI Operation Span Taxonomy](../concepts/observability/genai-operation-span-taxonomy.md)
+- [GenAI Streaming Telemetry Lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md)
+- [Hierarchical RBAC](../concepts/system-design/hierarchical-rbac.md)
+- [Kubernetes Collector Placement Modes](../concepts/observability/kubernetes-collector-placement-modes.md)
+- [LLM Observability](../concepts/llm-engineering/llm-observability.md)
+- [MCP Client-Server Trace Correlation](../concepts/observability/mcp-client-server-trace-correlation.md)
+- [Metadata-Driven Component Stability](../concepts/observability/metadata-driven-component-stability.md)
+- [Metrics Views and Aggregations](../concepts/observability/metrics-views-and-aggregations.md)
+- [Observer-Driven Dynamic Receivers](../concepts/observability/observer-driven-dynamic-receivers.md)
+- [OpAMP-Supervised Collector Fleet Management](../concepts/observability/opamp-supervised-collector-fleet-management.md)
+- [OpenTelemetry API-SDK Separation](../concepts/observability/opentelemetry-api-sdk-separation.md)
+- [OpenTelemetry Collector Connectors](../concepts/observability/collector-connectors.md)
+- [OpenTelemetry Collector Extensions](../concepts/observability/collector-extensions.md)
+- [OpenTelemetry Collector Pipeline Architecture](../concepts/observability/collector-pipeline-architecture.md)
+- [OTLP as a Vendor-Neutral Telemetry Protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md)
+- [OTTL Declarative Telemetry Transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md)
+- [Resource-Bound Telemetry Identity](../concepts/observability/resource-bound-telemetry-identity.md)
+- [Runtime Agent Bill of Materials](../concepts/llm-engineering/runtime-agent-bill-of-materials.md)
+- [Semantic Attribute Registry Reuse](../concepts/observability/semantic-attribute-registry-reuse.md)
+- [Semantic Convention Model as Source of Truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md)
+- [Semantic Convention Stability Lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md)
+- [Semantic Convention Validation and Generation](../concepts/observability/semantic-convention-validation-and-generation.md)
+- [Semantic Conventions as Telemetry Schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md)
+- [Session Convergence Evaluation](../concepts/llm-engineering/session-convergence-evaluation.md)
+- [Telemetry Attribute Requirement Levels](../concepts/observability/telemetry-attribute-requirement-levels.md)
+- [Telemetry Schema Migration Mappings](../concepts/observability/telemetry-schema-migration-mappings.md)
+- [Telemetry Signal Model](../concepts/observability/telemetry-signal-model.md)
+- [Trace-Aware Agent Evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md)
+- [Trace-Derived Evaluation Field Contract](../concepts/llm-engineering/trace-derived-evaluation-field-contract.md)
 
 ## open-source
 
-- [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
-- [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
+- [Event Sourcing with Staging Propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md)
+- [Hierarchical RBAC](../concepts/system-design/hierarchical-rbac.md)
 
 ## opentelemetry
 
-- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
-- [collector-authentication-extensions](../concepts/observability/collector-authentication-extensions.md) - Collector Authentication Extensions
-- [collector-component-factory-lifecycle](../concepts/observability/collector-component-factory-lifecycle.md) - Collector Component Factory and Lifecycle
-- [collector-configuration-providers](../concepts/observability/collector-configuration-providers.md) - Collector Configuration Providers and Resolution
-- [collector-connectors](../concepts/observability/collector-connectors.md) - OpenTelemetry Collector Connectors
-- [collector-exporter-resilience](../concepts/observability/collector-exporter-resilience.md) - Collector Exporter Resilience
-- [collector-extensions](../concepts/observability/collector-extensions.md) - OpenTelemetry Collector Extensions
-- [collector-pdata-ownership-at-fanout](../concepts/observability/collector-pdata-ownership-at-fanout.md) - Collector pdata Ownership at Fan-Out
-- [collector-pipeline-architecture](../concepts/observability/collector-pipeline-architecture.md) - OpenTelemetry Collector Pipeline Architecture
-- [collector-resource-detection-and-enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md) - Collector Resource Detection and Enrichment
-- [collector-storage-extensions](../concepts/observability/collector-storage-extensions.md) - Collector Storage Extensions
-- [consistent-probability-sampling](../concepts/observability/consistent-probability-sampling.md) - Consistent Probability Sampling
-- [context-propagation-with-carriers](../concepts/observability/context-propagation-with-carriers.md) - Context Propagation with Carriers
-- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
-- [domain-owned-semantic-conventions](../concepts/observability/domain-owned-semantic-conventions.md) - Domain-Owned Semantic Conventions
-- [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
-- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
-- [kubernetes-collector-placement-modes](../concepts/observability/kubernetes-collector-placement-modes.md) - Kubernetes Collector Placement Modes
-- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
-- [metadata-driven-component-stability](../concepts/observability/metadata-driven-component-stability.md) - Metadata-Driven Component Stability
-- [metrics-views-and-aggregations](../concepts/observability/metrics-views-and-aggregations.md) - Metrics Views and Aggregations
-- [observer-driven-dynamic-receivers](../concepts/observability/observer-driven-dynamic-receivers.md) - Observer-Driven Dynamic Receivers
-- [opamp-supervised-collector-fleet-management](../concepts/observability/opamp-supervised-collector-fleet-management.md) - OpAMP-Supervised Collector Fleet Management
-- [opentelemetry-api-sdk-separation](../concepts/observability/opentelemetry-api-sdk-separation.md) - OpenTelemetry API-SDK Separation
-- [opentelemetry-collector-builder-distributions](../concepts/observability/opentelemetry-collector-builder-distributions.md) - Custom Distributions with the OpenTelemetry Collector Builder
-- [otlp-vendor-neutral-telemetry-protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md) - OTLP as a Vendor-Neutral Telemetry Protocol
-- [ottl-declarative-telemetry-transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md) - OTTL Declarative Telemetry Transformation
-- [resource-bound-telemetry-identity](../concepts/observability/resource-bound-telemetry-identity.md) - Resource-Bound Telemetry Identity
-- [semantic-attribute-registry-reuse](../concepts/observability/semantic-attribute-registry-reuse.md) - Semantic Attribute Registry Reuse
-- [semantic-convention-model-as-source-of-truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md) - Semantic Convention Model as Source of Truth
-- [semantic-convention-stability-lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md) - Semantic Convention Stability Lifecycle
-- [semantic-convention-validation-and-generation](../concepts/observability/semantic-convention-validation-and-generation.md) - Semantic Convention Validation and Generation
-- [semantic-conventions-as-telemetry-schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md) - Semantic Conventions as Telemetry Schema
-- [telemetry-attribute-requirement-levels](../concepts/observability/telemetry-attribute-requirement-levels.md) - Telemetry Attribute Requirement Levels
-- [telemetry-schema-migration-mappings](../concepts/observability/telemetry-schema-migration-mappings.md) - Telemetry Schema Migration Mappings
-- [telemetry-signal-model](../concepts/observability/telemetry-signal-model.md) - Telemetry Signal Model
+- [Agentic Workflow Span Hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md)
+- [Collector Authentication Extensions](../concepts/observability/collector-authentication-extensions.md)
+- [Collector Component Factory and Lifecycle](../concepts/observability/collector-component-factory-lifecycle.md)
+- [Collector Configuration Providers and Resolution](../concepts/observability/collector-configuration-providers.md)
+- [Collector Exporter Resilience](../concepts/observability/collector-exporter-resilience.md)
+- [Collector pdata Ownership at Fan-Out](../concepts/observability/collector-pdata-ownership-at-fanout.md)
+- [Collector Resource Detection and Enrichment](../concepts/observability/collector-resource-detection-and-enrichment.md)
+- [Collector Storage Extensions](../concepts/observability/collector-storage-extensions.md)
+- [Consistent Probability Sampling](../concepts/observability/consistent-probability-sampling.md)
+- [Context Propagation with Carriers](../concepts/observability/context-propagation-with-carriers.md)
+- [Cross-Provider GenAI Telemetry Refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md)
+- [Custom Distributions with the OpenTelemetry Collector Builder](../concepts/observability/opentelemetry-collector-builder-distributions.md)
+- [Domain-Owned Semantic Conventions](../concepts/observability/domain-owned-semantic-conventions.md)
+- [GenAI Operation Span Taxonomy](../concepts/observability/genai-operation-span-taxonomy.md)
+- [GenAI Streaming Telemetry Lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md)
+- [Kubernetes Collector Placement Modes](../concepts/observability/kubernetes-collector-placement-modes.md)
+- [MCP Client-Server Trace Correlation](../concepts/observability/mcp-client-server-trace-correlation.md)
+- [Metadata-Driven Component Stability](../concepts/observability/metadata-driven-component-stability.md)
+- [Metrics Views and Aggregations](../concepts/observability/metrics-views-and-aggregations.md)
+- [Observer-Driven Dynamic Receivers](../concepts/observability/observer-driven-dynamic-receivers.md)
+- [OpAMP-Supervised Collector Fleet Management](../concepts/observability/opamp-supervised-collector-fleet-management.md)
+- [OpenTelemetry API-SDK Separation](../concepts/observability/opentelemetry-api-sdk-separation.md)
+- [OpenTelemetry Collector Connectors](../concepts/observability/collector-connectors.md)
+- [OpenTelemetry Collector Extensions](../concepts/observability/collector-extensions.md)
+- [OpenTelemetry Collector Pipeline Architecture](../concepts/observability/collector-pipeline-architecture.md)
+- [OTLP as a Vendor-Neutral Telemetry Protocol](../concepts/observability/otlp-vendor-neutral-telemetry-protocol.md)
+- [OTTL Declarative Telemetry Transformation](../concepts/observability/ottl-declarative-telemetry-transformation.md)
+- [Resource-Bound Telemetry Identity](../concepts/observability/resource-bound-telemetry-identity.md)
+- [Semantic Attribute Registry Reuse](../concepts/observability/semantic-attribute-registry-reuse.md)
+- [Semantic Convention Model as Source of Truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md)
+- [Semantic Convention Stability Lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md)
+- [Semantic Convention Validation and Generation](../concepts/observability/semantic-convention-validation-and-generation.md)
+- [Semantic Conventions as Telemetry Schema](../concepts/observability/semantic-conventions-as-telemetry-schema.md)
+- [Telemetry Attribute Requirement Levels](../concepts/observability/telemetry-attribute-requirement-levels.md)
+- [Telemetry Schema Migration Mappings](../concepts/observability/telemetry-schema-migration-mappings.md)
+- [Telemetry Signal Model](../concepts/observability/telemetry-signal-model.md)
 
 ## optimization
 
-- [actionable-side-information](../concepts/llm-engineering/actionable-side-information.md) - Actionable Side Information
-- [adapter-based-llm-optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md) - Adapter-Based LLM Optimization
-- [caching-strategies](../concepts/system-design/caching-strategies.md) - Caching Strategies
-- [dspy-module-composition](../concepts/llm-engineering/dspy-module-composition.md) - DSPy Module Composition
-- [few-shot-bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md) - Few-Shot Bootstrapping
-- [metric-driven-llm-optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md) - Metric-Driven LLM Optimization
-- [optimize-anything-pattern](../concepts/llm-engineering/optimize-anything-pattern.md) - Optimize Anything Pattern
-- [pareto-efficient-candidate-selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md) - Pareto-Efficient Candidate Selection
-- [reflective-mutation-proposer](../concepts/llm-engineering/reflective-mutation-proposer.md) - Reflective Mutation Proposer
-- [sparse-validation-evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md) - Sparse Validation Evaluation
-- [system-aware-candidate-merge](../concepts/llm-engineering/system-aware-candidate-merge.md) - System-Aware Candidate Merge
+- [Actionable Side Information](../concepts/llm-engineering/actionable-side-information.md)
+- [Adapter-Based LLM Optimization](../concepts/llm-engineering/adapter-based-llm-optimization.md)
+- [Caching Strategies](../concepts/system-design/caching-strategies.md)
+- [DSPy Module Composition](../concepts/llm-engineering/dspy-module-composition.md)
+- [Few-Shot Bootstrapping](../concepts/llm-engineering/few-shot-bootstrapping.md)
+- [Metric-Driven LLM Optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md)
+- [Optimize Anything Pattern](../concepts/llm-engineering/optimize-anything-pattern.md)
+- [Pareto-Efficient Candidate Selection](../concepts/llm-engineering/pareto-efficient-candidate-selection.md)
+- [Reflective Mutation Proposer](../concepts/llm-engineering/reflective-mutation-proposer.md)
+- [Sparse Validation Evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md)
+- [System-Aware Candidate Merge](../concepts/llm-engineering/system-aware-candidate-merge.md)
 
 ## orchestration
 
-- [langgraph-channels-and-reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md) - LangGraph Channels and Reducers
-- [langgraph-pregel-bsp-execution](../concepts/llm-engineering/langgraph-pregel-bsp-execution.md) - LangGraph Pregel BSP Execution
-- [langgraph-remotegraph-server-execution](../concepts/llm-engineering/langgraph-remotegraph-server-execution.md) - LangGraph RemoteGraph and Server Execution
-- [langgraph-runtime-dependency-injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md) - LangGraph Runtime Dependency Injection
-- [langgraph-send-command-control-flow](../concepts/llm-engineering/langgraph-send-command-control-flow.md) - LangGraph Send and Command Control Flow
-- [langgraph-stategraph-state-schema](../concepts/llm-engineering/langgraph-stategraph-state-schema.md) - LangGraph StateGraph State Schema
-- [langgraph-toolnode-prebuilt-components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) - LangGraph ToolNode and Prebuilt Components
+- [LangGraph Channels and Reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md)
+- [LangGraph Pregel BSP Execution](../concepts/llm-engineering/langgraph-pregel-bsp-execution.md)
+- [LangGraph RemoteGraph and Server Execution](../concepts/llm-engineering/langgraph-remotegraph-server-execution.md)
+- [LangGraph Runtime Dependency Injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md)
+- [LangGraph Send and Command Control Flow](../concepts/llm-engineering/langgraph-send-command-control-flow.md)
+- [LangGraph StateGraph State Schema](../concepts/llm-engineering/langgraph-stategraph-state-schema.md)
+- [LangGraph ToolNode and Prebuilt Components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md)
+- [State-Externalized Skill Composition](../concepts/llm-engineering/state-externalized-skill-composition.md)
+
+## organizational-change
+
+- [Enterprise AI Transformation Stages](../concepts/ai-transformation/enterprise-ai-transformation-stages.md)
 
 ## payments
 
-- [supermarket-checkout-vocabulary](../concepts/english/supermarket-checkout-vocabulary.md) - Supermarket Checkout Vocabulary
+- [Supermarket Checkout Vocabulary](../concepts/english/supermarket-checkout-vocabulary.md)
+- [UCP and AP2 Commerce-Payment Separation](../concepts/llm-engineering/ucp-ap2-commerce-payment-separation.md)
 
 ## performance
 
-- [async-processing](../concepts/system-design/async-processing.md) - Asynchronous Processing
-- [caching-strategies](../concepts/system-design/caching-strategies.md) - Caching Strategies
+- [Asynchronous Processing](../concepts/system-design/async-processing.md)
+- [Caching Strategies](../concepts/system-design/caching-strategies.md)
+
+## procedural-knowledge
+
+- [Agent Skills as Procedural Memory](../concepts/llm-engineering/agent-skills-as-procedural-memory.md)
+
+## prompt-injection
+
+- [Memory Poisoning Defense in Agent Systems](../concepts/llm-engineering/memory-poisoning-defense-in-agent-systems.md)
 
 ## prompt-management
 
-- [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
-- [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
+- [Event Sourcing with Staging Propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md)
+- [Hierarchical RBAC](../concepts/system-design/hierarchical-rbac.md)
 
 ## prompt-optimization
 
-- [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
-- [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
+- [Chain-of-Thought Reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md)
+- [LLM Program Distillation](../concepts/llm-engineering/llm-program-distillation.md)
 
 ## prompts
 
-- [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures
-- [optimize-anything-pattern](../concepts/llm-engineering/optimize-anything-pattern.md) - Optimize Anything Pattern
-- [prompt-version-management](../concepts/llm-engineering/prompt-version-management.md) - Prompt Version Management
-- [reflective-mutation-proposer](../concepts/llm-engineering/reflective-mutation-proposer.md) - Reflective Mutation Proposer
+- [DSPy Signatures](../concepts/llm-engineering/dspy-signatures.md)
+- [Optimize Anything Pattern](../concepts/llm-engineering/optimize-anything-pattern.md)
+- [Prompt Version Management](../concepts/llm-engineering/prompt-version-management.md)
+- [Reflective Mutation Proposer](../concepts/llm-engineering/reflective-mutation-proposer.md)
 
 ## protocol
 
-- [mcp-bidirectional-json-rpc-substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md) - MCP Bidirectional JSON-RPC Substrate
-- [mcp-capability-negotiation-handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md) - MCP Capability Negotiation Handshake
-- [mcp-schema-generation-pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md) - MCP Schema Generation Pipeline
-- [mcp-transport-separation](../concepts/llm-engineering/mcp-transport-separation.md) - MCP Transport Separation
+- [AgentCore A2A Protocol Contract](../concepts/llm-engineering/agentcore-a2a-protocol-contract.md)
+- [MCP Bidirectional JSON-RPC Substrate](../concepts/llm-engineering/mcp-bidirectional-json-rpc-substrate.md)
+- [MCP Capability Negotiation Handshake](../concepts/llm-engineering/mcp-capability-negotiation-handshake.md)
+- [MCP Schema Generation Pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md)
+- [MCP Transport Separation](../concepts/llm-engineering/mcp-transport-separation.md)
+- [UCP and AP2 Commerce-Payment Separation](../concepts/llm-engineering/ucp-ap2-commerce-payment-separation.md)
 
 ## provider-integrations
 
-- [model-agnostic-evaluation-provider-abstraction](../concepts/llm-engineering/model-agnostic-evaluation-provider-abstraction.md) - Model-Agnostic Evaluation Provider Abstraction
-- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
-- [provider-chat-model-wrappers-in-langgraph-nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md) - Provider Chat Model Wrappers in LangGraph Nodes
+- [Cross-Provider GenAI Telemetry Refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md)
+- [Model-Agnostic Evaluation Provider Abstraction](../concepts/llm-engineering/model-agnostic-evaluation-provider-abstraction.md)
+- [Provider Chat Model Wrappers in LangGraph Nodes](../concepts/llm-engineering/provider-chat-model-wrappers-in-langgraph-nodes.md)
 
 ## python
 
-- [chain-of-thought-reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md) - Chain-of-Thought Reasoning
-- [llm-program-distillation](../concepts/llm-engineering/llm-program-distillation.md) - LLM Program Distillation
-
-## red-teaming
-
-- [composable-llm-red-team-testing](../concepts/llm-engineering/composable-llm-red-team-testing.md) - Composable LLM Red-Team Testing
-- [iterative-adversarial-testing-loop](../concepts/llm-engineering/iterative-adversarial-testing-loop.md) - Iterative Adversarial Testing Loop
+- [Chain-of-Thought Reasoning](../concepts/llm-engineering/chain-of-thought-reasoning.md)
+- [LLM Program Distillation](../concepts/llm-engineering/llm-program-distillation.md)
 
 ## quality
 
-- [llm-as-judge-evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md) - LLM-as-Judge Evaluation
+- [LLM-as-Judge Evaluation](../concepts/llm-engineering/llm-as-judge-evaluation.md)
+
+## quality-gates
+
+- [Agentic Software Factory Model](../concepts/llm-engineering/agentic-software-factory-model.md)
 
 ## rag
 
-- [langchain-core-message-model-for-langgraph-state](../concepts/llm-engineering/langchain-core-message-model-for-langgraph-state.md) - LangChain Message Model for LangGraph State
-- [langgraph-store-long-term-memory](../concepts/llm-engineering/langgraph-store-long-term-memory.md) - LangGraph Store Long-Term Memory
-- [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
+- [LangChain Message Model for LangGraph State](../concepts/llm-engineering/langchain-core-message-model-for-langgraph-state.md)
+- [LangGraph Store Long-Term Memory](../concepts/llm-engineering/langgraph-store-long-term-memory.md)
+- [Long-Term Memory vs. RAG Boundary](../concepts/llm-engineering/long-term-memory-vs-rag-boundary.md)
+- [Retrievers and Vector Stores for LangGraph RAG](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md)
 
-## release-management
+## rate-limiting
 
-- [change-specific-release-testing](../concepts/llm-engineering/change-specific-release-testing.md) - Change-Specific Release Testing
-- [release-readiness-blast-radius-review](../concepts/llm-engineering/release-readiness-blast-radius-review.md) - Release Readiness Blast-Radius Review
-
-## reliability
-
-- [high-availability](../concepts/system-design/high-availability.md) - High Availability
-- [s3-first-durability](../concepts/llm-engineering/s3-first-durability.md) - S3-First Durability Pattern
-- [single-point-of-failure](../concepts/system-design/single-point-of-failure.md) - Single Point of Failure
+- [Multi-Dimension Rate Limiting with Fail-Open Defaults](../concepts/llm-engineering/multi-dimension-rate-limiting-with-fail-open.md)
 
 ## record-replay
 
-- [cassette-backed-mcp-pytest-fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md) - Cassette-Backed MCP Pytest Fixtures
-- [declarative-mcp-scenario-recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md) - Declarative MCP Scenario Recording
-- [deterministic-mcp-replay-matching](../concepts/llm-engineering/deterministic-mcp-replay-matching.md) - Deterministic MCP Replay Matching
-- [mcp-interaction-cassette](../concepts/llm-engineering/mcp-interaction-cassette.md) - MCP Interaction Cassette
-- [mcp-record-replay-verify-cycle](../concepts/llm-engineering/mcp-record-replay-verify-cycle.md) - MCP Record-Replay-Verify Cycle
-- [replay-safe-cassette-scrubbing](../concepts/llm-engineering/replay-safe-cassette-scrubbing.md) - Replay-Safe Cassette Scrubbing
-- [volatility-aware-structural-verification](../concepts/llm-engineering/volatility-aware-structural-verification.md) - Volatility-Aware Structural Verification
+- [Cassette-Backed MCP Pytest Fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md)
+- [Declarative MCP Scenario Recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md)
+- [Deterministic MCP Replay Matching](../concepts/llm-engineering/deterministic-mcp-replay-matching.md)
+- [MCP Interaction Cassette](../concepts/llm-engineering/mcp-interaction-cassette.md)
+- [MCP Record-Replay-Verify Cycle](../concepts/llm-engineering/mcp-record-replay-verify-cycle.md)
+- [Replay-Safe Cassette Scrubbing](../concepts/llm-engineering/replay-safe-cassette-scrubbing.md)
+- [Volatility-Aware Structural Verification](../concepts/llm-engineering/volatility-aware-structural-verification.md)
+
+## red-teaming
+
+- [Composable LLM Red-Team Testing](../concepts/llm-engineering/composable-llm-red-team-testing.md)
+- [Iterative Adversarial Testing Loop](../concepts/llm-engineering/iterative-adversarial-testing-loop.md)
+
+## release-management
+
+- [Change-Specific Release Testing](../concepts/llm-engineering/change-specific-release-testing.md)
+- [Release Readiness Blast-Radius Review](../concepts/llm-engineering/release-readiness-blast-radius-review.md)
+
+## reliability
+
+- [Config-Bundle A/B Testing for Agent Behavior](../concepts/llm-engineering/config-bundle-ab-testing-for-agent-behavior.md)
+- [Harness Cost Attribution and Hard Limits](../concepts/llm-engineering/harness-cost-attribution-and-hard-limits.md)
+- [Health-Probe-Driven Task Liveness](../concepts/llm-engineering/health-probe-driven-task-liveness.md)
+- [High Availability](../concepts/system-design/high-availability.md)
+- [Immutable Versioned Endpoints for Agent Config](../concepts/llm-engineering/immutable-versioned-endpoints-for-agent-config.md)
+- [Multi-Dimension Rate Limiting with Fail-Open Defaults](../concepts/llm-engineering/multi-dimension-rate-limiting-with-fail-open.md)
+- [S3-First Durability Pattern](../concepts/llm-engineering/s3-first-durability.md)
+- [Shadow-Mode Policy Testing with Decision-Flip Telemetry](../concepts/llm-engineering/shadow-mode-policy-testing-with-decision-flip-telemetry.md)
+- [Single Point of Failure](../concepts/system-design/single-point-of-failure.md)
+
+## requirements
+
+- [Underspecification Gap in Agent Evaluation](../concepts/llm-engineering/underspecification-gap-in-agent-evaluation.md)
 
 ## retrieval
 
-- [retrievers-vector-stores-for-langgraph-rag](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md) - Retrievers and Vector Stores for LangGraph RAG
+- [Retrievers and Vector Stores for LangGraph RAG](../concepts/llm-engineering/retrievers-vector-stores-for-langgraph-rag.md)
+
+## risk-management
+
+- [Authority-Tiered Agent Skills](../concepts/llm-engineering/authority-tiered-agent-skills.md)
+- [Enterprise AI Governance Framework](../concepts/ai-transformation/enterprise-ai-governance-framework.md)
+- [Risk-Bounded AI Pilot Design](../concepts/ai-transformation/risk-bounded-ai-pilot-design.md)
 
 ## risk-review
 
-- [release-readiness-blast-radius-review](../concepts/llm-engineering/release-readiness-blast-radius-review.md) - Release Readiness Blast-Radius Review
+- [Release Readiness Blast-Radius Review](../concepts/llm-engineering/release-readiness-blast-radius-review.md)
+- [Risk-Focused High-Velocity Code Review](../concepts/llm-engineering/risk-focused-high-velocity-code-review.md)
+
+## routing
+
+- [Skill Description as a Routing Interface](../concepts/llm-engineering/skill-description-as-routing-interface.md)
+
+## sandboxing
+
+- [Ephemeral Agent Execution Sandbox](../concepts/llm-engineering/ephemeral-agent-execution-sandbox.md)
+- [microVM Session Isolation and Lifecycle](../concepts/llm-engineering/microvm-session-isolation-lifecycle.md)
 
 ## scalability
 
-- [horizontal-scaling](../concepts/system-design/horizontal-scaling.md) - Horizontal Scaling
-- [load-balancing](../concepts/system-design/load-balancing.md) - Load Balancing
-- [sticky-sessions](../concepts/system-design/sticky-sessions.md) - Sticky Sessions
-- [vertical-scaling](../concepts/system-design/vertical-scaling.md) - Vertical Scaling
+- [Horizontal Scaling](../concepts/system-design/horizontal-scaling.md)
+- [Load Balancing](../concepts/system-design/load-balancing.md)
+- [Sticky Sessions](../concepts/system-design/sticky-sessions.md)
+- [Vertical Scaling](../concepts/system-design/vertical-scaling.md)
 
 ## schema
 
-- [mcp-schema-generation-pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md) - MCP Schema Generation Pipeline
+- [MCP Schema Generation Pipeline](../concepts/llm-engineering/mcp-schema-generation-pipeline.md)
 
 ## security
 
-- [composable-llm-red-team-testing](../concepts/llm-engineering/composable-llm-red-team-testing.md) - Composable LLM Red-Team Testing
-- [mcp-oauth-protected-resource-discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md) - MCP OAuth Protected Resource Discovery
-- [mcp-roots-advisory-boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md) - MCP Roots as Advisory Boundaries
-- [ssl-termination](../concepts/system-design/ssl-termination.md) - SSL Termination
+- [A2UI Trusted Catalog Rendering](../concepts/llm-engineering/a2ui-trusted-catalog-rendering.md)
+- [Agent Skill Supply-Chain Governance](../concepts/llm-engineering/agent-skill-supply-chain-governance.md)
+- [AgentCore Trust-Boundary Hardening](../concepts/llm-engineering/agentcore-trust-boundary-hardening.md)
+- [Agentic Security Response Triad](../concepts/llm-engineering/agentic-security-response-triad.md)
+- [Cedar Policy Gateway Authorization](../concepts/llm-engineering/cedar-policy-gateway-authorization.md)
+- [Composable LLM Red-Team Testing](../concepts/llm-engineering/composable-llm-red-team-testing.md)
+- [Context-Aware Approval for High-Stakes Agent Actions](../concepts/llm-engineering/context-aware-high-stakes-agent-approval.md)
+- [Effective Trust for Agents](../concepts/llm-engineering/effective-trust-for-agents.md)
+- [Ephemeral Agent Execution Sandbox](../concepts/llm-engineering/ephemeral-agent-execution-sandbox.md)
+- [Hallucinated-Package Slopsquatting Defense](../concepts/llm-engineering/hallucinated-package-slopsquatting-defense.md)
+- [Hybrid Agent Policy Gating](../concepts/llm-engineering/hybrid-agent-policy-gating.md)
+- [MCP OAuth Protected Resource Discovery](../concepts/llm-engineering/mcp-oauth-protected-resource-discovery.md)
+- [MCP Roots as Advisory Boundaries](../concepts/llm-engineering/mcp-roots-advisory-boundaries.md)
+- [Memory Poisoning Defense in Agent Systems](../concepts/llm-engineering/memory-poisoning-defense-in-agent-systems.md)
+- [Runtime Agent Bill of Materials](../concepts/llm-engineering/runtime-agent-bill-of-materials.md)
+- [Secure MCP Consumption Lifecycle](../concepts/llm-engineering/secure-mcp-consumption-lifecycle.md)
+- [SSL Termination](../concepts/system-design/ssl-termination.md)
+- [Structured Payload Injection via Type Confusion](../concepts/llm-engineering/structured-payload-injection-via-type-confusion.md)
+- [Untrusted Content Isolation for Agents](../concepts/llm-engineering/untrusted-content-isolation-for-agents.md)
+- [Zero Ambient Authority for Agents](../concepts/llm-engineering/zero-ambient-authority-for-agents.md)
 
 ## semantic-conventions
 
-- [cross-provider-genai-telemetry-refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md) - Cross-Provider GenAI Telemetry Refinements
-- [domain-owned-semantic-conventions](../concepts/observability/domain-owned-semantic-conventions.md) - Domain-Owned Semantic Conventions
-- [semantic-attribute-registry-reuse](../concepts/observability/semantic-attribute-registry-reuse.md) - Semantic Attribute Registry Reuse
-- [semantic-convention-model-as-source-of-truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md) - Semantic Convention Model as Source of Truth
-- [semantic-convention-stability-lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md) - Semantic Convention Stability Lifecycle
-- [semantic-convention-validation-and-generation](../concepts/observability/semantic-convention-validation-and-generation.md) - Semantic Convention Validation and Generation
-- [telemetry-attribute-requirement-levels](../concepts/observability/telemetry-attribute-requirement-levels.md) - Telemetry Attribute Requirement Levels
-- [telemetry-schema-migration-mappings](../concepts/observability/telemetry-schema-migration-mappings.md) - Telemetry Schema Migration Mappings
+- [Cross-Provider GenAI Telemetry Refinements](../concepts/observability/cross-provider-genai-telemetry-refinements.md)
+- [Domain-Owned Semantic Conventions](../concepts/observability/domain-owned-semantic-conventions.md)
+- [Semantic Attribute Registry Reuse](../concepts/observability/semantic-attribute-registry-reuse.md)
+- [Semantic Convention Model as Source of Truth](../concepts/observability/semantic-convention-model-as-source-of-truth.md)
+- [Semantic Convention Stability Lifecycle](../concepts/observability/semantic-convention-stability-lifecycle.md)
+- [Semantic Convention Validation and Generation](../concepts/observability/semantic-convention-validation-and-generation.md)
+- [Telemetry Attribute Requirement Levels](../concepts/observability/telemetry-attribute-requirement-levels.md)
+- [Telemetry Schema Migration Mappings](../concepts/observability/telemetry-schema-migration-mappings.md)
+
+## session-isolation
+
+- [microVM Session Isolation and Lifecycle](../concepts/llm-engineering/microvm-session-isolation-lifecycle.md)
 
 ## skills
 
-- [learned-operational-knowledge-files](../concepts/llm-engineering/learned-operational-knowledge-files.md) - Learned Operational Knowledge Files
+- [Learned Operational Knowledge Files](../concepts/llm-engineering/learned-operational-knowledge-files.md)
 
 ## smoking
 
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
-- [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
-- [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
-- [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
-- [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
+- [Cut Down vs Quit](../concepts/english/cut-down-vs-quit.md)
+- [Idiom: Go Cold Turkey](../concepts/english/cold-turkey-idiom.md)
+- [No Smoking Polite Notices](../concepts/english/no-smoking-polite-notices.md)
+- [Phrasal Verb: Crack Down On](../concepts/english/crack-down-phrasal-verb.md)
+- [Smoking Cessation Vocabulary](../concepts/english/smoking-cessation-vocabulary.md)
+- [Willpower and Urge Vocabulary](../concepts/english/willpower-and-urge-vocabulary.md)
+
+## software-factory
+
+- [Agentic Software Factory Model](../concepts/llm-engineering/agentic-software-factory-model.md)
+
+## software-quality
+
+- [Multidimensional Coding-Agent Evaluation](../concepts/llm-engineering/multidimensional-coding-agent-evaluation.md)
+- [The 80% Problem in Agentic Coding](../concepts/llm-engineering/agentic-coding-80-percent-problem.md)
 
 ## sre
 
-- [autonomous-incident-investigation](../concepts/llm-engineering/autonomous-incident-investigation.md) - Autonomous Incident Investigation
-- [proactive-incident-prevention-loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md) - Proactive Incident Prevention Loop
+- [Autonomous Incident Investigation](../concepts/llm-engineering/autonomous-incident-investigation.md)
+- [Proactive Incident Prevention Loop](../concepts/llm-engineering/proactive-incident-prevention-loop.md)
+
+## state-management
+
+- [State-Externalized Skill Composition](../concepts/llm-engineering/state-externalized-skill-composition.md)
 
 ## stateful-workflows
 
-- [langgraph-channels-and-reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md) - LangGraph Channels and Reducers
-- [langgraph-checkpoint-time-travel-forking](../concepts/llm-engineering/langgraph-checkpoint-time-travel-forking.md) - LangGraph Checkpoint Time Travel and Forking
-- [langgraph-pregel-bsp-execution](../concepts/llm-engineering/langgraph-pregel-bsp-execution.md) - LangGraph Pregel BSP Execution
-- [langgraph-runtime-dependency-injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md) - LangGraph Runtime Dependency Injection
-- [langgraph-stategraph-state-schema](../concepts/llm-engineering/langgraph-stategraph-state-schema.md) - LangGraph StateGraph State Schema
-- [langgraph-toolnode-prebuilt-components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md) - LangGraph ToolNode and Prebuilt Components
+- [LangGraph Channels and Reducers](../concepts/llm-engineering/langgraph-channels-and-reducers.md)
+- [LangGraph Checkpoint Time Travel and Forking](../concepts/llm-engineering/langgraph-checkpoint-time-travel-forking.md)
+- [LangGraph Pregel BSP Execution](../concepts/llm-engineering/langgraph-pregel-bsp-execution.md)
+- [LangGraph Runtime Dependency Injection](../concepts/llm-engineering/langgraph-runtime-dependency-injection.md)
+- [LangGraph StateGraph State Schema](../concepts/llm-engineering/langgraph-stategraph-state-schema.md)
+- [LangGraph ToolNode and Prebuilt Components](../concepts/llm-engineering/langgraph-toolnode-prebuilt-components.md)
 
 ## streaming
 
-- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
+- [GenAI Streaming Telemetry Lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md)
 
 ## structured-output
 
-- [dspy-signatures](../concepts/llm-engineering/dspy-signatures.md) - DSPy Signatures
-- [mcp-elicitation-for-structured-user-input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md) - MCP Elicitation for Structured User Input
+- [DSPy Signatures](../concepts/llm-engineering/dspy-signatures.md)
+- [MCP Elicitation for Structured User Input](../concepts/llm-engineering/mcp-elicitation-for-structured-user-input.md)
 
 ## supermarket
 
-- [supermarket-checkout-vocabulary](../concepts/english/supermarket-checkout-vocabulary.md) - Supermarket Checkout Vocabulary
+- [Supermarket Checkout Vocabulary](../concepts/english/supermarket-checkout-vocabulary.md)
+
+## supply-chain
+
+- [Agent Skill Supply-Chain Governance](../concepts/llm-engineering/agent-skill-supply-chain-governance.md)
+- [Hallucinated-Package Slopsquatting Defense](../concepts/llm-engineering/hallucinated-package-slopsquatting-defense.md)
 
 ## system-design
 
-- [async-processing](../concepts/system-design/async-processing.md) - Asynchronous Processing
-- [caching-strategies](../concepts/system-design/caching-strategies.md) - Caching Strategies
-- [cap-theorem](../concepts/system-design/cap-theorem.md) - CAP Theorem
-- [database-replication](../concepts/system-design/database-replication.md) - Database Replication
-- [database-sharding](../concepts/system-design/database-sharding.md) - Database Sharding
-- [eventual-consistency](../concepts/system-design/eventual-consistency.md) - Eventual Consistency
-- [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
-- [high-availability](../concepts/system-design/high-availability.md) - High Availability
-- [horizontal-scaling](../concepts/system-design/horizontal-scaling.md) - Horizontal Scaling
-- [load-balancing](../concepts/system-design/load-balancing.md) - Load Balancing
-- [microservices](../concepts/system-design/microservices.md) - Microservices Architecture
-- [raid-storage](../concepts/system-design/raid-storage.md) - RAID Storage
-- [single-point-of-failure](../concepts/system-design/single-point-of-failure.md) - Single Point of Failure
-- [ssl-termination](../concepts/system-design/ssl-termination.md) - SSL Termination
-- [sticky-sessions](../concepts/system-design/sticky-sessions.md) - Sticky Sessions
-- [vertical-scaling](../concepts/system-design/vertical-scaling.md) - Vertical Scaling
+- [Asynchronous Processing](../concepts/system-design/async-processing.md)
+- [Caching Strategies](../concepts/system-design/caching-strategies.md)
+- [CAP Theorem](../concepts/system-design/cap-theorem.md)
+- [Database Replication](../concepts/system-design/database-replication.md)
+- [Database Sharding](../concepts/system-design/database-sharding.md)
+- [Eventual Consistency](../concepts/system-design/eventual-consistency.md)
+- [Hierarchical RBAC](../concepts/system-design/hierarchical-rbac.md)
+- [High Availability](../concepts/system-design/high-availability.md)
+- [Horizontal Scaling](../concepts/system-design/horizontal-scaling.md)
+- [Load Balancing](../concepts/system-design/load-balancing.md)
+- [Microservices Architecture](../concepts/system-design/microservices.md)
+- [RAID Storage](../concepts/system-design/raid-storage.md)
+- [Single Point of Failure](../concepts/system-design/single-point-of-failure.md)
+- [SSL Termination](../concepts/system-design/ssl-termination.md)
+- [Sticky Sessions](../concepts/system-design/sticky-sessions.md)
+- [Vertical Scaling](../concepts/system-design/vertical-scaling.md)
 
 ## testing
 
-- [configuration-driven-llm-evaluation-matrix](../concepts/llm-engineering/configuration-driven-llm-evaluation-matrix.md) - Configuration-Driven LLM Evaluation Matrix
-- [hybrid-llm-output-assertions](../concepts/llm-engineering/hybrid-llm-output-assertions.md) - Hybrid LLM Output Assertions
-- [iterative-adversarial-testing-loop](../concepts/llm-engineering/iterative-adversarial-testing-loop.md) - Iterative Adversarial Testing Loop
-- [change-specific-release-testing](../concepts/llm-engineering/change-specific-release-testing.md) - Change-Specific Release Testing
-- [cassette-backed-mcp-pytest-fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md) - Cassette-Backed MCP Pytest Fixtures
-- [declarative-mcp-scenario-recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md) - Declarative MCP Scenario Recording
-- [deterministic-mcp-replay-matching](../concepts/llm-engineering/deterministic-mcp-replay-matching.md) - Deterministic MCP Replay Matching
-- [mcp-interaction-cassette](../concepts/llm-engineering/mcp-interaction-cassette.md) - MCP Interaction Cassette
-- [mcp-record-replay-verify-cycle](../concepts/llm-engineering/mcp-record-replay-verify-cycle.md) - MCP Record-Replay-Verify Cycle
-- [replay-safe-cassette-scrubbing](../concepts/llm-engineering/replay-safe-cassette-scrubbing.md) - Replay-Safe Cassette Scrubbing
-- [volatility-aware-structural-verification](../concepts/llm-engineering/volatility-aware-structural-verification.md) - Volatility-Aware Structural Verification
+- [Cassette-Backed MCP Pytest Fixtures](../concepts/llm-engineering/cassette-backed-mcp-pytest-fixtures.md)
+- [Change-Specific Release Testing](../concepts/llm-engineering/change-specific-release-testing.md)
+- [Configuration-Driven LLM Evaluation Matrix](../concepts/llm-engineering/configuration-driven-llm-evaluation-matrix.md)
+- [Declarative MCP Scenario Recording](../concepts/llm-engineering/declarative-mcp-scenario-recording.md)
+- [Deterministic MCP Replay Matching](../concepts/llm-engineering/deterministic-mcp-replay-matching.md)
+- [Hybrid LLM Output Assertions](../concepts/llm-engineering/hybrid-llm-output-assertions.md)
+- [Iterative Adversarial Testing Loop](../concepts/llm-engineering/iterative-adversarial-testing-loop.md)
+- [MCP Interaction Cassette](../concepts/llm-engineering/mcp-interaction-cassette.md)
+- [MCP Record-Replay-Verify Cycle](../concepts/llm-engineering/mcp-record-replay-verify-cycle.md)
+- [Multidimensional Coding-Agent Evaluation](../concepts/llm-engineering/multidimensional-coding-agent-evaluation.md)
+- [Replay-Safe Cassette Scrubbing](../concepts/llm-engineering/replay-safe-cassette-scrubbing.md)
+- [Shadow-Mode Policy Testing with Decision-Flip Telemetry](../concepts/llm-engineering/shadow-mode-policy-testing-with-decision-flip-telemetry.md)
+- [Volatility-Aware Structural Verification](../concepts/llm-engineering/volatility-aware-structural-verification.md)
 
 ## tool-use
 
-- [langchain-tool-schema-contract](../concepts/llm-engineering/langchain-tool-schema-contract.md) - LangChain Tool Schema Contract
-- [react-agentic-loop](../concepts/llm-engineering/react-agentic-loop.md) - ReAct Agentic Loop
+- [Agent Loop Termination Policy](../concepts/llm-engineering/agent-loop-termination-policy.md)
+- [Code-as-Action Agent Loop](../concepts/llm-engineering/code-as-action-agent-loop.md)
+- [LangChain Tool Schema Contract](../concepts/llm-engineering/langchain-tool-schema-contract.md)
+- [ReAct Agentic Loop](../concepts/llm-engineering/react-agentic-loop.md)
 
 ## tools
 
-- [acp-agent-backend-for-ides](../concepts/llm-engineering/acp-agent-backend-for-ides.md) - ACP Agent Backend for IDEs
-- [langchain-tool-schema-contract](../concepts/llm-engineering/langchain-tool-schema-contract.md) - LangChain Tool Schema Contract
-- [multi-platform-agent-gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md) - Multi-Platform Agent Gateway
-- [natural-language-cron-agent-automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md) - Natural-Language Cron Agent Automation
-- [persistent-agent-session-restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md) - Persistent Agent Session Restoration
-- [probabilistic-toolset-distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md) - Probabilistic Toolset Distributions
-- [self-improving-agent-skill-memory-loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md) - Self-Improving Agent Skill Memory Loop
-- [surgical-context-compression](../concepts/llm-engineering/surgical-context-compression.md) - Surgical Context Compression
-- [toolsets-and-mcp-unified-tool-surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md) - Toolsets and MCP Unified Tool Surface
+- [ACP Agent Backend for IDEs](../concepts/llm-engineering/acp-agent-backend-for-ides.md)
+- [LangChain Tool Schema Contract](../concepts/llm-engineering/langchain-tool-schema-contract.md)
+- [Multi-Platform Agent Gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md)
+- [Natural-Language Cron Agent Automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md)
+- [Persistent Agent Session Restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md)
+- [Probabilistic Toolset Distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md)
+- [Self-Improving Agent Skill Memory Loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md)
+- [Surgical Context Compression](../concepts/llm-engineering/surgical-context-compression.md)
+- [Toolsets and MCP Unified Tool Surface](../concepts/llm-engineering/toolsets-and-mcp-unified-tool-surface.md)
 
 ## topology
 
-- [devops-agent-topology-context](../concepts/llm-engineering/devops-agent-topology-context.md) - DevOps Agent Topology Context
+- [DevOps Agent Topology Context](../concepts/llm-engineering/devops-agent-topology-context.md)
+
+## total-cost-of-ownership
+
+- [Agentic Engineering Total-Cost Curve](../concepts/llm-engineering/agentic-engineering-tco-curve.md)
 
 ## tracing
 
-- [trace-aware-agent-evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md) - Trace-Aware Agent Evaluation
-- [agentic-workflow-span-hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md) - Agentic Workflow Span Hierarchy
-- [event-sourcing-staging-propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md) - Event Sourcing with Staging Propagation
-- [genai-operation-span-taxonomy](../concepts/observability/genai-operation-span-taxonomy.md) - GenAI Operation Span Taxonomy
-- [genai-streaming-telemetry-lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md) - GenAI Streaming Telemetry Lifecycle
-- [hierarchical-rbac](../concepts/system-design/hierarchical-rbac.md) - Hierarchical RBAC
-- [mcp-client-server-trace-correlation](../concepts/observability/mcp-client-server-trace-correlation.md) - MCP Client-Server Trace Correlation
+- [AgentCore Session-Trace-Span Hierarchy](../concepts/llm-engineering/agentcore-session-trace-span-hierarchy.md)
+- [Agentic Workflow Span Hierarchy](../concepts/observability/agentic-workflow-span-hierarchy.md)
+- [Event Sourcing with Staging Propagation](../concepts/llm-engineering/event-sourcing-staging-propagation.md)
+- [GenAI Operation Span Taxonomy](../concepts/observability/genai-operation-span-taxonomy.md)
+- [GenAI Streaming Telemetry Lifecycle](../concepts/observability/genai-streaming-telemetry-lifecycle.md)
+- [Hierarchical RBAC](../concepts/system-design/hierarchical-rbac.md)
+- [MCP Client-Server Trace Correlation](../concepts/observability/mcp-client-server-trace-correlation.md)
+- [Trace-Aware Agent Evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md)
 
 ## transport
 
-- [mcp-transport-separation](../concepts/llm-engineering/mcp-transport-separation.md) - MCP Transport Separation
+- [MCP Transport Separation](../concepts/llm-engineering/mcp-transport-separation.md)
+
+## use-case-selection
+
+- [Business-Outcome-Aligned AI Use-Case Selection](../concepts/ai-transformation/business-outcome-aligned-ai-use-case-selection.md)
+
+## user-feedback
+
+- [Session Convergence Evaluation](../concepts/llm-engineering/session-convergence-evaluation.md)
+
+## verification
+
+- [Agentic Engineering Total-Cost Curve](../concepts/llm-engineering/agentic-engineering-tco-curve.md)
+- [AI-Compressed Software Development Lifecycle](../concepts/llm-engineering/ai-compressed-sdlc.md)
+- [Coding Agent Harness Engineering](../concepts/llm-engineering/coding-agent-harness-engineering.md)
+- [Conductor and Orchestrator Developer Modes](../concepts/llm-engineering/conductor-orchestrator-developer-modes.md)
+- [Context Engineering for Coding Agents](../concepts/llm-engineering/context-engineering-for-coding-agents.md)
+- [Static vs. Dynamic Agent Context](../concepts/llm-engineering/static-vs-dynamic-agent-context.md)
+- [The 80% Problem in Agentic Coding](../concepts/llm-engineering/agentic-coding-80-percent-problem.md)
+- [Vibe Coding to Agentic Engineering Spectrum](../concepts/llm-engineering/vibe-coding-to-agentic-engineering-spectrum.md)
+
+## versioning
+
+- [Skills as the Unit of Agent Improvement](../concepts/llm-engineering/skills-as-unit-of-agent-improvement.md)
 
 ## vocabulary
 
-- [busted-informal-broken](../concepts/english/busted-informal-broken.md) - Busted as Informal Broken
-- [car-repair-cost-and-waiting-phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md) - Car Repair Cost and Waiting Phrases
-- [car-repair-vocabulary](../concepts/english/car-repair-vocabulary.md) - Car Repair Vocabulary
-- [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
-- [cold-turkey-idiom](../concepts/english/cold-turkey-idiom.md) - Idiom: Go Cold Turkey
-- [construction-plans-vocabulary](../concepts/english/construction-plans-vocabulary.md) - Construction Plans Vocabulary
-- [construction-tools-vocabulary](../concepts/english/construction-tools-vocabulary.md) - Construction Tools Vocabulary
-- [crack-down-phrasal-verb](../concepts/english/crack-down-phrasal-verb.md) - Phrasal Verb: Crack Down On
-- [cut-down-vs-quit](../concepts/english/cut-down-vs-quit.md) - Cut Down vs Quit
-- [deck-backyard-platform-vocabulary](../concepts/english/deck-backyard-platform-vocabulary.md) - Deck as Backyard Platform Vocabulary
-- [die-on-phrasal-verb](../concepts/english/die-on-phrasal-verb.md) - Phrasal Verb: Die On Me
-- [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
-- [expire-everyday-validity-verb](../concepts/english/expire-everyday-validity-verb.md) - Expire as an Everyday Validity Verb
-- [gym-workout-vocabulary](../concepts/english/gym-workout-vocabulary.md) - Gym Workout Vocabulary
-- [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
-- [know-how-it-is-empathy-phrase](../concepts/english/know-how-it-is-empathy-phrase.md) - I Know How It Is
-- [muscle-tone-definition-physique](../concepts/english/muscle-tone-definition-physique.md) - Muscle Tone, Definition, and Physique
-- [no-smoking-polite-notices](../concepts/english/no-smoking-polite-notices.md) - No Smoking Polite Notices
-- [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
-- [pop-the-hood-phrase](../concepts/english/pop-the-hood-phrase.md) - Pop the Hood
-- [pull-a-muscle-safety-phrase](../concepts/english/pull-a-muscle-safety-phrase.md) - Pull a Muscle Safety Phrase
-- [reps-and-sets](../concepts/english/reps-and-sets.md) - Reps and Sets
-- [ripped-informal-body-description](../concepts/english/ripped-informal-body-description.md) - Ripped as Informal Body Description
-- [smoking-cessation-vocabulary](../concepts/english/smoking-cessation-vocabulary.md) - Smoking Cessation Vocabulary
-- [stand-up-comedy-vocabulary](../concepts/english/stand-up-comedy-vocabulary.md) - Stand-up Comedy Vocabulary
-- [supermarket-checkout-vocabulary](../concepts/english/supermarket-checkout-vocabulary.md) - Supermarket Checkout Vocabulary
-- [take-apart-put-back-together](../concepts/english/take-apart-put-back-together.md) - Take Apart and Put Back Together
-- [up-to-code-phrase](../concepts/english/up-to-code-phrase.md) - Up to Code Phrase
-- [willpower-and-urge-vocabulary](../concepts/english/willpower-and-urge-vocabulary.md) - Willpower and Urge Vocabulary
+- [Busted as Informal Broken](../concepts/english/busted-informal-broken.md)
+- [Car Repair Cost and Waiting Phrases](../concepts/english/car-repair-cost-and-waiting-phrases.md)
+- [Car Repair Vocabulary](../concepts/english/car-repair-vocabulary.md)
+- [Clean Jokes and Cultural Register](../concepts/english/clean-jokes-cultural-register.md)
+- [Construction Plans Vocabulary](../concepts/english/construction-plans-vocabulary.md)
+- [Construction Tools Vocabulary](../concepts/english/construction-tools-vocabulary.md)
+- [Cut Down vs Quit](../concepts/english/cut-down-vs-quit.md)
+- [Deck as Backyard Platform Vocabulary](../concepts/english/deck-backyard-platform-vocabulary.md)
+- [English Pun Jokes and Wordplay](../concepts/english/english-pun-jokes-wordplay.md)
+- [Expire as an Everyday Validity Verb](../concepts/english/expire-everyday-validity-verb.md)
+- [Gym Workout Vocabulary](../concepts/english/gym-workout-vocabulary.md)
+- [Heckler and Tough Crowd](../concepts/english/heckler-and-tough-crowd.md)
+- [I Know How It Is](../concepts/english/know-how-it-is-empathy-phrase.md)
+- [Idiom: Go Cold Turkey](../concepts/english/cold-turkey-idiom.md)
+- [Muscle Tone, Definition, and Physique](../concepts/english/muscle-tone-definition-physique.md)
+- [No Smoking Polite Notices](../concepts/english/no-smoking-polite-notices.md)
+- [Open Mic Night Vocabulary](../concepts/english/open-mic-night-vocabulary.md)
+- [Phrasal Verb: Crack Down On](../concepts/english/crack-down-phrasal-verb.md)
+- [Phrasal Verb: Die On Me](../concepts/english/die-on-phrasal-verb.md)
+- [Pop the Hood](../concepts/english/pop-the-hood-phrase.md)
+- [Pull a Muscle Safety Phrase](../concepts/english/pull-a-muscle-safety-phrase.md)
+- [Reps and Sets](../concepts/english/reps-and-sets.md)
+- [Ripped as Informal Body Description](../concepts/english/ripped-informal-body-description.md)
+- [Smoking Cessation Vocabulary](../concepts/english/smoking-cessation-vocabulary.md)
+- [Stand-up Comedy Vocabulary](../concepts/english/stand-up-comedy-vocabulary.md)
+- [Supermarket Checkout Vocabulary](../concepts/english/supermarket-checkout-vocabulary.md)
+- [Take Apart and Put Back Together](../concepts/english/take-apart-put-back-together.md)
+- [Up to Code Phrase](../concepts/english/up-to-code-phrase.md)
+- [Willpower and Urge Vocabulary](../concepts/english/willpower-and-urge-vocabulary.md)
 
 ## wordplay
 
-- [clean-jokes-cultural-register](../concepts/english/clean-jokes-cultural-register.md) - Clean Jokes and Cultural Register
-- [english-pun-jokes-wordplay](../concepts/english/english-pun-jokes-wordplay.md) - English Pun Jokes and Wordplay
-- [heckler-and-tough-crowd](../concepts/english/heckler-and-tough-crowd.md) - Heckler and Tough Crowd
-- [open-mic-night-vocabulary](../concepts/english/open-mic-night-vocabulary.md) - Open Mic Night Vocabulary
-- [stand-up-comedy-vocabulary](../concepts/english/stand-up-comedy-vocabulary.md) - Stand-up Comedy Vocabulary
+- [Clean Jokes and Cultural Register](../concepts/english/clean-jokes-cultural-register.md)
+- [English Pun Jokes and Wordplay](../concepts/english/english-pun-jokes-wordplay.md)
+- [Heckler and Tough Crowd](../concepts/english/heckler-and-tough-crowd.md)
+- [Open Mic Night Vocabulary](../concepts/english/open-mic-night-vocabulary.md)
+- [Stand-up Comedy Vocabulary](../concepts/english/stand-up-comedy-vocabulary.md)
+
+## workflow-redesign
+
+- [Agent-Centered Workflow Redesign](../concepts/ai-transformation/agent-centered-workflow-redesign.md)
 
 ## workplace
 
-- [construction-plans-vocabulary](../concepts/english/construction-plans-vocabulary.md) - Construction Plans Vocabulary
-- [give-110-percent-idiom](../concepts/english/give-110-percent-idiom.md) - Idiom: Give 110 Percent
+- [Construction Plans Vocabulary](../concepts/english/construction-plans-vocabulary.md)
+- [Idiom: Give 110 Percent](../concepts/english/give-110-percent-idiom.md)

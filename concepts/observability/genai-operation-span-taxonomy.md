@@ -10,6 +10,8 @@ sources:
 related:
   - llm-observability
   - semantic-conventions-as-telemetry-schema
+  - agentcore-session-trace-span-hierarchy
+  - trace-derived-evaluation-field-contract
 tags:
   - observability
   - opentelemetry
@@ -41,6 +43,8 @@ A support agent retrieves a policy document, asks a model to draft an answer, th
 
 - [[llm-observability]]: The taxonomy supplies the detailed steps that LLM observability records.
 - [[semantic-conventions-as-telemetry-schema]]: Stable span names and attributes make these steps comparable across tools.
+- [[agentcore-session-trace-span-hierarchy]]: AWS Bedrock AgentCore's span tier draws on this taxonomy's operation boundaries within its broader session/trace/span model.
+- [[trace-derived-evaluation-field-contract]]: AgentCore Evaluations' span classification (invoke-agent, execute-tool, inference) is built directly on this taxonomy's operation vocabulary — that concept documents the two distinct, concrete attribute schemes (OpenTelemetry's `gen_ai.operation.name` and OpenInference's `openinference.span.kind`) that different instrumentation libraries use to express these same operation boundaries in practice.
 
 ## My questions
 

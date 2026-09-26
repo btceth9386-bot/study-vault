@@ -15,6 +15,7 @@ related:
   - mcp-client-server-trace-correlation
   - mcp-interaction-cassette
   - deterministic-mcp-replay-matching
+  - bounded-tool-calls-vs-agent-delegation
 tags:
   - llm-engineering
   - mcp
@@ -55,6 +56,7 @@ The first line asks for available tools, the second answers, and the third annou
 - [[mcp-client-server-trace-correlation]]: Correlated spans make the client and server sides of a JSON-RPC method visible in one trace.
 - [[mcp-interaction-cassette]]: A cassette preserves the JSON-RPC conversation as test evidence.
 - [[deterministic-mcp-replay-matching]]: Replay matches the JSON-RPC requests stored in a cassette.
+- [[bounded-tool-calls-vs-agent-delegation]]: MCP supplies the structured interaction substrate for bounded tool calls, not the full lifecycle of delegated work.
 
 ## Open questions
 

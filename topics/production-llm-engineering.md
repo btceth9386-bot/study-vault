@@ -6,11 +6,11 @@ description: The infrastructure and engineering patterns specific to LLM applica
 
 ## Overview
 
-LLM applications fail in ways that don't show up in standard monitoring: a model returns a plausible but wrong answer, a prompt change silently degrades quality, or token costs quietly spiral. This path covers the engineering disciplines that address those failure modes - starting with structured observability, then prompt lifecycle management, automated evaluation, the LangChain primitives needed for LangGraph foundations, LangGraph's durable stateful runtime, DSPy-style program optimization, agentic tool use, and finally the infrastructure patterns that keep high-volume event pipelines reliable. Two concepts borrowed from the system design paths (caching strategies, async processing) appear here in their LLM-specific context.
+LLM applications fail in ways that don't show up in standard monitoring: a model returns a plausible but wrong answer, a prompt change silently degrades quality, or token costs quietly spiral. This path covers the engineering disciplines that address those failure modes - starting with structured observability, then prompt lifecycle management, automated evaluation, the LangChain primitives needed for LangGraph foundations, LangGraph's durable stateful runtime, DSPy-style program optimization, agentic tool use, and finally the infrastructure patterns that keep high-volume event pipelines reliable. Two concepts borrowed from the system design paths (caching strategies, async processing) appear here in their LLM-specific context. A closing case study applies the observability foundation from step 1 to a real managed platform, Amazon Bedrock AgentCore, showing how one vendor implements the session/trace/span model, default telemetry, a domain-specific dashboard, hybrid-hosting onboarding, and multi-account aggregation.
 
 The LangChain section is intentionally narrow: it covers chat model wrappers, message content blocks, tool schemas, and retrieval/vector-store pieces only as building blocks for LangGraph nodes and RAG graphs.
 
-**Estimated study time:** 16-20 hours
+**Estimated study time:** 17-21 hours
 
 **Prerequisites:** Basic familiarity with LLM APIs (OpenAI/Anthropic). Optionally, review [Asynchronous Processing](../concepts/system-design/async-processing.md) and [Caching Strategies](../concepts/system-design/caching-strategies.md) from the distributed systems or scalability paths first.
 
@@ -108,6 +108,25 @@ High-volume LLM event ingestion (thousands of traces per second) must survive wo
 ### 30. [OLTP/OLAP Database Split](../concepts/llm-engineering/oltp-olap-split.md)
 The data architecture capstone for LLM infrastructure. Application metadata (users, projects, API keys, prompt configs, evaluator settings) lives in PostgreSQL — OLTP workload. The millions of trace events, generation records, and scores that observability generates live in ClickHouse or a similar OLAP engine — analytical workload. A single database cannot efficiently serve both. Study last because it requires understanding the full data flow: events arrive via the durable async pipeline, need to be queried analytically, and reference config data that must stay transactionally consistent.
 
+## AWS Bedrock AgentCore: A Managed Observability Platform in Practice
+
+Everything so far describes observability as a set of engineering decisions you make yourself. This closing case study looks at how one managed AWS platform, Amazon Bedrock AgentCore, actually implements those decisions for teams that don't want to build the pipeline in step 1 by hand — and where its defaults still leave gaps a team must close.
+
+### 31. [AgentCore Session-Trace-Span Hierarchy](../concepts/llm-engineering/agentcore-session-trace-span-hierarchy.md)
+AgentCore's concrete version of the trace/observation model from step 1: a session (the full user-agent interaction) contains traces (one request-response cycle), which contain spans (one tool call or model inference). Study this first in the case study because it is the vocabulary the next four concepts assume.
+
+### 32. [AgentCore Managed-Service Telemetry Defaults](../concepts/llm-engineering/agentcore-managed-service-telemetry-defaults.md)
+Being "managed" does not mean every tier of that hierarchy is free. Metrics come by default for AgentCore's managed resources, but Agent and Memory spans need explicit enablement, and rich application-level traces still need instrumentation such as ADOT. This is the platform-specific answer to how much of step 1's observability work a managed service actually does for you. For several supported frameworks (LangGraph, OpenAI Agents, LlamaIndex, Google ADK, the Claude Agent SDK), that instrumentation step turns out to mean adding a compatible library to the project's dependencies and letting ADOT auto-discover it at startup — no instrumentation code required, though the telemetry still needs the separate export setup this concept describes. Strands is the exception: its SDK ships with telemetry built in, so there is no separate package to add at all.
+
+### 33. [GenAI Observability Dashboard Abstraction](../concepts/llm-engineering/genai-observability-dashboard-abstraction.md)
+Once telemetry exists, it needs a place to be read. CloudWatch's generative-AI observability page renders the same underlying metrics, logs, and spans through views organized around sessions, traces, and spans instead of generic service dashboards — a concrete instance of a domain-specific view layered over vendor-neutral data.
+
+### 34. [AgentCore External-Agent Observability Onboarding](../concepts/llm-engineering/agentcore-external-agent-observability-onboarding.md)
+Not every agent runs on AgentCore Runtime. Study how AWS documents an explicit instrumentation and environment-variable contract that lets agents hosted on Lambda, ECS, or EC2 opt into the identical observability surface, without a full migration.
+
+### 35. [Cross-Account Observability Aggregation](../concepts/llm-engineering/cross-account-observability-aggregation.md)
+Finish by scaling observability from one deployment to a whole organization. Linking source AWS accounts to a monitoring account lets a platform team see agent metrics, traces, and sessions fleet-wide from one place, while resource-level control stays with each source account.
+
 ---
 
 ## What You'll Be Able to Do
@@ -125,3 +144,5 @@ The data architecture capstone for LLM infrastructure. Application metadata (use
 - Decide when an agentic ReAct loop is appropriate for tool-using workflows
 - Architect an event ingestion pipeline that guarantees durability under worker and downstream failures
 - Decide what data belongs in PostgreSQL vs. ClickHouse (or equivalent OLAP store) for an LLM monitoring system
+- Evaluate a managed platform's observability claims against which telemetry tier is actually free by default versus which requires instrumentation
+- Extend a managed platform's observability surface to externally hosted agents and aggregate it across AWS accounts for fleet-wide visibility

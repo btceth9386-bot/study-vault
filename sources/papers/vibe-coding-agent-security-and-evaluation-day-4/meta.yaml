@@ -1,0 +1,35 @@
+type: paper
+title: Vibe Coding Agent Security and Evaluation
+url: null
+authors:
+  - Sokratis Kartakis
+  - Aron Eidelman
+  - Wafae Bakkali
+  - Meltem Subasioglu
+language: en
+date_consumed: 2026-09-25
+date_added: 2026-09-25
+estimated_time: 60 minutes
+status: processed
+related_concepts:
+  - effective-trust-for-agents
+  - ephemeral-agent-execution-sandbox
+  - hallucinated-package-slopsquatting-defense
+  - zero-ambient-authority-for-agents
+  - context-aware-high-stakes-agent-approval
+  - agentic-security-response-triad
+  - runtime-agent-bill-of-materials
+  - underspecification-gap-in-agent-evaluation
+  - multidimensional-coding-agent-evaluation
+  - session-convergence-evaluation
+  - coding-agent-harness-engineering
+  - secure-mcp-consumption-lifecycle
+  - trace-aware-agent-evaluation
+  - llm-observability
+  - vibe-coding-to-agentic-engineering-spectrum
+tags:
+  - agentic-engineering
+  - coding-agents
+  - security
+  - evaluation
+  - observability

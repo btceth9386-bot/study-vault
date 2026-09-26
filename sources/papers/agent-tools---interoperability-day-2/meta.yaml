@@ -1,0 +1,33 @@
+type: paper
+title: Agent Tools & Interoperability — Day 2
+url: null
+authors:
+  - Kanchana Patlolla
+  - Łukasz Olejniczak
+  - Pier Paolo Ippolito
+language: en
+date_consumed: 2026-09-25
+date_added: 2026-09-25
+estimated_time: 45 minutes
+status: processed
+related_concepts:
+  - mcp-n-plus-m-integration-scaling
+  - secure-mcp-consumption-lifecycle
+  - agent-specialization-as-scaling-mechanism
+  - bounded-tool-calls-vs-agent-delegation
+  - a2a-agent-card-registry-discovery
+  - a2ui-trusted-catalog-rendering
+  - a2ui-layout-ownership-patterns
+  - ucp-ap2-commerce-payment-separation
+  - mcp-transport-separation
+  - mcp-capability-negotiation-handshake
+  - toolsets-and-mcp-unified-tool-surface
+  - protocol-based-agent-access-surface
+  - coding-agent-harness-engineering
+  - agent-space-access-boundary
+tags:
+  - agent-interoperability
+  - mcp
+  - a2a
+  - a2ui
+  - agentic-commerce

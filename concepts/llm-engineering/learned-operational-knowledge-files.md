@@ -6,17 +6,19 @@ lab_status: not-started
 last_reviewed: 2026-07-11
 review_due: 2026-07-14
 sources:
-  - sources/articles/aws-devops-agent-docs/
+- sources/articles/aws-devops-agent-docs/
 related:
-  - self-improving-agent-skill-memory-loop
-  - devops-agent-topology-context
-  - proactive-incident-prevention-loop
+- agent-skills-as-procedural-memory
+- self-improving-agent-skill-memory-loop
+- devops-agent-topology-context
+- proactive-incident-prevention-loop
+- enterprise-ai-change-champion-network
 tags:
-  - llm-engineering
-  - aws
-  - devops-agent
-  - memory
-  - skills
+- llm-engineering
+- aws
+- devops-agent
+- memory
+- skills
 ---
 
 # Learned Operational Knowledge Files
@@ -24,7 +26,7 @@ tags:
 - **One-sentence definition**: Learned operational knowledge files are agent-maintained skills, memories, instructions, and reports that preserve environment-specific DevOps knowledge for future tasks.
 - **Why it exists / what problem it solves**: An operations agent should not rediscover the same topology, recurring root causes, pipeline behavior, and tool-use lessons every time it runs. Persisted knowledge gives later work a better starting point.
 - **Keywords**: learned skills, memories, instructions, reports, operational knowledge
-- **Related concepts**: [[self-improving-agent-skill-memory-loop]], [[devops-agent-topology-context]], [[proactive-incident-prevention-loop]]
+- **Related concepts**: [[agent-skills-as-procedural-memory]], [[self-improving-agent-skill-memory-loop]], [[devops-agent-topology-context]], [[proactive-incident-prevention-loop]]
 - **Depth**: 2/4
 - **Last updated**: 2026-07-11
 - **Source**: sources/articles/aws-devops-agent-docs/
@@ -39,9 +41,13 @@ After many investigations, an agent learns that one database alarm is usually ca
 
 ## Relationship to existing concepts
 
+- [[agent-skills-as-procedural-memory]]: Skills package reusable procedures, while learned files often preserve environment-specific lessons.
 - [[self-improving-agent-skill-memory-loop]]: Both concepts convert past agent work into reusable future context.
 - [[devops-agent-topology-context]]: Topology summaries can be stored as learned knowledge for future investigations.
 - [[proactive-incident-prevention-loop]]: Prevention depends on retaining lessons from past incidents.
+
+
+- [[enterprise-ai-change-champion-network]]: Related enterprise AI practice.
 
 ## Open questions
 

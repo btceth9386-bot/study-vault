@@ -1,0 +1,33 @@
+type: paper
+title: Agent Skills
+url: null
+authors:
+  - Tanvi Singhal
+  - Gabriela Hernandez Larios
+  - Debanshu Dus
+  - Lavi Nigam
+  - Smitha Kolan
+language: en
+date_consumed: 2026-09-25
+date_added: 2026-09-25
+estimated_time: 60 minutes
+status: processed
+related_concepts:
+  - agent-skills-as-procedural-memory
+  - agent-skill-progressive-disclosure
+  - skill-description-as-routing-interface
+  - agent-skill-evaluation-coverage
+  - authority-tiered-agent-skills
+  - skills-as-unit-of-agent-improvement
+  - evaluation-gated-meta-skills
+  - state-externalized-skill-composition
+  - agent-skill-supply-chain-governance
+  - static-vs-dynamic-agent-context
+  - self-improving-agent-skill-memory-loop
+  - trace-aware-agent-evaluation
+tags:
+  - agent-skills
+  - llm-engineering
+  - evaluation
+  - context-engineering
+  - agent-governance

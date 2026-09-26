@@ -13,6 +13,7 @@ related:
   - adapter-based-llm-optimization
   - pareto-efficient-candidate-selection
   - system-aware-candidate-merge
+  - agentcore-insights-triage-loop
 tags:
   - llm-engineering
   - optimization
@@ -58,6 +59,7 @@ If the revised candidate scores better on the same examples, it can be accepted 
 - [[adapter-based-llm-optimization]]: The adapter supplies the evaluation traces and reflective dataset.
 - [[pareto-efficient-candidate-selection]]: Candidate selection decides which existing variant should be mutated.
 - [[system-aware-candidate-merge]]: Merge is the complementary proposal path that recombines successful mutations.
+- [[agentcore-insights-triage-loop]]: AWS's managed-service version of the same idea for AgentCore system prompts — cluster failures, generate a revised candidate, then validate it, in this case through A/B testing rather than minibatch re-evaluation.
 
 ## Open questions
 

@@ -11,6 +11,7 @@ related:
   - provider-chat-model-wrappers-in-langgraph-nodes
   - langchain-tool-schema-contract
   - langgraph-store-long-term-memory
+  - long-term-memory-vs-rag-boundary
 tags:
   - llm-engineering
   - langchain
@@ -57,6 +58,7 @@ The graph can decide that retrieval always happens before answering. For a more 
 - [[provider-chat-model-wrappers-in-langgraph-nodes]]: Retrieved documents are usually fed into a provider chat model wrapper as context for generation.
 - [[langchain-tool-schema-contract]]: Retrieval can be wrapped as a tool when the model should decide whether external context is needed.
 - [[langgraph-store-long-term-memory]]: LangGraph store can provide persistent, namespaced memory that complements retrievers and vector stores.
+- [[long-term-memory-vs-rag-boundary]]: Names the selection principle for when content belongs in this retrieval path versus in a per-user long-term memory store instead.
 
 ## Open questions
 

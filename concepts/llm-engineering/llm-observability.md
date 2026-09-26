@@ -6,36 +6,46 @@ lab_status: scaffolded
 last_reviewed: 2026-08-07
 review_due: 2026-08-10
 sources:
-  - sources/repos/langfuse-langfuse
-  - sources/repos/open-telemetry-semantic-conventions-genai/
+- sources/repos/langfuse-langfuse
+- sources/repos/open-telemetry-semantic-conventions-genai/
 related:
-  - llm-as-judge-evaluation
-  - prompt-version-management
-  - oltp-olap-split
-  - dspy-signatures
-  - react-agentic-loop
-  - actionable-side-information
-  - langgraph-human-in-the-loop-interrupts
-  - devops-agent-topology-context
-  - autonomous-incident-investigation
-  - proactive-incident-prevention-loop
-  - opentelemetry-api-sdk-separation
-  - telemetry-signal-model
-  - context-propagation-with-carriers
-  - resource-bound-telemetry-identity
-  - semantic-conventions-as-telemetry-schema
-  - otlp-vendor-neutral-telemetry-protocol
-  - metrics-views-and-aggregations
-  - consistent-probability-sampling
-  - collector-pipeline-architecture
-  - genai-operation-span-taxonomy
-  - genai-streaming-telemetry-lifecycle
-  - hybrid-llm-output-assertions
-  - trace-aware-agent-evaluation
+- llm-as-judge-evaluation
+- prompt-version-management
+- oltp-olap-split
+- dspy-signatures
+- react-agentic-loop
+- actionable-side-information
+- langgraph-human-in-the-loop-interrupts
+- devops-agent-topology-context
+- autonomous-incident-investigation
+- proactive-incident-prevention-loop
+- opentelemetry-api-sdk-separation
+- telemetry-signal-model
+- context-propagation-with-carriers
+- resource-bound-telemetry-identity
+- semantic-conventions-as-telemetry-schema
+- otlp-vendor-neutral-telemetry-protocol
+- metrics-views-and-aggregations
+- consistent-probability-sampling
+- collector-pipeline-architecture
+- genai-operation-span-taxonomy
+- genai-streaming-telemetry-lifecycle
+- hybrid-llm-output-assertions
+- trace-aware-agent-evaluation
+- agentic-engineering-tco-curve
+- ai-compressed-sdlc
+- coding-agent-harness-engineering
+- agentic-security-response-triad
+- effective-trust-for-agents
+- runtime-agent-bill-of-materials
+- session-convergence-evaluation
+- enterprise-ai-transformation-stages
+- enterprise-ai-governance-framework
+- multidimensional-ai-pilot-scorecard
 tags:
-  - llm-engineering
-  - observability
-  - analytics
+- llm-engineering
+- observability
+- analytics
 ---
 
 # LLM Observability
@@ -43,7 +53,7 @@ tags:
 - **One-sentence definition**: LLM observability is structured monitoring for AI applications: it records each request as a trace, each step as an observation, and each quality signal as a score.
 - **Why it exists / what problem it solves**: LLM apps are not a single database query or API call. They often involve prompts, tools, retrieval, model calls, retries, and non-deterministic output. Without structured traces, teams cannot explain why a response was slow, expensive, wrong, or different from yesterday.
 - **Keywords**: traces, observations, scores, generations, sessions, token usage, latency
-- **Related concepts**: [[llm-as-judge-evaluation]], [[prompt-version-management]], [[oltp-olap-split]], [[dspy-signatures]], [[react-agentic-loop]], [[actionable-side-information]], [[langgraph-human-in-the-loop-interrupts]], [[devops-agent-topology-context]], [[autonomous-incident-investigation]], [[proactive-incident-prevention-loop]]
+- **Related concepts**: [[llm-as-judge-evaluation]], [[prompt-version-management]], [[oltp-olap-split]], [[dspy-signatures]], [[react-agentic-loop]], [[actionable-side-information]], [[langgraph-human-in-the-loop-interrupts]], [[devops-agent-topology-context]], [[autonomous-incident-investigation]], [[proactive-incident-prevention-loop]], [[agentic-engineering-tco-curve]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/langfuse-langfuse
@@ -89,6 +99,19 @@ The fix is no longer guesswork: update retrieval data, compare prompt version 12
 - [[collector-pipeline-architecture]]: Collector pipelines route AI telemetry to one or more backends without changing application instrumentation.
 - [[hybrid-llm-output-assertions]]: Recorded traces and operational data provide evidence for the trace-aware branch of combined grading.
 - [[trace-aware-agent-evaluation]]: This concept turns recorded trajectories into explicit tests of agent behavior.
+- [[agentic-engineering-tco-curve]]: Token, latency, quality, and failure data makes the operating-cost side of AI development measurable.
+- [[ai-compressed-sdlc]]: Production telemetry connects a faster development loop to real behavior.
+- [[coding-agent-harness-engineering]]: Observability is a harness component that exposes cost, drift, and unsafe behavior.
+- [[agentic-security-response-triad]]: Blue agents use traces to baseline and detect anomalous behavior.
+- [[effective-trust-for-agents]]: Continuous trust decisions need runtime evidence.
+- [[runtime-agent-bill-of-materials]]: Runtime events populate the live inventory of active resources.
+- [[session-convergence-evaluation]]: Session metrics expose convergence, cost, and abandonment.
+- [[enterprise-ai-transformation-stages]]: Observability supplies the operational evidence used to decide whether an AI pilot should scale.
+
+
+- [[enterprise-ai-governance-framework]]: Related enterprise AI practice.
+
+- [[multidimensional-ai-pilot-scorecard]]: Pilot scorecards use observability evidence to assess adoption, efficiency, quality, and satisfaction.
 
 ## Open questions
 

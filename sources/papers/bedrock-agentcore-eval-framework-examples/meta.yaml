@@ -1,0 +1,22 @@
+type: paper
+title: "Amazon Bedrock AgentCore Developer Guide — Evaluations framework examples (selected chapters)"
+url: https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/
+authors:
+  - Amazon Web Services
+language: en
+date_consumed: 2026-09-26
+date_added: 2026-09-26
+estimated_time: 1 hour
+status: processed
+related_concepts:
+  - trace-derived-evaluation-field-contract
+  - genai-operation-span-taxonomy
+  - agentcore-managed-service-telemetry-defaults
+  - agentcore-external-agent-observability-onboarding
+tags:
+  - aws
+  - agentcore
+  - observability
+  - opentelemetry
+  - evaluation
+  - instrumentation

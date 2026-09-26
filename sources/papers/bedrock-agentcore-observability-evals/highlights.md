@@ -1,0 +1,13 @@
+# Highlights
+
+- `p. 96` "Every harness invocation automatically generates traces, logs, and metrics through AgentCore Observability in CloudWatch... No extra configuration."
+- `p. 1907-1909, Section: Observability concepts` Sessions, traces, and spans form a three-tiered hierarchy: a session contains multiple traces, each trace contains multiple spans, enabling progressive troubleshooting from session-level anomalies to span-level root causes.
+- `p. 1907, Section: Sessions` "By default, AgentCore provides a set of observability metrics at the session level... AgentCore also outputs a default set of metrics for memory resources, gateway resources, and built-in tools."
+- `p. 1908-1909, Section: Traces / Spans` Trace data requires instrumenting agent code with ADOT; span data is emitted by default only for Memory resources — Runtime and Gateway spans require instrumentation.
+- `pp. 1955-1962, Section: Cross-account monitoring` Cross-account observability needs a configured monitoring account, linked source accounts (via AWS Organizations or individual linking), and shared Metrics/Logs telemetry types before agent data appears centrally.
+- `p. 2149, Section: AgentCore Evaluations` "The service enables data-driven optimization and ensures your agents meet quality standards before and after deployment... traces from these agents are converted to a unified format and scored using LLM-as-a-Judge."
+- `pp. 2264-2265, Section: Generic framework support` "The service supports any agent that emits telemetry in one of these two conventions [OTel GenAI or OpenInference]... using the same span classification and field extraction as the named frameworks."
+- `p. 2159, Section: What the service reads from a span` The evaluation service classifies each span as invoke-agent, execute-tool, or inference, then extracts user prompt, agent response, and tool inputs/outputs from documented attributes/events.
+- `p. 2345, Section: Online evaluation` An online evaluation configuration defines which evaluators to apply, which live data sources to monitor, and evaluation parameters — distinct from one-off on-demand or batch evaluation.
+- `pp. 2685-2686, Section: AgentCore insights` "Insights extends AgentCore Evaluations by providing triage analysis that goes beyond scoring — it tells you why your agent fails and what your users are trying to accomplish," via failure analysis, user-intent extraction, and execution summaries clustered across sessions.
+- `p. 2686, Section: From triage to optimization` Insights findings feed into the Recommendations API to generate an improved system prompt, which can then be validated against the original via A/B testing.

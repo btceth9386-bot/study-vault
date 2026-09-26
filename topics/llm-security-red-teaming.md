@@ -25,6 +25,15 @@ Some failures only emerge after the target refuses, reveals context, or takes a 
 
 ---
 
+### 3. [Hallucinated-Package Slopsquatting Defense](../concepts/llm-engineering/hallucinated-package-slopsquatting-defense.md)
+Prevent an agent from turning a fabricated package name into a malware installation by using trusted registries and provenance gates.
+
+### 4. [Agentic Security Response Triad](../concepts/llm-engineering/agentic-security-response-triad.md)
+Combine proactive probes, behavioral anomaly detection, and state-preserving containment into a continuous security response.
+
+### 5. [Runtime Agent Bill of Materials](../concepts/llm-engineering/runtime-agent-bill-of-materials.md)
+Track the live tools, data, models, and credentials that determine an agent's active blast radius.
+
 ## What You'll Be Able to Do
 
 - Build reusable security probes that can be tested with multiple attack strategies

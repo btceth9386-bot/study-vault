@@ -15,6 +15,7 @@ related:
   - collector-pipeline-architecture
   - collector-exporter-resilience
   - opentelemetry-collector-builder-distributions
+  - genai-observability-dashboard-abstraction
 tags:
   - observability
   - opentelemetry
@@ -50,6 +51,7 @@ A Python service sends traces over OTLP/gRPC to an OpenTelemetry Collector. The 
 - [[collector-pipeline-architecture]]: Collector pipelines receive and export OTLP telemetry.
 - [[collector-exporter-resilience]]: OTLP delivery needs queues and retries when a backend is unavailable.
 - [[opentelemetry-collector-builder-distributions]]: A custom distribution must include OTLP modules to support this protocol.
+- [[genai-observability-dashboard-abstraction]]: CloudWatch's generative-AI observability page presents OTLP-shaped telemetry through an agent-specific view without changing the underlying vendor-neutral transport.
 
 ## Open questions
 

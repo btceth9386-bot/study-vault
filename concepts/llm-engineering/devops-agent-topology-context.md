@@ -13,6 +13,7 @@ related:
   - llm-observability
   - learned-operational-knowledge-files
   - agentic-workflow-span-hierarchy
+  - cross-account-observability-aggregation
 tags:
   - llm-engineering
   - aws
@@ -46,6 +47,7 @@ A Lambda function starts timing out after a deployment. The topology shows that 
 - [[llm-observability]]: Observability data becomes more useful when attached to services, dependencies, and request paths.
 - [[learned-operational-knowledge-files]]: Learned topology summaries are one way the agent preserves environment structure for future tasks.
 - [[agentic-workflow-span-hierarchy]]: The hierarchy shows which workflow and agent step produced each topology-aware operation.
+- [[cross-account-observability-aggregation]]: Topology awareness becomes an organization-wide concern, not a single-account one, once agents and their dependencies are spread across many linked AWS accounts.
 
 ## Open questions
 

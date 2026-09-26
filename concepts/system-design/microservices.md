@@ -19,6 +19,7 @@ related:
   - consistent-probability-sampling
   - collector-pipeline-architecture
   - kubernetes-collector-placement-modes
+  - agent-specialization-as-scaling-mechanism
 tags:
   - system-design
   - architecture
@@ -66,6 +67,7 @@ Each service scales independently: the Feed Service might need 50 instances duri
 - [[consistent-probability-sampling]]: Coordinated sampling keeps retained traces complete across independently deployed services.
 - [[collector-pipeline-architecture]]: A Collector pipeline centralizes telemetry routing across independently deployed services.
 - [[kubernetes-collector-placement-modes]]: Agent and gateway placement determine how clustered services expose telemetry.
+- [[agent-specialization-as-scaling-mechanism]]: Agent specialization applies the decomposition and independent-ownership idea to reasoning context and tool access.
 
 ## Open questions
 

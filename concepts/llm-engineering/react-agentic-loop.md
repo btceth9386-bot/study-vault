@@ -19,6 +19,8 @@ related:
 - autonomous-incident-investigation
 - agentic-workflow-span-hierarchy
 - iterative-adversarial-testing-loop
+- agent-loop-termination-policy
+- code-as-action-agent-loop
 tags:
 - llm-engineering
 - dspy
@@ -75,3 +77,5 @@ The agent can ask the search tool for missing information before answering, inst
 
 - [[langchain-core-message-model-for-langgraph-state]]: Added as a promoted concept related to this existing concept.
 - [[agentic-workflow-span-hierarchy]]: Shows the trace structure of each reasoning, action, and observation step.
+- [[agent-loop-termination-policy]]: Sets completion and safety limits for each loop run.
+- [[code-as-action-agent-loop]]: Uses sandboxed code rather than one typed call at a time for the loop's action step.
