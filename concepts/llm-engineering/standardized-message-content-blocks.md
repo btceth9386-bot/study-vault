@@ -14,6 +14,7 @@ related:
   - langgraph-stategraph-state-schema
   - genai-operation-span-taxonomy
   - model-agnostic-evaluation-provider-abstraction
+  - a2ui-trusted-catalog-rendering
 tags:
   - llm-engineering
   - langchain
@@ -59,6 +60,7 @@ The graph code can branch on block type instead of guessing whether a provider e
 - [[langchain-tool-schema-contract]]: Tool calls and tool results can be represented as structured blocks, which keeps tool use machine-readable instead of plain prose.
 - [[langgraph-stategraph-state-schema]]: Message content blocks are often carried in a `messages` state field that graph nodes read and update.
 - [[model-agnostic-evaluation-provider-abstraction]]: Both reduce provider-specific code, but this concept normalizes payloads while the provider abstraction normalizes evaluation calls.
+- [[a2ui-trusted-catalog-rendering]]: Both use typed structures, but A2UI declarations describe an interactive interface rather than message content.
 
 ## Open questions
 

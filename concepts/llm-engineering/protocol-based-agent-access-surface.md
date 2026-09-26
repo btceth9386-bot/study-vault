@@ -12,6 +12,8 @@ related:
   - multi-platform-agent-gateway
   - mcp-transport-separation
   - toolsets-and-mcp-unified-tool-surface
+  - a2a-agent-card-registry-discovery
+  - bounded-tool-calls-vs-agent-delegation
 tags:
   - llm-engineering
   - aws
@@ -44,6 +46,8 @@ An alerting system triggers a webhook when latency spikes. A coding tool connect
 - [[multi-platform-agent-gateway]]: Both concepts expose one agent capability through multiple client surfaces.
 - [[mcp-transport-separation]]: MCP is one protocol option for remote agent access.
 - [[toolsets-and-mcp-unified-tool-surface]]: A protocol access surface is only useful if the agent's available tools are organized coherently.
+- [[a2a-agent-card-registry-discovery]]: Agent Cards and registries make an A2A access surface discoverable and explain how to use it.
+- [[bounded-tool-calls-vs-agent-delegation]]: The access surface can expose both structured tools and agent-to-agent collaboration endpoints.
 
 ## Open questions
 

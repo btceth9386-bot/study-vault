@@ -10,6 +10,10 @@ sources:
 related:
   - release-readiness-blast-radius-review
   - sparse-validation-evaluation
+  - agentic-coding-80-percent-problem
+  - ai-compressed-sdlc
+  - execution-mode-specific-agent-prompting
+  - risk-focused-high-velocity-code-review
 tags:
   - llm-engineering
   - aws
@@ -23,7 +27,7 @@ tags:
 - **One-sentence definition**: Change-specific release testing generates and runs tests targeted at the risks introduced by a particular software change instead of relying only on a fixed regression suite.
 - **Why it exists / what problem it solves**: Full regression suites can be slow, expensive, and still miss the behavior most affected by a change. Targeted tests spend effort where the current change is most likely to break something.
 - **Keywords**: release testing, targeted tests, test profiles, regression risk, verification
-- **Related concepts**: [[release-readiness-blast-radius-review]], [[sparse-validation-evaluation]]
+- **Related concepts**: [[release-readiness-blast-radius-review]], [[sparse-validation-evaluation]], [[agentic-coding-80-percent-problem]], [[execution-mode-specific-agent-prompting]], [[risk-focused-high-velocity-code-review]]
 - **Depth**: 2/4
 - **Last updated**: 2026-07-11
 - **Source**: sources/articles/aws-devops-agent-docs/
@@ -40,6 +44,10 @@ A web application changes discount-code handling. Instead of running only a stat
 
 - [[release-readiness-blast-radius-review]]: Readiness review identifies risk areas that focused testing should cover.
 - [[sparse-validation-evaluation]]: Both concepts use selective evaluation to spend limited test budget where it is most valuable.
+- [[agentic-coding-80-percent-problem]]: Change-focused testing concentrates effort on the hard edge cases and integrations agents may miss.
+- [[ai-compressed-sdlc]]: Targeted verification helps manage the quality bottleneck created when implementation accelerates.
+- [[execution-mode-specific-agent-prompting]]: A task's execution mode states the evidence to collect; this concept focuses release tests on the resulting change risk.
+- [[risk-focused-high-velocity-code-review]]: Automated targeted tests provide the evidence that lets reviewers concentrate on higher-order risks.
 
 ## Open questions
 

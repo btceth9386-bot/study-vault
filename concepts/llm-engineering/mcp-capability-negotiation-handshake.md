@@ -15,6 +15,7 @@ related:
   - mcp-oauth-protected-resource-discovery
   - mcp-extension-negotiation-framework
   - mcp-interaction-cassette
+  - secure-mcp-consumption-lifecycle
 tags:
   - llm-engineering
   - mcp
@@ -62,6 +63,7 @@ A server that does not advertise `tools` should not receive `tools/call` request
 - [[mcp-oauth-protected-resource-discovery]]: Remote clients complete authorization before relying on the negotiated MCP session.
 - [[mcp-extension-negotiation-framework]]: Extensions reuse the capability negotiation mechanism.
 - [[mcp-interaction-cassette]]: A recorded session preserves the handshake that precedes normal MCP calls.
+- [[secure-mcp-consumption-lifecycle]]: Secure consumption verifies the tools and schemas exposed during the negotiated session.
 
 ## Open questions
 

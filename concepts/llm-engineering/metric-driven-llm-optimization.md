@@ -23,6 +23,8 @@ related:
 - optimize-anything-pattern
 - probabilistic-toolset-distributions
 - configuration-driven-llm-evaluation-matrix
+ - agentic-software-factory-model
+ - enterprise-ai-transformation-stages
 tags:
 - llm-engineering
 - dspy
@@ -34,7 +36,7 @@ tags:
 - **One-sentence definition**: Metric-driven LLM optimization improves an LLM program by defining what success means, then letting an optimizer search for better instructions and examples.
 - **Why it exists / what problem it solves**: Manual prompt editing is guesswork. A metric turns "better" into something testable, so the system can compare candidates and compile a stronger program.
 - **Keywords**: metric, optimizer, compile, MIPROv2, SIMBA, demonstrations, instructions
-- **Related concepts**: [[dspy-signatures]], [[dspy-module-composition]], [[few-shot-bootstrapping]], [[react-agentic-loop]], [[llm-as-judge-evaluation]], [[prompt-version-management]], [[actionable-side-information]], [[reflective-mutation-proposer]], [[pareto-efficient-candidate-selection]], [[system-aware-candidate-merge]], [[adapter-based-llm-optimization]], [[sparse-validation-evaluation]], [[optimize-anything-pattern]]
+- **Related concepts**: [[dspy-signatures]], [[dspy-module-composition]], [[few-shot-bootstrapping]], [[react-agentic-loop]], [[llm-as-judge-evaluation]], [[prompt-version-management]], [[actionable-side-information]], [[reflective-mutation-proposer]], [[pareto-efficient-candidate-selection]], [[system-aware-candidate-merge]], [[adapter-based-llm-optimization]], [[sparse-validation-evaluation]], [[optimize-anything-pattern]], [[agentic-software-factory-model]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/stanfordnlp-dspy
@@ -74,6 +76,8 @@ The metric defines the target. The optimizer searches for a better compiled prog
 - [[sparse-validation-evaluation]]: Sparse validation keeps metric costs manageable when full evaluation is expensive.
 - [[optimize-anything-pattern]]: `optimize_anything()` applies metric-driven optimization to arbitrary scored text artifacts.
 - [[configuration-driven-llm-evaluation-matrix]]: Matrix cells supply repeatable scores across prompts, providers, and tests.
+- [[agentic-software-factory-model]]: Metric-guided improvement is one feedback loop a software factory can use to improve agent output.
+- [[enterprise-ai-transformation-stages]]: Optimization improves a system inside an organizational transformation stage; it does not decide the rollout sequence.
 
 ## Open questions
 

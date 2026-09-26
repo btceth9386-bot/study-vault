@@ -11,6 +11,7 @@ related:
   - langgraph-stategraph-state-schema
   - langgraph-channels-and-reducers
   - surgical-context-compression
+  - artifact-based-agent-handoffs
 tags:
   - agent-skills
   - llm-engineering
@@ -41,6 +42,7 @@ A research skill writes `{ "claims": [...], "citations": [...] }` to a validated
 - [[langgraph-stategraph-state-schema]]: Explicit schemas define the structured state that workflow nodes may read and update.
 - [[langgraph-channels-and-reducers]]: Channels and reducers give concurrent state updates well-defined merge semantics.
 - [[surgical-context-compression]]: Both protect attention by retaining only the information needed for the current work.
+- [[artifact-based-agent-handoffs]]: Typed deliverables are a practical structured-state contract between agents or workflow stages.
 
 ## My questions
 

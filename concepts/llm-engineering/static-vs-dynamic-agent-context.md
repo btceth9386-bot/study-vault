@@ -12,6 +12,7 @@ related:
   - agent-skill-progressive-disclosure
   - context-engineering-for-coding-agents
   - agent-instruction-placement-by-scope
+  - agent-ready-context-infrastructure
 tags:
   - agentic-engineering
   - coding-agents
@@ -23,7 +24,7 @@ tags:
 - **One-sentence definition**: Static context is loaded every time; dynamic context is retrieved only when the task needs it.
 - **Why it exists / what problem it solves**: Loading everything wastes tokens and hides useful signals, while loading too little loses critical rules.
 - **Keywords**: static context, dynamic context, retrieval, skills, token cost
-- **Related concepts**: [[skill-description-as-routing-interface]], [[agent-skill-progressive-disclosure]], [[context-engineering-for-coding-agents]], [[agent-instruction-placement-by-scope]]
+- **Related concepts**: [[skill-description-as-routing-interface]], [[agent-skill-progressive-disclosure]], [[context-engineering-for-coding-agents]], [[agent-instruction-placement-by-scope]], [[agent-ready-context-infrastructure]]
 - **Depth**: 2/4
 - **Last updated**: 2026-09-25
 - **Source**: The New SDLC with Vibe Coding: From Ad-hoc Prompting to Agentic Engineering
@@ -42,6 +43,7 @@ An agent always receives the repository's security rules, but loads the database
 - [[agent-skill-progressive-disclosure]]: Skills implement dynamic loading through metadata, instructions, and on-demand resources.
 - [[context-engineering-for-coding-agents]]: This is the loading strategy for the broader context design.
 - [[agent-instruction-placement-by-scope]]: Placement chooses the durable home and audience for a rule; this concept chooses whether it is always loaded or fetched when needed.
+- [[agent-ready-context-infrastructure]]: The loading choice only works when authoritative organizational data is accessible and connected for agents to use.
 
 ## My questions
 

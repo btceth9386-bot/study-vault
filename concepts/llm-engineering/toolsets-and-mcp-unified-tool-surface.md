@@ -17,6 +17,8 @@ related:
 - mcp-roots-advisory-boundaries
 - agent-space-access-boundary
 - protocol-based-agent-access-surface
+- coding-agent-harness-engineering
+- mcp-n-plus-m-integration-scaling
 tags:
 - llm-engineering
 - ai-agent
@@ -35,6 +37,7 @@ tags:
 - **相關概念**：[[langchain-tool-schema-contract]], [[acp-agent-backend-for-ides]], [[multi-platform-agent-gateway]], [[natural-language-cron-agent-automation]], [[persistent-agent-session-restoration]]
 - **MCP protocol foundations**: [[mcp-bidirectional-json-rpc-substrate]], [[mcp-roots-advisory-boundaries]]
 - **Operational agent boundaries**: [[agent-space-access-boundary]], [[protocol-based-agent-access-surface]]
+- **Harness relationship**: [[coding-agent-harness-engineering]]
 - **深度等級**：2/4
 - **最後更新**：2026-05-13
 - **來源**：nousresearch/hermes-agent
@@ -58,6 +61,8 @@ Suppose an engineering team is turning an agent prototype into a service used ev
 - [[mcp-roots-advisory-boundaries]]: Filesystem-oriented tools should respect client-provided roots when determining their operational scope.
 - [[agent-space-access-boundary]]: A unified tool surface needs an operational boundary that decides which tools are visible in a given scope.
 - [[protocol-based-agent-access-surface]]: Protocol clients can only be useful if the agent exposes a coherent, scoped tool surface behind them.
+- [[coding-agent-harness-engineering]]: A unified tool surface is one component of an operational agent harness.
+- [[mcp-n-plus-m-integration-scaling]]: A shared MCP contract reduces the adapters needed before tools can join a unified surface.
 
 ## 我的疑問
 

@@ -11,6 +11,8 @@ related:
   - coding-agent-harness-engineering
   - agent-space-access-boundary
   - risk-bounded-ai-pilot-design
+  - code-as-action-agent-loop
+  - untrusted-content-isolation-for-agents
 tags:
   - coding-agents
   - security
@@ -41,6 +43,8 @@ An agent needs to test a package-install script. The harness runs it in a new ne
 - [[coding-agent-harness-engineering]]: A sandbox is a concrete execution control in the harness.
 - [[agent-space-access-boundary]]: The boundary decides which resources a sandboxed agent can receive.
 - [[risk-bounded-ai-pilot-design]]: A technical sandbox limits code execution, while a risk-bounded pilot limits business rollout scope.
+- [[code-as-action-agent-loop]]: Generated multi-tool code needs the isolated execution boundary a sandbox provides.
+- [[untrusted-content-isolation-for-agents]]: Contains generated code even if hostile retrieved content influenced the agent.
 
 ## My questions
 

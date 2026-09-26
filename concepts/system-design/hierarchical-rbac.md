@@ -11,6 +11,7 @@ related:
 - event-sourcing-staging-propagation
 - agent-space-access-boundary
 - release-readiness-blast-radius-review
+- enterprise-ai-governance-framework
 tags:
 - system-design
 - llm

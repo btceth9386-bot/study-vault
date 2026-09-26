@@ -10,6 +10,7 @@ sources:
 related:
   - zero-ambient-authority-for-agents
   - context-aware-high-stakes-agent-approval
+  - untrusted-content-isolation-for-agents
 tags:
   - coding-agents
   - security
@@ -38,6 +39,7 @@ A support agent with the `viewer` role tries to call `send_email`. Structural ga
 
 - [[zero-ambient-authority-for-agents]]: Task-scoped authority provides the narrow permissions that structural gating enforces at the tool boundary.
 - [[context-aware-high-stakes-agent-approval]]: A flagged action can be explained and sent to a person for action-specific approval instead of being executed automatically.
+- [[untrusted-content-isolation-for-agents]]: Prevents tool and retrieval content from becoming authority before policy gating evaluates an action.
 
 ## My questions
 

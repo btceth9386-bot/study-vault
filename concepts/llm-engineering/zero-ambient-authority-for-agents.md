@@ -11,6 +11,8 @@ related:
   - agent-space-access-boundary
   - secure-mcp-consumption-lifecycle
   - hybrid-agent-policy-gating
+  - code-as-action-agent-loop
+  - untrusted-content-isolation-for-agents
 tags:
   - coding-agents
   - security
@@ -41,6 +43,8 @@ For a task to update one staging configuration file, the agent receives a token 
 - [[agent-space-access-boundary]]: Defines the operational scope that task-specific credentials enforce.
 - [[secure-mcp-consumption-lifecycle]]: Applies least privilege to connected tools and their authorization flows.
 - [[hybrid-agent-policy-gating]]: Enforces task-scoped permission at each tool call and adds a semantic check for unsafe allowed uses.
+- [[code-as-action-agent-loop]]: Generated code should receive only narrowly scoped, short-lived authority.
+- [[untrusted-content-isolation-for-agents]]: Limits what a prompt-injected agent can do if untrusted content affects its reasoning.
 
 ## My questions
 

@@ -12,6 +12,7 @@ related:
 - langgraph-remotegraph-server-execution
 - persistent-agent-session-restoration
 - self-improving-agent-skill-memory-loop
+- layered-agent-memory
 tags:
 - llm-engineering
 - langgraph
@@ -65,3 +66,4 @@ Another thread for the same user can read the preference later without depending
 
 - [[persistent-agent-session-restoration]]: Added as a promoted concept related to this existing concept.
 - [[self-improving-agent-skill-memory-loop]]: Added as a promoted concept related to this existing concept.
+- [[layered-agent-memory]]: Places long-term store data within a wider memory taxonomy.

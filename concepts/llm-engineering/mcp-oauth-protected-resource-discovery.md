@@ -10,6 +10,7 @@ sources:
 related:
   - mcp-transport-separation
   - mcp-capability-negotiation-handshake
+  - secure-mcp-consumption-lifecycle
 tags:
   - llm-engineering
   - mcp
@@ -44,6 +45,7 @@ The client fetches that metadata, discovers the authorization server, obtains a 
 
 - [[mcp-transport-separation]]: This authorization path applies to remote HTTP transport, not local stdio.
 - [[mcp-capability-negotiation-handshake]]: Authentication happens before the normal MCP capability exchange can be trusted.
+- [[secure-mcp-consumption-lifecycle]]: Remote authorization discovery is one part of securely onboarding an MCP server.
 
 ## Open questions
 

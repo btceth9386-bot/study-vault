@@ -8,6 +8,7 @@ review_due: 2026-05-08
 sources:
   - sources/repos/langchain-ai-langgraph
 related:
+  - state-externalized-skill-composition
   - provider-chat-model-wrappers-in-langgraph-nodes
   - langchain-tool-schema-contract
   - standardized-message-content-blocks
@@ -24,7 +25,7 @@ tags:
 - **One-sentence definition**: A LangGraph `StateGraph` state schema is the typed contract that says what shared state fields exist and how node outputs update those fields.
 - **Why it exists / what problem it solves**: Multi-step LLM workflows become hard to debug when every node passes loose dictionaries around. The schema makes graph state explicit, so nodes agree on field names, value types, and merge behavior.
 - **Keywords**: StateGraph, state schema, TypedDict, channels, reducers, graph state
-- **Related concepts**: [[provider-chat-model-wrappers-in-langgraph-nodes]], [[langchain-tool-schema-contract]], [[standardized-message-content-blocks]], [[langgraph-pregel-bsp-execution]]
+- **Related concepts**: [[state-externalized-skill-composition]], [[provider-chat-model-wrappers-in-langgraph-nodes]], [[langchain-tool-schema-contract]], [[standardized-message-content-blocks]], [[langgraph-pregel-bsp-execution]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-05
 - **Source**: sources/repos/langchain-ai-langgraph
@@ -56,6 +57,7 @@ The `messages` field can merge new messages into the existing list. The `approve
 
 ## Relationship to existing concepts
 
+- [[state-externalized-skill-composition]]: Explicit state schemas make multi-skill handoffs inspectable and reproducible.
 - [[provider-chat-model-wrappers-in-langgraph-nodes]]: Provider wrappers are often called inside nodes that read and write fields from the state schema.
 - [[langchain-tool-schema-contract]]: Tool calls and tool results usually move through state as structured messages.
 - [[standardized-message-content-blocks]]: Message fields can contain provider-normalized content blocks that graph nodes can inspect.

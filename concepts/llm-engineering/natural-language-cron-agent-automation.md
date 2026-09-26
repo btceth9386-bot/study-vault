@@ -13,6 +13,7 @@ related:
 - acp-agent-backend-for-ides
 - persistent-agent-session-restoration
 - probabilistic-toolset-distributions
+- tiered-continuous-code-review-runtime
 tags:
 - llm-engineering
 - ai-agent
@@ -28,7 +29,7 @@ tags:
 - **一句話定義**：Natural-language cron agent automation is a system where recurring background jobs are defined as agent prompts or scripts, scheduled declaratively, and executed in isolated runs with explicit delivery targets.
 - **為什麼存在 / 解決什麼問題**：Hermes turns scheduled work into a first-class agent feature: jobs have prompts, schedules, toolsets, output storage, delivery routing, and isolated execution state. This matters because it extends agents from interactive assistants into unattended operators for reports, audits, backups, and monitoring tasks.
 - **關鍵字**：llm-engineering, ai-agent, ide-integration, tools, memory, automation, mcp
-- **相關概念**：[[async-processing]], [[multi-platform-agent-gateway]], [[acp-agent-backend-for-ides]], [[persistent-agent-session-restoration]], [[probabilistic-toolset-distributions]]
+- **相關概念**：[[async-processing]], [[multi-platform-agent-gateway]], [[acp-agent-backend-for-ides]], [[persistent-agent-session-restoration]], [[probabilistic-toolset-distributions]], [[tiered-continuous-code-review-runtime]]
 - **深度等級**：2/4
 - **最後更新**：2026-05-13
 - **來源**：nousresearch/hermes-agent
@@ -48,6 +49,7 @@ Suppose an engineering team is turning an agent prototype into a service used ev
 - [[acp-agent-backend-for-ides]]: natural-language-cron-agent-automation connects to acp-agent-backend-for-ides because both describe a nearby part of the same learning path or system design problem.
 - [[persistent-agent-session-restoration]]: natural-language-cron-agent-automation connects to persistent-agent-session-restoration because both describe a nearby part of the same learning path or system design problem.
 - [[probabilistic-toolset-distributions]]: natural-language-cron-agent-automation connects to probabilistic-toolset-distributions because both describe a nearby part of the same learning path or system design problem.
+- [[tiered-continuous-code-review-runtime]]: A scheduled or event-triggered agent run can invoke a continuous repository reviewer.
 
 ## 我的疑問
 

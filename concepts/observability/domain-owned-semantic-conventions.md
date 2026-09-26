@@ -12,6 +12,7 @@ related:
   - semantic-attribute-registry-reuse
   - semantic-convention-validation-and-generation
   - cross-provider-genai-telemetry-refinements
+  - cross-functional-ai-steering-committee
 tags:
   - observability
   - opentelemetry
@@ -44,6 +45,7 @@ A proposed messaging attribute is reviewed by the messaging-domain owners for te
 - [[semantic-attribute-registry-reuse]]: Reviewers prefer common registry fields over domain-specific duplicates.
 - [[semantic-convention-validation-and-generation]]: Automated checks support the human approval path.
 - [[cross-provider-genai-telemetry-refinements]]: Provider specialists own necessary extensions while shared review keeps the core portable.
+- [[cross-functional-ai-steering-committee]]: Both join local expertise with shared governance, but the committee governs enterprise AI decisions rather than telemetry schemas.
 
 ## My Questions
 

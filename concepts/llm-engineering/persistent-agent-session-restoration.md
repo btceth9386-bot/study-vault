@@ -13,6 +13,8 @@ related:
 - multi-platform-agent-gateway
 - natural-language-cron-agent-automation
 - probabilistic-toolset-distributions
+- bounded-agent-cognitive-state
+- layered-agent-memory
 tags:
 - llm-engineering
 - ai-agent
@@ -48,6 +50,8 @@ Suppose an engineering team is turning an agent prototype into a service used ev
 - [[multi-platform-agent-gateway]]: persistent-agent-session-restoration connects to multi-platform-agent-gateway because both describe a nearby part of the same learning path or system design problem.
 - [[natural-language-cron-agent-automation]]: persistent-agent-session-restoration connects to natural-language-cron-agent-automation because both describe a nearby part of the same learning path or system design problem.
 - [[probabilistic-toolset-distributions]]: persistent-agent-session-restoration connects to probabilistic-toolset-distributions because both describe a nearby part of the same learning path or system design problem.
+- [[bounded-agent-cognitive-state]]: A compact schema can be the durable state restored between agent sessions.
+- [[layered-agent-memory]]: Session state is one layer between active working context and long-term knowledge.
 
 ## 我的疑問
 

@@ -11,6 +11,7 @@ related:
   - mcp-bidirectional-json-rpc-substrate
   - protocol-based-agent-access-surface
   - ucp-ap2-commerce-payment-separation
+  - enterprise-agent-delegation-operating-model
 tags:
   - llm-engineering
   - mcp
@@ -22,7 +23,7 @@ tags:
 - **One-sentence definition**: A bounded tool call requests a structured result, while agent delegation assigns responsibility for an evolving task that may need clarification, negotiation, interruption, and resumption.
 - **Why it exists / what problem it solves**: Treating every specialist as a synchronous tool hides long-running state inside an interface built for one request and one response, turning the caller into an accidental workflow engine.
 - **Keywords**: tool call, delegation, workflow, multi-turn, interruption, responsibility
-- **Related concepts**: [[mcp-bidirectional-json-rpc-substrate]], [[protocol-based-agent-access-surface]]
+- **Related concepts**: [[mcp-bidirectional-json-rpc-substrate]], [[protocol-based-agent-access-surface]], [[enterprise-agent-delegation-operating-model]]
 - **Depth**: 2/4
 - **Last updated**: 2026-09-25
 - **Source**: Agent Tools & Interoperability — Day 2
@@ -40,6 +41,7 @@ Use a tool call when the caller can describe the work completely and needs a res
 - [[mcp-bidirectional-json-rpc-substrate]]: MCP supports structured request-and-response tool interactions.
 - [[protocol-based-agent-access-surface]]: A protocol access surface can expose both tool and agent-to-agent entry points; this concept decides which kind of interaction fits.
 - [[ucp-ap2-commerce-payment-separation]]: UCP and AP2 are structured transactional operations, not a substitute for delegating an evolving task.
+- [[enterprise-agent-delegation-operating-model]]: Applies delegation to enterprise accountability, escalation, and autonomy boundaries.
 
 ## My questions
 

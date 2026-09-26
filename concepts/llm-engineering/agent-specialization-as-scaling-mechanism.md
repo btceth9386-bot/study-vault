@@ -13,6 +13,7 @@ related:
   - microservices
   - coding-agent-harness-engineering
   - hybrid-agent-build-strategy
+  - artifact-based-agent-handoffs
 tags:
   - llm-engineering
   - ai-agent
@@ -47,6 +48,7 @@ A support system replaces one agent with a billing agent, a troubleshooting agen
 
 - [[cross-functional-ai-center-of-excellence]]: Related enterprise AI practice.
 - [[hybrid-agent-build-strategy]]: Specialization can identify where a focused custom component creates enough advantage to justify building it.
+- [[artifact-based-agent-handoffs]]: Specialists exchange focused results through inspectable handoff artifacts.
 
 ## My questions
 

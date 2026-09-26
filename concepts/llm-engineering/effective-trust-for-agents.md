@@ -12,6 +12,7 @@ related:
   - llm-observability
   - agent-space-access-boundary
   - runtime-agent-bill-of-materials
+  - enterprise-agent-delegation-operating-model
 tags:
   - agentic-engineering
   - coding-agents
@@ -24,7 +25,7 @@ tags:
 - **One-sentence definition**: Effective trust is a continuously updated decision about whether an agent may keep acting, based on its identity, supply chain, runtime behavior, tools, data, and task context.
 - **Why it exists / what problem it solves**: A valid login proves only a past identity check; it does not prove that a non-deterministic agent still follows the authorized intent.
 - **Keywords**: continuous trust, intent drift, runtime context, assurance, authorization
-- **Related concepts**: [[coding-agent-harness-engineering]], [[llm-observability]], [[agent-space-access-boundary]]
+- **Related concepts**: [[coding-agent-harness-engineering]], [[llm-observability]], [[agent-space-access-boundary]], [[enterprise-agent-delegation-operating-model]]
 - **Depth**: 2/4
 - **Last updated**: 2026-09-25
 - **Source**: Vibe Coding Agent Security and Evaluation
@@ -43,6 +44,7 @@ An agent is authorized to update a documentation site. It starts by editing Mark
 - [[llm-observability]]: Provides the evidence used to reassess trust.
 - [[agent-space-access-boundary]]: Defines part of the allowed operational scope.
 - [[runtime-agent-bill-of-materials]]: The live inventory shows the resources that affect the current trust decision.
+- [[enterprise-agent-delegation-operating-model]]: Continuous trust supplies evidence for whether a delegated agent should keep its assigned authority.
 
 ## My questions
 

@@ -14,6 +14,7 @@ related:
 - probabilistic-toolset-distributions
 - self-improving-agent-skill-memory-loop
 - protocol-based-agent-access-surface
+- a2ui-trusted-catalog-rendering
 tags:
 - llm-engineering
 - ai-agent
@@ -50,6 +51,7 @@ Suppose an engineering team is turning an agent prototype into a service used ev
 - [[probabilistic-toolset-distributions]]: multi-platform-agent-gateway connects to probabilistic-toolset-distributions because both describe a nearby part of the same learning path or system design problem.
 - [[self-improving-agent-skill-memory-loop]]: multi-platform-agent-gateway connects to self-improving-agent-skill-memory-loop because both describe a nearby part of the same learning path or system design problem.
 - [[protocol-based-agent-access-surface]]: Protocol endpoints are one way a multi-platform gateway exposes the same agent to different clients and triggers.
+- [[a2ui-trusted-catalog-rendering]]: Catalog renderers let one UI intent appear natively on different client platforms.
 
 ## 我的疑問
 

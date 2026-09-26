@@ -8,6 +8,7 @@ review_due: '2026-05-16'
 sources:
 - sources/repos/langchain-ai-langgraph/
 related:
+- state-externalized-skill-composition
 - langgraph-runtime-dependency-injection
 - langgraph-toolnode-prebuilt-components
 tags:
@@ -25,7 +26,7 @@ tags:
 - **一句話定義**：LangGraph channels are per-state-field containers that define how values are read, updated, merged, checkpointed, and used to trigger later nodes.
 - **為什麼存在 / 解決什麼問題**：Channels are the difference between safe parallel graph execution and accidental state corruption. `LastValue` is appropriate when only one writer should update a field in a superstep; it raises an error for conflicting multi-writer updates. `BinaryOperatorAggregate` uses a reducer to merge multiple writes, such as appending messages or combining dictionaries. `Topic`, `EphemeralValue`, `UntrackedValue`, and barrier channels provide specialized behavior for accumulation, transient signals, non-persisted values, and synchronization. Choosing the wrong channel semantics can make a graph nondeterministic or fail at runtime.
 - **關鍵字**：llm-engineering, langgraph, langchain, agents, orchestration, stateful-workflows, human-in-the-loop
-- **相關概念**：[[langgraph-runtime-dependency-injection]], [[langgraph-toolnode-prebuilt-components]]
+- **相關概念**：[[state-externalized-skill-composition]], [[langgraph-runtime-dependency-injection]], [[langgraph-toolnode-prebuilt-components]]
 - **深度等級**：2/4
 - **最後更新**：2026-05-13
 - **來源**：langchain-ai/langgraph
@@ -40,6 +41,7 @@ Suppose an engineering team is turning an agent prototype into a service used ev
 
 ## 與既有概念的關聯
 
+- [[state-externalized-skill-composition]]: Structured external state needs clear update and merge rules when several workflow steps contribute to it.
 - [[langgraph-runtime-dependency-injection]]: langgraph-channels-and-reducers connects to langgraph-runtime-dependency-injection because both describe a nearby part of the same learning path or system design problem.
 - [[langgraph-toolnode-prebuilt-components]]: langgraph-channels-and-reducers connects to langgraph-toolnode-prebuilt-components because both describe a nearby part of the same learning path or system design problem.
 

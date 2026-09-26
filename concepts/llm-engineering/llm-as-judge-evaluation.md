@@ -17,6 +17,8 @@ related:
   - sparse-validation-evaluation
   - configuration-driven-llm-evaluation-matrix
   - hybrid-llm-output-assertions
+  - underspecification-gap-in-agent-evaluation
+  - domain-expert-calibrated-agent-validation
 tags:
   - llm-engineering
   - evaluation
@@ -28,7 +30,7 @@ tags:
 - **One-sentence definition**: LLM-as-judge evaluation uses one LLM to score another LLM application's output against a rubric.
 - **Why it exists / what problem it solves**: Human review is slow and expensive, but LLM products need continuous quality checks. A judge model can apply a reusable rubric to many traces, observations, or dataset items so teams can catch regressions and compare changes at scale.
 - **Keywords**: evaluator, rubric, scores, job configuration, eval template, trace quality
-- **Related concepts**: [[llm-observability]], [[prompt-version-management]], [[async-processing]], [[few-shot-bootstrapping]], [[metric-driven-llm-optimization]], [[actionable-side-information]], [[sparse-validation-evaluation]]
+- **Related concepts**: [[llm-observability]], [[prompt-version-management]], [[async-processing]], [[few-shot-bootstrapping]], [[metric-driven-llm-optimization]], [[actionable-side-information]], [[sparse-validation-evaluation]], [[domain-expert-calibrated-agent-validation]]
 - **Depth**: 2/4
 - **Last updated**: 2026-05-04
 - **Source**: sources/repos/langfuse-langfuse
@@ -60,6 +62,8 @@ Every new support trace enters an evaluation queue. The judge model reads the us
 - [[sparse-validation-evaluation]]: Judge calls can be expensive, so sparse validation helps decide which examples to score.
 - [[configuration-driven-llm-evaluation-matrix]]: A judge rubric can score selected cells in a repeatable comparison matrix.
 - [[hybrid-llm-output-assertions]]: Judge rubrics are one evidence source alongside deterministic and trace-aware checks.
+- [[underspecification-gap-in-agent-evaluation]]: A judge can score acceptance criteria inferred from an incomplete request.
+- [[domain-expert-calibrated-agent-validation]]: Domain experts supply the ground truth used to calibrate a judge rubric before it is trusted at scale.
 
 ## Open questions
 

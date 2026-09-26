@@ -10,6 +10,7 @@ sources:
 related:
   - langgraph-checkpoint-time-travel-forking
   - llm-observability
+  - context-aware-high-stakes-agent-approval
 tags:
   - llm-engineering
   - langgraph
@@ -54,6 +55,7 @@ The graph can pause with the draft visible to a human. When resumed with `"yes"`
 
 - [[langgraph-checkpoint-time-travel-forking]]: Interrupts require persisted execution state so the graph can resume after a pause.
 - [[llm-observability]]: Interrupted runs expose state snapshots and decisions that should be traceable for debugging and audit.
+- [[context-aware-high-stakes-agent-approval]]: An interrupt supplies the durable pause where a person reviews an intent-to-action explanation.
 
 ## Open questions
 
