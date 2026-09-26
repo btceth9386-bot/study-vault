@@ -1,7 +1,7 @@
 ---
 id: llm-quality-evaluation-pipeline
 title: "LLM Quality and Evaluation Pipeline: From Traces to Systematic Improvement"
-description: A focused path for teams who need to measure LLM application quality and improve it without hand-tuning prompts — covering the full eval cycle from structured observability through automated scoring, metric definition, and optimization targets.
+description: A focused path for teams who need to measure LLM application quality and improve it without hand-tuning prompts — covering the full eval cycle from structured observability through automated scoring, skill coverage, promotion gates, metric definition, and optimization targets.
 ---
 
 ## Overview
@@ -10,7 +10,7 @@ Most LLM teams evaluate their applications by running them and seeing if the out
 
 This path is a focused extract from the broader [Production LLM Engineering](../topics/production-llm-engineering.md) path. It covers the eval and quality side only; for DSPy program optimization with bootstrapping and GEPA-style reflection, see [LLM Program Optimization with DSPy](../topics/llm-program-optimization-dspy.md).
 
-**Estimated study time:** 7–8 hours
+**Estimated study time:** 8–9 hours
 **Prerequisites:** Basic LLM API experience. Helpful — though not required — to have at least one LLM application already running in production or staging, so the observability concepts are immediately applicable.
 
 ---
@@ -38,17 +38,32 @@ No single evaluator can prove every requirement. Combine deterministic checks fo
 ### 7. [Trace-Aware Agent Evaluation](../concepts/llm-engineering/trace-aware-agent-evaluation.md)
 An agent can reach a plausible answer through an unsafe sequence of tool calls. Use the observability data from step 1 to convert tool use, arguments, ordering, and goal completion into testable trajectory requirements. Study this after hybrid assertions because it is the execution-path branch of that combined grading model.
 
-### 8. [Metric-Driven LLM Optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md)
+### 8. [Agent Skill Evaluation Coverage](../concepts/llm-engineering/agent-skill-evaluation-coverage.md)
+An agent skill is not ready because it succeeds once. Verify that it triggers for the right requests, executes safely, coexists with other skills, and stays within the context budget. Study this after trace-aware evaluation because coverage extends trajectory evidence to routing, regression, and context cost.
+
+### 9. [Metric-Driven LLM Optimization](../concepts/llm-engineering/metric-driven-llm-optimization.md)
 A metric function expresses "good output" as executable code — typically a float between 0 and 1 — rather than a human judgment. Once quality is code, it becomes comparable, runnable against historical data, and usable as the objective in automated optimizers. Study this after LLM-as-judge because the judge pattern is one common way to implement a metric; understanding metrics as first-class objects unlocks the optimization concepts that follow.
 
-### 9. [Sparse Validation Evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md)
+### 10. [Sparse Validation Evaluation](../concepts/llm-engineering/sparse-validation-evaluation.md)
 Running every candidate on every validation example is often too expensive — each example may require one or more LLM calls plus a judge call. Sparse validation explains how to get useful quality signal from partial coverage: select representative examples, track which candidates have been evaluated on which examples, and preserve enough signal for meaningful candidate comparison without evaluating the full cross-product. Study after metric definition because sparse validation is the cost-management layer on top of a working metric.
 
-### 10. [Actionable Side Information](../concepts/llm-engineering/actionable-side-information.md)
+### 11. [Actionable Side Information](../concepts/llm-engineering/actionable-side-information.md)
 A score tells you whether a candidate worked; side information tells you why it did or did not. Traces capture the model's reasoning path, tool call sequences, intermediate outputs, and error messages — all of which can be surfaced as feedback that explains a specific failure. Study here because the difference between "score = 0.4" and "score = 0.4 because the model hallucinated a tool name on example 17" is the difference between blind iteration and informed debugging.
 
-### 11. [Optimize Anything Pattern](../concepts/llm-engineering/optimize-anything-pattern.md)
+### 12. [Evaluation-Gated Meta-Skills](../concepts/llm-engineering/evaluation-gated-meta-skills.md)
+Let agents propose skills or repairs from successful workflows and failed traces, but keep every proposal inactive until evaluation and human review pass. This applies the preceding evidence model to the system that changes its own reusable procedures.
+
+### 13. [Optimize Anything Pattern](../concepts/llm-engineering/optimize-anything-pattern.md)
 Not every optimization target is a formal DSPy module or prompt template. Rubrics, policies, tool descriptions, system prompt sections, and config strings are all text artifacts that affect output quality — and any of them can be optimized with `optimize_anything()` if you can write a scoring function for the output they influence. Study last as the practical extension: once you have a working eval pipeline (steps 1–10), this pattern shows how to apply it to targets that don't fit a formal optimization framework.
+
+### 14. [Underspecification Gap in Agent Evaluation](../concepts/llm-engineering/underspecification-gap-in-agent-evaluation.md)
+Learn why a passing test can still miss a user's unstated expectations, and derive an intent rubric for those gaps.
+
+### 15. [Multidimensional Coding-Agent Evaluation](../concepts/llm-engineering/multidimensional-coding-agent-evaluation.md)
+Use complementary tests, browser checks, judges, traces, and review to cover the quality dimensions that one score cannot prove.
+
+### 16. [Session Convergence Evaluation](../concepts/llm-engineering/session-convergence-evaluation.md)
+Close by measuring whether the full multi-turn session reaches a user-accepted result, rather than rewarding isolated good turns.
 
 ## What You'll Be Able to Do
 
@@ -57,6 +72,8 @@ Not every optimization target is a formal DSPy module or prompt template. Rubric
 - Run reproducible prompt, provider, and test-case comparisons through one provider-neutral evaluation boundary
 - Implement an LLM-as-judge scorer that runs automatically on production traces and writes scores back to the observability store
 - Combine deterministic output checks, judge rubrics, and agent-trajectory requirements in one release gate
+- Evaluate skill routing, execution, regression behavior, and context cost before promotion
+- Gate agent-generated skill changes on evidence and review rather than self-reported success
 - Write a metric function that expresses output quality as a float and run it against historical trace data
 - Design a sparse validation strategy that limits judge call volume while maintaining enough signal for regression detection
 - Interpret actionable side information from failed traces to inform prompt revisions instead of guessing
