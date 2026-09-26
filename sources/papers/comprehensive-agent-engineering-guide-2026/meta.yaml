@@ -1,0 +1,31 @@
+type: paper
+title: The Comprehensive Guide to AI Agent Engineering
+url: https://github.com/vasilyevdm/ai-agent-handbook
+authors:
+  - Dmitriy Vasilyev
+language: en
+date_consumed: 2026-09-25
+date_added: 2026-09-25
+estimated_time: 2 hours
+status: processed
+related_concepts:
+  - agent-loop-termination-policy
+  - code-as-action-agent-loop
+  - context-rot-aware-context-management
+  - bounded-agent-cognitive-state
+  - layered-agent-memory
+  - artifact-based-agent-handoffs
+  - untrusted-content-isolation-for-agents
+  - react-agentic-loop
+  - ephemeral-agent-execution-sandbox
+  - surgical-context-compression
+  - context-engineering-for-coding-agents
+  - langgraph-store-long-term-memory
+  - langgraph-checkpoint-time-travel-forking
+  - zero-ambient-authority-for-agents
+tags:
+  - ai-agents
+  - agent-engineering
+  - context-engineering
+  - multi-agent-systems
+  - agent-security

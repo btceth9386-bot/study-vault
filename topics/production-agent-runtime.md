@@ -12,7 +12,7 @@ This path covers the patterns that answer those questions, drawn from the Hermes
 
 For the protocol mechanics behind MCP-based integrations, study [MCP Protocol Foundations](../topics/mcp-protocol-foundations.md) first or use it as a companion path. For the internal mechanics of LangGraph state machines, checkpoints, and interrupts, see [LangGraph Application Development](../topics/langgraph-application-development.md). For evaluation pipelines and quality measurement, see [LLM Quality and Evaluation Pipeline](../topics/llm-quality-evaluation-pipeline.md).
 
-**Estimated study time:** 8–10 hours
+**Estimated study time:** 9–11 hours
 **Prerequisites:** Built at least one working LLM agent with tool calling. No specific framework required.
 
 ---
@@ -46,22 +46,43 @@ IDEs need a structured protocol to open sessions, stream updates, and trigger co
 ### 9. [Multi-Platform Agent Gateway](../concepts/llm-engineering/multi-platform-agent-gateway.md)
 One core agent runtime should serve CLI, Telegram, Discord, Slack, and IDE clients rather than maintaining separate bots with separate state. A gateway layer routes platform-specific messages into a common agent interface while centralizing memory, tool access, and automation. Study after ACP because the IDE backend is one concrete gateway implementation; the gateway pattern generalizes it to arbitrary channels. Understanding this prevents the common mistake of duplicating agent logic across platforms.
 
-### 10. [Persistent Agent Session Restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md)
+### 10. [Layered Agent Memory](../concepts/llm-engineering/layered-agent-memory.md)
+Use separate layers for current work, one-session state, long-lived knowledge, experience, and discrete observations. This gives the agent the right information without turning every old conversation into active context.
+
+### 11. [Persistent Agent Session Restoration](../concepts/llm-engineering/persistent-agent-session-restoration.md)
 Session state stored only in process memory is lost when the process restarts. Persistent session restoration saves conversation history and session metadata to a shared database, then reloads it on demand — including ACP sessions tied to a specific working directory. Study here because the multi-platform gateway requires each channel to be able to pick up sessions that started on a different channel or after a restart. This is the durability layer for session continuity.
 
-### 11. [Surgical Context Compression](../concepts/llm-engineering/surgical-context-compression.md)
+### 12. [Surgical Context Compression](../concepts/llm-engineering/surgical-context-compression.md)
 Tool-using agents accumulate large conversation histories quickly. Blunt truncation discards context indiscriminately. Surgical context compression preserves the head and tail of the interaction — system instructions and recent turns — while summarizing the middle when token usage crosses a threshold. Hermes also prunes expensive tool outputs and protects key turns from summarization. Study after session persistence because compression decisions are only well-defined when history is durable; you need to know what is safe to compress vs. what must survive intact.
 
-### 12. [Natural-Language Cron Agent Automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md)
+### 13. [Context-Rot-Aware Context Management](../concepts/llm-engineering/context-rot-aware-context-management.md)
+Keep context useful, not merely below the model's token limit. Monitor quality signals such as relevance, instruction adherence, noise, and repetition, then compact or prune before the agent drifts.
+
+### 14. [Bounded Agent Cognitive State](../concepts/llm-engineering/bounded-agent-cognitive-state.md)
+For very long-running work, keep a fixed, schema-constrained task state rather than letting summaries and chat history grow forever. This makes memory use predictable, but requires careful decisions about what information deserves a slot.
+
+### 15. [Natural-Language Cron Agent Automation](../concepts/llm-engineering/natural-language-cron-agent-automation.md)
 An interactive agent that can only respond to explicit user messages is limited to synchronous work. Cron automation turns scheduled work into a first-class agent feature: jobs are defined as agent prompts or scripts, scheduled declaratively, executed in isolated runs with explicit delivery targets (messaging channels, storage), and given their own toolset scopes. Study here because scheduled automation requires both the gateway (for delivery routing) and session persistence (for isolated execution state) established in earlier steps — and it is the mechanism that extends an agent from assistant to unattended operator.
 
-### 13. [Self-Improving Agent Skill Memory Loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md)
+### 16. [Self-Improving Agent Skill Memory Loop](../concepts/llm-engineering/self-improving-agent-skill-memory-loop.md)
 An agent that treats every session as a fresh start cannot improve. A self-improving skill memory loop closes this gap: the agent stores useful knowledge from completed tasks, creates or updates reusable skills, and uses that accumulated experience when working on similar problems later. Study here because the loop depends on persistent session storage for the memory substrate and on cron-style automation for the periodic knowledge consolidation nudge that keeps skills current.
 
-### 14. [Agent Specialization as a Scaling Mechanism](../concepts/llm-engineering/agent-specialization-as-scaling-mechanism.md)
+### 17. [Agent Specialization as a Scaling Mechanism](../concepts/llm-engineering/agent-specialization-as-scaling-mechanism.md)
 As an agent accumulates tools, instructions, and responsibilities, its search space and failure blast radius grow. Split work into domain-focused specialists only when a generalist has become overloaded; each specialist should receive a narrower context and toolset, while the runtime supplies routing and guardrails. Study this after establishing durable sessions and automation, since those capabilities provide the state and operational controls that coordinated specialists require.
 
-### 15. [Probabilistic Toolset Distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md)
+### 18. [Artifact-Based Agent Handoffs](../concepts/llm-engineering/artifact-based-agent-handoffs.md)
+Specialists should exchange typed, inspectable deliverables rather than whole conversation transcripts. This makes multi-agent work easier to audit, resume, and debug.
+
+### 19. [Untrusted Content Isolation for Agents](../concepts/llm-engineering/untrusted-content-isolation-for-agents.md)
+Treat retrieved files, web pages, and tool output as data rather than instructions. Keep authority in the runtime, then combine isolation with policy gates, scoped credentials, and sandboxes before any side effect occurs.
+
+### 20. [Code-as-Action Agent Loop](../concepts/llm-engineering/code-as-action-agent-loop.md)
+When a task needs tool composition, variables, and control flow, an agent can write code as one action. Treat it as a higher-risk action layer: execute it in an ephemeral sandbox with narrowly scoped authority.
+
+### 21. [Agent Loop Termination Policy](../concepts/llm-engineering/agent-loop-termination-policy.md)
+An agent must know both when success is credible and when autonomous work has reached an operational limit. Combine a completion signal with step, time, token, or cost limits, and use goal verification where a false success is expensive.
+
+### 22. [Probabilistic Toolset Distributions](../concepts/llm-engineering/probabilistic-toolset-distributions.md)
 When evaluating or training an agent, always exposing the same full tool surface produces uniform trajectories that do not reflect real-world variation in available capabilities. Probabilistic toolset distributions sample which toolsets the agent receives across batch runs, generating diverse trajectories for benchmarking and training data collection. Study last because this is an evaluation-time concern that requires a working toolset system (step 1) and is most relevant once the runtime patterns above are in place and you need to measure agent quality honestly across varying capability environments.
 
 ---
