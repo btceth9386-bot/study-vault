@@ -1,0 +1,32 @@
+type: paper
+title: The 2026 State of AI Agents Report
+url: https://resources.anthropic.com/2026-state-of-ai-agents
+authors:
+  - Anthropic
+  - Material
+language: en
+date_consumed: 2026-09-25
+date_added: 2026-09-25
+estimated_time: 45 minutes
+status: processed
+related_concepts:
+  - agentic-workflow-complexity-ladder
+  - hybrid-agent-build-strategy
+  - agent-ready-context-infrastructure
+  - enterprise-agent-delegation-operating-model
+  - agent-centered-workflow-redesign
+  - human-agent-work-redesign-metrics
+  - domain-expert-calibrated-agent-validation
+  - enterprise-ai-transformation-stages
+  - business-outcome-aligned-ai-use-case-selection
+  - enterprise-ai-governance-framework
+  - role-based-ai-capability-building
+  - persistent-agent-session-restoration
+  - learned-operational-knowledge-files
+  - effective-trust-for-agents
+tags:
+  - ai-agents
+  - enterprise-ai
+  - ai-adoption
+  - workflow-redesign
+  - agent-evaluation
